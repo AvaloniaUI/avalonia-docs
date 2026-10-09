@@ -1,38 +1,39 @@
 ---
 id: elements-tool
 title: Elements tool
+description: Inspect the visual and logical tree, element properties, styles, and bindings in Avalonia Developer Tools, with a 3D viewer and in-app overlays.
 doc-type: reference
 ---
 
 The Elements Tree presents a unified view that combines both visual and logical hierarchies. It loads only visible elements to optimize performance, while organizing the structure with the logical tree as the foundation. Template contents are collapsed away within `/template/` node contents.
 
-![Elements Tool](/img/tools/dev-tools/elements-tool.png)
+![Elements tool](/img/tools/dev-tools/elements-tool.png)
 
 ## Inspect mode
 
-The Elements Tool offers ways to identify and select specific UI elements directly from your running application:
+The Elements tool offers ways to identify and select specific UI elements directly from your running application:
 
 - **Focus Tracking** - When enabled, this feature automatically selects the currently focused element in your application within the Elements tree. Toggle this mode with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> on macOS) to automatically track focus changes as you interact with your app.
 
-- **Inspect Element** - This mode transforms your cursor into an element selector. Once activated with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> on macOS), click any element in your application to immediately locate and select it in the Elements tree. This provides a direct bridge between what you see in your application and its underlying structure.
+- **Inspect Element** - This mode transforms your cursor into an element selector. Once activated with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> on macOS), click any element in your application to immediately locate and select it in the Elements tree. This provides a bridge between what you see in your application and its underlying structure.
 
 These inspection modes help you locate elements without manually searching through the element hierarchy.
 
 ## Context menu
 
-The context menu provides essential actions for navigating and manipulating the element tree:
+The context menu provides navigation and manipulation of the element tree:
 
-When right-clicking on an element, you can access various expansion options to explore the hierarchy at different levels of detail. The "Expand Children" option reveals immediate children, while "Recursively" and "Recursively with templates" provide deeper exploration capabilities.
+When right-clicking on an element, you can access expansion options to explore the hierarchy at different levels of detail. The **Expand Children** option reveals immediate children, while **Recursively** and **Recursively with templates** provide deeper exploration capabilities.
 
-Additional actions include collapsing nodes, copying elements or their selectors, focusing elements, bringing them into view, and invalidating visuals. Window elements offer the special capability to render debug overlays such as `FPS`.
+Additional actions include collapsing nodes, copying elements or their selectors, focusing elements, bringing them into view, and invalidating visuals. Window elements offer the special capability to render debug overlays, such as FPS.
 
 The entire tree supports search functionality, allowing you to quickly locate specific elements by name or type.
 
-![Elements Tree Context Menu](/img/tools/dev-tools/elements-context-menu.png)
+![Elements tree context menu](/img/tools/dev-tools/elements-context-menu.png)
 
 ## Pseudoclasses selector
 
-For each element, the tool displays pseudoclasses that were defined on it. This feature is particularly valuable for testing how elements respond to different states without having to manually trigger them through user interaction.
+For each element, the tool displays pseudoclasses that were defined on it. This feature can be used to test how elements respond to different states without having to manually trigger them through user interaction.
 
 When developing custom controls with pseudoclasses, adding the `[PseudoClassesAttribute]` improves integration with the Developer Tools and also enhances IDE auto-completion support.
 
@@ -42,7 +43,7 @@ The Properties panel shows detailed information about the selected element in th
 
 ![Properties list](/img/tools/dev-tools/properties-list.png)
 
-The panel displays all Avalonia properties assigned to the element. Developers can:
+The panel displays all Avalonia properties assigned to the element. You can:
 - Filter properties by name
 - Sort properties alphabetically or by value
 - Group properties by categories
@@ -51,7 +52,7 @@ The panel displays all Avalonia properties assigned to the element. Developers c
 
 ### Property details
 
-When a developer selects a property, additional details become available through two specialized tabs.
+When you select a property, additional details become available through two specialized tabs.
 
 #### Styles and values
 
@@ -69,10 +70,10 @@ The Binding Expressions tab reveals how properties are connected to data sources
 
 ![Binding Expressions](/img/tools/dev-tools/properties-bindings.png)
 
-When a property uses data binding, this tab shows crucial information about the binding relationship:
-- Source and Path of the binding
+When a property uses data binding, this tab shows information about the binding relationship:
+- `Source` and `Path` of the binding
 - Validation errors if the binding is failing
-- Additional binding parameters like Mode, Converter, and FallbackValue
+- Additional binding parameters like `Mode`, `Converter`, and `FallbackValue`
 
 For properties with validation errors, the panel displays the exception type and message, including any inner exceptions that might provide additional context for debugging.
 
@@ -86,10 +87,9 @@ The 3D Viewer provides a three-dimensional visualization of your application's v
 
 ![3D Viewer Tab](/img/tools/dev-tools/3d-viewer-mini-demo.gif)
 
-### Accessing the 3D Viewer
+### Accessing the 3D viewer
 
-Open the 3D Viewer from the Developer Tools panel by toggling the "3D Viewer" button on the Properties view toolbar.
-Or from "Open 3D Viewer" context menu in the Elements Tree.
+Open the 3D Viewer from the Developer Tools panel by toggling the **3D Viewer** button on the Properties view toolbar, or from the **Open 3D Viewer** context menu in the Elements tree.
 
 Any visual element subtree can be viewed. Templates and root Application cannot.
 
@@ -103,9 +103,9 @@ This feature requires Avalonia 11.2.0 or newer.
 
 The 3D Viewer renders each layer of your visual tree as a separate plane in 3D space.
 
-Elements are positioned according to their Z-index and rendering order. Allowing to easily identify overlapping elements and their stacking context
+Elements are positioned according to their Z-index and rendering order, allowing you to identify overlapping elements and their stacking context.
 
-#### Navigation Controls
+#### Navigation controls
 
 Navigate the 3D space to examine your UI from different angles:
 
@@ -114,7 +114,7 @@ Navigate the 3D space to examine your UI from different angles:
 - **Zoom**: Use the mouse wheel to zoom in and out
 - **Reset**: Double-click to reset the view to the default position
 
-#### Visualization Settings
+#### Visualization settings
 
 Customize how the 3D view renders elements:
 
@@ -123,7 +123,7 @@ Customize how the 3D view renders elements:
 - **Layer Distance**: Adjust the spacing between visual tree layers
 - **Layer Range**: Set minimum and maximum layer indexes to focus on specific depth ranges in the visual tree
 
-### 3D Viewer Use Cases
+### 3D viewer use cases
 
 - **Debugging Z-Index Issues**: Identify and resolve element stacking problems
 - **Understanding Complex Layouts**: Visualize how nested panels and controls relate to each other
@@ -138,13 +138,13 @@ Avalonia Developer Tools provides visual overlays that display directly on your 
 
 You can activate overlays in two ways:
 
-#### 1. Via Elements Tree
+#### 1. Via Elements tree
 
 Overlays automatically appear when hovering over elements in the Developer Tools tree.
 
-![Trigger overlays from the Elements Tree](/img/tools/dev-tools/overlay-tree-inspect.png)
+![Trigger overlays from the Elements tree](/img/tools/dev-tools/overlay-tree-inspect.png)
 
-#### 2. Via "Highlight Elements" Mode shortcut
+#### 2. Via "Highlight Elements" mode shortcut
 
 Enter inspect mode directly in your application:
 - Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> (Windows/Linux) or <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>H</kbd> (macOS)

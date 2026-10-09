@@ -1,0 +1,200 @@
+---
+title: 'RichImageSource'
+hide_title: true
+slug: '/avalonia/controls/documents/richimagesource'
+uid: 'Avalonia.Controls.Documents.RichImageSource'
+commentId: 'T:Avalonia.Controls.Documents.RichImageSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RichImageSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes where a [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage)'s pixels come from and how they
+are obtained. Embedded sources carry their encoded payload in the document
+and decode synchronously; deferred sources resolve asynchronously (e.g. from
+a URL via a loader) and only when the image is actually presented.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class RichImageSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> RichImageSource
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="deferredimagesource">DeferredImageSource</a>, <a href="embeddedimagesource">EmbeddedImageSource</a>, <a href="pixelimagesource">PixelImageSource</a>
+</div>
+</div>
+
+## Remarks
+
+A [Avalonia.Controls.Documents.RichImageSourceConverter](xref:Avalonia.Controls.Documents.RichImageSourceConverter) lets a source be authored in XAML from
+an absolute URI string, e.g. `Source="avares://MyApp/Assets/picture.png"`.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ResolveAsync](#uid-20218c8f89) | Resolves the decoded image. Embedded sources complete synchronously; deferred sources fetch/decode in the background. Returns when the image cannot be produced. Callers must not dispose the returned image — its lifetime is owned by the source (or its loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable). |
+| [TryGetIntrinsicPixelSize](#uid-43234fb232) | No summary available. |
+| [TryGetPixels](#uid-a7a2ec7a6f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20218c8f89"></span>
+
+### ResolveAsync Method
+
+Resolves the decoded image. Embedded sources complete synchronously;
+deferred sources fetch/decode in the background. Returns
+when the image cannot be produced. Callers must not
+dispose the returned image — its lifetime is owned by the source (or its
+loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.IImage> ResolveAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.IImage](xref:Avalonia.Media.IImage)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43234fb232"></span>
+
+### TryGetIntrinsicPixelSize Method
+
+```csharp
+public bool TryGetIntrinsicPixelSize(int& width, int& height)
+```
+
+#### Parameters
+
+`width` int&amp;
+
+
+`height` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7a2ec7a6f"></span>
+
+### TryGetPixels Method
+
+```csharp
+public bool TryGetPixels(Avalonia.Controls.Documents.Imaging.PixelHolder& pixels)
+```
+
+#### Parameters
+
+`pixels` [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EncodedBytes](#uid-8ee090e2e9) | The encoded image bytes when the payload is embedded in the document, or an empty buffer for reference (URI) sources. Serializers that embed pixel data read this. |
+| [MimeType](#uid-1066542416) | The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known. |
+| [SourceUri](#uid-be73e8d59d) | The reference URI for a deferred/linked source (e.g. an image URL), or for an embedded source. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ee090e2e9"></span>
+
+### EncodedBytes Property
+
+The encoded image bytes when the payload is embedded in the document,
+or an empty buffer for reference (URI) sources. Serializers that embed
+pixel data read this.
+
+```csharp
+public ReadOnlyMemory<byte> EncodedBytes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1066542416"></span>
+
+### MimeType Property
+
+The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known.
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be73e8d59d"></span>
+
+### SourceUri Property
+
+The reference URI for a deferred/linked source (e.g. an image URL), or
+for an embedded source.
+
+```csharp
+public string SourceUri { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

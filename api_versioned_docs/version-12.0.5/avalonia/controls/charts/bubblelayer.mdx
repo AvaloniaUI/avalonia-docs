@@ -1,0 +1,584 @@
+---
+title: 'BubbleLayer'
+hide_title: true
+slug: '/avalonia/controls/charts/bubblelayer'
+uid: 'Avalonia.Controls.Charts.BubbleLayer'
+commentId: 'T:Avalonia.Controls.Charts.BubbleLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BubbleLayer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A bubble layer that renders sized circles at geographic coordinates.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BubbleLayer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="maplayer">MapLayer</a> <span className="apiref-page__relation-separator">-&gt;</span> BubbleLayer
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BubbleLayer](#uid-928b78c95a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-928b78c95a"></span>
+
+### BubbleLayer Constructor
+
+```csharp
+public BubbleLayer()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetLayerBounds](#uid-62929955dc) | Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer. Used for auto-scaling the map to fit content. |
+| [GetPointData](#uid-47b6bc4c49) | Gets the data item at the specified screen point. |
+| [OnPointerExited](#uid-44ac32db53) | Handles pointer exited events. Override this method to handle interactions (e.g. clearing hover effects). |
+| [OnPointerMoved](#uid-05eb4e40df) | Handles pointer moved events. Override this method to handle interactions (e.g. hover effects). |
+| [Render](#uid-c1acc5f275) | Renders this layer to the drawing context. |
+| [OnPointerPressed](maplayer.mdx#uid-61476cbbf9) | Handles pointer pressed events. Override this method to handle interactions (e.g. selection). Inherited from [MapLayer](maplayer.mdx). |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62929955dc"></span>
+
+### GetLayerBounds Method
+
+Gets the geographic bounds (in 0-200, 0-100 viewport units) of the content in this layer.
+Used for auto-scaling the map to fit content.
+
+```csharp
+public Nullable<Avalonia.Rect> GetLayerBounds()
+```
+
+#### Returns
+
+Nullable&lt;[Avalonia.Rect](xref:Avalonia.Rect)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47b6bc4c49"></span>
+
+### GetPointData Method
+
+Gets the data item at the specified screen point.
+
+```csharp
+public object GetPointData(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+The screen point to test.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+#### Returns
+
+object
+
+The data item if hit; otherwise, null.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44ac32db53"></span>
+
+### OnPointerExited Method
+
+Handles pointer exited events.
+Override this method to handle interactions (e.g. clearing hover effects).
+
+```csharp
+public void OnPointerExited()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05eb4e40df"></span>
+
+### OnPointerMoved Method
+
+Handles pointer moved events.
+Override this method to handle interactions (e.g. hover effects).
+
+```csharp
+public bool OnPointerMoved(Avalonia.Point point, Avalonia.Rect chartArea)
+```
+
+#### Parameters
+
+`point` [Avalonia.Point](xref:Avalonia.Point)
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+#### Returns
+
+bool
+
+True if handled.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c1acc5f275"></span>
+
+### Render Method
+
+Renders this layer to the drawing context.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Rect chartArea, double animationProgress)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`chartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The chart area rectangle.
+
+
+`animationProgress` double
+
+Animation progress from 0 to 1.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Fill](#uid-ef7265e234) | Gets or sets the fill brush for bubbles. |
+| [ItemsSource](#uid-f8359a34b0) | Gets or sets the data source. |
+| [LabelPath](#uid-c8aaa4af2a) | Gets or sets the property path for labels. |
+| [LatitudePath](#uid-23cd8971b5) | Gets or sets the property path for latitude. |
+| [LongitudePath](#uid-91909415fc) | Gets or sets the property path for longitude. |
+| [MaxBubbleSize](#uid-93cac2f6d2) | Gets or sets the maximum bubble radius. |
+| [MinBubbleSize](#uid-446d088c42) | Gets or sets the minimum bubble radius. |
+| [PointBrushPath](#uid-a48da52054) | Gets or sets the property path for bubble color. |
+| [ShowLabels](#uid-d9a1382e72) | Gets or sets whether to show labels. |
+| [SizePath](#uid-aa76d9ac8c) | Gets or sets the property path for bubble size. |
+| [Stroke](#uid-196f7369ab) | Gets or sets the stroke brush for bubbles. |
+| [IsVisible](maplayer.mdx#uid-93a23c42b6) | Gets or sets whether this layer is visible. Inherited from [MapLayer](maplayer.mdx). |
+| [Opacity](maplayer.mdx#uid-7b32d6b968) | Gets or sets the opacity of this layer. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplate](maplayer.mdx#uid-f880527475) | Gets or sets the data template used for tooltips. Inherited from [MapLayer](maplayer.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef7265e234"></span>
+
+### Fill Property
+
+Gets or sets the fill brush for bubbles.
+
+```csharp
+public Avalonia.Media.IBrush Fill { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8359a34b0"></span>
+
+### ItemsSource Property
+
+Gets or sets the data source.
+
+```csharp
+public System.Collections.IEnumerable ItemsSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8aaa4af2a"></span>
+
+### LabelPath Property
+
+Gets or sets the property path for labels.
+
+```csharp
+public string LabelPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23cd8971b5"></span>
+
+### LatitudePath Property
+
+Gets or sets the property path for latitude.
+
+```csharp
+public string LatitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91909415fc"></span>
+
+### LongitudePath Property
+
+Gets or sets the property path for longitude.
+
+```csharp
+public string LongitudePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93cac2f6d2"></span>
+
+### MaxBubbleSize Property
+
+Gets or sets the maximum bubble radius.
+
+```csharp
+public double MaxBubbleSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-446d088c42"></span>
+
+### MinBubbleSize Property
+
+Gets or sets the minimum bubble radius.
+
+```csharp
+public double MinBubbleSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a48da52054"></span>
+
+### PointBrushPath Property
+
+Gets or sets the property path for bubble color.
+
+```csharp
+public string PointBrushPath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9a1382e72"></span>
+
+### ShowLabels Property
+
+Gets or sets whether to show labels.
+
+```csharp
+public bool ShowLabels { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa76d9ac8c"></span>
+
+### SizePath Property
+
+Gets or sets the property path for bubble size.
+
+```csharp
+public string SizePath { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-196f7369ab"></span>
+
+### Stroke Property
+
+Gets or sets the stroke brush for bubbles.
+
+```csharp
+public Avalonia.Media.IBrush Stroke { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FillProperty](#uid-4243c815f2) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.Fill](xref:Avalonia.Controls.Charts.BubbleLayer.Fill) Avalonia property. |
+| [ItemsSourceProperty](#uid-8f22ac2d81) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.ItemsSource](xref:Avalonia.Controls.Charts.BubbleLayer.ItemsSource) Avalonia property. |
+| [LabelPathProperty](#uid-eb3fac748d) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LabelPath](xref:Avalonia.Controls.Charts.BubbleLayer.LabelPath) Avalonia property. |
+| [LatitudePathProperty](#uid-b903699a1c) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LatitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LatitudePath) Avalonia property. |
+| [LongitudePathProperty](#uid-009092c4ff) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.LongitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LongitudePath) Avalonia property. |
+| [MaxBubbleSizeProperty](#uid-88c30424ee) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize) Avalonia property. |
+| [MinBubbleSizeProperty](#uid-b7b922d031) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize) Avalonia property. |
+| [PointBrushPathProperty](#uid-2ae7f20521) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.PointBrushPath](xref:Avalonia.Controls.Charts.BubbleLayer.PointBrushPath) Avalonia property. |
+| [ShowLabelsProperty](#uid-4a67b96420) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.ShowLabels](xref:Avalonia.Controls.Charts.BubbleLayer.ShowLabels) Avalonia property. |
+| [SizePathProperty](#uid-43476c98ac) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.SizePath](xref:Avalonia.Controls.Charts.BubbleLayer.SizePath) Avalonia property. |
+| [StrokeProperty](#uid-31b3755105) | Identifies the [Avalonia.Controls.Charts.BubbleLayer.Stroke](xref:Avalonia.Controls.Charts.BubbleLayer.Stroke) Avalonia property. |
+| [IsVisibleProperty](maplayer.mdx#uid-74f0177084) | Identifies the [Avalonia.Controls.Charts.MapLayer.IsVisible](xref:Avalonia.Controls.Charts.MapLayer.IsVisible) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [OpacityProperty](maplayer.mdx#uid-7b17fad341) | Identifies the [Avalonia.Controls.Charts.MapLayer.Opacity](xref:Avalonia.Controls.Charts.MapLayer.Opacity) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+| [TooltipTemplateProperty](maplayer.mdx#uid-10362b19e1) | Identifies the [Avalonia.Controls.Charts.MapLayer.TooltipTemplate](xref:Avalonia.Controls.Charts.MapLayer.TooltipTemplate) Avalonia property. Inherited from [MapLayer](maplayer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4243c815f2"></span>
+
+### FillProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.Fill](xref:Avalonia.Controls.Charts.BubbleLayer.Fill) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> FillProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f22ac2d81"></span>
+
+### ItemsSourceProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.ItemsSource](xref:Avalonia.Controls.Charts.BubbleLayer.ItemsSource) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<System.Collections.IEnumerable> ItemsSourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb3fac748d"></span>
+
+### LabelPathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.LabelPath](xref:Avalonia.Controls.Charts.BubbleLayer.LabelPath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> LabelPathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b903699a1c"></span>
+
+### LatitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.LatitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LatitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> LatitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-009092c4ff"></span>
+
+### LongitudePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.LongitudePath](xref:Avalonia.Controls.Charts.BubbleLayer.LongitudePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> LongitudePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88c30424ee"></span>
+
+### MaxBubbleSizeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MaxBubbleSize) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MaxBubbleSizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7b922d031"></span>
+
+### MinBubbleSizeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize](xref:Avalonia.Controls.Charts.BubbleLayer.MinBubbleSize) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> MinBubbleSizeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ae7f20521"></span>
+
+### PointBrushPathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.PointBrushPath](xref:Avalonia.Controls.Charts.BubbleLayer.PointBrushPath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> PointBrushPathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a67b96420"></span>
+
+### ShowLabelsProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.ShowLabels](xref:Avalonia.Controls.Charts.BubbleLayer.ShowLabels) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<bool> ShowLabelsProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43476c98ac"></span>
+
+### SizePathProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.SizePath](xref:Avalonia.Controls.Charts.BubbleLayer.SizePath) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> SizePathProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31b3755105"></span>
+
+### StrokeProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BubbleLayer.Stroke](xref:Avalonia.Controls.Charts.BubbleLayer.Stroke) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> StrokeProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Invalidated](maplayer.mdx#uid-995465c2b4) | Event raised when the layer needs to be redrawn. Inherited from [MapLayer](maplayer.mdx). |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

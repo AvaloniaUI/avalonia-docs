@@ -5,7 +5,11 @@ description: Configure transitions that animate property changes on Avalonia con
 doc-type: how-to
 ---
 
-Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animates the change according to its parameters. They can be defined on any `Control` via the [`Transitions`](/api/avalonia/animation/transitions) property:
+Transitions in Avalonia are also heavily inspired by CSS Animations. They listen to any changes in target property's value and subsequently animate the change according to its parameters. They can be defined on any `Control` via the [`Transitions`](/api/avalonia/animation/transitions) property.
+
+:::note
+Unlike [keyframe animations](/docs/graphics-animation/keyframe-animations), transitions do not pause on hidden controls.
+:::
 
 ## Basic usage
 
@@ -70,7 +74,7 @@ Every transition has a `Property`, `Delay`, `Duration` and an optional `Easing` 
 
 `Duration` refers to the amount of time that the transition plays.
 
-The easing functions are the same as those described in [Keyframe Animations](/docs/graphics-animation/keyframe-animations#easing-function).
+For a full list of easing functions, see the [Easing functions page](/docs/graphics-animation/easing-functions).
 
 The correct transition type must be used for the type of the property being animated:
 

@@ -70,7 +70,7 @@ You will probably use these properties most often:
     <tr>
       <td></td>
       <td><code>ItemsPanel</code></td>
-      <td>The container panel to place items in. By default, this is a StackPanel. See [this page](/docs/custom-controls/custom-itemspanel) to customise the ItemsPanel.</td>
+      <td>The container panel to place items in. By default, this is a `StackPanel`. See [Custom panel](/docs/how-to/itemscontrol-how-to#custom-panel) for how to customize the `ItemsPanel`.</td>
     </tr>
     <tr>
       <td></td>

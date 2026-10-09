@@ -1,0 +1,78 @@
+---
+title: 'IAvaloniaXamlIlParentStackProvider'
+hide_title: true
+slug: '/avalonia/markup/xaml/xamlil/runtime/iavaloniaxamlilparentstackprovider'
+uid: 'Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider'
+commentId: 'T:Avalonia.Markup.Xaml.XamlIl.Runtime.IAvaloniaXamlIlParentStackProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Markup.Xaml'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Markup.Xaml.XamlIl.Runtime'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAvaloniaXamlIlParentStackProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Markup.Xaml.XamlIl.Runtime</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Markup.Xaml</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides the parents for the current XAML node in a lazy way.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAvaloniaXamlIlParentStackProvider
+```
+
+</div>
+
+## Remarks
+
+This interface is used by the XAML compiler and shouldn't be implemented in your code.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Parents](#uid-5e722a188c) | Gets an enumerator iterating over the available parents in the whole hierarchy. The parents are returned in normal order: the first element is the most direct parent while the last element is the most distant ancestor. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e722a188c"></span>
+
+### Parents Property
+
+Gets an enumerator iterating over the available parents in the whole hierarchy.
+The parents are returned in normal order:
+the first element is the most direct parent while the last element is the most distant ancestor.
+
+```csharp
+public System.Collections.Generic.IEnumerable<object> Parents { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -29,12 +29,25 @@ const config: RedirectConfig = {
     // Redirect release notes to Releases page on GitHub
     { from: '/docs/stay-up-to-date/release-notes', to: 'https://github.com/AvaloniaUI/Avalonia/releases' },
 
+    // PdfViewer package README links to pdf-viewer
+    { from: '/controls/data-display/pdf-viewer', to: '/controls/data-display/pdfviewer' },
+
     // richtexteditor-guides folder renamed to richtexteditor
     { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/input/text-input/richtexteditor/document-viewer' },
     { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/input/text-input/richtexteditor/extension-patterns' },
     { from: '/controls/input/text-input/richtexteditor-guides/performance-tuning', to: '/controls/input/text-input/richtexteditor/performance-tuning' },
     { from: '/controls/input/text-input/richtexteditor-guides/thread-safety', to: '/controls/input/text-input/richtexteditor/thread-safety' },
     { from: ['/controls/input/text-input/richtexteditor-guides/toolbar', '/controls/input/text-input/richtexteditor-guides/toolbar-customization'], to: '/controls/input/text-input/richtexteditor/toolbar' },
+
+    // Redirect retired pages from rewrite of Custom Controls docs in June 2026
+    { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},
+    { from: ['/docs/custom-controls/custom-control-class', '/docs/custom-controls/drawing-custom-controls'], to: '/docs/custom-controls/custom-drawn-controls'},
+    { from: '/docs/custom-controls/attached-properties', to: '/docs/custom-controls/defining-properties' },
+
+    // Redirect combined pages on precedence
+    { from: '/docs/styling/style-precedence', to: '/docs/properties/value-precedence' },
+    // Redirect retired ItemsRepeater pages
+    { from: ['/controls/data-display/collections/itemsrepeater', '/docs/reference/controls/itemsrepeater'], to: '/controls/data-display/collections/itemscontrol' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

@@ -13,6 +13,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'controls/mediaplayer',
         'controls/messagebox',
+        'controls/numericupdown',
+        'controls/pdfviewer',
         'controls/richtexteditor',
       ],
     },
@@ -43,6 +45,7 @@ const sidebars: SidebarsConfig = {
         'ui-development/themes'
       ],
     },
+    'login-issues',
   ],
 };
 

@@ -203,42 +203,26 @@ The related `OnPlatform` markup extension selects a value based on the operating
 
 ## Reflowing panels
 
-Some panels automatically reflow their children based on available space without requiring queries or code.
+Some panels automatically reflow their children based on available space, helping you create flowing content without explicit breakpoints.
 
-**`WrapPanel`** arranges children in a row and wraps to the next line when the edge of the panel is reached:
+For example, `WrapPanel` arranges children in a row and wraps to the next line when the edge of the panel is reached:
+
+<XamlPreview>
 
 ```xml
-<WrapPanel Orientation="Horizontal">
+<WrapPanel xmlns="https://github.com/avaloniaui"
+           Orientation="Horizontal">
     <Button Content="One" Margin="4" />
     <Button Content="Two" Margin="4" />
     <Button Content="Three" Margin="4" />
-    <!-- wraps to the next row when the panel is too narrow -->
+    <Button Content="Four" Margin="4" />
+    <Button Content="Five" Margin="4" />
+    <Button Content="Six" Margin="4" />
+    <!-- Wraps to the next row when the panel is too narrow -->
 </WrapPanel>
 ```
 
-**`UniformGridLayout`** (used with `ItemsRepeater`) calculates column count from the available width and a minimum item size:
-
-```xml
-<ItemsRepeater ItemsSource="{Binding Cards}">
-    <ItemsRepeater.Layout>
-        <UniformGridLayout MinItemWidth="280"
-                           MinItemHeight="200"
-                           MinColumnSpacing="12"
-                           MinRowSpacing="12" />
-    </ItemsRepeater.Layout>
-    <ItemsRepeater.ItemTemplate>
-        <DataTemplate>
-            <Border Padding="16" CornerRadius="8"
-                    Background="White"
-                    BorderBrush="#E5E7EB" BorderThickness="1">
-                <TextBlock Text="{Binding Title}" />
-            </Border>
-        </DataTemplate>
-    </ItemsRepeater.ItemTemplate>
-</ItemsRepeater>
-```
-
-These panels are a good choice when you need flowing content without explicit breakpoints.
+</XamlPreview>
 
 ## Breakpoint view models
 

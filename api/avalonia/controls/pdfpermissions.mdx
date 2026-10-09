@@ -1,0 +1,224 @@
+---
+title: 'PdfPermissions'
+hide_title: true
+slug: '/avalonia/controls/pdfpermissions'
+uid: 'Avalonia.Controls.PdfPermissions'
+commentId: 'T:Avalonia.Controls.PdfPermissions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfPermissions Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Decodes the PDF document permission bits into named capabilities.
+For an unprotected document all capabilities are allowed.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PdfPermissions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PdfPermissions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfPermissions](#uid-51d06f2ba3) | Initializes a new instance from the raw permission bitfield. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51d06f2ba3"></span>
+
+### PdfPermissions Constructor
+
+Initializes a new instance from the raw permission bitfield.
+
+```csharp
+public PdfPermissions(uint rawValue)
+```
+
+#### Parameters
+
+`rawValue` uint
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanAnnotate](#uid-28ae066f9f) | Whether annotations may be added or modified. |
+| [CanAssemble](#uid-bf132d50f1) | Whether pages may be inserted, deleted, or reordered. |
+| [CanCopyContent](#uid-27e702a461) | Whether text and graphics may be copied/extracted. |
+| [CanExtractForAccessibility](#uid-078b5ecb9e) | Whether content may be extracted for accessibility. |
+| [CanFillForms](#uid-b415556a88) | Whether interactive form fields may be filled. |
+| [CanModify](#uid-f38e9bb385) | Whether the document content may be modified. |
+| [CanPrint](#uid-c46a77bedb) | Whether the document may be printed. |
+| [CanPrintHighQuality](#uid-2f75022bd6) | Whether the document may be printed at high quality. |
+| [RawValue](#uid-a6ce5136fc) | Gets the raw permission bitfield (`0xFFFFFFFF` when unrestricted). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28ae066f9f"></span>
+
+### CanAnnotate Property
+
+Whether annotations may be added or modified.
+
+```csharp
+public bool CanAnnotate { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf132d50f1"></span>
+
+### CanAssemble Property
+
+Whether pages may be inserted, deleted, or reordered.
+
+```csharp
+public bool CanAssemble { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27e702a461"></span>
+
+### CanCopyContent Property
+
+Whether text and graphics may be copied/extracted.
+
+```csharp
+public bool CanCopyContent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-078b5ecb9e"></span>
+
+### CanExtractForAccessibility Property
+
+Whether content may be extracted for accessibility.
+
+```csharp
+public bool CanExtractForAccessibility { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b415556a88"></span>
+
+### CanFillForms Property
+
+Whether interactive form fields may be filled.
+
+```csharp
+public bool CanFillForms { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f38e9bb385"></span>
+
+### CanModify Property
+
+Whether the document content may be modified.
+
+```csharp
+public bool CanModify { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c46a77bedb"></span>
+
+### CanPrint Property
+
+Whether the document may be printed.
+
+```csharp
+public bool CanPrint { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2f75022bd6"></span>
+
+### CanPrintHighQuality Property
+
+Whether the document may be printed at high quality.
+
+```csharp
+public bool CanPrintHighQuality { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6ce5136fc"></span>
+
+### RawValue Property
+
+Gets the raw permission bitfield (`0xFFFFFFFF` when unrestricted).
+
+```csharp
+public uint RawValue { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

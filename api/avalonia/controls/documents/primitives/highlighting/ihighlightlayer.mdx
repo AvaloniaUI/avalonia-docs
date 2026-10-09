@@ -1,0 +1,212 @@
+---
+title: 'IHighlightLayer'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/highlighting/ihighlightlayer'
+uid: 'Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Highlighting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IHighlightLayer Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Highlighting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a layer of highlights that can be rendered over document content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IHighlightLayer
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetRegions](#uid-228b4723bb) | Gets all highlight regions in this layer. |
+| [GetRegionsInRange](#uid-d7382d8400) | Gets highlight regions that intersect with the specified range. |
+| [Render](#uid-6b4228ea88) | Renders this layer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-228b4723bb"></span>
+
+### GetRegions Method
+
+Gets all highlight regions in this layer.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion> GetRegions()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion)&gt;
+
+A read-only list of highlight regions.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7382d8400"></span>
+
+### GetRegionsInRange Method
+
+Gets highlight regions that intersect with the specified range.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion> GetRegionsInRange(Avalonia.Controls.Documents.TextModel.TextPointer start, Avalonia.Controls.Documents.TextModel.TextPointer end)
+```
+
+#### Parameters
+
+`start` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The start position of the range.
+
+
+`end` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The end position of the range.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion)&gt;
+
+An enumerable of regions that intersect with the range.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b4228ea88"></span>
+
+### Render Method
+
+Renders this layer.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Controls.Documents.Primitives.ITextView textView)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`textView` [Avalonia.Controls.Documents.Primitives.ITextView](xref:Avalonia.Controls.Documents.Primitives.ITextView)
+
+The text view for coordinate mapping.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsVisible](#uid-3c1da60359) | Gets or sets a value indicating whether this layer is currently visible. |
+| [Name](#uid-97425df212) | Gets the name that identifies this layer within a [Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection), which rejects a second layer carrying the same one and looks layers up by it. |
+| [ZIndex](#uid-72888ea09a) | Gets the Z-index for rendering order (higher = on top). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c1da60359"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether this layer is currently visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97425df212"></span>
+
+### Name Property
+
+Gets the name that identifies this layer within a
+[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection), which rejects a second layer
+carrying the same one and looks layers up by it.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72888ea09a"></span>
+
+### ZIndex Property
+
+Gets the Z-index for rendering order (higher = on top).
+
+```csharp
+public int ZIndex { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [RegionsChanged](#uid-8d4d6676be) | Event raised when regions change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d4d6676be"></span>
+
+### RegionsChanged Event
+
+Event raised when regions change.
+
+```csharp
+public event EventHandler RegionsChanged
+```
+
+</section>
+
+</ApiRefPage>
+

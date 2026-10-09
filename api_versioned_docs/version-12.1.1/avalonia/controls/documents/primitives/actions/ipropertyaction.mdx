@@ -1,0 +1,179 @@
+---
+title: 'IPropertyAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/ipropertyaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPropertyAction Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Non-generic base interface for property actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPropertyAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ieditoraction">IEditorAction</a>
+</div>
+</div>
+
+## Remarks
+
+This interface provides object-based access to property values,
+allowing UI controls like combo boxes to work without knowing the
+concrete value type. Prefer using [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction&lt;T&gt;](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction%601)
+when the value type is known at compile time.
+
+The generic interfaces [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction&lt;T&gt;](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction%601) and
+[Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction&lt;T&gt;](xref:Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction%601) provide default implementations
+for [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.GetValueAsObject(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.GetValueAsObject%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29), [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.SetValueAsObject(Avalonia.Controls.Documents.Primitives.ITextEditorHost,object)](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.SetValueAsObject%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%2CSystem.Object%29),
+and [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.GetAvailableValuesAsObjects](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.GetAvailableValuesAsObjects) that delegate to their
+typed counterparts. Only [Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.ClearValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.IPropertyAction.ClearValue%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) requires an explicit
+implementation because its behavior varies per action type.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearValue](#uid-c61aab58eb) | Clears the property value for the selection, reverting affected elements to their inherited or default value. |
+| [GetAvailableValuesAsObjects](#uid-25d7e5316c) | Gets the available values for this property as objects. |
+| [GetValueAsObject](#uid-0842b94043) | Gets the current property value for the selection as an object. |
+| [SetValueAsObject](#uid-0387453085) | Sets the property value for the selection from an object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c61aab58eb"></span>
+
+### ClearValue Method
+
+Clears the property value for the selection, reverting affected elements
+to their inherited or default value.
+
+```csharp
+public void ClearValue(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to modify.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25d7e5316c"></span>
+
+### GetAvailableValuesAsObjects Method
+
+Gets the available values for this property as objects.
+
+```csharp
+public System.Collections.IEnumerable GetAvailableValuesAsObjects()
+```
+
+#### Returns
+
+System.Collections.IEnumerable
+
+An enumerable of available values for combo box population,
+or null if the values should be determined by the UI.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0842b94043"></span>
+
+### GetValueAsObject Method
+
+Gets the current property value for the selection as an object.
+
+```csharp
+public object GetValueAsObject(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to query.
+
+
+#### Returns
+
+object
+
+The property value, or null for mixed/empty values.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0387453085"></span>
+
+### SetValueAsObject Method
+
+Sets the property value for the selection from an object.
+
+```csharp
+public void SetValueAsObject(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, object value)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+The editor host to modify.
+
+
+`value` object
+
+The value to apply.
+
+
+</section>
+
+</ApiRefPage>
+

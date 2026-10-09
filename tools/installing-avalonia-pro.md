@@ -27,7 +27,7 @@ Prior to October 13 2025, installing Avalonia Pro components required setting up
 
 ## Add the NuGet package
 
-Install the Avalonia Pro package you need by running the `dotnet add package` command. For example, to add the media player control:
+Install the Avalonia Pro package(s) you need by running the `dotnet add package` command. For example, to add the media player control:
 
 ```bash
 dotnet add package Avalonia.Controls.MediaPlayer
@@ -40,7 +40,9 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 | [`Avalonia.Controls.Charts`](/controls/data-display/charts/#getting-started) | Library of graphs, dashboards, analytics |
 | [`Avalonia.Controls.Markdown`](/controls/data-display/text-display/markdown/#getting-started) | Markdown text rendering |
 | [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
+| [`Avalonia.Controls.PdfViewer`](/controls/data-display/pdfviewer/#getting-started) | PDF viewing, search, annotation and printing |
 | [`Avalonia.Controls.RichTextEditor`](/controls/input/text-input/richtexteditor/#getting-started) | Document editing and processing |
+| [`Avalonia.Controls.Documents`](/controls/input/text-input/richtexteditor/#getting-started) | Document model used by `RichTextEditor` |
 | [`Avalonia.Controls.TreeDataGrid`](/controls/data-display/structured-data/treedatagrid/#getting-started) | Hierarchical and flat data grids |
 | [`Avalonia.Controls.VirtualKeyboard`](/controls/input/text-input/virtualkeyboard/#getting-started) | On-screen keyboard |
 
@@ -56,10 +58,12 @@ Include your Avalonia license key in the executable project file (`.csproj`):
 
 Replace `YOUR_LICENSE_KEY` with the key from your [Avalonia portal](https://portal.avaloniaui.net) account.
 
-For multi-project solutions, you can store your license key in an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example) to avoid duplication.
-
-:::warning
 Do not leave the license key value blank. If left blank, you may be unable to build or open your project.
+
+:::tip
+To share a license key between multiple projects, you can use an [environment variable](https://learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build) or a [shared props file](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=vs-2022#directorybuildprops-example).
+
+See the [Avalonia Pro samples repository](https://github.com/AvaloniaUI/AvaloniaPro.Samples/blob/main/Directory.Build.props) for an example of how to do this with a shared `Directory.Build.props` file.
 :::
 
 ## Verify the installation

@@ -242,7 +242,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/draw-with-a-property",
-        "to": "/docs/custom-controls/drawing-custom-controls"
+        "to": "/docs/custom-controls/custom-drawn-controls"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-a-custom-controls-library",
@@ -254,7 +254,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-attached-properties",
-        "to": "/docs/custom-controls/attached-properties"
+        "to": "/docs/custom-controls/defining-properties"
     },
     {
         "from": "/docs/guides/custom-controls/how-to-create-templated-controls",
@@ -262,7 +262,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/guides/custom-controls/add-custom-control-class",
-        "to": "/docs/custom-controls/custom-control-class"
+        "to": "/docs/custom-controls/custom-drawn-controls"
     },
     {
         "from": [
@@ -580,10 +580,6 @@ const redirects: Redirect[] = [
     {
         "from": "/docs/reference/controls/itemscontrol",
         "to": "/controls/data-display/collections/itemscontrol"
-    },
-    {
-        "from": "/docs/reference/controls/itemsrepeater",
-        "to": "/controls/data-display/collections/itemsrepeater"
     },
     {
         "from": [
@@ -967,7 +963,7 @@ const redirects: Redirect[] = [
             "/docs/data-binding/creating-and-binding-attached-properties",
             "/docs/concepts/attached-property",
         ],
-        "to": "/docs/custom-controls/attached-properties"
+        "to": "/docs/custom-controls/defining-properties"
     },
     {
         "from": "/docs/concepts/control-trees",
@@ -975,7 +971,7 @@ const redirects: Redirect[] = [
     },
     {
         "from": "/docs/concepts/custom-itemspanel",
-        "to": "/docs/custom-controls/custom-itemspanel"
+        "to": "/docs/how-to/itemscontrol-how-to"
     },
     {
         "from": "/docs/concepts/templates/data-templates",
@@ -1267,7 +1263,10 @@ const redirects: Redirect[] = [
         "to": "/controls/data-display/structured-data/treedatagrid/filtering"
     },
     {
-        "from": "/accelerate/tools/dev-tools/getting-started",
+        "from": [
+            "/accelerate/tools/dev-tools/getting-started",
+            "/tools/developer-tools"
+        ],
         "to": "/tools/developer-tools/installation"
     },
     {
@@ -1297,23 +1296,38 @@ const redirects: Redirect[] = [
         "to": "/tools/developer-tools/elements-tool"
     },
     {
-        "from": "/accelerate/tools/dev-tools/tools/logs",
+        "from": [
+            "/accelerate/tools/dev-tools/tools/logs",
+            "/tools/developer-tools/tools/logs"
+        ],
         "to": "/tools/developer-tools/logs-tool"
     },
     {
-        "from": "/accelerate/tools/dev-tools/tools/events",
+        "from": [
+            "/accelerate/tools/dev-tools/tools/events",
+            "/tools/developer-tools/tools/events"
+        ],
         "to": "/tools/developer-tools/events-tool"
     },
     {
-        "from": "/accelerate/tools/dev-tools/tools/breakpoints",
+        "from": [
+            "/accelerate/tools/dev-tools/tools/breakpoints",
+            "/tools/developer-tools/tools/breakpoints"
+        ],
         "to": "/tools/developer-tools/breakpoints-tool"
     },
     {
-        "from": "/accelerate/tools/dev-tools/tools/metrics",
+        "from": [
+            "/accelerate/tools/dev-tools/tools/metrics",
+            "/tools/developer-tools/tools/metrics"
+        ],
         "to": "/tools/developer-tools/metrics-tool"
     },
     {
-        "from": "/accelerate/tools/dev-tools/tools/profiler",
+        "from": [
+            "/accelerate/tools/dev-tools/tools/profiler",
+            "/tools/developer-tools/tools/profiler"
+        ],
         "to": "/tools/developer-tools/profiler-tool"
     },
     {
@@ -1415,6 +1429,7 @@ const redirects: Redirect[] = [
         "from": [
             "/docs/distribution-publishing/",
             "/accelerate/tools/parcel/getting-started",
+            "/tools/parcel"
         ],
         "to": "/tools/parcel/setup"
     },

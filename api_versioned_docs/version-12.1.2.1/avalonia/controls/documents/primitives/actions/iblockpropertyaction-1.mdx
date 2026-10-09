@@ -1,0 +1,69 @@
+---
+title: 'IBlockPropertyAction<T>'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/iblockpropertyaction-1'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction`1'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.IBlockPropertyAction`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IBlockPropertyAction&lt;T&gt; Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action that operates on block-level properties (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IBlockPropertyAction<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iblockpropertyaction">IBlockPropertyAction</a>, <a href="ieditoraction">IEditorAction</a>, <a href="ipropertyaction">IPropertyAction</a>, IPropertyAction&lt;&gt;
+</div>
+</div>
+
+## Remarks
+
+Block-level actions differ from inline actions in several ways:
+
+- They operate on container elements (Block) rather than text runs (RichInline)
+- They can affect multiple blocks in a selection
+- They need to handle mixed values when multiple blocks have different property values
+
+Common block properties include:
+[TextAlignment](xref:Avalonia.Media.TextAlignment), LineHeight, Margin, Padding, Background, BorderThickness, BorderBrush
+
+</ApiRefPage>
+

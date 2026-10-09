@@ -1,0 +1,792 @@
+---
+title: 'EditorActions'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/editoractions'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.EditorActions'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.EditorActions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EditorActions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides singleton instances of all built-in editor actions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EditorActions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EditorActions
+</div>
+</div>
+
+## Remarks
+
+Actions are organized by category:
+
+- Edit actions: Undo, Redo, Cut, Copy, Paste, SelectAll
+- Format actions: RichBold, RichItalic, RichUnderline, Strikethrough, RichSuperscript, RichSubscript
+- Font actions: [FontFamily](xref:Avalonia.Media.FontFamily), FontSize, ForegroundColor, BackgroundColor
+
+Use these instances in XAML with `{x:Static editor:EditorActions.RichBold}` or
+access them from code via `EditorActions.RichBold`.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetById](#uid-8b8e9e64d3) | Gets an action by its unique identifier. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b8e9e64d3"></span>
+
+### GetById Method
+
+Gets an action by its unique identifier.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction GetById(string id)
+```
+
+#### Parameters
+
+`id` string
+
+The action ID (e.g., "Format.RichBold").
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.Actions.IEditorAction](xref:Avalonia.Controls.Documents.Primitives.Actions.IEditorAction)
+
+The action if found; otherwise, null.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AlignCenter](#uid-427132d58e) | Gets the Align Center action. |
+| [AlignJustify](#uid-4689428863) | Gets the Justify action. |
+| [AlignLeft](#uid-f01b6ddfe1) | Gets the Align Left action. |
+| [AlignRight](#uid-44b56a0eb6) | Gets the Align Right action. |
+| [All](#uid-6832244a53) | Gets all built-in actions. |
+| [BackgroundColor](#uid-395759f903) | Gets the Background Color action. |
+| [BlockBackground](#uid-6b0d74bba6) | Gets the Block Background action for block elements. |
+| [BlockBorder](#uid-cf5ff3925c) | Gets the Block Border toggle action. |
+| [Bold](#uid-d7d610c563) | Gets the RichBold action. |
+| [BorderBrush](#uid-ad5b07b2d2) | Gets the Border Brush (color) action for block elements. |
+| [BorderThickness](#uid-d7f046696d) | Gets the Border Thickness action for block elements. |
+| [BulletMarkerStyle](#uid-561191110b) | Gets the Bullet Marker Style action (changes marker symbol on bullet lists). |
+| [Copy](#uid-8a0d47316a) | Gets the Copy action. |
+| [Cut](#uid-40739e40a8) | Gets the Cut action. |
+| [DeleteColumn](#uid-4497ba0f06) | Gets the Delete Column action. |
+| [DeleteRow](#uid-2ab61950c1) | Gets the Delete Row action. |
+| [DeleteTable](#uid-6fb1381f58) | Gets the Delete Table action. |
+| [FontFamily](#uid-baf078d9aa) | Gets the Font Family action. |
+| [FontSize](#uid-4cac10bb24) | Gets the Font Size action. |
+| [ForegroundColor](#uid-fc0f72ef19) | Gets the Foreground Color action. |
+| [InsertColumnAfter](#uid-e5cf58155b) | Gets the Insert Column After action. |
+| [InsertColumnBefore](#uid-142bff1267) | Gets the Insert Column Before action. |
+| [InsertRowAfter](#uid-ed70ce3981) | Gets the Insert Row After action. |
+| [InsertRowBefore](#uid-ebca66f571) | Gets the Insert Row Before action. |
+| [InsertTable](#uid-bd60053f9c) | Gets the Insert Table action. |
+| [Italic](#uid-1823a2e3de) | Gets the RichItalic action. |
+| [LineHeight](#uid-ceb077675b) | Gets the Line Height action. |
+| [Margin](#uid-bf92848c73) | Gets the Margin action for block elements. |
+| [NumberedMarkerStyle](#uid-9097915fde) | Gets the Numbered Marker Style action (changes marker symbol on numbered lists). |
+| [Padding](#uid-e37bbedff8) | Gets the Padding action for block elements. |
+| [Paste](#uid-0f8c944ecb) | Gets the Paste action. |
+| [PasteUnformatted](#uid-4bb8796292) | Gets the Paste Without Formatting action (Ctrl+Shift+V). |
+| [Redo](#uid-12c0f20d85) | Gets the Redo action. |
+| [SelectAll](#uid-62b023c06f) | Gets the Select All action. |
+| [Strikethrough](#uid-6b3ec8b4b9) | Gets the Strikethrough action. |
+| [Subscript](#uid-bfc2ccd279) | Gets the RichSubscript action. |
+| [Superscript](#uid-bbdbe05fb9) | Gets the RichSuperscript action. |
+| [TextAlignmentAction](#uid-365261dfa4) | Gets the Text Alignment action (Left, Center, Right, Justify). |
+| [ToggleBulletList](#uid-8d7cc63320) | Gets the Toggle Bullet List action (wraps/unwraps paragraphs as an unordered list). |
+| [ToggleNumberedList](#uid-d26d38e5f4) | Gets the Toggle Numbered List action (wraps/unwraps paragraphs as an ordered list). |
+| [Underline](#uid-585f5ff19d) | Gets the RichUnderline action. |
+| [Undo](#uid-4bf93df831) | Gets the Undo action. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-427132d58e"></span>
+
+### AlignCenter Property
+
+Gets the Align Center action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction AlignCenter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4689428863"></span>
+
+### AlignJustify Property
+
+Gets the Justify action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction AlignJustify { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f01b6ddfe1"></span>
+
+### AlignLeft Property
+
+Gets the Align Left action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction AlignLeft { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44b56a0eb6"></span>
+
+### AlignRight Property
+
+Gets the Align Right action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction AlignRight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6832244a53"></span>
+
+### All Property
+
+Gets all built-in actions.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Primitives.Actions.IEditorAction> All { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-395759f903"></span>
+
+### BackgroundColor Property
+
+Gets the Background Color action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BackgroundColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b0d74bba6"></span>
+
+### BlockBackground Property
+
+Gets the Block Background action for block elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BlockBackground { get; set; }
+```
+
+#### Remarks
+
+Sets the background color for entire paragraphs or sections.
+Works with [Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool](xref:Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool) for color selection.
+
+Different from inline text background (RichRun.Background) - fills the entire
+block area including padding.
+
+Combine with Padding and BorderBrush to create callout boxes.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf5ff3925c"></span>
+
+### BlockBorder Property
+
+Gets the Block Border toggle action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BlockBorder { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7d610c563"></span>
+
+### Bold Property
+
+Gets the RichBold action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Bold { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad5b07b2d2"></span>
+
+### BorderBrush Property
+
+Gets the Border Brush (color) action for block elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BorderBrush { get; set; }
+```
+
+#### Remarks
+
+Sets the border color for paragraphs or sections.
+Works with [Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool](xref:Avalonia.Controls.Documents.Primitives.Toolbar.ColorPickerTool) for color selection.
+
+Note: Border won't be visible without also setting BorderThickness (width).
+Combine with BlockBackground and Padding to create outlined callout boxes.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7f046696d"></span>
+
+### BorderThickness Property
+
+Gets the Border Thickness action for block elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BorderThickness { get; set; }
+```
+
+#### Remarks
+
+Sets uniform border thickness (width) on all four sides.
+Common values: 0, 1, 2, 3 pixels.
+
+Note: Border won't be visible without also setting BorderBrush (color).
+For non-uniform borders, use a dedicated border editor panel.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-561191110b"></span>
+
+### BulletMarkerStyle Property
+
+Gets the Bullet Marker Style action (changes marker symbol on bullet lists).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction BulletMarkerStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a0d47316a"></span>
+
+### Copy Property
+
+Gets the Copy action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Copy { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40739e40a8"></span>
+
+### Cut Property
+
+Gets the Cut action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Cut { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4497ba0f06"></span>
+
+### DeleteColumn Property
+
+Gets the Delete Column action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction DeleteColumn { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ab61950c1"></span>
+
+### DeleteRow Property
+
+Gets the Delete Row action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction DeleteRow { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fb1381f58"></span>
+
+### DeleteTable Property
+
+Gets the Delete Table action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction DeleteTable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-baf078d9aa"></span>
+
+### FontFamily Property
+
+Gets the Font Family action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction FontFamily { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cac10bb24"></span>
+
+### FontSize Property
+
+Gets the Font Size action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction FontSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc0f72ef19"></span>
+
+### ForegroundColor Property
+
+Gets the Foreground Color action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction ForegroundColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5cf58155b"></span>
+
+### InsertColumnAfter Property
+
+Gets the Insert Column After action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction InsertColumnAfter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-142bff1267"></span>
+
+### InsertColumnBefore Property
+
+Gets the Insert Column Before action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction InsertColumnBefore { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed70ce3981"></span>
+
+### InsertRowAfter Property
+
+Gets the Insert Row After action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction InsertRowAfter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebca66f571"></span>
+
+### InsertRowBefore Property
+
+Gets the Insert Row Before action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction InsertRowBefore { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd60053f9c"></span>
+
+### InsertTable Property
+
+Gets the Insert Table action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction InsertTable { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1823a2e3de"></span>
+
+### Italic Property
+
+Gets the RichItalic action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Italic { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ceb077675b"></span>
+
+### LineHeight Property
+
+Gets the Line Height action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction LineHeight { get; set; }
+```
+
+#### Remarks
+
+Line height is a block-level property that controls vertical spacing between lines.
+Important: Uses absolute pixel/point values, not relative multipliers.
+
+Common values: 14, 16, 18, 20, 24, 28, 32 pixels.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf92848c73"></span>
+
+### Margin Property
+
+Gets the Margin action for block elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Margin { get; set; }
+```
+
+#### Remarks
+
+Sets uniform margin (spacing outside the block) on all four sides.
+Common values: 0, 5, 10, 15, 20 pixels.
+
+For non-uniform margins, use a dedicated margin editor panel.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9097915fde"></span>
+
+### NumberedMarkerStyle Property
+
+Gets the Numbered Marker Style action (changes marker symbol on numbered lists).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction NumberedMarkerStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e37bbedff8"></span>
+
+### Padding Property
+
+Gets the Padding action for block elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Padding { get; set; }
+```
+
+#### Remarks
+
+Sets uniform padding (spacing inside the block, between border and content) on all four sides.
+Common values: 0, 5, 10, 15, 20 pixels.
+
+Useful when combined with borders or backgrounds to create callout boxes.
+For non-uniform padding, use a dedicated padding editor panel.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f8c944ecb"></span>
+
+### Paste Property
+
+Gets the Paste action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Paste { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bb8796292"></span>
+
+### PasteUnformatted Property
+
+Gets the Paste Without Formatting action (Ctrl+Shift+V).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction PasteUnformatted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12c0f20d85"></span>
+
+### Redo Property
+
+Gets the Redo action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Redo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62b023c06f"></span>
+
+### SelectAll Property
+
+Gets the Select All action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction SelectAll { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b3ec8b4b9"></span>
+
+### Strikethrough Property
+
+Gets the Strikethrough action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Strikethrough { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bfc2ccd279"></span>
+
+### Subscript Property
+
+Gets the RichSubscript action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Subscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbdbe05fb9"></span>
+
+### Superscript Property
+
+Gets the RichSuperscript action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Superscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-365261dfa4"></span>
+
+### TextAlignmentAction Property
+
+Gets the Text Alignment action (Left, Center, Right, Justify).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction TextAlignmentAction { get; set; }
+```
+
+#### Remarks
+
+Text alignment is a block-level property that applies to paragraphs and sections.
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their alignment set to the specified value.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d7cc63320"></span>
+
+### ToggleBulletList Property
+
+Gets the Toggle Bullet List action (wraps/unwraps paragraphs as an unordered list).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction ToggleBulletList { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d26d38e5f4"></span>
+
+### ToggleNumberedList Property
+
+Gets the Toggle Numbered List action (wraps/unwraps paragraphs as an ordered list).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction ToggleNumberedList { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-585f5ff19d"></span>
+
+### Underline Property
+
+Gets the RichUnderline action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Underline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bf93df831"></span>
+
+### Undo Property
+
+Gets the Undo action.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.IEditorAction Undo { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

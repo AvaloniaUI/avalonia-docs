@@ -1,6 +1,8 @@
 ---
 id: commanding
 title: Commanding
+description: Write commands with ICommand to connect user actions to view model logic.
+doc-type: explanation
 ---
 
 Commanding connects user actions (button clicks, menu selections, keyboard shortcuts) to logic in your view model. Avalonia uses the standard .NET `ICommand` interface, which enables clean separation between UI and business logic.
@@ -186,16 +188,6 @@ public class MainViewModel
 }
 ```
 
-## Controls that support commanding
-
-| Control | Command property | When it fires |
-|---|---|---|
-| `Button` | `Command` | On click |
-| `MenuItem` | `Command` | On click |
-| [`KeyBinding`](/api/avalonia/input/keybinding) | `Command` | On key gesture |
-| `ToggleButton` | `Command` | On toggle |
-| `SplitButton` | `Command` | On primary button click |
-
 ## Keyboard shortcuts and commands
 
 Bind a command to a keyboard shortcut using `KeyBinding`:
@@ -224,6 +216,8 @@ The `HotKey` triggers the button's command even when the button does not have fo
 
 ## See also
 
-- [How to Bind CanExecute](/docs/data-binding/how-to-bind-can-execute): Binding patterns for CanExecute.
+- [Binding to commands](/docs/data-binding/binding-to-commands): Binding syntax, binding a `Command` straight to a method, and `CommandParameter`.
+- [How to bind CanExecute](/docs/data-binding/how-to-bind-can-execute): Worked example of a button enabled by `CanExecute`.
+- [Adding interactivity](/docs/input-interaction/adding-interactivity): Choosing between events and commands.
 - [Keyboard and Hotkeys](/docs/input-interaction/keyboard-and-hotkeys): Key bindings and keyboard input.
 - [The MVVM Pattern](/docs/fundamentals/the-mvvm-pattern): Architecture for separating UI and logic.

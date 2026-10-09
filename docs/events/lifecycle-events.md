@@ -9,6 +9,8 @@ Avalonia controls raise several events during their creation, attachment to the 
 
 ## Lifecycle event order
 
+### Control creation
+
 When a control is created and added to the visual tree, events fire in the following order:
 
 | Order | Event / Method | Defined On | Description |
@@ -17,12 +19,26 @@ When a control is created and added to the visual tree, events fire in the follo
 | 2 | `AttachedToVisualTree` | `Visual` | The control has been added to a rooted visual tree. Layout has not yet occurred. |
 | 3 | `Loaded` | `Control` | The control is fully attached and ready for interaction. This fires after the visual tree attachment is complete. |
 
+### Control removal
+
 When a control is removed:
 
 | Order | Event / Method | Defined On | Description |
 |---|---|---|---|
 | 1 | `Unloaded` | `Control` | The control is about to be removed from the visual tree. |
 | 2 | `DetachedFromVisualTree` | `Visual` | The control has been removed from the visual tree. |
+
+### Layout application
+
+In addition to the events described above, layout controls can also participate in altering the visual tree through the following methods.
+
+During the initial run (i.e., when the control is first attached to the visual tree), these events occur in the stated sequence between the `AttachedToVisualTree` and `Loaded` events [detailed above](#control-creation). However, `MeasureOverride` and `ArrangeOverride` can run multiple times during a control's lifetime, as they are triggered whenever the layout is updated, e.g., when the window size is adjusted.
+
+| Order | Event / Method | Defined On | Description |
+|---|---|---|---|
+| 1 | `ApplyTemplate` | `Control` | Applies the [control template](/docs/styling/control-template-walkthrough) and creates the required templated visual parts. |
+| 2 | `MeasureOverride` | `Control` | Called during the [measure pass](/docs/layout/#measuring-and-arranging-children) of layout. Determines the desired size of a control. |
+| 3 | `ArrangeOverride` | `Control` | Called during the [arrange pass](/docs/layout/#measuring-and-arranging-children) of layout. Assigns the final size of a control. |
 
 ## Initialized
 
@@ -125,6 +141,41 @@ Both events indicate the control is part of the visual tree. The key difference:
 
 For most scenarios, `Loaded` is the right choice. Use `AttachedToVisualTree` when you need access to the `Root` reference or when working with non-`Control` visuals.
 
+## ApplyTemplate
+
+This method applies the control template of a control.
+
+```csharp
+public class MyControl : Control
+{
+    protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+    {
+        base.OnApplyTemplate(e);
+    }
+}
+```
+
+## MeasureOverride / ArrangeOverride
+
+These override methods are called by the layout system whenever a control needs to undergo the [two-pass layout process](/docs/layout/#measuring-and-arranging-children) to size and position it within the layout.
+
+```csharp
+public class MyControl : Control
+{
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        // Calculates the desired size
+        return base.MeasureOverride(availableSize);
+    }
+
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        // Allocates the final size
+        return base.ArrangeOverride(finalSize);
+    }
+}
+```
+
 ## DataContextChanged
 
 The `DataContextChanged` event fires whenever the `DataContext` property changes on a `StyledElement`:
@@ -141,6 +192,14 @@ This event fires when:
 - The `DataContext` is set directly on the control.
 - The inherited `DataContext` changes because a parent's `DataContext` changed.
 - The control moves to a different part of the visual tree with a different inherited `DataContext`.
+
+:::warning
+Do not mutate the logical tree from `DataContextChanged` or `OnPropertyChanged`!
+
+`DataContext` is an inherited property, so changes trigger a walk down the logical tree to propagate new values to descendants. If `LogicalChildren` are modified while the walk is in progress, binding errors can result.
+
+For more information, see [Mutating the logical tree](/docs/fundamentals/visual-and-logical-trees#mutating-the-logical-tree).
+:::
 
 ## Typical initialization patterns
 

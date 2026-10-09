@@ -300,4 +300,4 @@ If you have a touch display installed, try to slide the slider control.
 ## See also
 
 - [Embedded Linux overview](/docs/platform-specific-guides/embedded-linux)
-- [Virtual keyboard](/docs/platform-specific-guides/embedded-linux/virtual-keyboard)
+- [Virtual keyboard](/controls/input/text-input/virtualkeyboard)

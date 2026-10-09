@@ -40,7 +40,7 @@ A quick reference for WPF developers transitioning to Avalonia. Each entry shows
 | `Style x:Key="..."` | Style classes: `<Style Selector="Button.primary">` | |
 | `Style="{StaticResource ButtonStyle}"` | `Classes="primary"` | |
 | `ControlTemplate.Triggers` | Pseudo-class selectors | |
-| `TemplateBinding` | `TemplateBinding` | Same concept (OneWay only) |
+| `TemplateBinding` | `TemplateBinding` | Same concept, but Avalonia supports `Mode=TwoWay` |
 | `{RelativeSource TemplatedParent}` | `{TemplateBinding}` or `$parent[ControlType]` | |
 
 ### DataTrigger equivalent
@@ -210,8 +210,8 @@ Or with a binding converter:
 
 | WPF | Avalonia | Notes |
 |---|---|---|
-| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Set `Background="{x:Null}"` (not `Transparent`) for [click-through behavior](/docs/how-to/window-how-to#transparent-click-through-window) |
-| `WindowStyle="None"` | `SystemDecorations="None"` | Removes title bar and border |
+| `AllowsTransparency="True"` | `TransparencyLevelHint="Transparent"` | Avalonia does not support WPF-like transparent click-through behavior. |
+| `WindowStyle="None"` | `WindowDecorations="None"` | Removes title bar and border |
 | `ResizeMode` | `CanResize` | Boolean instead of enum |
 
 ## Graphics

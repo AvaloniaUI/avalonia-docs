@@ -7,18 +7,49 @@ Avalonia supports drag-and-drop operations for transferring data between control
 
 ## Enabling drop on a target
 
-To receive dropped content, an element must have the `DragDrop.AllowDrop` attached property set to `True` and handlers for the drag-and-drop events:
+To receive dropped content, an element must have the `DragDrop.AllowDrop` attached property set to `True`. Additionally, you must set handlers for the drag-and-drop events:
+
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
 
 ```xml
 <Border DragDrop.AllowDrop="True"
         Background="LightGray" Padding="40"
-        DragEnter="OnDragEnter"
-        DragLeave="OnDragLeave"
-        DragOver="OnDragOver"
-        Drop="OnDrop">
+        DragDrop.DragEnter="OnDragEnter"
+        DragDrop.DragLeave="OnDragLeave"
+        DragDrop.DragOver="OnDragOver"
+        DragDrop.Drop="OnDrop">
     <TextBlock Text="Drop files here" HorizontalAlignment="Center" />
 </Border>
 ```
+
+</TabItem>
+
+<TabItem value="cs" label="Code-behind">
+
+```csharp
+using Avalonia.Controls;
+using Avalonia.Input;
+
+namespace MyApp.Views;
+
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+    private void OnDragEnter(object? sender, DragEventArgs e){}
+    private void OnDragLeave(object? sender, DragEventArgs e){}
+    private void OnDragOver(object? sender, DragEventArgs e){}
+    private void OnDrop(object? sender, DragEventArgs e){}
+}
+```
+
+</TabItem>
+
+</Tabs>
 
 ## Drag-and-drop events
 
@@ -58,7 +89,7 @@ private void OnDrop(object? sender, DragEventArgs e)
 {
     if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
-        var files = e.DataTransfer.GetFiles();
+        var files = e.DataTransfer.TryGetFiles();
         if (files != null)
         {
             foreach (var file in files)
@@ -145,7 +176,7 @@ if (e.DataTransfer.Formats.Contains(DataFormat.Text))
 
 if (e.DataTransfer.Formats.Contains(DataFormat.File))
 {
-    var files = e.DataTransfer.GetFiles();
+    var files = e.DataTransfer.TryGetFiles();
 }
 ```
 
@@ -177,7 +208,11 @@ private void OnDragLeave(object? sender, DragEventArgs e)
 
 This example creates a drop zone that accepts text and files:
 
-```xml title="XAML"
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
+
+```xml
 <Border x:Name="DropZone"
         DragDrop.AllowDrop="True"
         Background="#F5F5F5" CornerRadius="8"
@@ -192,7 +227,18 @@ This example creates a drop zone that accepts text and files:
 </Border>
 ```
 
-```csharp title="Code-behind"
+</TabItem>
+
+<TabItem value="cs" label="Code-behind">
+
+```csharp
+using System.Linq;
+using Avalonia.Controls;
+using Avalonia.Input;
+using Avalonia.Media;
+
+namespace MyApp.Views;
+
 public partial class MainWindow : Window
 {
     public MainWindow()
@@ -233,7 +279,7 @@ public partial class MainWindow : Window
         }
         else if (e.DataTransfer.Formats.Contains(DataFormat.File))
         {
-            var files = e.DataTransfer.GetFiles();
+            var files = e.DataTransfer.TryGetFiles();
             if (files != null)
             {
                 StatusText.Text = $"Dropped {files.Count()} file(s)";
@@ -242,6 +288,10 @@ public partial class MainWindow : Window
     }
 }
 ```
+
+</TabItem>
+
+</Tabs>
 
 ## Handling events in XAML vs code
 

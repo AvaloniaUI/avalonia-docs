@@ -1,0 +1,179 @@
+---
+title: 'InsertTableColumnAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/inserttablecolumnaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InsertTableColumnAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for inserting a new column before or after the current cell's column in a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InsertTableColumnAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> InsertTableColumnAction
+</div>
+</div>
+
+## Remarks
+
+Two static instances ([Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction.Before](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction.Before) and [Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction.After](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction.After)) are provided.
+Each inserts a [Avalonia.Controls.Documents.TableColumn](xref:Avalonia.Controls.Documents.TableColumn) and an empty [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell) in every row
+at the corresponding index, keeping the table rectangular.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-e2e6cf9f04) | No summary available. |
+| [Execute](#uid-574a9b4fb8) | No summary available. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2e6cf9f04"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-574a9b4fb8"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-d690d55fb7) | No summary available. |
+| [Id](#uid-ad30a0edb6) | No summary available. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d690d55fb7"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ad30a0edb6"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [After](#uid-d63696c0c1) | Singleton instance that inserts a column after the current column. |
+| [Before](#uid-e8dc0a753c) | Singleton instance that inserts a column before the current column. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d63696c0c1"></span>
+
+### After Field
+
+Singleton instance that inserts a column after the current column.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction After
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8dc0a753c"></span>
+
+### Before Field
+
+Singleton instance that inserts a column before the current column.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Actions.InsertTableColumnAction Before
+```
+
+</section>
+
+</ApiRefPage>
+

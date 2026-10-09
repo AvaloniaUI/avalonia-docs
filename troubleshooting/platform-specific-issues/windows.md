@@ -91,7 +91,7 @@ On Windows 10, the native title bar does not automatically follow the applicatio
 
 If you need a dark title bar on Windows 10, you have two options:
 
-- **Use a custom title bar.** Set `ExtendClientAreaToDecorationsHint="True"` and `SystemDecorations="None"` to draw your own title bar with full theme control. See [Custom title bars](/docs/platform-specific-guides/windows#custom-title-bars) for details.
+- **Use a custom title bar.** Set `ExtendClientAreaToDecorationsHint="True"` and `WindowDecorations="None"` to draw your own title bar with full theme control. See [Custom title bars](/docs/platform-specific-guides/windows#custom-title-bars) for details.
 - **Use the undocumented DWM API.** Call `DwmSetWindowAttribute` with `DWMWA_USE_IMMERSIVE_DARK_MODE` (attribute 20) via P/Invoke. This works on Windows 10 build 18985 and later, but it is undocumented and may change in future Windows updates.
 
 ```csharp
@@ -125,7 +125,7 @@ If you save and restore window bounds across sessions, be aware that monitor con
 
 #### Taskbar icon missing for borderless or custom-chrome windows
 
-If your window uses `SystemDecorations="None"` or a custom titlebar and does not appear in the taskbar, ensure that you have not set `ShowInTaskbar="False"` unintentionally. Some extended window styles applied by Win32 can also suppress the taskbar entry. Setting `ShowInTaskbar="True"` explicitly resolves this in most cases.
+If your window uses `WindowDecorations="None"` or a custom titlebar and does not appear in the taskbar, ensure that you have not set `ShowInTaskbar="False"` unintentionally. Some extended window styles applied by Win32 can also suppress the taskbar entry. Setting `ShowInTaskbar="True"` explicitly resolves this in most cases.
 
 ## See also
 

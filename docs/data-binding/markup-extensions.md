@@ -24,8 +24,8 @@ Avalonia provides the following markup extensions:
 | [StaticResource](/docs/app-development/resource-dictionary#static-resource)                    | An existing keyed resource and does not update on changes          |
 | [DynamicResource](/docs/app-development/resource-dictionary#using-resources)                   | Deferred loading of a keyed resource that will update on changes   |
 | Binding                                                                                          | Based on the default binding preference: Compiled or Reflection    |
-| [CompiledBinding](/docs/data-binding/compiled-bindings#compiledbinding-markup)       | Based on a compiled binding                                        |
-| [ReflectionBinding](/docs/data-binding/compiled-bindings#reflectionbinding-markup)   | Based on a reflection binding                                      |
+| [CompiledBinding](/docs/data-binding/compiled-bindings#reflectionbinding-and-compiledbinding-markup)       | Based on a compiled binding                                        |
+| [ReflectionBinding](/docs/data-binding/compiled-bindings#reflectionbinding-and-compiledbinding-markup)   | Based on a reflection binding                                      |
 | [TemplateBinding](/docs/custom-controls/templated-controls)    | Based on a simplified binding used only within a `ControlTemplate` |
 | [OnPlatform](/docs/platform-specific-guides/xaml#onplatform-markup-extension)     | Conditionally when on the specified platform                       |
 | [OnFormFactor](/docs/platform-specific-guides/xaml#onformfactor-markup-extension) | Conditionally when on the specified factor                         |

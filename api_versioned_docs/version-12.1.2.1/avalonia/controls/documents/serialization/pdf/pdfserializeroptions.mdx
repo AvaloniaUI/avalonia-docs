@@ -1,0 +1,267 @@
+---
+title: 'PdfSerializerOptions'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/pdf/pdfserializeroptions'
+uid: 'Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Pdf.PdfSerializerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Pdf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Pdf'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Pdf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfSerializerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Pdf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Pdf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options controlling PDF export.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfSerializerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfSerializerOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfSerializerOptions](#uid-30763003d3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-30763003d3"></span>
+
+### PdfSerializerOptions Constructor
+
+```csharp
+public PdfSerializerOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Author](#uid-3f6b0f4521) | Document author written to the PDF metadata. |
+| [Deterministic](#uid-2c34ea334c) | Produces byte-stable output: a fixed creation date and file identifier are written instead of the current time and a random identifier. Intended for tests and reproducible pipelines. |
+| [Diagnostics](#uid-6818a65d1b) | Receives one [Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic) per fidelity loss the export decided to accept rather than fail on - a font left unembedded because the options or its licence forbid it, a color or variable font that no viewer can reproduce. Export never throws for these, so this callback is the only signal that the produced file is not a faithful copy of the document. |
+| [Document](#uid-32ce2ff88c) | Shared serializer options common to all document serializers. PDF export reads [Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes) and [Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ImageEncodingPolicy](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ImageEncodingPolicy) from it; an image the two rule out is left out of the file with its layout box kept, so the page still breaks where the screen does. [Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode) has no effect here - it selects between round-trip markers and native constructs, and PDF is not a format this library reads back. |
+| [FontEmbedding](#uid-15420579da) | How fonts are embedded into the produced PDF. |
+| [Keywords](#uid-fc4941c7c5) | Document keywords written to the PDF metadata. |
+| [Language](#uid-20bf448ffd) | Document language (BCP 47, e.g. `en-US`) written as the PDF catalog language. |
+| [Margins](#uid-a48a4d92ae) | Page margins in device-independent pixels. When , the document's `PagePadding` is used, falling back to 2 cm on every side. |
+| [PageSize](#uid-41e56ee8b3) | Page size in device-independent pixels (1/96 inch). When , the document-declared page size is used (fixed `PageWidth`/`PageHeight`), falling back to A4 for any dimension the document does not fix. |
+| [Subject](#uid-88a34dddbc) | Document subject written to the PDF metadata. |
+| [Title](#uid-4cc86e12dc) | Document title written to the PDF metadata. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f6b0f4521"></span>
+
+### Author Property
+
+Document author written to the PDF metadata.
+
+```csharp
+public string Author { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c34ea334c"></span>
+
+### Deterministic Property
+
+Produces byte-stable output: a fixed creation date and file identifier are written
+instead of the current time and a random identifier. Intended for tests and
+reproducible pipelines.
+
+```csharp
+public bool Deterministic { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6818a65d1b"></span>
+
+### Diagnostics Property
+
+Receives one [Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic) per fidelity loss the export decided to
+accept rather than fail on - a font left unembedded because the options or its
+licence forbid it, a color or variable font that no viewer can reproduce. Export
+never throws for these, so this callback is the only signal that the produced file
+is not a faithful copy of the document.
+
+```csharp
+public Action<Avalonia.Controls.Documents.Serialization.Pdf.PdfDiagnostic> Diagnostics { get; set; }
+```
+
+#### Remarks
+
+Invoked on the thread running the export, before any bytes reach the target stream.
+Leave it to skip the checks entirely.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32ce2ff88c"></span>
+
+### Document Property
+
+Shared serializer options common to all document serializers. PDF export reads
+[Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes) and
+[Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ImageEncodingPolicy](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ImageEncodingPolicy) from it; an image the
+two rule out is left out of the file with its layout box kept, so the page still
+breaks where the screen does.
+[Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode) has no effect here - it selects
+between round-trip markers and native constructs, and PDF is not a format this
+library reads back.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15420579da"></span>
+
+### FontEmbedding Property
+
+How fonts are embedded into the produced PDF.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding FontEmbedding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc4941c7c5"></span>
+
+### Keywords Property
+
+Document keywords written to the PDF metadata.
+
+```csharp
+public string Keywords { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20bf448ffd"></span>
+
+### Language Property
+
+Document language (BCP 47, e.g. `en-US`) written as the PDF catalog language.
+
+```csharp
+public string Language { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a48a4d92ae"></span>
+
+### Margins Property
+
+Page margins in device-independent pixels. When , the document's
+`PagePadding` is used, falling back to 2 cm on every side.
+
+```csharp
+public Nullable<Avalonia.Thickness> Margins { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41e56ee8b3"></span>
+
+### PageSize Property
+
+Page size in device-independent pixels (1/96 inch). When , the
+document-declared page size is used (fixed `PageWidth`/`PageHeight`), falling
+back to A4 for any dimension the document does not fix.
+
+```csharp
+public Nullable<Avalonia.Size> PageSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88a34dddbc"></span>
+
+### Subject Property
+
+Document subject written to the PDF metadata.
+
+```csharp
+public string Subject { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cc86e12dc"></span>
+
+### Title Property
+
+Document title written to the PDF metadata.
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

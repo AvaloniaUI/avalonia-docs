@@ -1,0 +1,202 @@
+---
+title: 'VirtualKeyboardInputMethod'
+hide_title: true
+slug: '/avalonia/controls/virtualkeyboardinputmethod'
+uid: 'Avalonia.Controls.VirtualKeyboardInputMethod'
+commentId: 'T:Avalonia.Controls.VirtualKeyboardInputMethod'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.VirtualKeyboard'
+assembly: 'Avalonia.Controls.VirtualKeyboard'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VirtualKeyboardInputMethod Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.VirtualKeyboard</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.VirtualKeyboard</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+This class represents a particular input method which is usually a keyboard layout possibly combined
+with an IME (Input Method Editor) engine for complex text input.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VirtualKeyboardInputMethod
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VirtualKeyboardInputMethod
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetInputMethodById](#uid-616599002e) | Gets an input method by its stable identifier |
+| [GetInputMethodsForLanguage](#uid-0f720c0085) | Gets the list of input methods available for a given language tag |
+| [GetSupportedLanguages](#uid-a2a1670c77) | Gets the list of supported languages (IETF BCP 47 language tags) |
+| [ToString](#uid-84e41b0124) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-616599002e"></span>
+
+### GetInputMethodById Method
+
+Gets an input method by its stable identifier
+
+```csharp
+public Avalonia.Controls.VirtualKeyboardInputMethod GetInputMethodById(string id)
+```
+
+#### Parameters
+
+`id` string
+
+
+#### Returns
+
+[Avalonia.Controls.VirtualKeyboardInputMethod](xref:Avalonia.Controls.VirtualKeyboardInputMethod)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f720c0085"></span>
+
+### GetInputMethodsForLanguage Method
+
+Gets the list of input methods available for a given language tag
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.VirtualKeyboardInputMethod> GetInputMethodsForLanguage(string languageTag)
+```
+
+#### Parameters
+
+`languageTag` string
+
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.VirtualKeyboardInputMethod](xref:Avalonia.Controls.VirtualKeyboardInputMethod)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2a1670c77"></span>
+
+### GetSupportedLanguages Method
+
+Gets the list of supported languages (IETF BCP 47 language tags)
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> GetSupportedLanguages()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84e41b0124"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-81b99f2e13) | An English name for the input method, typically in "Language (Region)" format, like "English (United States)" or "Spanish (Latin America)" |
+| [Id](#uid-b85e27a837) | Stable identifier for the input method that can be used for persistent application configuration |
+| [LanguageTag](#uid-3d011275c1) | IETF BCP 47 language tag, like "en", "en-US", "es-419" |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81b99f2e13"></span>
+
+### DisplayName Property
+
+An English name for the input method, typically in "Language (Region)" format, like "English (United States)" or "Spanish (Latin America)"
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b85e27a837"></span>
+
+### Id Property
+
+Stable identifier for the input method that can be used for persistent application configuration
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3d011275c1"></span>
+
+### LanguageTag Property
+
+IETF BCP 47 language tag, like "en", "en-US", "es-419"
+
+```csharp
+public string LanguageTag { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

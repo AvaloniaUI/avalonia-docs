@@ -1,9 +1,10 @@
 ---
 id: installation
 title: Installing the Avalonia Plus developer tools
+description: Install Avalonia Developer Tools, add the AvaloniaUI.DiagnosticsSupport package to your project, and connect your app to the tool.
 sidebar_label: Installation
 sidebar_position: 1
-doc-type: tutorial
+doc-type: how-to
 tags:
   - avalonia plus
   - avalonia pro
@@ -21,25 +22,20 @@ In this tutorial, you install the Avalonia Plus Developer Tools, add the diagnos
 | .NET Runtime | 6.0 or newer |
 | Windows | 10 or newer |
 | macOS | 13 or newer |
-| Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
+| Linux | X11 and glibc 2.27 or musl 1.2.2 compatible distros |
 
 No admin/sudo permissions are required to run the tool. A firewall exception might need to be configured, if you plan to use Developer Tools remotely.
 
 ### Diagnostics Support requirements
 
-Support package requires **Avalonia 11.2.0** or newer, and built on **.NET Standard 2.0** compatible APIs.
+Support package requires **Avalonia 11.2.0** or newer, and **.NET Standard 2.0** compatible APIs.
 
 This package is compatible with Browser and Android/iOS projects.
 
-:::note
+## Step 1: Installing Avalonia Developer Tools
 
-Demo project with Developer Tools preconfigured can be found at [AvaloniaUI/AvaloniaUI.DeveloperTools/samples/SimpleToDoList](https://github.com/AvaloniaUI/AvaloniaUI.DeveloperTools/tree/main/samples/SimpleToDoList#simpletodolist).
+Avalonia Developer Tools are a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
 
-:::
-
-## Step 1: Installing AvaloniaUI Developer Tools
-
-AvaloniaUI Developer Tools is currently a native [.NET tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools), with update mechanism provided by the SDK.
 This guide demonstrates global installation of the tool. But local installation is possible with a limitation: this tool will only work from the same working directory or descendant as the tool installation solution/project.
 
 <Tabs>
@@ -49,24 +45,21 @@ This guide demonstrates global installation of the tool. But local installation 
 dotnet tool install --global AvaloniaUI.DeveloperTools
 ```
 
-If you are upgrading app from .NET 8/9 installation, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools.Windows`  or `avdt uninstall`.
+If you are upgrading your app from .NET 8/9, you should first uninstall it with `dotnet tool uninstall --global AvaloniaUI.DeveloperTools`  or `avdt uninstall`.
 
-Developer Tools can be then updated by running `dotnet tool update` command.
-
-<details>
-<summary>Developer tools update command</summary>
+Developer Tools can be then updated by running the `dotnet tool update` command.
 
 ```bash
 dotnet tool update --global AvaloniaUI.DeveloperTools
 ```
 
-</details>
-
-
 </TabItem>
 <TabItem value="net8" label=".NET 8/9">
 
 If you're using .NET SDK older than 10, you must install a specific package depending on the running platform.
+
+<details>
+<summary>Installation commands</summary>
 
 **Windows:**
 
@@ -86,10 +79,12 @@ dotnet tool install --global AvaloniaUI.DeveloperTools.macOS
 dotnet tool install --global AvaloniaUI.DeveloperTools.Linux
 ```
 
+</details>
+
 Developer Tools can be then updated by running `dotnet tool update` command.
 
 <details>
-<summary>Developer tools update commands</summary>
+<summary>Update commands</summary>
 
 **Windows:**
 
@@ -114,9 +109,17 @@ dotnet tool update --global AvaloniaUI.DeveloperTools.Linux
 </TabItem>
 </Tabs>
 
+:::caution
+On macOS or Linux, the installation location may not be automatically added to the PATH environment variable. This surfaces as a "command not found" error when trying to run `avdt`.
+
+To resolve this issue, you must append the tool location to the PATH environment variable. The default location is usually `$HOME/.dotnet/tools`.
+
+For more information, see [Troubleshooting .NET tool usage issues](https://learn.microsoft.com/en-us/dotnet/core/tools/troubleshoot-usage-issues#global-tools).
+:::
+
 ## Step 2: Installing Diagnostics Support package
 
-The `Diagnostics Support` package is responsible for establishing a connection bridge between the user app and Developer Tools process.
+The `DiagnosticsSupport` package is responsible for establishing a connection bridge between the user app and Developer Tools process.
 
 This package can be installed either in the executable project with your Program AppBuilder or shared project with your Application, depending on your application's architecture.
 
@@ -128,7 +131,7 @@ dotnet add package AvaloniaUI.DiagnosticsSupport
 
 :::note
 
-Old package `Avalonia.Diagnostics` can be safely removed. It's not used by new `Developer Tools`.
+Old package `Avalonia.Diagnostics` can be safely removed. It's not used by the new Developer Tools.
 
 :::
 
@@ -149,34 +152,32 @@ public override void Initialize()
 
 Alternatively, it's possible to use `.WithDeveloperTools()` extension method on your AppBuilder.
 
-These methods also accept `DeveloperToolsOptions` options class allowing to customize `Diagnostics Support` setup. See [Reference to DeveloperToolsOptions](/tools/developer-tools/options) for more details.
+These methods also accept `DeveloperToolsOptions` options class, allowing you to customize `DiagnosticsSupport` setup. See the [`DeveloperToolsOptions` reference](/tools/developer-tools/options) for details.
 
-By default, **29414** is used and should be available. It is configurable via options.
+By default, the connection uses port 29414. It is configurable via options.
 
-## Step 4: Run the tool
+## Step 4: Running the tool
 
 When your target app is running, press <kbd>F12</kbd> to initialize connection.
-`Diagnostics Support` will automatically run `Developer Tools` executable and initiate connection between processes.
-Initial execution on `macOS` might take several seconds due to Gatekeeper validation. Subsequent launches will be faster.
 
-## Step 5: Activate the tool
+`DiagnosticsSupport` automatically runs the Developer Tools executable and initiate connection between processes.
 
-Once the Developer Tools has opened, you will be asked to input `AvaloniaUI Portal` credentials that were used to license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until license key session expires.
+Initial execution on macOS might be slower due to Gatekeeper validation. Subsequent launches will be faster.
+
+## Step 5: Activating the tool
+
+Once the Developer Tools has opened, you are asked to input your Avalonia account credentials that were used to license the tool. This is the only time when the tool requires an internet connection. After that, the tool can be used offline or until the license key session expires.
 
 ![Tool Activation](/img/tools/dev-tools/tool-activation.png)
 
-## Step 6: Done!
-
-After activation, the connection with the app will be resumed, and a window with tools will be opened. 
-
 ## See also
 
-- Documentation on [Elements tool](/tools/developer-tools/elements-tool)
-- Custom [DeveloperToolsOptions configuration](/tools/developer-tools/options) reference
+- [Elements tool](/tools/developer-tools/elements-tool)
+- [DeveloperToolsOptions configuration](/tools/developer-tools/options) reference
 - [Model context protocol (MCP)](/tools/developer-tools/mcp)
-- [Frequently Asked Questions](/tools/faq)
+- [Frequently asked questions](/tools/faq)
 - [Settings](/tools/developer-tools/settings)
 - [Shortcuts](/tools/developer-tools/shortcuts)
-- [Attaching Browser or Mobile applications](/tools/developer-tools/attaching-applications)
-- [Attaching to the Remote Tool](/tools/developer-tools/attaching-to-the-remote-tool)
+- [Attaching browser or mobile applications](/tools/developer-tools/attaching-applications)
+- [Attaching to the remote tool](/tools/developer-tools/attaching-to-the-remote-tool)
 - [Reporting issues](/troubleshooting/tools/developer-tools)

@@ -10,17 +10,12 @@ import type { Props } from '@theme/TOC';
 
 import styles from './styles.module.css';
 import { anthropic, openai, t3 } from '../TOCItems/icons';
+import { CompanionVideoCard, useCompanionVideo } from '@site/src/components/global/CompanionVideo';
 
 // SVG Icons
 const MarkdownIcon = () => (
   <svg className="fill-current" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M3 5.5C3 4.11929 4.11929 3 5.5 3H18.5C19.8807 3 21 4.11929 21 5.5V18.5C21 19.8807 19.8807 21 18.5 21H5.5C4.11929 21 3 19.8807 3 18.5V5.5ZM5.5 4.5C4.94772 4.5 4.5 4.94772 4.5 5.5V18.5C4.5 19.0523 4.94772 19.5 5.5 19.5H18.5C19.0523 19.5 19.5 19.0523 19.5 18.5V5.5C19.5 4.94772 19.0523 4.5 18.5 4.5H5.5ZM6.75 8.25V15.75H8.25V11.5L10 13.75L11.75 11.5V15.75H13.25V8.25H11.75L10 10.75L8.25 8.25H6.75ZM17.25 12V8.25H15.75V12H14.25L16.5 15L18.75 12H17.25Z" fill="currentColor"/>
-  </svg>
-);
-
-const GitHubIcon = () => (
-  <svg className="fill-current" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 16.418 4.865 20.166 8.839 21.489C9.339 21.581 9.521 21.278 9.521 21.017C9.521 20.782 9.512 20.082 9.508 19.212C6.726 19.812 6.139 17.846 6.139 17.846C5.685 16.681 5.029 16.378 5.029 16.378C4.121 15.756 5.098 15.769 5.098 15.769C6.101 15.84 6.629 16.796 6.629 16.796C7.521 18.314 8.97 17.876 9.539 17.623C9.631 16.969 9.889 16.531 10.175 16.419C7.954 16.305 5.62 15.418 5.62 11.618C5.62 10.518 6.009 9.618 6.649 8.918C6.545 8.658 6.203 7.631 6.747 6.249C6.747 6.249 7.587 5.972 9.497 7.272C10.313 7.042 11.157 6.927 12 6.923C12.843 6.927 13.687 7.042 14.503 7.272C16.413 5.972 17.253 6.249 17.253 6.249C17.797 7.631 17.455 8.658 17.351 8.918C17.991 9.618 18.38 10.518 18.38 11.618C18.38 15.428 16.043 16.303 13.815 16.413C14.172 16.583 14.495 16.918 14.495 17.446C14.495 18.222 14.483 18.846 14.483 19.017C14.483 19.28 14.662 19.586 15.171 19.487C19.138 18.163 22 14.416 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
   </svg>
 );
 
@@ -65,10 +60,12 @@ const getMarkdown = async (link: string) => {
 
 export default function TOC({ className, ...props }: Props): ReactNode {
   const [isOpen, setIsOpen] = useState(false);
-  const [buttonText, setButtonText] = useState("Open in");
+  const [buttonText, setButtonText] = useState("Open in LLM");
 
   // Get doc metadata and current URL
   const { metadata } = useDoc();
+  // Optional companion video declared by the page's `video:` front matter.
+  const companionVideo = useCompanionVideo();
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
 
@@ -76,10 +73,6 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   const pageUrl = `${siteConfig.url}${location.pathname}`;
   const encodedPageUrl = encodeURIComponent(pageUrl);
 
-  const editUrl = metadata?.editUrl;
-  // Derive the raw Markdown source URL from the document's source path rather
-  // than from editUrl. editUrl is absent for generated API pages (the `api`
-  // docs plugin has no editUrl configured), whereas `source` is always set.
   const RAW_BASE = 'https://raw.githubusercontent.com/AvaloniaUI/avalonia-docs/main/';
   const markdown = metadata?.source?.replace('@site/', RAW_BASE);
 
@@ -91,7 +84,7 @@ export default function TOC({ className, ...props }: Props): ReactNode {
     getMarkdown(markdown);
     setButtonText("Copied!");
     setTimeout(() => {
-      setButtonText("Open in");
+      setButtonText("Open in LLM");
     }, 1200);
     closeDropdown();
   };
@@ -102,15 +95,21 @@ export default function TOC({ className, ...props }: Props): ReactNode {
   };
 
   return (
-    <div className={styles.tableOfContentsWrapper}>
-      {/* Header with title and dropdown */}
-      <div className="flex items-center justify-between mb-4 max-[1359px]:flex-col max-[1359px]:items-start max-[1359px]:gap-3">
-        <h3 className="m-0 max-[1359px]:mr-0 mr-4 uppercase" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em', color: 'var(--color-muted)' }}>On this page</h3>
-        <div className="relative inline-block max-[1359px]:w-full">
-          <button
-            onClick={toggleDropdown}
-            className={`dropdown-toggle ${styles.tocDropdownButton}`}
-          >
+    <div className={clsx(styles.tableOfContentsWrapper, companionVideo && styles.hasVideo)}>
+      {/* The panel is a plain vertical stack: heading, companion video, the
+          "Open in LLM" dropdown, then the scrolling heading list. */}
+      <h3 className={clsx(styles.tocHeading, 'uppercase')}>On this page</h3>
+
+      {/* Companion video, when the page declares one. */}
+      {companionVideo && (
+        <CompanionVideoCard video={companionVideo} />
+      )}
+
+      <div className={styles.tocDropdownRow}>
+        <button
+          onClick={toggleDropdown}
+          className={`dropdown-toggle ${styles.tocDropdownButton}`}
+        >
           {buttonText}
           <ChevronDownIcon isOpen={isOpen} />
         </button>
@@ -172,29 +171,8 @@ export default function TOC({ className, ...props }: Props): ReactNode {
                 <ExternalLinkIcon />
               </DropdownItem>
             </li>
-            {/* Divider + Edit on GitHub */}
-            {editUrl && (
-              <>
-                <li>
-                  <span className="my-1.5 block h-px w-full bg-gray-200 dark:bg-white/[0.08]"></span>
-                </li>
-                <li>
-                  <DropdownItem
-                    tag="a"
-                    href={editUrl}
-                    onClick={closeDropdown}
-                    {...externalProps}
-                  >
-                    <GitHubIcon />
-                    Edit on GitHub
-                    <ExternalLinkIcon />
-                  </DropdownItem>
-                </li>
-              </>
-            )}
           </ul>
         </Dropdown>
-        </div>
       </div>
 
       <div className={clsx(styles.tableOfContents, 'thin-scrollbar', className)}>

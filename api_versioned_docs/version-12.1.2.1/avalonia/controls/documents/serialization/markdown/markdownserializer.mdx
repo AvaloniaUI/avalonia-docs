@@ -1,0 +1,464 @@
+---
+title: 'MarkdownSerializer'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/markdown/markdownserializer'
+uid: 'Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Markdown'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownSerializer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Markdown</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[Avalonia.Controls.Documents.Serialization.IDocumentSerializer](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer) for Markdown files. Parses Markdown
+text into a [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) via Markdig, and writes
+snapshots back to markdown text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownSerializer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MarkdownSerializer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDocumentSerializer
+</div>
+</div>
+
+## Remarks
+
+Round-trip contract: documents whose content came from markdown (or was
+authored with the markdown-specific elements) re-parse to an equivalent
+snapshot after writing; discrete authoring data (heading levels, code
+languages, alert kinds, checked states, URLs, titles, alt text, footnote
+labels, table alignment) is preserved exactly, while syntax spellings the
+model does not store (emphasis delimiters, bullet chars, fence chars) are
+written in the canonical form configured by [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Options](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Options).
+Foreign documents (RTF-loaded, arbitrary FlowDocuments) serialize as
+canonical markdown of whatever structure maps; unmappable formatting is
+dropped.
+
+This serializer is thread-safe for concurrent operations: its options and
+pipeline are fixed at construction.
+
+Cancellation is observed per block while a document is rendered or written.
+The Markdig parse that precedes rendering runs to completion once entered,
+so a token cancelled during it takes effect at the next block.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MarkdownSerializer (2 overloads)](#uid-84b2474dd9) | Initializes a new instance with the default options and no highlighter. |
+
+<span id="uid-84b2474dd9"></span>
+
+### MarkdownSerializer overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c98c6cea21"></span>
+
+#### MarkdownSerializer Constructor
+
+Initializes a new instance with the default options and no highlighter.
+
+```csharp
+public MarkdownSerializer()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e89b6aaa6"></span>
+
+#### MarkdownSerializer Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer).
+
+```csharp
+public MarkdownSerializer(Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions options, Avalonia.Controls.CodeHighlighter codeHighlighter)
+```
+
+##### Parameters
+
+`options` [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions)
+
+Formatting choices for markdown output; defaults are used when .
+
+
+`codeHighlighter` [Avalonia.Controls.CodeHighlighter](xref:Avalonia.Controls.CodeHighlighter)
+
+Optional code highlighter applied to fenced blocks on read.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanDeserialize](#uid-a2663dfaa6) | No summary available. |
+| [Deserialize (2 overloads)](#uid-c09fe7b090) | No summary available. |
+| [DeserializeAsync](#uid-b7edeb04ca) | Runs [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+| [Serialize (2 overloads)](#uid-8061d21448) | Serializes a snapshot to a markdown string. Convenience overload for callers that do not need a stream. |
+| [SerializeAsync](#uid-a7094070d6) | Runs [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2663dfaa6"></span>
+
+### CanDeserialize Method
+
+```csharp
+public bool CanDeserialize(System.IO.Stream stream)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<span id="uid-c09fe7b090"></span>
+
+### Deserialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec77ff9a44"></span>
+
+#### Deserialize Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-24ebbf9fc4"></span>
+
+#### Deserialize Method
+
+Deserializes a snapshot from a markdown string. Convenience overload for
+callers that do not need a stream.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Deserialize(string markdown)
+```
+
+##### Parameters
+
+`markdown` string
+
+The markdown source text.
+
+
+##### Returns
+
+Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The parsed [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7edeb04ca"></span>
+
+### DeserializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> DeserializeAsync(System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`stream` System.IO.Stream
+
+The stream to read from.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot&gt;
+
+The deserialized snapshot.
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O: no format here reads asynchronously.
+Where you are already off the UI thread, call [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29) and keep the
+thread you are on.
+
+</section>
+
+<span id="uid-8061d21448"></span>
+
+### Serialize overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b92959d1f"></span>
+
+#### Serialize Method
+
+Serializes a snapshot to a markdown string. Convenience overload for
+callers that do not need a stream.
+
+```csharp
+public string Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The snapshot to write.
+
+
+##### Returns
+
+string
+
+The markdown source text.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ea04fa588"></span>
+
+#### Serialize Method
+
+```csharp
+public void Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+
+`stream` System.IO.Stream
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7094070d6"></span>
+
+### SerializeAsync Method
+
+Runs [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29) on a pool thread.
+
+```csharp
+public System.Threading.Tasks.Task SerializeAsync(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot snapshot, System.IO.Stream stream, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`snapshot` Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot
+
+The snapshot to serialize.
+
+
+`stream` System.IO.Stream
+
+The stream to write to.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+A thread-offload convenience, not asynchronous I/O. The snapshot is already detached from
+the document, so the work needs no UI thread either way.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRead](#uid-177e363974) | No summary available. |
+| [CanWrite](#uid-e28b404cc7) | No summary available. |
+| [CodeHighlighter](#uid-4a5ab7847d) | Gets or sets the optional code highlighter used during deserialization. |
+| [FileExtension](#uid-99e7be3ae3) | No summary available. |
+| [FormatName](#uid-3f0374df4b) | No summary available. |
+| [MimeType](#uid-e14e6818ef) | No summary available. |
+| [Options](#uid-754c1c7892) | Gets the formatting choices for markdown output. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-177e363974"></span>
+
+### CanRead Property
+
+```csharp
+public bool CanRead { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e28b404cc7"></span>
+
+### CanWrite Property
+
+```csharp
+public bool CanWrite { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a5ab7847d"></span>
+
+### CodeHighlighter Property
+
+Gets or sets the optional code highlighter used during deserialization.
+
+```csharp
+public Avalonia.Controls.CodeHighlighter CodeHighlighter { get; set; }
+```
+
+#### Remarks
+
+Pass the highlighter to the constructor. A serializer handed to a background read
+and reconfigured through this setter changes the highlighter mid-read.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-99e7be3ae3"></span>
+
+### FileExtension Property
+
+```csharp
+public string FileExtension { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f0374df4b"></span>
+
+### FormatName Property
+
+```csharp
+public string FormatName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e14e6818ef"></span>
+
+### MimeType Property
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-754c1c7892"></span>
+
+### Options Property
+
+Gets the formatting choices for markdown output.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions Options { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

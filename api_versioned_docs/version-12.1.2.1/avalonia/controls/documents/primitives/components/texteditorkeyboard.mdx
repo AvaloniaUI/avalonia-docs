@@ -1,0 +1,163 @@
+---
+title: 'TextEditorKeyboard'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/texteditorkeyboard'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.TextEditorKeyboard'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.TextEditorKeyboard'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextEditorKeyboard Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extends [Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard) with editing commands
+(delete, cut, paste, undo/redo, formatting).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextEditorKeyboard
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> TextViewKeyboard <span className="apiref-page__relation-separator">-&gt;</span> TextEditorKeyboard
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextEditorKeyboard](#uid-56ccd6be97) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56ccd6be97"></span>
+
+### TextEditorKeyboard Constructor
+
+```csharp
+public TextEditorKeyboard()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CopyAsync](#uid-aed0172f2a) | Copies the current selection to the clipboard, including the RTF rich-format payload, by delegating to [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy). |
+| [Cut](#uid-91f7dd68f3) | Cuts the current selection to the clipboard without waiting for the clipboard write. |
+| [CutAsync](#uid-f1266751a5) | Cuts the current selection to the clipboard. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aed0172f2a"></span>
+
+### CopyAsync Method
+
+Copies the current selection to the clipboard, including the RTF
+rich-format payload, by delegating to [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Copy).
+
+```csharp
+public System.Threading.Tasks.Task CopyAsync(System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`cancellationToken` System.Threading.CancellationToken
+
+Abandons the copy before the clipboard is written.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91f7dd68f3"></span>
+
+### Cut Method
+
+Cuts the current selection to the clipboard without waiting for the clipboard write.
+
+```csharp
+public void Cut()
+```
+
+#### Remarks
+
+Await [Avalonia.Controls.Documents.Primitives.Components.TextEditorKeyboard.CutAsync](xref:Avalonia.Controls.Documents.Primitives.Components.TextEditorKeyboard.CutAsync) instead. The clipboard is a platform resource another
+process can hold, so the write can fail after this method has already returned, and
+a caller here cannot sequence anything after it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1266751a5"></span>
+
+### CutAsync Method
+
+Cuts the current selection to the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task CutAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A task that completes when the cut has finished.
+
+
+#### Remarks
+
+Delegates to [Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorActions.Cut) so the keyboard shortcut and
+toolbar/menu paths share one implementation, including the rich-format
+(RTF) clipboard payload published by
+[Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations.CutAsync(Avalonia.Controls.TextSelection,Avalonia.Visual,System.Collections.Generic.IReadOnlyList&#123;Avalonia.Controls.Documents.Serialization.IDocumentSerializer&#125;,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations.CutAsync%28Avalonia.Controls.TextSelection%2CAvalonia.Visual%2CSystem.Collections.Generic.IReadOnlyList%7BAvalonia.Controls.Documents.Serialization.IDocumentSerializer%7D%2CSystem.Threading.CancellationToken%29).
+The clipboard is a platform resource another process can hold, so the cut can fail:
+awaiting the returned task is how a caller sees that, and how it sequences work
+after the clipboard write.
+
+</section>
+
+</ApiRefPage>
+

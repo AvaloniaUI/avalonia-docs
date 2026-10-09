@@ -69,7 +69,7 @@ Every license includes:
 - A permanent license to build with XPF
 - 12 months of updates and engineering support
 
-Enterprise trials are available by contacting sales. For pricing, see the [Avalonia website](https://avaloniaui.net/xpf?utm_source=docs&utm_medium=referral&utm_content=xpf-index#pricing).
+Enterprise trials are available by contacting sales. For pricing, see the [Avalonia website](https://avaloniaui.net/xpf?av_source=docs&av_medium=doc_link&av_content=xpf-index#pricing).
 
 ## Get started
 

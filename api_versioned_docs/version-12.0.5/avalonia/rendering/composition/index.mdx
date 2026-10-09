@@ -1,0 +1,78 @@
+---
+title: 'Avalonia.Rendering.Composition'
+hide_title: true
+slug: '/avalonia/rendering/composition'
+uid: 'Avalonia.Rendering.Composition'
+commentId: 'N:Avalonia.Rendering.Composition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Composition Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Rendering.Composition`
+
+</div>
+
+## Types
+
+- [BooleanKeyFrameAnimation](booleankeyframeanimation.mdx)
+- [ColorKeyFrameAnimation](colorkeyframeanimation.mdx)
+- [CompositionBlendMode](compositionblendmode.mdx)
+- [CompositionContainerVisual](compositioncontainervisual.mdx) - A node in the visual tree that can have children.
+- [CompositionCustomVisual](compositioncustomvisual.mdx)
+- [CompositionCustomVisualHandler](compositioncustomvisualhandler.mdx)
+- [CompositionDrawingSurface](compositiondrawingsurface.mdx)
+- [CompositionGetValueStatus](compositiongetvaluestatus.mdx)
+- [CompositionGpuImportedImageSynchronizationCapabilities](compositiongpuimportedimagesynchronizationcapabilities.mdx)
+- [CompositionGradientExtendMode](compositiongradientextendmode.mdx)
+- [CompositionObject](compositionobject.mdx) - Base class of the composition API representing a node in the visual tree structure.
+Composition objects are the visual tree structure on which all other features of the composition API use and build on.
+The API allows developers to define and create one or many [Avalonia.Rendering.Composition.CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) objects each representing a single node in a Visual tree.
+- [CompositionOptions](compositionoptions.mdx)
+- [CompositionPropertySet](compositionpropertyset.mdx) - [Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s are [Avalonia.Rendering.Composition.CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject)s that allow storage of key values pairs
+that can be shared across the application and are not tied to the lifetime of another composition object.
+[Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s are most commonly used with animations, where they maintain key-value pairs
+that are referenced to drive portions of composition animations. [Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)s
+provide the ability to insert key-value pairs or retrieve a value for a given key.
+[Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet) does not support a delete function – ensure you use [Avalonia.Rendering.Composition.CompositionPropertySet](xref:Avalonia.Rendering.Composition.CompositionPropertySet)
+to store values that will be shared across the application.
+- [CompositionSolidColorVisual](compositionsolidcolorvisual.mdx)
+- [CompositionStretch](compositionstretch.mdx)
+- [CompositionSurface](compositionsurface.mdx)
+- [CompositionSurfaceVisual](compositionsurfacevisual.mdx)
+- [CompositionTileMode](compositiontilemode.mdx)
+- [CompositionVisual](compositionvisual.mdx) - The base visual object in the composition visual hierarchy.
+- [CompositionVisualCollection](compositionvisualcollection.mdx) - A collection of [CompositionVisual](xref:Avalonia.Rendering.Composition.CompositionVisual) objects
+- [Compositor](compositor.mdx) - The Compositor class manages communication between UI-thread and render-thread parts of the composition engine.
+It also serves as a factory to create UI-thread parts of various composition objects
+- [DoubleKeyFrameAnimation](doublekeyframeanimation.mdx)
+- [ElementComposition](elementcomposition.mdx) - Enables access to composition visual objects that back XAML elements in the XAML composition tree.
+- [ICompositionGpuImportedObject](icompositiongpuimportedobject.mdx) - An imported GPU object that's usable by composition APIs
+- [ICompositionGpuInterop](icompositiongpuinterop.mdx)
+- [ICompositionImportableSharedGpuContextImage](icompositionimportablesharedgpucontextimage.mdx) - An GPU image descriptor obtained from a context from the same share group as one used by the compositor
+- [ICompositionImportableSharedGpuContextObject](icompositionimportablesharedgpucontextobject.mdx) - An GPU object descriptor obtained from a context from the same share group as one used by the compositor
+- [ICompositionImportableSharedGpuContextSemaphore](icompositionimportablesharedgpucontextsemaphore.mdx) - An GPU semaphore descriptor obtained from a context from the same share group as one used by the compositor
+- [ICompositionImportedGpuImage](icompositionimportedgpuimage.mdx) - An imported GPU image object that's usable by composition APIs
+- [ICompositionImportedGpuSemaphore](icompositionimportedgpusemaphore.mdx) - An imported GPU semaphore object that's usable by composition APIs
+- [QuaternionKeyFrameAnimation](quaternionkeyframeanimation.mdx)
+- [ScalarKeyFrameAnimation](scalarkeyframeanimation.mdx)
+- [Vector2KeyFrameAnimation](vector2keyframeanimation.mdx)
+- [Vector3DKeyFrameAnimation](vector3dkeyframeanimation.mdx)
+- [Vector3KeyFrameAnimation](vector3keyframeanimation.mdx)
+- [Vector4KeyFrameAnimation](vector4keyframeanimation.mdx)
+- [VectorKeyFrameAnimation](vectorkeyframeanimation.mdx)
+</ApiRefPage>
+

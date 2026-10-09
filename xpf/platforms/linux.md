@@ -38,7 +38,7 @@ rm packages-microsoft-prod.deb
 
 # Install the .NET SDK
 sudo apt update
-sudo apt install dotnet-sdk-8.0
+sudo apt install dotnet-sdk-10.0
 ```
 
 ### Debian
@@ -49,13 +49,13 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
 sudo apt update
-sudo apt install dotnet-sdk-8.0
+sudo apt install dotnet-sdk-10.0
 ```
 
 ### Fedora
 
 ```bash
-sudo dnf install dotnet-sdk-8.0
+sudo dnf install dotnet-sdk-10.0
 ```
 
 Fedora includes Microsoft's .NET packages in its default repositories, and these are compatible with XPF.
@@ -172,7 +172,7 @@ Use VS Code with the C# DevKit extension. Configure a `launch.json` for remote d
 Rider supports remote debugging via SSH natively, and supports WSL2 through the Gateway feature.
 
 :::tip
-The `net8.0-windows` target framework works on non-Windows platforms when using the XPF SDK. You do not need to change the target framework to build for Linux.
+The `net10.0-windows` target framework works on non-Windows platforms when using the XPF SDK. You do not need to change the target framework to build for Linux.
 :::
 
 ## Tray icons

@@ -1,6 +1,7 @@
 ---
 id: packaging-for-windows
 title: Packaging apps for Windows
+description: Package Avalonia applications for Windows using Parcel, with NSIS, MSIX, and ZIP formats and code signing through local or cloud providers.
 sidebar_label: Windows
 doc-type: reference
 tags:
@@ -11,25 +12,29 @@ tags:
 
 ## Packaging
 
-Parcel creates Windows installers (NSIS executable) and portable executables that can be distributed via setup files or ZIP archives. The tool handles executable configuration, registry entries, and can create Windows packages on all supported platforms.
+Parcel creates Windows installers and archives. Packaging via Parcel can be run on Windows, macOS, or Linux.
 
-### Package Configuration
+| Format | CLI code | Best suited for |
+|---|---|---|
+| NSIS installer (`.exe`) | `nsis` | Traditional direct distribution with a customizable installation flow and optional uninstaller |
+| MSIX package (`.msix`) | `msix` | Modern Windows deployment, enterprise management, and Microsoft Store distribution |
+| ZIP archive (`.zip`) | `zip` | Portable distribution that does not require installation or registration |
 
-#### Common Properties
+For a complete list of setting names, types, defaults, and environment variables, see the [Parcel configuration reference](/tools/parcel/configuration-reference#windows-settings).
+
+### Package configuration
+
+#### Common properties
 
 **Application Name**:
 
 Display name used for the application install directory, Start Menu entry, and shortcut file name.
 
-:::note
-Currently cannot be localized.
-:::
-
 **Package Name**:
 
 The output installer file name (without extension).
 
-### NSIS Installer Properties
+### NSIS installer properties
 
 Parcel uses NSIS (Nullsoft Scriptable Install System) that creates lightweight, self-extracting installers with flexible installation options.
 
@@ -39,22 +44,22 @@ The publisher name displayed in Windows properties, installers, and system dialo
 
 **Create Company Folder**:
 
-When enabled, the application will be installed in a company-specific subdirectory:
+When enabled, Parcel installs the application in a company-specific subdirectory:
 - Admin install: `Program Files\[Company]\[Application Name]\`
 - User install: `%LocalAppData%\[Company]\[Application Name]\`
 
 This also affects the Start Menu shortcut location, organizing shortcuts under `Start Menu\Programs\[Company]\[Application Name]`.
 
-Default: false.
+Default: `false`
 
 **Installer Icon**:
 
-The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16x16 to 256x256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
+The installer icon in **ICO** or **SVG** format. ICO files should include multiple resolutions from 16 x 16 to 256 x 256 pixels. This icon appears in Windows Explorer for the installer executable, during installation, and in the Windows uninstaller list.
 
 :::note
 This is separate from the application icon. 
 
-Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the .csproj file.
+Application icon is defined by the standard .NET `<ApplicationIcon>file.ico</ApplicationIcon>` property in the `.csproj` file.
 :::
 
 **Requires Admin**:
@@ -63,59 +68,67 @@ Controls whether the installer requires administrator privileges for installatio
 
 When enabled (default), the application is installed to `Program Files` and requires User Account Control (UAC) elevation. When disabled, the application is installed to the current user's `%LocalAppData%` directory without requiring elevation.
 
-Default: true.
+Default: `true`
 
-**Include Uninstaller**:
+**Include uninstaller with the app**:
 
 When enabled, Parcel includes an uninstaller executable with the application and creates an entry in Windows Settings > Apps & Features (or Control Panel > Programs and Features on older Windows versions).
 
-Default: true.
+Default `true`
 
 **License File**:
 
 Optional license file to be displayed during installation. Supported formats:
-- Plain text (.txt)
-- Rich Text Format (.rtf)
+- Plain text (`.txt`)
+- Rich Text Format (`.rtf`)
 
 The license is displayed on a dedicated page during installation, and users must accept it to proceed.
 
-<!--- NOT YET AVAILABLE IN STABLE PARCEL
+### MSIX packages <MinVersion version="1.1" isNewVersion="true" />
 
-**File Type Associations**:
+MSIX provides package identity, clean installation and removal, and integration with Windows deployment systems. Parcel creates MSIX packages on every supported host. It does not require the Windows SDK to create the package. Parcel generates the package manifest or patches an `.appxmanifest` template in the project. It creates visual assets from the shared application metadata and **Installer Icon** settings.
+
+The **Publisher** setting is the distinguished name in the MSIX identity, such as `CN=Contoso`. For a signed package that you distribute directly, this value must exactly match the signing certificate subject. Parcel gets the value from a local signing certificate when possible. Otherwise, it uses **Company** or **Application Name**.
+
+For direct distribution, sign the MSIX package with a certificate that the target device trusts. For Microsoft Store distribution, the Store signs the submitted package. Disable **Sign Installer** when another process signs the package after Parcel. See Microsoft's [MSIX signing overview](https://learn.microsoft.com/en-us/windows/msix/package/signing-package-overview) and [Microsoft Store publishing guidance](https://learn.microsoft.com/en-us/windows/apps/publish/get-started).
+
+### Desktop integration
+
+**File Associations**:
 
 Associate the application with specific file types by specifying file extensions (e.g., `.myfile`) and optionally adding MIME types and custom icons. This creates registry entries for proper Windows Explorer integration.
 
-To handle these files in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+To handle these files in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
-**URL Scheme Handlers**:
+**URL Schemes**:
 
 Register custom URL schemes for deep linking by defining custom schemes (e.g., `myapp://`, `myprotocol://`). This creates registry entries that enable other applications and web browsers to launch your app with specific parameters.
 
-To handle URL schemes in Avalonia applications, see [Activatable Lifetime](https://docs.avaloniaui.net/docs/concepts/services/activatable-lifetime#handling-uri-activation) documentation.
+To handle URL schemes in Avalonia applications, see [Activatable lifetime](/docs/services/activatable-lifetime#handling-uri-activation).
 
---->
+Configure associations under **Basics**. Parcel applies them to NSIS and MSIX packages. See [File associations and URL schemes](/tools/parcel/configuration-reference#file-associations).
 
-## Code Signing
+## Code signing
 
 Parcel signs Windows executables and installers using Authenticode certificates. Cross-platform signing is supported on Windows, Linux, and macOS platforms.
 
 :::note
-This document explains how to integrate various signing methods with Parcel. It does not include detailed setup steps for obtaining certificates or configuring cloud signing services. Please refer to the linked documentation for each method for complete setup instructions.
+This document explains how to integrate various signing methods with Parcel. It does not include detailed setup steps for obtaining certificates or configuring cloud signing services.
 :::
 
 ### Prerequisites
 
-Before signing Windows applications, ensure you have:
+Before you sign a Windows application, make sure that you have these items:
 
 - **Code Signing Certificate**: Valid Authenticode certificate from a trusted Certificate Authority
 - **Windows SDK** (Windows only): Can be installed with Visual Studio Build Tools (on CI) or Visual Studio (on Desktop) from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
 - **Java Runtime**: Required for cross-platform signing operations.
 
-### Signing Methods
+### Signing methods
 
 Parcel supports multiple certificate formats depending on your development environment and workflow.
 
-#### Local Certificate
+#### Local certificate
 
 Use a local certificate file (PFX/P12 format) for signing. This method is not recommended for production applications, and is typically untrusted by Windows.
 
@@ -131,7 +144,7 @@ Use a local certificate file (PFX/P12 format) for signing. This method is not re
 **Documentation:**
 - [New-SelfSignedCertificate](https://learn.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2025-ps)
 
-#### Windows Certificate Store
+#### Windows certificate store
 
 Use certificates installed in the Windows Certificate Store, including hardware security modules (HSMs) and USB tokens.
 
@@ -146,14 +159,14 @@ Use certificates installed in the Windows Certificate Store, including hardware 
 **Documentation:**
 - [Windows Certificate Store Overview](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/certificate-stores)
 
-#### Microsoft Trusted Signing (Cross-Platform)
+#### Azure Artifact Signing (Cross-platform)
 
-Cloud-based signing service that provides the highest trust level without managing local certificates. Provides immediate SmartScreen bypass and enhanced security through hardware security modules (HSMs).
+Azure Artifact Signing is a cloud signing service that was formerly named Trusted Signing. It removes the need to manage local certificates. Hardware security modules (HSMs) protect the signing keys.
 
 **Required Configuration:**
-- **Trusted Signing Endpoint**: Azure Trusted Signing service endpoint URL (format: `https://[region].codesigning.azure.net/`)
-- **Certificate Profile Name**: Name of the certificate profile in Azure Trusted Signing
-- **Code Signing Account Name**: Azure Trusted Signing account name
+- **Azure Artifact Signing Endpoint**: Service endpoint URL, in the format of `https://[region].codesigning.azure.net/`
+- **Azure Artifact Signing Certificate Profile Name**: Name of the certificate profile
+- **Azure Artifact Signing Account Name**: Name of the signing account
 
 **Authentication:**
 Azure CLI authentication or environment variables:
@@ -167,13 +180,9 @@ Azure CLI authentication or environment variables:
 - **Windows**: Uses native SignTool when available, JSign otherwise
 - **Linux/macOS**: Uses [JSign](https://github.com/ebourg/jsign) (requires Java Runtime)
 
-:::tip
-Microsoft Trusted Signing is the recommended solution for enterprises requiring immediate trust without building reputation over time.
-:::
-
 **Documentation:**
-- [Microsoft Trusted Signing Documentation](https://learn.microsoft.com/en-us/azure/trusted-signing/)
-- [Trusted Signing Quickstart](https://learn.microsoft.com/en-us/azure/trusted-signing/quickstart)
+- [Azure Artifact Signing documentation](https://learn.microsoft.com/en-us/azure/artifact-signing/)
+- [Artifact Signing quickstart](https://learn.microsoft.com/en-us/azure/artifact-signing/quickstart)
 
 #### Azure Key Vault
 
@@ -181,6 +190,7 @@ Store certificates and private keys securely in Azure Key Vault for centralized 
 
 **Required Configuration:**
 - **Azure Key Vault Name**: Name of the Azure Key Vault instance
+- **Azure Key Vault URL**: (optional) Full vault URL for sovereign clouds or a non-default endpoint
 - **Azure Key Vault Certificate Name**: Name of the certificate stored in the vault
 
 **Authentication:**
@@ -195,10 +205,6 @@ Azure CLI authentication or environment variables:
 
 **Documentation:**
 - [Azure Key Vault Overview](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
-
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
 
 #### AWS KMS
 
@@ -223,10 +229,6 @@ AWS credentials from one of the following sources:
 **Documentation:**
 - [AWS KMS Overview](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 #### DigiCert
 
 Use certificates and keys stored in DigiCert ONE Secure Software Manager (formerly DigiCert KeyLocker) without installing DigiCert client tools.
@@ -241,17 +243,13 @@ Use certificates and keys stored in DigiCert ONE Secure Software Manager (former
 **Documentation:**
 - [DigiCert Software Trust Manager](https://docs.digicert.com/en/software-trust-manager.html)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 #### Google Cloud KMS
 
 Use Google Cloud Key Management Service for secure private key storage. The certificate must be provided separately as Google Cloud KMS stores only the private key.
 
 **Required Configuration:**
 - **Google Access Token**: OAuth 2.0 access token for authentication
-- **Google Signing Keyring**: Full path to the keyring in format: `projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]`
+- **Google Signing Keyring**: Keyring path, in the format of `projects/[PROJECT]/locations/[LOCATION]/keyRings/[KEYRING]`
 - **Google Signing Certificate File**: Path to the certificate file
 - **Google Signing Certificate Version** (optional): Specific version of the key (uses most recent if omitted)
 
@@ -262,10 +260,6 @@ Use Google Cloud Key Management Service for secure private key storage. The cert
 
 **Documentation:**
 - [Google Cloud KMS Overview](https://cloud.google.com/kms/docs)
-
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
 
 #### SSL.com eSigner
 
@@ -281,11 +275,8 @@ Cloud-based signing service from SSL.com with hardware security module (HSM) bac
 **Documentation:**
 - [SSL.com eSigner](https://www.ssl.com/esigner/)
 
-:::note
-Powered by [JSign](https://github.com/ebourg/jsign), and requires Java Runtime.
-:::
-
 ## See also
 
 - [Parcel setup](/tools/parcel/setup)
+- [Parcel configuration reference](/tools/parcel/configuration-reference)
 - [Parcel command line reference](/tools/parcel/command-line-reference)

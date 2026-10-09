@@ -43,9 +43,9 @@ curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 10.0
 
 There are several ways to install the Android SDK. Choose the one that matches your development environment.
 
-If you have Visual Studio or Visual Studio for Mac then follow the [Android SDK installation guide](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk).
+If you use Visual Studio, then refer to the [Android SDK installation guide](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk).
 
-If you use _JetBrains Rider_ then follow the [Rider Xamarin setup guide](https://www.jetbrains.com/help/rider/Xamarin.html).
+If you use JetBrains Rider, please refer to the [Rider documentation](https://www.jetbrains.com/help/rider/Introduction.html).
 
 Alternatively you can install the [Android command line tools](https://developer.android.com/studio#command-tools).
 

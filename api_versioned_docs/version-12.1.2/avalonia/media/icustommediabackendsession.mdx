@@ -1,0 +1,243 @@
+---
+title: 'ICustomMediaBackendSession'
+hide_title: true
+slug: '/avalonia/media/icustommediabackendsession'
+uid: 'Avalonia.Media.ICustomMediaBackendSession'
+commentId: 'T:Avalonia.Media.ICustomMediaBackendSession'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.MediaPlayer.Abstractions'
+assembly: 'Avalonia.Controls.MediaPlayer.Abstractions'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICustomMediaBackendSession Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICustomMediaBackendSession
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAsyncDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PauseAsync](#uid-348e01f995) | No summary available. |
+| [SeekAsync](#uid-9f2a6b219b) | No summary available. |
+| [SetMutedAsync](#uid-bdb36d4bdf) | No summary available. |
+| [SetVolumeAsync](#uid-26df5842ce) | No summary available. |
+| [StartAsync](#uid-637cb52315) | No summary available. |
+| [StopAsync](#uid-29b6b3cb43) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-348e01f995"></span>
+
+### PauseAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask PauseAsync(System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f2a6b219b"></span>
+
+### SeekAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask SeekAsync(TimeSpan position, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`position` TimeSpan
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdb36d4bdf"></span>
+
+### SetMutedAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask SetMutedAsync(bool isMuted, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`isMuted` bool
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26df5842ce"></span>
+
+### SetVolumeAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask SetVolumeAsync(double volume, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`volume` double
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-637cb52315"></span>
+
+### StartAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask StartAsync(Avalonia.Media.CustomMediaBackendFrameSinkFactory sinkFactory, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`sinkFactory` [Avalonia.Media.CustomMediaBackendFrameSinkFactory](xref:Avalonia.Media.CustomMediaBackendFrameSinkFactory)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29b6b3cb43"></span>
+
+### StopAsync Method
+
+```csharp
+public System.Threading.Tasks.ValueTask StopAsync(System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [State](#uid-a55cdc55ee) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a55cdc55ee"></span>
+
+### State Property
+
+```csharp
+public Avalonia.Media.CustomMediaBackendState State { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [StateChanged](#uid-c6dcd21045) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6dcd21045"></span>
+
+### StateChanged Event
+
+```csharp
+public event Action<Avalonia.Media.CustomMediaBackendState> StateChanged
+```
+
+</section>
+
+</ApiRefPage>
+

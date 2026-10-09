@@ -1,11 +1,6 @@
 // Main SASS entry point that imports all component styles
 // This file orchestrates all SASS-specific features and component imports
 
-// Tailwind CSS directives must come first so utility layers load before overrides
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Core imports (order matters)
 @import 'components/variables';  // Variables and mixins must come first
 @import 'components/fonts';       // Font definitions
@@ -30,6 +25,7 @@
 @import 'components/cards';
 @import 'components/dropdown';
 @import 'components/edit-this-page';
+@import 'components/github-sample-link';
 @import 'components/markdown';
 @import 'components/tabs';
 @import 'components/tables';
@@ -62,6 +58,8 @@
   //#region ----------- Z Indices ------------
   --z-sidebar: 2000;
   --z-backdrop: 1100;
+  // Above the navbar (200), DocSearch (300) and the mobile sidebar (2000).
+  --z-lightbox: 2100;
   //#endregion
 }
 

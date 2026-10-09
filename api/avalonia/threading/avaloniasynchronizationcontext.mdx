@@ -32,6 +32,10 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Threading/AvaloniaSynchronizationContext.cs">AvaloniaSynchronizationContext.cs</a>
+</div>
+
 </div>
 
 <div className="apiref-page__lead">
@@ -121,6 +125,7 @@ public AvaloniaSynchronizationContext(Avalonia.Threading.DispatcherPriority prio
 | [InstallIfNeeded](#uid-43d33fdad2) | Installs synchronization context in current thread |
 | [Post](#uid-f456ade104) | No summary available. |
 | [Send](#uid-955eff3bfe) | No summary available. |
+| [ToTaskScheduler](#uid-4e24f9c587) | Gets a [System.Threading.Tasks.TaskScheduler](xref:System.Threading.Tasks.TaskScheduler) associated with this [Avalonia.Threading.AvaloniaSynchronizationContext](xref:Avalonia.Threading.AvaloniaSynchronizationContext). |
 | [Wait](#uid-cb4f22cead) | No summary available. |
 
 <span id="uid-1ca5c5965e"></span>
@@ -224,6 +229,25 @@ public void Send(System.Threading.SendOrPostCallback d, object state)
 
 
 `state` object
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e24f9c587"></span>
+
+### ToTaskScheduler Method
+
+Gets a [System.Threading.Tasks.TaskScheduler](xref:System.Threading.Tasks.TaskScheduler) associated with this [Avalonia.Threading.AvaloniaSynchronizationContext](xref:Avalonia.Threading.AvaloniaSynchronizationContext).
+
+```csharp
+public System.Threading.Tasks.TaskScheduler ToTaskScheduler()
+```
+
+#### Returns
+
+System.Threading.Tasks.TaskScheduler
 
 
 </section>

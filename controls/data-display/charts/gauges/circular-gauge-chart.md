@@ -49,6 +49,20 @@ Circular gauge charts visualize a single value on a radial scale. They are the s
 | `NeedleBrush` | Brush used for the needle. | `null` |
 | `TrackThickness` | Thickness of the track arc. | `10.0` |
 | `MajorTickCount` | The number of major tick marks. | `5` |
+| `TickPosition` | Where tick marks sit relative to the track. | `Cross` |
+| `LabelPosition` | Where scale labels are drawn, `Inside` or `Outside`. | `Inside` |
+
+## Tick position
+
+`TickPosition` places tick marks on the track.
+
+| Value | Description |
+| :--- | :--- |
+| `Cross` | Spans the track, from 10 px inside the inner edge to the outer edge. Default. |
+| `Inside` | Extends inward from the inner edge of the track. |
+| `Outside` | Extends outward from the outer edge of the track. |
+
+Compact gauges shrink the value readout inside the dial. If the text cannot fit, it is moved to the open part of the sweep.
 
 ## See also
 

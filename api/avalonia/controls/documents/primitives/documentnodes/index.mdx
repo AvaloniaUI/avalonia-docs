@@ -1,0 +1,50 @@
+---
+title: 'Avalonia.Controls.Documents.Primitives.DocumentNodes'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/documentnodes'
+uid: 'Avalonia.Controls.Documents.Primitives.DocumentNodes'
+commentId: 'N:Avalonia.Controls.Documents.Primitives.DocumentNodes'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.DocumentNodes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentNodes Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Primitives.DocumentNodes`
+
+</div>
+
+## Types
+
+- [ContainerNode](containernode.mdx) - Abstract base class for [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) implementations that host child nodes.
+Manages child realization, caching, and coordinate delegation.
+- [DocumentNode](documentnode.mdx) - Abstract base class for visual nodes that render a single [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) in the document layout tree.
+- [NestedDocumentNode](nesteddocumentnode.mdx) - The layout node of a nested document shown at one place in a view: a page band
+on a sheet, a footnote at the bottom of the page that cites it or below the
+continuous flow. Its element is the document itself. The node stacks the nested
+document's root blocks the way a [Avalonia.Controls.Documents.Primitives.DocumentNodes.SectionNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.SectionNode) stacks a section's,
+measured at the placement's width; a band or a note is a few blocks, so the
+container realizes them all and nothing inside it virtualizes. One document
+shown on several pages has one node per placement over the shared elements,
+the multi-view model of the document.
+- [ParagraphNode](paragraphnode.mdx) - A [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) that renders a single [Avalonia.Controls.Documents.Primitives.DocumentNodes.ParagraphNode.Paragraph](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.ParagraphNode.Paragraph) using
+Avalonia's [Avalonia.Controls.Documents.Primitives.DocumentNodes.ParagraphNode.TextLayout](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.ParagraphNode.TextLayout) engine. Handles text shaping, selection geometry,
+caret positioning, hyperlink hit testing, and embedded control arrangement.
+- [StackLayoutNode](stacklayoutnode.mdx) - Base class for block-level [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) implementations that
+stack their children vertically. Provides measure, arrange, hit-testing,
+and empty-container caret support out of the box.
+- [TextMarkerStyle](textmarkerstyle.mdx) - This property determines the appearance of the list item's marker
+</ApiRefPage>
+

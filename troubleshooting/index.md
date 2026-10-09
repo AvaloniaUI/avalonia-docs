@@ -42,6 +42,12 @@ Find help diagnosing and resolving common issues when building Avalonia apps. Wh
   <DocsCard header="MessageBox" href="/troubleshooting/controls/messagebox">
     <p>Options for displaying message dialogs, including third-party alternatives.</p>
   </DocsCard>
+  <DocsCard header="NumericUpDown" href="/troubleshooting/controls/numericupdown">
+    <p>How to resolve issues with the NumericUpDown control.</p>
+  </DocsCard>
+  <DocsCard header="RichTextEditor" href="/troubleshooting/controls/richtexteditor">
+    <p>Common issues and debugging for the Avalonia Pro RichTextEditor control.</p>
+  </DocsCard>
 </DocsCards>
 
 ## Platform-specific issues

@@ -1,0 +1,160 @@
+---
+title: 'DeleteTableRowAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/deletetablerowaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.DeleteTableRowAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.DeleteTableRowAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DeleteTableRowAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for deleting the current row from a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DeleteTableRowAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> DeleteTableRowAction
+</div>
+</div>
+
+## Remarks
+
+If the deleted row is the last row in the only row group, the entire table is removed.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DeleteTableRowAction](#uid-d5994cb4a1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5994cb4a1"></span>
+
+### DeleteTableRowAction Constructor
+
+```csharp
+public DeleteTableRowAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-35de091485) | No summary available. |
+| [Execute](#uid-93182ef12d) | No summary available. |
+| [ExecuteAsync](editoraction.mdx#uid-6a0258eff0) | Executes the action asynchronously. Inherited from [EditorAction](editoraction.mdx). |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35de091485"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93182ef12d"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-d87d301e9b) | No summary available. |
+| [Id](#uid-a2df83f400) | No summary available. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d87d301e9b"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2df83f400"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

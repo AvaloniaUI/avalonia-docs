@@ -1,0 +1,366 @@
+---
+title: 'IStorageProvider'
+hide_title: true
+slug: '/avalonia/platform/storage/istorageprovider'
+uid: 'Avalonia.Platform.Storage.IStorageProvider'
+commentId: 'T:Avalonia.Platform.Storage.IStorageProvider'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform.Storage'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStorageProvider Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform.Storage</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IStorageProvider
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OpenFileBookmarkAsync](#uid-0c31116322) | Open [Avalonia.Platform.Storage.IStorageBookmarkFile](xref:Avalonia.Platform.Storage.IStorageBookmarkFile) from the bookmark ID. |
+| [OpenFilePickerAsync](#uid-22907f4437) | Opens file picker dialog. |
+| [OpenFolderBookmarkAsync](#uid-2edc4c9105) | Open [Avalonia.Platform.Storage.IStorageBookmarkFolder](xref:Avalonia.Platform.Storage.IStorageBookmarkFolder) from the bookmark ID. |
+| [OpenFolderPickerAsync](#uid-6bb27fee7f) | Opens folder picker dialog. |
+| [SaveFilePickerAsync](#uid-4e68fc0b1f) | Opens save file picker dialog. |
+| [SaveFilePickerWithResultAsync](#uid-1a9bca9667) | Opens save file picker dialog and returns additional information about the result. |
+| [TryGetFileFromPathAsync](#uid-9c134ae673) | Attempts to read file from the file-system by its path. |
+| [TryGetFolderFromPathAsync](#uid-8e5af1db8a) | Attempts to read folder from the file-system by its path. |
+| [TryGetWellKnownFolderAsync](#uid-fc02bb97a0) | Attempts to read folder from the file-system by its path |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c31116322"></span>
+
+### OpenFileBookmarkAsync Method
+
+Open [Avalonia.Platform.Storage.IStorageBookmarkFile](xref:Avalonia.Platform.Storage.IStorageBookmarkFile) from the bookmark ID.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFile> OpenFileBookmarkAsync(string bookmark)
+```
+
+#### Parameters
+
+`bookmark` string
+
+Bookmark ID.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageBookmarkFile](xref:Avalonia.Platform.Storage.IStorageBookmarkFile)&gt;
+
+Bookmarked file or null if OS denied request.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22907f4437"></span>
+
+### OpenFilePickerAsync Method
+
+Opens file picker dialog.
+
+```csharp
+public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.IStorageFile>> OpenFilePickerAsync(Avalonia.Platform.Storage.FilePickerOpenOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Platform.Storage.FilePickerOpenOptions](xref:Avalonia.Platform.Storage.FilePickerOpenOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;&gt;
+
+Array of selected [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or empty collection if user canceled the dialog.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2edc4c9105"></span>
+
+### OpenFolderBookmarkAsync Method
+
+Open [Avalonia.Platform.Storage.IStorageBookmarkFolder](xref:Avalonia.Platform.Storage.IStorageBookmarkFolder) from the bookmark ID.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageBookmarkFolder> OpenFolderBookmarkAsync(string bookmark)
+```
+
+#### Parameters
+
+`bookmark` string
+
+Bookmark ID.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageBookmarkFolder](xref:Avalonia.Platform.Storage.IStorageBookmarkFolder)&gt;
+
+Bookmarked folder or null if OS denied request.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bb27fee7f"></span>
+
+### OpenFolderPickerAsync Method
+
+Opens folder picker dialog.
+
+```csharp
+public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Platform.Storage.IStorageFolder>> OpenFolderPickerAsync(Avalonia.Platform.Storage.FolderPickerOpenOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Platform.Storage.FolderPickerOpenOptions](xref:Avalonia.Platform.Storage.FolderPickerOpenOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;&gt;
+
+Array of selected [Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder) or empty collection if user canceled the dialog.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e68fc0b1f"></span>
+
+### SaveFilePickerAsync Method
+
+Opens save file picker dialog.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> SaveFilePickerAsync(Avalonia.Platform.Storage.FilePickerSaveOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Platform.Storage.FilePickerSaveOptions](xref:Avalonia.Platform.Storage.FilePickerSaveOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
+
+Saved [Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile) or null if user canceled the dialog.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a9bca9667"></span>
+
+### SaveFilePickerWithResultAsync Method
+
+Opens save file picker dialog and returns additional information about the result.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.SaveFilePickerResult> SaveFilePickerWithResultAsync(Avalonia.Platform.Storage.FilePickerSaveOptions options)
+```
+
+#### Parameters
+
+`options` [Avalonia.Platform.Storage.FilePickerSaveOptions](xref:Avalonia.Platform.Storage.FilePickerSaveOptions)
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.SaveFilePickerResult](xref:Avalonia.Platform.Storage.SaveFilePickerResult)&gt;
+
+[Avalonia.Platform.Storage.SaveFilePickerResult](xref:Avalonia.Platform.Storage.SaveFilePickerResult) with saved file and additional dialog information such as selected file type.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c134ae673"></span>
+
+### TryGetFileFromPathAsync Method
+
+Attempts to read file from the file-system by its path.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFile> TryGetFileFromPathAsync(Uri filePath)
+```
+
+#### Parameters
+
+`filePath` Uri
+
+The path of the item to retrieve in Uri format.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFile](xref:Avalonia.Platform.Storage.IStorageFile)&gt;
+
+File or null if it doesn't exist.
+
+
+#### Remarks
+
+Uri path is usually expected to be an absolute path with "file" scheme.
+But it can be an uri with "content" scheme on the Android.
+It also might ask user for the permission, and throw an exception if it was denied.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8e5af1db8a"></span>
+
+### TryGetFolderFromPathAsync Method
+
+Attempts to read folder from the file-system by its path.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetFolderFromPathAsync(Uri folderPath)
+```
+
+#### Parameters
+
+`folderPath` Uri
+
+The path of the folder to retrieve in Uri format.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+Folder or null if it doesn't exist.
+
+
+#### Remarks
+
+Uri path is usually expected to be an absolute path with "file" scheme.
+But it can be an uri with "content" scheme on the Android.
+It also might ask user for the permission, and throw an exception if it was denied.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc02bb97a0"></span>
+
+### TryGetWellKnownFolderAsync Method
+
+Attempts to read folder from the file-system by its path
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Platform.Storage.IStorageFolder> TryGetWellKnownFolderAsync(Avalonia.Platform.Storage.WellKnownFolder wellKnownFolder)
+```
+
+#### Parameters
+
+`wellKnownFolder` [Avalonia.Platform.Storage.WellKnownFolder](xref:Avalonia.Platform.Storage.WellKnownFolder)
+
+Well known folder identifier.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Platform.Storage.IStorageFolder](xref:Avalonia.Platform.Storage.IStorageFolder)&gt;
+
+Folder or null if it doesn't exist.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanOpen](#uid-821d88f63c) | Returns true if it's possible to open file picker on the current platform. |
+| [CanPickFolder](#uid-c5a5582867) | Returns true if it's possible to open folder picker on the current platform. |
+| [CanSave](#uid-15d3347cf3) | Returns true if it's possible to open save file picker on the current platform. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-821d88f63c"></span>
+
+### CanOpen Property
+
+Returns true if it's possible to open file picker on the current platform.
+
+```csharp
+public bool CanOpen { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c5a5582867"></span>
+
+### CanPickFolder Property
+
+Returns true if it's possible to open folder picker on the current platform.
+
+```csharp
+public bool CanPickFolder { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15d3347cf3"></span>
+
+### CanSave Property
+
+Returns true if it's possible to open save file picker on the current platform.
+
+```csharp
+public bool CanSave { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

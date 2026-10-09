@@ -29,6 +29,17 @@ html[data-theme='dark'] {
 #__docusaurus {
 
   .navbar {
+    // When a lightbox locks page scroll, the scrollbar disappears and <body>
+    // gets compensating padding. The navbar is `position: fixed`, so body
+    // padding does not reach it and it would jump left by the scrollbar width.
+    // --scrollbar-gap is published on <html> by the lightbox; it is 0 on
+    // platforms with overlay scrollbars, which is why this is invisible on macOS.
+    html.lightbox-open & {
+      padding-inline-end: calc(
+        var(--ifm-navbar-padding-horizontal) + var(--scrollbar-gap, 0px)
+      );
+    }
+
     &__inner {
       width: initial;
       flex-grow: 1;

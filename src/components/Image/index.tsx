@@ -1,4 +1,4 @@
-import React, { CSSProperties, ImgHTMLAttributes } from 'react';
+import React, { CSSProperties, ImgHTMLAttributes, ReactNode } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 import clsx from 'clsx';
@@ -9,6 +9,7 @@ interface ImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> {
   light?: string;
   dark?: string;
   alt: string;
+  caption?: ReactNode;
   position?: Position;
   cornerRadius?: boolean;
   className?: string;
@@ -27,6 +28,7 @@ function Image({
   light,
   dark,
   alt,
+  caption,
   position = 'center',
   cornerRadius = false,
   className,
@@ -62,15 +64,26 @@ function Image({
     />
   );
 
+  // A caption wraps the image in a figure so the two stay together, and so the
+  // caption wraps at the same width as the image rather than the full page.
+  const content = caption ? (
+    <figure className={styles.figure} style={{ maxWidth }}>
+      {image}
+      <figcaption className={styles.caption}>{caption}</figcaption>
+    </figure>
+  ) : (
+    image
+  );
+
   if (position in positionMap) {
     return (
       <div style={{ display: 'flex', justifyContent: positionMap[position] }}>
-        {image}
+        {content}
       </div>
     );
   }
 
-  return image;
+  return content;
 }
 
 export default Image;

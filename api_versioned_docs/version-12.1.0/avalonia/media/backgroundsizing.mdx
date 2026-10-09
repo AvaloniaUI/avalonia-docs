@@ -1,0 +1,126 @@
+---
+title: 'BackgroundSizing'
+hide_title: true
+slug: '/avalonia/media/backgroundsizing'
+uid: 'Avalonia.Media.BackgroundSizing'
+commentId: 'T:Avalonia.Media.BackgroundSizing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BackgroundSizing Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines how a background is drawn relative to its border.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum BackgroundSizing
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> BackgroundSizing
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [CenterBorder](#uid-2173aefd42) | The background is drawn to the midpoint (center) of the border. |
+| [InnerBorderEdge](#uid-98526dae35) | The background is drawn up to the inside edge of the border. |
+| [OuterBorderEdge](#uid-347ec72b30) | The background is drawn completely to the outside edge of the border. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2173aefd42"></span>
+
+### CenterBorder Field
+
+The background is drawn to the midpoint (center) of the border.
+
+```csharp
+public Avalonia.Media.BackgroundSizing CenterBorder
+```
+
+#### Remarks
+
+The background will be visible underneath half of the border if the border has transparency.
+For this reason it is not recommended to use [Avalonia.Media.BackgroundSizing.CenterBorder](xref:Avalonia.Media.BackgroundSizing.CenterBorder) if transparency is involved.
+
+This value does not exist in other XAML frameworks and only exists in Avalonia for backwards compatibility
+with legacy code. Before [Avalonia.Media.BackgroundSizing](xref:Avalonia.Media.BackgroundSizing) was added, Avalonia would always render using this
+value (Skia's default).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98526dae35"></span>
+
+### InnerBorderEdge Field
+
+The background is drawn up to the inside edge of the border.
+
+```csharp
+public Avalonia.Media.BackgroundSizing InnerBorderEdge
+```
+
+#### Remarks
+
+The background will never be drawn under the border itself and will not be visible
+underneath the border regardless of border transparency.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-347ec72b30"></span>
+
+### OuterBorderEdge Field
+
+The background is drawn completely to the outside edge of the border.
+
+```csharp
+public Avalonia.Media.BackgroundSizing OuterBorderEdge
+```
+
+#### Remarks
+
+The background will be visible underneath the border if the border has transparency.
+
+</section>
+
+</ApiRefPage>
+

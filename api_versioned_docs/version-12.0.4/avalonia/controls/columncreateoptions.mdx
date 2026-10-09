@@ -1,0 +1,236 @@
+---
+title: 'ColumnCreateOptions'
+hide_title: true
+slug: '/avalonia/controls/columncreateoptions'
+uid: 'Avalonia.Controls.ColumnCreateOptions'
+commentId: 'T:Avalonia.Controls.ColumnCreateOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ColumnCreateOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Holds options for configuring a [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn) via the fluent API.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ColumnCreateOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ColumnCreateOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="checkboxcolumncreateoptions">CheckBoxColumnCreateOptions</a>, <a href="hierarchicalexpandercolumncreateoptions-1">HierarchicalExpanderColumnCreateOptions&lt;TModel&gt;</a>, <a href="templatecolumncreateoptions">TemplateColumnCreateOptions</a>, <a href="textcolumncreateoptions">TextColumnCreateOptions</a>
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ColumnCreateOptions](#uid-87f5aa9300) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-87f5aa9300"></span>
+
+### ColumnCreateOptions Constructor
+
+```csharp
+public ColumnCreateOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AllowTriStateSorting](#uid-2d3c781356) | Gets or sets whether the user can cycle through ascending, descending, and unsorted states when clicking the column header. |
+| [BeginEditGestures](#uid-a7d933d9bd) | Gets or sets the gesture(s) that will cause a cell to enter edit mode. |
+| [CanUserResize](#uid-265c20fcbb) | Gets or sets a value indicating whether the user can resize a column by dragging. |
+| [CanUserSort](#uid-3860b5729a) | Gets or sets a value indicating whether the user can sort a column by clicking. |
+| [CompareAscending](#uid-5685462157) | Gets or sets a custom comparison for ascending ordered columns. |
+| [CompareDescending](#uid-49dcda7052) | Gets or sets a custom comparison for descending ordered columns. |
+| [MaxWidth](#uid-4554236b2f) | Gets or sets the maximum width for a column. |
+| [MinWidth](#uid-1776db3e6c) | Gets or sets the minimum width for a column. |
+| [Width](#uid-3cd08b17fd) | Gets or sets the column width. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d3c781356"></span>
+
+### AllowTriStateSorting Property
+
+Gets or sets whether the user can cycle through ascending, descending, and unsorted
+states when clicking the column header.
+
+```csharp
+public Nullable<bool> AllowTriStateSorting { get; set; }
+```
+
+#### Remarks
+
+Only applies if [Avalonia.Controls.ColumnCreateOptions.CanUserSort](xref:Avalonia.Controls.ColumnCreateOptions.CanUserSort) is true. If null, the owner
+[Avalonia.Controls.TreeDataGrid.AllowTriStateSorting](xref:Avalonia.Controls.TreeDataGrid.AllowTriStateSorting)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7d933d9bd"></span>
+
+### BeginEditGestures Property
+
+Gets or sets the gesture(s) that will cause a cell to enter edit mode.
+
+```csharp
+public Avalonia.Controls.BeginEditGestures BeginEditGestures { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-265c20fcbb"></span>
+
+### CanUserResize Property
+
+Gets or sets a value indicating whether the user can resize a column by dragging.
+
+```csharp
+public Nullable<bool> CanUserResize { get; set; }
+```
+
+#### Remarks
+
+If null, the owner [Avalonia.Controls.TreeDataGrid.CanUserResizeColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserResizeColumns)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3860b5729a"></span>
+
+### CanUserSort Property
+
+Gets or sets a value indicating whether the user can sort a column by clicking.
+
+```csharp
+public Nullable<bool> CanUserSort { get; set; }
+```
+
+#### Remarks
+
+If null, the owner [Avalonia.Controls.TreeDataGrid.CanUserSortColumns](xref:Avalonia.Controls.TreeDataGrid.CanUserSortColumns)
+property value will apply.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5685462157"></span>
+
+### CompareAscending Property
+
+Gets or sets a custom comparison for ascending ordered columns.
+
+```csharp
+public Comparison<object> CompareAscending { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49dcda7052"></span>
+
+### CompareDescending Property
+
+Gets or sets a custom comparison for descending ordered columns.
+
+```csharp
+public Comparison<object> CompareDescending { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4554236b2f"></span>
+
+### MaxWidth Property
+
+Gets or sets the maximum width for a column.
+
+```csharp
+public Nullable<Avalonia.Controls.GridLength> MaxWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1776db3e6c"></span>
+
+### MinWidth Property
+
+Gets or sets the minimum width for a column.
+
+```csharp
+public Avalonia.Controls.GridLength MinWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3cd08b17fd"></span>
+
+### Width Property
+
+Gets or sets the column width.
+
+```csharp
+public Nullable<Avalonia.Controls.GridLength> Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

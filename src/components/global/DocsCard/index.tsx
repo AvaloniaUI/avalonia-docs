@@ -9,6 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href?: string;
   header?: string;
   icon?: string;
+  darkIcon?: string;
   hoverIcon?: string;
   iconset?: string;
   ionicon?: string;
@@ -29,8 +30,22 @@ function DocsCard(props: Props): JSX.Element {
       <div className="Card-container">
         {(props.icon || hoverIcon) && (
           <div className="Card-icon-row">
-            {props.icon && <img src={useBaseUrl(props.icon)} className="Card-icon Card-icon-default" />}
-            {hoverIcon && <img src={useBaseUrl(hoverIcon)} className="Card-icon Card-icon-hover" />}
+            {props.icon && (
+              <img
+                src={useBaseUrl(props.icon)}
+                className={clsx('Card-icon Card-icon-default', props.darkIcon && 'Card-icon-light-only')}
+              />
+            )}
+            {props.darkIcon && <img src={useBaseUrl(props.darkIcon)} className="Card-icon Card-icon-default Card-icon-dark-only" />}
+            {hoverIcon && (
+              <img
+                src={useBaseUrl(hoverIcon)}
+                className={clsx('Card-icon Card-icon-hover', props.darkIcon && !props.hoverIcon && 'Card-icon-light-only')}
+              />
+            )}
+            {props.darkIcon && !props.hoverIcon && (
+              <img src={useBaseUrl(props.darkIcon)} className="Card-icon Card-icon-hover Card-icon-dark-only" />
+            )}
           </div>
         )}
         {props.ionicon && <ion-icon name={props.ionicon} className="Card-ionicon"></ion-icon>}

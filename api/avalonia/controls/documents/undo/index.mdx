@@ -1,0 +1,58 @@
+---
+title: 'Avalonia.Controls.Documents.Undo'
+hide_title: true
+slug: '/avalonia/controls/documents/undo'
+uid: 'Avalonia.Controls.Documents.Undo'
+commentId: 'N:Avalonia.Controls.Documents.Undo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Undo Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Undo`
+
+</div>
+
+## Types
+
+- [EmptyUndoUnit](emptyundounit.mdx) - Sentinel [Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit) returned by empty / no-op undo scopes
+(when undo is disabled, or while a replay is in progress and
+[Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) short-circuits to an empty
+scope). Never appears on
+[Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit) — that
+property is when no real unit was opened, so
+`null` and [Avalonia.Controls.Documents.Undo.EmptyUndoUnit.Instance](xref:Avalonia.Controls.Documents.Undo.EmptyUndoUnit.Instance) retain distinct semantics.
+- [IUndoHistory](iundohistory.mdx) - Reads the undo and redo stacks.
+- [IUndoManager](iundomanager.mdx) - Records and replays document edits.
+- [IUndoScope](iundoscope.mdx) - Scope returned by [Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29). Disposing
+the scope commits the unit to the undo stack (or nests it inside a
+parent scope). Callers may attach a post-edit selection snapshot via
+[Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter(Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter%28System.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) before disposing.
+- [IUndoUnit](iundounit.mdx) - Read-only metadata for an undo/redo operation. The reversal mechanics
+live on an internal contract, so a unit obtained from
+[Avalonia.Controls.Documents.Undo.UndoManager.Undo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Undo) or [Avalonia.Controls.Documents.Undo.IUndoScope.Unit](xref:Avalonia.Controls.Documents.Undo.IUndoScope.Unit) can be
+described but not replayed by a caller.
+- [NullUndoManager](nullundomanager.mdx) - An [Avalonia.Controls.Documents.Undo.IUndoManager](xref:Avalonia.Controls.Documents.Undo.IUndoManager) that records nothing.
+- [SelectionSnapshot](selectionsnapshot.mdx) - Value-type snapshot of a [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection) captured at a
+point in time. Stores a frozen [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) per endpoint
+together with the offset inside that endpoint's cached leaf and the
+child-index path from the document root down to that leaf.
+- [UndoManager](undomanager.mdx) - Manages undo/redo operations for a document. Set one on
+[Avalonia.Controls.Documents.TextModel.TextDocument.UndoManager](xref:Avalonia.Controls.Documents.TextModel.TextDocument.UndoManager) to record changes; leave that
+property , or set [Avalonia.Controls.Documents.Undo.UndoManager.IsEnabled](xref:Avalonia.Controls.Documents.Undo.UndoManager.IsEnabled) to
+, for a document that records nothing.
+</ApiRefPage>
+

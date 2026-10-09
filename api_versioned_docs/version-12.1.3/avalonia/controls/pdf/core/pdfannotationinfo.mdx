@@ -1,0 +1,304 @@
+---
+title: 'PdfAnnotationInfo'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfannotationinfo'
+uid: 'Avalonia.Controls.Pdf.Core.PdfAnnotationInfo'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfAnnotationInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfAnnotationInfo Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An immutable, read-only snapshot of a PDF annotation's properties, suitable for inspection by
+consumers. Geometry is reported in PDF user space (see [Avalonia.Controls.Pdf.Core.PdfPoint](xref:Avalonia.Controls.Pdf.Core.PdfPoint)/[Avalonia.Controls.Pdf.Core.PdfRect](xref:Avalonia.Controls.Pdf.Core.PdfRect)).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfAnnotationInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfAnnotationInfo
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AnnotationIndex](#uid-526d356c28) | Zero-based index of this annotation on its page. |
+| [Author](#uid-0606e7f095) | The annotation author/title, or `null`. |
+| [BorderWidth](#uid-4bc86ce1f9) | Border/stroke width in points, or `null` if not set. |
+| [Bounds](#uid-91050198d2) | Bounding rectangle in PDF user space. |
+| [Color](#uid-8b51f4ae27) | Stroke/border color, or `null` if not set. |
+| [Contents](#uid-00882e0de6) | The annotation's text contents (note text or popup text), or `null`. |
+| [HasArrowHead](#uid-7c37224baa) | Whether a line annotation has an arrowhead at its end point. |
+| [InkStrokes](#uid-d9ec7661bf) | Ink strokes for ink annotations (each stroke is a list of points), or `null`. |
+| [InteriorColor](#uid-2b84795a60) | Fill/interior color, or `null` if not set. |
+| [IsStar](#uid-4cab105a1d) | Whether a polygon annotation represents a star shape. |
+| [LineEnd](#uid-b1d85ae2d9) | End point for line annotations, or `null`. |
+| [LineStart](#uid-4002538702) | Start point for line annotations, or `null`. |
+| [PageIndex](#uid-e0a4414b7a) | Zero-based page index this annotation belongs to. |
+| [Sides](#uid-062b57080c) | Number of sides (polygon) or spikes (star), or `null`. |
+| [Type](#uid-49398e681e) | The annotation subtype. |
+| [Vertices](#uid-03b4d407bc) | Vertices for polygon/polyline annotations, or `null`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-526d356c28"></span>
+
+### AnnotationIndex Property
+
+Zero-based index of this annotation on its page.
+
+```csharp
+public int AnnotationIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0606e7f095"></span>
+
+### Author Property
+
+The annotation author/title, or `null`.
+
+```csharp
+public string Author { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bc86ce1f9"></span>
+
+### BorderWidth Property
+
+Border/stroke width in points, or `null` if not set.
+
+```csharp
+public Nullable<float> BorderWidth { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91050198d2"></span>
+
+### Bounds Property
+
+Bounding rectangle in PDF user space.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfRect Bounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b51f4ae27"></span>
+
+### Color Property
+
+Stroke/border color, or `null` if not set.
+
+```csharp
+public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> Color { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00882e0de6"></span>
+
+### Contents Property
+
+The annotation's text contents (note text or popup text), or `null`.
+
+```csharp
+public string Contents { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c37224baa"></span>
+
+### HasArrowHead Property
+
+Whether a line annotation has an arrowhead at its end point.
+
+```csharp
+public bool HasArrowHead { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9ec7661bf"></span>
+
+### InkStrokes Property
+
+Ink strokes for ink annotations (each stroke is a list of points), or `null`.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfPoint>> InkStrokes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b84795a60"></span>
+
+### InteriorColor Property
+
+Fill/interior color, or `null` if not set.
+
+```csharp
+public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> InteriorColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cab105a1d"></span>
+
+### IsStar Property
+
+Whether a polygon annotation represents a star shape.
+
+```csharp
+public bool IsStar { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1d85ae2d9"></span>
+
+### LineEnd Property
+
+End point for line annotations, or `null`.
+
+```csharp
+public Nullable<Avalonia.Controls.Pdf.Core.PdfPoint> LineEnd { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4002538702"></span>
+
+### LineStart Property
+
+Start point for line annotations, or `null`.
+
+```csharp
+public Nullable<Avalonia.Controls.Pdf.Core.PdfPoint> LineStart { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0a4414b7a"></span>
+
+### PageIndex Property
+
+Zero-based page index this annotation belongs to.
+
+```csharp
+public int PageIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-062b57080c"></span>
+
+### Sides Property
+
+Number of sides (polygon) or spikes (star), or `null`.
+
+```csharp
+public Nullable<int> Sides { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49398e681e"></span>
+
+### Type Property
+
+The annotation subtype.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfAnnotationType Type { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03b4d407bc"></span>
+
+### Vertices Property
+
+Vertices for polygon/polyline annotations, or `null`.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfPoint> Vertices { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

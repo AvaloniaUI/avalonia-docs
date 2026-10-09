@@ -1,0 +1,121 @@
+---
+title: 'PdfLinkClickedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdflinkclickedeventargs'
+uid: 'Avalonia.Controls.PdfLinkClickedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfLinkClickedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfLinkClickedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Event arguments for link clicked event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfLinkClickedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfLinkClickedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfLinkClickedEventArgs](#uid-159098cb8b) | Initializes a new instance of the [Avalonia.Controls.PdfLinkClickedEventArgs](xref:Avalonia.Controls.PdfLinkClickedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-159098cb8b"></span>
+
+### PdfLinkClickedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfLinkClickedEventArgs](xref:Avalonia.Controls.PdfLinkClickedEventArgs) class.
+
+```csharp
+public PdfLinkClickedEventArgs(Avalonia.Controls.Pdf.Core.PdfLinkDestination destination)
+```
+
+#### Parameters
+
+`destination` [Avalonia.Controls.Pdf.Core.PdfLinkDestination](xref:Avalonia.Controls.Pdf.Core.PdfLinkDestination)
+
+The destination the clicked link points to.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Destination](#uid-28e4b3a9c0) | Gets the destination the clicked link points to (a page target or a URI). |
+| [Handled](#uid-8105a442c0) | Gets or sets a value indicating whether the click has been handled. Set to to suppress the viewer's default navigation behavior. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28e4b3a9c0"></span>
+
+### Destination Property
+
+Gets the destination the clicked link points to (a page target or a URI).
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfLinkDestination Destination { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8105a442c0"></span>
+
+### Handled Property
+
+Gets or sets a value indicating whether the click has been handled. Set to
+to suppress the viewer's default navigation behavior.
+
+```csharp
+public bool Handled { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

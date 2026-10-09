@@ -6,3 +6,20 @@
 .cornerRadius {
   border-radius: 8px;
 }
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+}
+
+.caption {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+}

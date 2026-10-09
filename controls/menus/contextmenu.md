@@ -8,7 +8,7 @@ doc-type: reference
 A [`ContextMenu`](/api/avalonia/controls/contextmenu) is a popup menu that appears when you right-click a control. It provides contextual actions relevant to the control or its content. You attach a `ContextMenu` to any host control using an attached property, so any visual element in your application can have its own right-click menu.
 
 :::info
-To learn more about how attached properties work, see [Attached properties](/docs/custom-controls/attached-properties).
+To learn more about how attached properties work, see [Attached properties](/docs/custom-controls/defining-properties#attached-properties).
 :::
 
 ## Basic example

@@ -1,0 +1,199 @@
+---
+title: 'HtmlReaderContext'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/html/htmlreadercontext'
+uid: 'Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Html'
+assembly: 'Avalonia.Controls.Documents.Serialization.Html'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Html'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HtmlReaderContext Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Html</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Context provided to [Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler](xref:Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler) implementations.
+Exposes safe builder operations without granting full builder access.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HtmlReaderContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HtmlReaderContext
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddLineBreak](#uid-fbdb71263c) | Adds a line break inline. |
+| [CloseParagraph](#uid-3eb9acfac2) | Closes the current paragraph (if open). |
+| [EnsureParagraph](#uid-25f2f4c538) | Ensures a paragraph is open, creating one if needed. |
+| [PopInline](#uid-9b1a3d3ca1) | Pops the current formatting inline. |
+| [PushInline](#uid-7cd2b5e196) | Pushes a formatting inline onto the stack. |
+| [WriteText](#uid-b1a90a6eb9) | Writes text with the current inline formatting. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fbdb71263c"></span>
+
+### AddLineBreak Method
+
+Adds a line break inline.
+
+```csharp
+public void AddLineBreak()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3eb9acfac2"></span>
+
+### CloseParagraph Method
+
+Closes the current paragraph (if open).
+
+```csharp
+public void CloseParagraph()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25f2f4c538"></span>
+
+### EnsureParagraph Method
+
+Ensures a paragraph is open, creating one if needed.
+
+```csharp
+public void EnsureParagraph()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b1a3d3ca1"></span>
+
+### PopInline Method
+
+Pops the current formatting inline.
+
+```csharp
+public void PopInline()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7cd2b5e196"></span>
+
+### PushInline Method
+
+Pushes a formatting inline onto the stack.
+
+```csharp
+public void PushInline(Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft inline)
+```
+
+#### Parameters
+
+`inline` Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1a90a6eb9"></span>
+
+### WriteText Method
+
+Writes text with the current inline formatting.
+
+```csharp
+public void WriteText(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CurrentTagContent](#uid-19e137c658) | The tag content span from the current token, for attribute parsing. |
+| [IsInsideParagraph](#uid-f874a365c7) | Whether there is currently an open paragraph. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19e137c658"></span>
+
+### CurrentTagContent Property
+
+The tag content span from the current token, for attribute parsing.
+
+```csharp
+public ReadOnlyMemory<char> CurrentTagContent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f874a365c7"></span>
+
+### IsInsideParagraph Property
+
+Whether there is currently an open paragraph.
+
+```csharp
+public bool IsInsideParagraph { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

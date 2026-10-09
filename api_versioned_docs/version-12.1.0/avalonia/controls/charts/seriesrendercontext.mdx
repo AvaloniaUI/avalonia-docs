@@ -1,0 +1,300 @@
+---
+title: 'SeriesRenderContext'
+hide_title: true
+slug: '/avalonia/controls/charts/seriesrendercontext'
+uid: 'Avalonia.Controls.Charts.SeriesRenderContext'
+commentId: 'T:Avalonia.Controls.Charts.SeriesRenderContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SeriesRenderContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides all the data a [Avalonia.Controls.Charts.CartesianSeries](xref:Avalonia.Controls.Charts.CartesianSeries) needs to render itself
+inside a [Avalonia.Controls.Charts.CartesianChart](xref:Avalonia.Controls.Charts.CartesianChart).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SeriesRenderContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SeriesRenderContext
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SeriesRenderContext](#uid-80d9dc1250) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80d9dc1250"></span>
+
+### SeriesRenderContext Constructor
+
+```csharp
+public SeriesRenderContext(Avalonia.Media.DrawingContext drawingContext, Avalonia.Rect plotArea, System.Collections.Generic.List<object> categories, System.Collections.Generic.Dictionary<object, int> categoryMap, double axisMin, double axisMax, Avalonia.Media.IBrush fillBrush, Avalonia.Media.IBrush strokeBrush, double minX, double maxX, int seriesIndex, Avalonia.Controls.Charts.CartesianChart chart)
+```
+
+#### Parameters
+
+`drawingContext` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+
+`plotArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`categories` System.Collections.Generic.List&lt;object&gt;
+
+
+`categoryMap` System.Collections.Generic.Dictionary&lt;object, int&gt;
+
+
+`axisMin` double
+
+
+`axisMax` double
+
+
+`fillBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`strokeBrush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+
+`minX` double
+
+
+`maxX` double
+
+
+`seriesIndex` int
+
+
+`chart` [Avalonia.Controls.Charts.CartesianChart](xref:Avalonia.Controls.Charts.CartesianChart)
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AxisMax](#uid-83eb7764eb) | Gets the effective vertical-axis maximum. |
+| [AxisMin](#uid-631d381545) | Gets the effective vertical-axis minimum. |
+| [Categories](#uid-2783b10c06) | Gets the resolved category collection for the chart. |
+| [CategoryMap](#uid-4783901798) | Gets the category lookup used to resolve horizontal positions. |
+| [Chart](#uid-cf7437c50b) | Gets the chart requesting the render. |
+| [DrawingContext](#uid-4b37489887) | Gets the drawing context for the current render pass. |
+| [FillBrush](#uid-4c66278f7d) | Gets the resolved fill brush for the series. |
+| [MaxX](#uid-e97a1d0a8b) | Gets the effective horizontal viewport maximum. |
+| [MinX](#uid-ffbd6daece) | Gets the effective horizontal viewport minimum. |
+| [PlotArea](#uid-240fc76ec9) | Gets the plot area in chart coordinates. |
+| [SeriesIndex](#uid-a7ee095c16) | Gets the series index within the owning chart. |
+| [StrokeBrush](#uid-7958730d8f) | Gets the resolved stroke brush for the series. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83eb7764eb"></span>
+
+### AxisMax Field
+
+Gets the effective vertical-axis maximum.
+
+```csharp
+public double AxisMax
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-631d381545"></span>
+
+### AxisMin Field
+
+Gets the effective vertical-axis minimum.
+
+```csharp
+public double AxisMin
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2783b10c06"></span>
+
+### Categories Field
+
+Gets the resolved category collection for the chart.
+
+```csharp
+public System.Collections.Generic.List<object> Categories
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4783901798"></span>
+
+### CategoryMap Field
+
+Gets the category lookup used to resolve horizontal positions.
+
+```csharp
+public System.Collections.Generic.Dictionary<object, int> CategoryMap
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf7437c50b"></span>
+
+### Chart Field
+
+Gets the chart requesting the render.
+
+```csharp
+public Avalonia.Controls.Charts.CartesianChart Chart
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b37489887"></span>
+
+### DrawingContext Field
+
+Gets the drawing context for the current render pass.
+
+```csharp
+public Avalonia.Media.DrawingContext DrawingContext
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c66278f7d"></span>
+
+### FillBrush Field
+
+Gets the resolved fill brush for the series.
+
+```csharp
+public Avalonia.Media.IBrush FillBrush
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e97a1d0a8b"></span>
+
+### MaxX Field
+
+Gets the effective horizontal viewport maximum.
+
+```csharp
+public double MaxX
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffbd6daece"></span>
+
+### MinX Field
+
+Gets the effective horizontal viewport minimum.
+
+```csharp
+public double MinX
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-240fc76ec9"></span>
+
+### PlotArea Field
+
+Gets the plot area in chart coordinates.
+
+```csharp
+public Avalonia.Rect PlotArea
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7ee095c16"></span>
+
+### SeriesIndex Field
+
+Gets the series index within the owning chart.
+
+```csharp
+public int SeriesIndex
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7958730d8f"></span>
+
+### StrokeBrush Field
+
+Gets the resolved stroke brush for the series.
+
+```csharp
+public Avalonia.Media.IBrush StrokeBrush
+```
+
+</section>
+
+</ApiRefPage>
+

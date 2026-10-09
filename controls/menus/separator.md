@@ -11,8 +11,10 @@ The [`Separator`](/api/avalonia/controls/separator) control draws a horizontal l
 
 Place a `<Separator/>` element between `MenuItem` elements to create a dividing line:
 
+<XamlPreview>
+
 ```xml
-<Menu DockPanel.Dock="Top">
+<Menu xmlns="https://github.com/avaloniaui">
   <MenuItem Header="_File">
     <MenuItem Header="_New"/>
     <MenuItem Header="_Open..."/>
@@ -22,14 +24,19 @@ Place a `<Separator/>` element between `MenuItem` elements to create a dividing 
 </Menu>
 ```
 
+</XamlPreview>
+
 In the example above, the separator visually divides the file operations from the exit command.
 
 ## In a context menu
 
 `Separator` works the same way inside a `ContextMenu`:
 
+<XamlPreview>
+
 ```xml
-<TextBox Text="Right-click for options">
+<TextBox xmlns="https://github.com/avaloniaui"
+         Text="Right-click for options">
   <TextBox.ContextMenu>
     <ContextMenu>
       <MenuItem Header="Cut"/>
@@ -41,6 +48,26 @@ In the example above, the separator visually divides the file operations from th
   </TextBox.ContextMenu>
 </TextBox>
 ```
+
+</XamlPreview>
+
+## Vertical variant
+
+A `Height` of `NaN` and `Width` of `1` can be used to create a vertical separator:
+
+<XamlPreview>
+
+```xml
+<StackPanel xmlns="https://github.com/avaloniaui"
+            Orientation="Horizontal">
+  <RadioButton GroupName="ViewMode" Content="List" />
+  <RadioButton GroupName="ViewMode" Content="Preview" />
+  <Separator Height="NaN" Width="1" />
+  <Button Content="Save" />
+</StackPanel>
+```
+
+</XamlPreview>
 
 ## Shorthand syntax
 

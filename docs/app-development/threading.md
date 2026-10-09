@@ -126,7 +126,7 @@ Common priorities, from highest to lowest:
 
 ### Background work with UI updates
 
-The most common pattern is performing heavy computation on a background thread and updating the UI when complete:
+A common pattern is performing heavy computation on a background thread and updating the UI when complete:
 
 ```csharp
 private async void OnLoadClick(object? sender, RoutedEventArgs e)
@@ -209,13 +209,13 @@ private async Task ProcessItemsAsync(IList<Item> items)
     {
         ProcessItem(item);
 
-        // Let the UI thread handle pending events before continuing
+        // Let the dispatcher handle pending events before continuing
         await Dispatcher.Yield();
     }
 }
 ```
 
-`Yield` is a static method that operates on `Dispatcher.UIThread`. You can specify a priority to control when execution resumes:
+`Yield` is a static method that operates on the calling thread's dispatcher (`Dispatcher.CurrentDispatcher`). You can specify a priority to control when execution resumes:
 
 ```csharp
 // Resume only when the dispatcher is idle

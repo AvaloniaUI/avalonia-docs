@@ -1,0 +1,293 @@
+---
+title: 'BandAnnotation'
+hide_title: true
+slug: '/avalonia/controls/charts/bandannotation'
+uid: 'Avalonia.Controls.Charts.BandAnnotation'
+commentId: 'T:Avalonia.Controls.Charts.BandAnnotation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BandAnnotation Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A shaded band/range annotation between two values.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BandAnnotation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../avaloniaobject">AvaloniaObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="chartannotation">ChartAnnotation</a> <span className="apiref-page__relation-separator">-&gt;</span> BandAnnotation
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BandAnnotation](#uid-7f7a9f7e34) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f7a9f7e34"></span>
+
+### BandAnnotation Constructor
+
+```csharp
+public BandAnnotation()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Bind (8 overloads)](../../avaloniaobject.mdx#uid-1c60c7bda3) | Binds a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) to an [Avalonia.Data.BindingBase](xref:Avalonia.Data.BindingBase). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CheckAccess](../../avaloniaobject.mdx#uid-260ff7a68d) | Returns a value indicating whether the current thread is the UI thread. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [ClearValue (4 overloads)](../../avaloniaobject.mdx#uid-41de208fbe) | Clears a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty)'s local value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [CoerceValue](../../avaloniaobject.mdx#uid-3bec32f39e) | Coerces the specified [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty). Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Fill](#uid-c68eda87b7) | Gets or sets the fill brush for the band. |
+| [FromValue](#uid-6db07a1088) | Gets or sets the start value of the band in axis space. Horizontal bands use vertical-axis values; vertical bands use horizontal-axis values. |
+| [IsBandAnnotation](#uid-e03c474903) | Gets whether this annotation is a band annotation. Used by the rendering pipeline to distinguish bands from line/text annotations without requiring a cross-assembly type check. |
+| [Label](#uid-6a4062beec) | Gets or sets the label text displayed in the band. [Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) controls label color and falls back to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) when unset. |
+| [Orientation](#uid-b796e2bc5e) | Gets or sets the orientation (Horizontal or Vertical). |
+| [ToValue](#uid-098d47e0cc) | Gets or sets the end value of the band in axis space. |
+| [FontSize](chartannotation.mdx#uid-2bca046263) | Gets or sets the font size used for annotation text or labels. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Foreground](chartannotation.mdx#uid-a5f9417de5) | Gets or sets the brush used for annotation text or labels. When unset, text-capable annotations fall back to their local defaults or to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) where appropriate. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [IsVisible](chartannotation.mdx#uid-9cb7862105) | Gets or sets whether this annotation is visible. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Opacity](chartannotation.mdx#uid-7268bb2a0c) | Gets or sets the opacity applied to the entire annotation. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Stroke](chartannotation.mdx#uid-bd5cf8b072) | Gets or sets the stroke brush for annotation geometry. Text-based annotations can also use this as an outline brush. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [StrokeThickness](chartannotation.mdx#uid-6c46f0e570) | Gets or sets the stroke thickness for annotation geometry or text outlines. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c68eda87b7"></span>
+
+### Fill Property
+
+Gets or sets the fill brush for the band.
+
+```csharp
+public Avalonia.Media.IBrush Fill { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6db07a1088"></span>
+
+### FromValue Property
+
+Gets or sets the start value of the band in axis space.
+Horizontal bands use vertical-axis values; vertical bands use horizontal-axis values.
+
+```csharp
+public double FromValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e03c474903"></span>
+
+### IsBandAnnotation Property
+
+Gets whether this annotation is a band annotation. Used by the rendering pipeline
+to distinguish bands from line/text annotations without requiring a cross-assembly type check.
+
+```csharp
+public bool IsBandAnnotation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a4062beec"></span>
+
+### Label Property
+
+Gets or sets the label text displayed in the band.
+[Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) controls label color and falls back to [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke)
+when unset.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b796e2bc5e"></span>
+
+### Orientation Property
+
+Gets or sets the orientation (Horizontal or Vertical).
+
+```csharp
+public Avalonia.Layout.Orientation Orientation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-098d47e0cc"></span>
+
+### ToValue Property
+
+Gets or sets the end value of the band in axis space.
+
+```csharp
+public double ToValue { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [FillProperty](#uid-b424d060d9) | Identifies the [Avalonia.Controls.Charts.BandAnnotation.Fill](xref:Avalonia.Controls.Charts.BandAnnotation.Fill) Avalonia property. |
+| [FromValueProperty](#uid-71c3d9b70f) | Identifies the [Avalonia.Controls.Charts.BandAnnotation.FromValue](xref:Avalonia.Controls.Charts.BandAnnotation.FromValue) Avalonia property. |
+| [LabelProperty](#uid-8dc1f94cc7) | Identifies the [Avalonia.Controls.Charts.BandAnnotation.Label](xref:Avalonia.Controls.Charts.BandAnnotation.Label) Avalonia property. |
+| [OrientationProperty](#uid-801f29a19e) | Identifies the [Avalonia.Controls.Charts.BandAnnotation.Orientation](xref:Avalonia.Controls.Charts.BandAnnotation.Orientation) Avalonia property. |
+| [ToValueProperty](#uid-63d3c1742c) | Identifies the [Avalonia.Controls.Charts.BandAnnotation.ToValue](xref:Avalonia.Controls.Charts.BandAnnotation.ToValue) Avalonia property. |
+| [FontSizeProperty](chartannotation.mdx#uid-5e012c781b) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.FontSize](xref:Avalonia.Controls.Charts.ChartAnnotation.FontSize) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [ForegroundProperty](chartannotation.mdx#uid-74e3f2b1e1) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Foreground](xref:Avalonia.Controls.Charts.ChartAnnotation.Foreground) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [IsVisibleProperty](chartannotation.mdx#uid-1c26c2a333) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.IsVisible](xref:Avalonia.Controls.Charts.ChartAnnotation.IsVisible) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [OpacityProperty](chartannotation.mdx#uid-7c0e434cc3) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Opacity](xref:Avalonia.Controls.Charts.ChartAnnotation.Opacity) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [StrokeProperty](chartannotation.mdx#uid-43ce9a58ca) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.Stroke](xref:Avalonia.Controls.Charts.ChartAnnotation.Stroke) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+| [StrokeThicknessProperty](chartannotation.mdx#uid-d2f7496e4c) | Identifies the [Avalonia.Controls.Charts.ChartAnnotation.StrokeThickness](xref:Avalonia.Controls.Charts.ChartAnnotation.StrokeThickness) Avalonia property. Inherited from [ChartAnnotation](chartannotation.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b424d060d9"></span>
+
+### FillProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BandAnnotation.Fill](xref:Avalonia.Controls.Charts.BandAnnotation.Fill) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.IBrush> FillProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71c3d9b70f"></span>
+
+### FromValueProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BandAnnotation.FromValue](xref:Avalonia.Controls.Charts.BandAnnotation.FromValue) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> FromValueProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8dc1f94cc7"></span>
+
+### LabelProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BandAnnotation.Label](xref:Avalonia.Controls.Charts.BandAnnotation.Label) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> LabelProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-801f29a19e"></span>
+
+### OrientationProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BandAnnotation.Orientation](xref:Avalonia.Controls.Charts.BandAnnotation.Orientation) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Layout.Orientation> OrientationProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63d3c1742c"></span>
+
+### ToValueProperty Field
+
+Identifies the [Avalonia.Controls.Charts.BandAnnotation.ToValue](xref:Avalonia.Controls.Charts.BandAnnotation.ToValue) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<double> ToValueProperty
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](../../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+</ApiRefPage>
+

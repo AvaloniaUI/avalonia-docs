@@ -9,6 +9,9 @@ import type { PluginOptions as LlmsTxtPluginOptions } from "@signalwire/docusaur
 
 const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
 
+// `npm run start:light` sets this to leave the generated API reference out of local previews, so they compile much faster.
+const skipApi = process.env.DOCS_SKIP_API === '1';
+
 const config: Config = {
   title: 'Avalonia Docs',
   tagline: 'Developer Documentation Portal',
@@ -23,6 +26,7 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  clientModules: ['./src/clientModules/analyticsClient.ts'],
   headTags: [
     {
       tagName: "link",
@@ -106,6 +110,7 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           lastVersion: 'current',
+          breadcrumbs: true,
           versions: {
             current: {
               label: "12.1.x",
@@ -118,6 +123,7 @@ const config: Config = {
           customCss: [
             './node_modules/modern-normalize/modern-normalize.css',
             './node_modules/@ionic-internal/ionic-ds/dist/tokens/tokens.css',
+            './src/styles/tailwind.css',
             './src/styles/custom.scss',
             './src/styles/docsearch.scss',
           ],
@@ -300,8 +306,8 @@ gtag('consent', 'default', {
         },
       } satisfies LlmsTxtPluginOptions,
     ],
-  
-    [
+
+    !skipApi && [
       "@docusaurus/plugin-content-docs",
       {
         id: "api",
@@ -309,7 +315,7 @@ gtag('consent', 'default', {
         routeBasePath: "api",
         disableVersioning: true,
         sidebarPath: require.resolve("./api-sidebars.ts"),
-        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.0.3.xrefmap.json" }]],
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.3.xrefmap.json" }]],
       },
     ]
   ],
@@ -321,7 +327,9 @@ gtag('consent', 'default', {
       respectPrefersColorScheme: true,
     },
     zoom: {
-      selector: '.markdown :not(em) > img:not(.Card-icon)',
+      // `.no-zoom` is the opt-out for a decorative image that owns its own click
+      // behavior, e.g., the companion video thumbnail.
+      selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image):not(.no-zoom)',
       background: {
         light: 'rgb(196, 196, 196)',
         dark: 'rgb(17, 17, 19)'
@@ -370,8 +378,13 @@ gtag('consent', 'default', {
               activeBasePath: '/troubleshooting'
             },
             {
+              label: 'Community Translations',
+              to: '/docs/community-translations',
+              activeBasePath: '/docs/community-translations',
+            },
+            {
               label: 'Enhanced Support',
-              href: 'https://avaloniaui.net/support?utm_source=docs&utm_medium=referral&utm_content=nav_link',
+              href: 'https://avaloniaui.net/support?av_source=docs&av_medium=nav_link&av_content=support',
               target: '_blank',
               rel: null
             },
@@ -432,7 +445,7 @@ gtag('consent', 'default', {
     },
     docsearch: {
       appId: 'V9UF6750GH',
-      apiKey: '028e3dad834905a2a2c2a7ad9da9e666',
+      apiKey: '53cdd2af7f6be2f44a2009a0e10a588f',
       indexName: 'avaloniaui_docs',
       contextualSearch: true,
       translations: {
@@ -446,14 +459,23 @@ gtag('consent', 'default', {
             noRecentSearchesText: 'No recent searches',
             saveRecentSearchButtonTitle: 'Save to recent',
             removeRecentSearchButtonTitle: 'Remove from recent',
-            favoriteSearchesTitle: 'Favourites',
-            removeFavoriteSearchButtonTitle: 'Remove from favourites',
+            favoriteSearchesTitle: 'Favorites',
+            removeFavoriteSearchButtonTitle: 'Remove from favorites',
           },
         },
       },
       askAi: {
-        assistantId: 'ILptDNvSVJ1v',
+        assistantId: '69bba5fa-0697-4b5c-a726-1352324370a3',
+        agentStudio: true,
         sidePanel: true,
+        searchParameters: {
+          avaloniaui_docs: {
+            filters: 'type:content AND language:en',
+            attributesToRetrieve: ['title', 'content', 'url'],
+            restrictSearchableAttributes: ['title', 'content'],
+            distinct: 'url',
+          },
+        },
       },
     },
   },

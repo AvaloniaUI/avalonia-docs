@@ -1,0 +1,101 @@
+---
+title: 'WaylandPlatformGraphics.IWaylandGraphics'
+hide_title: true
+slug: '/avalonia/wayland/server/waylandplatformgraphics-iwaylandgraphics'
+uid: 'Avalonia.Wayland.Server.WaylandPlatformGraphics.IWaylandGraphics'
+commentId: 'T:Avalonia.Wayland.Server.WaylandPlatformGraphics.IWaylandGraphics'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Wayland'
+assembly: 'Avalonia.Wayland'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Wayland.Server'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WaylandPlatformGraphics.IWaylandGraphics Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Wayland.Server</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Wayland</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Wayland</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Wayland/Server/WaylandPlatformGraphics.cs">WaylandPlatformGraphics.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface WaylandPlatformGraphics.IWaylandGraphics
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateContext](#uid-0650e68e06) | No summary available. |
+| [CreateRenderSurface](#uid-ce76132788) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0650e68e06"></span>
+
+### CreateContext Method
+
+```csharp
+public Avalonia.Platform.IPlatformGraphicsContext CreateContext()
+```
+
+#### Returns
+
+[Avalonia.Platform.IPlatformGraphicsContext](xref:Avalonia.Platform.IPlatformGraphicsContext)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce76132788"></span>
+
+### CreateRenderSurface Method
+
+```csharp
+public Avalonia.Platform.Surfaces.IPlatformRenderSurface CreateRenderSurface(Avalonia.Wayland.Server.Persistent.WSurface surface)
+```
+
+#### Parameters
+
+`surface` Avalonia.Wayland.Server.Persistent.WSurface
+
+
+#### Returns
+
+[Avalonia.Platform.Surfaces.IPlatformRenderSurface](xref:Avalonia.Platform.Surfaces.IPlatformRenderSurface)
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,165 @@
+---
+title: 'WordSegment'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/wordsegment'
+uid: 'Avalonia.Media.TextFormatting.Unicode.WordSegment'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.WordSegment'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WordSegment Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a segment between two Unicode word boundaries.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct WordSegment
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> WordSegment
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [WordSegment](#uid-3332dd7528) | Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSegment](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment) struct. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3332dd7528"></span>
+
+### WordSegment Constructor
+
+Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSegment](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment) struct.
+
+```csharp
+public WordSegment(int offset, int length, int codepointOffset, int codepointLength)
+```
+
+#### Parameters
+
+`offset` int
+
+The segment offset in UTF-16 code units.
+
+
+`length` int
+
+The segment length in UTF-16 code units.
+
+
+`codepointOffset` int
+
+The segment offset in Unicode code points.
+
+
+`codepointLength` int
+
+The segment length in Unicode code points.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CodepointLength](#uid-25525246fb) | Gets the segment length in Unicode code points. |
+| [CodepointOffset](#uid-71b4691422) | Gets the segment offset in Unicode code points. |
+| [Length](#uid-ecd1c52e13) | Gets the segment length in UTF-16 code units. |
+| [Offset](#uid-fe2ccb9262) | Gets the segment offset in UTF-16 code units. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25525246fb"></span>
+
+### CodepointLength Property
+
+Gets the segment length in Unicode code points.
+
+```csharp
+public int CodepointLength { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71b4691422"></span>
+
+### CodepointOffset Property
+
+Gets the segment offset in Unicode code points.
+
+```csharp
+public int CodepointOffset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ecd1c52e13"></span>
+
+### Length Property
+
+Gets the segment length in UTF-16 code units.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe2ccb9262"></span>
+
+### Offset Property
+
+Gets the segment offset in UTF-16 code units.
+
+```csharp
+public int Offset { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

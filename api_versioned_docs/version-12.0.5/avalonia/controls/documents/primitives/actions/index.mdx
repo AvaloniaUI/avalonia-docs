@@ -1,0 +1,83 @@
+---
+title: 'Avalonia.Controls.Documents.Primitives.Actions'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions'
+commentId: 'N:Avalonia.Controls.Documents.Primitives.Actions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Actions Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Primitives.Actions`
+
+</div>
+
+## Types
+
+- [BackgroundColorAction](backgroundcoloraction.mdx) - Action that gets or sets the background color of the current selection.
+- [BlockBackgroundAction](blockbackgroundaction.mdx) - Action for setting background color on block elements (Paragraph, Section, etc.).
+- [BlockBorderToggleAction](blockbordertoggleaction.mdx) - Action for toggling block borders on/off for affected blocks.
+- [BlockPropertyAction&lt;T&gt;](blockpropertyaction-1.mdx) - Base class for block-level property actions.
+- [BoldAction](boldaction.mdx) - Action that toggles bold formatting on the current selection.
+- [BorderBrushAction](borderbrushaction.mdx) - Action for setting border color on block elements (Paragraph, Section, etc.).
+- [BorderThicknessAction](borderthicknessaction.mdx) - Action for setting border thickness on block elements (Paragraph, Section, etc.).
+- [BulletMarkerStyleAction](bulletmarkerstyleaction.mdx) - Action for changing the [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle) of bullet (unordered) lists.
+- [CopyAction](copyaction.mdx) - Action that copies the current selection to the clipboard.
+- [CutAction](cutaction.mdx) - Action that cuts the current selection to the clipboard.
+- [DeleteTableAction](deletetableaction.mdx) - Action for deleting the entire [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table) containing the caret.
+- [DeleteTableColumnAction](deletetablecolumnaction.mdx) - Action for deleting the column at the current cell's index from a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+- [DeleteTableRowAction](deletetablerowaction.mdx) - Action for deleting the current row from a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+- [EditorAction](editoraction.mdx) - Abstract base class for editor actions.
+- [EditorActions](editoractions.mdx) - Provides singleton instances of all built-in editor actions.
+- [FontFamilyAction](fontfamilyaction.mdx) - Action that gets or sets the font family of the current selection.
+- [FontSizeAction](fontsizeaction.mdx) - Action that gets or sets the font size of the current selection.
+- [ForegroundColorAction](foregroundcoloraction.mdx) - Action that gets or sets the foreground color of the current selection.
+- [FormattingToggleAction&lt;T&gt;](formattingtoggleaction-1.mdx) - Base class for toggle formatting actions like RichBold, RichItalic, and RichUnderline.
+- [IBlockPropertyAction](iblockpropertyaction.mdx) - Non-generic base interface for block property actions.
+- [IBlockPropertyAction&lt;T&gt;](iblockpropertyaction-1.mdx) - Action that operates on block-level properties (Paragraph, Section, etc.).
+- [IEditorAction](ieditoraction.mdx) - Represents an action that can be executed on a [RichTextEditor](xref:Avalonia.Controls.RichTextEditor).
+- [IPropertyAction](ipropertyaction.mdx) - Non-generic base interface for property actions.
+- [IPropertyAction&lt;T&gt;](ipropertyaction-1.mdx) - Represents an action that gets or sets a property value.
+- [IToggleAction](itoggleaction.mdx) - Represents an action that has an on/off state.
+- [InsertTableAction](inserttableaction.mdx) - Action for inserting a new [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table) after the current block.
+- [InsertTableColumnAction](inserttablecolumnaction.mdx) - Action for inserting a new column before or after the current cell's column in a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+- [InsertTableRowAction](inserttablerowaction.mdx) - Action for inserting a new row before or after the current row in a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+- [ItalicAction](italicaction.mdx) - Action that toggles italic formatting on the current selection.
+- [LineHeightAction](lineheightaction.mdx) - Action for setting line height on block elements (Paragraph, Section, etc.).
+- [ListToggleAction](listtoggleaction.mdx) - Toggles the current selection or block between a [Avalonia.Controls.Documents.List](xref:Avalonia.Controls.Documents.List) and plain paragraphs.
+- [MarginAction](marginaction.mdx) - Action for setting uniform margin on block elements (Paragraph, Section, etc.).
+- [NumberedMarkerStyleAction](numberedmarkerstyleaction.mdx) - Action for changing the [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle) of numbered (ordered) lists.
+- [PaddingAction](paddingaction.mdx) - Action for setting uniform padding on block elements (Paragraph, Section, etc.).
+- [PasteAction](pasteaction.mdx) - Action that pastes content from the clipboard.
+- [PasteUnformattedAction](pasteunformattedaction.mdx) - Action that pastes the clipboard content as plain text, dropping all
+formatting, inline wrappers, lists, tables, and metadata.
+- [PropertyAction&lt;T&gt;](propertyaction-1.mdx) - Base class for property actions that get or set a typed property value.
+- [RedoAction](redoaction.mdx) - Action that redoes the last undone operation.
+- [SelectAllAction](selectallaction.mdx) - Action that selects all content in the document.
+- [StrikethroughAction](strikethroughaction.mdx) - Action that toggles strikethrough formatting on the current selection.
+- [SubscriptAction](subscriptaction.mdx) - Action that toggles subscript formatting on the current selection.
+Sets [Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty](xref:Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty) to
+[Avalonia.Media.BaselineAlignment.Subscript](xref:Avalonia.Media.BaselineAlignment.Subscript); font size scaling is applied at render time.
+- [SuperscriptAction](superscriptaction.mdx) - Action that toggles superscript formatting on the current selection.
+Sets [Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty](xref:Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty) to
+[Avalonia.Media.BaselineAlignment.Superscript](xref:Avalonia.Media.BaselineAlignment.Superscript); font size scaling is applied at render time.
+- [TextAlignmentAction](textalignmentaction.mdx) - Action for setting text alignment on block elements (Paragraph, Section, etc.).
+- [TextAlignmentToggleAction](textalignmenttoggleaction.mdx) - Action for setting a specific text alignment on block elements.
+- [UnderlineAction](underlineaction.mdx) - Action that toggles underline formatting on the current selection.
+- [UndoAction](undoaction.mdx) - Action that undoes the last operation.
+</ApiRefPage>
+

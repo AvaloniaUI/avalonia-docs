@@ -1,0 +1,156 @@
+---
+title: 'TextAlignmentAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/textalignmentaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.TextAlignmentAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.TextAlignmentAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextAlignmentAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting text alignment on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextAlignmentAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;TextAlignment&gt; <span className="apiref-page__relation-separator">-&gt;</span> TextAlignmentAction
+</div>
+</div>
+
+## Remarks
+
+Text alignment is a block-level property that determines how text is aligned
+within a paragraph or section. Available options are:
+
+- [Avalonia.Media.TextAlignment.Left](xref:Avalonia.Media.TextAlignment.Left) - Align text to the left edge
+- [Avalonia.Media.TextAlignment.Center](xref:Avalonia.Media.TextAlignment.Center) - Center text
+- [Avalonia.Media.TextAlignment.Right](xref:Avalonia.Media.TextAlignment.Right) - Align text to the right edge
+- [Avalonia.Media.TextAlignment.Justify](xref:Avalonia.Media.TextAlignment.Justify) - Justify text (stretch to fill width)
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their alignment set to the specified value.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextAlignmentAction](#uid-732bceffcf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-732bceffcf"></span>
+
+### TextAlignmentAction Constructor
+
+```csharp
+public TextAlignmentAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-0e5adfb6d6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e5adfb6d6"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.TextAlignment> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.TextAlignment](xref:Avalonia.Media.TextAlignment)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-f4c518b5a0) | No summary available. |
+| [Gesture](#uid-c376069dd4) | No summary available. |
+| [Id](#uid-549e0a782b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4c518b5a0"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c376069dd4"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-549e0a782b"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

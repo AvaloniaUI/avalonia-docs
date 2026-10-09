@@ -1,6 +1,6 @@
 ---
 id: how-to-bind-can-execute
-title: How to bind can execute
+title: How to bind CanExecute
 description: Enable and disable buttons automatically by binding to the CanExecute method of a command.
 doc-type: how-to
 ---

@@ -3,6 +3,9 @@ id: architecture
 title: Avalonia architecture
 description: How controls are measured, arranged, rendered, and connected to platform backends.
 doc-type: explanation
+video:
+  src: https://youtu.be/inBjiXfGhoU
+  title: Inside Avalonia's Architecture — Win32 to Browser, One Rendering Pipeline
 ---
 
 This page describes the internal architecture of Avalonia: how controls are measured, arranged, and rendered, how the compositor schedules frames, and how platform backends connect to the rendering pipeline.
@@ -92,7 +95,7 @@ Avalonia isolates all platform-specific code behind interfaces. The key abstract
 | `IPlatformSettings` | Theme detection, accent color, animation preferences |
 | `IRenderTarget` | GPU surface for rendering |
 
-Each platform backend (Win32, Cocoa, X11, Android, iOS, Browser) implements these interfaces. The application selects a backend at startup through the `AppBuilder`:
+Each platform backend (Win32, Cocoa, X11, Wayland, Android, iOS, Browser) implements these interfaces. The application selects a backend at startup through the `AppBuilder`:
 
 ```csharp
 AppBuilder.Configure<App>()
@@ -100,7 +103,7 @@ AppBuilder.Configure<App>()
     .StartWithClassicDesktopLifetime(args);
 ```
 
-`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios.
+`UsePlatformDetect()` chooses the correct backend automatically. You can also select a specific backend for testing or embedded scenarios, or opt into the early-version [Wayland backend](/docs/platform-specific-guides/linux#wayland) on Linux.
 
 ## The property system
 

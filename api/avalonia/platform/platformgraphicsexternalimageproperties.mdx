@@ -33,7 +33,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/3111696698e2c3d6fe9aace8cb954153ee16b3e4/src/Avalonia.Base/Platform/PlatformGraphicsExternalImageProperties.cs">PlatformGraphicsExternalImageProperties.cs</a>
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Platform/PlatformGraphicsExternalMemory.cs">PlatformGraphicsExternalMemory.cs</a>
 </div>
 
 </div>
@@ -154,6 +154,7 @@ string
 | [MemoryOffset](#uid-d9ee025b63) | No summary available. |
 | [MemorySize](#uid-81462657cd) | No summary available. |
 | [TopLeftOrigin](#uid-433a848a31) | No summary available. |
+| [VulkanProperties](#uid-2a13c1cd5e) | Vulkan-specific properties of the imported image, ignored by other backends. |
 | [Width](#uid-341a30ad65) | No summary available. |
 
 <section className="apiref-page__member-entry">
@@ -212,6 +213,20 @@ public ulong MemorySize { get; set; }
 
 ```csharp
 public bool TopLeftOrigin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a13c1cd5e"></span>
+
+### VulkanProperties Property
+
+Vulkan-specific properties of the imported image, ignored by other backends.
+
+```csharp
+public Nullable<Avalonia.Platform.PlatformGraphicsExternalImageVulkanProperties> VulkanProperties { get; set; }
 ```
 
 </section>

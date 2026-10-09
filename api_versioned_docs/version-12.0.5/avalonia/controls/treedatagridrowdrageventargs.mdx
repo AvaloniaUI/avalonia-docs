@@ -1,0 +1,156 @@
+---
+title: 'TreeDataGridRowDragEventArgs'
+hide_title: true
+slug: '/avalonia/controls/treedatagridrowdrageventargs'
+uid: 'Avalonia.Controls.TreeDataGridRowDragEventArgs'
+commentId: 'T:Avalonia.Controls.TreeDataGridRowDragEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowDragEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.TreeDataGrid.RowDragOver](xref:Avalonia.Controls.TreeDataGrid.RowDragOver) and
+[Avalonia.Controls.TreeDataGrid.RowDrop](xref:Avalonia.Controls.TreeDataGrid.RowDrop) events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRowDragEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowDragEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRowDragEventArgs](#uid-14b2704623) | Initializes a new instance of the [Avalonia.Controls.TreeDataGridRowDragEventArgs](xref:Avalonia.Controls.TreeDataGridRowDragEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14b2704623"></span>
+
+### TreeDataGridRowDragEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TreeDataGridRowDragEventArgs](xref:Avalonia.Controls.TreeDataGridRowDragEventArgs) class.
+
+```csharp
+public TreeDataGridRowDragEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Controls.Primitives.TreeDataGridRow row, Avalonia.Input.DragEventArgs inner)
+```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The event being raised.
+
+
+`row` [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow)
+
+The row that is being dragged over.
+
+
+`inner` [Avalonia.Input.DragEventArgs](xref:Avalonia.Input.DragEventArgs)
+
+The inner drag event args.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Inner](#uid-b4186169b2) | Gets the [Avalonia.Input.DragEventArgs](xref:Avalonia.Input.DragEventArgs) that describes the drag/drop operation. |
+| [Position](#uid-c88afc9579) | Gets or sets a value indicating the how the data should be dropped into the [Avalonia.Controls.TreeDataGridRowDragEventArgs.TargetRow](xref:Avalonia.Controls.TreeDataGridRowDragEventArgs.TargetRow). |
+| [TargetRow](#uid-14f0561d53) | Gets the row being dragged over. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4186169b2"></span>
+
+### Inner Property
+
+Gets the [Avalonia.Input.DragEventArgs](xref:Avalonia.Input.DragEventArgs) that describes the drag/drop operation.
+
+```csharp
+public Avalonia.Input.DragEventArgs Inner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c88afc9579"></span>
+
+### Position Property
+
+Gets or sets a value indicating the how the data should be dropped into
+the [Avalonia.Controls.TreeDataGridRowDragEventArgs.TargetRow](xref:Avalonia.Controls.TreeDataGridRowDragEventArgs.TargetRow).
+
+```csharp
+public Avalonia.Controls.TreeDataGridRowDropPosition Position { get; set; }
+```
+
+#### Remarks
+
+For drag operations, the value of this property controls the adorner displayed when
+dragging. For drop operations, controls the final location of the drop.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14f0561d53"></span>
+
+### TargetRow Property
+
+Gets the row being dragged over.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridRow TargetRow { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

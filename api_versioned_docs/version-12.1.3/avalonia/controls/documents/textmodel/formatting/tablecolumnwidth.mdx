@@ -1,0 +1,286 @@
+---
+title: 'TableColumnWidth'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/tablecolumnwidth'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TableColumnWidth Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a single table column's width and unit type.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TableColumnWidth
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TableColumnWidth
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TableColumnWidth&gt;
+</div>
+</div>
+
+## Remarks
+
+12 bytes per column (8 double + 4 enum). Stored in a flat array
+inside [Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting) to avoid per-column object overhead.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TableColumnWidth](#uid-0b8a90fc15) | Describes a single table column's width and unit type. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b8a90fc15"></span>
+
+### TableColumnWidth Constructor
+
+Describes a single table column's width and unit type.
+
+```csharp
+public TableColumnWidth(double Value, Avalonia.Controls.GridUnitType UnitType)
+```
+
+#### Parameters
+
+`Value` double
+
+
+`UnitType` [Avalonia.Controls.GridUnitType](xref:Avalonia.Controls.GridUnitType)
+
+
+#### Remarks
+
+12 bytes per column (8 double + 4 enum). Stored in a flat array
+inside [Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting) to avoid per-column object overhead.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-ede8f16d76) | No summary available. |
+| [Equals (2 overloads)](#uid-e7d3ebd84d) | No summary available. |
+| [FromGridLength](#uid-2e56b40359) | Creates a [Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth) from an existing [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength). |
+| [GetHashCode](#uid-73e68ce8d5) | No summary available. |
+| [ToGridLength](#uid-d7f9fb50d7) | Creates a [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) from this definition. |
+| [ToString](#uid-b8e4ece255) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ede8f16d76"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& Value, Avalonia.Controls.GridUnitType& UnitType)
+```
+
+#### Parameters
+
+`Value` double&amp;
+
+
+`UnitType` [Avalonia.Controls.GridUnitType](xref:Avalonia.Controls.GridUnitType)&amp;
+
+
+</section>
+
+<span id="uid-e7d3ebd84d"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0461a60c43"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3e36f58c1"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e56b40359"></span>
+
+### FromGridLength Method
+
+Creates a [Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth) from an existing [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth FromGridLength(Avalonia.Controls.GridLength gl)
+```
+
+#### Parameters
+
+`gl` [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73e68ce8d5"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7f9fb50d7"></span>
+
+### ToGridLength Method
+
+Creates a [Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength) from this definition.
+
+```csharp
+public Avalonia.Controls.GridLength ToGridLength()
+```
+
+#### Returns
+
+[Avalonia.Controls.GridLength](xref:Avalonia.Controls.GridLength)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8e4ece255"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [UnitType](#uid-c9c828102a) | No summary available. |
+| [Value](#uid-0302def6e6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9c828102a"></span>
+
+### UnitType Property
+
+```csharp
+public Avalonia.Controls.GridUnitType UnitType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0302def6e6"></span>
+
+### Value Property
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

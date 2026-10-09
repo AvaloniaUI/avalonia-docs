@@ -50,7 +50,7 @@ Start with a minimal button template that just renders the content:
 ### Key concepts
 
 - **`ControlTemplate`** defines the visual tree that replaces the control's default appearance.
-- **`TemplateBinding`** binds to properties of the templated parent (the Button). This is more efficient than `{Binding RelativeSource={RelativeSource TemplatedParent}}` but only supports `OneWay`.
+- **`TemplateBinding`** binds to properties of the templated parent. This is more efficient than `{Binding RelativeSource={RelativeSource TemplatedParent}}`. It binds `OneWay` by default; use `Mode=TwoWay` if you need the value written back.
 - **`ContentPresenter`** is responsible for displaying the button's `Content` property. Without it, the button's content would not appear.
 
 ## Step 2: Add visual states with pseudo-classes

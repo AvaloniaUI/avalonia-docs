@@ -1,0 +1,454 @@
+---
+title: 'IStatusNotifierItemHandler.GetPropertyContext'
+hide_title: true
+slug: '/avalonia/freedesktop/dbus/istatusnotifieritemhandler-getpropertycontext'
+uid: 'Avalonia.FreeDesktop.DBus.IStatusNotifierItemHandler.GetPropertyContext'
+commentId: 'T:Avalonia.FreeDesktop.DBus.IStatusNotifierItemHandler.GetPropertyContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.FreeDesktop'
+assembly: 'Avalonia.FreeDesktop'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.FreeDesktop.DBus'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStatusNotifierItemHandler.GetPropertyContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.FreeDesktop.DBus</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.FreeDesktop/DBusTrayIconImpl.cs">DBusTrayIconImpl.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct IStatusNotifierItemHandler.GetPropertyContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> IStatusNotifierItemHandler.GetPropertyContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IStatusNotifierItemHandler.GetPropertyContext](#uid-826593d68e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-826593d68e"></span>
+
+### IStatusNotifierItemHandler.GetPropertyContext Constructor
+
+```csharp
+public IStatusNotifierItemHandler.GetPropertyContext(Tmds.DBus.Protocol.MethodContext methodContext)
+```
+
+#### Parameters
+
+`methodContext` Tmds.DBus.Protocol.MethodContext
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-adbd2ba06a) | No summary available. |
+| [Handle](#uid-36496cc108) | No summary available. |
+| [ReplyAttentionIconName](#uid-8074ead4ef) | No summary available. |
+| [ReplyAttentionIconPixmap](#uid-8b92928536) | No summary available. |
+| [ReplyAttentionMovieName](#uid-9d9b4cd782) | No summary available. |
+| [ReplyCategory](#uid-a02300c0f2) | No summary available. |
+| [ReplyErrorUnknownProperty](#uid-64b2904b21) | No summary available. |
+| [ReplyIconName](#uid-64d9621935) | No summary available. |
+| [ReplyIconPixmap](#uid-7b3290e7db) | No summary available. |
+| [ReplyIconThemePath](#uid-955617f7da) | No summary available. |
+| [ReplyId](#uid-1e8296a473) | No summary available. |
+| [ReplyItemIsMenu](#uid-3f20316145) | No summary available. |
+| [ReplyMenu](#uid-2217188d98) | No summary available. |
+| [ReplyOverlayIconName](#uid-aab7af7340) | No summary available. |
+| [ReplyOverlayIconPixmap](#uid-5c35f8363e) | No summary available. |
+| [ReplyStatus](#uid-3e6a96587d) | No summary available. |
+| [ReplyTitle](#uid-c0961763af) | No summary available. |
+| [ReplyToolTip](#uid-20b9996483) | No summary available. |
+| [ReplyWindowId](#uid-048c75cde8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adbd2ba06a"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36496cc108"></span>
+
+### Handle Method
+
+```csharp
+public System.Threading.Tasks.ValueTask Handle(Avalonia.FreeDesktop.DBus.IStatusNotifierItemProperties properties)
+```
+
+#### Parameters
+
+`properties` Avalonia.FreeDesktop.DBus.IStatusNotifierItemProperties
+
+
+#### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8074ead4ef"></span>
+
+### ReplyAttentionIconName Method
+
+```csharp
+public void ReplyAttentionIconName(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b92928536"></span>
+
+### ReplyAttentionIconPixmap Method
+
+```csharp
+public void ReplyAttentionIconPixmap(ValueTuple<int, int, byte[]>[] value)
+```
+
+#### Parameters
+
+`value` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d9b4cd782"></span>
+
+### ReplyAttentionMovieName Method
+
+```csharp
+public void ReplyAttentionMovieName(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a02300c0f2"></span>
+
+### ReplyCategory Method
+
+```csharp
+public void ReplyCategory(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64b2904b21"></span>
+
+### ReplyErrorUnknownProperty Method
+
+```csharp
+public void ReplyErrorUnknownProperty()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64d9621935"></span>
+
+### ReplyIconName Method
+
+```csharp
+public void ReplyIconName(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b3290e7db"></span>
+
+### ReplyIconPixmap Method
+
+```csharp
+public void ReplyIconPixmap(ValueTuple<int, int, byte[]>[] value)
+```
+
+#### Parameters
+
+`value` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-955617f7da"></span>
+
+### ReplyIconThemePath Method
+
+```csharp
+public void ReplyIconThemePath(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e8296a473"></span>
+
+### ReplyId Method
+
+```csharp
+public void ReplyId(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f20316145"></span>
+
+### ReplyItemIsMenu Method
+
+```csharp
+public void ReplyItemIsMenu(bool value)
+```
+
+#### Parameters
+
+`value` bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2217188d98"></span>
+
+### ReplyMenu Method
+
+```csharp
+public void ReplyMenu(Tmds.DBus.Protocol.ObjectPath value)
+```
+
+#### Parameters
+
+`value` Tmds.DBus.Protocol.ObjectPath
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aab7af7340"></span>
+
+### ReplyOverlayIconName Method
+
+```csharp
+public void ReplyOverlayIconName(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c35f8363e"></span>
+
+### ReplyOverlayIconPixmap Method
+
+```csharp
+public void ReplyOverlayIconPixmap(ValueTuple<int, int, byte[]>[] value)
+```
+
+#### Parameters
+
+`value` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3e6a96587d"></span>
+
+### ReplyStatus Method
+
+```csharp
+public void ReplyStatus(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0961763af"></span>
+
+### ReplyTitle Method
+
+```csharp
+public void ReplyTitle(string value)
+```
+
+#### Parameters
+
+`value` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-20b9996483"></span>
+
+### ReplyToolTip Method
+
+```csharp
+public void ReplyToolTip(ValueTuple<string, ValueTuple<int,int,byte[]>[], string, string> value)
+```
+
+#### Parameters
+
+`value` ValueTuple&lt;string, ValueTuple&lt;int,int,byte[]&gt;[], string, string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-048c75cde8"></span>
+
+### ReplyWindowId Method
+
+```csharp
+public void ReplyWindowId(int value)
+```
+
+#### Parameters
+
+`value` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MethodContext](#uid-94ff6658a4) | No summary available. |
+| [Property](#uid-070a1ae4bd) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94ff6658a4"></span>
+
+### MethodContext Property
+
+```csharp
+public Tmds.DBus.Protocol.MethodContext MethodContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-070a1ae4bd"></span>
+
+### Property Property
+
+```csharp
+public Avalonia.FreeDesktop.DBus.StatusNotifierItemProperty Property { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

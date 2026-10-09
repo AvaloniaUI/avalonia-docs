@@ -94,14 +94,14 @@ webView.EnvironmentRequested += (sender, args) =>
 
 ### Linux (WPE WebKit)
 
-The default Linux backend for `NativeWebView` is [WPE WebKit](https://wpewebkit.org), which renders offscreen and composites into the Avalonia visual tree.
+[WPE WebKit](https://wpewebkit.org) renders offscreen and composites into the Avalonia visual tree. `NativeWebView` prefers it when its libraries are installed, and uses [WebKitGTK](#linux-gtk-webkit) otherwise. This event is only raised on the WPE path, so it never fires on a machine without WPE. See [Linux prerequisites](/docs/app-development/embedding-web-content#linux) for the packages, and note that Ubuntu does not package WPE at all.
 
 **Key Properties:**
 
 - `DataDirectory`: Directory used for persistent website data. When `null`, the default WPE data directory is used.
 - `CacheDirectory`: Directory used for the website cache. When `null`, the default WPE cache directory is used.
 - `RenderingMode`: Selects the WPE rendering backend (`WpeRenderingMode`). The default `Auto` currently maps to `Shm` (software rendering, no GPU required). `Egl` and `DmaBuf` are reserved for future use and will throw `NotImplementedException` if selected. The choice is process-global and affects all `NativeWebView` instances.
-- `PreferWebKitGtkInstead`: When `true`, falls back to the WebKitGTK adapter even if WPE is available.
+- `PreferWebKitGtkInstead`: When `true`, uses the WebKitGTK adapter even though WPE is available. This is an opt-out for machines that do have WPE; it is not needed to reach WebKitGTK on machines that do not.
 
 **Example:**
 
@@ -118,14 +118,13 @@ webView.EnvironmentRequested += (sender, args) =>
 
 ### Linux (GTK WebKit)
 
-Used by `NativeWebDialog`. Not supported by `NativeWebView`.
-
-You can attempt to use `NativeWebView` with the GTK WebKit by setting `PreferWebKitGtkInstead` to `true`.
+WebKitGTK is the baseline Linux backend. `NativeWebDialog` always uses it, and `NativeWebView` uses it whenever [WPE WebKit](#linux-wpe-webkit) is not installed. No configuration is needed to reach it.
 
 **Key Properties:**
 
 - `ApplicationNameForUserAgent`: Customize user agent application name
-- `ExperimentalOffscreen`: Enable experimental offscreen rendering
+- `ExperimentalOffscreen`: Render into an offscreen GTK window composited by Avalonia, instead of reparenting a native X11 child window. This lets the web view be hosted in the same Avalonia window without overlapping other controls.
+- `ForceX11GdkBackend`: Override `GDK_BACKEND` to `x11` while GTK is initialized, restoring the previous value afterwards. Enabled by default, so [Wayland](/docs/platform-specific-guides/linux#wayland) sessions work without any setup; set it to `false` to opt out of the environment override.
 - `EphemeralDataManager`: Use non-persistent data storage
 - `BaseDataDirectory`: Set base directory for website data
 - `BaseCacheDirectory`: Set base directory for cache

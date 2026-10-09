@@ -107,6 +107,11 @@ docs-card[disabled]::after {
     transition: opacity 150ms ease-out;
   }
 
+  html[data-theme='dark'] .Card-icon-light-only,
+  html[data-theme='light'] .Card-icon-dark-only {
+    display: none;
+  }
+
   .Card-icon-hover {
     top: 0;
     position: absolute;

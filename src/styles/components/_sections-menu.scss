@@ -30,7 +30,7 @@
     .item-indicator {
       height: 20px;
       width: 20px;
-      color: theme('colors.primary.100');
+      color: rgb(var(--docs-color-primary-100, 0 125 249));
     }
 
     .item-text {
@@ -71,7 +71,7 @@
     .item-indicator {
       height: 20px;
       width: 20px;
-      color: theme('colors.primary.100');
+      color: rgb(var(--docs-color-primary-100, 0 125 249));
     }
 
     .item-text {

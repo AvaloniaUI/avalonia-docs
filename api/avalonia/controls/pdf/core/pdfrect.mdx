@@ -1,0 +1,301 @@
+---
+title: 'PdfRect'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfrect'
+uid: 'Avalonia.Controls.Pdf.Core.PdfRect'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfRect'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfRect Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A rectangle in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PdfRect
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PdfRect
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PdfRect&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfRect](#uid-e29c077d8c) | A rectangle in PDF user space. Coordinates are in points (1/72 inch) with the origin at the page's bottom-left corner; Y increases upward (PDF convention, not screen convention). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e29c077d8c"></span>
+
+### PdfRect Constructor
+
+A rectangle in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+
+```csharp
+public PdfRect(double Left, double Bottom, double Right, double Top)
+```
+
+#### Parameters
+
+`Left` double
+
+
+`Bottom` double
+
+
+`Right` double
+
+
+`Top` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-a9aa70328e) | No summary available. |
+| [Equals (2 overloads)](#uid-d73d6d6dcb) | No summary available. |
+| [GetHashCode](#uid-2a50c5efe6) | No summary available. |
+| [ToString](#uid-dad88083c0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9aa70328e"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& Left, double& Bottom, double& Right, double& Top)
+```
+
+#### Parameters
+
+`Left` double&amp;
+
+
+`Bottom` double&amp;
+
+
+`Right` double&amp;
+
+
+`Top` double&amp;
+
+
+</section>
+
+<span id="uid-d73d6d6dcb"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51f77e9fd7"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Pdf.Core.PdfRect other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Pdf.Core.PdfRect](xref:Avalonia.Controls.Pdf.Core.PdfRect)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1d9e273a4f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a50c5efe6"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dad88083c0"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bottom](#uid-8a0ee92661) | No summary available. |
+| [Height](#uid-39b88eb6ee) | The rectangle height ([Avalonia.Controls.Pdf.Core.PdfRect.Top](xref:Avalonia.Controls.Pdf.Core.PdfRect.Top) − [Avalonia.Controls.Pdf.Core.PdfRect.Bottom](xref:Avalonia.Controls.Pdf.Core.PdfRect.Bottom)). |
+| [Left](#uid-cafa8cf8ad) | No summary available. |
+| [Right](#uid-2e7be78322) | No summary available. |
+| [Top](#uid-88f2b6e510) | No summary available. |
+| [Width](#uid-44e05e98ab) | The rectangle width ([Avalonia.Controls.Pdf.Core.PdfRect.Right](xref:Avalonia.Controls.Pdf.Core.PdfRect.Right) − [Avalonia.Controls.Pdf.Core.PdfRect.Left](xref:Avalonia.Controls.Pdf.Core.PdfRect.Left)). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a0ee92661"></span>
+
+### Bottom Property
+
+```csharp
+public double Bottom { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39b88eb6ee"></span>
+
+### Height Property
+
+The rectangle height ([Avalonia.Controls.Pdf.Core.PdfRect.Top](xref:Avalonia.Controls.Pdf.Core.PdfRect.Top) − [Avalonia.Controls.Pdf.Core.PdfRect.Bottom](xref:Avalonia.Controls.Pdf.Core.PdfRect.Bottom)).
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cafa8cf8ad"></span>
+
+### Left Property
+
+```csharp
+public double Left { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e7be78322"></span>
+
+### Right Property
+
+```csharp
+public double Right { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-88f2b6e510"></span>
+
+### Top Property
+
+```csharp
+public double Top { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44e05e98ab"></span>
+
+### Width Property
+
+The rectangle width ([Avalonia.Controls.Pdf.Core.PdfRect.Right](xref:Avalonia.Controls.Pdf.Core.PdfRect.Right) − [Avalonia.Controls.Pdf.Core.PdfRect.Left](xref:Avalonia.Controls.Pdf.Core.PdfRect.Left)).
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

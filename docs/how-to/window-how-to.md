@@ -1,6 +1,6 @@
 ---
 id: window-how-to
-title: "How to: Work with Windows"
+title: "How to: Work with windows"
 description: Sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome options.
 doc-type: how-to
 ---
@@ -133,7 +133,7 @@ Platform behavior varies. On Windows, disabled buttons are hidden. On macOS, the
 Create a borderless window by disabling system decorations:
 
 ```xml
-<Window SystemDecorations="None"
+<Window WindowDecorations="None"
         ExtendClientAreaToDecorationsHint="True"
         Background="Transparent"
         TransparencyLevelHint="AcrylicBlur">
@@ -145,6 +145,7 @@ Mark an element as a title bar drag region using the `WindowDecorationProperties
 
 ```xml
 <Grid RowDefinitions="32,*">
+
     <!-- Custom title bar -->
     <Border Grid.Row="0" Background="#1E1E2E"
             WindowDecorationProperties.ElementRole="TitleBar">
@@ -152,15 +153,17 @@ Mark an element as a title bar drag region using the `WindowDecorationProperties
             <TextBlock Text="My App" VerticalAlignment="Center" Foreground="White" />
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"
                         HorizontalAlignment="Right">
-                <Button Content="_" Command="{Binding MinimizeCommand}" />
-                <Button Content="□" Command="{Binding MaximizeCommand}" />
-                <Button Content="✕" Command="{Binding CloseCommand}" />
+                <!-- ElementRole must be set per button for some platforms -->
+                <Button WindowDecorationProperties.ElementRole="MinimizeButton" Content="_" Click="OnMinimize" />
+                <Button WindowDecorationProperties.ElementRole="MaximizeButton" Content="□" Click="OnMaximize" />
+                <Button WindowDecorationProperties.ElementRole="CloseButton" Content="✕" Click="OnClose" />
             </StackPanel>
         </DockPanel>
     </Border>
 
     <!-- Content -->
-    <ContentControl Grid.Row="1" Content="{Binding CurrentView}" />
+    <ContentControl Grid.Row="1" Content="Hello world!" />
+
 </Grid>
 ```
 
@@ -243,38 +246,12 @@ Check which transparency levels are supported at runtime:
 var supported = this.ActualTransparencyLevel;
 ```
 
-### Transparent click-through window
+If `ActualTransparencyLevel` returns a lower level than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
 
-To create a transparent overlay window where mouse clicks pass through empty areas to applications underneath, set `TransparencyLevelHint="Transparent"` and remove the window's `Background` by setting it to `{x:Null}`. Interactive controls placed in the window remain clickable.
+:::note
+Avalonia currently does not support WPF-like transparent click-through behavior.
 
-```xml
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        TransparencyLevelHint="Transparent"
-        Background="{x:Null}"
-        SystemDecorations="None"
-        Topmost="True"
-        WindowState="Maximized">
-    <Grid>
-        <!-- This button is clickable; empty areas pass input through -->
-        <Button Content="Click Me"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
-    </Grid>
-</Window>
-```
-
-The key difference is between `Background="{x:Null}"` and `Background="Transparent"`:
-
-| Background value | Visual result | Hit testing |
-|---|---|---|
-| `{x:Null}` | Transparent | Empty areas pass clicks through to windows behind |
-| `Transparent` | Transparent | Empty areas block clicks (the window captures all input) |
-
-This distinction applies at every level in Avalonia, from individual panels to the window itself. For more details, see [Background and hit testing](/docs/graphics-animation/hit-testing#background-and-hit-testing).
-
-:::tip[Migrating from WPF]
-In WPF, setting `AllowsTransparency="True"` with `Background="Transparent"` on a `Window` allows clicks to pass through transparent areas by default. Avalonia behaves differently: `Background="Transparent"` still captures input. Set `Background="{x:Null}"` instead to get the WPF-like click-through behavior.
+If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
 :::
 
 ## Window Icon
@@ -296,7 +273,7 @@ Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.i
 | `Title` | `string` | Window title bar text. |
 | `WindowState` | `WindowState` | `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
 | `WindowStartupLocation` | `WindowStartupLocation` | `Manual`, `CenterScreen`, `CenterOwner`. |
-| `SystemDecorations` | `SystemDecorations` | `Full`, `BorderOnly`, `None`. |
+| `WindowDecorations` | `WindowDecorations` | `Full`, `BorderOnly`, `None`. |
 | `CanResize` | `bool` | Whether the user can resize the window. |
 | `CanMinimize` | `bool` | Whether the minimize button is enabled. Defaults to `true`. |
 | `CanMaximize` | `bool` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |

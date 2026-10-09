@@ -1,0 +1,132 @@
+---
+title: 'AvaloniaWaylandPlatformExtensions'
+hide_title: true
+slug: '/avalonia/avaloniawaylandplatformextensions'
+uid: 'Avalonia.AvaloniaWaylandPlatformExtensions'
+commentId: 'T:Avalonia.AvaloniaWaylandPlatformExtensions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Wayland'
+assembly: 'Avalonia.Wayland'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AvaloniaWaylandPlatformExtensions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Wayland</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Wayland</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Wayland/AvaloniaWaylandPlatformExtensions.cs">AvaloniaWaylandPlatformExtensions.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder) extensions for enabling the Wayland windowing backend.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class AvaloniaWaylandPlatformExtensions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> AvaloniaWaylandPlatformExtensions
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [UseWayland](#uid-3ed91c02e3) | Configures the application to use the Wayland windowing backend. Options can be supplied by registering a [Avalonia.WaylandPlatformOptions](xref:Avalonia.WaylandPlatformOptions) instance with [Avalonia.AvaloniaLocator](xref:Avalonia.AvaloniaLocator). |
+| [UseWaylandWithFallback](#uid-962af7f5f5) | Configures the application to use the Wayland windowing backend when a usable Wayland compositor is available, falling back to the previously configured windowing backend otherwise. Call it after `UseX11` or `UsePlatformDetect`, e. g. `.UsePlatformDetect().UseWaylandWithFallback()`. Does nothing on non-Linux platforms. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ed91c02e3"></span>
+
+### UseWayland Method
+
+Configures the application to use the Wayland windowing backend. Options can be supplied by
+registering a [Avalonia.WaylandPlatformOptions](xref:Avalonia.WaylandPlatformOptions) instance with [Avalonia.AvaloniaLocator](xref:Avalonia.AvaloniaLocator).
+
+```csharp
+public Avalonia.AppBuilder UseWayland(Avalonia.AppBuilder builder)
+```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The application builder.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The same `builder` for chaining.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-962af7f5f5"></span>
+
+### UseWaylandWithFallback Method
+
+Configures the application to use the Wayland windowing backend when a usable Wayland
+compositor is available, falling back to the previously configured windowing backend
+otherwise. Call it after `UseX11` or `UsePlatformDetect`, e. g.
+`.UsePlatformDetect().UseWaylandWithFallback()`. Does nothing on non-Linux platforms.
+
+```csharp
+public Avalonia.AppBuilder UseWaylandWithFallback(Avalonia.AppBuilder builder)
+```
+
+#### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The application builder.
+
+
+#### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The same `builder` for chaining.
+
+
+#### Exceptions
+
+- [No windowing backend was configured prior to this call (on Linux).](xref:System.InvalidOperationException)
+
+</section>
+
+</ApiRefPage>
+

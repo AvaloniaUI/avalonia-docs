@@ -17,6 +17,12 @@ The `DataGrid` displays repeating data in a customizable grid. The control can b
 
 The `DataGrid` needs to be bound to an observable collection in a view model that can be found in a related **data context**.
 
+:::warning
+`DataGrid` is deprecated!  
+For read-only tabular data, we recommend using [TableView](/controls/data-display/structured-data/tableview).  
+For advanced editing, we recommend using [TreeDataGrid](/controls/data-display/structured-data/treedatagrid).  
+:::
+
 :::info
 To review the concept behind the **data context**, see [Data context](/docs/data-binding/data-context).
 :::

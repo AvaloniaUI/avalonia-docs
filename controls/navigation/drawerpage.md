@@ -1,4 +1,5 @@
 ---
+id: drawerpage
 title: DrawerPage
 description: '`DrawerPage` combines a sliding drawer pane with a main content area. The drawer can open as a flyout overlay, sit permanently alongside the content as a split sidebar, or render as a compact navigation rail.'
 doc-type: reference
@@ -13,211 +14,181 @@ import DrawerPageSplitScreenshot from '/img/controls/drawerpage/drawerpage-split
 import DrawerPageRightScreenshot from '/img/controls/drawerpage/drawerpage-right.png';
 import DrawerPageRtlScreenshot from '/img/controls/drawerpage/drawerpage-rtl.png';
 
-# DrawerPage
+The [`DrawerPage`](/api/avalonia/controls/drawerpage) combines a sliding drawer pane with a main content area, providing a common navigation pattern for applications. It is built on top of `SplitView` and adds page-based navigation features such as lifecycle events, safe area support, and automatic integration with [`NavigationPage`](/api/avalonia/controls/navigationpage).
 
-`DrawerPage` is a page that combines a sliding drawer pane with a main content area. The drawer can open as a flyout overlay, sit permanently alongside the content as a split sidebar, or render as a compact navigation rail. The drawer pane can appear from any edge of the screen and supports swipe gestures, keyboard shortcuts, and a backdrop scrim.
+When the `Content` of a `DrawerPage` is a `NavigationPage`, the drawer toggle is shown in the navigation bar at the root of the navigation stack. It automatically switches to the back button when the navigation stack has more than one page.
 
-`DrawerPage` is built on top of `SplitView` internally. The `DrawerBehavior` and `DrawerLayoutBehavior` properties control which `SplitViewDisplayMode` is applied.
+:::info
+`DrawerPage` is similar to [`SplitView`](/controls/layout/containers/splitview) but adds page-based navigation features such as lifecycle events, safe area support, and automatic integration with `NavigationPage`.
+:::
 
-## Useful Properties
+<Tabs>
 
-You will probably use these properties most often:
+<TabItem value="closed" label="Drawer closed">
+  <Image light={DrawerPageClosedScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage with the drawer closed"/>
+</TabItem>
+
+<TabItem value="open" label="Drawer open">
+  <Image light={DrawerPageOpenScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage with the drawer open"/>
+</TabItem>
+
+</Tabs>
+
+## Useful properties
 
 | Property | Type | Default | Description |
-| -------- | ---- | ------- | ----------- |
-| `Content` | `object?` | `null` | The main content area. This is the XAML content property. Accepts a `Page` or any view. |
-| `ContentTemplate` | `IDataTemplate?` | built-in | Data template used to display `Content` when it is a data object. |
-| `Drawer` | `object?` | `null` | The drawer pane content. Accepts a `Page` or any view. |
-| `DrawerTemplate` | `IDataTemplate?` | `null` | Data template used to display `Drawer` when it is a data object. |
-| `IsOpen` | `bool` | `false` | Whether the drawer pane is currently open. Bindable. Setting it to `true` when `DrawerBehavior` is `Disabled` is a no-op, and setting it to `false` when `DrawerBehavior` is `Locked` is a no-op. |
-| `DrawerLength` | `double` | `320` | Width, or height for top and bottom placement, of the drawer pane when fully open. |
-| `CompactDrawerLength` | `double` | `48` | Width, or height for `Top` and `Bottom` placement, of the visible compact rail strip in `CompactOverlay` and `CompactInline` layout modes. |
-| `DrawerBreakpointLength` | `double` | `0` | Responsive breakpoint. When greater than `0` and the page width drops below this value, the layout switches to `Overlay` automatically regardless of `DrawerLayoutBehavior`. Applies to `Left` and `Right` placement only. Set to `0` to disable responsive switching. |
+| --- | --- | --- | --- |
+| `Content` | `object?` | `null` | The main content area of the page. |
+| `ContentTemplate` | `IDataTemplate?` | Default page template | A data template for the main content. |
+| `Drawer` | `object?` | `null` | The content displayed inside the drawer pane. |
+| `DrawerTemplate` | `IDataTemplate?` | `null` | A data template for the drawer content. |
+| `IsOpen` | `bool` | `false` | Controls whether the drawer is open. |
+| `DrawerLength` | `double` | `320` | The width (or height) of the drawer when open. |
+| `CompactDrawerLength` | `double` | `48` | The width, or height for top and bottom placement, of the compact drawer rail. |
+| `DrawerBreakpointLength` | `double` | `0` | The container width, or height for top and bottom placement, at which the drawer automatically switches between overlay and inline modes. A value of `0` disables the breakpoint. |
 | `IsGestureEnabled` | `bool` | `true` | Enables swipe gestures to open and close the drawer. |
-| `DrawerBehavior` | `DrawerBehavior` | `Auto` | Controls the open and close behavior. See the `DrawerBehavior` values table below. |
-| `DrawerLayoutBehavior` | `DrawerLayoutBehavior` | `Overlay` | Controls the layout mode when `DrawerBehavior` is `Auto`. See the `DrawerLayoutBehavior` values table below. |
-| `DrawerPlacement` | `DrawerPlacement` | `Left` | Which edge the drawer slides in from. See the `DrawerPlacement` values table below. |
-| `DrawerHeader` | `object?` | `null` | Content rendered at the top of the drawer pane, above the main drawer content. |
-| `DrawerFooter` | `object?` | `null` | Content rendered at the bottom of the drawer pane, below the main drawer content. |
-| `DrawerIcon` | `object?` | `null` | Icon data displayed in the drawer toggle button. Use together with `DrawerIconTemplate` to control rendering. When no template is provided, the default template handles `Geometry`, `PathIcon`, `IImage`, and SVG path strings. |
-| `DrawerIconTemplate` | `IDataTemplate?` | `null` | Data template used to render the `DrawerIcon` in each icon presenter slot. Each presenter independently materializes its own visual from this template. |
-| `DrawerBackground` | `IBrush?` | `null` | Background brush of the drawer pane. |
-| `DrawerHeaderBackground` | `IBrush?` | `null` | Background brush of the drawer header area. |
-| `DrawerHeaderForeground` | `IBrush?` | `null` | Foreground brush of the drawer header area. |
-| `DrawerFooterBackground` | `IBrush?` | `null` | Background brush of the drawer footer area. |
-| `DrawerFooterForeground` | `IBrush?` | `null` | Foreground brush of the drawer footer area. |
-| `BackdropBrush` | `IBrush?` | `null` | Brush rendered over the content area while the drawer is open in overlay mode. A semi-transparent brush creates a scrim effect. Hidden when `null`. |
-| `DisplayMode` | `SplitViewDisplayMode` | computed | Read-only. The resolved display mode currently applied to the internal `SplitView`. Managed automatically by `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointLength`. |
+| `DrawerBehavior` | `DrawerBehavior` | `Auto` | Controls drawer visibility behavior. See the DrawerBehavior Values table below. |
+| `DrawerLayoutBehavior` | `DrawerLayoutBehavior` | `Overlay` | How the drawer interacts with the content area. See the DrawerLayoutBehavior Values table below. |
+| `DrawerPlacement` | `DrawerPlacement` | `Left` | The logical side where the drawer appears. Left and right are mirrored when `FlowDirection` is `RightToLeft`. See the [DrawerPlacement Values table below](#drawerplacement-values). |
+| `DrawerHeader` | `object?` | `null` | Content displayed at the top of the drawer. |
+| `DrawerHeaderTemplate` | `IDataTemplate?` | `null` | A data template for `DrawerHeader`. |
+| `DrawerHeaderBackground` | `IBrush?` | `null` | The brush used for the drawer header background. |
+| `DrawerHeaderForeground` | `IBrush?` | `null` | The brush used for the drawer header foreground. |
+| `DrawerFooter` | `object?` | `null` | Content displayed at the bottom of the drawer. |
+| `DrawerFooterTemplate` | `IDataTemplate?` | `null` | A data template for `DrawerFooter`. |
+| `DrawerFooterBackground` | `IBrush?` | `null` | The brush used for the drawer footer background. |
+| `DrawerFooterForeground` | `IBrush?` | `null` | The brush used for the drawer footer foreground. |
+| `DrawerIcon` | `object?` | `null` | An icon shown in the drawer toggle button. |
+| `DrawerIconTemplate` | `IDataTemplate?` | `null` | A data template for `DrawerIcon` when the icon value is non-visual data. |
+| `DrawerBackground` | [`IBrush?`](/api/avalonia/media/ibrush) | `null` | The brush used for the drawer background. |
+| `BackdropBrush` | `IBrush?` | `null` | The brush used for the overlay backdrop when the drawer is open. |
+| `DisplayMode` | `SplitViewDisplayMode` | `Overlay` | The effective `SplitView` display mode resolved from `DrawerBehavior`, `DrawerLayoutBehavior`, and `DrawerBreakpointLength`. |
 | `HorizontalContentAlignment` | `HorizontalAlignment` | `Stretch` | Horizontal alignment of the main content. |
 | `VerticalContentAlignment` | `VerticalAlignment` | `Stretch` | Vertical alignment of the main content. |
 
-## DrawerBehavior Values
+### DrawerBehavior values
 
 | Value | Description |
-| ----- | ----------- |
-| `Auto` | Default. Uses `DrawerLayoutBehavior` to determine the display mode. Respects `DrawerBreakpointLength` for responsive switching. |
-| `Flyout` | Always opens as an overlay, ignoring `DrawerLayoutBehavior`. |
-| `Locked` | Always open. Cannot be closed by the user or by setting `IsOpen = false`. |
-| `Disabled` | Always closed. The drawer toggle is hidden and gestures are blocked. Setting `IsOpen = true` is a no-op. |
+| --- | --- |
+| `Auto` | The drawer opens and closes normally. `DrawerLayoutBehavior` and `DrawerBreakpointLength` determine whether it overlays or takes layout space. |
+| `Flyout` | The drawer behaves as a flyout overlay, closing automatically when the user taps outside. |
+| `Locked` | The drawer stays open and cannot be closed by the user. |
+| `Disabled` | The drawer is hidden and cannot be opened. |
 
-## DrawerLayoutBehavior Values
-
-Applies when `DrawerBehavior` is `Auto`.
+### DrawerLayoutBehavior values
 
 | Value | Description |
-| ----- | ----------- |
-| `Overlay` | Default. The drawer slides over the content area as a flyout. |
-| `Split` | The drawer and content are shown side by side at all times. |
-| `CompactOverlay` | A narrow rail of `CompactDrawerLength` size is always visible. Opening expands the drawer as an overlay. |
-| `CompactInline` | A narrow rail is always visible. Opening expands the drawer and pushes the content aside. |
+| --- | --- |
+| `Overlay` | The drawer slides over the content. The content area is not resized. |
+| `Split` | The drawer pushes the content to the side. Both the drawer and content are visible simultaneously. |
+| `CompactOverlay` | A narrow strip of the drawer is always visible (showing icons). When opened, the drawer overlays the content. |
+| `CompactInline` | A narrow strip of the drawer is always visible. When opened, the drawer pushes the content aside. |
 
-## DrawerPlacement Values
+### DrawerPlacement values
 
 | Value | Description |
-| ----- | ----------- |
-| `Left` | Default. Drawer slides in from the left edge. |
-| `Right` | Drawer slides in from the right edge. |
-| `Top` | Drawer slides down from the top edge. |
-| `Bottom` | Drawer slides up from the bottom edge. |
+| --- | --- |
+| `Left` | The drawer appears on the leading side: left in left-to-right layouts, right in right-to-left layouts. |
+| `Right` | The drawer appears on the trailing side: right in left-to-right layouts, left in right-to-left layouts. |
+| `Top` | The drawer appears at the top. |
+| `Bottom` | The drawer appears at the bottom. |
 
 ## Events
 
-| Event | Args type | Description |
-| ----- | --------- | ----------- |
-| `Opened` | `RoutedEventArgs` | Bubbling routed event raised when the drawer transitions to open. |
-| `Closing` | `DrawerClosingEventArgs` | Bubbling routed event raised just before the drawer closes. Set `args.Cancel = true` to prevent closing. |
-| `Closed` | `RoutedEventArgs` | Bubbling routed event raised after the drawer has closed, if closing was not cancelled. |
+| Event | Description |
+| --- | --- |
+| `Opened` | Raised when the drawer finishes opening. |
+| `Closing` | Raised when the drawer is about to close. Set `Cancel = true` on the event args to prevent closing. |
+| `Closed` | Raised when the drawer finishes closing. |
 
-## Gestures and Keyboard
+## Gestures and keyboard
 
-- Swipe to open: Swipe inward from the edge zone (20 px by default) to open the drawer. In compact modes the swipe zone is the compact rail strip.
-- Swipe to close: Swipe away from the drawer while it is open.
-- Escape key: Closes an overlay or compact-overlay drawer. Does not apply when `DrawerBehavior` is `Locked`.
-- System back button: Closes the drawer when it is open and not in `Locked` or `Disabled` mode.
-- Backdrop tap: Tapping the backdrop, when `BackdropBrush` is set, closes the drawer.
+`DrawerPage` supports swipe gestures to open and close the drawer on touch-enabled devices. This can be toggled with the `IsGestureEnabled` property.
 
-## NavigationPage Integration
+On desktop, pressing the `Escape` key closes the drawer when it is open in `Overlay` or `CompactOverlay` mode.
 
-When `Content` is a `NavigationPage`, `DrawerPage` automatically:
+## NavigationPage integration
 
-- Hides its own top bar and defers header rendering to the `NavigationPage` navigation bar.
-- Shows a hamburger toggle button in the navigation bar at the root of the `NavigationPage` stack.
-- Hides the hamburger button when the user navigates deeper into the stack, where the back button takes its place.
+When a `DrawerPage` hosts a `NavigationPage` as its `Content`, and pages are pushed onto the navigation stack, the hamburger menu icon in the navigation bar automatically becomes a back button. This provides a seamless transition between drawer navigation and hierarchical page navigation without additional code.
 
 ## Examples
 
-### Basic DrawerPage in XAML
+### Basic XAML
 
 ```xml
 <DrawerPage xmlns="https://github.com/avaloniaui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MyApp.Shell">
-
+            Header="My App"
+            DrawerLength="280">
     <DrawerPage.Drawer>
-        <ContentPage Header="Menu">
-            <StackPanel Spacing="8" Margin="12">
-                <Button Content="Home"     Click="OnHomeClick" />
-                <Button Content="Profile"  Click="OnProfileClick" />
-                <Button Content="Settings" Click="OnSettingsClick" />
-            </StackPanel>
-        </ContentPage>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" Click="OnHomeClicked" />
+            <Button Content="Settings" Click="OnSettingsClicked" />
+            <Button Content="About" Click="OnAboutClicked" />
+        </StackPanel>
     </DrawerPage.Drawer>
 
-    <NavigationPage>
-        <local:HomePage />
-    </NavigationPage>
-
+    <TextBlock Text="Select an item from the drawer"
+               Margin="16" FontSize="18" />
 </DrawerPage>
 ```
 
-### Basic DrawerPage in Code
+### Basic code
 
 ```csharp
 var drawerPage = new DrawerPage
 {
-    Drawer = new ContentPage
+    Header = "My App",
+    DrawerLength = 280,
+    Drawer = new StackPanel
     {
-        Header = "Menu",
-        Content = new StackPanel
+        Spacing = 4,
+        Margin = new Thickness(8),
+        Children =
         {
-            Children =
-            {
-                new Button { Content = "Home" },
-                new Button { Content = "Settings" }
-            }
+            new Button { Content = "Home" },
+            new Button { Content = "Settings" },
+            new Button { Content = "About" }
         }
     },
-    Content = new NavigationPage { Content = new HomePage() }
+    Content = new TextBlock
+    {
+        Text = "Select an item from the drawer",
+        Margin = new Thickness(16),
+        FontSize = 18
+    }
 };
-
-window.Page = drawerPage;
 ```
 
-<Image light={DrawerPageClosedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-<Image light={DrawerPageOpenScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Toggling the Drawer
+### Toggling the drawer
 
 ```csharp
-// Open
-drawerPage.IsOpen = true;
-
-// Close
-drawerPage.IsOpen = false;
-
-// Toggle
-drawerPage.IsOpen = !drawerPage.IsOpen;
-```
-
-From XAML using a button binding:
-
-```xml
-<Button Content="Toggle Menu"
-        Command="{Binding ToggleDrawerCommand}" />
-```
-
-```csharp
-// In the view-model
-[RelayCommand]
-private void ToggleDrawer() => IsDrawerOpen = !IsDrawerOpen;
-```
-
-### Navigating from the Drawer Menu
-
-Close the drawer after the user taps a menu item:
-
-```csharp
-private void OnHomeClick(object? sender, RoutedEventArgs e)
+private void ToggleDrawer()
 {
-    if (Content is NavigationPage nav)
-        _ = nav.PopToRootAsync();
-
-    IsOpen = false;
-}
-
-private void OnProfileClick(object? sender, RoutedEventArgs e)
-{
-    if (Content is NavigationPage nav)
-        _ = nav.PushAsync(new ProfilePage());
-
-    IsOpen = false;
+    myDrawerPage.IsOpen = !myDrawerPage.IsOpen;
 }
 ```
 
-### Drawer with Header and Footer
+### Navigating from the drawer
+
+```csharp
+private async void OnSettingsClicked(object? sender, RoutedEventArgs e)
+{
+    myDrawerPage.IsOpen = false;
+    if (myDrawerPage.Content is NavigationPage navigation)
+    {
+        await navigation.PushAsync(new SettingsPage());
+    }
+}
+```
+
+### Header and footer
+
+Use `DrawerHeader` and `DrawerFooter` for fixed content above and below the drawer body. They do not replace the drawer content. Put menu items inside `DrawerPage.Drawer`.
 
 ```xml
 <DrawerPage xmlns="https://github.com/avaloniaui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MyApp.Shell"
+            Header="My App"
             DrawerLength="280">
-
-    <DrawerPage.Drawer>
-        <ContentPage Header="Navigation">
-        </ContentPage>
-    </DrawerPage.Drawer>
-
     <DrawerPage.DrawerHeader>
         <Border Background="#1E3A5F" Padding="16">
             <StackPanel>
@@ -235,264 +206,319 @@ private void OnProfileClick(object? sender, RoutedEventArgs e)
     <DrawerPage.DrawerFooter>
         <Border Padding="12">
             <Button Content="Sign Out"
-                    Click="OnSignOutClick"
                     HorizontalAlignment="Stretch" />
         </Border>
     </DrawerPage.DrawerFooter>
 
-    <NavigationPage>
-        <local:HomePage />
-    </NavigationPage>
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Profile" />
+            <Button Content="Settings" />
+        </StackPanel>
+    </DrawerPage.Drawer>
 
+    <TextBlock Text="Main content" Margin="16" />
 </DrawerPage>
 ```
 
-<Image light={DrawerPageHeaderFooterScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
+<Image light={DrawerPageHeaderFooterScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage with header and footer"/>
 
-### Persistent Sidebar (Split Layout)
+### Split layout
 
-The drawer stays permanently open next to the content. No toggle or gesture is needed.
+Use `DrawerLayoutBehavior="Split"` when an open drawer should take layout space instead of overlaying the content.
 
-```csharp
-var drawerPage = new DrawerPage
-{
-    DrawerLayoutBehavior = DrawerLayoutBehavior.Split,
-    DrawerLength = 240,
-    Drawer = sidebarPage,
-    Content = new NavigationPage { Content = new HomePage() }
-};
-```
+Set `IsOpen="True"` to show the drawer initially.
 
-<Image light={DrawerPageSplitScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Compact Navigation Rail
-
-A narrow icon strip is always visible. Tapping or swiping it opens the full drawer. In `CompactInline` mode, the content is pushed aside when expanded. In `CompactOverlay` mode, the expanded drawer overlays the content instead.
+Use `DrawerBehavior="Locked"` to make the drawer a permanently visible sidebar.
 
 ```xml
-<DrawerPage DrawerLayoutBehavior="CompactInline"
-            CompactDrawerLength="56"
-            DrawerLength="240">
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="My App"
+            DrawerLayoutBehavior="Split"
+            IsOpen="True"
+            DrawerLength="250">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Settings" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="Content is pushed to the side" Margin="16" />
+</DrawerPage>
+```
+
+<Image light={DrawerPageSplitScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage in split mode"/>
+
+### Compact navigation rail
+
+Use `CompactOverlay` or `CompactInline` to show a narrow strip of the drawer (such as icon buttons) when closed, expanding to the full drawer on open.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="My App"
+            DrawerLayoutBehavior="CompactInline"
+            CompactDrawerLength="48"
+            DrawerLength="250">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4">
+            <Button Width="48" Content="H" />
+            <Button Width="48" Content="S" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="Content adjusts when drawer opens" Margin="16" />
+</DrawerPage>
+```
+
+<Tabs>
+
+<TabItem value="collapsed" label="DrawerPage collapsed">
+  <Image light={DrawerPageCompactCollapsedScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage compact mode collapsed"/>
+</TabItem>
+
+<TabItem value="expanded" label="DrawerPage expanded">
+  <Image light={DrawerPageCompactExpandedScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage compact mode expanded"/>
+</TabItem>
+
+</Tabs>
+
+### Responsive layout
+
+Automatically switch the drawer between overlay and inline based on the container width, or height for top and bottom drawers.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="Responsive App"
+            DrawerBreakpointLength="800"
+            DrawerLayoutBehavior="Split">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Settings" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="Resize the window to see the drawer adapt" Margin="16" />
+</DrawerPage>
+```
+
+### RTL support
+
+`DrawerPage` respects `FlowDirection` for drawer placement, gesture direction, and safe-area handling. `DrawerPlacement="Left"` is the leading side, so it appears on the right in a right-to-left (RTL) layout.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="RTL App"
+            FlowDirection="RightToLeft">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="الصفحة الرئيسية" />
+            <Button Content="الإعدادات" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="محتوى من اليمين إلى اليسار" Margin="16" />
+</DrawerPage>
+```
+
+<Image light={DrawerPageRtlScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage with RTL layout"/>
+
+### Right-side drawer
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="Right Drawer"
+            DrawerPlacement="Right"
+            DrawerLength="280">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Option A" />
+            <Button Content="Option B" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="The drawer opens from the right" Margin="16" />
+</DrawerPage>
+```
+
+<Image light={DrawerPageRightScreenshot} position="center" maxWidth={400} cornerRadius="true" alt="DrawerPage with right-side drawer"/>
+
+### Backdrop scrim
+
+Use the `BackdropBrush` property to add a semi-transparent overlay behind the drawer when it is open in overlay mode.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="Scrim Example"
+            BackdropBrush="#80000000">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="A scrim appears behind the drawer" Margin="16" />
+</DrawerPage>
+```
+
+### Cancelling close
+
+Handle the `Closing` event to prevent the drawer from closing under certain conditions.
+
+```csharp
+private void OnDrawerClosing(object sender, DrawerClosingEventArgs e)
+{
+    if (hasUnsavedChanges)
+    {
+        e.Cancel = true;
+    }
+}
+```
+
+### Responding to open/close
+
+```csharp
+private void OnDrawerOpened(object? sender, RoutedEventArgs e)
+{
+    Debug.WriteLine("Drawer opened");
+}
+
+private void OnDrawerClosed(object? sender, RoutedEventArgs e)
+{
+    Debug.WriteLine("Drawer closed");
+}
+```
+
+### MVVM binding
+
+Bind the `IsOpen` property to a view model for full control over the drawer state.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="MVVM Example"
+            IsOpen="{Binding IsDrawerOpen}">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" Command="{Binding GoHomeCommand}" />
+            <Button Content="Settings" Command="{Binding GoSettingsCommand}" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <ContentControl Content="{Binding CurrentContent}" />
+</DrawerPage>
+```
+
+### Custom drawer icon
+
+Replace the default hamburger icon with a custom icon.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="Custom Icon">
+    <DrawerPage.DrawerIcon>
+        <PathIcon Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+    </DrawerPage.DrawerIcon>
 
     <DrawerPage.Drawer>
-        <StackPanel Spacing="2" Margin="0,8">
-            <Button HorizontalAlignment="Stretch" Background="Transparent"
-                    ToolTip.Tip="Home">
-                <StackPanel HorizontalAlignment="Center" Spacing="3">
-                    <PathIcon Width="20" Height="20"
-                              Data="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                    <TextBlock Text="Home" FontSize="9" HorizontalAlignment="Center" />
-                </StackPanel>
-            </Button>
-            <Button HorizontalAlignment="Stretch" Background="Transparent"
-                    ToolTip.Tip="Profile">
-                <StackPanel HorizontalAlignment="Center" Spacing="3">
-                    <PathIcon Width="20" Height="20"
-                              Data="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                    <TextBlock Text="Profile" FontSize="9" HorizontalAlignment="Center" />
-                </StackPanel>
-            </Button>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="Custom drawer icon" Margin="16" />
+</DrawerPage>
+```
+
+### Locked drawer
+
+Use `DrawerBehavior="Locked"` to keep the drawer permanently open.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="Locked Drawer"
+            DrawerBehavior="Locked"
+            DrawerLayoutBehavior="Split"
+            DrawerLength="250">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Settings" />
+        </StackPanel>
+    </DrawerPage.Drawer>
+
+    <TextBlock Text="The drawer cannot be closed" Margin="16" />
+</DrawerPage>
+```
+
+### Disabling the drawer
+
+Use `DrawerBehavior="Disabled"` to hide the drawer entirely.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            Header="No Drawer"
+            DrawerBehavior="Disabled">
+    <TextBlock Text="The drawer is disabled on this page" Margin="16" />
+</DrawerPage>
+```
+
+### NavigationPage content
+
+When the main content is a `NavigationPage`, the hamburger menu icon automatically becomes a back button when pages are pushed.
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            DrawerLength="280">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Settings" />
         </StackPanel>
     </DrawerPage.Drawer>
 
     <NavigationPage>
-        <local:HomePage />
-    </NavigationPage>
-
-</DrawerPage>
-```
-
-```csharp
-var drawerPage = new DrawerPage
-{
-    DrawerLayoutBehavior = DrawerLayoutBehavior.CompactInline,
-    CompactDrawerLength = 56,
-    DrawerLength = 240,
-    Drawer = navRailPage,
-    Content = new NavigationPage { Content = new HomePage() }
-};
-```
-
-<Image light={DrawerPageCompactCollapsedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-<Image light={DrawerPageCompactExpandedScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Responsive Layout with DrawerBreakpointLength
-
-Switch automatically between a split sidebar on wide windows and an overlay flyout on narrow windows. When the page width drops below the breakpoint the drawer closes and switches to `Overlay`. When the width grows back above it, the configured layout is restored and the drawer opens automatically.
-
-This applies to `Left` and `Right` placement only.
-
-```xml
-<DrawerPage DrawerLayoutBehavior="Split"
-            DrawerBreakpointLength="720"
-            DrawerLength="240">
-    <!-- drawer and content -->
-</DrawerPage>
-```
-
-```csharp
-var drawerPage = new DrawerPage
-{
-    DrawerLayoutBehavior = DrawerLayoutBehavior.Split,
-    DrawerBreakpointLength = 720, // overlay when width < 720 px, split when >= 720 px
-    Drawer = menuPage,
-    Content = mainPage
-};
-```
-
-### RTL Support
-
-`DrawerPlacement` is logical, not physical. When `FlowDirection` is `RightToLeft`, `Left` and `Right` placements are mirrored: `Left` appears on the right edge and `Right` appears on the left edge. Swipe gestures are mirrored automatically. This supports RTL locales such as Arabic and Hebrew without any extra code.
-
-```xml
-<DrawerPage FlowDirection="RightToLeft"
-            DrawerPlacement="Left">
-    <!-- drawer opens from the right edge in RTL -->
-</DrawerPage>
-```
-
-<Image light={DrawerPageRtlScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Right-Side Drawer
-
-Useful for filter panels, detail inspectors, or contextual sidebars:
-
-```xml
-<DrawerPage DrawerPlacement="Right"
-            DrawerLength="300">
-
-    <DrawerPage.Drawer>
-        <ContentPage Header="Filters">
-            <local:FilterPanel />
+        <ContentPage Header="Home">
+            <StackPanel Margin="16" Spacing="8">
+                <TextBlock Text="Home Page" FontSize="24" />
+                <Button Content="Go to Details" Click="OnGoToDetails" />
+            </StackPanel>
         </ContentPage>
+    </NavigationPage>
+</DrawerPage>
+```
+
+### Navigation transitions
+
+`DrawerPage` does not have its own `PageTransition` property. If the drawer hosts a `NavigationPage`, configure transitions on that `NavigationPage`:
+
+```xml
+<DrawerPage xmlns="https://github.com/avaloniaui"
+            DrawerLength="280">
+    <DrawerPage.Drawer>
+        <StackPanel Spacing="4" Margin="8">
+            <Button Content="Home" />
+            <Button Content="Settings" />
+        </StackPanel>
     </DrawerPage.Drawer>
 
-    <local:ResultsPage />
+    <NavigationPage>
+        <NavigationPage.PageTransition>
+            <CrossFade Duration="0:00:00.300" />
+        </NavigationPage.PageTransition>
 
+        <ContentPage Header="Home">
+            <TextBlock Text="Home Page" Margin="16" />
+        </ContentPage>
+    </NavigationPage>
 </DrawerPage>
-```
-
-<Image light={DrawerPageRightScreenshot} alt="" position="center" maxWidth={400} cornerRadius="true"/>
-
-### Backdrop Scrim
-
-Add a semi-transparent overlay behind the drawer when in overlay mode:
-
-```csharp
-drawerPage.BackdropBrush = new SolidColorBrush(Colors.Black, opacity: 0.4);
-```
-
-Tapping the scrim closes the drawer automatically.
-
-### Cancelling Close
-
-Use the `Closing` event to prevent the drawer from closing, for example when there is unsaved work inside the drawer pane:
-
-```csharp
-drawerPage.Closing += (sender, e) =>
-{
-    if (HasUnsavedChanges)
-        e.Cancel = true;
-};
-```
-
-### Responding to Open and Close
-
-```csharp
-drawerPage.Opened += (sender, e) =>
-{
-    Console.WriteLine("Drawer opened");
-};
-
-drawerPage.Closed += (sender, e) =>
-{
-    Console.WriteLine("Drawer closed");
-};
-```
-
-Alternatively, monitor `IsOpen` through a property changed handler:
-
-```csharp
-drawerPage.PropertyChanged += (sender, e) =>
-{
-    if (e.Property == DrawerPage.IsOpenProperty)
-        Console.WriteLine($"IsOpen: {drawerPage.IsOpen}");
-};
-```
-
-### MVVM Binding for IsOpen
-
-```xml
-<DrawerPage IsOpen="{Binding IsMenuOpen}"
-            DrawerLayoutBehavior="Overlay">
-    <!-- ... -->
-</DrawerPage>
-```
-
-```csharp
-// In the view-model:
-[ObservableProperty]
-private bool _isMenuOpen;
-```
-
-### Custom Drawer Icon
-
-Set `DrawerIcon` to a `Geometry` value and provide a `DrawerIconTemplate` so each icon presenter independently materializes its own visual:
-
-```xml
-<DrawerPage>
-    <DrawerPage.DrawerIcon>
-        <StreamGeometry>M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z</StreamGeometry>
-    </DrawerPage.DrawerIcon>
-    <DrawerPage.DrawerIconTemplate>
-        <DataTemplate DataType="Geometry">
-            <PathIcon Data="{Binding}" />
-        </DataTemplate>
-    </DrawerPage.DrawerIconTemplate>
-    <!-- ... -->
-</DrawerPage>
-```
-
-Change the icon programmatically at runtime:
-
-```csharp
-drawerPage.DrawerIcon = Geometry.Parse("M4,8H8V4H4V8M10,20H14V16H10V20M4,20H8V16H4V20M4,14H8V10H4V14M10,14H14V10H10V14M16,4V8H20V4H16M10,8H14V4H10V8M16,14H20V10H16V14M16,20H20V16H16V20Z");
-```
-
-### Locked Drawer (Always Open)
-
-```csharp
-drawerPage.DrawerBehavior = DrawerBehavior.Locked;
-// IsOpen is forced to true. The user cannot close it.
-```
-
-### Disabling the Drawer
-
-```csharp
-drawerPage.DrawerBehavior = DrawerBehavior.Disabled;
-// The toggle is hidden. IsOpen stays false. Gestures are blocked.
-```
-
-### DrawerPage with a CrossFade Transition on the NavigationPage
-
-```csharp
-var navPage = new NavigationPage
-{
-    Content = new HomePage(),
-    PageTransition = new CrossFade(TimeSpan.FromMilliseconds(250))
-};
-
-var drawerPage = new DrawerPage
-{
-    DrawerLayoutBehavior = DrawerLayoutBehavior.Overlay,
-    DrawerLength = 280,
-    Drawer = menuPage,
-    Content = navPage
-};
 ```
 
 ## See also
 
-- [API reference](/api/avalonia/controls/drawerpage)
-- [Source code](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)
+- [ContentPage](/controls/navigation/contentpage)
+- [NavigationPage](/controls/navigation/navigationpage)
+- [SplitView](/controls/layout/containers/splitview)
+- [DrawerPage API reference](/api/avalonia/controls/drawerpage)
+- [`DrawerPage.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Page/DrawerPage.cs)

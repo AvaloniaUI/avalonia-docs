@@ -1,0 +1,94 @@
+---
+title: 'IGradientBrush'
+hide_title: true
+slug: '/avalonia/media/igradientbrush'
+uid: 'Avalonia.Media.IGradientBrush'
+commentId: 'T:Avalonia.Media.IGradientBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGradientBrush Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A brush that draws with a gradient.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGradientBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ibrush">IBrush</a>
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [GradientStops](#uid-0d18507892) | Gets the brush's gradient stops. |
+| [SpreadMethod](#uid-a698f6a3f1) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d18507892"></span>
+
+### GradientStops Property
+
+Gets the brush's gradient stops.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.IGradientStop> GradientStops { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a698f6a3f1"></span>
+
+### SpreadMethod Property
+
+Gets the brush's spread method that defines how to draw a gradient that doesn't fill
+the bounds of the destination control.
+
+```csharp
+public Avalonia.Media.GradientSpreadMethod SpreadMethod { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

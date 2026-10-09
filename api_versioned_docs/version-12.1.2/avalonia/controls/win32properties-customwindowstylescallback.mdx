@@ -1,0 +1,164 @@
+---
+title: 'Win32Properties.CustomWindowStylesCallback'
+hide_title: true
+slug: '/avalonia/controls/win32properties-customwindowstylescallback'
+uid: 'Avalonia.Controls.Win32Properties.CustomWindowStylesCallback'
+commentId: 'T:Avalonia.Controls.Win32Properties.CustomWindowStylesCallback'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Win32Properties.CustomWindowStylesCallback Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate Win32Properties.CustomWindowStylesCallback
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> Win32Properties.CustomWindowStylesCallback
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [Win32Properties.CustomWindowStylesCallback](#uid-eb0355620e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb0355620e"></span>
+
+### Win32Properties.CustomWindowStylesCallback Constructor
+
+```csharp
+public Win32Properties.CustomWindowStylesCallback(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-5b2bc5106f) | No summary available. |
+| [EndInvoke](#uid-cb89fcceb1) | No summary available. |
+| [Invoke](#uid-40fac74d04) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b2bc5106f"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(uint style, uint exStyle, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`style` uint
+
+
+`exStyle` uint
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb89fcceb1"></span>
+
+### EndInvoke Method
+
+```csharp
+public ValueTuple<uint, uint> EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+ValueTuple&lt;uint, uint&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-40fac74d04"></span>
+
+### Invoke Method
+
+```csharp
+public ValueTuple<uint, uint> Invoke(uint style, uint exStyle)
+```
+
+#### Parameters
+
+`style` uint
+
+
+`exStyle` uint
+
+
+#### Returns
+
+ValueTuple&lt;uint, uint&gt;
+
+
+</section>
+
+</ApiRefPage>
+

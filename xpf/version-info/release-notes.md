@@ -3,6 +3,48 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.7 (2026-09-15)
+
+* Avalonia version updated from 11.3.20 to 11.3.22
+* Fixed tooltips not disappearing when cursor moves out of the window (Linux)
+* Fixed ShutdownRequested cancellation not respected (macOS)
+* Fixed MessageBox being hidden behind topmost windows
+* Fixed popup not closing when another process activated
+* Fixed transparent windows being black when using Nvidia EGL drivers
+* Implemented heap and global memory API shims, GetShortPathName, QueryPerformanceCounter/Frequency, UnregisterClass
+
+## XPF 1.6.6 (2026-08-11)
+
+* Avalonia version updated from 11.3.18 to 11.3.20
+* Added basic support for MahApps's windows
+* Fixed fail fast when `FontManagerOptions.DefaultFamilyName` does not point to a system font
+* Fixed `OutOfRangeException` on text input, which appeared since macOS 27
+* Fixed `NullReferenceException` when `TextBox.TextView` is null
+* Fixed popups appearing on the wrong monitor for maximized windows without chrome
+* Fixed tooltips not disappearing when cursor moves out of the window
+* Improved the heuristics to activate another window after one is closed (Linux)
+* The following dependencies were updated:
+  * System.Security.Cryptography.Xml 8.0.3 to 8.0.4 (fixes security vulnerability)
+
+## XPF 1.6.5 (2026-07-02)
+
+* Avalonia version updated from 11.3.16 to 11.3.18
+* Added support for bitmaps with DPI other than 96
+* Fixed system font fallback taking over font family referenced using pack URI
+* Fixed `TextWrapping=Wrap` trimming each line when trimming enabled
+* Fixed extra click needed on context menu opened in inactive windows (macOS)
+* Fixed few pixels space around maximized windows (macOS, Linux)
+* Fixed an issue where some mouse cursor values would result in invisible cursor
+
+## XPF 1.6.4 (2026-05-27)
+
+* Avalonia version updated from 11.3.14 to 11.3.16
+* Fixed overly sensitive touchpad scrolling (especially on macOS)
+  * This can be disabled using `AvaloniaUI.Xpf.DisablePreciseMouseWheelScrolling` compatibility flag
+* Fixed `VisualBrush` with off-screen descendants rendering
+* Fixed scRGB to sRGB color conversion, resulting in slight color differences
+* Fixed an issue with `NativeControlHost` in `TabControl` showing incorrect content
+
 ## XPF 1.6.3 (2026-04-22)
 
 * Avalonia version updated from 11.3.12 to 11.3.14

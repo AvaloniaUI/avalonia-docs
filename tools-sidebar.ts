@@ -53,12 +53,14 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    'hot-reload/index',
     {
       type: 'category',
       label: 'Parcel',
       collapsed: true,
       items: [
         'parcel/setup',
+        'parcel/configuration-reference',
         'parcel/command-line-reference',
         'parcel/packaging-for-macos',
         'parcel/packaging-for-windows',
@@ -72,11 +74,13 @@ const sidebars: SidebarsConfig = {
       items: [
         'ai-tools/index',
         'ai-tools/build-mcp',
+        'ai-tools/charts-mcp',
         'developer-tools/mcp',
         'parcel/mcp',
       ],
     },
     'installing-avalonia-pro',
+    'assigning-seats',
     'faq',
   ],
 };

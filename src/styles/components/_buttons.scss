@@ -76,7 +76,7 @@ html[data-theme='dark'] {
 
 // Dev portal buttons
 .dev-portal-link {
-  background-color: theme('colors.primary.200');
+  background-color: rgb(var(--docs-color-primary-200, 0 125 249));
   border-radius: 4px;
   transition-property: all;
   padding: 0.25rem 0.75rem !important;
@@ -108,6 +108,6 @@ html[data-theme='dark'] {
 }
 
 .dev-portal-login {
-  --ifm-navbar-link-hover-color: theme('colors.primary.100');
+  --ifm-navbar-link-hover-color: rgb(var(--docs-color-primary-100, 0 125 249));
   background-color: transparent;
 }

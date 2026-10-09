@@ -1,0 +1,12 @@
+/*
+ * The article copy of the companion video card is hidden by media query rather
+ * than by a JS width check. Both copies are emitted during SSR.
+ 
+ * 997px is the Docusaurus desktop threshold, i.e. the width at or above which
+ * the TOC column exists and hosts the card instead.
+ */
+@media (min-width: 997px) {
+  .hiddenOnDesktop {
+    display: none;
+  }
+}
