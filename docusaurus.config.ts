@@ -113,7 +113,7 @@ const config: Config = {
           breadcrumbs: true,
           versions: {
             current: {
-              label: "12.0.x",
+              label: "12.1.x",
               banner: "none"
             }
           }

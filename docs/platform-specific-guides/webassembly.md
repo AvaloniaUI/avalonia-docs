@@ -1,6 +1,8 @@
 ---
 id: webassembly
 title: WebAssembly
+description: How to run Avalonia in the browser with WebAssembly, including project setup, platform options, and JavaScript interop.
+doc-type: how-to
 ---
 
 Avalonia applications can run in the browser using WebAssembly (WASM). This page explains how to set up a project for browser deployment and how to use JavaScript interop.
@@ -50,6 +52,61 @@ dotnet run
 # Debug at url: http://127.0.0.1:53576/_framework/debug
 # Debug at url: https://127.0.0.1:53577/_framework/debug
 ```
+
+## Configuring browser platform options
+
+`BrowserPlatformOptions` controls how Avalonia renders and behaves in the browser. Apply it by passing to `.StartBrowserAppAsync()` in `Program.cs`, using the `id` of the HTML element where Avalonia renders as the first argument:
+
+```csharp
+internal sealed partial class Program
+{
+    private static Task Main(string[] args) => BuildAvaloniaApp()
+        .StartBrowserAppAsync("out", new BrowserPlatformOptions
+        {
+            RenderingMode = new[]
+            {
+                BrowserRenderingMode.WebGL2,
+                BrowserRenderingMode.Software2D
+            }
+        });
+
+    public static AppBuilder BuildAvaloniaApp()
+        => AppBuilder.Configure<App>();
+}
+```
+
+The following options are available.
+- [Rendering mode](#rendering-mode)
+- [`PreferManagedThreadDispatcher`](#other-options)
+- [`PreferFileDialogPolyfill`](#other-options)
+- [`FrameworkAssetPathResolver`](#other-options)
+- [`AvaloniaServiceWorkerScope`](#other-options)
+
+### Rendering mode
+
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a three-item list of `WebGL2` first, `WebGL1` second, `Software2D` third.
+
+| Mode | Description |
+|---|---|
+| `WebGL2` | GPU rendering through WebGL 2. Default GPU backend. |
+| `WebGL1` | GPU rendering through WebGL 1. |
+| `Software2D` | CPU rendering using the HTML 2D canvas. |
+
+If the list is empty, or none of the listed modes initialize, Avalonia logs an error to the browser console and falls back to `Software2D`.
+
+### Other options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `RenderingMode` | `IReadOnlyList<BrowserRenderingMode>` | `WebGL2`, `WebGL1`, `Software2D` | Ordered list of graphics backends with fallback. [See above.](#rendering-mode) |
+| `PreferManagedThreadDispatcher` | `bool?` | `true` | Creates a controlled dispatcher loop on the web worker thread. Used only when `WasmEnableThreads` is `true`. |
+| `PreferFileDialogPolyfill` | `bool` | `false` | Forces the `native-file-system-adapter` polyfill for file dialogs instead of the browser's native implementation. |
+| `FrameworkAssetPathResolver` | `Func<string, string>?` | `null` | Customizes the paths where Avalonia modules and the service locator are resolved. Default path depends on the backend (browser or Blazor). |
+| `AvaloniaServiceWorkerScope` | `string?` | `null` | Sets the scope for the Avalonia service worker. Defaults to the current domain root. Used only when `RegisterAvaloniaServiceWorker` is enabled. |
+
+:::caution
+`RegisterAvaloniaServiceWorker` registers a service worker that can act as a save file picker fallback on browsers without native support. It is marked unstable—use with caution.
+:::
 
 ## Deployment
 

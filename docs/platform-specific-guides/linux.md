@@ -1,7 +1,7 @@
 ---
 id: linux
 title: Desktop Linux
-description: How Avalonia runs on desktop Linux, including the Wayland backend, WSL 2 setup, and accessibility support with AT-SPI2.
+description: How Avalonia runs on desktop Linux, including X11 platform options, Wayland, WSL 2 setup, and accessibility support with AT-SPI2.
 doc-type: overview
 ---
 
@@ -10,6 +10,84 @@ doc-type: overview
 Avalonia uses the Win32 API on Windows, its own native Objective-C++ backend on macOS, and on Linux it targets X11 by default. Most Linux distributions that support the .NET SDK and have X11, Wayland, or framebuffer capabilities will run Avalonia applications.
 
 On Wayland desktops, Avalonia applications run through the XWayland compatibility layer by default. Starting with Avalonia 12.1.0, you can instead opt into the native [Wayland backend](#wayland).
+
+## Configuring X11 platform options
+
+`X11PlatformOptions` controls how Avalonia renders and integrates with the desktop on Linux. Apply it by passing to `.With()` in the `AppBuilder` in `Program.cs`:
+
+```csharp
+AppBuilder.Configure<App>()
+    .UsePlatformDetect()
+    .With(new X11PlatformOptions
+    {
+        RenderingMode = new[]
+        {
+            X11RenderingMode.Glx,
+            X11RenderingMode.Software
+        },
+        UseDBusMenu = true
+    });
+```
+
+The following options are available.
+
+- [Rendering mode](#rendering-mode)
+- [Rendering options](#rendering-options)
+- [Desktop integration options](#desktop-integration-options)
+- [Input options](#input-options)
+- [Event loop options](#event-loop-options)
+
+### Rendering mode
+
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Glx` first, `Software` second.
+
+| Mode | Description |
+|---|---|
+| `Glx` | GPU rendering through GLX (OpenGL on X11). Default GPU backend. |
+| `Egl` | GPU rendering through native Linux EGL. |
+| `Vulkan` | GPU rendering through Vulkan. |
+| `Software` | CPU rendering into a framebuffer. |
+
+To support the widest range of devices, including remote sessions and virtual machines without GPU acceleration, include `Software` as a fallback. `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+
+### Rendering options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `RenderingMode` | `IReadOnlyList<X11RenderingMode>` | `Glx`, `Software` | Ordered list of graphics backends with fallback. [See above.](#rendering-mode) |
+| `GlProfiles` | `IList<GlVersion>` | OpenGL 4.0, 3.2, 3.0; OpenGL ES 3.2, 3.0, 2.0 | OpenGL and OpenGL ES profiles tried when using `Glx` or `Egl` rendering, in priority order. |
+| `GlxRendererBlacklist` | `IList<string>` | `llvmpipe`, `SVGA3D` | GLX renderers that force a fallback away from `Glx`. By default, Avalonia skips the `llvmpipe` software rasterizer and the `SVGA3D` VMware driver. |
+| `ShouldRenderOnUIThread` | `bool` | `false` | Renders on the UI thread instead of a dedicated render thread. Useful on single-core devices. |
+| `UseRetainedFramebuffer` | `bool?` | `null` | When using software rendering, keeps an offscreen bitmap of the previous frame for each window. Saves a blit at the cost of higher memory use. |
+
+### Desktop integration options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `UseDBusMenu` | `bool` | `true` | Exports the application menu over D-Bus for global menu bars on desktop environments that support them. (e.g., KDE, and XFCE or MATE with the appropriate plugin.) |
+| `UseDBusFilePicker` | `bool` | `true` | Uses the D-Bus portal [file picker](/docs/services/storage/file-picker-options) instead of GTK. |
+| `EnableSessionManagement` | `bool` | `true` | Enables the X Session Management Protocol, letting the application respond to session shutdown requests. Defaults to `false` if `AVALONIA_X11_USE_SESSION_MANAGEMENT` is `0`. |
+| `WmClass` | `string?` | entry assembly name | Sets the X11 `WM_CLASS` window property. Window managers use it to group windows and match the application to its `.desktop` entry and icon. |
+| `OverlayPopups` | `bool` | `false` | Embeds popups inside the window instead of creating separate top-level popup windows. |
+
+### Input options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `EnableIme` | `bool?` | `true` | Enables the input method editor for characters that are not on the keyboard. Set to `null` to enable only for Chinese, Japanese, Vietnamese, and Korean locales. |
+| `EnableMultiTouch` | `bool?` | `true` | Recognizes more than one simultaneous point of contact on a touchpad or touchscreen. |
+| `EnableInputFocusProxy` | `bool` | `false` | Enables the X11 input focus proxy. |
+
+### Event loop options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `UseGLibMainLoop` | `bool` | `false` | Uses a `GMainLoop`-based dispatcher instead of the default epoll-based one. Enable it to use GLib-based libraries on the main thread. |
+| `ExternalGLibMainLoopExceptionLogger` | `Action<Exception>?` | `null` | Callback to inspect managed exceptions raised on a GLib main loop that Avalonia does not control. Relevant only when `UseGLibMainLoop` is `true`. |
+
+:::caution
+`EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia). Both are experimental, and may be changed or removed in a future release. Both may raise compiler diagnostics if used.
+:::
 
 ## Wayland
 

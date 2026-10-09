@@ -1,6 +1,8 @@
 ---
 id: macos
 title: macOS
+description: macOS-specific Avalonia features. Learn about the native backend, app identity, Dock and menu bar integration, native view embedding, and platform options.
+doc-type: overview
 ---
 
 ## How Avalonia runs on macOS
@@ -22,6 +24,71 @@ If your app needs macOS APIs beyond what Avalonia exposes, change your target fr
 ```
 
 This gives you access to the complete set of APIs provided by the .NET macOS workload, but it comes with a constraint: **builds targeting a macOS TFM must be performed on macOS**. You lose the ability to cross-compile from Windows or Linux.
+
+## Configuring macOS platform options
+
+macOS configuration is split across two option classes. Both are applied by passing to `.With()` in the `AppBuilder` in `Program.cs`:
+
+- `AvaloniaNativePlatformOptions` controls the rendering backend and window behavior.
+- `MacOSPlatformOptions` controls how the application integrates with the macOS shell (Dock, menu bar, process identity).
+
+```csharp
+AppBuilder.Configure<App>()
+    .UsePlatformDetect()
+    .With(new AvaloniaNativePlatformOptions
+    {
+        RenderingMode = new[]
+        {
+            AvaloniaNativeRenderingMode.Metal,
+            AvaloniaNativeRenderingMode.OpenGl,
+            AvaloniaNativeRenderingMode.Software
+        }
+    })
+    .With(new MacOSPlatformOptions
+    {
+        ShowInDock = true
+    });
+```
+
+The following options are available.
+- [Rendering mode](#rendering-mode)
+- [Backend options](#backend-options)
+- [Shell integration options](#shell-integration-options)
+
+### Rendering mode
+
+`AvaloniaNativePlatformOptions.RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a three-item list of `Metal` first, `OpenGl` second, `Software` third.
+
+| Mode | Description |
+|---|---|
+| `Metal` | GPU rendering through Apple's Metal API. Default GPU backend. |
+| `OpenGl` | GPU rendering through native OpenGL. |
+| `Software` | CPU rendering into a framebuffer. |
+
+If the list is empty, or none of the listed modes initialize, Avalonia falls back to `Software` rendering. 
+
+### Backend options
+
+`AvaloniaNativePlatformOptions` covers the rendering backend and window-level behavior.
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `RenderingMode` | `IReadOnlyList<AvaloniaNativeRenderingMode>` | `Metal`, `OpenGl`, `Software` | Ordered list of graphics backends with fallback. [See above.](#rendering-mode) |
+| `OverlayPopups` | `bool` | `false` | Embeds popups inside the window instead of creating separate top-level popup windows. |
+| `AppSandboxEnabled` | `bool` | `true` | Wraps storage calls in a secure context. Enables `IStorageItem.SaveBookmarkAsync` and related APIs. App Store distribution requires the sandbox to be enabled. |
+| `AvaloniaNativeLibraryPath` | `string?` | `null` | Path to a custom-built `libAvaloniaNative.dylib`. See [Native code](#native-code) for the build workflow. |
+
+### Shell integration options
+
+`MacOSPlatformOptions` controls how the application integrates with the macOS shell, such as its appearance in the Dock and menu bar.
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `ShowInDock` | `bool` | `true` | Shows the application icon in the Dock while it runs. Set to `false` for background or agent apps. |
+| `DisableDefaultApplicationMenuItems` | `bool` | `false` | Prevents Avalonia from adding default items, such as Quit or Hide, to the [application menu](#application-menu). |
+| `DisableNativeMenus` | `bool` | `false` | Disables the [native macOS menu bar](#native-menu-bar) for the application. |
+| `DisableSetProcessName` | `bool` | `false` | Prevents Avalonia from setting the process name through `NSProcessInfo` at runtime. |
+| `DisableAvaloniaAppDelegate` | `bool` | `false` | Prevents Avalonia from installing its own `AppDelegate`. Useful when [running as a plugin inside an existing macOS application](#embedding-avalonia-in-a-native-macos-app). |
 
 ## Application name and identity
 
