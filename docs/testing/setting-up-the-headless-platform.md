@@ -1,7 +1,7 @@
 ---
 id: setting-up-the-headless-platform
 title: Headless Testing Platform
-description: Run Avalonia without a window for automated testing: simulate input, flush async operations, and capture rendered frames for visual regression.
+description: Run Avalonia without a window for automated testing. Simulate input, flush async operations, and capture rendered frames for visual regression.
 doc-type: how-to
 ---
 

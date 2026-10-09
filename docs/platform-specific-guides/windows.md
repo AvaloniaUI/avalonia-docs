@@ -83,7 +83,7 @@ For more information on how rendering and composition fit together, see [Applica
 | `SystemDpiAware` | Queries DPI once at startup and does not adjust to later changes. |
 | `Unaware` | The application is DPI-unaware. The system bitmap-scales. |
 
-See [High DPI and per-monitor scaling](#high-dpi-and-per-monitor-scaling) for for more information on how scaling affects layout and assets.
+See [High DPI and per-monitor scaling](#high-dpi-and-per-monitor-scaling) for more information on how scaling affects layout and assets.
 
 ### Other options
 

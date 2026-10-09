@@ -9,10 +9,6 @@ doc-type: overview
 
 Avalonia uses the Win32 API on Windows, its own native Objective-C++ backend on macOS, and on Linux it targets X11 directly. Most Linux distributions that support the .NET SDK and have X11 or framebuffer capabilities will run Avalonia applications.
 
-:::note
-Wayland support is coming in Avalonia 12.0.
-:::
-
 ## Configuring X11 platform options
 
 `X11PlatformOptions` controls how Avalonia renders and integrates with the desktop on Linux. Apply it by passing to `.With()` in the `AppBuilder` in `Program.cs`:
@@ -68,7 +64,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 |---|---|---|---|
 | `UseDBusMenu` | `bool` | `true` | Exports the application menu over D-Bus for global menu bars on desktop environments that support them. (e.g., KDE, and XFCE or MATE with the appropriate plugin.) |
 | `UseDBusFilePicker` | `bool` | `true` | Uses the D-Bus portal [file picker](/docs/services/storage/file-picker-options) instead of GTK. |
-| `EnableSessionManagement` | `bool` | `true` | Enables the X Session Management Protocol, letting the application respond to session shutdown requests. Can be disabled by default by setting the `AVALONIA_X11_USE_SESSION_MANAGEMENT` environment variable to `0`. |
+| `EnableSessionManagement` | `bool` | `true` | Enables the X Session Management Protocol, letting the application respond to session shutdown requests. Defaults to `false` if `AVALONIA_X11_USE_SESSION_MANAGEMENT` is `0`. |
 | `WmClass` | `string?` | entry assembly name | Sets the X11 `WM_CLASS` window property. Window managers use it to group windows and match the application to its `.desktop` entry and icon. |
 | `OverlayPopups` | `bool` | `false` | Embeds popups inside the window instead of creating separate top-level popup windows. |
 
@@ -88,7 +84,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 | `ExternalGLibMainLoopExceptionLogger` | `Action<Exception>?` | `null` | Callback to inspect managed exceptions raised on a GLib main loop that Avalonia does not control. Relevant only when `UseGLibMainLoop` is `true`. |
 
 :::caution
-`EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia). Both are experimental, and may be changed or removed in a future release.
+`EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia). Both are experimental, and may be changed or removed in a future release. Both may raise compiler diagnostics if used.
 :::
 
 ## WSL 2 (Windows Subsystem for Linux)

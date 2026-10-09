@@ -1,7 +1,7 @@
 ---
 id: macos
 title: macOS
-description: macOS-specific Avalonia features: the native backend, app identity, Dock and menu bar integration, native view embedding, and platform options.
+description: macOS-specific Avalonia features, Learn about the native backend, app identity, Dock and menu bar integration, native view embedding, and platform options.
 doc-type: overview
 ---
 
