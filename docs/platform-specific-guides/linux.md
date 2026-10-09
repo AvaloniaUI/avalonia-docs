@@ -72,7 +72,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `EnableIme` | `bool?` | `true` | Enables the input method editor to compose characters that are not on the keyboard. Used automatically for Mandarin, Japanese, Vietnamese, and Korean input. |
+| `EnableIme` | `bool?` | `true` | Enables the input method editor for characters that are not on the keyboard. Set to `null` to enable only for Chinese, Japanese, Vietnamese, and Korean locales. |
 | `EnableMultiTouch` | `bool?` | `true` | Recognizes more than one simultaneous point of contact on a touchpad or touchscreen. |
 | `EnableInputFocusProxy` | `bool` | `false` | Enables the X11 input focus proxy. |
 
