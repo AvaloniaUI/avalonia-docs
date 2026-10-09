@@ -87,6 +87,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 
 :::caution
 `EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia). Both are experimental, and may be changed or removed in a future release. Both may raise compiler diagnostics if used.
+:::
 
 ## Wayland
 

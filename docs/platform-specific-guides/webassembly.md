@@ -2,7 +2,7 @@
 id: webassembly
 title: WebAssembly
 description: How to run Avalonia in the browser with WebAssembly, including project setup, platform options, and JavaScript interop.
-doc-type: overview
+doc-type: how-to
 ---
 
 Avalonia applications can run in the browser using WebAssembly (WASM). This page explains how to set up a project for browser deployment and how to use JavaScript interop.

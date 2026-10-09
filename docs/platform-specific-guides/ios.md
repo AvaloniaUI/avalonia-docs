@@ -2,7 +2,7 @@
 id: ios
 title: iOS
 description: How to set up, provision, and configure Avalonia apps for iOS, including rendering options, Mac Catalyst, and deep linking.
-doc-type: overview
+doc-type: how-to
 ---
 
 import IOSOpenXcodeScreenshot from '/img/guides/platform-specific-guides/ios/ios-open-xcode.png';
