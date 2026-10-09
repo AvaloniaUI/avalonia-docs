@@ -98,7 +98,7 @@ protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
 
 | Mode | Description |
 |---|---|
-| `Egl` | GPU rendering through EGL (OpenGL ES). The default GPU backend. |
+| `Egl` | GPU rendering through EGL (OpenGL ES). Default GPU backend. |
 | `Vulkan` | GPU rendering through Vulkan. |
 | `Software` | CPU rendering into a framebuffer. |
 

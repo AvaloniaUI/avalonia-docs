@@ -111,7 +111,7 @@ protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
 
 | Mode | Description |
 |---|---|
-| `Metal` | GPU rendering through Metal. Currently works only on iOS, and is not yet stable. |
+| `Metal` | GPU rendering through Metal. |
 | `OpenGl` | GPU rendering through EAGL on iOS and tvOS. Not supported on Mac Catalyst. |
 
 `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.

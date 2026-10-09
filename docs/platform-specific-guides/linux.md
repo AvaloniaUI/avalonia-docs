@@ -41,34 +41,34 @@ The following options are available.
 
 ### Rendering mode
 
-`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is `Glx`, then `Software`.
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Glx` first, `Software` second.
 
 | Mode | Description |
 |---|---|
-| `Glx` | GPU rendering through GLX (OpenGL on X11). The default GPU backend. |
+| `Glx` | GPU rendering through GLX (OpenGL on X11). Default GPU backend. |
 | `Egl` | GPU rendering through native Linux EGL. |
 | `Vulkan` | GPU rendering through Vulkan. |
 | `Software` | CPU rendering into a framebuffer. |
 
-To support the widest range of devices, including remote sessions and virtual machines without GPU acceleration, include `Software` as a fallback. If none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+To support the widest range of devices, including remote sessions and virtual machines without GPU acceleration, include `Software` as a fallback. `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ### Rendering options
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `RenderingMode` | `IReadOnlyList<X11RenderingMode>` | `Glx`, `Software` | Ordered list of graphics backends with fallback, described above. |
+| `RenderingMode` | `IReadOnlyList<X11RenderingMode>` | `Glx`, `Software` | Ordered list of graphics backends with fallback. [See above.](#rendering-mode) |
 | `GlProfiles` | `IList<GlVersion>` | OpenGL 4.0, 3.2, 3.0; OpenGL ES 3.2, 3.0, 2.0 | OpenGL and OpenGL ES profiles tried when using `Glx` or `Egl` rendering, in priority order. |
-| `GlxRendererBlacklist` | `IList<string>` | `llvmpipe`, `SVGA3D` | GLX renderer names that force a fallback away from `Glx`. The defaults skip the `llvmpipe` software rasterizer and the `SVGA3D` VMware driver. |
+| `GlxRendererBlacklist` | `IList<string>` | `llvmpipe`, `SVGA3D` | GLX renderers that force a fallback away from `Glx`. By default, Avalonia skips the `llvmpipe` software rasterizer and the `SVGA3D` VMware driver. |
 | `ShouldRenderOnUIThread` | `bool` | `false` | Renders on the UI thread instead of a dedicated render thread. Useful on single-core devices. |
-| `UseRetainedFramebuffer` | `bool?` | `null` | When using software rendering, keeps an offscreen bitmap of the previous frame for each window. Saves a blit at the cost of higher memory use with many windows. |
+| `UseRetainedFramebuffer` | `bool?` | `null` | When using software rendering, keeps an offscreen bitmap of the previous frame for each window. Saves a blit at the cost of higher memory use. |
 
 ### Desktop integration options
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `UseDBusMenu` | `bool` | `true` | Exports the application menu over D-Bus for global menu bars on desktop environments that support them, such as KDE, and XFCE or MATE with the appropriate plugin. |
+| `UseDBusMenu` | `bool` | `true` | Exports the application menu over D-Bus for global menu bars on desktop environments that support them. (e.g., KDE, and XFCE or MATE with the appropriate plugin.) |
 | `UseDBusFilePicker` | `bool` | `true` | Uses the D-Bus portal [file picker](/docs/services/storage/file-picker-options) instead of GTK. |
-| `EnableSessionManagement` | `bool` | `true` | Enables the X Session Management Protocol, letting the application respond to session shutdown requests. Set the `AVALONIA_X11_USE_SESSION_MANAGEMENT` environment variable to `0` to disable it by default. |
+| `EnableSessionManagement` | `bool` | `true` | Enables the X Session Management Protocol, letting the application respond to session shutdown requests. Can be disabled by default by setting the `AVALONIA_X11_USE_SESSION_MANAGEMENT` environment variable to `0`. |
 | `WmClass` | `string?` | entry assembly name | Sets the X11 `WM_CLASS` window property. Window managers use it to group windows and match the application to its `.desktop` entry and icon. |
 | `OverlayPopups` | `bool` | `false` | Embeds popups inside the window instead of creating separate top-level popup windows. |
 
@@ -76,7 +76,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `EnableIme` | `bool?` | `true` | Enables the input method editor for composing characters that are not on the keyboard. Used automatically for Mandarin, Japanese, Vietnamese, and Korean input. |
+| `EnableIme` | `bool?` | `true` | Enables the input method editor to compose characters that are not on the keyboard. Used automatically for Mandarin, Japanese, Vietnamese, and Korean input. |
 | `EnableMultiTouch` | `bool?` | `true` | Recognizes more than one simultaneous point of contact on a touchpad or touchscreen. |
 | `EnableInputFocusProxy` | `bool` | `false` | Enables the X11 input focus proxy. |
 
@@ -88,7 +88,7 @@ To support the widest range of devices, including remote sessions and virtual ma
 | `ExternalGLibMainLoopExceptionLogger` | `Action<Exception>?` | `null` | Callback to inspect managed exceptions raised on a GLib main loop that Avalonia does not control. Relevant only when `UseGLibMainLoop` is `true`. |
 
 :::caution
-`EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia rather than the window manager). Both are experimental, used mainly for testing, and may change or be removed in a future release.
+`EnableDrawnDecorations` and `ForceDrawnDecorations` enable client-side window decorations (titlebar, borders, and resize grips drawn by Avalonia). Both are experimental, and may be changed or removed in a future release.
 :::
 
 ## WSL 2 (Windows Subsystem for Linux)

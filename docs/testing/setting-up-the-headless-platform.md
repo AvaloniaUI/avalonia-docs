@@ -199,7 +199,7 @@ public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<TestApplicat
 
 ### Headless platform options
 
-`AvaloniaHeadlessPlatformOptions` is passed to `.UseHeadless()` and has two properties:
+`AvaloniaHeadlessPlatformOptions` is passed to `.UseHeadless()`. It has two properties:
 
 | Option | Type | Default | Description |
 |---|---|---|---|

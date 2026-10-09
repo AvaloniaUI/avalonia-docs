@@ -15,7 +15,7 @@ Because there is no dependency on a Windows-specific .NET workload, you can cros
 
 ## Configuring Win32 platform options
 
-`Win32PlatformOptions` controls how Avalonia renders, composites, and scales on Windows. Pass an instance to `.With()` when you build the application in `Program.cs`:
+`Win32PlatformOptions` controls how Avalonia renders, composites, and scales on Windows. Apply it by passing to `.With()` in the `AppBuilder` in `Program.cs`:
 
 ```csharp
 AppBuilder.Configure<App>()
@@ -36,37 +36,42 @@ AppBuilder.Configure<App>()
     });
 ```
 
-Every option has a default, so set only the ones you need to change.
+The following options are available.
+
+- [Rendering mode](#rendering-mode)
+- [Composition mode](#composition-mode)
+- [DPI awareness](#dpi-awareness)
+- [Other options](#other-options)
 
 ### Rendering mode
 
-`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is `AngleEgl`, then `Software`.
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `AngleEgl` first, `Software` second.
 
 | Mode | Description |
 |---|---|
-| `AngleEgl` | GPU rendering through ANGLE EGL. The default GPU backend. |
+| `AngleEgl` | GPU rendering through ANGLE EGL. Default GPU backend. |
 | `Wgl` | GPU rendering through native Windows OpenGL. |
 | `Vulkan` | GPU rendering through native Windows Vulkan. |
 | `Software` | CPU rendering into a framebuffer. |
 
-ANGLE (Almost Native Graphics Layer Engine) translates the OpenGL ES calls that Skia produces into Direct3D 11 on Windows. This is why `AngleEgl` is the default GPU backend, and why it is the mode the `WinUIComposition` and `DirectComposition` modes below depend on.
+ANGLE (Almost Native Graphics Layer Engine) translates the OpenGL ES calls that Skia produces into Direct3D 11 on Windows. This is why `AngleEgl` is the default GPU backend, and why it is the mode that [`WinUIComposition` and `DirectComposition`](#composition-mode) depend on.
 
-To support the widest range of devices, including remote desktop sessions and virtual machines without a GPU, include `Software` as a fallback. If none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+To support the widest range of devices, including remote desktop sessions and virtual machines without a GPU, include `Software` as a fallback. `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ### Composition mode
 
-`CompositionMode` is an ordered list of window composition backends, tried in priority order like `RenderingMode`. The default is `WinUIComposition`, `DirectComposition`, then `RedirectionSurface`.
+`CompositionMode` is an ordered list of window composition backends, tried in priority order like [`RenderingMode`](#rendering-mode). The default is a three-item list of `WinUIComposition` first, `DirectComposition` second, `RedirectionSurface` third.
 
-| Mode | Requirements and behavior |
-|---|---|
-| `WinUIComposition` | Windows 10 build 17134 and above. Supports acrylic effects and high refresh rate rendering. Requires `RenderingMode` to include `AngleEgl`. |
-| `DirectComposition` | Windows 8 and above. Requires `RenderingMode` to include `AngleEgl`. |
-| `LowLatencyDxgiSwapChain` | Feature Level 11_3, Windows 8.1 and above. Renders through a low-latency DXGI swap chain for reduced input latency, without the transparency and blur of `WinUIComposition`. Requires `RenderingMode` to include `AngleEgl`. |
-| `RedirectionSurface` | Compatibility fallback for older systems. Some Avalonia features may not work. |
+| Mode | Requirements | Behavior |
+|---|---|---|
+| `WinUIComposition` | Windows 10 build 17134 and above. [`RenderingMode`](#rendering-mode) must include `AngleEgl`. | Supports acrylic effects and high refresh rate rendering. |
+| `DirectComposition` | Windows 8 and above. [`RenderingMode`](#rendering-mode) must include `AngleEgl`. | |
+| `LowLatencyDxgiSwapChain` | Feature Level 11_3, Windows 8.1 and above. [`RenderingMode`](#rendering-mode) must include `AngleEgl`. | Renders through a low-latency DXGI swap chain for reduced input latency, without the transparency and blur of `WinUIComposition`. |
+| `RedirectionSurface` | | Compatibility fallback for older systems. Some Avalonia features may not work. |
 
-Include `RedirectionSurface` as a fallback to support the widest range of devices. If none of the listed modes apply, Avalonia throws an `InvalidOperationException`.
+To support the widest range of devices, include `RedirectionSurface` as a fallback. If none of the listed modes apply, Avalonia throws an `InvalidOperationException`.
 
-For how rendering and composition fit together, see [Application Architecture](/docs/fundamentals/architecture#the-rendering-pipeline).
+For more information on how rendering and composition fit together, see [Application architecture](/docs/fundamentals/architecture#the-rendering-pipeline).
 
 ### DPI awareness
 
@@ -76,9 +81,9 @@ For how rendering and composition fit together, see [Application Architecture](/
 |---|---|
 | `PerMonitorDpiAware` | Adjusts the scale factor whenever DPI changes, such as when a window moves between monitors. |
 | `SystemDpiAware` | Queries DPI once at startup and does not adjust to later changes. |
-| `Unaware` | The application is DPI unaware, and the system bitmap-scales it. |
+| `Unaware` | The application is DPI-unaware. The system bitmap-scales. |
 
-See [High DPI and per-monitor scaling](#high-dpi-and-per-monitor-scaling) for how scaling affects layout and assets.
+See [High DPI and per-monitor scaling](#high-dpi-and-per-monitor-scaling) for for more information on how scaling affects layout and assets.
 
 ### Other options
 

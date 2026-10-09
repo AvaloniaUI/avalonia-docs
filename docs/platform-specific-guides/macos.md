@@ -27,10 +27,10 @@ This gives you access to the complete set of APIs provided by the .NET macOS wor
 
 ## Configuring macOS platform options
 
-macOS configuration is split across two option classes, both passed to `.With()` when you build the application in `Program.cs`:
+macOS configuration is split across two option classes. Both are applied by passing to `.With()` in the `AppBuilder` in `Program.cs`:
 
 - `AvaloniaNativePlatformOptions` controls the rendering backend and window behavior.
-- `MacOSPlatformOptions` controls how the application integrates with the macOS shell (Dock, menu bar, and process identity).
+- `MacOSPlatformOptions` controls how the application integrates with the macOS shell (Dock, menu bar, process identity).
 
 ```csharp
 AppBuilder.Configure<App>()
@@ -40,6 +40,7 @@ AppBuilder.Configure<App>()
         RenderingMode = new[]
         {
             AvaloniaNativeRenderingMode.Metal,
+            AvaloniaNativeRenderingMode.OpenGl,
             AvaloniaNativeRenderingMode.Software
         }
     })
@@ -49,19 +50,22 @@ AppBuilder.Configure<App>()
     });
 ```
 
-Every option has a default, so set only the ones you need to change.
+The following options are available.
+- [Rendering mode](#rendering-mode)
+- [Backend options](#backend-options)
+- [Shell integration options](#shell-integration-options)
 
 ### Rendering mode
 
-`AvaloniaNativePlatformOptions.RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is `Metal`, then `OpenGl`, then `Software`.
+`AvaloniaNativePlatformOptions.RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a three-item list of `Metal` first, `OpenGl` second, `Software` third.
 
 | Mode | Description |
 |---|---|
-| `Metal` | GPU rendering through Apple's Metal API. The default GPU backend. |
+| `Metal` | GPU rendering through Apple's Metal API. Default GPU backend. |
 | `OpenGl` | GPU rendering through native OpenGL. |
 | `Software` | CPU rendering into a framebuffer. |
 
-To support the widest range of devices, include `Software` as a fallback. If none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+To support the widest range of devices, include `Software` as a fallback. `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
 
 ### Backend options
 
@@ -69,19 +73,19 @@ To support the widest range of devices, include `Software` as a fallback. If non
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `RenderingMode` | `IReadOnlyList<AvaloniaNativeRenderingMode>` | `Metal`, `OpenGl`, `Software` | Ordered list of graphics backends with fallback, described above. |
+| `RenderingMode` | `IReadOnlyList<AvaloniaNativeRenderingMode>` | `Metal`, `OpenGl`, `Software` | Ordered list of graphics backends with fallback. [See above.](#rendering-mode) |
 | `OverlayPopups` | `bool` | `false` | Embeds popups inside the window instead of creating separate top-level popup windows. |
-| `AppSandboxEnabled` | `bool` | `true` | Wraps storage calls in a secure context and enables `IStorageItem.SaveBookmarkAsync` and related APIs. App Store distribution requires the sandbox to be enabled. |
+| `AppSandboxEnabled` | `bool` | `true` | Wraps storage calls in a secure context. Enables `IStorageItem.SaveBookmarkAsync` and related APIs. App Store distribution requires the sandbox to be enabled. |
 | `AvaloniaNativeLibraryPath` | `string?` | `null` | Path to a custom-built `libAvaloniaNative.dylib`. See [Native code](#native-code) for the build workflow. |
 
 ### Shell integration options
 
-`MacOSPlatformOptions` controls how the application appears in the macOS Dock and menu bar.
+`MacOSPlatformOptions` controls how the application integrates with the macOS shell, such as its appearance in the Dock and menu bar.
 
 | Option | Type | Default | Description |
 |---|---|---|---|
 | `ShowInDock` | `bool` | `true` | Shows the application icon in the Dock while it runs. Set to `false` for background or agent apps. |
-| `DisableDefaultApplicationMenuItems` | `bool` | `false` | Prevents Avalonia from adding default items such as Quit and Hide to the [application menu](#application-menu). |
+| `DisableDefaultApplicationMenuItems` | `bool` | `false` | Prevents Avalonia from adding default items, such as Quit or Hide, to the [application menu](#application-menu). |
 | `DisableNativeMenus` | `bool` | `false` | Disables the [native macOS menu bar](#native-menu-bar) for the application. |
 | `DisableSetProcessName` | `bool` | `false` | Prevents Avalonia from setting the process name through `NSProcessInfo` at runtime. |
 | `DisableAvaloniaAppDelegate` | `bool` | `false` | Prevents Avalonia from installing its own `AppDelegate`. Useful when [running as a plugin inside an existing macOS application](#embedding-avalonia-in-a-native-macos-app). |
