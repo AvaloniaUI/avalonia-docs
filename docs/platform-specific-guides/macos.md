@@ -65,7 +65,7 @@ The following options are available.
 | `OpenGl` | GPU rendering through native OpenGL. |
 | `Software` | CPU rendering into a framebuffer. |
 
-To support the widest range of devices, include `Software` as a fallback. `RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+If the list is empty, or none of the listed modes initialize, Avalonia falls back to `Software` rendering. 
 
 ### Backend options
 

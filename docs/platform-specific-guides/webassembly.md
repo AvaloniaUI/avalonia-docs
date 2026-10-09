@@ -92,7 +92,7 @@ The following options are available.
 | `WebGL1` | GPU rendering through WebGL 1. |
 | `Software2D` | CPU rendering using the HTML 2D canvas. |
 
-`RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+If the list is empty, or none of the listed modes initialize, Avalonia logs an error to the browser console and falls back to `Software2D`.
 
 ### Other options
 
