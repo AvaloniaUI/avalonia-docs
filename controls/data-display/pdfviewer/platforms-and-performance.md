@@ -99,11 +99,11 @@ AppBuilder.Configure<App>()
 
 Anything a user needs to act on is also surfaced on the bindable `ErrorMessage` property.
 
-Annotation failures are surfaced through the `AnnotationError` event instead. See [Errors](annotations.md#errors).
+Annotation failures are surfaced through the `AnnotationError` event instead. See [Errors](/controls/data-display/pdfviewer/annotations#errors).
 
 ## Known limitations
 
-- Page content is not exposed to assistive technology as text. See [Accessibility](theming-and-localization.md#accessibility).
+- Page content is not exposed to assistive technology as text. See [Accessibility](/controls/data-display/pdfviewer/theming-and-localization#accessibility).
 - Print and share are not built-in on Linux or in the browser.
 - Form filling and built-in file dialogs are not available in the browser.
 - Text selection cannot span pages.

@@ -48,7 +48,7 @@ Annotations created in other applications, such as Acrobat or Preview, can be ed
 
 Each tool has its own visibility property, allowing you to decide exactly which tools the toolbar offers.
 
-Hiding a tool does not prevent it being accessible via commands. If you need to completely disable editing, use `IsReadOnly` or `AllowAnnotationEditing`. (See [Document permissions](loading-and-saving.md#document-permissions).)
+Hiding a tool does not prevent it being accessible via commands. If you need to completely disable editing, use `IsReadOnly` or `AllowAnnotationEditing`. (See [Document permissions](/controls/data-display/pdfviewer/loading-and-saving#document-permissions).)
 
 | Property | Tool |
 |---|---|
@@ -207,6 +207,6 @@ Editing an annotation created by another application rebuilds its appearance. If
 
 ## See also
 
-- [PdfViewer control](index.md)
-- [Loading and saving](loading-and-saving.md)
-- [Navigation, zoom and search](navigation-and-search.md)
+- [PdfViewer control](/controls/data-display/pdfviewer/)
+- [Loading and saving](/controls/data-display/pdfviewer/loading-and-saving)
+- [Navigation, zoom and search](/controls/data-display/pdfviewer/navigation-and-search)
