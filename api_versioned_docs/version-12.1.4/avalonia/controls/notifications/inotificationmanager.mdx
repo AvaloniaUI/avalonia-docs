@@ -1,0 +1,117 @@
+---
+title: 'INotificationManager'
+hide_title: true
+slug: '/avalonia/controls/notifications/inotificationmanager'
+uid: 'Avalonia.Controls.Notifications.INotificationManager'
+commentId: 'T:Avalonia.Controls.Notifications.INotificationManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Notifications'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">INotificationManager Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Notifications</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a notification manager that can be used to show notifications in a window or using
+the host operating system.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface INotificationManager
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Close](#uid-5532671cd3) | Closes a notification. |
+| [CloseAll](#uid-d0758eac00) | Closes all notifications. |
+| [Show](#uid-8f7b494e62) | Show a notification. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5532671cd3"></span>
+
+### Close Method
+
+Closes a notification.
+
+```csharp
+public void Close(Avalonia.Controls.Notifications.INotification notification)
+```
+
+#### Parameters
+
+`notification` [Avalonia.Controls.Notifications.INotification](xref:Avalonia.Controls.Notifications.INotification)
+
+The notification to be closed.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0758eac00"></span>
+
+### CloseAll Method
+
+Closes all notifications.
+
+```csharp
+public void CloseAll()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f7b494e62"></span>
+
+### Show Method
+
+Show a notification.
+
+```csharp
+public void Show(Avalonia.Controls.Notifications.INotification notification)
+```
+
+#### Parameters
+
+`notification` [Avalonia.Controls.Notifications.INotification](xref:Avalonia.Controls.Notifications.INotification)
+
+The notification to be displayed.
+
+
+</section>
+
+</ApiRefPage>
+

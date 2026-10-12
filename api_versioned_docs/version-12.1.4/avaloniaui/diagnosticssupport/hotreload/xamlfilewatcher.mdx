@@ -1,0 +1,156 @@
+---
+title: 'XamlFileWatcher'
+hide_title: true
+slug: '/avaloniaui/diagnosticssupport/hotreload/xamlfilewatcher'
+uid: 'AvaloniaUI.DiagnosticsSupport.HotReload.XamlFileWatcher'
+commentId: 'T:AvaloniaUI.DiagnosticsSupport.HotReload.XamlFileWatcher'
+docset: 'avalonia-docs'
+packageId: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+assembly: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">XamlFileWatcher Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">AvaloniaUI.DiagnosticsSupport.HotReload</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>AvaloniaUI.DiagnosticsSupport.HotReload</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>AvaloniaUI.DiagnosticsSupport.HotReload</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class XamlFileWatcher
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> XamlFileWatcher
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [XamlFileWatcher](#uid-4e1b0bdce1) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4e1b0bdce1"></span>
+
+### XamlFileWatcher Constructor
+
+```csharp
+public XamlFileWatcher(string projectDirectory, Action<string> onFileChanged)
+```
+
+#### Parameters
+
+`projectDirectory` string
+
+
+`onFileChanged` Action&lt;string&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-59338f2356) | No summary available. |
+| [Start](#uid-a245cfed18) | No summary available. |
+| [Stop](#uid-fc0b774862) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-59338f2356"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a245cfed18"></span>
+
+### Start Method
+
+```csharp
+public void Start()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc0b774862"></span>
+
+### Stop Method
+
+```csharp
+public void Stop()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DebounceInterval](#uid-b9f34e1a26) | No summary available. |
+| [IsWatching](#uid-7479452e13) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9f34e1a26"></span>
+
+### DebounceInterval Property
+
+```csharp
+public TimeSpan DebounceInterval { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7479452e13"></span>
+
+### IsWatching Property
+
+```csharp
+public bool IsWatching { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

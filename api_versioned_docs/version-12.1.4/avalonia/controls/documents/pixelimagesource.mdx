@@ -1,0 +1,193 @@
+---
+title: 'PixelImageSource'
+hide_title: true
+slug: '/avalonia/controls/documents/pixelimagesource'
+uid: 'Avalonia.Controls.Documents.PixelImageSource'
+commentId: 'T:Avalonia.Controls.Documents.PixelImageSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PixelImageSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) backed only by decoded pixels (a
+[Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)), with no encoded payload — for images created from raw
+pixels in code (e.g. a `WriteableBitmap`). Capture carries the pixel buffer
+into the snapshot, and serializers re-encode it to a supported format. Renders by
+building a bitmap from the pixels, which this source owns and disposes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PixelImageSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="richimagesource">RichImageSource</a> <span className="apiref-page__relation-separator">-&gt;</span> PixelImageSource
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PixelImageSource](#uid-47a603282d) | Initializes a new [Avalonia.Controls.Documents.PixelImageSource](xref:Avalonia.Controls.Documents.PixelImageSource) from a pixel buffer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47a603282d"></span>
+
+### PixelImageSource Constructor
+
+Initializes a new [Avalonia.Controls.Documents.PixelImageSource](xref:Avalonia.Controls.Documents.PixelImageSource) from a pixel buffer.
+
+```csharp
+public PixelImageSource(Avalonia.Controls.Documents.Imaging.PixelHolder pixels)
+```
+
+#### Parameters
+
+`pixels` [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)
+
+The decoded pixels. Owned for rendering, carried into snapshots for serialization.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-8bf95cd2c4) | Releases the cached render bitmap. |
+| [ResolveAsync](#uid-fc549bc3d6) | Resolves the decoded image. Embedded sources complete synchronously; deferred sources fetch/decode in the background. Returns when the image cannot be produced. Callers must not dispose the returned image — its lifetime is owned by the source (or its loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable). |
+| [TryGetIntrinsicPixelSize](#uid-e319b15f47) | No summary available. |
+| [TryGetPixels](#uid-b6664cf481) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bf95cd2c4"></span>
+
+### Dispose Method
+
+Releases the cached render bitmap.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc549bc3d6"></span>
+
+### ResolveAsync Method
+
+Resolves the decoded image. Embedded sources complete synchronously;
+deferred sources fetch/decode in the background. Returns
+when the image cannot be produced. Callers must not
+dispose the returned image — its lifetime is owned by the source (or its
+loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.IImage> ResolveAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.IImage](xref:Avalonia.Media.IImage)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e319b15f47"></span>
+
+### TryGetIntrinsicPixelSize Method
+
+```csharp
+public bool TryGetIntrinsicPixelSize(int& width, int& height)
+```
+
+#### Parameters
+
+`width` int&amp;
+
+
+`height` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b6664cf481"></span>
+
+### TryGetPixels Method
+
+```csharp
+public bool TryGetPixels(Avalonia.Controls.Documents.Imaging.PixelHolder& pixels)
+```
+
+#### Parameters
+
+`pixels` [Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EncodedBytes](richimagesource.mdx#uid-8ee090e2e9) | The encoded image bytes when the payload is embedded in the document, or an empty buffer for reference (URI) sources. Serializers that embed pixel data read this. Inherited from [RichImageSource](richimagesource.mdx). |
+| [MimeType](richimagesource.mdx#uid-1066542416) | The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known. Inherited from [RichImageSource](richimagesource.mdx). |
+| [SourceUri](richimagesource.mdx#uid-be73e8d59d) | The reference URI for a deferred/linked source (e.g. an image URL), or for an embedded source. Inherited from [RichImageSource](richimagesource.mdx). |
+
+</ApiRefPage>
+

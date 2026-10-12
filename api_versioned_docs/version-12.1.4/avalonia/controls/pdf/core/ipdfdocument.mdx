@@ -1,0 +1,237 @@
+---
+title: 'IPdfDocument'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfdocument'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfDocument'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfDocument'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfDocument Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a loaded PDF document.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfDocument
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetOutline](#uid-d4199f4fa4) | Gets the document outline (bookmarks). |
+| [GetPage](#uid-63a4f83213) | Gets a page by index (0-based). |
+| [GetPageSize](#uid-a90d4af392) | Gets page dimensions without loading the full page. |
+| [GetUserBookmarks](#uid-0582dbd8eb) | Reads user-created bookmarks (saved page positions) from the document's XMP metadata. These are the Preview-style bookmarks stored under the `apple-preview` namespace, distinct from the author outline returned by [Avalonia.Controls.Pdf.Core.IPdfDocument.GetOutline](xref:Avalonia.Controls.Pdf.Core.IPdfDocument.GetOutline). Returns an empty list when the document has none. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4199f4fa4"></span>
+
+### GetOutline Method
+
+Gets the document outline (bookmarks).
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfBookmark> GetOutline()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Pdf.Core.PdfBookmark](xref:Avalonia.Controls.Pdf.Core.PdfBookmark)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63a4f83213"></span>
+
+### GetPage Method
+
+Gets a page by index (0-based).
+
+```csharp
+public Avalonia.Controls.Pdf.Core.IPdfPage GetPage(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+#### Returns
+
+[Avalonia.Controls.Pdf.Core.IPdfPage](xref:Avalonia.Controls.Pdf.Core.IPdfPage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a90d4af392"></span>
+
+### GetPageSize Method
+
+Gets page dimensions without loading the full page.
+
+```csharp
+public ValueTuple<double, double> GetPageSize(int index)
+```
+
+#### Parameters
+
+`index` int
+
+
+#### Returns
+
+ValueTuple&lt;double, double&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0582dbd8eb"></span>
+
+### GetUserBookmarks Method
+
+Reads user-created bookmarks (saved page positions) from the document's XMP metadata.
+These are the Preview-style bookmarks stored under the `apple-preview` namespace,
+distinct from the author outline returned by [Avalonia.Controls.Pdf.Core.IPdfDocument.GetOutline](xref:Avalonia.Controls.Pdf.Core.IPdfDocument.GetOutline). Returns an empty
+list when the document has none.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfUserBookmark> GetUserBookmarks()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Pdf.Core.PdfUserBookmark](xref:Avalonia.Controls.Pdf.Core.PdfUserBookmark)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsPasswordProtected](#uid-9b11f995a1) | Gets whether the document is password-protected. |
+| [Metadata](#uid-eb0e50fde1) | Gets document metadata. |
+| [PageCount](#uid-4411aba12c) | Gets the total number of pages. |
+| [Permissions](#uid-6f34e1b9d8) | Gets the raw PDF permission bits (as returned by the PDF security handler). `0xFFFFFFFF` means no restrictions. |
+| [Version](#uid-9796e13f72) | Gets the PDF version (e.g., "1.7" for PDF 1.7). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b11f995a1"></span>
+
+### IsPasswordProtected Property
+
+Gets whether the document is password-protected.
+
+```csharp
+public bool IsPasswordProtected { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb0e50fde1"></span>
+
+### Metadata Property
+
+Gets document metadata.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfMetadata Metadata { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4411aba12c"></span>
+
+### PageCount Property
+
+Gets the total number of pages.
+
+```csharp
+public int PageCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f34e1b9d8"></span>
+
+### Permissions Property
+
+Gets the raw PDF permission bits (as returned by the PDF security handler).
+`0xFFFFFFFF` means no restrictions.
+
+```csharp
+public uint Permissions { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9796e13f72"></span>
+
+### Version Property
+
+Gets the PDF version (e.g., "1.7" for PDF 1.7).
+
+```csharp
+public string Version { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

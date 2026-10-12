@@ -418,6 +418,7 @@ public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
 | --- | --- |
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
 | [AdapterInfo](#uid-27a05e400f) | No summary available. |
+| [AdapterPreference](#uid-ce0f44548b) | No summary available. |
 | [Background](#uid-da42293a8a) | No summary available. |
 | [Bounds](../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../visual.mdx). |
 | [CacheMode](../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../visual.mdx). |
@@ -490,6 +491,18 @@ public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
 
 ```csharp
 public Avalonia.Platform.WebViewAdapterInfo AdapterInfo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce0f44548b"></span>
+
+### AdapterPreference Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.WebViewAdapterType> AdapterPreference { get; set; }
 ```
 
 </section>

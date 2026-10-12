@@ -1,0 +1,131 @@
+---
+title: 'SubscriptAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/subscriptaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.SubscriptAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.SubscriptAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SubscriptAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action that toggles subscript formatting on the current selection.
+Sets [Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty](xref:Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty) to
+[Avalonia.Media.BaselineAlignment.Subscript](xref:Avalonia.Media.BaselineAlignment.Subscript); font size scaling is applied at render time.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class SubscriptAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> FormattingToggleAction&lt;BaselineAlignment&gt; <span className="apiref-page__relation-separator">-&gt;</span> SubscriptAction
+</div>
+</div>
+
+## Remarks
+
+Superscript and subscript are mutually exclusive: both toggle the single
+[Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty](xref:Avalonia.Controls.Documents.RichInline.BaselineAlignmentProperty), so enabling one replaces
+the other automatically (there is only one model/springload key). All toggle,
+springload, and toolbar-state behaviour — including lighting up at a collapsed
+caret parked inside an existing subscript span — is inherited from
+[Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction&lt;T&gt;](xref:Avalonia.Controls.Documents.Primitives.Actions.FormattingToggleAction%601), the same path as Bold/Italic/Underline.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SubscriptAction](#uid-6e55750105) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e55750105"></span>
+
+### SubscriptAction Constructor
+
+```csharp
+public SubscriptAction()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-665a41d77e) | No summary available. |
+| [Gesture](#uid-86fb9cbb1f) | No summary available. |
+| [Id](#uid-3753eba915) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-665a41d77e"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86fb9cbb1f"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3753eba915"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

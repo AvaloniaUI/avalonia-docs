@@ -104,7 +104,7 @@ The platform-specific implementation.
 | [Dispose](#uid-944781a4ee) | Finishes the drawing session. |
 | [EndFigure](#uid-f3cfbc992f) | Ends the figure started by [Avalonia.Platform.IGeometryContext.BeginFigure(Avalonia.Point,bool)](xref:Avalonia.Platform.IGeometryContext.BeginFigure%28Avalonia.Point%2CSystem.Boolean%29). |
 | [LineTo](#uid-10f817d4ee) | Draws a line to the specified point. |
-| [PreciseArcTo](#uid-06926b62a0) | Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves Significantly more precise when drawing elliptic arcs with extreme width:height ratios. |
+| [PreciseArcTo](#uid-06926b62a0) | Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves. This is significantly more precise when drawing elliptic arcs with extreme width:height ratios. |
 | [QuadraticBezierTo](#uid-d6614fafeb) | Draws a quadratic Bezier curve to the specified point. |
 | [SetFillRule](#uid-57a8199e4d) | Sets path's winding rule (default is EvenOdd). You should call this method before any calls to BeginFigure. If you wonder why, ask Direct2D guys about their design decisions. |
 
@@ -285,8 +285,8 @@ Whether the segment is stroked.
 
 ### PreciseArcTo Method
 
-Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves
-Significantly more precise when drawing elliptic arcs with extreme width:height ratios.
+Draws an arc to the specified point using polylines, quadratic or cubic Bezier curves.
+This is significantly more precise when drawing elliptic arcs with extreme width:height ratios.
 
 ```csharp
 public void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, double rotationAngle, bool isLargeArc, Avalonia.Media.SweepDirection sweepDirection)
@@ -296,27 +296,17 @@ public void PreciseArcTo(Avalonia.Point point, Avalonia.Size size, double rotati
 
 `point` [Avalonia.Point](xref:Avalonia.Point)
 
-The destination point.
-
 
 `size` [Avalonia.Size](xref:Avalonia.Size)
-
-The radii of an oval whose perimeter is used to draw the angle.
 
 
 `rotationAngle` double
 
-The rotation angle (in radians) of the oval that specifies the curve.
-
 
 `isLargeArc` bool
 
-true to draw the arc greater than 180 degrees; otherwise, false.
-
 
 `sweepDirection` [Avalonia.Media.SweepDirection](xref:Avalonia.Media.SweepDirection)
-
-A value that indicates whether the arc is drawn in the Clockwise or Counterclockwise direction.
 
 
 </section>

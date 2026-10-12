@@ -1,0 +1,185 @@
+---
+title: 'ClipboardFormats'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/clipboardformats'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.ClipboardFormats'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.ClipboardFormats'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClipboardFormats Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Per-OS clipboard [Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat) mapping used by
+[Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations](xref:Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations) to publish and probe rich document
+formats next to [Avalonia.Input.DataFormat.Text](xref:Avalonia.Input.DataFormat.Text).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClipboardFormats
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClipboardFormats
+</div>
+</div>
+
+## Remarks
+
+Format objects are cached as static singletons so that copy / paste hot
+paths do not allocate new [Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601) instances per call.
+
+Only the canonical platform identifier is published on copy. On paste,
+alternative aliases are also probed where applicable (Linux ships both
+`text/rtf` and `application/rtf`; macOS Word may use
+`com.microsoft.rtf-compatible`).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryGetClipboardFormat](#uid-a62b544115) | Returns the rich [Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601) matching the supplied [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.FormatName](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.FormatName), or when the format is unknown to the clipboard layer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a62b544115"></span>
+
+### TryGetClipboardFormat Method
+
+Returns the rich [Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601) matching the supplied
+[Avalonia.Controls.Documents.Serialization.IDocumentSerializer.FormatName](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.FormatName), or
+when the format is unknown to the clipboard layer.
+
+```csharp
+public Avalonia.Input.DataFormat<byte[]> TryGetClipboardFormat(string formatName)
+```
+
+#### Parameters
+
+`formatName` string
+
+Serializer format name (case-insensitive).
+
+
+#### Returns
+
+[Avalonia.Input.DataFormat](xref:Avalonia.Input.DataFormat)&lt;byte[]&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [InProcessSnapshot](#uid-cfd34424dd) | In-process-only format carrying a live [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) reference. Created via [Avalonia.Input.DataFormat.CreateInProcessFormat&lt;T&gt;(string)](xref:Avalonia.Input.DataFormat.CreateInProcessFormat%60%601%28System.String%29) so the value never crosses the platform clipboard boundary — every clipboard backend (Windows, X11, macOS, iOS, Browser) skips [Avalonia.Input.DataFormatKind.InProcess](xref:Avalonia.Input.DataFormatKind.InProcess) entries when serializing to the OS clipboard. Consumed via [Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync), which returns the exact same [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) instance the producer published on the same process. |
+| [Rtf](#uid-03fb021f5d) | Primary platform RTF format for the current OS: |
+| [RtfAliases](#uid-42ecb03ef4) | Optional fallback identifiers to probe on paste. Empty when the primary format is the only known identifier on the current OS. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfd34424dd"></span>
+
+### InProcessSnapshot Property
+
+In-process-only format carrying a live [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+reference. Created via [Avalonia.Input.DataFormat.CreateInProcessFormat&lt;T&gt;(string)](xref:Avalonia.Input.DataFormat.CreateInProcessFormat%60%601%28System.String%29)
+so the value never crosses the platform clipboard boundary — every
+clipboard backend (Windows, X11, macOS, iOS, Browser) skips
+[Avalonia.Input.DataFormatKind.InProcess](xref:Avalonia.Input.DataFormatKind.InProcess) entries when serializing to the
+OS clipboard. Consumed via
+[Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync](xref:Avalonia.Input.Platform.IClipboard.TryGetInProcessDataAsync),
+which returns the exact same [Avalonia.Input.IAsyncDataTransfer](xref:Avalonia.Input.IAsyncDataTransfer) instance
+the producer published on the same process.
+
+```csharp
+public Avalonia.Input.DataFormat<Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot> InProcessSnapshot { get; set; }
+```
+
+#### Remarks
+
+Used by [Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations](xref:Avalonia.Controls.Documents.Primitives.Components.ClipboardOperations) to ship the document snapshot
+reference alongside RTF + plain text, providing a 100%-fidelity
+fast path for same-process copy/paste that bypasses serialization
+entirely. RTF/text remain on the clipboard as fallbacks for the
+cross-process and cross-app cases.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03fb021f5d"></span>
+
+### Rtf Property
+
+Primary platform RTF format for the current OS:
+
+- Windows: `Rich Text Format` (CF_RTF registered name)
+- macOS: `public.rtf` (UTI)
+- Linux: `text/rtf` (MIME)
+
+```csharp
+public Avalonia.Input.DataFormat<byte[]> Rtf { get; set; }
+```
+
+#### Remarks
+
+Published as a [Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601) of [byte](xref:System.Byte) array,
+not [string](xref:System.String). The Win32 clipboard backend writes
+[Avalonia.Input.DataFormat&lt;T&gt;](xref:Avalonia.Input.DataFormat%601) string payloads as UTF-16 wide chars,
+which Word and other RTF consumers cannot parse — they expect raw
+7-bit ASCII bytes starting with `{\rtf1`. RTF is by spec ASCII
+(non-ASCII characters use `\u` / `\'hh` escapes), so UTF-8
+bytes are interchangeable with ASCII bytes here.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42ecb03ef4"></span>
+
+### RtfAliases Property
+
+Optional fallback identifiers to probe on paste. Empty when the
+primary format is the only known identifier on the current OS.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Input.DataFormat<byte[]>> RtfAliases { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

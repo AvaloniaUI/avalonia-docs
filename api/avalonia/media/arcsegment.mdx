@@ -111,13 +111,13 @@ string
 | Name | Description |
 | --- | --- |
 | [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
-| [IsLargeArc](#uid-20f1f661b1) | Gets or sets a value indicating whether this instance is large arc. |
+| [IsLargeArc](#uid-20f1f661b1) | Gets or sets a value indicating whether the arc should follow the longer path around an ellipse rather than the shorter one. |
 | [IsStroked](pathsegment.mdx#uid-f760a78406) | Inherited from [PathSegment](pathsegment.mdx). |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
-| [Point](#uid-f5d94e8cfa) | Gets or sets the point. |
-| [RotationAngle](#uid-36db8407fe) | Gets or sets the rotation angle. |
-| [Size](#uid-4d7eed4140) | Gets or sets the size. |
-| [SweepDirection](#uid-f305383f73) | Gets or sets the sweep direction. |
+| [Point](#uid-f5d94e8cfa) | Gets or sets the destination point where the arc ends. |
+| [RotationAngle](#uid-36db8407fe) | Gets or sets the rotation angle (in degrees) of the ellipse that specifies the path of the arc; positive values are clockwise. |
+| [Size](#uid-4d7eed4140) | Gets or sets the radii of an ellipse whose path is used to draw the arc. |
+| [SweepDirection](#uid-f305383f73) | Gets or sets the sweep direction which indicates whether the arc is drawn in the Clockwise or Counterclockwise direction. |
 
 <section className="apiref-page__member-entry">
 
@@ -125,7 +125,7 @@ string
 
 ### IsLargeArc Property
 
-Gets or sets a value indicating whether this instance is large arc.
+Gets or sets a value indicating whether the arc should follow the longer path around an ellipse rather than the shorter one.
 
 ```csharp
 public bool IsLargeArc { get; set; }
@@ -133,8 +133,12 @@ public bool IsLargeArc { get; set; }
 
 #### Value
 
-`true` if this instance is large arc; otherwise, `false`.
+`true` if this instance is a large arc; otherwise, `false`.
 
+
+#### Remarks
+
+Set to `true` to draw the arc greater than 180 degrees; otherwise, `false`.
 
 </section>
 
@@ -144,7 +148,7 @@ public bool IsLargeArc { get; set; }
 
 ### Point Property
 
-Gets or sets the point.
+Gets or sets the destination point where the arc ends.
 
 ```csharp
 public Avalonia.Point Point { get; set; }
@@ -152,7 +156,7 @@ public Avalonia.Point Point { get; set; }
 
 #### Value
 
-The point.
+The destination point.
 
 
 </section>
@@ -163,7 +167,7 @@ The point.
 
 ### RotationAngle Property
 
-Gets or sets the rotation angle.
+Gets or sets the rotation angle (in degrees) of the ellipse that specifies the path of the arc; positive values are clockwise.
 
 ```csharp
 public double RotationAngle { get; set; }
@@ -174,6 +178,10 @@ public double RotationAngle { get; set; }
 The rotation angle.
 
 
+#### Remarks
+
+This will rotate the entire arc relative to the X-axis and is not commonly used.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -182,7 +190,7 @@ The rotation angle.
 
 ### Size Property
 
-Gets or sets the size.
+Gets or sets the radii of an ellipse whose path is used to draw the arc.
 
 ```csharp
 public Avalonia.Size Size { get; set; }
@@ -201,7 +209,7 @@ The size.
 
 ### SweepDirection Property
 
-Gets or sets the sweep direction.
+Gets or sets the sweep direction which indicates whether the arc is drawn in the Clockwise or Counterclockwise direction.
 
 ```csharp
 public Avalonia.Media.SweepDirection SweepDirection { get; set; }

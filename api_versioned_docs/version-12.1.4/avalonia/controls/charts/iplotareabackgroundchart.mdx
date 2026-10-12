@@ -1,0 +1,82 @@
+---
+title: 'IPlotAreaBackgroundChart'
+hide_title: true
+slug: '/avalonia/controls/charts/iplotareabackgroundchart'
+uid: 'Avalonia.Controls.Charts.IPlotAreaBackgroundChart'
+commentId: 'T:Avalonia.Controls.Charts.IPlotAreaBackgroundChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlotAreaBackgroundChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes chart-level plot-area background styling for chart types with a dedicated plot rectangle.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlotAreaBackgroundChart
+```
+
+</div>
+
+## Remarks
+
+Implement this contract only when the chart has a clear plot area distinct from the
+whole control background, such as Cartesian, financial, carpet, or Venn-like layout areas.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PlotAreaBackground](#uid-bf3f197488) | Gets or sets the background brush for the plot area only. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf3f197488"></span>
+
+### PlotAreaBackground Property
+
+Gets or sets the background brush for the plot area only.
+
+```csharp
+public Avalonia.Media.IBrush PlotAreaBackground { get; set; }
+```
+
+#### Remarks
+
+This brush is intentionally scoped to the data/plot surface. Use the control
+background for whole-chart background styling.
+
+</section>
+
+</ApiRefPage>
+

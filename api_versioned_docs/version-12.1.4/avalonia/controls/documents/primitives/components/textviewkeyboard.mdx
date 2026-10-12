@@ -1,0 +1,160 @@
+---
+title: 'TextViewKeyboard'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/textviewkeyboard'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextViewKeyboard Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Handles keyboard navigation and read-only commands (copy, select-all)
+for text views.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextViewKeyboard
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="textviewcomponentbase">TextViewComponentBase</a> <span className="apiref-page__relation-separator">-&gt;</span> TextViewKeyboard
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="texteditorkeyboard">TextEditorKeyboard</a>
+</div>
+</div>
+
+## Remarks
+
+This component works with [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) and [Avalonia.Controls.TextSelection](xref:Avalonia.Controls.TextSelection),
+using their [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) support for all operations.
+The caret operations a subclass would need are internal, so the type is closed:
+the constructor is internal and only this library derives from it. Add behaviour to
+a view with an [Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent) of your own, or a highlight layer.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextViewKeyboard](#uid-55b131490c) | Creates the component. A view builds its own, so a consumer rarely needs to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55b131490c"></span>
+
+### TextViewKeyboard Constructor
+
+Creates the component. A view builds its own, so a consumer rarely needs to.
+
+```csharp
+public TextViewKeyboard()
+```
+
+#### Remarks
+
+Deriving from this type is not supported: the seams a subclass would need are
+internal to the view. The constructor is public for compatibility with the
+released surface, not as an invitation.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Copy](#uid-a21dbb1e2e) | Copies the current selection to the clipboard without waiting for the clipboard write. |
+| [CopyAsync](#uid-bcd811dc65) | Copies the current selection to the clipboard. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a21dbb1e2e"></span>
+
+### Copy Method
+
+Copies the current selection to the clipboard without waiting for the clipboard write.
+
+```csharp
+public void Copy()
+```
+
+#### Remarks
+
+Await [Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard.CopyAsync(System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewKeyboard.CopyAsync%28System.Threading.CancellationToken%29) instead. The clipboard is a platform resource another
+process can hold, so the write can fail after this method has already returned, and a
+caller here can neither see that nor sequence anything after it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcd811dc65"></span>
+
+### CopyAsync Method
+
+Copies the current selection to the clipboard.
+
+```csharp
+public System.Threading.Tasks.Task CopyAsync(System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`cancellationToken` System.Threading.CancellationToken
+
+Abandons the copy before the clipboard is written.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+#### Remarks
+
+Base behaviour publishes plain text only. The editor overrides this to also
+publish the rich-format (RTF) payload.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsAttached](textviewcomponentbase.mdx#uid-7df392cfdc) | Gets whether this component is currently attached to a host. Inherited from [TextViewComponentBase](textviewcomponentbase.mdx). |
+
+</ApiRefPage>
+

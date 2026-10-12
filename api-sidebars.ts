@@ -746,6 +746,7 @@ const sidebars = {
         "avalonia/controls/virtualkeyboardinputmethod",
         "avalonia/controls/virtualkeyboardoptions",
         "avalonia/controls/virtualkeyboardscope",
+        "avalonia/controls/waylandproperties",
         "avalonia/controls/webauthenticationbroker",
         "avalonia/controls/webauthenticationresult",
         "avalonia/controls/webauthenticatormode",
@@ -885,6 +886,7 @@ const sidebars = {
         "avalonia/controls/charts/categoryplotmode",
         "avalonia/controls/charts/chartannotation",
         "avalonia/controls/charts/chartaxis",
+        "avalonia/controls/charts/chartaxisposition",
         "avalonia/controls/charts/chartbase",
         "avalonia/controls/charts/chartexportcompletedeventargs",
         "avalonia/controls/charts/chartexportfailedeventargs",
@@ -1996,6 +1998,7 @@ const sidebars = {
         "avalonia/controls/platform/insetsmanagerbase",
         "avalonia/controls/platform/istorageproviderfactory",
         "avalonia/controls/platform/itoplevelnativemenuexporter",
+        "avalonia/controls/platform/iwaylandoptionstoplevelimplfeature",
         "avalonia/controls/platform/iwin32optionstoplevelimpl",
         "avalonia/controls/platform/ix11optionstoplevelimplfeature",
         "avalonia/controls/platform/manageddispatcherimpl",
@@ -3234,7 +3237,6 @@ const sidebars = {
         "avalonia/media/polybeziersegment",
         "avalonia/media/polylinegeometry",
         "avalonia/media/polylinesegment",
-        "avalonia/media/preciseellipticarchelper-ellipticalarc",
         "avalonia/media/quadraticbeziersegment",
         "avalonia/media/radialgradientbrush",
         "avalonia/media/rectanglegeometry",
@@ -3949,6 +3951,7 @@ const sidebars = {
       "label": "Avalonia.Rendering.Composition.Server",
       "items": [
         "avalonia/rendering/composition/server/compositorpools-stackpool-1",
+        "avalonia/rendering/composition/server/diagnostictextrenderer-shapedtext",
         "avalonia/rendering/composition/server/servercompositionvisual-readbackdata",
         "avalonia/rendering/composition/server/servercompositionvisual-treewalkerframe"
       ],
@@ -4421,6 +4424,29 @@ const sidebars = {
     },
     {
       "type": "category",
+      "label": "AvaloniaUI.DiagnosticsSupport.HotReload",
+      "items": [
+        "avaloniaui/diagnosticssupport/hotreload/avaloniahotreloadhandler",
+        "avaloniaui/diagnosticssupport/hotreload/controlreloader",
+        "avaloniaui/diagnosticssupport/hotreload/datatemplatereloader",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloadautosetup",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloaddiagnostics",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloadengine",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloadextensions",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloadlogentry",
+        "avaloniaui/diagnosticssupport/hotreload/hotreloadloglevel",
+        "avaloniaui/diagnosticssupport/hotreload/resourcereloader",
+        "avaloniaui/diagnosticssupport/hotreload/stylereloader",
+        "avaloniaui/diagnosticssupport/hotreload/xamlfileresolver",
+        "avaloniaui/diagnosticssupport/hotreload/xamlfilewatcher"
+      ],
+      "link": {
+        "type": "doc",
+        "id": "avaloniaui/diagnosticssupport/hotreload/index"
+      }
+    },
+    {
+      "type": "category",
       "label": "CompiledAvaloniaXaml",
       "items": [
         "compiledavaloniaxaml/avaloniaresources",
@@ -4458,13 +4484,31 @@ const sidebars = {
         "global/ag-f",
         "global/ai-a",
         "global/ai-b",
+        "global/ak-a-1",
         "global/am-a",
         "global/aq-a",
+        "global/db-1-a",
+        "global/db-1-b",
         "global/dl-a",
         "global/dm-a",
         "global/dm-b",
         "global/dm-c",
         "global/dm-d",
+        "global/ef-a",
+        "global/ej-a",
+        "global/ej-b",
+        "global/ej-c",
+        "global/fq-a",
+        "global/fq-e",
+        "global/fw-a",
+        "global/fw-c",
+        "global/fw-c-a",
+        "global/gn-1-a",
+        "global/go-c-a",
+        "global/go-d-a",
+        "global/gx-a",
+        "global/gx-a-a",
+        "global/gx-b",
         "global/linuxframebufferplatformextensions",
         "global/n-a",
         "global/n-b",
@@ -4585,7 +4629,8 @@ const sidebars = {
         "packages/avalonia-wayland",
         "packages/avalonia-win32-interoperability",
         "packages/avalonia-x11",
-        "packages/avaloniaui-diagnosticssupport"
+        "packages/avaloniaui-diagnosticssupport",
+        "packages/avaloniaui-diagnosticssupport-hotreload"
       ]
     }
   ],

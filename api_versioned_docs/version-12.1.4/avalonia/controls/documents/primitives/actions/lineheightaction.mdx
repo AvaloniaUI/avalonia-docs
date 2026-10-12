@@ -1,0 +1,162 @@
+---
+title: 'LineHeightAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/lineheightaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.LineHeightAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.LineHeightAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LineHeightAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting line height on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class LineHeightAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;double&gt; <span className="apiref-page__relation-separator">-&gt;</span> LineHeightAction
+</div>
+</div>
+
+## Remarks
+
+Line height is a block-level property that controls the vertical spacing between lines.
+Important: Unlike CSS where line-height can be a unitless multiplier,
+this property uses absolute pixel/point values.
+
+Common line height values:
+
+- 14 - Very tight spacing
+- 16 - Compact spacing
+- 18 - Normal spacing (default for 12pt font)
+- 20 - Comfortable reading
+- 24 - Generous spacing
+- 28 - Extra spacing
+- 32 - Wide spacing for headers
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their line height set to the specified value.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LineHeightAction](#uid-3967ee5876) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3967ee5876"></span>
+
+### LineHeightAction Constructor
+
+```csharp
+public LineHeightAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-bf8bd10a5f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf8bd10a5f"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<double> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;double&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-23a009d0a3) | No summary available. |
+| [Gesture](#uid-34ab0178d3) | No summary available. |
+| [Id](#uid-5d6009d72e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23a009d0a3"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-34ab0178d3"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d6009d72e"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

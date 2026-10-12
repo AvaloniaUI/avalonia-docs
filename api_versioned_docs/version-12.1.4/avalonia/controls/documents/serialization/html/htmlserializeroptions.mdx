@@ -1,0 +1,192 @@
+---
+title: 'HtmlSerializerOptions'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/html/htmlserializeroptions'
+uid: 'Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Html'
+assembly: 'Avalonia.Controls.Documents.Serialization.Html'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Html'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HtmlSerializerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Html</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Configuration options for [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializer).
+Immutable after construction.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HtmlSerializerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HtmlSerializerOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HtmlSerializerOptions (2 overloads)](#uid-c9126528ce) | Initializes options with no custom tag handlers. |
+
+<span id="uid-c9126528ce"></span>
+
+### HtmlSerializerOptions overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dba98f3f5c"></span>
+
+#### HtmlSerializerOptions Constructor
+
+Initializes options with no custom tag handlers.
+
+```csharp
+public HtmlSerializerOptions()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4c6e0299f"></span>
+
+#### HtmlSerializerOptions Constructor
+
+```csharp
+public HtmlSerializerOptions(System.Collections.Generic.IReadOnlyDictionary<string, Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler> tagHandlers)
+```
+
+##### Parameters
+
+`tagHandlers` System.Collections.Generic.IReadOnlyDictionary&lt;string, [Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler](xref:Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaseFontSize](#uid-f0064aa80a) | Base font size in DIPs used for heading scale calculations. Defaults to 14.0 (matching Avalonia's default font size). |
+| [Document](#uid-3c08221bab) | Shared serializer options common to all document serializers. HTML import reads [Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes) from it, which caps the payload a `data:` image source may decode to. |
+| [PreserveUnknownTagContent](#uid-7188da6ee0) | When `true` (default), unrecognized tags are silently consumed and their text content is preserved. When `false`, unrecognized tags and their content are dropped. |
+| [TagHandlers](#uid-5a7976bcf5) | Custom tag handlers keyed by tag name (case-insensitive). Built-in tags are processed first; custom handlers are only consulted for tags not handled by the built-in mapping. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0064aa80a"></span>
+
+### BaseFontSize Property
+
+Base font size in DIPs used for heading scale calculations.
+Defaults to 14.0 (matching Avalonia's default font size).
+
+```csharp
+public double BaseFontSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3c08221bab"></span>
+
+### Document Property
+
+Shared serializer options common to all document serializers. HTML import reads
+[Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.MaxImageBytes) from it, which caps the payload
+a `data:` image source may decode to.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7188da6ee0"></span>
+
+### PreserveUnknownTagContent Property
+
+When `true` (default), unrecognized tags are silently consumed
+and their text content is preserved. When `false`, unrecognized
+tags and their content are dropped.
+
+```csharp
+public bool PreserveUnknownTagContent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a7976bcf5"></span>
+
+### TagHandlers Property
+
+Custom tag handlers keyed by tag name (case-insensitive).
+Built-in tags are processed first; custom handlers are only consulted
+for tags not handled by the built-in mapping.
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<string, Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler> TagHandlers { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-6d5880e8e5) | Default options with no custom tag handlers. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d5880e8e5"></span>
+
+### Default Field
+
+Default options with no custom tag handlers.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions Default
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,149 @@
+---
+title: 'DocumentSerializerOptions'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/documentserializeroptions'
+uid: 'Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentSerializerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Shared options for all document serializers (RTF, DOCX, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DocumentSerializerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DocumentSerializerOptions
+</div>
+</div>
+
+## Remarks
+
+Replaces the former per-format `RtfSerializerOptions` and `DocxSerializerOptions`
+with a single type. All serializer behavior is derived from [Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode](xref:Avalonia.Controls.Documents.Serialization.DocumentSerializerOptions.ExportMode):
+
+- [Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict](xref:Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict): synthetic controls + all custom markers.
+- [Avalonia.Controls.Documents.Serialization.DocumentExportMode.InteropSafe](xref:Avalonia.Controls.Documents.Serialization.DocumentExportMode.InteropSafe): native controls + custom markers for unsupported properties.
+- [Avalonia.Controls.Documents.Serialization.DocumentExportMode.Portable](xref:Avalonia.Controls.Documents.Serialization.DocumentExportMode.Portable): native controls only, no custom markers.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DocumentSerializerOptions](#uid-5525381a6c) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5525381a6c"></span>
+
+### DocumentSerializerOptions Constructor
+
+```csharp
+public DocumentSerializerOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ExportMode](#uid-2cd5c7cbe0) | Controls the export strategy for all serializers. Defaults to [Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict](xref:Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict). |
+| [ImageEncodingPolicy](#uid-d7c4371c12) | How images whose encoded format the target does not accept are handled. Defaults to [Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy.ReencodeFromPixels](xref:Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy.ReencodeFromPixels), which transcodes them to a format the target accepts using the built-in codec. |
+| [MaxImageBytes](#uid-bb4dd16c05) | Maximum size, in bytes, of a single embedded image. An image whose payload exceeds this limit is skipped and the surrounding document still loads. (the default) imposes no limit. Use this to guard against hostile or malformed documents with oversized image payloads. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cd5c7cbe0"></span>
+
+### ExportMode Property
+
+Controls the export strategy for all serializers.
+Defaults to [Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict](xref:Avalonia.Controls.Documents.Serialization.DocumentExportMode.RoundTripStrict).
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.DocumentExportMode ExportMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7c4371c12"></span>
+
+### ImageEncodingPolicy Property
+
+How images whose encoded format the target does not accept are handled. Defaults
+to [Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy.ReencodeFromPixels](xref:Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy.ReencodeFromPixels), which transcodes them to a
+format the target accepts using the built-in codec.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy ImageEncodingPolicy { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb4dd16c05"></span>
+
+### MaxImageBytes Property
+
+Maximum size, in bytes, of a single embedded image. An image whose payload exceeds
+this limit is skipped and the surrounding document still loads.
+(the default) imposes no limit. Use this to guard against
+hostile or malformed documents with oversized image payloads.
+
+```csharp
+public Nullable<long> MaxImageBytes { get; set; }
+```
+
+#### Remarks
+
+Applies to every format that carries image bytes: on read to RTF, DOCX, XAML and
+HTML, and on write to PDF, where the payload measured is the sample buffer for an
+image that holds only pixels. Plain text and Markdown carry no embedded images -
+a Markdown image is always a reference the host resolves - so the limit does not
+reach them.
+
+</section>
+
+</ApiRefPage>
+

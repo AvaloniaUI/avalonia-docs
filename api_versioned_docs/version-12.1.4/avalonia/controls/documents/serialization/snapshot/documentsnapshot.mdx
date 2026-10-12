@@ -1,0 +1,742 @@
+---
+title: 'DocumentSnapshot'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/documentsnapshot'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentSnapshot Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Immutable snapshot of document state for background serialization.
+Created on UI thread, safe to read from any thread.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DocumentSnapshot
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> DocumentSnapshot
+</div>
+</div>
+
+## Remarks
+
+[DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) captures a point-in-time view of the document including:
+- Text content (via immutable RopeNode reference)
+- Tree structure (copied as [SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) tree)
+- Formatting (captured as value types)
+
+Thread-safety is achieved through snapshot isolation:
+- Text storage uses immutable functional rope nodes
+- Structure is copied at snapshot time
+- Formatting is stored as value types (no shared references)
+
+Typical use:
+
+```csharp
+// On UI thread:
+var snapshot = document.CreateSnapshot();
+
+// On background thread:
+await Task.Run(() => serializer.Serialize(snapshot, stream));
+```
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CaptureBlockFormatting](#uid-ecb61ee172) | Captures the block-level formatting properties (alignment, margins, padding, etc.) from a [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value. |
+| [CaptureInlineFormatting](#uid-686dc3932d) | Captures the inline-level formatting properties (text decorations, baseline alignment) from a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting) value. |
+| [CaptureListItemFormatting](#uid-52778980c0) | Captures the block-level formatting properties from a [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value. [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) is not a [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block), so it needs its own capture even though it declares the same properties. |
+| [CaptureTableCellFormatting](#uid-9619450661) | Captures the block-level formatting properties from a [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value. |
+| [CaptureTableRowFormatting](#uid-338ced5cb6) | Captures the block-level formatting of a table row (its minimum height). |
+| [CaptureTextElementFormatting](#uid-640e63d0a2) | Captures the text-level formatting properties (font, foreground, background, etc.) from a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting) value. |
+| [EnumerateNodes (2 overloads)](#uid-331b73817d) | Enumerates all nodes in document order (pre-order traversal). |
+| [EnumerateParagraphs](#uid-35adb86ae1) | Enumerates all paragraphs in document order. |
+| [EnumerateTextRuns](#uid-519912edce) | Enumerates all text runs in document order. |
+| [FindFootnote](#uid-971ad87405) | The note paired with `noteId`, or null. |
+| [GetFootnoteOrdinal](#uid-826733c0cd) | The number the anchor of `noteId` shows: the 1-based position of its note among [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes), which are in anchor order; 0 when no note carries the id. |
+| [GetText (2 overloads)](#uid-a465c7b499) | Gets text for a node's range as a string. Prefer [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%29) or [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode,System.IO.TextWriter)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%2CSystem.IO.TextWriter%29) to avoid allocation. |
+| [GetTextMemory (2 overloads)](#uid-a80175f9af) | Gets a zero-copy memory chunk for a snapshot node's text range. The returned memory may be shorter than the node's full length when the text spans multiple rope leaves. Use [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode,System.IO.TextWriter)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%2CSystem.IO.TextWriter%29) or iterate with [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory(int,int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory%28System.Int32%2CSystem.Int32%29) for complete text. |
+| [IndexOfPageBand](#uid-b01e0215db) | The position of the band with `id` in [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.PageBands](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.PageBands), or -1. |
+| [WriteTextTo (4 overloads)](#uid-fe8dd7bcca) | Streams the text of a snapshot node to a [System.IO.TextWriter](xref:System.IO.TextWriter) in rope-leaf-sized chunks. No intermediate string or char[] allocation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ecb61ee172"></span>
+
+### CaptureBlockFormatting Method
+
+Captures the block-level formatting properties (alignment, margins, padding, etc.)
+from a [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting CaptureBlockFormatting(Avalonia.Controls.Documents.Block block)
+```
+
+#### Parameters
+
+`block` [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-686dc3932d"></span>
+
+### CaptureInlineFormatting Method
+
+Captures the inline-level formatting properties (text decorations, baseline alignment)
+from a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting) value.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting CaptureInlineFormatting(Avalonia.Controls.Documents.RichTextElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52778980c0"></span>
+
+### CaptureListItemFormatting Method
+
+Captures the block-level formatting properties from a [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem)
+into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value. [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) is
+not a [Avalonia.Controls.Documents.Block](xref:Avalonia.Controls.Documents.Block), so it needs its own capture even though it declares
+the same properties.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting CaptureListItemFormatting(Avalonia.Controls.Documents.ListItem item)
+```
+
+#### Parameters
+
+`item` [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9619450661"></span>
+
+### CaptureTableCellFormatting Method
+
+Captures the block-level formatting properties from a [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell)
+into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) value.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting CaptureTableCellFormatting(Avalonia.Controls.Documents.TableCell cell)
+```
+
+#### Parameters
+
+`cell` [Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-338ced5cb6"></span>
+
+### CaptureTableRowFormatting Method
+
+Captures the block-level formatting of a table row (its minimum height).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting CaptureTableRowFormatting(Avalonia.Controls.Documents.TableRow row)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Documents.TableRow](xref:Avalonia.Controls.Documents.TableRow)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-640e63d0a2"></span>
+
+### CaptureTextElementFormatting Method
+
+Captures the text-level formatting properties (font, foreground, background, etc.)
+from a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) into an immutable [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting) value.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting CaptureTextElementFormatting(Avalonia.Controls.Documents.RichTextElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+</section>
+
+<span id="uid-331b73817d"></span>
+
+### EnumerateNodes overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98fb158792"></span>
+
+#### EnumerateNodes Method
+
+Enumerates all nodes in document order (pre-order traversal).
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode> EnumerateNodes()
+```
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78fc23c0c4"></span>
+
+#### EnumerateNodes Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode> EnumerateNodes(Func<Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode, bool> predicate)
+```
+
+##### Parameters
+
+`predicate` Func&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode), bool&gt;
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35adb86ae1"></span>
+
+### EnumerateParagraphs Method
+
+Enumerates all paragraphs in document order.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode> EnumerateParagraphs()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-519912edce"></span>
+
+### EnumerateTextRuns Method
+
+Enumerates all text runs in document order.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode> EnumerateTextRuns()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-971ad87405"></span>
+
+### FindFootnote Method
+
+The note paired with `noteId`, or null.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot FindFootnote(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-826733c0cd"></span>
+
+### GetFootnoteOrdinal Method
+
+The number the anchor of `noteId` shows: the 1-based
+position of its note among [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes), which are in anchor
+order; 0 when no note carries the id.
+
+```csharp
+public int GetFootnoteOrdinal(int noteId)
+```
+
+#### Parameters
+
+`noteId` int
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-a465c7b499"></span>
+
+### GetText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27c83ca8f2"></span>
+
+#### GetText Method
+
+Gets text for a node's range as a string.
+Prefer [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%29) or
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode,System.IO.TextWriter)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%2CSystem.IO.TextWriter%29) to avoid allocation.
+
+```csharp
+public string GetText(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode node)
+```
+
+##### Parameters
+
+`node` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2178f7f9ca"></span>
+
+#### GetText Method
+
+Gets text for a range as a string.
+Prefer [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory(int,int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory%28System.Int32%2CSystem.Int32%29) or
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo(int,int,System.IO.TextWriter)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo%28System.Int32%2CSystem.Int32%2CSystem.IO.TextWriter%29) to avoid allocation.
+
+```csharp
+public string GetText(int offset, int length)
+```
+
+##### Parameters
+
+`offset` int
+
+
+`length` int
+
+
+##### Returns
+
+string
+
+
+</section>
+
+<span id="uid-a80175f9af"></span>
+
+### GetTextMemory overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf0c5519c2"></span>
+
+#### GetTextMemory Method
+
+Gets a zero-copy memory chunk for a snapshot node's text range.
+The returned memory may be shorter than the node's full length
+when the text spans multiple rope leaves. Use [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode,System.IO.TextWriter)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.WriteTextTo%28Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%2CSystem.IO.TextWriter%29)
+or iterate with [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory(int,int)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.GetTextMemory%28System.Int32%2CSystem.Int32%29) for complete text.
+
+```csharp
+public ReadOnlyMemory<char> GetTextMemory(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode node)
+```
+
+##### Parameters
+
+`node` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+The snapshot node.
+
+
+##### Returns
+
+ReadOnlyMemory&lt;char&gt;
+
+A slice of the underlying rope leaf. No allocation.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95dd36d920"></span>
+
+#### GetTextMemory Method
+
+Gets a zero-copy memory chunk starting at `offset`.
+Returns up to `maxLength` characters from a single rope leaf.
+The returned memory may be shorter than `maxLength` if the
+leaf boundary is reached; callers should advance the offset and call again
+to read subsequent chunks.
+
+```csharp
+public ReadOnlyMemory<char> GetTextMemory(int offset, int maxLength)
+```
+
+##### Parameters
+
+`offset` int
+
+Start offset in the document.
+
+
+`maxLength` int
+
+Maximum number of characters to return.
+
+
+##### Returns
+
+ReadOnlyMemory&lt;char&gt;
+
+A slice of the underlying rope leaf memory. No allocation.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b01e0215db"></span>
+
+### IndexOfPageBand Method
+
+The position of the band with `id` in [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.PageBands](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.PageBands), or -1.
+
+```csharp
+public int IndexOfPageBand(Guid id)
+```
+
+#### Parameters
+
+`id` Guid
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-fe8dd7bcca"></span>
+
+### WriteTextTo overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cbc9654992"></span>
+
+#### WriteTextTo Method
+
+Streams the text of a snapshot node to a [System.IO.TextWriter](xref:System.IO.TextWriter) in rope-leaf-sized
+chunks. No intermediate string or char[] allocation.
+
+```csharp
+public void WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode node, System.IO.TextWriter writer)
+```
+
+##### Parameters
+
+`node` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+`writer` System.IO.TextWriter
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bc3c19b15"></span>
+
+#### WriteTextTo Method
+
+Appends the text of a snapshot node to a [System.Text.StringBuilder](xref:System.Text.StringBuilder) in rope-leaf-sized
+chunks. No intermediate string allocation.
+
+```csharp
+public void WriteTextTo(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode node, System.Text.StringBuilder sb)
+```
+
+##### Parameters
+
+`node` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+
+`sb` System.Text.StringBuilder
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8fdf187369"></span>
+
+#### WriteTextTo Method
+
+Streams the text of a range to a [System.IO.TextWriter](xref:System.IO.TextWriter) in rope-leaf-sized
+chunks. No intermediate string or char[] allocation.
+
+```csharp
+public void WriteTextTo(int offset, int length, System.IO.TextWriter writer)
+```
+
+##### Parameters
+
+`offset` int
+
+
+`length` int
+
+
+`writer` System.IO.TextWriter
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-210387ce7c"></span>
+
+#### WriteTextTo Method
+
+Appends the text of a range to a [System.Text.StringBuilder](xref:System.Text.StringBuilder) in rope-leaf-sized
+chunks. No intermediate string allocation.
+
+```csharp
+public void WriteTextTo(int offset, int length, System.Text.StringBuilder sb)
+```
+
+##### Parameters
+
+`offset` int
+
+
+`length` int
+
+
+`sb` System.Text.StringBuilder
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DocumentFormatting](#uid-89020330fb) | Document-level formatting (page margins, etc.). |
+| [Footnotes](#uid-48a5dec0e7) | The footnotes the document owns (nested document snapshots) in anchor order, paired by id with the [Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode) anchors in the body. A range snapshot carries the notes of the anchors inside the range. |
+| [Generation](#uid-311eda4811) | Document generation at snapshot time. Can be used to detect changes. |
+| [PageBands](#uid-d0e3d0b379) | The page bands the document owns (nested document snapshots), placed by their role and rule, or referenced by index from the sections' [Avalonia.Controls.Documents.Serialization.Snapshot.SectionSnapshotNode.PageBandReferences](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SectionSnapshotNode.PageBandReferences). Empty for range snapshots and for snapshots taken at the text-model level. |
+| [Root](#uid-874e5d74e4) | The root of the snapshot tree. |
+| [TextLength](#uid-f55d45e331) | Total text length of the document at snapshot time. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89020330fb"></span>
+
+### DocumentFormatting Property
+
+Document-level formatting (page margins, etc.).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting DocumentFormatting { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48a5dec0e7"></span>
+
+### Footnotes Property
+
+The footnotes the document owns (nested document snapshots) in anchor order,
+paired by id with the [Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode) anchors in the
+body. A range snapshot carries the notes of the anchors inside the range.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot> Footnotes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-311eda4811"></span>
+
+### Generation Property
+
+Document generation at snapshot time. Can be used to detect changes.
+
+```csharp
+public long Generation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0e3d0b379"></span>
+
+### PageBands Property
+
+The page bands the document owns (nested document snapshots), placed by their
+role and rule, or referenced by index from the sections'
+[Avalonia.Controls.Documents.Serialization.Snapshot.SectionSnapshotNode.PageBandReferences](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SectionSnapshotNode.PageBandReferences). Empty for range snapshots
+and for snapshots taken at the text-model level.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Serialization.Snapshot.PageBandSnapshot> PageBands { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-874e5d74e4"></span>
+
+### Root Property
+
+The root of the snapshot tree.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode Root { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f55d45e331"></span>
+
+### TextLength Property
+
+Total text length of the document at snapshot time.
+
+```csharp
+public int TextLength { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

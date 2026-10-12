@@ -206,7 +206,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [LabelCornerRadius](cartesianseries.mdx#uid-79e766a65f) | Gets or sets the corner radius of the label background. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LabelFontSize](cartesianseries.mdx#uid-d2b188f9b0) | Gets or sets the font size of the label. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LabelForeground](cartesianseries.mdx#uid-7e931c37e0) | Gets or sets the foreground brush of the label. Inherited from [CartesianSeries](cartesianseries.mdx). |
-| [LabelFormat](cartesianseries.mdx#uid-a62b77d386) | Gets or sets the format string for the label. &#123;0&#125; is the value, &#123;1&#125; is the category. Inherited from [CartesianSeries](cartesianseries.mdx). |
+| [LabelFormat](cartesianseries.mdx#uid-a62b77d386) | Gets or sets the format string for the label. &#123;0&#125; is the value, &#123;1&#125; is the category. A format without braces, such as "N0", formats the value. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LabelOffset](cartesianseries.mdx#uid-3b4f03049a) | Gets or sets the distance from the data point to the label. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LabelPadding](cartesianseries.mdx#uid-360b907b65) | Gets or sets the padding of the label. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LetterSpacing](../primitives/templatedcontrol.mdx#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
@@ -260,6 +260,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [ValuePath](chartseries.mdx#uid-4297742d2f) | Gets or sets the property path to extract the value from each data item. Inherited from [ChartSeries](chartseries.mdx). |
 | [VerticalAlignment](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [Width](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
+| [YAxisKey](cartesianseries.mdx#uid-3b15cb50f5) | Gets or sets the key of the Y-axis this series should use for scaling. When set, this takes precedence over [Avalonia.Controls.Charts.CartesianSeries.YAxisPosition](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisPosition). Keys are matched using an ordinal, case-sensitive comparison; the primary axis is used when no match is found. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [YAxisPosition](cartesianseries.mdx#uid-188ab70430) | Gets or sets which Y-axis this series should use for scaling. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [ZIndex](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../../visual.mdx). |
 
@@ -451,6 +452,7 @@ public bool ShowConnectorLines { get; set; }
 | [VerticalAlignmentProperty](../../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../../visual.mdx). |
 | [WidthProperty](../../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
+| [YAxisKeyProperty](cartesianseries.mdx#uid-0fcba2e09f) | Identifies the [Avalonia.Controls.Charts.CartesianSeries.YAxisKey](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisKey) Avalonia property. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [YAxisPositionProperty](cartesianseries.mdx#uid-fd92dc7e39) | Identifies the [Avalonia.Controls.Charts.CartesianSeries.YAxisPosition](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisPosition) Avalonia property. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [ZIndexProperty](../../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../../visual.mdx). |
 

@@ -150,6 +150,7 @@ double
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [AxisKey](chartaxis.mdx#uid-c9009424cb) | Gets or sets the key used by series to select this axis. Keys should be unique within the owning chart's vertical-axis collection. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineDashStyle](chartaxis.mdx#uid-2927587df1) | Gets or sets the dash style for the axis line. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineStroke](chartaxis.mdx#uid-78e6ca1843) | Gets or sets the brush for the axis line. When set, overrides the default axis brush for this axis's line. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineStrokeThickness](chartaxis.mdx#uid-d9215669f0) | Gets or sets the thickness of the axis line. Inherited from [ChartAxis](chartaxis.mdx). |
@@ -232,6 +233,7 @@ double
 | [Padding](../primitives/templatedcontrol.mdx#uid-f5271cd58d) | Gets or sets the padding placed between the border of the control and its content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
 | [PlotBands](chartaxis.mdx#uid-3990cb7027) | Gets the collection of plot bands for this axis. Inherited from [ChartAxis](chartaxis.mdx). |
+| [Position](chartaxis.mdx#uid-43e3c91cfd) | Gets or sets where this vertical axis is arranged around the plot area. Inherited from [ChartAxis](chartaxis.mdx). |
 | [RenderTransform](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -349,6 +351,7 @@ public System.Collections.Generic.IList<Avalonia.Controls.Charts.ScaleBreak> Sca
 
 | Name | Description |
 | --- | --- |
+| [AxisKeyProperty](chartaxis.mdx#uid-e28b877e79) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisKey](xref:Avalonia.Controls.Charts.ChartAxis.AxisKey) Avalonia property. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineDashStyleProperty](chartaxis.mdx#uid-7d2e09ebd8) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineDashStyle](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineDashStyle) Avalonia property. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineStrokeProperty](chartaxis.mdx#uid-8c469289ee) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineStroke](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineStroke) Avalonia property. Inherited from [ChartAxis](chartaxis.mdx). |
 | [AxisLineStrokeThicknessProperty](chartaxis.mdx#uid-14d216e7e5) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineStrokeThickness](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineStrokeThickness) Avalonia property. Inherited from [ChartAxis](chartaxis.mdx). |
@@ -445,6 +448,7 @@ public System.Collections.Generic.IList<Avalonia.Controls.Charts.ScaleBreak> Sca
 | [PointerTouchPadGestureRotateEvent](../../input/inputelement.mdx#uid-409dcc6358) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureRotate](xref:Avalonia.Input.InputElement.PointerTouchPadGestureRotate) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PointerTouchPadGestureSwipeEvent](../../input/inputelement.mdx#uid-959da18351) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureSwipe](xref:Avalonia.Input.InputElement.PointerTouchPadGestureSwipe) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PointerWheelChangedEvent](../../input/inputelement.mdx#uid-dcb45add6a) | Defines the [Avalonia.Input.InputElement.PointerWheelChanged](xref:Avalonia.Input.InputElement.PointerWheelChanged) event. Inherited from [InputElement](../../input/inputelement.mdx). |
+| [PositionProperty](chartaxis.mdx#uid-9a185daf8b) | Identifies the [Avalonia.Controls.Charts.ChartAxis.Position](xref:Avalonia.Controls.Charts.ChartAxis.Position) Avalonia property. Inherited from [ChartAxis](chartaxis.mdx). |
 | [PullGestureEndedEvent](../../input/inputelement.mdx#uid-274f53878f) | Defines the [Avalonia.Input.InputElement.PullGestureEnded](xref:Avalonia.Input.InputElement.PullGestureEnded) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PullGestureEvent](../../input/inputelement.mdx#uid-b9a60d43c7) | Defines the [Avalonia.Input.InputElement.PullGesture](xref:Avalonia.Input.InputElement.PullGesture) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [RenderTransformOriginProperty](../../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../../visual.mdx). |

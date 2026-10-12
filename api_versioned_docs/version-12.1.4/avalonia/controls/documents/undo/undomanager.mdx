@@ -1,0 +1,338 @@
+---
+title: 'UndoManager'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/undomanager'
+uid: 'Avalonia.Controls.Documents.Undo.UndoManager'
+commentId: 'T:Avalonia.Controls.Documents.Undo.UndoManager'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UndoManager Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages undo/redo operations for a document. Set one on
+[Avalonia.Controls.Documents.TextModel.TextDocument.UndoManager](xref:Avalonia.Controls.Documents.TextModel.TextDocument.UndoManager) to record changes; leave that
+property , or set [Avalonia.Controls.Documents.Undo.UndoManager.IsEnabled](xref:Avalonia.Controls.Documents.Undo.UndoManager.IsEnabled) to
+, for a document that records nothing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class UndoManager
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> UndoManager
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iundohistory">IUndoHistory</a>, <a href="iundomanager">IUndoManager</a>, IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [UndoManager](#uid-690693dd14) | Initializes a new instance of [Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager) with the specified undo stack limit. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-690693dd14"></span>
+
+### UndoManager Constructor
+
+Initializes a new instance of [Avalonia.Controls.Documents.Undo.UndoManager](xref:Avalonia.Controls.Documents.Undo.UndoManager) with the specified undo stack limit.
+
+```csharp
+public UndoManager(int undoLimit)
+```
+
+#### Parameters
+
+`undoLimit` int
+
+Maximum number of undo units to retain.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginUndoUnit](#uid-8245b559a4) | No summary available. |
+| [Clear](#uid-c06a67309d) | Clears all undo and redo history. |
+| [Dispose](#uid-dc19b36361) | Releases resources by clearing the undo and redo history. |
+| [Record](#uid-d0e973f808) | Records an externally created unit directly onto the undo stack. |
+| [Redo](#uid-bc14fd9fb2) | Redoes the most recently undone unit and returns it, or if nothing to redo. |
+| [Undo](#uid-1f8a434364) | Undoes the most recent undo unit and returns it, or if nothing to undo. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8245b559a4"></span>
+
+### BeginUndoUnit Method
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoScope BeginUndoUnit(string description, Nullable<Avalonia.Controls.Documents.Undo.SelectionSnapshot> selectionBefore)
+```
+
+#### Parameters
+
+`description` string
+
+
+`selectionBefore` Nullable&lt;[Avalonia.Controls.Documents.Undo.SelectionSnapshot](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot)&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoScope](xref:Avalonia.Controls.Documents.Undo.IUndoScope)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c06a67309d"></span>
+
+### Clear Method
+
+Clears all undo and redo history.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc19b36361"></span>
+
+### Dispose Method
+
+Releases resources by clearing the undo and redo history.
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0e973f808"></span>
+
+### Record Method
+
+Records an externally created unit directly onto the undo stack.
+
+```csharp
+public void Record(Avalonia.Controls.Documents.Undo.IUndoUnit unit)
+```
+
+#### Parameters
+
+`unit` [Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+The unit to record. It has to satisfy an internal contract, so a unit built outside
+this assembly is rejected. Group edits with [Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) instead.
+
+
+#### Exceptions
+
+- [\`unit\` does not satisfy the internal contract.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc14fd9fb2"></span>
+
+### Redo Method
+
+Redoes the most recently undone unit and returns it, or if nothing to redo.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit Redo()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f8a434364"></span>
+
+### Undo Method
+
+Undoes the most recent undo unit and returns it, or if nothing to undo.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit Undo()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanRedo](#uid-0ba51b996e) | Gets a value indicating whether there are actions available to redo. |
+| [CanUndo](#uid-1e5c182bde) | Gets a value indicating whether there are actions available to undo. |
+| [IsEnabled](#uid-992f5ec07a) | Gets or sets whether undo/redo tracking is active. |
+| [RedoUnits](#uid-471a7b3710) | A live, newest-first view of the redo stack. Backed by the internal buffer, so its contents change as units are recorded and replayed; do not cache it across a mutation. |
+| [UndoLimit](#uid-38f8e7ec3d) | Gets or sets the maximum number of undo units to retain on the undo stack. |
+| [UndoUnits](#uid-d64413c773) | A live, newest-first view of the undo stack. Backed by the internal buffer, so its contents change as units are recorded and replayed; do not cache it across a mutation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ba51b996e"></span>
+
+### CanRedo Property
+
+Gets a value indicating whether there are actions available to redo.
+
+```csharp
+public bool CanRedo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e5c182bde"></span>
+
+### CanUndo Property
+
+Gets a value indicating whether there are actions available to undo.
+
+```csharp
+public bool CanUndo { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-992f5ec07a"></span>
+
+### IsEnabled Property
+
+Gets or sets whether undo/redo tracking is active.
+
+```csharp
+public bool IsEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-471a7b3710"></span>
+
+### RedoUnits Property
+
+A live, newest-first view of the redo stack. Backed by the internal
+buffer, so its contents change as units are recorded and replayed;
+do not cache it across a mutation.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Undo.IUndoUnit> RedoUnits { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38f8e7ec3d"></span>
+
+### UndoLimit Property
+
+Gets or sets the maximum number of undo units to retain on the undo stack.
+
+```csharp
+public int UndoLimit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d64413c773"></span>
+
+### UndoUnits Property
+
+A live, newest-first view of the undo stack. Backed by the internal
+buffer, so its contents change as units are recorded and replayed;
+do not cache it across a mutation.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Undo.IUndoUnit> UndoUnits { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [StateChanged](#uid-6c68b09277) | Raised when the undo/redo state changes (e.g., after an action is recorded, undone, or redone). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c68b09277"></span>
+
+### StateChanged Event
+
+Raised when the undo/redo state changes (e.g., after an action is recorded, undone, or redone).
+
+```csharp
+public event EventHandler StateChanged
+```
+
+</section>
+
+</ApiRefPage>
+

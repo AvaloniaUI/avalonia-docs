@@ -1,0 +1,133 @@
+---
+title: 'ICustomDrawOperation'
+hide_title: true
+slug: '/avalonia/rendering/scenegraph/icustomdrawoperation'
+uid: 'Avalonia.Rendering.SceneGraph.ICustomDrawOperation'
+commentId: 'T:Avalonia.Rendering.SceneGraph.ICustomDrawOperation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.SceneGraph'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICustomDrawOperation Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.SceneGraph</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICustomDrawOperation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable, IEquatable&lt;ICustomDrawOperation&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [HitTest](#uid-0a80a791c2) | Hit test the geometry in this node. |
+| [Render](#uid-6661d736a4) | Renders the node to a drawing context. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a80a791c2"></span>
+
+### HitTest Method
+
+Hit test the geometry in this node.
+
+```csharp
+public bool HitTest(Avalonia.Point p)
+```
+
+#### Parameters
+
+`p` [Avalonia.Point](xref:Avalonia.Point)
+
+The point in global coordinates.
+
+
+#### Returns
+
+bool
+
+True if the point hits the node's geometry; otherwise false.
+
+
+#### Remarks
+
+This method does not recurse to childs, if you want
+to hit test children they must be hit tested manually.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6661d736a4"></span>
+
+### Render Method
+
+Renders the node to a drawing context.
+
+```csharp
+public void Render(Avalonia.Media.ImmediateDrawingContext context)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.ImmediateDrawingContext](xref:Avalonia.Media.ImmediateDrawingContext)
+
+The drawing context.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-865e4f10d7) | Gets the bounds of the visible content in the node in global coordinates. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-865e4f10d7"></span>
+
+### Bounds Property
+
+Gets the bounds of the visible content in the node in global coordinates.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
