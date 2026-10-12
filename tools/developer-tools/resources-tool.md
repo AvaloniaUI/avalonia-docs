@@ -81,4 +81,4 @@ The Resources tool offers four options to help you find specific resources:
 
 - [Elements tool](/tools/developer-tools/elements-tool)
 - [Assets tool](/tools/developer-tools/assets-tool)
-- [How to use resources](/docs/guides/styles-and-resources/resources)
+- [Resources](/docs/app-development/resources)

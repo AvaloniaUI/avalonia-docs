@@ -71,6 +71,6 @@ Viewer.ShareService = null; // no Share feature
 
 ## See also
 
-- [PdfViewer control](/controls/data-display/pdfviewer/index)
+- [PdfViewer control](/controls/data-display/pdfviewer/)
 - [Loading and saving](/controls/data-display/pdfviewer/loading-and-saving)
 - [Platforms and performance](/controls/data-display/pdfviewer/platforms-and-performance)

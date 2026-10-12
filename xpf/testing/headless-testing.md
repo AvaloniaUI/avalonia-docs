@@ -166,7 +166,7 @@ This ensures the Avalonia runtime is initialized once per test assembly rather t
 
 When running XPF headless tests in CI environments on Linux:
 
-- Ensure the license key is configured in the test project (see [Getting Started](/xpf/getting-started#step-4-add-your-licence-key))
+- Ensure the license key is configured in the test project (see [Getting Started](/xpf/getting-started#step-4-add-your-license-key))
 - No display server is required when using headless mode
 - If `XOpenDisplay failed` errors occur, verify that `DisableAutomaticXpfInit` is set to `true` and the headless AppBuilder is configured correctly
 
