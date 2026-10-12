@@ -1,0 +1,160 @@
+---
+title: 'DispatcherUnhandledExceptionFilterEventHandler'
+hide_title: true
+slug: '/avalonia/threading/dispatcherunhandledexceptionfiltereventhandler'
+uid: 'Avalonia.Threading.DispatcherUnhandledExceptionFilterEventHandler'
+commentId: 'T:Avalonia.Threading.DispatcherUnhandledExceptionFilterEventHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Threading'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DispatcherUnhandledExceptionFilterEventHandler Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Threading</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Threading.Dispatcher.UnhandledExceptionFilter](xref:Avalonia.Threading.Dispatcher.UnhandledExceptionFilter) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate DispatcherUnhandledExceptionFilterEventHandler
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> DispatcherUnhandledExceptionFilterEventHandler
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DispatcherUnhandledExceptionFilterEventHandler](#uid-05cb744236) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05cb744236"></span>
+
+### DispatcherUnhandledExceptionFilterEventHandler Constructor
+
+```csharp
+public DispatcherUnhandledExceptionFilterEventHandler(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-49c6d714c2) | No summary available. |
+| [EndInvoke](#uid-51c9e25e2b) | No summary available. |
+| [Invoke](#uid-da43c4fa44) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49c6d714c2"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(object sender, Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs e, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`sender` object
+
+
+`e` [Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs](xref:Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs)
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51c9e25e2b"></span>
+
+### EndInvoke Method
+
+```csharp
+public void EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da43c4fa44"></span>
+
+### Invoke Method
+
+```csharp
+public void Invoke(object sender, Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs e)
+```
+
+#### Parameters
+
+`sender` object
+
+
+`e` [Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs](xref:Avalonia.Threading.DispatcherUnhandledExceptionFilterEventArgs)
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,95 @@
+---
+title: 'ICompositionGpuImportedObject'
+hide_title: true
+slug: '/avalonia/rendering/composition/icompositiongpuimportedobject'
+uid: 'Avalonia.Rendering.Composition.ICompositionGpuImportedObject'
+commentId: 'T:Avalonia.Rendering.Composition.ICompositionGpuImportedObject'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICompositionGpuImportedObject Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An imported GPU object that's usable by composition APIs
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICompositionGpuImportedObject
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAsyncDisposable
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ImportCompleted](#uid-93f26986bf) | Tracks the import status of the object. Once the task is completed, the user code is allowed to free the resource owner in case when a non-owning sharing handle was used. |
+| [IsLost](#uid-455f141d6f) | Indicates if the device context this instance is associated with is no longer available |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93f26986bf"></span>
+
+### ImportCompleted Property
+
+Tracks the import status of the object. Once the task is completed,
+the user code is allowed to free the resource owner in case when a non-owning
+sharing handle was used.
+
+```csharp
+public System.Threading.Tasks.Task ImportCompleted { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-455f141d6f"></span>
+
+### IsLost Property
+
+Indicates if the device context this instance is associated with is no longer available
+
+```csharp
+public bool IsLost { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,96 @@
+---
+title: 'ImageEncodingPolicy'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/imageencodingpolicy'
+uid: 'Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImageEncodingPolicy Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+How a serializer obtains the bytes to embed for an image whose encoded format the
+target format does not accept (or which carries only decoded pixels).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ImageEncodingPolicy
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ImageEncodingPolicy
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [PreserveEncodedOnly](#uid-70dd13e162) | Preserve original encoded bytes only. If the target rejects the format (or the image has no encoded bytes), skip it rather than re-encode. |
+| [ReencodeFromPixels](#uid-3de1410578) | Transcode to a format the target accepts (decode → pixels → encode) using the built-in codec. The default. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70dd13e162"></span>
+
+### PreserveEncodedOnly Field
+
+Preserve original encoded bytes only. If the target rejects the format (or the
+image has no encoded bytes), skip it rather than re-encode.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy PreserveEncodedOnly
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3de1410578"></span>
+
+### ReencodeFromPixels Field
+
+Transcode to a format the target accepts (decode → pixels → encode) using the
+built-in codec. The default.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.ImageEncodingPolicy ReencodeFromPixels
+```
+
+</section>
+
+</ApiRefPage>
+

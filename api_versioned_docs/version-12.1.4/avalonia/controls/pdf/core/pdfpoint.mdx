@@ -1,0 +1,233 @@
+---
+title: 'PdfPoint'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfpoint'
+uid: 'Avalonia.Controls.Pdf.Core.PdfPoint'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfPoint'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfPoint Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A point in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PdfPoint
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PdfPoint
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PdfPoint&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfPoint](#uid-499a0e3d83) | A point in PDF user space. Coordinates are in points (1/72 inch) with the origin at the page's bottom-left corner; Y increases upward (PDF convention, not screen convention). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-499a0e3d83"></span>
+
+### PdfPoint Constructor
+
+A point in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+
+```csharp
+public PdfPoint(double X, double Y)
+```
+
+#### Parameters
+
+`X` double
+
+
+`Y` double
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-3fd98c375c) | No summary available. |
+| [Equals (2 overloads)](#uid-f0d8557895) | No summary available. |
+| [GetHashCode](#uid-ba258eda35) | No summary available. |
+| [ToString](#uid-446b087212) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fd98c375c"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(double& X, double& Y)
+```
+
+#### Parameters
+
+`X` double&amp;
+
+
+`Y` double&amp;
+
+
+</section>
+
+<span id="uid-f0d8557895"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd3f8dd827"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Pdf.Core.PdfPoint other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Pdf.Core.PdfPoint](xref:Avalonia.Controls.Pdf.Core.PdfPoint)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aab024c107"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba258eda35"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-446b087212"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [X](#uid-06c92d42de) | No summary available. |
+| [Y](#uid-fc26572066) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06c92d42de"></span>
+
+### X Property
+
+```csharp
+public double X { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc26572066"></span>
+
+### Y Property
+
+```csharp
+public double Y { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

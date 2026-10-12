@@ -162,6 +162,7 @@ string
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [AxisKey](#uid-c9009424cb) | Gets or sets the key used by series to select this axis. Keys should be unique within the owning chart's vertical-axis collection. |
 | [AxisLineDashStyle](#uid-2927587df1) | Gets or sets the dash style for the axis line. |
 | [AxisLineStroke](#uid-78e6ca1843) | Gets or sets the brush for the axis line. When set, overrides the default axis brush for this axis's line. |
 | [AxisLineStrokeThickness](#uid-d9215669f0) | Gets or sets the thickness of the axis line. |
@@ -240,6 +241,7 @@ string
 | [Padding](../primitives/templatedcontrol.mdx#uid-f5271cd58d) | Gets or sets the padding placed between the border of the control and its content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
 | [PlotBands](#uid-3990cb7027) | Gets the collection of plot bands for this axis. |
+| [Position](#uid-43e3c91cfd) | Gets or sets where this vertical axis is arranged around the plot area. |
 | [RenderTransform](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -266,6 +268,21 @@ string
 | [VerticalAlignment](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [Width](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [ZIndex](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../../visual.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9009424cb"></span>
+
+### AxisKey Property
+
+Gets or sets the key used by series to select this axis. Keys should be unique within
+the owning chart's vertical-axis collection.
+
+```csharp
+public string AxisKey { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -551,6 +568,20 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Controls.Charts.ChartPlotBand>
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-43e3c91cfd"></span>
+
+### Position Property
+
+Gets or sets where this vertical axis is arranged around the plot area.
+
+```csharp
+public Avalonia.Controls.Charts.ChartAxisPosition Position { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3a35faf6c4"></span>
 
 ### ShowAxisLine Property
@@ -707,6 +738,7 @@ public Avalonia.Media.IBrush TitleForeground { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [AxisKeyProperty](#uid-e28b877e79) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisKey](xref:Avalonia.Controls.Charts.ChartAxis.AxisKey) Avalonia property. |
 | [AxisLineDashStyleProperty](#uid-7d2e09ebd8) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineDashStyle](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineDashStyle) Avalonia property. |
 | [AxisLineStrokeProperty](#uid-8c469289ee) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineStroke](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineStroke) Avalonia property. |
 | [AxisLineStrokeThicknessProperty](#uid-14d216e7e5) | Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisLineStrokeThickness](xref:Avalonia.Controls.Charts.ChartAxis.AxisLineStrokeThickness) Avalonia property. |
@@ -799,6 +831,7 @@ public Avalonia.Media.IBrush TitleForeground { get; set; }
 | [PointerTouchPadGestureRotateEvent](../../input/inputelement.mdx#uid-409dcc6358) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureRotate](xref:Avalonia.Input.InputElement.PointerTouchPadGestureRotate) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PointerTouchPadGestureSwipeEvent](../../input/inputelement.mdx#uid-959da18351) | Defines the [Avalonia.Input.InputElement.PointerTouchPadGestureSwipe](xref:Avalonia.Input.InputElement.PointerTouchPadGestureSwipe) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PointerWheelChangedEvent](../../input/inputelement.mdx#uid-dcb45add6a) | Defines the [Avalonia.Input.InputElement.PointerWheelChanged](xref:Avalonia.Input.InputElement.PointerWheelChanged) event. Inherited from [InputElement](../../input/inputelement.mdx). |
+| [PositionProperty](#uid-9a185daf8b) | Identifies the [Avalonia.Controls.Charts.ChartAxis.Position](xref:Avalonia.Controls.Charts.ChartAxis.Position) Avalonia property. |
 | [PullGestureEndedEvent](../../input/inputelement.mdx#uid-274f53878f) | Defines the [Avalonia.Input.InputElement.PullGestureEnded](xref:Avalonia.Input.InputElement.PullGestureEnded) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [PullGestureEvent](../../input/inputelement.mdx#uid-b9a60d43c7) | Defines the [Avalonia.Input.InputElement.PullGesture](xref:Avalonia.Input.InputElement.PullGesture) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [RenderTransformOriginProperty](../../visual.mdx#uid-963d266cdd) | Defines the [Avalonia.Visual.RenderTransformOrigin](xref:Avalonia.Visual.RenderTransformOrigin) property. Inherited from [Visual](../../visual.mdx). |
@@ -838,6 +871,20 @@ public Avalonia.Media.IBrush TitleForeground { get; set; }
 | [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../../visual.mdx). |
 | [WidthProperty](../../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [ZIndexProperty](../../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../../visual.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e28b877e79"></span>
+
+### AxisKeyProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartAxis.AxisKey](xref:Avalonia.Controls.Charts.ChartAxis.AxisKey) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> AxisKeyProperty
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -1101,6 +1148,20 @@ Identifies the [Avalonia.Controls.Charts.ChartAxis.MinorTickCount](xref:Avalonia
 
 ```csharp
 public Avalonia.StyledProperty<int> MinorTickCountProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a185daf8b"></span>
+
+### PositionProperty Field
+
+Identifies the [Avalonia.Controls.Charts.ChartAxis.Position](xref:Avalonia.Controls.Charts.ChartAxis.Position) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Charts.ChartAxisPosition> PositionProperty
 ```
 
 </section>

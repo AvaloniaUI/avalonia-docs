@@ -1,0 +1,96 @@
+---
+title: 'WindowClosingBehavior'
+hide_title: true
+slug: '/avalonia/controls/windowclosingbehavior'
+uid: 'Avalonia.Controls.WindowClosingBehavior'
+commentId: 'T:Avalonia.Controls.WindowClosingBehavior'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WindowClosingBehavior Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how the [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event behaves in the presence of child windows.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum WindowClosingBehavior
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> WindowClosingBehavior
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [OwnerAndChildWindows](#uid-69b597ec96) | When the owner window is closed, the child windows' [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event will be raised, followed by the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) events. A child canceling the close will result in the owner Window's close being cancelled. |
+| [OwnerWindowOnly](#uid-e2e51e56e0) | When the owner window is closed, only the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event will be raised. This behavior is the same as WPF's. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69b597ec96"></span>
+
+### OwnerAndChildWindows Field
+
+When the owner window is closed, the child windows' [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event
+will be raised, followed by the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) events. A child
+canceling the close will result in the owner Window's close being cancelled.
+
+```csharp
+public Avalonia.Controls.WindowClosingBehavior OwnerAndChildWindows
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2e51e56e0"></span>
+
+### OwnerWindowOnly Field
+
+When the owner window is closed, only the owner window's [Avalonia.Controls.Window.Closing](xref:Avalonia.Controls.Window.Closing) event
+will be raised. This behavior is the same as WPF's.
+
+```csharp
+public Avalonia.Controls.WindowClosingBehavior OwnerWindowOnly
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,157 @@
+---
+title: 'ShareOptions'
+hide_title: true
+slug: '/avalonia/controls/pdf/services/shareoptions'
+uid: 'Avalonia.Controls.Pdf.Services.ShareOptions'
+commentId: 'T:Avalonia.Controls.Pdf.Services.ShareOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Services'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ShareOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Services</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options for sharing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ShareOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ShareOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ShareOptions](#uid-2b523a8f96) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2b523a8f96"></span>
+
+### ShareOptions Constructor
+
+```csharp
+public ShareOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Anchor](#uid-d67a3d8f93) | Control the share sheet is anchored to (macOS popover, iPad popover). The viewer fills this in automatically with the toolbar button that opened it. |
+| [Owner](#uid-28932e2bbb) | Top level that owns the system share sheet. The viewer fills this in automatically. |
+| [Subject](#uid-4a79b1dee3) | Subject line (for email sharing). |
+| [Text](#uid-39fb733be4) | Text to include with the shared file. |
+| [Title](#uid-6e384a6c2c) | Title for the share dialog. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d67a3d8f93"></span>
+
+### Anchor Property
+
+Control the share sheet is anchored to (macOS popover, iPad popover). The viewer fills
+this in automatically with the toolbar button that opened it.
+
+```csharp
+public Avalonia.Visual Anchor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28932e2bbb"></span>
+
+### Owner Property
+
+Top level that owns the system share sheet. The viewer fills this in automatically.
+
+```csharp
+public Avalonia.Controls.TopLevel Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a79b1dee3"></span>
+
+### Subject Property
+
+Subject line (for email sharing).
+
+```csharp
+public string Subject { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39fb733be4"></span>
+
+### Text Property
+
+Text to include with the shared file.
+
+```csharp
+public string Text { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e384a6c2c"></span>
+
+### Title Property
+
+Title for the share dialog.
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

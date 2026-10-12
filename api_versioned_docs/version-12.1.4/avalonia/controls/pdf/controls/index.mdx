@@ -1,0 +1,44 @@
+---
+title: 'Avalonia.Controls.Pdf.Controls'
+hide_title: true
+slug: '/avalonia/controls/pdf/controls'
+uid: 'Avalonia.Controls.Pdf.Controls'
+commentId: 'N:Avalonia.Controls.Pdf.Controls'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Controls Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Pdf.Controls`
+
+</div>
+
+## Types
+
+- [OverflowToolbarPanel](overflowtoolbarpanel.mdx) - Horizontal panel that arranges children left-to-right. When the natural
+width exceeds the available width, the children that don't fit are
+"demoted" — kept in the visual tree but arranged at an empty [Avalonia.Rect](xref:Avalonia.Rect)
+so they take no visible space — and exposed via
+[Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.OverflowedChildren](xref:Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.OverflowedChildren). A child marked with
+[Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.IsOverflowIndicatorProperty](xref:Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.IsOverflowIndicatorProperty) is reserved as the rightmost slot
+when overflow occurs, so the host can render a "more" button there.
+
+The host listens to [Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.OverflowChanged](xref:Avalonia.Controls.Pdf.Controls.OverflowToolbarPanel.OverflowChanged) and mirrors the overflowed
+originals as proxy entries inside an overflow flyout. The originals stay in
+this panel (avoiding the parent-swap headaches of re-parenting children at
+runtime) and the proxies forward state/clicks to them.
+</ApiRefPage>
+

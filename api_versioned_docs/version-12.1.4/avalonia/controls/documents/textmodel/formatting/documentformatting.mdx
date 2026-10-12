@@ -1,0 +1,304 @@
+---
+title: 'DocumentFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/documentformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Document-level formatting snapshot. Value type for zero-reference safety.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct DocumentFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> DocumentFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;DocumentFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Contains format-agnostic page-level properties that apply to the entire document.
+Format-specific details (header/footer margins, gutter, etc.) are stored
+in format-specific metadata on the root [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode).
+
+All measurements are in device-independent pixels (DIPs) to match Avalonia conventions.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-b40a11a754) | No summary available. |
+| [GetHashCode](#uid-606ec22086) | No summary available. |
+| [ToString](#uid-759ce64257) | No summary available. |
+
+<span id="uid-b40a11a754"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d911ceaef0"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-43b6fbc5d3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-606ec22086"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-759ce64257"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-e15a974777) | Default formatting with no explicit values set. |
+| [FootnoteNumberFormat](#uid-ba63ee1c2d) | How the document numbers its footnotes. The anchor texts in the snapshot are already in this format. Maps to DOCX `w:footnotePr/w:numFmt` in the settings and to the RTF `\ftnn*` keywords. |
+| [IsPageHeightFixed](#uid-5209ea6a0e) | True when [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageHeight](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageHeight) is an explicit fixed value. False means height is auto/resolved from runtime view geometry. |
+| [IsPageWidthFixed](#uid-5aa123e18d) | True when [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageWidth) is an explicit fixed value. False means width is auto/resolved from runtime view geometry. |
+| [PageBandDistance](#uid-38167def44) | Distance from the sheet edge to a page band in device-independent pixels: the header's top sits this far below the sheet top, the footer's bottom this far above the sheet bottom. Null means the document declares none and [Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance](xref:Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance) applies. Maps to DOCX `w:pgMar/@w:header` and `@w:footer` and to RTF `\headery` and `\footery`. |
+| [PageHeight](#uid-60d0ca8ee9) | Page height in device-independent pixels. Null means not explicitly known. |
+| [PagePadding](#uid-9f1d73e527) | Page padding (content margins) in device-independent pixels. Maps to page margins in DOCX (`w:pgMar`) and RTF (`\margl`, `\margr`, `\margt`, `\margb`). Null means not explicitly set (use application defaults). |
+| [PageWidth](#uid-2a82b6e7a5) | Page width in device-independent pixels. Null means not explicitly known. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e15a974777"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba63ee1c2d"></span>
+
+### FootnoteNumberFormat Property
+
+How the document numbers its footnotes. The anchor texts in the snapshot are
+already in this format. Maps to DOCX `w:footnotePr/w:numFmt` in the
+settings and to the RTF `\ftnn*` keywords.
+
+```csharp
+public Avalonia.Controls.Documents.FootnoteNumberFormat FootnoteNumberFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5209ea6a0e"></span>
+
+### IsPageHeightFixed Property
+
+True when [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageHeight](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageHeight) is an explicit fixed value.
+False means height is auto/resolved from runtime view geometry.
+
+```csharp
+public bool IsPageHeightFixed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5aa123e18d"></span>
+
+### IsPageWidthFixed Property
+
+True when [Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageWidth](xref:Avalonia.Controls.Documents.TextModel.Formatting.DocumentFormatting.PageWidth) is an explicit fixed value.
+False means width is auto/resolved from runtime view geometry.
+
+```csharp
+public bool IsPageWidthFixed { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38167def44"></span>
+
+### PageBandDistance Property
+
+Distance from the sheet edge to a page band in device-independent pixels: the
+header's top sits this far below the sheet top, the footer's bottom this far
+above the sheet bottom. Null means the document declares none and
+[Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance](xref:Avalonia.Controls.Documents.PageBandPolicy.DefaultDistance) applies. Maps to DOCX
+`w:pgMar/@w:header` and `@w:footer` and to RTF `\headery` and
+`\footery`.
+
+```csharp
+public Nullable<double> PageBandDistance { get; set; }
+```
+
+#### Remarks
+
+A band taller than the space this leaves pushes the body down, so the value
+decides where pages break. Screen, print and PDF all read it from here: a
+distance held by a view would break the same document on different lines.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60d0ca8ee9"></span>
+
+### PageHeight Property
+
+Page height in device-independent pixels.
+Null means not explicitly known.
+
+```csharp
+public Nullable<double> PageHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9f1d73e527"></span>
+
+### PagePadding Property
+
+Page padding (content margins) in device-independent pixels.
+Maps to page margins in DOCX (`w:pgMar`) and RTF
+(`\margl`, `\margr`, `\margt`, `\margb`).
+Null means not explicitly set (use application defaults).
+
+```csharp
+public Nullable<Avalonia.Thickness> PagePadding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2a82b6e7a5"></span>
+
+### PageWidth Property
+
+Page width in device-independent pixels.
+Null means not explicitly known.
+
+```csharp
+public Nullable<double> PageWidth { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

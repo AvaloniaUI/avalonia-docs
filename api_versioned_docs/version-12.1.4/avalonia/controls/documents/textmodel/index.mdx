@@ -1,0 +1,87 @@
+---
+title: 'Avalonia.Controls.Documents.TextModel'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel'
+uid: 'Avalonia.Controls.Documents.TextModel'
+commentId: 'N:Avalonia.Controls.Documents.TextModel'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextModel Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.TextModel`
+
+</div>
+
+## Types
+
+- [ChangeOrigin](changeorigin.mdx) - Indicates whether a document change was produced by a normal edit, an
+undo replay, or a redo replay.
+- [DocumentChangeKind](documentchangekind.mdx) - Specifies the kind of document change.
+- [DocumentChangedEventArgs](documentchangedeventargs.mdx) - Raised via [Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed) when an outermost
+[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope completes after producing
+at least one observable change. Suppressed entirely on empty / no-op
+scopes — handlers can rely on the event meaning "something changed."
+- [INodeKindHandler](inodekindhandler.mdx) - Handles the full lifecycle for a specific [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind):
+element creation, snapshot capture/restore, and visual node creation.
+Each registered kind is bound to exactly one handler.
+- [LogicalDirection](logicaldirection.mdx) - Specifies the direction of movement or gravity for text positions.
+- [MarkdownNodeKinds](markdownnodekinds.mdx) - Custom [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) registrations for Markdown-specific elements.
+- [NodeKindFlags](nodekindflags.mdx) - Category flags for [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind).
+Used by [Avalonia.Controls.Documents.TextSchema](xref:Avalonia.Controls.Documents.TextSchema) to validate containment rules
+without exhaustive kind enumeration.
+- [StaticTextPointer](statictextpointer.mdx) - A lightweight value type representing a document position as an offset
+with logical direction (gravity). Use this instead of [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+on hot paths where only offset and direction are needed (rendering,
+hit-testing, line queries).
+- [TextChangeEventArgs](textchangeeventargs.mdx) - Raised after a single text change is applied (via
+[Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) event). Multiple text changes may
+fire within one [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope; consumers
+that want a per-commit view should subscribe to
+[Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed) instead.
+- [TextDocument](textdocument.mdx) - Block-level operations for [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) (split, merge, etc.).
+- [TextDocument.c.a](textdocument-c-a.mdx)
+- [TextDocument.d.a](textdocument-d-a.mdx)
+- [TextDocument.e.a](textdocument-e-a.mdx)
+- [TextDocumentNodeKind](textdocumentnodekind.mdx) - Identifies the kind of a document node. Built-in kinds are provided as static fields.
+Custom kinds can be registered via [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%29).
+- [TextFootnote](textfootnote.mdx) - A footnote at the text-model level: a nested [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) holding
+the note's body, paired by [Avalonia.Controls.Documents.TextModel.TextFootnote.NoteId](xref:Avalonia.Controls.Documents.TextModel.TextFootnote.NoteId) with the
+[Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) anchor that carries the number. The owning
+document keeps its notes in [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes) in anchor order,
+snapshots them with itself and restores them from a snapshot; the
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) element is the optional facade over one of these, the way
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) is over a text document. The rendered number is the
+note's position among the document's notes, never stored here.
+- [TextFootnoteCollection](textfootnotecollection.mdx) - The footnotes a text document owns, in anchor order. Adding a note makes the
+document its owner and joins the note's undo to the document's stack; removing it
+releases both, and the membership itself is undoable when the owner records.
+Ownership is exclusive, and a nested document (a page band, a note) owns no notes.
+- [TextPageBand](textpageband.mdx) - A page band at the text-model level: a nested [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) with the
+role and rule that place it and the identity a section's references name. The
+owning document keeps its bands in [Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands), snapshots
+them with itself, and restores them from a snapshot; the [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+element is the optional facade over one of these, the way [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+is over a text document.
+- [TextPageBandCollection](textpagebandcollection.mdx) - The bands a text document owns. Adding a band makes the document its owner and
+joins the band's undo to the document's stack; removing it releases both. Ownership
+is exclusive, a band document owns no bands, and the first band with a given role
+and rule is the one the rule places.
+- [TextPointer](textpointer.mdx) - A position within a document that can be navigated and used for editing.
+Uses character offsets (not symbols) for simplicity.
+- [TextRange](textrange.mdx) - Represents a range of text between two pointers.
+</ApiRefPage>
+

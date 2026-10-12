@@ -247,7 +247,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [LabelCornerRadius](#uid-79e766a65f) | Gets or sets the corner radius of the label background. |
 | [LabelFontSize](#uid-d2b188f9b0) | Gets or sets the font size of the label. |
 | [LabelForeground](#uid-7e931c37e0) | Gets or sets the foreground brush of the label. |
-| [LabelFormat](#uid-a62b77d386) | Gets or sets the format string for the label. &#123;0&#125; is the value, &#123;1&#125; is the category. |
+| [LabelFormat](#uid-a62b77d386) | Gets or sets the format string for the label. &#123;0&#125; is the value, &#123;1&#125; is the category. A format without braces, such as "N0", formats the value. |
 | [LabelOffset](#uid-3b4f03049a) | Gets or sets the distance from the data point to the label. |
 | [LabelPadding](#uid-360b907b65) | Gets or sets the padding of the label. |
 | [LetterSpacing](../primitives/templatedcontrol.mdx#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
@@ -300,6 +300,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [ValuePath](chartseries.mdx#uid-4297742d2f) | Gets or sets the property path to extract the value from each data item. Inherited from [ChartSeries](chartseries.mdx). |
 | [VerticalAlignment](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [Width](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
+| [YAxisKey](#uid-3b15cb50f5) | Gets or sets the key of the Y-axis this series should use for scaling. When set, this takes precedence over [Avalonia.Controls.Charts.CartesianSeries.YAxisPosition](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisPosition). Keys are matched using an ordinal, case-sensitive comparison; the primary axis is used when no match is found. |
 | [YAxisPosition](#uid-188ab70430) | Gets or sets which Y-axis this series should use for scaling. |
 | [ZIndex](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../../visual.mdx). |
 
@@ -394,7 +395,7 @@ public Avalonia.Media.IBrush LabelForeground { get; set; }
 ### LabelFormat Property
 
 Gets or sets the format string for the label.
-&#123;0&#125; is the value, &#123;1&#125; is the category.
+&#123;0&#125; is the value, &#123;1&#125; is the category. A format without braces, such as "N0", formats the value.
 
 ```csharp
 public string LabelFormat { get; set; }
@@ -586,6 +587,22 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Controls.Charts.Trendline> Tre
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-3b15cb50f5"></span>
+
+### YAxisKey Property
+
+Gets or sets the key of the Y-axis this series should use for scaling.
+When set, this takes precedence over [Avalonia.Controls.Charts.CartesianSeries.YAxisPosition](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisPosition). Keys are matched using
+an ordinal, case-sensitive comparison; the primary axis is used when no match is found.
+
+```csharp
+public string YAxisKey { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-188ab70430"></span>
 
 ### YAxisPosition Property
@@ -595,6 +612,11 @@ Gets or sets which Y-axis this series should use for scaling.
 ```csharp
 public Avalonia.Controls.Charts.YAxisPosition YAxisPosition { get; set; }
 ```
+
+#### Remarks
+
+Convenience selector for the first two Y-axes. Use [Avalonia.Controls.Charts.CartesianSeries.YAxisKey](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisKey) for charts with
+named axes or more than two Y-axes.
 
 </section>
 
@@ -741,6 +763,7 @@ public Avalonia.Controls.Charts.YAxisPosition YAxisPosition { get; set; }
 | [VerticalAlignmentProperty](../../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../../visual.mdx). |
 | [WidthProperty](../../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
+| [YAxisKeyProperty](#uid-0fcba2e09f) | Identifies the [Avalonia.Controls.Charts.CartesianSeries.YAxisKey](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisKey) Avalonia property. |
 | [YAxisPositionProperty](#uid-fd92dc7e39) | Identifies the [Avalonia.Controls.Charts.CartesianSeries.YAxisPosition](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisPosition) Avalonia property. |
 | [ZIndexProperty](../../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../../visual.mdx). |
 
@@ -1020,6 +1043,20 @@ Identifies the [Avalonia.Controls.Charts.CartesianSeries.Trendlines](xref:Avalon
 
 ```csharp
 public Avalonia.DirectProperty<Avalonia.Controls.Charts.CartesianSeries, Avalonia.Collections.AvaloniaList<Avalonia.Controls.Charts.Trendline>> TrendlinesProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fcba2e09f"></span>
+
+### YAxisKeyProperty Field
+
+Identifies the [Avalonia.Controls.Charts.CartesianSeries.YAxisKey](xref:Avalonia.Controls.Charts.CartesianSeries.YAxisKey) Avalonia property.
+
+```csharp
+public Avalonia.StyledProperty<string> YAxisKeyProperty
 ```
 
 </section>

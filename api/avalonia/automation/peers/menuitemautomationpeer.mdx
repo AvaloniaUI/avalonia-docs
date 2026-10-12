@@ -51,7 +51,7 @@ public class MenuItemAutomationPeer
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> MenuItemAutomationPeer
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/itoggleprovider">IToggleProvider</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/iexpandcollapseprovider">IExpandCollapseProvider</a>, <a href="../provider/iinvokeprovider">IInvokeProvider</a>, <a href="../provider/itoggleprovider">IToggleProvider</a>
 </div>
 </div>
 
@@ -83,7 +83,9 @@ public MenuItemAutomationPeer(Avalonia.Controls.MenuItem owner)
 | Name | Description |
 | --- | --- |
 | [BringIntoView](automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [Collapse](#uid-05dd9ede07) | No summary available. |
 | [CreatePeerForElement](controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
+| [Expand](#uid-ff35790552) | No summary available. |
 | [FromElement](controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [GetAcceleratorKey](automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetAccessKey](automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
@@ -106,6 +108,7 @@ public MenuItemAutomationPeer(Avalonia.Controls.MenuItem owner)
 | [GetPlaceholderText](automationpeer.mdx#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetProvider](automationpeer.mdx#uid-ee05fc8d1e) | Inherited from [AutomationPeer](automationpeer.mdx). |
 | [HasKeyboardFocus](automationpeer.mdx#uid-5f0d3a3d10) | Gets a value that indicates whether the element that is associated with this automation peer currently has keyboard focus. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [Invoke](#uid-ef22aaecea) | No summary available. |
 | [IsContentElement](automationpeer.mdx#uid-5202d69eb1) | Gets a value that indicates whether the element that is associated with this automation peer contains data that is presented to the user. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [IsControlElement](automationpeer.mdx#uid-665cdd1957) | Gets a value that indicates whether the element is understood by the user as interactive or as contributing to the logical structure of the control in the GUI. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [IsEnabled](automationpeer.mdx#uid-cc55d0a61a) | Gets a value indicating whether the control is enabled for user interaction. Inherited from [AutomationPeer](automationpeer.mdx). |
@@ -116,11 +119,61 @@ public MenuItemAutomationPeer(Avalonia.Controls.MenuItem owner)
 | [ShowContextMenu](automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [ToScreen](automationpeer.mdx#uid-51bb13f806) | Converts a rectangle in the peer's coordinate space, as returned by [Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is not currently hosted in a rendered visual tree. Inherited from [AutomationPeer](automationpeer.mdx). |
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-05dd9ede07"></span>
+
+### Collapse Method
+
+```csharp
+public void Collapse()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff35790552"></span>
+
+### Expand Method
+
+```csharp
+public void Expand()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef22aaecea"></span>
+
+### Invoke Method
+
+```csharp
+public void Invoke()
+```
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
+| [ExpandCollapseState](#uid-a573775264) | No summary available. |
 | [Owner](#uid-790a037302) | No summary available. |
+| [ShowsMenu](#uid-17b6422c7b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a573775264"></span>
+
+### ExpandCollapseState Property
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -130,6 +183,18 @@ public MenuItemAutomationPeer(Avalonia.Controls.MenuItem owner)
 
 ```csharp
 public Avalonia.Controls.MenuItem Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17b6422c7b"></span>
+
+### ShowsMenu Property
+
+```csharp
+public bool ShowsMenu { get; set; }
 ```
 
 </section>

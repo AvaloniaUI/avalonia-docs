@@ -1,0 +1,197 @@
+---
+title: 'IPdfAdapter'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfadapter'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfAdapter'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfAdapter'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfAdapter Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-agnostic interface for PDF rendering operations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfAdapter
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [LoadDocumentAsync (3 overloads)](#uid-2105ba9bcd) | Loads a PDF document from a stream. The stream is read once from its current position and is never disposed by the adapter; the document keeps its own copy of the bytes. |
+
+<span id="uid-2105ba9bcd"></span>
+
+### LoadDocumentAsync overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-116014fe1c"></span>
+
+#### LoadDocumentAsync Method
+
+Loads a PDF document from a stream. The stream is read once from its current position and
+is never disposed by the adapter; the document keeps its own copy of the bytes.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Pdf.Core.IPdfDocument> LoadDocumentAsync(System.IO.Stream stream, string password, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`stream` System.IO.Stream
+
+
+`password` string
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6e86f2ead"></span>
+
+#### LoadDocumentAsync Method
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Pdf.Core.IPdfDocument> LoadDocumentAsync(ReadOnlyMemory<byte> data, string password, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`data` ReadOnlyMemory&lt;byte&gt;
+
+
+`password` string
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63002783f8"></span>
+
+#### LoadDocumentAsync Method
+
+Loads a PDF document from a file path.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Controls.Pdf.Core.IPdfDocument> LoadDocumentAsync(string path, string password, System.Threading.CancellationToken cancellationToken)
+```
+
+##### Parameters
+
+`path` string
+
+
+`password` string
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+##### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsInitialized](#uid-a5c18edcee) | Gets whether the adapter has been initialized. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5c18edcee"></span>
+
+### IsInitialized Property
+
+Gets whether the adapter has been initialized.
+
+```csharp
+public bool IsInitialized { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Error](#uid-7c24688073) | Event raised when the adapter encounters an error. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c24688073"></span>
+
+### Error Event
+
+Event raised when the adapter encounters an error.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Pdf.Core.PdfErrorEventArgs> Error
+```
+
+</section>
+
+</ApiRefPage>
+

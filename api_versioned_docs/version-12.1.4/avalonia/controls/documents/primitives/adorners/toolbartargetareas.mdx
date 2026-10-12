@@ -1,0 +1,240 @@
+---
+title: 'ToolbarTargetAreas'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/adorners/toolbartargetareas'
+uid: 'Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Adorners'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ToolbarTargetAreas Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Adorners</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines the areas of a document a tool, a menu entry or a block adorner
+applies to.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ToolbarTargetAreas
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ToolbarTargetAreas
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [All](#uid-067525899a) | The caret-derived target areas. The released name for [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas), which reads better beside the areas that are opted into by name. |
+| [Block](#uid-e5c7216bb4) | Applies to block-level elements. |
+| [CaretAreas](#uid-251ec05923) | The caret-derived target areas. Not every flag: a selection-driven area ([Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.TableCells](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.TableCells)) and the nested-document areas ([Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand), [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.Footnote](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.Footnote)) are opted into by name. |
+| [Footnote](#uid-09cb2356f6) | A footnote: the caret is in a note's document. Like [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand), outside [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas), so a tool opts in to notes. |
+| [Image](#uid-824e58d0d1) | Applies to inline image elements. |
+| [List](#uid-9de1b334f9) | Applies to list elements. |
+| [None](#uid-be15ebeb3f) | No target area. |
+| [PageBand](#uid-ba87d936b3) | Applies while the caret is in a page band (a header or footer on a page sheet). A band is text too, so tools targeting the text areas stay available there; deliberately not part of [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas), so a tool that lists this area alone appears only inside a band. |
+| [Table](#uid-14523bac58) | Applies to table elements. |
+| [TableCells](#uid-e758afd43e) | Applies while the selection is a set of whole table cells (a table strip selection or a text selection spanning multiple cells). Driven by the selection shape rather than the caret's ancestry, and deliberately not part of [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas): cell tools opt in explicitly so they appear only for cell selections. |
+| [Text](#uid-f67531e7c3) | Applies to inline text editing regions. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-067525899a"></span>
+
+### All Field
+
+The caret-derived target areas. The released name for [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas),
+which reads better beside the areas that are opted into by name.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas All
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e5c7216bb4"></span>
+
+### Block Field
+
+Applies to block-level elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas Block
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-251ec05923"></span>
+
+### CaretAreas Field
+
+The caret-derived target areas. Not every flag: a selection-driven area
+([Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.TableCells](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.TableCells)) and the nested-document areas
+([Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand), [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.Footnote](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.Footnote)) are opted into by name.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas CaretAreas
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09cb2356f6"></span>
+
+### Footnote Field
+
+A footnote: the caret is in a note's document. Like [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.PageBand),
+outside [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas), so a tool opts in to notes.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas Footnote
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-824e58d0d1"></span>
+
+### Image Field
+
+Applies to inline image elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas Image
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9de1b334f9"></span>
+
+### List Field
+
+Applies to list elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas List
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be15ebeb3f"></span>
+
+### None Field
+
+No target area.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba87d936b3"></span>
+
+### PageBand Field
+
+Applies while the caret is in a page band (a header or footer on a page
+sheet). A band is text too, so tools targeting the text areas stay
+available there; deliberately not part of [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas), so a tool
+that lists this area alone appears only inside a band.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas PageBand
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-14523bac58"></span>
+
+### Table Field
+
+Applies to table elements.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas Table
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e758afd43e"></span>
+
+### TableCells Field
+
+Applies while the selection is a set of whole table cells (a
+table strip selection or a text selection spanning multiple
+cells). Driven by the selection shape rather than the caret's
+ancestry, and deliberately not part of [Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas](xref:Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas.CaretAreas): cell
+tools opt in explicitly so they appear only for cell selections.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas TableCells
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f67531e7c3"></span>
+
+### Text Field
+
+Applies to inline text editing regions.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.ToolbarTargetAreas Text
+```
+
+</section>
+
+</ApiRefPage>
+
