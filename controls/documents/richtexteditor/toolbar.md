@@ -1062,7 +1062,7 @@ For precise control, write a style selector that targets a specific element with
 
 ## See also
 
-- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns)
-- [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
+- [RichTextEditor reference](/controls/documents/richtexteditor)
+- [Extension Patterns](/controls/documents/richtexteditor/extension-patterns)
+- [Performance Tuning](/controls/documents/richtexteditor/performance-tuning)
 - [Troubleshooting RichTextEditor](/troubleshooting/controls/richtexteditor)

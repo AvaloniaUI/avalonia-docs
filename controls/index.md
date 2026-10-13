@@ -71,7 +71,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>Lists display rows of information, such as contacts, languages or music genres.</p>
 </DocsCard>
 
-<DocsCard header="Markdown" href="/controls/data-display/text-display/markdown" icon="/icons/markdownrenderer-icon@2x.png" darkIcon="/icons/markdownrenderer-icon-dark@2x.png">
+<DocsCard header="Markdown" href="/controls/documents/markdown" icon="/icons/markdownrenderer-icon@2x.png" darkIcon="/icons/markdownrenderer-icon-dark@2x.png">
   <p>Render and display Markdown-formatted text content directly in your app.</p>
   <Pill>Avalonia Pro</Pill>
 </DocsCard>
@@ -107,7 +107,7 @@ Avalonia apps are made of high-level building blocks called controls, which allo
   <p>A basic shape primitive for drawing rectangles and squares in your UI.</p>
 </DocsCard>
 
-<DocsCard header="RichTextEditor" href="/controls/input/text-input/richtexteditor" icon="/icons/rte-icon@2x.png" darkIcon="/icons/rte-icon-dark@2x.png">
+<DocsCard header="RichTextEditor" href="/controls/documents/richtexteditor" icon="/icons/rte-icon@2x.png" darkIcon="/icons/rte-icon-dark@2x.png">
   <p>A rich text solution with common operations such as formatting, aligning, or undo/redo.</p>
   <Pill>Avalonia Pro</Pill>
 </DocsCard>

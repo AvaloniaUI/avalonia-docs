@@ -7,7 +7,7 @@ tags:
  - avalonia enterprise
 ---
 
-Paginated output, the paged view of `FlowDocumentPageViewer`, the editor in `DocumentViewMode.PageLayout` and the [PDF export](/controls/input/text-input/richtexteditor/pdf-export) display content by filling pages line by line and consulting the document for where a page may end. This guide covers how to control page layout: explicit page breaks, the three keep rules, and per-section page setup.
+Paginated output, the paged view of `FlowDocumentPageViewer`, the editor in `DocumentViewMode.PageLayout` and the [PDF export](/controls/documents/richtexteditor/pdf-export) display content by filling pages line by line and consulting the document for where a page may end. This guide covers how to control page layout: explicit page breaks, the three keep rules, and per-section page setup.
 
 The continuous view ignores every one of them except drawing the page-break marker.
 
@@ -150,12 +150,12 @@ For reference, these are the fill rules the page-break policy sits on top of:
 - Tables split between rows and never through one. Rows covered by a row-spanning cell move together with their anchor row. The grid closes above the break and reopens below it.
 - A split element stays one element whose geometry spans pages. Selection, copy, caret placement and hit-testing all work mid-fragment.
 
-Footnotes take part in the fill. A line carrying anchors reserves its notes' heights at the bottom of its page, and a line that no longer fits moves to the next page with its notes. See [Footnotes](/controls/input/text-input/richtexteditor/footnotes).
+Footnotes take part in the fill. A line carrying anchors reserves its notes' heights at the bottom of its page, and a line that no longer fits moves to the next page with its notes. See [Footnotes](/controls/documents/richtexteditor/footnotes).
 
-Headers or footers that outgrow their margins shorten the page's body. See [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers).
+Headers or footers that outgrow their margins shorten the page's body. See [Headers and footers](/controls/documents/richtexteditor/headers-and-footers).
 
 ## See also
 
-- [PDF export](/controls/input/text-input/richtexteditor/pdf-export) - the same policy, written to a file
-- [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - page bands and the distance that shortens a page
-- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - notes reserve room at the bottom of their page
+- [PDF export](/controls/documents/richtexteditor/pdf-export) - the same policy, written to a file
+- [Headers and footers](/controls/documents/richtexteditor/headers-and-footers) - page bands and the distance that shortens a page
+- [Footnotes](/controls/documents/richtexteditor/footnotes) - notes reserve room at the bottom of their page

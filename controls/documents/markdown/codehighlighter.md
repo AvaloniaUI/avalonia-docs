@@ -125,5 +125,5 @@ If you omit the language identifier, the highlighter will render the block as pl
 
 ## See also
 
-- [Markdown control](/controls/data-display/text-display/markdown)
-- [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling)
+- [Markdown control](/controls/documents/markdown)
+- [Markdown styling](/controls/documents/markdown/markdown-styling)

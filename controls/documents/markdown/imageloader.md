@@ -184,5 +184,5 @@ You should implement a custom `MarkdownImageLoader` whenever the default image r
 
 ## See also
 
-- [Markdown control](/controls/data-display/text-display/markdown)
-- [CodeHighlighter](/controls/data-display/text-display/markdown/codehighlighter)
+- [Markdown control](/controls/documents/markdown)
+- [CodeHighlighter](/controls/documents/markdown/codehighlighter)

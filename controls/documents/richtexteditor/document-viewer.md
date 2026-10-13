@@ -504,7 +504,7 @@ await Task.Run(() =>
 
 `SaveAsync` is a convenience wrapper that creates a snapshot and serializes in one call. Use `CreateSnapshot()` directly when you need to serialize to multiple formats from the same document state.
 
-For a detailed discussion of threading constraints, see the [Thread Safety](/controls/input/text-input/richtexteditor/thread-safety) guide.
+For a detailed discussion of threading constraints, see the [Thread Safety](/controls/documents/richtexteditor/thread-safety) guide.
 
 ## Performance considerations
 
@@ -530,7 +530,7 @@ For documents with many blocks:
 
 When a document is used in a preview-then-export pipeline, create a single `DocumentSnapshot` with `CreateSnapshot()` and reuse it. Each call traverses the document tree (O(n) for structure). One snapshot can be serialized to multiple formats without redundant tree walks.
 
-For more optimization techniques, see the [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning) guide.
+For more optimization techniques, see the [Performance Tuning](/controls/documents/richtexteditor/performance-tuning) guide.
 
 ## Common patterns
 

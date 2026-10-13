@@ -38,11 +38,11 @@ Replace the package name with the one you need. The following Avalonia Pro packa
 | Package | Description |
 |---------|-------------|
 | [`Avalonia.Controls.Charts`](/controls/data-display/charts/#getting-started) | Library of graphs, dashboards, analytics |
-| [`Avalonia.Controls.Markdown`](/controls/data-display/text-display/markdown/#getting-started) | Markdown text rendering |
+| [`Avalonia.Controls.Documents`](/controls/documents/richtexteditor/#getting-started) | Document model used by `RichTextEditor` (see below) |
+| [`Avalonia.Controls.Markdown`](/controls/documents/markdown/#getting-started) | Markdown text rendering |
 | [`Avalonia.Controls.MediaPlayer`](/controls/media/mediaplayer/#getting-started) | Audio and video playback control |
 | [`Avalonia.Controls.PdfViewer`](/controls/data-display/pdfviewer/#getting-started) | PDF viewing, search, annotation and printing |
-| [`Avalonia.Controls.RichTextEditor`](/controls/input/text-input/richtexteditor/#getting-started) | Document editing and processing |
-| [`Avalonia.Controls.Documents`](/controls/input/text-input/richtexteditor/#getting-started) | Document model used by `RichTextEditor` |
+| [`Avalonia.Controls.RichTextEditor`](/controls/documents/richtexteditor/#getting-started) | Document editing and processing |
 | [`Avalonia.Controls.TreeDataGrid`](/controls/data-display/structured-data/treedatagrid/#getting-started) | Hierarchical and flat data grids |
 | [`Avalonia.Controls.VirtualKeyboard`](/controls/input/text-input/virtualkeyboard/#getting-started) | On-screen keyboard |
 

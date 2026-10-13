@@ -269,7 +269,7 @@ The Avalonia rich text editor consists of four components:
 3. `FlowDocumentPageViewer`: Read-only viewer that displays a document as discrete page sheets, the way a word processor's print layout does. It derives from `FlowDocumentScrollViewer`.
 4. `FlowDocument`: Document model that organizes rich text content into [blocks](#block-elements).
 
-A document also owns two kinds of nested document, each a `FlowDocument` in its own right: page bands (running [headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers), in `FlowDocument.PageBands`) and [footnotes](/controls/input/text-input/richtexteditor/footnotes) (in `FlowDocument.Footnotes`). One editor retargets to whichever of them the caret is in; there is no nested `RichTextEditor`.
+A document also owns two kinds of nested document, each a `FlowDocument` in its own right: page bands (running [headers and footers](/controls/documents/richtexteditor/headers-and-footers), in `FlowDocument.PageBands`) and [footnotes](/controls/documents/richtexteditor/footnotes) (in `FlowDocument.Footnotes`). One editor retargets to whichever of them the caret is in; there is no nested `RichTextEditor`.
 
 ### RichTextEditor properties
 
@@ -318,7 +318,7 @@ These properties are used by the `FlowDocument` component.
 | `TextAlignment` | `TextAlignment` | Alignment of text in the document, i.e., `Left`, `Center`, `Right`, `Justify`. | `Null` |
 <br />
 
-`FlowDocument` also owns two collections of nested documents: [`PageBands`](/controls/input/text-input/richtexteditor/headers-and-footers) (running headers and footers) and [footnotes](/controls/input/text-input/richtexteditor/footnotes). Both survive a snapshot round trip and join their undo to the owning document's, so they are present whether or not any element is realized.
+`FlowDocument` also owns two collections of nested documents: [`PageBands`](/controls/documents/richtexteditor/headers-and-footers) (running headers and footers) and [footnotes](/controls/documents/richtexteditor/footnotes). Both survive a snapshot round trip and join their undo to the owning document's, so they are present whether or not any element is realized.
 
 ## Block elements
 
@@ -442,9 +442,9 @@ The Avalonia rich text editor separates functions into an eight-layer architectu
 
 ## See also
 
-- [Document Viewer](/controls/input/text-input/richtexteditor/document-viewer) — read-only `FlowDocumentScrollViewer` setup
-- [Toolbar and Selection Flyouts](/controls/input/text-input/richtexteditor/toolbar) — customizing the toolbar, mini-bar, and context menu
-- [Extension Patterns](/controls/input/text-input/richtexteditor/extension-patterns) — custom nodes, highlight layers, serializers, components
-- [Performance Tuning](/controls/input/text-input/richtexteditor/performance-tuning)
-- [Thread Safety](/controls/input/text-input/richtexteditor/thread-safety)
+- [Document Viewer](/controls/documents/richtexteditor/document-viewer) — read-only `FlowDocumentScrollViewer` setup
+- [Toolbar and Selection Flyouts](/controls/documents/richtexteditor/toolbar) — customizing the toolbar, mini-bar, and context menu
+- [Extension Patterns](/controls/documents/richtexteditor/extension-patterns) — custom nodes, highlight layers, serializers, components
+- [Performance Tuning](/controls/documents/richtexteditor/performance-tuning)
+- [Thread Safety](/controls/documents/richtexteditor/thread-safety)
 - [Troubleshooting](/troubleshooting/controls/richtexteditor)
