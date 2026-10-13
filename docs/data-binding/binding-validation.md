@@ -9,9 +9,13 @@ Avalonia supports data validation through the standard .NET validation mechanism
 
 ## Validation with data annotations
 
-The simplest approach uses `System.ComponentModel.DataAnnotations` attributes on your view model properties. This works with CommunityToolkit.Mvvm's `ObservableValidator` base class:
+### Create the view model
 
-```csharp
+The simplest approach uses `System.ComponentModel.DataAnnotations` attributes on your view model properties in combination with the `ObservableValidator` base class from `CommunityToolkit.Mvvm`. The below example demonstrates this approach with a `RegistrationViewModel` that validates user input on a registration form.
+
+The `[NotifyDataErrorInfo]` attribute causes `CommunityToolkit.Mvvm` to validate the property when it changes and raise the appropriate `INotifyDataErrorInfo` events.
+
+```csharp title="RegistrationViewModel.cs"
 using System.ComponentModel.DataAnnotations;
 using CommunityToolkit.Mvvm.ComponentModel;
 
@@ -36,11 +40,13 @@ public partial class RegistrationViewModel : ObservableValidator
 }
 ```
 
-The `[NotifyDataErrorInfo]` attribute causes CommunityToolkit.Mvvm to validate the property when it changes and raise the appropriate `INotifyDataErrorInfo` events.
+### Display the validation on the UI
 
-Bind the properties with `TwoWay` mode:
+Bind the properties with `TwoWay` mode on the relevant controls in XAML. If validation fails, the control changes its border color and displays an error message.
 
-```xml
+If you are using a specific view model for the data validation, such as `RegistrationViewModel` from the sample above, you must set it as the data context of the controls. In this case, you would need to add `x:DataType="vm:RegistrationViewModel"` to the opening `<StackPanel>` tag.
+
+```xml title="MainWindow.axaml"
 <StackPanel Spacing="8">
     <TextBox Text="{Binding Name}" PlaceholderText="Name" />
     <TextBox Text="{Binding Email}" PlaceholderText="Email" />
@@ -48,13 +54,13 @@ Bind the properties with `TwoWay` mode:
 </StackPanel>
 ```
 
-When validation fails, the control displays a red border and the error message appears in a tooltip by default.
-
 ## INotifyDataErrorInfo
 
-`INotifyDataErrorInfo` is the standard .NET interface for property-level validation. Avalonia automatically picks up validation errors from any view model that implements it:
+`INotifyDataErrorInfo` is the standard .NET interface for property-level validation. Avalonia automatically picks up validation errors from any view model that implements it.
 
-```csharp
+The below example demonstrates this method using a view model that validates login form input.
+
+```csharp title="LoginViewModel.cs"
 public class LoginViewModel : INotifyPropertyChanged, INotifyDataErrorInfo
 {
     private string _username = "";
@@ -117,7 +123,9 @@ public class LoginViewModel : INotifyPropertyChanged, INotifyDataErrorInfo
 
 ## Custom validation attributes
 
-Create custom validation attributes for reusable validation logic:
+### Create a custom attribute
+
+You can create custom validation attributes. These can be reused for different validation operations throughout your app.
 
 ```csharp
 public class NotEqualToAttribute : ValidationAttribute
@@ -145,7 +153,9 @@ public class NotEqualToAttribute : ValidationAttribute
 }
 ```
 
-Use it on your view model:
+### Use custom attribute in your view model
+
+Set up a view model with the `ObservableValidator` base class [as demonstrated above](#create-the-view-model), but use your custom attribute as the validation attribute.
 
 ```csharp
 [ObservableProperty]
@@ -164,74 +174,68 @@ private string _newPassword = "";
 
 ### Default behavior
 
-By default, Avalonia shows validation errors with:
-- A red border around the control
-- A tooltip containing the error message when hovering
-- A red adorner in the control's corner
+By default, Avalonia shows validation errors with a colored border around the control and an error message in the same color. The error color is red when in light mode or yellow when in dark mode.
 
-Validation errors are also automatically exposed to screen readers and other assistive technologies through the [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) automation peer. See [Accessibility](/docs/app-development/accessibility#data-validation-errors) for details.
+Validation errors are automatically exposed to screen readers and other assistive technologies through the [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) automation peer. See [Accessibility](/docs/app-development/accessibility#data-validation-errors) for details.
 
-### Customizing error display
+### Customizing the error display
 
-Use the `DataValidationErrors` control to customize how errors are shown. Restyle the `DataValidationErrors` template through a control theme:
+Use the `DataValidationErrors` control to customize how errors are shown. In your application styles, restyle the `DataValidationErrors` template to apply your desired appearance to all instances of `DataValidationErrors`.
 
-```xml
-<Style Selector="DataValidationErrors">
-    <Setter Property="Template">
-        <ControlTemplate>
-            <DockPanel>
-                <ContentControl DockPanel.Dock="Top"
-                                ContentTemplate="{TemplateBinding ErrorTemplate}"
-                                DataContext="{TemplateBinding Owner}"
-                                Content="{Binding (DataValidationErrors.Errors)}"
-                                IsVisible="{Binding (DataValidationErrors.HasErrors)}" />
-                <ContentPresenter Name="PART_ContentPresenter"
-                                  Background="{TemplateBinding Background}"
-                                  BorderBrush="{TemplateBinding BorderBrush}"
-                                  BorderThickness="{TemplateBinding BorderThickness}"
-                                  Padding="{TemplateBinding Padding}"
-                                  Content="{TemplateBinding Content}" />
-            </DockPanel>
-        </ControlTemplate>
-    </Setter>
+The below example shows a simple customization that displays the error text in blue instead of red or yellow.
+
+```xml title="App.axaml"
+<Application.Styles>
+  <Style Selector="DataValidationErrors">
     <Setter Property="ErrorTemplate">
-        <DataTemplate>
-            <ItemsControl ItemsSource="{Binding}" Margin="0,0,0,4">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding ErrorContent}"
-                                   Foreground="Red" FontSize="12" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </DataTemplate>
+      <DataTemplate x:DataType="{x:Type x:Object}">
+        <ItemsControl ItemsSource="{Binding}"
+                      Foreground="Blue">
+          <ItemsControl.Styles>
+            <Style Selector="TextBlock" />
+          </ItemsControl.Styles>
+        </ItemsControl>
+      </DataTemplate>
     </Setter>
-</Style>
+  </Style>
+</Application.Styles>
 ```
 
-### Showing errors below the control
+### Styling the `:error` pseudoclass
 
-A common pattern places error messages below the input field instead of in a tooltip:
+To make the `TextBox` borders blue so that they match the text, you must additionally style `TextBox` itself. This is necessary because the border is drawn by `TextBox` and not `DataValidationErrors`.
 
-```xml
-<Style Selector="DataValidationErrors">
-    <Setter Property="ErrorTemplate">
-        <DataTemplate>
-            <TextBlock Foreground="#EF4444" FontSize="12" Margin="0,2,0,0">
-                <TextBlock.Text>
-                    <MultiBinding StringFormat="{}{0}">
-                        <Binding Path="[0].ErrorContent" />
-                    </MultiBinding>
-                </TextBlock.Text>
-            </TextBlock>
-        </DataTemplate>
+Target the `BorderElement` template part with your custom styling, a blue border in this case. To ensure the styling only appears during an error state, use the `:error` [pseudoclass](/docs/styling/pseudoclasses).
+
+```xml title="App.axaml"
+<Application.Styles>
+  <Style Selector="TextBox:error /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="Blue" />
+  </Style>
+</Application.Styles>
+```
+
+### Customizing the control template
+
+For deeper customization, you can restyle the entire control template of `DataValidationErrors`. This example changes the control template so that no error message is displayed during validation errors.
+
+```xml title="App.axaml"
+<Application.Styles>
+  <Style Selector="DataValidationErrors">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <ContentPresenter Name="PART_ContentPresenter"
+                          Content="{TemplateBinding Content}"
+                          ContentTemplate="{TemplateBinding ContentTemplate}" />
+      </ControlTemplate>
     </Setter>
-</Style>
+  </Style>
+</Application.Styles>
 ```
 
 ## Validating on submit
 
-To validate the entire form when the user clicks a submit button:
+`ValidateAllProperties()` runs all validation attributes on all properties at once. You can use this method to validate form input only when the user clicks a **Submit** button.
 
 ```csharp
 public partial class RegistrationViewModel : ObservableValidator
@@ -251,11 +255,11 @@ public partial class RegistrationViewModel : ObservableValidator
 }
 ```
 
-`ValidateAllProperties()` runs all validation attributes on all properties at once, which is useful for catching errors on fields the user has not yet interacted with.
-
 ## Exception-based validation
 
-Avalonia also catches exceptions thrown during binding updates and displays them as validation errors. This can be useful for simple type conversion validation:
+Avalonia also catches exceptions thrown during binding updates and displays them as validation errors. This can be useful for simple type conversion validation.
+
+While this works, `INotifyDataErrorInfo` is the preferred approach because it supports multiple errors per property and async validation.
 
 ```csharp
 private int _quantity;
@@ -271,8 +275,6 @@ public int Quantity
     }
 }
 ```
-
-While this works, `INotifyDataErrorInfo` is the preferred approach because it supports multiple errors per property and async validation.
 
 ## See also
 
