@@ -42,15 +42,29 @@ public partial class RegistrationViewModel : ObservableValidator
 
 ### Display the validation on the UI
 
-Bind the properties with `TwoWay` mode on the relevant controls in XAML. If validation fails, the control changes its border color and displays an error message.
-
-If you are using a specific view model for the data validation, such as `RegistrationViewModel` from the sample above, you must set it as the data context of the controls. In this case, you would need to add `x:DataType="vm:RegistrationViewModel"` to the opening `<StackPanel>` tag.
+Bind the properties with `TwoWay` mode on the relevant controls in XAML. If validation fails, the control shows its [validation error state](#validation-error-display).
 
 ```xml title="MainWindow.axaml"
 <StackPanel Spacing="8">
     <TextBox Text="{Binding Name}" PlaceholderText="Name" />
     <TextBox Text="{Binding Email}" PlaceholderText="Email" />
-    <NumericUpDown Value="{Binding Age}" Watermark="Age" />
+    <NumericUpDown Value="{Binding Age}" PlaceholderText="Age" />
+</StackPanel>
+```
+
+If you are using a specific view model for the data validation, such as `RegistrationViewModel` from the [previous section](#create-the-view-model), you must ensure it is set as the data context of the controls. Do this by declaring `x:DataType` and adding a `DataContext` in your XAML.
+
+```xml title="MainWindow.axaml"
+<StackPanel Spacing="8"
+  // highlight-start
+            x:DataType="vm:RegistrationViewModel">
+  <StackPanel.DataContext>
+    <vm:RegistrationViewModel />
+  </StackPanel.DataContext>
+  // highlight-end
+  <TextBox Text="{Binding Name}" PlaceholderText="Name" />
+  <TextBox Text="{Binding Email}" PlaceholderText="Email" />
+  <NumericUpDown Value="{Binding Age}" Watermark="Age" />
 </StackPanel>
 ```
 
@@ -174,25 +188,48 @@ private string _newPassword = "";
 
 ### Default behavior
 
-By default, Avalonia shows validation errors with a colored border around the control and an error message in the same color. The error color is red when in light mode or yellow when in dark mode.
+Default validation error behavior depends on the application theme and the exact control.
+
+The examples below use Fluent theme, where `TextBox` gets a colored border and an error message in the same color, and `NumericUpDown` gets an error message only. With Fluent theme, the default error colors are red in light mode, and yellow in dark mode.
 
 Validation errors are automatically exposed to screen readers and other assistive technologies through the [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) automation peer. See [Accessibility](/docs/app-development/accessibility#data-validation-errors) for details.
 
+### Changing Fluent theme to display tooltips
+
+Fluent theme ships with a `TooltipDataValidationErrors` setting. If you are using Fluent theme, but wish to display validation errors with an icon and tooltip, you can apply this setting in your application styles like shown below.
+
+This validation error behavior is similar to the default in Simple theme.
+
+```xml
+<Application.Styles>
+  <FluentTheme />
+
+  <Style Selector="DataValidationErrors">
+    <Setter Property="Theme"
+            Value="{DynamicResource TooltipDataValidationErrors}" />
+  </Style>
+</Application.Styles>
+```
+
 ### Customizing the error display
 
-Use the `DataValidationErrors` control to customize how errors are shown. In your application styles, restyle the `DataValidationErrors` template to apply your desired appearance to all instances of `DataValidationErrors`.
+Use the `DataValidationErrors` control to customize how errors are shown. In your application styles, target `DataValidationErrors` with a `Style` to apply your desired changes to the template.
 
 The below example shows a simple customization that displays the error text in blue instead of red or yellow.
 
 ```xml title="App.axaml"
 <Application.Styles>
+  <FluentTheme />
+
   <Style Selector="DataValidationErrors">
     <Setter Property="ErrorTemplate">
       <DataTemplate x:DataType="{x:Type x:Object}">
         <ItemsControl ItemsSource="{Binding}"
                       Foreground="Blue">
           <ItemsControl.Styles>
-            <Style Selector="TextBlock" />
+            <Style Selector="TextBlock">
+              <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
           </ItemsControl.Styles>
         </ItemsControl>
       </DataTemplate>
@@ -205,10 +242,14 @@ The below example shows a simple customization that displays the error text in b
 
 To make the `TextBox` borders blue so that they match the text, you must additionally style `TextBox` itself. This is necessary because the border is drawn by `TextBox` and not `DataValidationErrors`.
 
-Target the `BorderElement` template part with your custom styling, a blue border in this case. To ensure the styling only appears during an error state, use the `:error` [pseudoclass](/docs/styling/pseudoclasses).
+Target the `PART_BorderElement` element with your custom styling, a blue brush in this case. To ensure the styling only appears during an error state, use the `:error` [pseudoclass](/docs/styling/pseudoclasses).
+
+The below example shows how to implement this styling when using Fluent theme.
 
 ```xml title="App.axaml"
 <Application.Styles>
+  <FluentTheme />
+
   <Style Selector="TextBox:error /template/ Border#PART_BorderElement">
     <Setter Property="BorderBrush" Value="Blue" />
   </Style>
@@ -221,6 +262,8 @@ For deeper customization, you can restyle the entire control template of `DataVa
 
 ```xml title="App.axaml"
 <Application.Styles>
+  <FluentTheme />
+
   <Style Selector="DataValidationErrors">
     <Setter Property="Template">
       <ControlTemplate>
@@ -233,11 +276,13 @@ For deeper customization, you can restyle the entire control template of `DataVa
 </Application.Styles>
 ```
 
-## Validating on submit
+## Validate all properties
 
-`ValidateAllProperties()` runs all validation attributes on all properties at once. You can use this method to validate form input only when the user clicks a **Submit** button.
+`ValidateAllProperties()` runs all validation attributes on all properties at once. You can use this method to validate user input on an entire form, including fields the user has not yet interacted with.
 
-```csharp
+```csharp title="RegistrationViewModel.cs"
+using CommunityToolkit.Mvvm.Input;
+
 public partial class RegistrationViewModel : ObservableValidator
 {
     [RelayCommand(CanExecute = nameof(CanSubmit))]
