@@ -295,17 +295,6 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           items:[
               'data-display/text-display/label',
-              {
-                type: 'category',
-                label: 'Markdown',
-                collapsed: true,
-                items: [
-                  'data-display/text-display/markdown/index',
-                  'data-display/text-display/markdown/markdown-styling',
-                  'data-display/text-display/markdown/codehighlighter',
-                  'data-display/text-display/markdown/imageloader',
-                ],
-              },
               'data-display/text-display/selectabletextblock',
               {
                 type: 'category',
@@ -321,6 +310,42 @@ const sidebars: SidebarsConfig = {
           ],
         },
         'data-display/transitioningcontentcontrol',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Documents',
+      collapsed: true,
+      items:[
+        {
+          type: 'category',
+          label: 'Markdown',
+          collapsed: true,
+          items: [
+            'documents/markdown/index',
+            'documents/markdown/markdown-styling',
+            'documents/markdown/codehighlighter',
+            'documents/markdown/imageloader',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'RichTextEditor',
+          collapsed: true,
+          items: [
+            'documents/richtexteditor/index',
+            'documents/richtexteditor/document-viewer',
+            'documents/richtexteditor/toolbar',
+            'documents/richtexteditor/pagination',
+            'documents/richtexteditor/headers-and-footers',
+            'documents/richtexteditor/footnotes',
+            'documents/richtexteditor/pdf-export',
+            'documents/richtexteditor/markdown-serialization',
+            'documents/richtexteditor/extension-patterns',
+            'documents/richtexteditor/performance-tuning',
+            'documents/richtexteditor/thread-safety',
+          ],
+        },
       ],
     },
     {
@@ -387,24 +412,6 @@ const sidebars: SidebarsConfig = {
               'input/text-input/autocompletebox',
               'input/text-input/maskedtextbox',
               'input/text-input/textbox',
-              {
-                type: 'category',
-                label: 'RichTextEditor',
-                collapsed: true,
-                items: [
-                  'input/text-input/richtexteditor/index',
-                  'input/text-input/richtexteditor/document-viewer',
-                  'input/text-input/richtexteditor/toolbar',
-                  'input/text-input/richtexteditor/pagination',
-                  'input/text-input/richtexteditor/headers-and-footers',
-                  'input/text-input/richtexteditor/footnotes',
-                  'input/text-input/richtexteditor/pdf-export',
-                  'input/text-input/richtexteditor/markdown-serialization',
-                  'input/text-input/richtexteditor/extension-patterns',
-                  'input/text-input/richtexteditor/performance-tuning',
-                  'input/text-input/richtexteditor/thread-safety',
-                ],
-              },
               {
                 type: 'category',
                 label: 'Virtual keyboard',
