@@ -194,13 +194,13 @@ The examples below use Fluent theme, where `TextBox` gets a colored border and a
 
 Validation errors are automatically exposed to screen readers and other assistive technologies through the [`DataValidationErrors`](/api/avalonia/controls/datavalidationerrors) automation peer. See [Accessibility](/docs/app-development/accessibility#data-validation-errors) for details.
 
-### Changing Fluent theme to display tooltips
+### Display tooltip errors in Fluent theme
 
 Fluent theme ships with a `TooltipDataValidationErrors` setting. If you are using Fluent theme, but wish to display validation errors with an icon and tooltip, you can apply this setting in your application styles like shown below.
 
 This validation error behavior is similar to the default in Simple theme.
 
-```xml
+```xml title="App.axaml"
 <Application.Styles>
   <FluentTheme />
 
@@ -258,7 +258,7 @@ The below example shows how to implement this styling when using Fluent theme.
 
 ### Customizing the control template
 
-For deeper customization, you can restyle the entire control template of `DataValidationErrors`. This example changes the control template so that no error message is displayed during validation errors.
+For deeper customization, you can restyle the entire control template of `DataValidationErrors`. This example redesigns the control template so that no error message is displayed during validation errors.
 
 ```xml title="App.axaml"
 <Application.Styles>
