@@ -408,6 +408,6 @@ editor.UndoLimit = 100;
 
 ## See also
 
-- [RichTextEditor reference](/controls/input/text-input/richtexteditor)
-- [Thread safety](/controls/input/text-input/richtexteditor/thread-safety)
-- [Extension patterns](/controls/input/text-input/richtexteditor/extension-patterns)
+- [RichTextEditor reference](/controls/documents/richtexteditor)
+- [Thread safety](/controls/documents/richtexteditor/thread-safety)
+- [Extension patterns](/controls/documents/richtexteditor/extension-patterns)

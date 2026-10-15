@@ -9,7 +9,7 @@ tags:
 
 `MarkdownSerializer` reads Markdown into a document and writes a document back out as Markdown, i.e., reports both `CanRead` and `CanWrite` as `true` and appears in a save-format list like any other serializer. It is found in the package `Avalonia.Controls.Markdown`, and uses the namespace `Avalonia.Controls.Documents.Serialization.Markdown`.
 
-It is the serializer behind opening and saving `.md` files in the editor. It is also used by the [Markdown control](/controls/data-display/text-display/markdown).
+It is the serializer behind opening and saving `.md` files in the editor. It is also used by the [Markdown control](/controls/documents/markdown).
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -111,7 +111,7 @@ Markdown footnotes load onto the document's own footnote model:
 - The definition becomes a `Footnote` in `FlowDocument.Footnotes`, carrying its label as `Footnote.Label`.
 - Later citations of the same label, and citations inside a note, become `RichFootnoteCitation` elements pointing at the same note.
 
-The effect of the above is that notes read from Markdown render. They paginate and export like any other document's notes, and the editor's footnote commands work on them. Clicking an anchor or citation scrolls to its note. See [Footnotes](/controls/input/text-input/richtexteditor/footnotes).
+The effect of the above is that notes read from Markdown render. They paginate and export like any other document's notes, and the editor's footnote commands work on them. Clicking an anchor or citation scrolls to its note. See [Footnotes](/controls/documents/richtexteditor/footnotes).
 
 On write, each note becomes a `[^label]: ...` definition after the body, in note order. A note keeps the label it carries, spelled as authored. A note without one is named by its position. No two notes can have the same name, because duplicate definitions would merge on re-parse. Labels containing `]`, `[` or `\` are escaped. A definition nothing cites is kept.
 
@@ -182,6 +182,6 @@ The pipeline is Markdig with `UseSupportedExtensions()`. Supported constructs ar
 
 ## See also
 
-- [Markdown control](/controls/data-display/text-display/markdown) - rendering Markdown without an editor
-- [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter) - the `CodeHighlighter` the serializer takes
-- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the model Markdown notes load onto
+- [Markdown control](/controls/documents/markdown) - rendering Markdown without an editor
+- [Code highlighter](/controls/documents/markdown/codehighlighter) - the `CodeHighlighter` the serializer takes
+- [Footnotes](/controls/documents/richtexteditor/footnotes) - the model Markdown notes load onto

@@ -8,7 +8,7 @@ tags:
   - avalonia enterprise
 ---
 
-The `Markdown` control renders Markdown-formatted text in Avalonia applications. It is built on the same FlowDocument model used by the [RichTextEditor](/controls/input/text-input/richtexteditor), giving it full support for DocumentNode-based styling, text selection, and high-performance streaming updates.
+The `Markdown` control renders Markdown-formatted text in Avalonia applications. It is built on the same FlowDocument model used by the [RichTextEditor](/controls/documents/richtexteditor), giving it full support for DocumentNode-based styling, text selection, and high-performance streaming updates.
 
 :::info
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
@@ -271,7 +271,7 @@ Image loading is handled by the `MarkdownImage` document element, not the `Markd
 </Style>
 ```
 
-See the [Image Loader](/controls/data-display/text-display/markdown/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
+See the [Image Loader](/controls/documents/markdown/imageloader) page for a detailed example of how to implement a custom `MarkdownImageLoader`.
 
 ## Code highlighter
 
@@ -283,7 +283,7 @@ Syntax highlighting is handled by the `MarkdownCodeBlock` document element. You 
 </Style>
 ```
 
-See the [Code Highlighter](/controls/data-display/text-display/markdown/codehighlighter) page for installation packages and usage examples.
+See the [Code Highlighter](/controls/documents/markdown/codehighlighter) page for installation packages and usage examples.
 
 ## Styling
 
@@ -303,7 +303,7 @@ Because the `Markdown` control is built on the shared document model, all render
 
 Named resources are also available for common values such as font sizes, margins, and theme-variant colors.
 
-See the [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling) page for the full list of style selectors and resources.
+See the [Markdown styling](/controls/documents/markdown/markdown-styling) page for the full list of style selectors and resources.
 
 ## Installation
 
@@ -326,6 +326,6 @@ Add the resources by referencing the shipped `Default.axaml` theme via a `StyleI
 
 ## See also
 
-- [Markdown styling](/controls/data-display/text-display/markdown/markdown-styling)
-- [Image loader](/controls/data-display/text-display/markdown/imageloader)
-- [Code highlighter](/controls/data-display/text-display/markdown/codehighlighter)
+- [Markdown styling](/controls/documents/markdown/markdown-styling)
+- [Image loader](/controls/documents/markdown/imageloader)
+- [Code highlighter](/controls/documents/markdown/codehighlighter)
