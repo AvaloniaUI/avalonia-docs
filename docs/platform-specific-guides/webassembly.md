@@ -9,14 +9,15 @@ Avalonia applications can run in the browser using WebAssembly (WASM). This page
 
 ## Setting up an Avalonia project for WebAssembly
 
-1. Install the `wasm-tools` workload, which provides the build toolchain for compiling .NET to WebAssembly.
+1. Install the `wasm-tools` workload, which provides the build toolchain for compiling .NET to WebAssembly. Run this command, or, if using Visual Studio, open the [Visual Studio installer](https://learn.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=visualstudio).
 
 ```bash
 dotnet workload install wasm-tools
 ```
 
 :::note
-If you are running `net8.0-browser` application on .NET 9 SDK, you should install `wasm-tools-net8` workload instead.
+If you are running a `net8.0-browser` application on .NET 9 SDK, you should install the `wasm-tools-net8` workload instead.
+
 If you have an older .NET SDK, it might ask you to install other workloads like `wasm-experimental` as well.
 :::
 
