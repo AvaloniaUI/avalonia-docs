@@ -19,8 +19,6 @@ The simplest form of clipping constrains child content to the parent's bounds. S
 </Border>
 ```
 
-By default, `ClipToBounds` is `false`, so content can overflow its parent.
-
 ## Clip property
 
 The `Clip` property accepts any `Geometry` to define a non-rectangular clipping region.

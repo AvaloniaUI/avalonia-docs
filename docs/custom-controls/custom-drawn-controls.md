@@ -188,6 +188,10 @@ public override void Render(DrawingContext context)
 }
 ```
 
+## Hit testing
+
+When building custom-drawn controls, you may need to override hit testing to match the rendered shape(s). See [Hit testing in custom controls](/docs/graphics-animation/hit-testing#hit-testing-in-custom-controls) fot guidance on how to do this.
+
 ## See also
 
 - [Defining properties](/docs/custom-controls/defining-properties): Add styled, direct, and attached properties to a custom control.
