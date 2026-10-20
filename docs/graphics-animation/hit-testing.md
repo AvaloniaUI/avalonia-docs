@@ -130,7 +130,7 @@ public class CircleControl : Control, ICustomHitTest
 
 ### Extending the hit test area
 
-Another use of [`ICustomHitTest`](/api/avalonia/rendering/icustomhittest) is to extend the hit testing area of a control. The below example shows how to extend a button's hit testing box beyond its visible bounds.
+Another use of `ICustomHitTest` is to extend the hit testing area of a control. The below example shows how to extend a button's hit testing box beyond its visible bounds.
 
 Because `Button` is a [templated control](/docs/custom-controls/templated-controls), you must set `ClipToBounds = false` for the extended area to work. On templated controls, `ClipToBounds` is `true` by default.
 
