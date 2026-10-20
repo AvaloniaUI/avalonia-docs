@@ -135,6 +135,14 @@ Another use of `ICustomHitTest` is to extend the hit testing area of a control. 
 Because `Button` is a [templated control](/docs/custom-controls/templated-controls), you must set `ClipToBounds = false` for the extended area to work. On templated controls, `ClipToBounds` is `true` by default.
 
 ```csharp title="BiggerButton.cs"
+using System;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Media;
+using Avalonia.Rendering;
+
+namespace HitTesting;
+
 public class BiggerButton : Button, ICustomHitTest
 {
     public BiggerButton()
