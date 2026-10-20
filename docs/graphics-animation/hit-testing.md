@@ -15,8 +15,8 @@ Hit testing considers:
 
 1. **Visibility:** Elements with `IsVisible="False"` are skipped.
 2. **IsHitTestVisible:** Elements with `IsHitTestVisible="False"` are skipped. Their children may still be tested.
-3. **Bounds:** The point must fall within the element's layout bounds.
-4. **Rendered content:** For shapes and custom-rendered controls, the test checks actual rendered pixels, not the bounding box.
+3. **Hit test area:** The point must fall within the element's hit testing area. This is usually equal to its layout bounds, unless customized as a different [shape](#custom-hit-test-geometry) or [size](#extending-the-hit-test-area) using [`ICustomHitTest`](/api/avalonia/rendering/icustomhittest).
+4. **Rendered content:** For shapes and custom-rendered controls, the test checks actual rendered pixels by default, not the bounding box.
 
 ## Setting `IsHitTestVisible`
 
@@ -87,13 +87,15 @@ private void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 
 ## Hit testing in custom controls
 
-When building [custom controls that render their own content with `DrawingContext`](/docs/custom-controls/custom-drawn-controls), you may need to override hit testing to match the rendered shape(s).
+When building [custom controls that render their own content with `DrawingContext`](/docs/custom-controls/custom-drawn-controls), you may need to override hit testing to implement your intended interactivity.
+
+By default, hit testing on shapes drawn by custom-rendered controls check actual rendered pixels and not the unfilled portions of their surrounding bounding boxes. For certain use cases, you may need hit testing to work differently. [`Avalonia.Rendering.ICustomHitTest`](/api/avalonia/rendering/icustomhittest) allows you to customize the hit-testable area of a control.
 
 ### Custom hit test geometry
 
-To customize hit test geometry, implement `Avalonia.Rendering.ICustomHitTest` on your custom control and define the desired hit testing boundaries.
+To customize hit test geometry, implement `ICustomHitTest` on your custom control and define the desired hit-testable shape.
 
-The below example demonstrates how you might set up hit testing for the custom `CircleControl` from the [Custom-drawn controls page](/docs/custom-controls/custom-drawn-controls). The custom hit testing region uses the same geometry as the custom control itself, meaning the control receives clicks on the rendered circle only, and not on the unfilled corner regions of the bounding box.
+The below example demonstrates how you might set up hit testing for a custom control that draws a circle inside a box. The custom hit testing region uses the same geometry as the `Ellipse` portion of the drawing, meaning the control receives clicks on the circle only, and not on the surrounding yellow corner regions.
 
 ```csharp title="CircleControl.cs"
 using System;
@@ -102,7 +104,7 @@ using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Rendering;
 
-namespace CustomControlHitTesting;
+namespace HitTesting;
 
 public class CircleControl : Control, ICustomHitTest
 {
@@ -110,12 +112,14 @@ public class CircleControl : Control, ICustomHitTest
     {
         var radius = Math.Min(Bounds.Width, Bounds.Height) / 2;
         var center = new Point(Bounds.Width / 2, Bounds.Height / 2);
+        var box = new Rect(center.X - radius, center.Y - radius, radius * 2, radius * 2);
+        context.FillRectangle(Brushes.Yellow, box);
         context.DrawEllipse(Brushes.Blue, null, center, radius, radius);
     }
 
     public bool HitTest(Point point)
     {
-        // Only hit test within the circle, not the full bounding box
+        // Only hit test within the circle, not the full box
         var radius = Math.Min(Bounds.Width, Bounds.Height) / 2;
         var center = new Point(Bounds.Width / 2, Bounds.Height / 2);
         var distance = Point.Distance(point, center);
@@ -126,7 +130,7 @@ public class CircleControl : Control, ICustomHitTest
 
 ### Extending the hit test area
 
-Another use of `ICustomHitTest` is to extend, or otherwise modify, the hit testing area of a control. The below example shows how to extend a button's hit testing box beyond its visible bounds.
+Another use of [`ICustomHitTest`](/api/avalonia/rendering/icustomhittest) is to extend the hit testing area of a control. The below example shows how to extend a button's hit testing box beyond its visible bounds.
 
 Because `Button` is a [templated control](/docs/custom-controls/templated-controls), you must set `ClipToBounds = false` for the extended area to work. On templated controls, `ClipToBounds` is `true` by default.
 
@@ -279,3 +283,4 @@ If only some elements need to be interactive, set `IsHitTestVisible="False"` on 
 - [Custom rendering](/docs/graphics-animation/custom-rendering): Drawing with DrawingContext.
 - [Shapes and geometries](/docs/graphics-animation/shapes-and-geometries): Geometry types for hit regions.
 - [Performance optimization](/docs/app-development/performance): General performance guidance.
+- [`ICustomHitTest` API reference](/api/avalonia/rendering/icustomhittest)
