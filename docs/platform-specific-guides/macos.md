@@ -5,6 +5,12 @@ description: macOS-specific Avalonia features. Learn about the native backend, a
 doc-type: overview
 ---
 
+:::warning
+**Known issue:** As of October 2026, the .NET 11 SDK RC2 only supports Xcode 26.0 when targeting .NET 10. If you update an iOS, tvOS or Mac Catalyst project to the .NET 11 SDK, but keep the target version as .NET 10, you will be required to downgrade your Xcode to 26.0. Downgrading Xcode, however, makes it incompatible with macOS 27 and causes [SkiaSharp not to copy native libaries](https://github.com/mono/SkiaSharp/issues/4031).
+
+To ensure your app continues to work with the .NET 11 SDK, it is recommended you change your project's target version to .NET 11.
+:::
+
 ## How Avalonia runs on macOS
 
 Avalonia does not use the standard .NET macOS workload (`net10.0-macos`). Instead, it ships its own native platform backend that interfaces with macOS APIs through a compiled dynamic library (`libAvaloniaNative.dylib`), bypassing Microsoft's managed macOS bindings entirely.

@@ -14,6 +14,12 @@ import IOSProvisionPhoneScreenshot from '/img/guides/platform-specific-guides/io
 import IOSSelectDeviceScreenshot from '/img/guides/platform-specific-guides/ios/ios-select-device.png';
 import IOSCertScreenshot from '/img/guides/platform-specific-guides/ios/ios-cert.png';
 
+:::warning
+**Known issue:** As of October 2026, the .NET 11 SDK RC2 only supports Xcode 26.0 when targeting .NET 10. If you update an iOS, tvOS or Mac Catalyst project to the .NET 11 SDK, but keep the target version as .NET 10, you will be required to downgrade your Xcode to 26.0. Downgrading Xcode, however, makes it incompatible with macOS 27 and causes [SkiaSharp not to copy native libaries](https://github.com/mono/SkiaSharp/issues/4031).
+
+To ensure your app continues to work with the .NET 11 SDK, it is recommended you change your project's target version to .NET 11.
+:::
+
 ## Setting up your developer environment
 
 ### Prerequisites
