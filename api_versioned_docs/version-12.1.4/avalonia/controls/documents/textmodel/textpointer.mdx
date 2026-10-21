@@ -1,0 +1,512 @@
+---
+title: 'TextPointer'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textpointer'
+uid: 'Avalonia.Controls.Documents.TextModel.TextPointer'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextPointer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPointer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A position within a document that can be navigated and used for editing.
+Uses character offsets (not symbols) for simplicity.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPointer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextPointer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IComparable&lt;TextPointer&gt;
+</div>
+</div>
+
+## Remarks
+
+Performance optimization: Caches only the leaf node instead of the full path,
+reducing allocations from 320-656 B to ~40-80 B per pointer.
+The full path is lazy-loaded only when explicitly accessed (rare).
+
+Mutability and aliasing. A [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) is a
+mutable, tracked position: [Avalonia.Controls.Documents.TextModel.TextPointer.UpdateInPlace(int)](xref:Avalonia.Controls.Documents.TextModel.TextPointer.UpdateInPlace%28System.Int32%29) and
+[Avalonia.Controls.Documents.TextModel.TextPointer.Refresh](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Refresh) change [Avalonia.Controls.Documents.TextModel.TextPointer.Offset](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Offset) and the cached leaf
+in place. APIs that return a freshly allocated pointer
+([Avalonia.Controls.Documents.TextModel.TextDocument.CreatePointer(int,Avalonia.Controls.Documents.TextModel.LogicalDirection)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.CreatePointer%28System.Int32%2CAvalonia.Controls.Documents.TextModel.LogicalDirection%29),
+`CreatePointerAtNodeStart/End`, [Avalonia.Controls.Documents.TextModel.TextPointer.GetPositionAtOffset(int,Avalonia.Controls.Documents.TextModel.LogicalDirection)](xref:Avalonia.Controls.Documents.TextModel.TextPointer.GetPositionAtOffset%28System.Int32%2CAvalonia.Controls.Documents.TextModel.LogicalDirection%29))
+may be stored directly in mutable containers. APIs that return a
+cached pointer ([Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart)/
+[Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd),
+[Avalonia.Controls.Documents.RichTextElement.ContentStart](xref:Avalonia.Controls.Documents.RichTextElement.ContentStart)/
+[Avalonia.Controls.Documents.RichTextElement.ContentEnd](xref:Avalonia.Controls.Documents.RichTextElement.ContentEnd)) hand back a shared instance;
+callers that need an independent tracked position must call
+[Avalonia.Controls.Documents.TextModel.TextPointer.Clone](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Clone) first. [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange) performs this
+clone automatically for its endpoints.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Clone](#uid-6677f8f269) | Creates a detached copy of this pointer that will not be mutated by subsequent `UpdateInPlace` or [Avalonia.Controls.Documents.TextModel.TextPointer.Refresh](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Refresh) calls on the original. The clone preserves node identity so that callers storing the pointer (e.g. undo snapshots) can use the cached leaf as a disambiguation key across document edits. |
+| [CompareTo](#uid-1a3aba8bd5) | Compares the document position of this pointer to `other`. |
+| [CreatePointer](#uid-a7612c77e2) | Creates a fresh, independent [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the document-absolute offset `absoluteOffset`. |
+| [EnsureElement](#uid-f63e3186f0) | Materializes and returns the element at this pointer's leaf node. |
+| [EnsureParentElement](#uid-ec0652fabf) | Materializes and returns the element at the immediate parent node. |
+| [GetContainingElement](#uid-eb8dd2dd84) | Gets the containing element, materializing the leaf and its ancestors on demand until a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) is available. Returns `null` only when the document is empty. |
+| [GetOffsetToPosition](#uid-ab2defe7b1) | Gets the distance from this pointer to another. |
+| [GetPositionAtOffset](#uid-8767ee45aa) | Gets a pointer at the specified offset from this position. |
+| [InsertText (2 overloads)](#uid-36e65faa9b) | No summary available. |
+| [Refresh](#uid-6b26d6d778) | Refreshes this pointer if stale. |
+| [ToString](#uid-008f713e0f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6677f8f269"></span>
+
+### Clone Method
+
+Creates a detached copy of this pointer that will not be mutated
+by subsequent `UpdateInPlace` or [Avalonia.Controls.Documents.TextModel.TextPointer.Refresh](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Refresh)
+calls on the original. The clone preserves node identity so that
+callers storing the pointer (e.g. undo snapshots) can use the
+cached leaf as a disambiguation key across document edits.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Clone()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+A pointer at the same position, independent of this one.
+
+
+#### Remarks
+
+Required when assigning a cached pointer
+([Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart), [Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd),
+[Avalonia.Controls.Documents.RichTextElement.ContentStart](xref:Avalonia.Controls.Documents.RichTextElement.ContentStart),
+[Avalonia.Controls.Documents.RichTextElement.ContentEnd](xref:Avalonia.Controls.Documents.RichTextElement.ContentEnd))
+into any container that may later mutate the pointer via
+[Avalonia.Controls.Documents.TextModel.TextPointer.Refresh](xref:Avalonia.Controls.Documents.TextModel.TextPointer.Refresh). Without cloning, those mutations leak
+through the alias and shift the source cache. [Avalonia.Controls.Documents.TextModel.TextRange](xref:Avalonia.Controls.Documents.TextModel.TextRange)'s
+constructors and `SetPositions` already perform this clone.
+
+#### Exceptions
+
+- [The pointer is detached from its document.](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a3aba8bd5"></span>
+
+### CompareTo Method
+
+Compares the document position of this pointer to `other`.
+
+```csharp
+public int CompareTo(Avalonia.Controls.Documents.TextModel.TextPointer other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7612c77e2"></span>
+
+### CreatePointer Method
+
+Creates a fresh, independent [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the
+document-absolute offset `absoluteOffset`.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer CreatePointer(int absoluteOffset, Avalonia.Controls.Documents.TextModel.LogicalDirection direction)
+```
+
+#### Parameters
+
+`absoluteOffset` int
+
+
+`direction` [Avalonia.Controls.Documents.TextModel.LogicalDirection](xref:Avalonia.Controls.Documents.TextModel.LogicalDirection)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+#### Remarks
+
+The result is identical to what an offset-based factory rooted at
+the document would produce — the receiver pointer is a performance
+hint only, not a structural anchor. When
+`absoluteOffset` is strictly interior to one of
+this pointer's ancestors the descent is localized to that
+subtree; at boundary offsets it falls through to a full root
+descent so the result is provably equivalent.
+
+The offset is clamped to `[0, doc.Length]`.
+
+This method is the absolute-offset companion to
+[Avalonia.Controls.Documents.TextModel.TextPointer.GetPositionAtOffset(int,Avalonia.Controls.Documents.TextModel.LogicalDirection)](xref:Avalonia.Controls.Documents.TextModel.TextPointer.GetPositionAtOffset%28System.Int32%2CAvalonia.Controls.Documents.TextModel.LogicalDirection%29), which is *intentionally*
+hint-biased for navigation (a relative offset of 0 with a
+boundary-anchored pointer stays in the source block; the same
+absolute offset through this method does not).
+
+#### Exceptions
+
+- [Thrown when this pointer is detached from a document
+(\[Avalonia.Controls.Documents.TextModel.TextPointer.TextDocument\](xref:Avalonia.Controls.Documents.TextModel.TextPointer.TextDocument) is \`null\`).](xref:System.InvalidOperationException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f63e3186f0"></span>
+
+### EnsureElement Method
+
+Materializes and returns the element at this pointer's leaf node.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement EnsureElement()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec0652fabf"></span>
+
+### EnsureParentElement Method
+
+Materializes and returns the element at the immediate parent node.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement EnsureParentElement()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eb8dd2dd84"></span>
+
+### GetContainingElement Method
+
+Gets the containing element, materializing the leaf and its
+ancestors on demand until a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) is
+available. Returns `null` only when the document is empty.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement GetContainingElement()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ab2defe7b1"></span>
+
+### GetOffsetToPosition Method
+
+Gets the distance from this pointer to another.
+
+```csharp
+public int GetOffsetToPosition(Avalonia.Controls.Documents.TextModel.TextPointer other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8767ee45aa"></span>
+
+### GetPositionAtOffset Method
+
+Gets a pointer at the specified offset from this position.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer GetPositionAtOffset(int relativeOffset, Avalonia.Controls.Documents.TextModel.LogicalDirection direction)
+```
+
+#### Parameters
+
+`relativeOffset` int
+
+
+`direction` [Avalonia.Controls.Documents.TextModel.LogicalDirection](xref:Avalonia.Controls.Documents.TextModel.LogicalDirection)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+#### Remarks
+
+The result is clamped to `[0, doc.Length]`: passing an
+offset that would land before `0` returns a pointer at
+`0`; passing one beyond `doc.Length` returns a
+pointer at the document end. This matches the behavior of the
+underlying leaf-resolution primitives and avoids forcing every
+caller through a redundant null-check after navigation.
+
+To detect "I navigated past the document edge", compare offsets
+explicitly (`this.Offset + relative != result.Offset` or
+the simpler `this.Offset == 0` / `this.Offset == doc.Length`
+pre-check), rather than checking for `null`.
+
+When the target offset falls within the same parent node as this
+pointer's cached leaf (the common case for paragraph-local
+operations), the tree walk is bounded to the subtree instead of
+traversing from the root. This eliminates per-call O(depth)
+overhead for hit-testing and line queries inside a single paragraph.
+
+#### Exceptions
+
+- [Thrown when this pointer is detached from a document
+(\[Avalonia.Controls.Documents.TextModel.TextPointer.TextDocument\](xref:Avalonia.Controls.Documents.TextModel.TextPointer.TextDocument) is \`null\`).](xref:System.InvalidOperationException)
+
+</section>
+
+<span id="uid-36e65faa9b"></span>
+
+### InsertText overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe82bcf04b"></span>
+
+#### InsertText Method
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer InsertText(ReadOnlyMemory<char> text)
+```
+
+##### Parameters
+
+`text` ReadOnlyMemory&lt;char&gt;
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3a304f04e"></span>
+
+#### InsertText Method
+
+Inserts text at this position.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer InsertText(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b26d6d778"></span>
+
+### Refresh Method
+
+Refreshes this pointer if stale.
+
+```csharp
+public void Refresh()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-008f713e0f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Element](#uid-0d2fbdcfb2) | The element at this position, if already realized. May be `null` when the underlying node still holds only a deferred snapshot. Use [Avalonia.Controls.Documents.TextModel.TextPointer.EnsureElement](xref:Avalonia.Controls.Documents.TextModel.TextPointer.EnsureElement) to force materialization. |
+| [IsStale](#uid-2e83c90d1c) | Whether this pointer is stale (document has changed since creation). |
+| [LogicalDirection](#uid-77634a9f01) | The logical direction (gravity) of this pointer. |
+| [Offset](#uid-47a87cde60) | The character offset in the document. |
+| [TextDocument](#uid-2809ef22da) | The document this pointer belongs to. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d2fbdcfb2"></span>
+
+### Element Property
+
+The element at this position, if already realized. May be `null`
+when the underlying node still holds only a deferred snapshot.
+Use [Avalonia.Controls.Documents.TextModel.TextPointer.EnsureElement](xref:Avalonia.Controls.Documents.TextModel.TextPointer.EnsureElement) to force materialization.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement Element { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e83c90d1c"></span>
+
+### IsStale Property
+
+Whether this pointer is stale (document has changed since creation).
+
+```csharp
+public bool IsStale { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77634a9f01"></span>
+
+### LogicalDirection Property
+
+The logical direction (gravity) of this pointer.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.LogicalDirection LogicalDirection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47a87cde60"></span>
+
+### Offset Property
+
+The character offset in the document.
+
+```csharp
+public int Offset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2809ef22da"></span>
+
+### TextDocument Property
+
+The document this pointer belongs to.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

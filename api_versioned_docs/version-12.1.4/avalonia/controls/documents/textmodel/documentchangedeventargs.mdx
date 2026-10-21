@@ -1,0 +1,148 @@
+---
+title: 'DocumentChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/documentchangedeventargs'
+uid: 'Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DocumentChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Raised via [Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed) when an outermost
+[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope completes after producing
+at least one observable change. Suppressed entirely on empty / no-op
+scopes — handlers can rely on the event meaning "something changed."
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DocumentChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> DocumentChangedEventArgs
+</div>
+</div>
+
+## Remarks
+
+One [Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs) aggregates every
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs) that fired in the same scope, in
+invocation order. The aggregate is the right hook for batch-aware
+consumers (autosave, replication, status updates); per-edit consumers
+can keep using [Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged).
+
+[Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.Origin](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.Origin) and [Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit) let consumers correlate
+the commit with the undo/redo system. See the [Avalonia.Controls.Documents.TextModel.ChangeOrigin](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin)
+documentation for the four scenarios.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [HasChanges](#uid-c865289cba) | True when the scope produced at least one change. Always when this event fires — empty scopes are suppressed entirely. Reserved for future use when structure-only mutations may broaden the meaning of "changed." |
+| [Origin](#uid-d2b6dc5714) | Indicates whether this commit is a normal edit, an undo replay, or a redo replay. Use this to skip pushing replays into a replication log or autosave queue. |
+| [TextChanges](#uid-1f3d29eca7) | All text changes recorded during the scope, in invocation order. Read-only; the underlying buffer is the recorder's storage. |
+| [UndoUnit](#uid-5d206aed93) | The undo unit involved in this commit, or when undo is disabled or no unit was opened. For [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit) this is the unit just committed to the undo stack; for [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo) / [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo) it is the unit being replayed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c865289cba"></span>
+
+### HasChanges Property
+
+True when the scope produced at least one change. Always
+when this event fires — empty scopes are
+suppressed entirely. Reserved for future use when structure-only
+mutations may broaden the meaning of "changed."
+
+```csharp
+public bool HasChanges { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2b6dc5714"></span>
+
+### Origin Property
+
+Indicates whether this commit is a normal edit, an undo replay, or
+a redo replay. Use this to skip pushing replays into a replication
+log or autosave queue.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.ChangeOrigin Origin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f3d29eca7"></span>
+
+### TextChanges Property
+
+All text changes recorded during the scope, in invocation order.
+Read-only; the underlying buffer is the recorder's storage.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.TextModel.TextChangeEventArgs> TextChanges { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d206aed93"></span>
+
+### UndoUnit Property
+
+The undo unit involved in this commit, or
+when undo is disabled or no unit was opened. For
+[Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit) this is the unit just committed to
+the undo stack; for [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo) /
+[Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo) it is the unit being replayed.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit UndoUnit { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

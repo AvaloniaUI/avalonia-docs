@@ -81,6 +81,7 @@ const sidebars: SidebarsConfig = {
           'version-info/missing-features',
       ]
     },
+    'upgrading-to-xpf2',
   ],
 };
 

@@ -1,0 +1,393 @@
+---
+title: 'TextElementFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/textelementformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextElementFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Formatting snapshot for properties defined on [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement).
+Shared across all node types (inline, block, table row, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextElementFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextElementFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextElementFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Captures the inheritable visual properties that every [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+can carry: font family/size/weight/style/stretch, foreground, background,
+letter spacing, and font features. [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting) and
+[Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting) carry only what is specific to them.
+
+Stored on [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) so every snapshot node (inline, block,
+table-row, image, etc.) can carry base-level formatting without type-specific
+snapshot subclasses.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-1a28ac6af5) | No summary available. |
+| [GetHashCode](#uid-c47990a365) | No summary available. |
+| [ToString](#uid-94a0132d0f) | No summary available. |
+
+<span id="uid-1a28ac6af5"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e63a26dc3a"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba4c2327e1"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c47990a365"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94a0132d0f"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BackgroundArgb](#uid-5304126a6c) | Packed ARGB value for background color. Null means not explicitly set. |
+| [BackgroundColor](#uid-6bf33bb506) | Gets the background color if set, otherwise null. |
+| [Default](#uid-f66fad7c61) | Default formatting with no explicit values set. |
+| [FontFamily](#uid-70e8da0df5) | The font family name. Null if using inherited/default font. |
+| [FontFeatures](#uid-988a59193c) | OpenType font features (e.g. ligatures, stylistic sets). Default means not explicitly set. |
+| [FontSize](#uid-2e4856db79) | The font size in device-independent pixels. Null means not explicitly set. |
+| [FontStretch](#uid-aa001c7c19) | The font stretch (e.g., Normal, Condensed, Expanded). Null means not explicitly set. |
+| [FontStyle](#uid-67503323b8) | The font style (e.g., Normal, Italic, Oblique). Null means not explicitly set. |
+| [FontWeight](#uid-d56e719699) | The font weight (e.g., Normal, Bold). Null means not explicitly set. |
+| [ForegroundArgb](#uid-04b78b7ac2) | Packed ARGB value for foreground color. Null means not explicitly set. |
+| [ForegroundColor](#uid-2cae13fe4d) | Gets the foreground color if set, otherwise null. |
+| [HasBackground](#uid-aa2532524d) | Gets whether a background color is explicitly set. |
+| [HasForeground](#uid-6898b67147) | Gets whether a foreground color is explicitly set. |
+| [LetterSpacing](#uid-6ce121bd38) | The letter spacing in pixels. Null means not explicitly set. Default is 0 (normal spacing). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5304126a6c"></span>
+
+### BackgroundArgb Property
+
+Packed ARGB value for background color.
+Null means not explicitly set.
+
+```csharp
+public Nullable<uint> BackgroundArgb { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6bf33bb506"></span>
+
+### BackgroundColor Property
+
+Gets the background color if set, otherwise null.
+
+```csharp
+public Nullable<Avalonia.Media.Color> BackgroundColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f66fad7c61"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70e8da0df5"></span>
+
+### FontFamily Property
+
+The font family name. Null if using inherited/default font.
+
+```csharp
+public string FontFamily { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-988a59193c"></span>
+
+### FontFeatures Property
+
+OpenType font features (e.g. ligatures, stylistic sets).
+Default means not explicitly set.
+
+```csharp
+public Avalonia.Media.FontFeature[] FontFeatures { get; set; }
+```
+
+#### Remarks
+
+Do not write through this array. A snapshot is read by a serializer running on
+another thread while the document carries on being edited, and the array is handed
+out by reference, so a write here is a write the reader may see halfway through.
+Build a new array and assign it instead.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e4856db79"></span>
+
+### FontSize Property
+
+The font size in device-independent pixels.
+Null means not explicitly set.
+
+```csharp
+public Nullable<double> FontSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa001c7c19"></span>
+
+### FontStretch Property
+
+The font stretch (e.g., Normal, Condensed, Expanded).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Media.FontStretch> FontStretch { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67503323b8"></span>
+
+### FontStyle Property
+
+The font style (e.g., Normal, Italic, Oblique).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Media.FontStyle> FontStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d56e719699"></span>
+
+### FontWeight Property
+
+The font weight (e.g., Normal, Bold).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Media.FontWeight> FontWeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04b78b7ac2"></span>
+
+### ForegroundArgb Property
+
+Packed ARGB value for foreground color.
+Null means not explicitly set.
+
+```csharp
+public Nullable<uint> ForegroundArgb { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cae13fe4d"></span>
+
+### ForegroundColor Property
+
+Gets the foreground color if set, otherwise null.
+
+```csharp
+public Nullable<Avalonia.Media.Color> ForegroundColor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa2532524d"></span>
+
+### HasBackground Property
+
+Gets whether a background color is explicitly set.
+
+```csharp
+public bool HasBackground { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6898b67147"></span>
+
+### HasForeground Property
+
+Gets whether a foreground color is explicitly set.
+
+```csharp
+public bool HasForeground { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ce121bd38"></span>
+
+### LetterSpacing Property
+
+The letter spacing in pixels.
+Null means not explicitly set. Default is 0 (normal spacing).
+
+```csharp
+public Nullable<double> LetterSpacing { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

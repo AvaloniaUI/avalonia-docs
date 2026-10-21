@@ -1,0 +1,117 @@
+---
+title: 'CompositionGpuImportedImageSynchronizationCapabilities'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositiongpuimportedimagesynchronizationcapabilities'
+uid: 'Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities'
+commentId: 'T:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionGpuImportedImageSynchronizationCapabilities Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum CompositionGpuImportedImageSynchronizationCapabilities
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> CompositionGpuImportedImageSynchronizationCapabilities
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Automatic](#uid-bcc4cc843d) | Synchronization and ordering is somehow handled by the underlying platform |
+| [KeyedMutex](#uid-d43f9d6564) | Image must be created with D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX or in other compatible way |
+| [Semaphores](#uid-dbff2e789c) | Pre-render and after-render semaphores must be provided alongside with the image |
+| [TimelineSemaphores](#uid-9583183d4e) | Pre-render and after-render timeline semaphores must be provided alongside with the image |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcc4cc843d"></span>
+
+### Automatic Field
+
+Synchronization and ordering is somehow handled by the underlying platform
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities Automatic
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d43f9d6564"></span>
+
+### KeyedMutex Field
+
+Image must be created with D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX or in other compatible way
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities KeyedMutex
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbff2e789c"></span>
+
+### Semaphores Field
+
+Pre-render and after-render semaphores must be provided alongside with the image
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities Semaphores
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9583183d4e"></span>
+
+### TimelineSemaphores Field
+
+Pre-render and after-render timeline semaphores must be provided alongside with the image
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities TimelineSemaphores
+```
+
+</section>
+
+</ApiRefPage>
+

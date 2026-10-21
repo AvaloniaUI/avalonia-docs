@@ -270,19 +270,27 @@ protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
 
 `MediaPlayer` uses the system-installed LibVLC library to render multimedia content for Linux distros.
 
-Requires LibVLC 3.0.21 or higher.
+Requires LibVLC 3.0.21 or higher. The LibVLC plugins (demuxers, decoders and audio outputs) are required as well — LibVLC cannot create an instance without them.
 
 Debian/Ubuntu:
 
 ```bash
-apt install libvlc
+sudo apt install vlc
+```
+
+The `vlc` package pulls in the LibVLC runtime libraries (`libvlc5`, `libvlccore9`) and the required plugins (`vlc-plugin-base`, `vlc-plugin-video-output`). For a minimal installation without the player application itself:
+
+```bash
+sudo apt install libvlc5 libvlccore9 vlc-plugin-base vlc-plugin-video-output
 ```
 
 Fedora:
 
 ```bash
-dnf install libvlc
+sudo dnf install vlc
 ```
+
+VLC is packaged in the [RPM Fusion](https://rpmfusion.org) repositories. The LibVLC libraries are provided by the `vlc-core` package, which is installed as a dependency of `vlc`.
 
 ### Embedded Linux (direct rendering manager)
 

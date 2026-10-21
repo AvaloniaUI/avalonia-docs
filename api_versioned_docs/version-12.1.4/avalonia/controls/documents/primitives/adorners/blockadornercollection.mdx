@@ -1,0 +1,225 @@
+---
+title: 'BlockAdornerCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/adorners/blockadornercollection'
+uid: 'Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerCollection'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Adorners'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockAdornerCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Adorners</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages a Z-ordered set of [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner) instances.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BlockAdornerCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BlockAdornerCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;BlockAdorner&gt;, IReadOnlyCollection&lt;BlockAdorner&gt;, IReadOnlyList&lt;BlockAdorner&gt;, IEnumerable
+</div>
+</div>
+
+## Remarks
+
+Enumeration and the indexer walk the adorners in render order, lowest
+[Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner.ZIndex) first, with lazy sorting and
+change-event relay. The owning [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerLayer](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdornerLayer) handles
+node iteration, filtering, and dispatch.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BlockAdornerCollection](#uid-0caf9f5b1f) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0caf9f5b1f"></span>
+
+### BlockAdornerCollection Constructor
+
+```csharp
+public BlockAdornerCollection()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-5176fd7dc0) | Adds an adorner and subscribes to its change notifications. |
+| [Clear](#uid-f9b1e62e38) | Removes all adorners. |
+| [GetEnumerator](#uid-d7e0806030) | Returns an enumerator that walks the adorners in render order. |
+| [Remove](#uid-18637b8ea0) | Removes an adorner and unsubscribes from its change notifications. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5176fd7dc0"></span>
+
+### Add Method
+
+Adds an adorner and subscribes to its change notifications.
+
+```csharp
+public void Add(Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner adorner)
+```
+
+#### Parameters
+
+`adorner` [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f9b1e62e38"></span>
+
+### Clear Method
+
+Removes all adorners.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7e0806030"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator that walks the adorners in render order.
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18637b8ea0"></span>
+
+### Remove Method
+
+Removes an adorner and unsubscribes from its change notifications.
+
+```csharp
+public bool Remove(Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner adorner)
+```
+
+#### Parameters
+
+`adorner` [Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner](xref:Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-e9e816a60a) | Gets the number of registered adorners. |
+| [Item](#uid-d0842a1c4a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9e816a60a"></span>
+
+### Count Property
+
+Gets the number of registered adorners.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0842a1c4a"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Adorners.BlockAdorner Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-884b4a69ee) | Raised when any contained adorner signals a visual change or the collection itself is modified. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-884b4a69ee"></span>
+
+### Changed Event
+
+Raised when any contained adorner signals a visual change or
+the collection itself is modified.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

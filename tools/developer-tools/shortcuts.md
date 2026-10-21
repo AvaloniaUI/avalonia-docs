@@ -1,6 +1,6 @@
 ---
 id: shortcuts
-title: Developer Tools Shortcuts
+title: Developer tools shortcuts
 sidebar_label: Shortcuts
 description: Keyboard shortcut reference for Avalonia Developer Tools, covering inspection, search, navigation, layout, and tool-switching commands.
 doc-type: reference
@@ -14,7 +14,7 @@ Use these shortcuts while debugging layout issues, tracking focus order, or meas
 
 | Display name | Description | When to use | Windows / Linux | macOS |
 |---|---|---|---|---|
-| Focus Tracking | Highlights the currently focused element in your application. Works in both Developer Tools and the target application. | Use this when you are debugging tab-order or focus-related bugs so you can see exactly which control has focus. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> |
+| Focus Tracking | Highlights the currently focused element in your application. Works in both Developer Tools and the target application. | Use this when you are debugging tab order or focus-related bugs so you can see exactly which control has focus. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>K</kbd> |
 | Inspect Element | Selects and inspects UI elements by clicking on them in your application. Works in both Developer Tools and the target application. | Use this to quickly jump to a specific control in the element tree instead of expanding nodes manually. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd> |
 | Highlight Elements | Toggles real-time highlighting of UI elements. Works in both Developer Tools and the target application. | Use this to visualize element boundaries and padding so you can spot layout problems at a glance. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd> | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>H</kbd> |
 | Show Overlay Rulers | Shows or hides measurement rulers in the overlay. Works in both Developer Tools and the target application. | Use this when you need pixel-precise measurements between elements or want to verify alignment. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>R</kbd> |

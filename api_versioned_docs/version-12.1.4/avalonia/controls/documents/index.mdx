@@ -1,0 +1,240 @@
+---
+title: 'Avalonia.Controls.Documents'
+hide_title: true
+slug: '/avalonia/controls/documents'
+uid: 'Avalonia.Controls.Documents'
+commentId: 'N:Avalonia.Controls.Documents'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Documents Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents`
+
+</div>
+
+## Types
+
+- [Block](block.mdx) - Abstract base class for block-level content elements in a [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument).
+- [BlockCollection](blockcollection.mdx) - The blocks of a document, section, cell or list item. A document's collection is
+its body; the notes live in [Avalonia.Controls.Documents.FlowDocument.Footnotes](xref:Avalonia.Controls.Documents.FlowDocument.Footnotes) and the bands in
+[Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands), nested documents of their own.
+- [BlockUIContainer](blockuicontainer.mdx) - A block element that embeds an Avalonia [Avalonia.Controls.Control](xref:Avalonia.Controls.Control) in the document flow.
+- [Bold](bold.mdx) - Bold element - markup helper for indicating bolded content.
+Equivalent to a Span with [FontWeight](xref:Avalonia.Media.FontWeight) property set to FontWeights.Bold.
+Can contain other inline elements.
+- [DeferredImageSource](deferredimagesource.mdx) - A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) backed by an asynchronous resolver — typically
+a URL fetched by a loader. The image is produced only when presented and off
+the UI thread; the document carries a [Avalonia.Controls.Documents.DeferredImageSource.SourceUri](xref:Avalonia.Controls.Documents.DeferredImageSource.SourceUri) reference rather
+than embedded bytes.
+- [EmbeddedImageSource](embeddedimagesource.mdx) - A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) whose encoded pixel bytes are embedded in the
+document. Decodes once from the retained bytes, caches and owns the decoded
+bitmap, and reports the intrinsic size from the image header without a full
+decode. Dispose to release the cached bitmap.
+- [FlowDocument](flowdocument.mdx) - Represents a flow document that contains rich text content organized into blocks.
+- [FlowDocumentBuilder](flowdocumentbuilder.mdx) - Builder for creating FlowDocuments.
+Provides a fluent API for constructing document content.
+- [Footnote](footnote.mdx) - A footnote as an element: the facade over a [Avalonia.Controls.Documents.TextModel.TextFootnote](xref:Avalonia.Controls.Documents.TextModel.TextFootnote) the way
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) is the facade over a [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument). The
+text model owns the note ([Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes)); the owning
+document's [Avalonia.Controls.Documents.FlowDocument.Footnotes](xref:Avalonia.Controls.Documents.FlowDocument.Footnotes) materializes this element over it
+on demand. Like any element, a note built from markup or code stays lazy: its
+text document comes into being when the owner's document initializes or when the
+note's content is first needed, and the model note when it joins the owner; until
+then the owning document is its logical parent, as for a pending block.
+[Avalonia.Controls.Documents.Footnote.NoteId](xref:Avalonia.Controls.Documents.Footnote.NoteId) pairs the note with the [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference)
+anchor that carries the number; the rendered number is the note's position among
+the document's notes, never stored here. Deleting the anchor removes the note in
+the same undo unit; an emptied note survives until its anchor goes. It has its
+own buffer, selection and caret; its undo joins the owner's stack; it never hosts
+anchors, notes or bands of its own.
+- [FootnoteCollection](footnotecollection.mdx) - The footnotes a document owns, as elements, in anchor order: a view over the text
+document's [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes), which owns the notes, materializing
+a [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) element per note on demand. It follows the contract of the
+block collection: the document becomes a note's logical parent the moment it is
+added; while the document has no text document the note waits pending, and it
+joins the text document when that is initialized, before the pending blocks
+materialize; once the text document exists a note joins it at once. Under the
+anchor-owns-its-note lifecycle the notes come and go with their anchors; a note
+added here pairs with the anchor carrying its id, or waits for one. Ownership is
+exclusive, and a nested document (a page band, a note) owns no notes.
+- [FootnoteNumberFormat](footnotenumberformat.mdx) - How a document numbers its footnotes: the format of the ordinal a
+[Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) carries as its text and the paired
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) shows in its number strip. Numbering is document-wide and
+continuous in anchor order; a note's identity ([Avalonia.Controls.Documents.Footnote.NoteId](xref:Avalonia.Controls.Documents.Footnote.NoteId)) is
+never displayed.
+- [Inline](inline.mdx) - Inline element.
+- [InlineCollection](inlinecollection.mdx) - A collection of [Avalonia.Controls.Documents.Inline](xref:Avalonia.Controls.Documents.Inline)s.
+- [InlineFactory](inlinefactory.mdx) - Extension methods for creating [RichInline](xref:Avalonia.Controls.Documents.RichInline) elements.
+- [InlineUIContainer](inlineuicontainer.mdx) - [InlineUIContainer](xref:Avalonia.Controls.Documents.InlineUIContainer) - a wrapper for embedded UIElements in text
+flow content inline collections
+- [Italic](italic.mdx) - Italic element - markup helper for indicating italicized content.
+Equivalent to a Span with [FontStyle](xref:Avalonia.Media.FontStyle) property set to FontStyles.Italic.
+Can contain other inline elements.
+- [LineBreak](linebreak.mdx) - LineBreak element that forces a line breaking.
+- [List](list.mdx) - A block element that displays a bulleted or numbered list.
+- [ListItem](listitem.mdx) - An item within a List element.
+- [MarkdownAlertBlock](markdownalertblock.mdx) - A [Avalonia.Controls.Documents.Section](xref:Avalonia.Controls.Documents.Section) that represents a GitHub-style alert block
+(`> [!NOTE]`). Carries the alert kind ("Note", "Warning", ...) as
+a typed property so it survives element realization and is authorable
+through the [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) API; the "alertBlock" + lowercased kind CSS
+classes remain the styling surface.
+- [MarkdownCodeBlock](markdowncodeblock.mdx) - A [Avalonia.Controls.Documents.Paragraph](xref:Avalonia.Controls.Documents.Paragraph) that represents a fenced code block.
+Carries the language identifier so the render layer can apply
+syntax highlighting without extra lookups.
+- [MarkdownHeading](markdownheading.mdx) - A [Avalonia.Controls.Documents.Paragraph](xref:Avalonia.Controls.Documents.Paragraph) that represents a markdown heading (H1-H6).
+Carries the heading level as a typed property so it survives element
+realization and is authorable through the [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) API; the
+"header" / "h&#123;level&#125;" CSS classes remain the styling surface.
+- [MarkdownHtmlBlock](markdownhtmlblock.mdx) - A [Avalonia.Controls.Documents.Section](xref:Avalonia.Controls.Documents.Section) that represents an HTML block from a markdown
+document. Its children are the rich elements the HTML converter produced;
+[Avalonia.Controls.Documents.MarkdownHtmlBlock.RawHtml](xref:Avalonia.Controls.Documents.MarkdownHtmlBlock.RawHtml) keeps the original source so an unedited block can
+be written back verbatim.
+- [MarkdownHtmlInline](markdownhtmlinline.mdx) - A [Avalonia.Controls.Documents.RichSpan](xref:Avalonia.Controls.Documents.RichSpan) that preserves an unrecognized inline HTML tag
+from a markdown document. Zero-length and invisible in the viewer; the
+markdown writer emits [Avalonia.Controls.Documents.MarkdownHtmlInline.RawHtml](xref:Avalonia.Controls.Documents.MarkdownHtmlInline.RawHtml) verbatim.
+- [MarkdownImage](markdownimage.mdx) - A [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) that resolves its pixels from a URL through a
+[Avalonia.Controls.MarkdownImageLoader](xref:Avalonia.Controls.MarkdownImageLoader). Carries the image URL and title; the image
+is loaded asynchronously when presented.
+- [MarkdownTaskListItem](markdowntasklistitem.mdx) - A [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) that represents a task list item (checkbox).
+Carries the checked state so the render layer can draw a checkbox
+instead of a bullet marker.
+- [PageBand](pageband.mdx) - A page header or footer as an element: the facade over a [Avalonia.Controls.Documents.TextModel.TextPageBand](xref:Avalonia.Controls.Documents.TextModel.TextPageBand)
+the way [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) is the facade over a [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+The text model owns the band ([Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands)); the owning
+document's [Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands) materializes this element over it
+on demand. Like any element, a band built from markup or code stays lazy: its
+text document comes into being when the owner's document initializes or when the
+band's content is first needed, and the model band when it joins the owner; until
+then the owning document is its logical parent, as for a pending block. [Avalonia.Controls.Documents.PageBand.Role](xref:Avalonia.Controls.Documents.PageBand.Role)
+and [Avalonia.Controls.Documents.PageBand.Rule](xref:Avalonia.Controls.Documents.PageBand.Rule) place the band by rule; a section's [Avalonia.Controls.Documents.Section.Header](xref:Avalonia.Controls.Documents.Section.Header),
+[Avalonia.Controls.Documents.Section.Footer](xref:Avalonia.Controls.Documents.Section.Footer), [Avalonia.Controls.Documents.Section.FirstPageHeader](xref:Avalonia.Controls.Documents.Section.FirstPageHeader) or
+[Avalonia.Controls.Documents.Section.FirstPageFooter](xref:Avalonia.Controls.Documents.Section.FirstPageFooter) places it explicitly, whatever its rule, so one
+band can serve any number of sections. It has its own buffer, selection and caret;
+its undo joins the owner's stack; it never hosts footnotes or bands of its own.
+- [PageBandCollection](pagebandcollection.mdx) - The page bands a document owns, as elements: a view over the text document's
+[Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands), which owns the bands, materializing a
+[Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand) element per band on demand. It follows the contract of the
+block collection: the document becomes a band's logical parent the moment it is
+added; while the document has no text document the band waits pending, and it
+joins the text document when that is initialized, before the pending blocks
+materialize; once the text document exists a band joins it at once. Removing a band
+releases owner, logical parent and undo and clears every section reference to it.
+Ownership is exclusive: a band owned by another document is refused until it is
+removed there. The first band with a given role and rule is the one the rule places.
+- [PageBandPolicy](pagebandpolicy.mdx) - The shared rule for which band a page shows, applied by the paged view over the
+text model and mirrored by the PDF export over snapshots. Explicit first, then
+rules, then the running band: a section's first-page reference on the section's
+first page; else the document's [Avalonia.Controls.Documents.PageBandRule.FirstPage](xref:Avalonia.Controls.Documents.PageBandRule.FirstPage) band on page
+one, else its [Avalonia.Controls.Documents.PageBandRule.EvenPage](xref:Avalonia.Controls.Documents.PageBandRule.EvenPage) band on even pages; else the
+section's running reference, else the document's [Avalonia.Controls.Documents.PageBandRule.Default](xref:Avalonia.Controls.Documents.PageBandRule.Default)
+band. A rule without a band for a role does not blank the page: the running band
+applies. What resolves to nothing shows nothing.
+- [PageBandRole](pagebandrole.mdx) - The kind of page band: a header at the top of the page or a footer at the bottom.
+- [PageBandRule](pagebandrule.mdx) - Which pages a band claims by itself. A band with [Avalonia.Controls.Documents.PageBandRule.None](xref:Avalonia.Controls.Documents.PageBandRule.None) shows only
+where a section references it; the other rules place a band from the document's
+bands on the pages nothing explicit claims. The first band with a given role and
+rule is the one the rule places.
+- [PageNumberFieldKind](pagenumberfieldkind.mdx) - What a [Avalonia.Controls.Documents.RichPageNumberField](xref:Avalonia.Controls.Documents.RichPageNumberField) resolves to.
+- [PageSizes](pagesizes.mdx) - Well-known paper sizes and page-unit conversions, in device-independent pixels
+(1/96 inch) — the unit every page property in this library speaks. Assign a named
+size to [Avalonia.Controls.FlowDocumentPageViewer.PageSize](xref:Avalonia.Controls.FlowDocumentPageViewer.PageSize) (or the editor's page-layout
+properties), feed its components to [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) and
+[Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight), or use the conversions for margins:
+`PagePadding = new Thickness(PageSizes.Inches(0.75))`.
+- [Paragraph](paragraph.mdx) - A block-level element that contains inline content.
+- [PixelImageSource](pixelimagesource.mdx) - A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) backed only by decoded pixels (a
+[Avalonia.Controls.Documents.Imaging.PixelHolder](xref:Avalonia.Controls.Documents.Imaging.PixelHolder)), with no encoded payload — for images created from raw
+pixels in code (e.g. a `WriteableBitmap`). Capture carries the pixel buffer
+into the snapshot, and serializers re-encode it to a supported format. Renders by
+building a bitmap from the pixels, which this source owns and disposes.
+- [RequestNavigateEventArgs](requestnavigateeventargs.mdx) - Provides data for the [Avalonia.Controls.Documents.RichHyperlink.RequestNavigateEvent](xref:Avalonia.Controls.Documents.RichHyperlink.RequestNavigateEvent).
+- [RichBold](richbold.mdx) - [RichBold](xref:Avalonia.Controls.Documents.RichBold) element - markup helper for indicating bolded content.
+Equivalent to a [RichSpan](xref:Avalonia.Controls.Documents.RichSpan) with [FontWeight](xref:Avalonia.Media.FontWeight) property set to FontWeight.[RichBold](xref:Avalonia.Controls.Documents.RichBold).
+This is the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)-backed equivalent of [Avalonia.Controls.Documents.RichBold](xref:Avalonia.Controls.Documents.RichBold).
+- [RichFootnoteCitation](richfootnotecitation.mdx) - A further citation of a footnote whose anchor is elsewhere: the same note
+referenced a second time, or referenced from inside another note. It shows the
+same number its [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) anchor does and stores it no
+more than the anchor does - the citation occupies a single object replacement
+character and rendering resolves the number from the position of the note with
+[Avalonia.Controls.Documents.RichFootnoteCitation.NoteId](xref:Avalonia.Controls.Documents.RichFootnoteCitation.NoteId) among the owning document's notes, so adding or removing a
+note renumbers every citation of it without touching the text.
+- [RichFootnoteReference](richfootnotereference.mdx) - A footnote anchor: an inline that marks where a note attaches to the text and
+shows the note's number. Nothing numeric is stored: the anchor occupies a single
+object replacement character, the convention an embedded object uses, and
+rendering resolves the number from the anchor's position - the 1-based index of
+its note among the document's [Avalonia.Controls.Documents.FlowDocument.Footnotes](xref:Avalonia.Controls.Documents.FlowDocument.Footnotes), which the
+document keeps in anchor order. The anchor edits as one atomic unit.
+[Avalonia.Controls.Documents.RichFootnoteReference.NoteId](xref:Avalonia.Controls.Documents.RichFootnoteReference.NoteId) pairs the anchor with its [Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) body -
+deleting the anchor deletes the note, and moving an anchor moves its note with
+it, so the numbers follow every edit without touching the text.
+- [RichHyperlink](richhyperlink.mdx) - A hyperlink inline element that extends [RichSpan](xref:Avalonia.Controls.Documents.RichSpan) for [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) integration.
+This is the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)-backed equivalent of [Avalonia.Controls.Documents.RichHyperlink](xref:Avalonia.Controls.Documents.RichHyperlink).
+- [RichImage](richimage.mdx) - An inline image embedded in text flow content. The image occupies a single
+character position (the object replacement character) and carries its content
+through its [Avalonia.Controls.Documents.RichImage.Source](xref:Avalonia.Controls.Documents.RichImage.Source), so it round-trips through snapshots, undo,
+and serialization.
+- [RichImageSource](richimagesource.mdx) - Describes where a [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage)'s pixels come from and how they
+are obtained. Embedded sources carry their encoded payload in the document
+and decode synchronously; deferred sources resolve asynchronously (e.g. from
+a URL via a loader) and only when the image is actually presented.
+- [RichImageSourceConverter](richimagesourceconverter.mdx) - Converts a URI string into a [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) so a
+[Avalonia.Controls.Documents.RichImage.Source](xref:Avalonia.Controls.Documents.RichImage.Source) can be authored directly in XAML — for example
+`<RichImage Source="avares://MyApp/Assets/picture.png" />`, or a path
+relative to the current XAML file, `<RichImage Source="/Assets/picture.png" />`.
+- [RichInline](richinline.mdx) - Base class for inline elements in rich text content.
+This is the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)-backed equivalent of [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline).
+- [RichInlineCollection](richinlinecollection.mdx) - A collection of child inline elements, validated against the inline schema.
+- [RichInlineUIContainer](richinlineuicontainer.mdx) - [RichInlineUIContainer](xref:Avalonia.Controls.Documents.RichInlineUIContainer) - a wrapper for embedded UIElements in text flow content inline collections.
+- [RichItalic](richitalic.mdx) - [RichItalic](xref:Avalonia.Controls.Documents.RichItalic) element - markup helper for indicating italicized content.
+Equivalent to a [RichSpan](xref:Avalonia.Controls.Documents.RichSpan) with [FontStyle](xref:Avalonia.Media.FontStyle) property set to FontStyle.[RichItalic](xref:Avalonia.Controls.Documents.RichItalic).
+This is the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)-backed equivalent of [Avalonia.Controls.Documents.RichItalic](xref:Avalonia.Controls.Documents.RichItalic).
+- [RichLineBreak](richlinebreak.mdx) - [RichLineBreak](xref:Avalonia.Controls.Documents.RichLineBreak) element that forces a line breaking.
+- [RichPageNumberField](richpagenumberfield.mdx) - A page-number field: an inline that stands for the current page number or the
+total page count, primarily inside a [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand). The number depends on
+pagination - the same band renders on every page with a different one - so nothing
+numeric is stored: the field occupies a single object replacement character and
+rendering resolves it against the page it lands on. Layout with no pages at all
+reads as a single page. The field edits as one atomic unit.
+- [RichRun](richrun.mdx) - A terminal element in text flow hierarchy - contains a uniformatted run of unicode characters.
+- [RichSpan](richspan.mdx) - [RichSpan](xref:Avalonia.Controls.Documents.RichSpan) element used for grouping other inline elements.
+- [RichSubscript](richsubscript.mdx) - [RichSubscript](xref:Avalonia.Controls.Documents.RichSubscript) element - markup helper for indicating subscript content.
+Sets [BaselineAlignment](xref:Avalonia.Media.BaselineAlignment) to [RichSubscript](xref:Avalonia.Controls.Documents.RichSubscript); font size scaling is applied at render time.
+- [RichSuperscript](richsuperscript.mdx) - [RichSuperscript](xref:Avalonia.Controls.Documents.RichSuperscript) element - markup helper for indicating superscript content.
+Sets [BaselineAlignment](xref:Avalonia.Media.BaselineAlignment) to [RichSuperscript](xref:Avalonia.Controls.Documents.RichSuperscript); font size scaling is applied at render time.
+- [RichTextElement](richtextelement.mdx) - Base class for rich text elements that participate in a [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+- [RichTextElementCollection&lt;T&gt;](richtextelementcollection-1.mdx) - A collection of child TextElements.
+Works both before and after document attachment.
+- [RichUnderline](richunderline.mdx) - [RichUnderline](xref:Avalonia.Controls.Documents.RichUnderline) element - markup helper for indicating underlined content.
+Equivalent to a [RichSpan](xref:Avalonia.Controls.Documents.RichSpan) with [TextDecorations](xref:Avalonia.Media.TextDecorations) property set to TextDecorations.[RichUnderline](xref:Avalonia.Controls.Documents.RichUnderline).
+This is the [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)-backed equivalent of [Avalonia.Controls.Documents.RichUnderline](xref:Avalonia.Controls.Documents.RichUnderline).
+- [Run](run.mdx) - A terminal element in text flow hierarchy - contains a uniformatted run of unicode characters
+- [Section](section.mdx) - A block element that groups other block elements.
+- [SectionBuilder](sectionbuilder.mdx) - Builder for Section content.
+- [Span](span.mdx) - Span element used for grouping other Inline elements.
+- [Table](table.mdx) - A block element that displays content arranged in rows and columns.
+- [TableCell](tablecell.mdx) - A cell element within a [Avalonia.Controls.Documents.TableRow](xref:Avalonia.Controls.Documents.TableRow).
+- [TableColumn](tablecolumn.mdx) - Defines a column in a [Avalonia.Controls.Documents.Table](xref:Avalonia.Controls.Documents.Table).
+- [TableColumnCollection](tablecolumncollection.mdx) - A collection of [Avalonia.Controls.Documents.TableColumn](xref:Avalonia.Controls.Documents.TableColumn) definitions for a [Avalonia.Controls.Documents.TableColumnCollection.Table](xref:Avalonia.Controls.Documents.TableColumnCollection.Table).
+- [TableRow](tablerow.mdx) - A row element within a [Avalonia.Controls.Documents.TableRowGroup](xref:Avalonia.Controls.Documents.TableRowGroup).
+- [TableRowGroup](tablerowgroup.mdx) - Groups rows within a [Avalonia.Controls.Documents.TableRowGroup.Table](xref:Avalonia.Controls.Documents.TableRowGroup.Table).
+- [TextElement](textelement.mdx) - [TextElement](xref:Avalonia.Controls.Documents.TextElement) is an base class for content in text based controls.
+TextElements span other content, applying property values or providing structural information.
+- [Underline](underline.mdx) - Underline element - markup helper for indicating superscript content.
+Equivalent to a Span with [TextDecorations](xref:Avalonia.Media.TextDecorations) property set to TextDecorations.Underlined.
+Can contain other inline elements.
+</ApiRefPage>
+

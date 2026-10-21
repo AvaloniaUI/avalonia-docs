@@ -1,6 +1,8 @@
 ---
 id: setting-up-the-headless-platform
 title: Headless Testing Platform
+description: Run Avalonia without a window for automated testing. Simulate input, flush async operations, and capture rendered frames for visual regression.
+doc-type: how-to
 ---
 
 The headless platform runs Avalonia without a visible window, making it ideal for automated testing in CI/CD environments and on machines without a display. It provides the full Avalonia control tree, layout, styling, and data binding, but replaces the real windowing and rendering backends with in-memory implementations.
@@ -194,6 +196,19 @@ public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<TestApplicat
         UseHeadlessDrawing = false
     });
 ```
+
+### Headless platform options
+
+`AvaloniaHeadlessPlatformOptions` is passed to `.UseHeadless()`. It has the following properties:
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `UseHeadlessDrawing` | `bool` | `true` | Uses the fake drawing backend that produces no pixels. Set to `false` and call `.UseSkia()` to enable real rendering and frame capture. |
+| `FrameBufferFormat` | `PixelFormat` | `Rgba8888` | Pixel format of the headless framebuffer used when rendering is enabled. |
+| `Fps` | `int` | `60` | Frame rate of the headless render timer. |
+| `ShouldRenderOnUIThread` | `bool` | `true` | Runs the render timer on the UI thread. Set to `false` to render on a background thread at the `Fps` rate. |
+| `OverlayPopups` | `bool` | `true` | Draws popups in the parent window's overlay layer. Set to `false` to host each popup in its own headless top-level. |
+| `UseSharedMouseDevice` | `bool?` | `null` | Shares one mouse device between all windows, so pointer capture and click counts are global, as on the desktop platforms. When `null` or `false`, each window gets its own mouse device. |
 
 ### Capturing a frame
 

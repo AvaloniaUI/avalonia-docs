@@ -1,0 +1,158 @@
+---
+title: 'DeferredImageSource'
+hide_title: true
+slug: '/avalonia/controls/documents/deferredimagesource'
+uid: 'Avalonia.Controls.Documents.DeferredImageSource'
+commentId: 'T:Avalonia.Controls.Documents.DeferredImageSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">DeferredImageSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) backed by an asynchronous resolver — typically
+a URL fetched by a loader. The image is produced only when presented and off
+the UI thread; the document carries a [Avalonia.Controls.Documents.DeferredImageSource.SourceUri](xref:Avalonia.Controls.Documents.DeferredImageSource.SourceUri) reference rather
+than embedded bytes.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class DeferredImageSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="richimagesource">RichImageSource</a> <span className="apiref-page__relation-separator">-&gt;</span> DeferredImageSource
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [DeferredImageSource](#uid-2597cbf7ac) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2597cbf7ac"></span>
+
+### DeferredImageSource Constructor
+
+```csharp
+public DeferredImageSource(Func<System.Threading.Tasks.Task<Avalonia.Media.IImage>> resolver, string sourceUri, string mimeType)
+```
+
+#### Parameters
+
+`resolver` Func&lt;System.Threading.Tasks.Task&lt;[Avalonia.Media.IImage](xref:Avalonia.Media.IImage)&gt;&gt;
+
+
+`sourceUri` string
+
+
+`mimeType` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ResolveAsync](#uid-9d129a041c) | Resolves the decoded image. Embedded sources complete synchronously; deferred sources fetch/decode in the background. Returns when the image cannot be produced. Callers must not dispose the returned image — its lifetime is owned by the source (or its loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable). |
+| [TryGetIntrinsicPixelSize](richimagesource.mdx#uid-43234fb232) | Inherited from [RichImageSource](richimagesource.mdx). |
+| [TryGetPixels](richimagesource.mdx#uid-a7a2ec7a6f) | Inherited from [RichImageSource](richimagesource.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9d129a041c"></span>
+
+### ResolveAsync Method
+
+Resolves the decoded image. Embedded sources complete synchronously;
+deferred sources fetch/decode in the background. Returns
+when the image cannot be produced. Callers must not
+dispose the returned image — its lifetime is owned by the source (or its
+loader); a source that owns a decoded bitmap implements [IDisposable](xref:System.IDisposable).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.IImage> ResolveAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.IImage](xref:Avalonia.Media.IImage)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EncodedBytes](richimagesource.mdx#uid-8ee090e2e9) | The encoded image bytes when the payload is embedded in the document, or an empty buffer for reference (URI) sources. Serializers that embed pixel data read this. Inherited from [RichImageSource](richimagesource.mdx). |
+| [MimeType](#uid-d9f6b3c2ae) | The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known. |
+| [SourceUri](#uid-6968cb35eb) | The reference URI for a deferred/linked source (e.g. an image URL), or for an embedded source. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d9f6b3c2ae"></span>
+
+### MimeType Property
+
+The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known.
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6968cb35eb"></span>
+
+### SourceUri Property
+
+The reference URI for a deferred/linked source (e.g. an image URL), or
+for an embedded source.
+
+```csharp
+public string SourceUri { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

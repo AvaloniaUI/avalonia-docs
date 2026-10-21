@@ -6,8 +6,6 @@ description: Set up Visual Studio Code on Linux to build, deploy, and debug Aval
 doc-type: how-to
 ---
 
-# Configure Android debugging on Linux
-
 This guide walks you through configuring Visual Studio Code on Linux so you can build, deploy, and debug Avalonia-based Android projects. The workflow uses the Mono Debug extension to attach to a running Android app over a local port.
 
 ## Prerequisites
@@ -16,7 +14,7 @@ Before you begin, make sure you have:
 
 - Visual Studio Code installed on Linux.
 - The .NET SDK (6.0 or later) installed and available on your `PATH`.
-- An Android emulator running, or a physical Android device connected via USB with developer mode enabled.
+- An Android emulator running, or a physical Android device connected via USB with USB debugging enabled from the developer options.
 - The **Mono Debug** extension installed from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
 
 ## Configure the launch profile
@@ -68,7 +66,7 @@ Open (or create) the `.vscode/tasks.json` file and add a task that builds and de
         "--no-restore",
         "-t:Run",
         "${workspaceFolder}/<ProjectName>.Android.csproj",
-        "-p:TargetFramework=net6.0-android",
+        "-p:TargetFramework=net8.0-android",
         "-p:Configuration=Debug",
         "-p:AndroidAttachDebugger=true",
         "-p:AndroidSdbHostPort=10000",
@@ -83,16 +81,16 @@ Open (or create) the `.vscode/tasks.json` file and add a task that builds and de
 Replace `<ProjectName>` with the name of your Android-specific Avalonia project.
 
 :::info
-The `port` value in `launch.json` must match the `AndroidSdbHostPort` and `AndroidSdbTargetPort` values in `tasks.json`. If these values differ, the debugger will not be able to connect.
+The `port` value in `launch.json` must match the `AndroidSdbHostPort` and `AndroidSdbTargetPort` values in `tasks.json`. If these values differ, the debugger cannot connect.
 :::
 
 ## Start debugging
 
-1. Open the **Run and Debug** panel in Visual Studio Code (Ctrl+Shift+D).
+1. Open the **Run and Debug** panel in Visual Studio Code (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>).
 2. Select **Debug - Android** from the configuration dropdown.
-3. Press **F5** or click the green play button.
+3. Press <kbd>F5</kbd> or click the green play button.
 
-The .NET runtime builds and deploys your app to the connected device or emulator. Once the app launches, the Mono debugger attaches to the configured port and you can set breakpoints, inspect variables, and step through your code as usual.
+.NET builds and deploys your app to the connected device or emulator. Once the app launches, the Mono debugger attaches to the configured port and you can set breakpoints, inspect variables, and step through your code as usual.
 
 If your app is already running on the device, select **Attach - Android** instead to skip the build step and connect directly.
 

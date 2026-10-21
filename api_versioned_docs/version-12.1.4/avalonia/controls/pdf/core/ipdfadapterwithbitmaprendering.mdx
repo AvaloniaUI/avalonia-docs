@@ -1,0 +1,140 @@
+---
+title: 'IPdfAdapterWithBitmapRendering'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfadapterwithbitmaprendering'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfAdapterWithBitmapRendering'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfAdapterWithBitmapRendering'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfAdapterWithBitmapRendering Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extension interface for adapters that support rendering to bitmaps.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfAdapterWithBitmapRendering
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipdfadapter">IPdfAdapter</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [RenderPageAsync](#uid-b4e61c8ec6) | Renders a page to a bitmap. |
+| [RenderPageRegionAsync](#uid-93ad70d5c0) | Renders a rectangular region of a page to a bitmap (for tiled rendering). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4e61c8ec6"></span>
+
+### RenderPageAsync Method
+
+Renders a page to a bitmap.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> RenderPageAsync(Avalonia.Controls.Pdf.Core.IPdfPage page, double scale, double dpiScale, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Pdf.Core.IPdfPage](xref:Avalonia.Controls.Pdf.Core.IPdfPage)
+
+The page to render.
+
+
+`scale` double
+
+Display (zoom) scale in DIPs.
+
+
+`dpiScale` double
+
+Device pixel ratio; the raster is sampled at `scale * dpiScale`
+pixels but the bitmap reports a DIP size of `scale`. Default 1.0.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93ad70d5c0"></span>
+
+### RenderPageRegionAsync Method
+
+Renders a rectangular region of a page to a bitmap (for tiled rendering).
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> RenderPageRegionAsync(Avalonia.Controls.Pdf.Core.IPdfPage page, double scale, Avalonia.Rect region, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Pdf.Core.IPdfPage](xref:Avalonia.Controls.Pdf.Core.IPdfPage)
+
+
+`scale` double
+
+
+`region` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)&gt;
+
+
+</section>
+
+</ApiRefPage>
+

@@ -28,15 +28,15 @@ These settings apply to every target platform. They appear on the **Basics** pag
 
 | Setting | `.parcel` property | Type or values | Default | Environment variable | Description |
 |---|---|---|---|---|---|
-| Project | `GeneralSettings.NetProjectPath` | Path | Required | — | Path to the application `.csproj` file. Parcel manages this field. |
+| Project | `GeneralSettings.NetProjectPath` | Path | Required | None | Path to the application `.csproj` file. Parcel manages this field. |
 | Package Name | `GeneralSettings.PackageName` | String | Assembly name | `PARCEL_GENERAL_PACKAGE_NAME` | Package identifier and output file name. Platform-specific normalization may apply. |
 | Assembly Name | `GeneralSettings.AssemblyName` | String | Project file name | `PARCEL_GENERAL_ASSEMBLY_NAME` | Name of the executable assembly. This advanced field is normally read from the .NET project. |
 | Application Name | `GeneralSettings.ApplicationName` | String | Package name | `PARCEL_GENERAL_APPLICATION_NAME` | Display name used by installers, bundles, shortcuts, and desktop entries. |
 | Version | `GeneralSettings.Version` | Version string | `1.0.0` | `PARCEL_GENERAL_VERSION` | Application and package version. Parcel converts it to the format required by each platform. |
 | Application Icon | `GeneralSettings.Icon` | Path to an icon | Parcel default icon | `PARCEL_GENERAL_ICON` | Shared application icon. A platform icon overrides it when configured. |
 | Company | `GeneralSettings.Company` | String | Package name where required | `PARCEL_GENERAL_COMPANY` | Sets the Windows publisher and Linux package maintainer unless a platform setting overrides it. Maximum 255 characters. |
-| File Associations | `GeneralSettings.FileTypes` | Collection | None | — | File types registered by supported installers and bundles. |
-| URL Schemes | `GeneralSettings.UrlTypes` | Collection | None | — | URL schemes registered by supported installers and bundles. |
+| File Associations | `GeneralSettings.FileTypes` | Collection | None | None | File types registered by supported installers and bundles. |
+| URL Schemes | `GeneralSettings.UrlTypes` | Collection | None | None | URL schemes registered by supported installers and bundles. |
 
 ### File associations <MinVersion version="1.1" isNewVersion="true" />
 
@@ -45,7 +45,7 @@ Each entry in `GeneralSettings.FileTypes` has the following properties:
 | Property | Type | Required | Description |
 |---|---|---|---|
 | `GeneralSettings.FileTypes[].Name` | String | Yes | Human-readable file type name. |
-| `GeneralSettings.FileTypes[].Extension` | String | Extension or MIME type | Extension with or without a leading period. After normalization, it must contain 1–10 lowercase letters or digits. |
+| `GeneralSettings.FileTypes[].Extension` | String | Extension or MIME type | Extension with or without a leading period. After normalization, it must contain 1 to 10 lowercase letters or digits. |
 | `GeneralSettings.FileTypes[].MimeType` | String | Extension or MIME type | MIME type such as `application/x-example`. Parcel generates one when Linux needs it and it is omitted. |
 
 Each entry in `GeneralSettings.UrlTypes` has the following properties:
@@ -69,15 +69,15 @@ These settings control the `dotnet publish` operation Parcel runs before packagi
 |---|---|---|---|---|---|
 | Configuration | `PublishSettings.Configuration` | String | .NET project default | `PARCEL_NET_CONFIGURATION` | Build configuration. It must begin with a letter and contain only letters, digits, `_`, or `-`. |
 | Publish Single File | `PublishSettings.PublishSingleFile` | Boolean | Enabled for new Parcel projects | `PARCEL_NET_PUBLISH_SINGLE_FILE` | Publishes managed assemblies in a single executable. |
-| Publish Trimmed | `PublishSettings.PublishTrimmed` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_TRIMMED` | Enables trimming to reduce the package size. Testing the trimmed application is recommended. |
+| Publish Trimmed | `PublishSettings.PublishTrimmed` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_TRIMMED` | Enables trimming to reduce the package size. |
 | Publish AOT | `PublishSettings.PublishAot` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_AOT` | Enables Native AOT compilation. |
 | Publish ReadyToRun | `PublishSettings.PublishReadyToRun` | Boolean | .NET project default | `PARCEL_NET_PUBLISH_READY_TO_RUN` | Precompiles assemblies to improve startup performance. |
 | Publish Self-Contained | `PublishSettings.PublishSelfContained` | Boolean | `true` | `PARCEL_NET_PUBLISH_SELF_CONTAINED` | Includes the .NET runtime. This advanced field is not shown in the GUI. |
-| MSBuild Properties | `PublishSettings.ExtraBuildProperties` | String dictionary | Empty | — | Additional properties passed to `dotnet publish`. |
-| Exclude Files | `PublishSettings.ExcludeFilePatterns` | List of glob patterns | Empty | — | Removes matching files and directories from the published output before packaging. |
+| MSBuild Properties | `PublishSettings.ExtraBuildProperties` | String dictionary | Empty | None | Additional properties passed to `dotnet publish`. |
+| Exclude Files | `PublishSettings.ExcludeFilePatterns` | List of glob patterns | Empty | None | Removes matching files and directories from the published output before packaging. |
 
 :::note
-Parcel respects .NET publish properties defined in the *.csproj file. There is no need to duplicate them in the Parcel config.
+Parcel respects .NET publish properties defined in the `.csproj` file. There is no need to duplicate them in the Parcel config.
 :::
 
 ## Windows settings
@@ -101,7 +101,7 @@ Parcel respects .NET publish properties defined in the *.csproj file. There is n
 |---|---|---|---|---|---|
 | Signing Type | `Win32Settings.SigningType` | Signing type | `None` | `PARCEL_WINDOWS_SIGNING_TYPE` | Selects the Authenticode signing provider. |
 | Sign Installer | `Win32Settings.SignInstaller` | Boolean | `true` | `PARCEL_WINDOWS_SIGN_INSTALLER` | Signs the generated NSIS or MSIX package and the application files. Disable it when a store or later pipeline signs the package. |
-| Additional signing patterns | `Win32Settings.AdditionalSignPatterns` | List of glob patterns | Empty | — | Includes additional code files in application signing. |
+| Additional signing patterns | `Win32Settings.AdditionalSignPatterns` | List of glob patterns | Empty | None | Includes additional code files in application signing. |
 | Timestamp Server URL | `Win32Settings.SigningTimestampServer` | URL | None | `PARCEL_WINDOWS_SIGNING_TIMESTAMP_SERVER` | Timestamp authority used with a local certificate or the Windows certificate store. |
 | Local Signing Certificate File | `Win32Settings.LocalSigningCertificate` | Path to PFX or P12 | Required for local certificate | `PARCEL_WINDOWS_LOCAL_SIGNING_CERTIFICATE` | Certificate and private key used for local signing. |
 | Local Signing Certificate Password | `Win32Settings.LocalSigningCertificatePassword` | Secret string | Empty | `PARCEL_WINDOWS_LOCAL_SIGNING_CERTIFICATE_PASSWORD` | Password protecting the local certificate. |
@@ -143,12 +143,12 @@ Parcel respects .NET publish properties defined in the *.csproj file. There is n
 | Team ID | `MacOsSettings.TeamId` | 10 uppercase letters or digits | None | `PARCEL_MACOS_TEAM_ID` | Apple Developer team identifier used for signing and notarization. |
 | App Category | `MacOsSettings.BundleCategory` | Apple bundle category | `Other` | `PARCEL_MACOS_BUNDLE_CATEGORY` | macOS and App Store application category. |
 | Application Icon | `MacOsSettings.AppIcon` | Path to ICNS or SVG | Application Icon | `PARCEL_MACOS_APP_ICON` | Overrides the shared icon for the app bundle. |
-| Permissions | `MacOsSettings.Permissions` | Permission-description dictionary | Empty | — | Adds macOS usage descriptions for Camera, Microphone, Location, Contacts, Calendars, Desktop, Documents, Downloads, and Network. |
-| Resource file patterns | `MacOsSettings.BundleResourcePatterns` | List of glob patterns | Empty | — | Moves matching files to `Contents/Resources` and replaces their original locations with symlinks. |
+| Permissions | `MacOsSettings.Permissions` | Permission-description dictionary | Empty | None | Adds macOS usage descriptions for Camera, Microphone, Location, Contacts, Calendars, Desktop, Documents, Downloads, and Network. |
+| Resource file patterns | `MacOsSettings.BundleResourcePatterns` | List of glob patterns | Empty | None | Moves matching files to `Contents/Resources` and replaces their original locations with symlinks. |
 | Automatically Move Bundle Frameworks | `MacOsSettings.AutomaticallyMoveBundleFrameworks` | Boolean | `false` | `PARCEL_MACOS_AUTOMATICALLY_MOVE_BUNDLE_FRAMEWORKS` | Advanced compatibility option for relocating frameworks. Not shown in the GUI. |
 | Automatically Move Bundle Resources | `MacOsSettings.AutomaticallyMoveBundleResources` | Boolean | `false` | `PARCEL_MACOS_AUTOMATICALLY_MOVE_BUNDLE_RESOURCES` | Advanced compatibility option for relocating resources. Not shown in the GUI. |
 | DMG Background Image | `MacOsSettings.DmgBackground` | Path to TIFF | None | `PARCEL_MACOS_DMG_BACKGROUND` | Background displayed in the DMG window. |
-| DMG Layout | `MacOsSettings.DmgLayout` | Layout object | Standard Parcel layout | — | Window, grid, icon, text, background color, app position, and Applications-link position settings. |
+| DMG Layout | `MacOsSettings.DmgLayout` | Layout object | Standard Parcel layout | None | Window, grid, icon, text, background color, app position, and Applications-link position settings. |
 | DMG License File | `MacOsSettings.DmgLicense` | Path | None | `PARCEL_MACOS_DMG_LICENSE` | File embedded at the root of the DMG. |
 | Install Location | `MacOsSettings.InstallerLocation` | Absolute path | `/Applications` | `PARCEL_MACOS_INSTALLER_LOCATION` | PKG installation directory. This advanced field is not shown in the GUI. |
 | Install Scripts Directory | `MacOsSettings.InstallerScripts` | Directory path | None | `PARCEL_MACOS_INSTALLER_SCRIPTS` | Directory containing executable `preinstall` and `postinstall` scripts. This advanced field is not shown in the GUI. |
@@ -184,7 +184,7 @@ The DMG layout object supports these advanced properties:
 | Signing Credentials | `MacOsSettings.SigningCredentialsType` | Credential type | `AdHoc` | `PARCEL_MACOS_SIGNING_CREDENTIALS_TYPE` | Selects how the app bundle, code, and optionally DMG are signed. |
 | Enable App Sandbox | `MacOsSettings.EnableSandbox` | Boolean | `false` | `PARCEL_MACOS_ENABLE_SANDBOX` | Runs the application in the macOS App Sandbox. The application can access only resources covered by its entitlements. Required for Mac App Store distribution. |
 | Sign DMG | `MacOsSettings.SignDmg` | Boolean | `true` | `PARCEL_MACOS_SIGN_DMG` | Signs the generated DMG using the application-signing credentials. |
-| Additional signing patterns | `MacOsSettings.AdditionalSignPatterns` | List of glob patterns | Empty | — | Includes additional code files in bundle signing. |
+| Additional signing patterns | `MacOsSettings.AdditionalSignPatterns` | List of glob patterns | Empty | None | Includes additional code files in bundle signing. |
 | Signing Identity | `MacOsSettings.SigningIdentity` | Keychain identity | Required for Keychain | `PARCEL_MACOS_SIGNING_IDENTITY` | Application-signing identity in the macOS Keychain. |
 | Signing P12 Certificate | `MacOsSettings.SigningP12Certificate` | Path to P12 | Required for P12 | `PARCEL_MACOS_SIGNING_P12_CERTIFICATE` | Portable application-signing certificate and private key. |
 | Signing Password | `MacOsSettings.SigningP12Password` | Secret string | Empty | `PARCEL_MACOS_SIGNING_P12_PASSWORD` | Password protecting the application P12 certificate. |
@@ -224,8 +224,8 @@ A PKG installer requires a separate installer certificate. `MacOsSettings.Instal
 | Copyright | `LinuxSettings.CopyrightFile` | Path | None | `PARCEL_LINUX_COPYRIGHT_FILE` | Copyright file included in DEB and RPM metadata. |
 | Desktop Category | `LinuxSettings.DesktopCategory` | Linux desktop category | `Application` | `PARCEL_LINUX_DESKTOP_CATEGORY` | Category used in desktop menus and mapped to package-manager metadata. |
 | Create `/usr/bin/` symlink | `LinuxSettings.CreateBinSymlink` | Boolean | `true` | `PARCEL_LINUX_CREATE_BIN_SYMLINK` | Creates a command-line symlink to the application executable. |
-| Additional DEB Dependencies | `LinuxSettings.AdditionalDebDependencies` | List | Empty | — | Adds Debian package dependencies. Separate alternatives with a vertical bar. |
-| Additional RPM Dependencies | `LinuxSettings.AdditionalRpmDependencies` | List | Empty | — | Adds RPM package names or capabilities. |
+| Additional DEB Dependencies | `LinuxSettings.AdditionalDebDependencies` | List | Empty | None | Adds Debian package dependencies. Separate alternatives with a vertical bar. |
+| Additional RPM Dependencies | `LinuxSettings.AdditionalRpmDependencies` | List | Empty | None | Adds RPM package names or capabilities. |
 
 You can use the main [freedesktop categories](https://specifications.freedesktop.org/menu-spec/latest/category-registry.html) and common additional categories, e.g., `Development`, `Education`, `Game`, `Graphics`, `Network`, `Office`, `Science`, `Settings`, `System`, `Utility`, `WebBrowser`, `TextEditor`, `TerminalEmulator`.
 

@@ -1,0 +1,278 @@
+---
+title: 'ChartZoomEventArgs'
+hide_title: true
+slug: '/avalonia/controls/charts/chartzoomeventargs'
+uid: 'Avalonia.Controls.Charts.ChartZoomEventArgs'
+commentId: 'T:Avalonia.Controls.Charts.ChartZoomEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ChartZoomEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for chart zoom events.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ChartZoomEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> ChartZoomEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ChartZoomEventArgs](#uid-3b743a47be) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b743a47be"></span>
+
+### ChartZoomEventArgs Constructor
+
+```csharp
+public ChartZoomEventArgs()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Axis](#uid-611ac13704) | Gets the axis being zoomed (if applicable). |
+| [CurrentZoomFactor](#uid-7a8e14387c) | Gets the zoom factor after the zoom operation. |
+| [CurrentZoomPosition](#uid-5fd092f3a3) | Gets the zoom position after the zoom operation. |
+| [PreviousViewportMaxX](#uid-38a7eb6337) | Gets the maximum X value of the visible viewport before the zoom operation. |
+| [PreviousViewportMaxY](#uid-9b4241ce6d) | Gets the maximum Y value of the visible viewport before the zoom operation. |
+| [PreviousViewportMinX](#uid-382e4ea6e9) | Gets the minimum X value of the visible viewport before the zoom operation. |
+| [PreviousViewportMinY](#uid-f5cd9d031a) | Gets the minimum Y value of the visible viewport before the zoom operation. |
+| [PreviousZoomFactor](#uid-b21d743fb3) | Gets the zoom factor before the zoom operation. A value of 1.0 means 100% (no zoom), 2.0 means zoomed in 2x. |
+| [PreviousZoomPosition](#uid-67ded14673) | Gets the zoom position before the zoom operation. Value ranges from 0 to 1, representing the start position of the visible range. |
+| [ViewportMaxX](#uid-6ba804fcbb) | Gets the maximum X value of the visible viewport. |
+| [ViewportMaxY](#uid-5591371279) | Gets the maximum Y value of the visible viewport. |
+| [ViewportMinX](#uid-3150229a71) | Gets the minimum X value of the visible viewport. |
+| [ViewportMinY](#uid-259b2fd3b4) | Gets the minimum Y value of the visible viewport. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-611ac13704"></span>
+
+### Axis Property
+
+Gets the axis being zoomed (if applicable).
+
+```csharp
+public Avalonia.Controls.Charts.ChartAxis Axis { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a8e14387c"></span>
+
+### CurrentZoomFactor Property
+
+Gets the zoom factor after the zoom operation.
+
+```csharp
+public double CurrentZoomFactor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fd092f3a3"></span>
+
+### CurrentZoomPosition Property
+
+Gets the zoom position after the zoom operation.
+
+```csharp
+public double CurrentZoomPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38a7eb6337"></span>
+
+### PreviousViewportMaxX Property
+
+Gets the maximum X value of the visible viewport before the zoom operation.
+
+```csharp
+public Nullable<double> PreviousViewportMaxX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b4241ce6d"></span>
+
+### PreviousViewportMaxY Property
+
+Gets the maximum Y value of the visible viewport before the zoom operation.
+
+```csharp
+public Nullable<double> PreviousViewportMaxY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-382e4ea6e9"></span>
+
+### PreviousViewportMinX Property
+
+Gets the minimum X value of the visible viewport before the zoom operation.
+
+```csharp
+public Nullable<double> PreviousViewportMinX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5cd9d031a"></span>
+
+### PreviousViewportMinY Property
+
+Gets the minimum Y value of the visible viewport before the zoom operation.
+
+```csharp
+public Nullable<double> PreviousViewportMinY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b21d743fb3"></span>
+
+### PreviousZoomFactor Property
+
+Gets the zoom factor before the zoom operation.
+A value of 1.0 means 100% (no zoom), 2.0 means zoomed in 2x.
+
+```csharp
+public double PreviousZoomFactor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67ded14673"></span>
+
+### PreviousZoomPosition Property
+
+Gets the zoom position before the zoom operation.
+Value ranges from 0 to 1, representing the start position of the visible range.
+
+```csharp
+public double PreviousZoomPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ba804fcbb"></span>
+
+### ViewportMaxX Property
+
+Gets the maximum X value of the visible viewport.
+
+```csharp
+public double ViewportMaxX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5591371279"></span>
+
+### ViewportMaxY Property
+
+Gets the maximum Y value of the visible viewport.
+
+```csharp
+public double ViewportMaxY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3150229a71"></span>
+
+### ViewportMinX Property
+
+Gets the minimum X value of the visible viewport.
+
+```csharp
+public double ViewportMinX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-259b2fd3b4"></span>
+
+### ViewportMinY Property
+
+Gets the minimum Y value of the visible viewport.
+
+```csharp
+public double ViewportMinY { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

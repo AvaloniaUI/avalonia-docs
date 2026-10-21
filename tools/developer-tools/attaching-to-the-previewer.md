@@ -22,7 +22,7 @@ Because Developer Tools can run out-of-process, you can attach it to a previewer
 
 ## Configuration
 
-Preview extensions do not support keyboard input, so `AutoConnectFromDesignMode` is your only connection option at the moment. Add the following to your application startup code:
+Preview extensions do not support keyboard input, so `AutoConnectFromDesignMode` is the only connection option. Add the following to your application startup code:
 
 ```csharp title="App.axaml.cs"
 this.AttachDeveloperTools(o =>

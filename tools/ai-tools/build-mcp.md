@@ -29,9 +29,9 @@ import TabItem from '@theme/TabItem';
 
 The Build MCP server gives your AI coding assistant direct access to the Avalonia documentation and expert development guidance. Instead of relying on training data that may be outdated or incomplete, your assistant can search guides, tutorials, and API references in real time, load Avalonia-specific coding rules, and use guided prompts for common workflows like creating new projects or recreating a UI from a screenshot.
 
-Build MCP is **free to use** and requires no license key or local installation. It runs as a remote server, so setup takes only a few seconds in any MCP-compatible editor or CLI tool.
+Build MCP is free to use and requires no license key or local installation. It runs as a remote server, and is compatible with most popular code editors and CLI tools.
 
-The server also provides migration tools that guide your assistant through upgrading to the latest Avalonia Developer Tools package and migrating WPF applications to Avalonia — either as a full native port or as a drop-in cross-platform deployment using Avalonia XPF.
+The server also provides migration tools that guide your assistant through upgrading to the latest Avalonia Developer Tools package and migrating WPF applications to Avalonia, either as a full native port or as a drop-in cross-platform deployment using Avalonia XPF.
 
 For a general introduction to MCP, see [AI Tools](/tools/ai-tools/).
 
@@ -45,7 +45,7 @@ The Build MCP server exposes eight tools to your AI assistant:
 |------|-------------|
 | `search_avalonia_docs` | Searches the full Avalonia documentation, including API references, tutorials, guides, and migration docs. Common topics like "styling", "binding", and "mvvm" are automatically routed to optimized queries for better results. |
 | `lookup_avalonia_api` | Looks up a specific Avalonia class, property, method, or event in the API reference. Use this for targeted queries such as `TextBlock`, `Window.Show`, or `StyledProperty`. |
-| `get_avalonia_expert_rules` | Returns a comprehensive set of Avalonia development rules covering AXAML syntax, the property system, styling, data binding, MVVM patterns, custom controls, layout, theming, assets, threading, and common mistakes to avoid. Call this at the start of a development session so your assistant writes correct, idiomatic Avalonia code. |
+| `get_avalonia_expert_rules` | Returns Avalonia development rules covering AXAML syntax, the property system, styling, data binding, MVVM patterns, custom controls, layout, theming, assets, threading, and common mistakes to avoid. Call this at the start of a development session so your assistant writes correct, idiomatic Avalonia code. |
 
 ### Migration
 
@@ -82,7 +82,7 @@ Choose your editor or CLI tool below:
 
 **Option A: Command palette**
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+1. Open the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, or  <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>).
 2. Run **MCP: Add Server**.
 3. Select **HTTP** as the server type.
 4. Enter `https://docs-mcp.avaloniaui.net/mcp` as the URL.
@@ -133,7 +133,7 @@ JetBrains Rider supports MCP servers through the AI Assistant plugin and the Git
 
 **Option A: Settings UI**
 
-1. Open **Settings** > **Tools** > **AI Assistant** > **MCP Servers**.
+1. Open **Settings** → **Tools** → **AI Assistant** → **Model Context Protocol (MCP)**.
 2. Click **Add** and select **Streamable HTTP** as the transport type.
 3. Enter `https://docs-mcp.avaloniaui.net/mcp` as the URL.
 4. Set the server name to `avalonia-docs`.
@@ -203,8 +203,8 @@ claude mcp list
 
 1. Go to **Customize** → **Connectors**.
 2. Click the **+** button at the top of the window, then **Add custom connector**.
-3. In the "Name" field, input "avalonia-docs".
-4. In the "Remote MCP server URL" field, input `https://docs-mcp.avaloniaui.net/mcp`.
+3. In the **Name** field, input "avalonia-docs".
+4. In the **Remote MCP server URL** field, input `https://docs-mcp.avaloniaui.net/mcp`.
 5. Click **Add**.
 6. You may need to restart Claude Desktop.
 
@@ -301,7 +301,7 @@ This prompt works best when combined with the [DevTools MCP](/tools/developer-to
 The assistant calls `analyze_wpf_project` to scan your project for target framework, WPF references, third-party control suites (Telerik, DevExpress, Syncfusion, Infragistics, Actipro, SciChart, Xceed, ComponentOne), MVVM frameworks, and platform-specific code. Based on what it finds, it recommends one of two paths and hands off to the matching tool:
 
 - **Avalonia XPF** — drop-in cross-platform with your existing WPF code, XAML, and third-party controls preserved. The assistant calls `migrate_to_xpf` to walk you through NuGet config, SDK switching, and license setup.
-- **Native Avalonia** — full migration to modern Avalonia controls and themes. The assistant calls `migrate_to_avalonia` for the phased playbook, then pulls focused per-topic mapping tables (controls, properties, styling, bindings, events, templates, gotchas, etc.) via `lookup_wpf_to_avalonia_mapping` as it ports each file. This keeps context focused — the assistant only loads the mapping it needs for the section it's working on.
+- **Native Avalonia** — full migration to modern Avalonia controls and themes. The assistant calls `migrate_to_avalonia` for the phased playbook, then pulls focused per-topic mapping tables (controls, properties, styling, bindings, events, templates, gotchas, etc.) via `lookup_wpf_to_avalonia_mapping` as it ports each file. This keeps context focused, as the assistant only loads the mapping it needs for the section it's working on.
 
 **Setting up Avalonia Developer Tools:**
 

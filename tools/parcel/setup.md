@@ -4,7 +4,7 @@ title: Setting up Avalonia Parcel
 description: Install, configure, and activate Avalonia Parcel, the packaging tool for building, signing, and packaging Avalonia applications on Windows, macOS, and Linux.
 sidebar_label: Setup
 sidebar_position: 1
-doc-type: tutorial
+doc-type: how-to
 tags:
   - avalonia plus
   - avalonia pro
@@ -20,7 +20,7 @@ Avalonia Parcel is a packaging tool for Avalonia applications. It provides a gra
 | .NET Runtime | 6.0 or newer |
 | Windows | 10 or newer |
 | macOS | 13 or newer |
-| Linux | X11 and glibc 2.27 or musl 1.22.2 compatible distros |
+| Linux | X11 and glibc 2.27 or musl 1.2.2 compatible distros |
 
 ## Step 1: Install Avalonia Parcel
 
@@ -35,7 +35,7 @@ This guide shows how to install Parcel globally. You can install it locally, but
 dotnet tool install --global AvaloniaUI.Parcel
 ```
 
-If you installed Parcel for .NET 8 or .NET 9, first run `dotnet tool uninstall --global AvaloniaUI.Parcel.Windows` or `parcel uninstall`.
+If you installed Parcel for .NET 8 or .NET 9, first run `dotnet tool uninstall --global AvaloniaUI.Parcel` or `parcel uninstall`.
 
 Use the following command to update Parcel:
 
@@ -99,7 +99,7 @@ dotnet tool update --global AvaloniaUI.Parcel.Linux
 </TabItem>
 </Tabs>
 
-:::warning
+:::caution
 On macOS or Linux, the installer might not add the installation directory to the `PATH` environment variable. In this case, the shell reports a "command not found" error when you run `parcel`.
 
 Add the tool directory to `PATH`. The default directory is usually `$HOME/.dotnet/tools`.
@@ -125,17 +125,13 @@ parcel pack ./SampleApp.parcel -r osx-x64 -p dmg -o ./artifacts
 
 This command uses the Parcel project to bundle and sign the application. It then creates a DMG file.
 
-:::note
-CLI is not available in the free community license.
-:::
-
 ## Step 3: Activate the tool
 
-When Parcel opens, sign in with the Avalonia Portal account that has the tool license.
+When Parcel opens, sign in with your Avalonia account that has the tool license.
 
 For the CLI, use the `--license-key` option. Alternatively, set the `AVALONIA_TOOLS_LICENSE_KEY` environment variable, or sign in through the Parcel GUI and reuse that session.
 
-## Further Reading
+## See also
 
 - [Parcel command line reference](/tools/parcel/command-line-reference)
 - [Parcel configuration reference](/tools/parcel/configuration-reference)

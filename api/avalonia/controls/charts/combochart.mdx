@@ -37,7 +37,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__lead">
 
 A chart that combines multiple series types (bar + line) on the same axes.
-Supports primary and secondary Y-axes.
+Supports primary, secondary, and named multiple Y-axes.
 
 </div>
 
@@ -225,6 +225,7 @@ public ComboChart()
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
 | [SecondaryVerticalAxis](cartesianchart.mdx#uid-f51fad3df8) | Gets or sets the secondary vertical (Y) axis for dual-axis charts. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [Series](cartesianchart.mdx#uid-84bb42553f) | Gets the collection of series in this chart. Inherited from [CartesianChart](cartesianchart.mdx). |
+| [SeriesSource](cartesianchart.mdx#uid-5918530005) | Gets or sets the series to show. Bind this (`SeriesSource="{Binding ChartSeries}"`) instead of [Avalonia.Controls.Charts.CartesianChart.Series](xref:Avalonia.Controls.Charts.CartesianChart.Series), which can't be bound; the chart keeps [Avalonia.Controls.Charts.CartesianChart.Series](xref:Avalonia.Controls.Charts.CartesianChart.Series) in sync. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ShowCrosshairLabels](cartesianchart.mdx#uid-ac274961b8) | Gets or sets a value indicating whether to show labels at the crosshair intersection with axes. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ShowLegend](chartbase.mdx#uid-7af7d16f16) | Gets or sets whether to show the legend. The meaning of each legend entry depends on the chart type. Some legends describe hideable series, while others are explanatory scales. Inherited from [ChartBase](chartbase.mdx). |
 | [ShowRangeSelector](cartesianchart.mdx#uid-7f8ac95e2e) | Gets or sets whether the range selector controls are visible. When false, zoom/pan can still be enabled via gestures and mouse interactions. Useful for mobile scenarios where pinch-to-zoom is preferred. Inherited from [CartesianChart](cartesianchart.mdx). |
@@ -249,6 +250,7 @@ public ComboChart()
 | [VerticalAlignment](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [VerticalAxis](cartesianchart.mdx#uid-9ecbaec1c5) | Gets or sets the vertical (Y) axis. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [Width](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
+| [YAxes](cartesianchart.mdx#uid-a5e25e209b) | Gets the collection of vertical (Y) axes. The first slot is the primary axis and the second slot is the secondary axis. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ZIndex](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../../visual.mdx). |
 | [ZoomFactorX](cartesianchart.mdx#uid-628ec3bc1c) | Gets the current horizontal zoom factor (1.0 = 100% = no zoom). Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ZoomFactorY](cartesianchart.mdx#uid-0969e0bb00) | Gets the current vertical zoom factor (1.0 = 100% = no zoom). Inherited from [CartesianChart](cartesianchart.mdx). |
@@ -267,6 +269,12 @@ Gets or sets whether to show a secondary Y-axis on the right.
 ```csharp
 public bool ShowSecondaryAxis { get; set; }
 ```
+
+#### Remarks
+
+This convenience switch controls [Avalonia.Controls.Charts.CartesianChart.SecondaryVerticalAxis](xref:Avalonia.Controls.Charts.CartesianChart.SecondaryVerticalAxis).
+When managing axes through [Avalonia.Controls.Charts.CartesianChart.YAxes](xref:Avalonia.Controls.Charts.CartesianChart.YAxes), set `IsVisible`
+on each axis instead.
 
 </section>
 
@@ -382,6 +390,7 @@ public bool ShowSecondaryAxis { get; set; }
 | [ScrollGestureEvent](../../input/inputelement.mdx#uid-d098469113) | Defines the [Avalonia.Input.InputElement.ScrollGesture](xref:Avalonia.Input.InputElement.ScrollGesture) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [ScrollGestureInertiaStartingEvent](../../input/inputelement.mdx#uid-02f504d2ea) | Defines the [Avalonia.Input.InputElement.ScrollGestureInertiaStarting](xref:Avalonia.Input.InputElement.ScrollGestureInertiaStarting) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [SecondaryVerticalAxisProperty](cartesianchart.mdx#uid-17696a5e86) | Identifies the [Avalonia.Controls.Charts.CartesianChart.SecondaryVerticalAxis](xref:Avalonia.Controls.Charts.CartesianChart.SecondaryVerticalAxis) Avalonia property. Inherited from [CartesianChart](cartesianchart.mdx). |
+| [SeriesSourceProperty](cartesianchart.mdx#uid-57f344ec68) | Identifies the [Avalonia.Controls.Charts.CartesianChart.SeriesSource](xref:Avalonia.Controls.Charts.CartesianChart.SeriesSource) Avalonia property. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ShowCrosshairLabelsProperty](cartesianchart.mdx#uid-6916f94388) | Identifies the [Avalonia.Controls.Charts.CartesianChart.ShowCrosshairLabels](xref:Avalonia.Controls.Charts.CartesianChart.ShowCrosshairLabels) Avalonia property. Inherited from [CartesianChart](cartesianchart.mdx). |
 | [ShowLegendProperty](chartbase.mdx#uid-2c7770f95d) | Identifies the [Avalonia.Controls.Charts.ChartBase.ShowLegend](xref:Avalonia.Controls.Charts.ChartBase.ShowLegend) Avalonia property. Inherited from [ChartBase](chartbase.mdx). |
 | [ShowRangeSelectorProperty](cartesianchart.mdx#uid-d41e20d22b) | Identifies the [Avalonia.Controls.Charts.CartesianChart.ShowRangeSelector](xref:Avalonia.Controls.Charts.CartesianChart.ShowRangeSelector) Avalonia property. Inherited from [CartesianChart](cartesianchart.mdx). |

@@ -124,6 +124,11 @@ export default function XamlPreview({
         // Create the custom element if it doesn't exist
         if (!previewElementRef.current) {
           const element = document.createElement('avalonia-preview');
+          // Pin the element to .previewContainer's box. In the stacked (narrow) layout nothing
+          // above it has a definite height, so height: 100% alone collapses to 0 and the preview
+          // renders blank. Set inline: the element forces position: relative on itself otherwise.
+          element.style.position = 'absolute';
+          element.style.inset = '0';
           element.style.width = '100%';
           element.style.height = '100%';
           element.style.display = 'block';

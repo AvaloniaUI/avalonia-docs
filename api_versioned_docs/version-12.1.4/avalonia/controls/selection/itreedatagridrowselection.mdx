@@ -1,0 +1,207 @@
+---
+title: 'ITreeDataGridRowSelection'
+hide_title: true
+slug: '/avalonia/controls/selection/itreedatagridrowselection'
+uid: 'Avalonia.Controls.Selection.ITreeDataGridRowSelection'
+commentId: 'T:Avalonia.Controls.Selection.ITreeDataGridRowSelection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeDataGridRowSelection Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides non-generic access to row selection state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeDataGridRowSelection
+```
+
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Selection.TreeDataGridRowSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridRowSelectionModel%601) is generic, but the
+[Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) and its automation peers need non-generic access to the row
+selection state. Custom row selection models should implement this interface in order to
+expose their selection to UI Automation clients such as screen readers, and to support
+row drag/drop.
+
+This interface is experimental: it is exposed to allow custom selection models to be
+implemented, but it may be changed or removed in a future release.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deselect](#uid-3f37378362) | Removes the item at the specified index from the selection. |
+| [IsSelected](#uid-72144d7551) | Determines whether the item at the specified index is selected. |
+| [Select](#uid-72e32f61c2) | Adds the item at the specified index to the selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f37378362"></span>
+
+### Deselect Method
+
+Removes the item at the specified index from the selection.
+
+```csharp
+public void Deselect(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index of the item to deselect.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72144d7551"></span>
+
+### IsSelected Method
+
+Determines whether the item at the specified index is selected.
+
+```csharp
+public bool IsSelected(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index of the item in the source data.
+
+
+#### Returns
+
+bool
+
+true if the item is selected; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-72e32f61c2"></span>
+
+### Select Method
+
+Adds the item at the specified index to the selection.
+
+```csharp
+public void Select(Avalonia.Controls.IndexPath index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.IndexPath](xref:Avalonia.Controls.IndexPath)
+
+The index of the item to select.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-2087042a8b) | Gets the number of selected items. |
+| [SelectedIndex](#uid-ccce568fd0) | Gets or sets the selected index. Setting this value clears the existing selection and selects the single specified item. |
+| [SelectedIndexes](#uid-56ddc7f705) | Gets the indexes of the selected items. |
+| [SelectedItems](#uid-c3c0a78704) | Gets the selected items as an untyped list. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2087042a8b"></span>
+
+### Count Property
+
+Gets the number of selected items.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ccce568fd0"></span>
+
+### SelectedIndex Property
+
+Gets or sets the selected index. Setting this value clears the existing selection and
+selects the single specified item.
+
+```csharp
+public Avalonia.Controls.IndexPath SelectedIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-56ddc7f705"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the selected items.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.IndexPath> SelectedIndexes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3c0a78704"></span>
+
+### SelectedItems Property
+
+Gets the selected items as an untyped list.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<object> SelectedItems { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

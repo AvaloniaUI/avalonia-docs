@@ -1,6 +1,8 @@
 ---
 id: ios
 title: iOS
+description: How to set up, provision, and configure Avalonia apps for iOS, including rendering options, Mac Catalyst, and deep linking.
+doc-type: how-to
 ---
 
 import IOSOpenXcodeScreenshot from '/img/guides/platform-specific-guides/ios/ios-open-xcode.png';
@@ -84,6 +86,36 @@ If successful, your device is now provisioned for development. To find your code
 
 The bold text at the top of the window on your selected development certificate is your signing key value (e.g., `Apple Development: dan@walms.co.uk (3L323F7VSS)`).
 
+## Configuring iOS platform options
+
+`iOSPlatformOptions` controls how Avalonia renders on iOS. Apply it by overriding `CustomizeAppBuilder` in your `AppDelegate`, which inherits from `AvaloniaAppDelegate`:
+
+```csharp
+protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+{
+    return base.CustomizeAppBuilder(builder)
+        .With(new iOSPlatformOptions
+        {
+            RenderingMode = new[]
+            {
+                iOSRenderingMode.Metal,
+                iOSRenderingMode.OpenGl
+            }
+        });
+}
+```
+
+### Rendering mode
+
+`RenderingMode` is an ordered list of graphics backends. Avalonia tries each one in turn and uses the first that initializes successfully, so the first entry has the highest priority. The default is a two-item list of `Metal` first, `OpenGl` second.
+
+| Mode | Description |
+|---|---|
+| `Metal` | GPU rendering through Metal. |
+| `OpenGl` | GPU rendering through EAGL on iOS and tvOS. Not supported on Mac Catalyst. |
+
+`RenderingMode` must contain at least one mode. If it is empty, or none of the listed modes initialize, Avalonia throws an `InvalidOperationException`.
+
 ## Mac Catalyst
 
 Mac Catalyst allows you to run your Avalonia iOS app on macOS without writing a separate macOS project. This is useful when your app relies heavily on UIKit APIs or when you want to embed Avalonia inside a MAUI hybrid application (which uses Catalyst for desktop support on macOS).
@@ -131,6 +163,33 @@ Mac Catalyst is a narrower option for specific scenarios: apps that are deeply t
 | Shares project with iOS | No (separate Desktop project) | Yes (same iOS project) |
 | MAUI hybrid embedding | No | Yes |
 | Recommended for new Avalonia apps | Yes | No |
+
+## High refresh rate displays
+
+Starting with Avalonia 12.2, the iOS backend asks for the display's refresh rate, up to 120 Hz on ProMotion devices. iOS can still lower the rate, for example in Low Power Mode.
+
+On iPhone, iOS keeps your app at 60 Hz unless your `Info.plist` contains the `CADisableMinimumFrameDurationOnPhone` key:
+
+```xml
+<key>CADisableMinimumFrameDurationOnPhone</key>
+<true/>
+```
+
+iPad does not need this key. If the key is missing on a ProMotion iPhone, Avalonia logs a warning at startup and rendering stays at 60 Hz.
+
+If your app cannot sustain high frame rates, you can keep the system's default rate by turning off `EnableHighRefreshRate` in `iOSPlatformOptions`:
+
+```csharp
+[Register("AppDelegate")]
+public partial class AppDelegate : AvaloniaAppDelegate<App>
+{
+    protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+    {
+        return base.CustomizeAppBuilder(builder)
+            .With(new iOSPlatformOptions { EnableHighRefreshRate = false });
+    }
+}
+```
 
 ## Deep linking and universal links
 

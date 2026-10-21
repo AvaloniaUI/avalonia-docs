@@ -1,0 +1,140 @@
+---
+title: 'PdfZoomMode'
+hide_title: true
+slug: '/avalonia/controls/pdfzoommode'
+uid: 'Avalonia.Controls.PdfZoomMode'
+commentId: 'T:Avalonia.Controls.PdfZoomMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfZoomMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how the [Avalonia.Controls.PdfViewer](xref:Avalonia.Controls.PdfViewer) sizes pages to the viewport.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PdfZoomMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PdfZoomMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ActualSize](#uid-f347a533fc) | Resets the zoom to 100% (actual size). Setting this value behaves as a one-shot command: the effective mode reverts to [Avalonia.Controls.PdfZoomMode.Manual](xref:Avalonia.Controls.PdfZoomMode.Manual) afterwards. |
+| [FitHeight](#uid-e08d8a29db) | The page height is scaled to fill the viewport height. |
+| [FitPage](#uid-1e58412114) | The whole page is scaled to fit within the viewport. |
+| [FitWidth](#uid-19a6699ad3) | The page width is scaled to fill the viewport width. |
+| [Manual](#uid-896671210b) | The zoom level is set explicitly via [Avalonia.Controls.PdfViewer.ZoomLevel](xref:Avalonia.Controls.PdfViewer.ZoomLevel) and is not recalculated when the viewport resizes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f347a533fc"></span>
+
+### ActualSize Field
+
+Resets the zoom to 100% (actual size). Setting this value behaves as a one-shot
+command: the effective mode reverts to [Avalonia.Controls.PdfZoomMode.Manual](xref:Avalonia.Controls.PdfZoomMode.Manual) afterwards.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode ActualSize
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e08d8a29db"></span>
+
+### FitHeight Field
+
+The page height is scaled to fill the viewport height.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode FitHeight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e58412114"></span>
+
+### FitPage Field
+
+The whole page is scaled to fit within the viewport.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode FitPage
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19a6699ad3"></span>
+
+### FitWidth Field
+
+The page width is scaled to fill the viewport width.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode FitWidth
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-896671210b"></span>
+
+### Manual Field
+
+The zoom level is set explicitly via [Avalonia.Controls.PdfViewer.ZoomLevel](xref:Avalonia.Controls.PdfViewer.ZoomLevel) and is not
+recalculated when the viewport resizes.
+
+```csharp
+public Avalonia.Controls.PdfZoomMode Manual
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,60 @@
+---
+title: 'Avalonia.Controls.Pdf.Core'
+hide_title: true
+slug: '/avalonia/controls/pdf/core'
+uid: 'Avalonia.Controls.Pdf.Core'
+commentId: 'N:Avalonia.Controls.Pdf.Core'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Core Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Pdf.Core`
+
+</div>
+
+## Types
+
+- [IPdfAdapter](ipdfadapter.mdx) - Platform-agnostic interface for PDF rendering operations.
+- [IPdfAdapterFactory](ipdfadapterfactory.mdx) - Factory for creating platform-specific PDF adapters.
+- [IPdfAdapterWithBitmapRendering](ipdfadapterwithbitmaprendering.mdx) - Extension interface for adapters that support rendering to bitmaps.
+- [IPdfAdapterWithTextExtraction](ipdfadapterwithtextextraction.mdx) - Extension interface for adapters that support text extraction.
+- [IPdfDocument](ipdfdocument.mdx) - Represents a loaded PDF document.
+- [IPdfPage](ipdfpage.mdx) - Represents a single PDF page.
+- [PdfAdapterFactory](pdfadapterfactory.mdx) - Manages PDF adapter creation with platform detection.
+- [PdfAnnotationColor](pdfannotationcolor.mdx) - Color used for annotation stroke/border or fill/interior.
+- [PdfAnnotationEventArgs](pdfannotationeventargs.mdx) - Event arguments for annotation events.
+- [PdfAnnotationInfo](pdfannotationinfo.mdx) - An immutable, read-only snapshot of a PDF annotation's properties, suitable for inspection by
+consumers. Geometry is reported in PDF user space (see [Avalonia.Controls.Pdf.Core.PdfPoint](xref:Avalonia.Controls.Pdf.Core.PdfPoint)/[Avalonia.Controls.Pdf.Core.PdfRect](xref:Avalonia.Controls.Pdf.Core.PdfRect)).
+- [PdfAnnotationType](pdfannotationtype.mdx) - Standard PDF annotation subtypes (ISO 32000, Table 169).
+- [PdfBookmark](pdfbookmark.mdx) - Bookmark (outline item) in a PDF document.
+- [PdfErrorEventArgs](pdferroreventargs.mdx) - Event arguments for PDF errors.
+- [PdfLink](pdflink.mdx) - Link in a PDF page.
+- [PdfLinkDestination](pdflinkdestination.mdx) - Link destination types.
+- [PdfLinkDestination.FileDestination](pdflinkdestination-filedestination.mdx) - External file link.
+- [PdfLinkDestination.PageDestination](pdflinkdestination-pagedestination.mdx) - Internal link to a page in the same document.
+- [PdfLinkDestination.UnsupportedDestination](pdflinkdestination-unsupporteddestination.mdx) - Unsupported destination type.
+- [PdfLinkDestination.UriDestination](pdflinkdestination-uridestination.mdx) - External URI link.
+- [PdfMetadata](pdfmetadata.mdx) - Document metadata.
+- [PdfPoint](pdfpoint.mdx) - A point in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+- [PdfRect](pdfrect.mdx) - A rectangle in PDF user space. Coordinates are in points (1/72 inch) with the origin at the
+page's bottom-left corner; Y increases upward (PDF convention, not screen convention).
+- [PdfSearchResult](pdfsearchresult.mdx) - Search result from text search.
+- [PdfUserBookmark](pdfuserbookmark.mdx) - A user-created bookmark that flags a page as a saved reading position.
+- [SearchOptions](searchoptions.mdx) - Options for text search.
+</ApiRefPage>
+

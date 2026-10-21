@@ -1,0 +1,180 @@
+---
+title: 'IVulkanContextExternalObjectsFeature'
+hide_title: true
+slug: '/avalonia/vulkan/ivulkancontextexternalobjectsfeature'
+uid: 'Avalonia.Vulkan.IVulkanContextExternalObjectsFeature'
+commentId: 'T:Avalonia.Vulkan.IVulkanContextExternalObjectsFeature'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Vulkan'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Vulkan'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IVulkanContextExternalObjectsFeature Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Vulkan</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Vulkan</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IVulkanContextExternalObjectsFeature
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetSynchronizationCapabilities](#uid-be5c110680) | No summary available. |
+| [ImportImage](#uid-4d4912f975) | No summary available. |
+| [ImportSemaphore](#uid-cb3209e8d4) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be5c110680"></span>
+
+### GetSynchronizationCapabilities Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities GetSynchronizationCapabilities(string imageHandleType)
+```
+
+#### Parameters
+
+`imageHandleType` string
+
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities](xref:Avalonia.Rendering.Composition.CompositionGpuImportedImageSynchronizationCapabilities)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d4912f975"></span>
+
+### ImportImage Method
+
+```csharp
+public Avalonia.Vulkan.IVulkanExternalImage ImportImage(Avalonia.Platform.IPlatformHandle handle, Avalonia.Platform.PlatformGraphicsExternalImageProperties properties)
+```
+
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+`properties` [Avalonia.Platform.PlatformGraphicsExternalImageProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanExternalImage](xref:Avalonia.Vulkan.IVulkanExternalImage)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb3209e8d4"></span>
+
+### ImportSemaphore Method
+
+```csharp
+public Avalonia.Vulkan.IVulkanExternalSemaphore ImportSemaphore(Avalonia.Platform.IPlatformHandle handle)
+```
+
+#### Parameters
+
+`handle` [Avalonia.Platform.IPlatformHandle](xref:Avalonia.Platform.IPlatformHandle)
+
+
+#### Returns
+
+[Avalonia.Vulkan.IVulkanExternalSemaphore](xref:Avalonia.Vulkan.IVulkanExternalSemaphore)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DeviceLuid](#uid-94e9e5a7cd) | No summary available. |
+| [DeviceUuid](#uid-5c8742de9d) | No summary available. |
+| [SupportedImageHandleTypes](#uid-f0a41bce61) | No summary available. |
+| [SupportedSemaphoreTypes](#uid-3fb979e3f5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94e9e5a7cd"></span>
+
+### DeviceLuid Property
+
+```csharp
+public byte[] DeviceLuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5c8742de9d"></span>
+
+### DeviceUuid Property
+
+```csharp
+public byte[] DeviceUuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0a41bce61"></span>
+
+### SupportedImageHandleTypes Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedImageHandleTypes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fb979e3f5"></span>
+
+### SupportedSemaphoreTypes Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> SupportedSemaphoreTypes { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

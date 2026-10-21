@@ -9,37 +9,32 @@ doc-type: reference
 import TestXamlPreviewer from '/img/guides/ui-development/xaml-preview-and-design-settings/test-xaml-previewer.png';
 import VSOptions from '/img/vs-extension/visual-studio-avalonia-options.png';
 
-## Features
+The Avalonia for Visual Studio extension provides an enhanced editor and a previewer, both intended to provide a superior experience working with Avalonia XAML files in Visual Studio.
 
-The Avalonia for Visual Studio extension provides an enhanced way of working with Avalonia XAML files. It does this by providing:
+## Enhanced editor
 
-- An enhanced editor with deep integrations for a rich editing experience.
-- A Previewer so you can see what the UI will look like without having to run the application.
+The editor for Avalonia XAML includes the following capabilities:
+
+- IntelliSense while typing
+- Error highlighting and fix suggestions
+- Automatic XAML namespace imports
+- Full colorization of the XAML
+- "Go To Definition" navigation
+- Hover tips
+- Automatic document formatting
+- Outlining of the document so you can collapse elements
+
+## Previewer
+
+The previewer allows you to see what the UI of the open file looks like, without needing to run the application.
+
+For more information, see [Previewing your UI design](/docs/app-development/xaml-preview-and-design-settings).
+
+<Image light={TestXamlPreviewer} alt="A screenshot demonstrating a test of the Avalonia XAML previewer." position="center" maxWidth={400} cornerRadius="true"/>
 
 ## Installation
 
 See [Set Up Your IDE](/docs/get-started/set-up-your-ide) for installation instructions.
-
-### Enhanced Editor
-
-The editor for Avalonia XAML includes the following capabilities:
-
-- Smarter, more helpful Intellisense while typing.
-- Error highlighting and fix suggestions.
-- Automatic XAML namespace imports.
-- Full colorization of the XAML.
-- "Go To Definition" navigation.
-- Intelligent hover tips.
-- Automatic document formatting.
-- Outlining of the document so you can collapse elements.
-
-### Previewer
-
-The previewer allows you to see what the UI of the open document will look like without needing to run the application.
-
-For more information, please see [Previewing your UI design](/docs/app-development/xaml-preview-and-design-settings).
-
-<Image light={TestXamlPreviewer} alt="A screenshot demonstrating a test of the Avalonia XAML previewer." maxWidth={400} cornerRadius="true"/>
 
 ## Settings
 
@@ -53,7 +48,7 @@ These can be accessed by selecting **Options** from the **Tools** menu inside Vi
 |  Setting              | Description | Options       |
 |-----------------------|-------------|---------------|
 | Color Scheme          | Controls how the AXAML file contents are colored. Requires a paid account to change. | <ul><li>**Roslyn (Default):** Colors are based on equivalent C# classifications.</li><li>**XML:** Colors are assigned as if a regular XML document.</li></ul> |
-| Default Document View | What is displayed when a document is opened. | <ul><li>**Split (Default):** Both the code and the previewer.</li><li>**Design:** Just the previewer</li><li>**Source:** Just the source code.</li></ul> |
+| Default Document View | What is displayed when a document is opened. | <ul><li>**Split (Default):** Both the code and the previewer.</li><li>**Design:** Previewer only.</li><li>**Source:** Source code only.</li></ul> |
 | Split Orientation     | Whether to split the orientation horizontally or vertically. | <ul><li>**Horizontal (Default):** Editor and previewer are displayed side by side.</li><li>**Vertical:** Editor and previewer are displayed one above the other.</li></ul> |
 | Swapped               | Switch the positions of the editor and previewer in Split mode. | **Checked:** Positions are swapped. |
 | Default Zoom Level    | How the window content is sized.  | <ul><li>50%, 75%, **100% (Default)**, 125%, 150%, 200%</li><li>**Fit to Width:** Scale the preview to the available width.</li><li>**Fit All:** Fill the entire previewer.</li></ul> |
