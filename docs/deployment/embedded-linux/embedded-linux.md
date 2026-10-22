@@ -1,6 +1,6 @@
 ---
 id: embedded-linux
-title: Working with embedded Linus systems
+title: Embedded Linux
 description: Publish, transfer, and run an Avalonia application on an embedded Linux device using DRM/KMS.
 doc-type: how-to
 ---
