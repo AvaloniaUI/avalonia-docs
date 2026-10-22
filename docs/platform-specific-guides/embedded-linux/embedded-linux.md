@@ -1,6 +1,6 @@
 ---
 id: embedded-linux
-title: Embedded Linux
+title: Embedded Linux devices
 description: Run Avalonia on embedded Linux devices using the framebuffer or DRM/KMS, with display scaling, screen rotation, and touch input.
 doc-type: how-to
 ---

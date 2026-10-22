@@ -297,6 +297,43 @@ You should see the app running on your Raspberry Pi now:
 
 If you have a touch display installed, try to slide the slider control.
 
+## Rotating the display
+
+Many Raspberry Pi displays are portrait panels. To run your app in landscape view, you must set the orientation in your Avalonia app rather than in the operating system.
+
+While Raspberry Pi provides the option of rotating the display through the kernel command line, by modifying `/boot/firmware/cmdline.txt` with a `rotation-value`, this rotation only applies to the text-mode console. Avalonia writes directly to DRM, meaning the rotation does not affect your Avalonia app, and it reverts to portrait mode when launched. See the [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/accessories/touch-display-2.html) for more information.
+
+### How to set landscape orientation
+
+To rotate your app to landscape, set the `Orientation` property on [`DrmOutputOptions`](/api/avalonia/linuxframebuffer/drmoutputoptions#orientation-property).
+
+1. Prepare `Program.cs` as demonstrated in [Step 2 of the previous section](#prepare-programcs). Add `Orientation` to the options passed to `StartLinuxDrm`. Set its value to `SurfaceOrientation.Rotation90`.
+
+    ```csharp
+    public static int Main(string[] args)
+    {
+        var builder = BuildAvaloniaApp();
+        if (args.Contains("--drm"))
+        {
+            SilenceConsole();
+            return builder.StartLinuxDrm(args, card: null, options: new DrmOutputOptions
+            { 
+                Scaling = 1.0,
+                // highlight-next-line
+                Orientation = SurfaceOrientation.Rotation90,
+            });
+        }
+
+        return builder.StartWithClassicDesktopLifetime(args);
+    }
+    ```
+
+2. Publish the app and run it with `--drm`, as demonstrated in [Step 3 of the previous section](#step-3---deploy-and-run-on-raspberry). Verify your app now renders in landscape view.
+
+:::caution
+Do not configure touch input using `swapxy`, `invx` or `invy` from the [Raspberry Pi touchscreen settings](https://www.raspberrypi.com/documentation/accessories/touch-display-2.html#customise-touchscreen-settings). Avalonia automatically rotates touch input to match the `Orientation` you set. Separately adjusting the touch axes can result in touch input being rotated twice, and taps hitting the wrong points as a consequence.
+:::
+
 ## See also
 
 - [Embedded Linux overview](/docs/platform-specific-guides/embedded-linux)
