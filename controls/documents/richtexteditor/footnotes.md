@@ -194,7 +194,7 @@ Notes travel as nested snapshots on `DocumentSnapshot.Footnotes`, so `FlowDocume
 | XAML | Full: bodies, IDs, labels and the numbering format |
 | DOCX | Full: as Word footnotes |
 | RTF | Full: as RTF footnote groups |
-| Markdown | Read and write, addressed by name: `[^label]` citations and `[^label]: ...` definitions. See [Markdown serialization](/controls/input/text-input/richtexteditor/markdown-serialization) |
+| Markdown | Read and write, addressed by name: `[^label]` citations and `[^label]: ...` definitions. See [Markdown serialization](/controls/documents/richtexteditor/markdown-serialization) |
 | PDF | Write only, laid out at the bottom of the anchor's page exactly as the paged view does |
 | Plain text | The anchor writes as nothing, as every embedded object does |
 
@@ -206,6 +206,6 @@ note.Label = "constant-currency";
 
 ## See also
 
-- [Pagination](/controls/input/text-input/richtexteditor/pagination) - how notes take part in filling a page
-- [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - the other nested document a page carries
-- [Markdown serialization](/controls/input/text-input/richtexteditor/markdown-serialization) - how markdown citations and definitions map onto notes
+- [Pagination](/controls/documents/richtexteditor/pagination) - how notes take part in filling a page
+- [Headers and footers](/controls/documents/richtexteditor/headers-and-footers) - the other nested document a page carries
+- [Markdown serialization](/controls/documents/richtexteditor/markdown-serialization) - how markdown citations and definitions map onto notes

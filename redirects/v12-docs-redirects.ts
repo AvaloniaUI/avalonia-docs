@@ -1167,28 +1167,28 @@ const redirects: Redirect[] = [
             "/accelerate/components/markdown/",
             "/accelerate/components/markdown/example",
         ],
-        "to": "/controls/data-display/text-display/markdown"
+        "to": "/controls/documents/markdown"
     },
     {
         "from": [
             "/accelerate/components/markdown/custom-image-loader",
             "/controls/data-display/text-display/imageloader",
         ],
-        "to": "/controls/data-display/text-display/markdown/imageloader"
+        "to": "/controls/documents/markdown/imageloader"
     },
     {
         "from": [
             "/accelerate/components/markdown/code-highlighter",
             "/controls/data-display/text-display/codehighlighter",
         ],
-        "to": "/controls/data-display/text-display/markdown/codehighlighter"
+        "to": "/controls/documents/markdown/codehighlighter"
     },
     {
         "from": [
             "/accelerate/components/markdown/styling",
             "/controls/data-display/text-display/markdown-styling",
         ],
-        "to": "/controls/data-display/text-display/markdown/markdown-styling"
+        "to": "/controls/documents/markdown/markdown-styling"
     },
     {
         "from": "/docs/platform-specific-guides/raspberry-pi",

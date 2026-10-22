@@ -13,7 +13,7 @@ tags:
 This control is available as part of [Avalonia Pro](https://avaloniaui.net/pricing) or higher.
 :::
 
-For reference information on this control, see the [RichTextEditor](/controls/input/text-input/richtexteditor) page.
+For reference information on this control, see the [RichTextEditor](/controls/documents/richtexteditor) page.
 
 ## A viewer shows nothing
 
@@ -102,5 +102,5 @@ Dispatcher.UIThread.VerifyAccess();
 
 ## See also
 
-- [RichTextEditor control](/controls/input/text-input/richtexteditor)
-- [Thread safety](/controls/input/text-input/richtexteditor/thread-safety)
+- [RichTextEditor control](/controls/documents/richtexteditor)
+- [Thread safety](/controls/documents/richtexteditor/thread-safety)

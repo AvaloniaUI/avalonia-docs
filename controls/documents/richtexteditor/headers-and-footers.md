@@ -78,7 +78,7 @@ Bands added before the document's `TextDocument` exists wait as pending, exactly
 
 In the editor, `EditorActions.InsertPageNumber` inserts `CurrentPage`. `EditorActions.InsertPageCount` inserts `PageCount`. Both are enabled only while the caret is in a band. In the body, these fields only show a cached result.
 
-The model verb is `TextRange.InsertPageNumberField(kind)`. This action is one undo unit, and is refused inside a [footnote](/controls/input/text-input/richtexteditor/footnotes) body because a note has no page.
+The model verb is `TextRange.InsertPageNumberField(kind)`. This action is one undo unit, and is refused inside a [footnote](/controls/documents/richtexteditor/footnotes) body because a note has no page.
 
 The field edits as one atomic unit. Layouts with no pages at all are considered to have a single page.
 
@@ -206,6 +206,6 @@ Bands travel as nested snapshots on `DocumentSnapshot.PageBands`, with their rol
 
 ## See also
 
-- [Pagination](/controls/input/text-input/richtexteditor/pagination) - page breaks, keep rules and per-section page setup
-- [PDF export](/controls/input/text-input/richtexteditor/pdf-export) - the bands each exported page resolves
-- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - the other nested document a page carries
+- [Pagination](/controls/documents/richtexteditor/pagination) - page breaks, keep rules and per-section page setup
+- [PDF export](/controls/documents/richtexteditor/pdf-export) - the bands each exported page resolves
+- [Footnotes](/controls/documents/richtexteditor/footnotes) - the other nested document a page carries

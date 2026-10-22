@@ -32,12 +32,29 @@ const config: RedirectConfig = {
     // PdfViewer package README links to pdf-viewer
     { from: '/controls/data-display/pdf-viewer', to: '/controls/data-display/pdfviewer' },
 
-    // richtexteditor-guides folder renamed to richtexteditor
-    { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/input/text-input/richtexteditor/document-viewer' },
-    { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/input/text-input/richtexteditor/extension-patterns' },
-    { from: '/controls/input/text-input/richtexteditor-guides/performance-tuning', to: '/controls/input/text-input/richtexteditor/performance-tuning' },
-    { from: '/controls/input/text-input/richtexteditor-guides/thread-safety', to: '/controls/input/text-input/richtexteditor/thread-safety' },
-    { from: ['/controls/input/text-input/richtexteditor-guides/toolbar', '/controls/input/text-input/richtexteditor-guides/toolbar-customization'], to: '/controls/input/text-input/richtexteditor/toolbar' },
+    // richtexteditor-guides to /controls/documents/richtexteditor
+    { from: '/controls/input/text-input/richtexteditor-guides/document-viewer', to: '/controls/documents/richtexteditor/document-viewer' },
+    { from: '/controls/input/text-input/richtexteditor-guides/extension-patterns', to: '/controls/documents/richtexteditor/extension-patterns' },
+    { from: '/controls/input/text-input/richtexteditor-guides/performance-tuning', to: '/controls/documents/richtexteditor/performance-tuning' },
+    { from: '/controls/input/text-input/richtexteditor-guides/thread-safety', to: '/controls/documents/richtexteditor/thread-safety' },
+    { from: ['/controls/input/text-input/richtexteditor-guides/toolbar', '/controls/input/text-input/richtexteditor-guides/toolbar-customization'], to: '/controls/documents/richtexteditor/toolbar' },
+
+    // Markdown and RichTextEditor docs to /controls/documents
+    { from: '/controls/data-display/text-display/markdown', to: '/controls/documents/markdown' },
+    { from: '/controls/data-display/text-display/markdown/markdown-styling', to: '/controls/documents/markdown/markdown-styling' },
+    { from: '/controls/data-display/text-display/markdown/codehighlighter', to: '/controls/documents/markdown/codehighlighter' },
+    { from: '/controls/data-display/text-display/markdown/imageloader', to: '/controls/documents/markdown/imageloader' },
+    { from: '/controls/input/text-input/richtexteditor', to: '/controls/documents/richtexteditor' },
+    { from: '/controls/input/text-input/richtexteditor/document-viewer', to: '/controls/documents/richtexteditor/document-viewer' },
+    { from: '/controls/input/text-input/richtexteditor/toolbar', to: '/controls/documents/richtexteditor/toolbar' },
+    { from: '/controls/input/text-input/richtexteditor/pagination', to: '/controls/documents/richtexteditor/pagination' },
+    { from: '/controls/input/text-input/richtexteditor/headers-and-footers', to: '/controls/documents/richtexteditor/headers-and-footers' },
+    { from: '/controls/input/text-input/richtexteditor/footnotes', to: '/controls/documents/richtexteditor/footnotes' },
+    { from: '/controls/input/text-input/richtexteditor/pdf-export', to: '/controls/documents/richtexteditor/pdf-export' },
+    { from: '/controls/input/text-input/richtexteditor/markdown-serialization', to: '/controls/documents/richtexteditor/markdown-serialization' },
+    { from: '/controls/input/text-input/richtexteditor/extension-patterns', to: '/controls/documents/richtexteditor/extension-patterns' },
+    { from: '/controls/input/text-input/richtexteditor/performance-tuning', to: '/controls/documents/richtexteditor/performance-tuning' },
+    { from: '/controls/input/text-input/richtexteditor/thread-safety', to: '/controls/documents/richtexteditor/thread-safety' },
 
     // Redirect retired pages from rewrite of Custom Controls docs in June 2026
     { from: '/docs/custom-controls/choosing-a-custom-control-type', to: '/docs/custom-controls/'},

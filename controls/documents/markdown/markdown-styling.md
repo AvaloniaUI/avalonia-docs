@@ -288,4 +288,4 @@ Combined with style selectors for a dark code theme:
 
 ## See also
 
-- [Markdown control](/controls/data-display/text-display/markdown)
+- [Markdown control](/controls/documents/markdown)

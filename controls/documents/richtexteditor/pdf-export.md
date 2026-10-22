@@ -70,7 +70,7 @@ Page properties are device-independent pixels (1/96 inch), never points. For exa
 
 A `PageSize` must be finite and positive on both axes, or it is rejected rather than producing a file no viewer opens. An infinite or negative `Margins` falls back to the 2 cm default.
 
-An explicit `PageSize` or `Margins` acts as the uniform-paper override. A [section with unique page geometry](/controls/input/text-input/richtexteditor/pagination#per-section-page-setup) still starts its own page, but follows the uniform size instead of getting its requested page setup.
+An explicit `PageSize` or `Margins` acts as the uniform-paper override. A [section with unique page geometry](/controls/documents/richtexteditor/pagination#per-section-page-setup) still starts its own page, but follows the uniform size instead of getting its requested page setup.
 
 If an image if left out of the PDF export by `MaxImageBytes` or `ImageEncodingPolicy` from `Document`, its layout box is kept and pagination is unchanged. `ExportMode` has no effect on this.
 
@@ -161,7 +161,7 @@ foreach (var loss in losses)
 
 ## See also
 
-- [Pagination](/controls/input/text-input/richtexteditor/pagination) - the break rules the export shares with the paged view
-- [Headers and footers](/controls/input/text-input/richtexteditor/headers-and-footers) - the bands each page resolves
-- [Footnotes](/controls/input/text-input/richtexteditor/footnotes) - notes at the bottom of their anchor's page
-- [Thread safety](/controls/input/text-input/richtexteditor/thread-safety) - snapshots and background work
+- [Pagination](/controls/documents/richtexteditor/pagination) - the break rules the export shares with the paged view
+- [Headers and footers](/controls/documents/richtexteditor/headers-and-footers) - the bands each page resolves
+- [Footnotes](/controls/documents/richtexteditor/footnotes) - notes at the bottom of their anchor's page
+- [Thread safety](/controls/documents/richtexteditor/thread-safety) - snapshots and background work

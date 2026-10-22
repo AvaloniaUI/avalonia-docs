@@ -31,7 +31,7 @@ Avalonia Plus is a suite of professional tools built specifically for Avalonia d
 
 ## Avalonia Pro
 
-Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/input/text-input/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), and [VirtualKeyboard](/controls/input/text-input/virtualkeyboard).
+Avalonia Pro includes all professional tools in Avalonia Plus, and additionally includes premium UI controls such as [Charts](/controls/data-display/charts/), [TreeDataGrid](/controls/data-display/structured-data/treedatagrid/), [RichTextEditor](/controls/documents/richtexteditor/), [PdfViewer](/controls/data-display/pdfviewer/), and [VirtualKeyboard](/controls/input/text-input/virtualkeyboard).
 
 ## Who gets access
 
