@@ -1,17 +1,17 @@
 // Underline-style tabs (warm palette)
 html[data-theme='light'] {
   --ifm-tabs-color: #686770;
-  --ifm-tabs-color-hover: #21253B;
-  --ifm-tabs-color-active: var(--color-neutral-70, #161C2D);
-  --ifm-tabs-color-active-border: var(--color-neutral-70, #161C2D);
-  --tabs-border-c: rgba(0, 0, 0, 0.12);
+  --ifm-tabs-color-hover: var(--color-obsidian);
+  --ifm-tabs-color-active: var(--color-obsidian);
+  --ifm-tabs-color-active-border: var(--color-obsidian);
+  --tabs-border-c: var(--color-timberwolf);
 }
 
 html[data-theme='dark'] {
-  --ifm-tabs-color: #a1a1aa;
-  --ifm-tabs-color-hover: #d4d4d8;
-  --ifm-tabs-color-active: var(--color-brand-400);
-  --ifm-tabs-color-active-border: var(--color-brand-400);
+  --ifm-tabs-color: var(--color-body-text);
+  --ifm-tabs-color-hover: var(--ifm-secondary-heading-color);
+  --ifm-tabs-color-active: var(--ifm-link-color);
+  --ifm-tabs-color-active-border: var(--ifm-link-color);
   --tabs-border-c: rgba(255, 255, 255, 0.08);
 }
 

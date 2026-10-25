@@ -1,15 +1,15 @@
 html[data-theme='light'] {
   --markdown-toc-title-c: #686770;
-  --markdown-toc-list-item-c: #21253B;
+  --markdown-toc-list-item-c: var(--color-obsidian);
   --markdown-text-intro-c: #686770;
-  --markdown-bold-c: #21253B;
+  --markdown-bold-c: var(--color-obsidian);
 }
 
 html[data-theme='dark'] {
-  --markdown-toc-title-c: #ededef;
-  --markdown-toc-list-item-c: #ededef;
-  --markdown-text-intro-c: #a1a1aa;
-  --markdown-bold-c: #ededef;
+  --markdown-toc-title-c: var(--color-bone);
+  --markdown-toc-list-item-c: var(--color-bone);
+  --markdown-text-intro-c: var(--color-body-text);
+  --markdown-bold-c: var(--color-bone);
 }
 
 .markdown {

@@ -61,7 +61,7 @@ html[data-theme='dark']:root {
 
     html[data-theme='light'] & {
       background: #fff !important;
-      border: 1px solid rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--color-timberwolf);
 
       &:hover {
         border-color: rgba(0, 0, 0, 0.25);
@@ -156,7 +156,7 @@ html[data-theme='dark']:root {
 
     html[data-theme='light'] & {
       background: #fff !important;
-      border: 1px solid rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--color-timberwolf);
 
       &:hover {
         border-color: rgba(0, 0, 0, 0.25);

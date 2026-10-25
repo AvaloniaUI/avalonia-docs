@@ -18,9 +18,9 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --code-block-bg-c: #18181b;
+  --code-block-bg-c: var(--docs-color-code-background);
   --code-block-border-c: rgba(255, 255, 255, 0.08);
-  --ifm-code-background: #18181b;
+  --ifm-code-background: var(--docs-color-code-background);
   --color-neutral-30: rgba(255, 255, 255, 0.06);
 }
 

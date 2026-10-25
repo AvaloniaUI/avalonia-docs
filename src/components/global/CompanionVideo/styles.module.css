@@ -160,15 +160,15 @@
 }
 
 :global(html[data-theme='dark']) .eyebrow {
-  color: #a1a1aa;
+  color: var(--color-body-text, #a09ea6);
 }
 
 :global(html[data-theme='dark']) .title {
-  color: #d4d4d8;
+  color: var(--ifm-secondary-heading-color, #cfced0);
 }
 
 :global(html[data-theme='dark']) .trigger:hover .title {
-  color: #f4f4f5;
+  color: var(--color-bone, #f3f1f0);
 }
 
 /*
@@ -346,7 +346,7 @@
 }
 
 :global(html[data-theme='dark']) .backdrop {
-  background: rgba(17, 17, 19, 0.82);
+  background: rgba(5, 5, 30, 0.82);
 }
 
 .dialog {
@@ -362,7 +362,7 @@
 }
 
 :global(html[data-theme='dark']) .dialog {
-  background: #18181b;
+  background: var(--docs-color-background-100, #141734);
 }
 
 .dialogHeader {
@@ -379,14 +379,14 @@
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.4;
-  color: var(--color-neutral-70, #161c2d);
+  color: var(--color-obsidian, #05051e);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 :global(html[data-theme='dark']) .dialogTitle {
-  color: #f4f4f5;
+  color: var(--color-bone, #f3f1f0);
 }
 
 .closeButton {
@@ -406,7 +406,7 @@
 
 .closeButton:hover {
   background: rgba(0, 0, 0, 0.06);
-  color: var(--color-neutral-70, #161c2d);
+  color: var(--color-obsidian, #05051e);
 }
 
 .closeButton:focus-visible {
@@ -415,12 +415,12 @@
 }
 
 :global(html[data-theme='dark']) .closeButton {
-  color: #a1a1aa;
+  color: var(--color-body-text, #a09ea6);
 }
 
 :global(html[data-theme='dark']) .closeButton:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #f4f4f5;
+  background: var(--color-midnight, #22284a);
+  color: var(--color-bone, #f3f1f0);
 }
 
 .playerFrame {

@@ -46,7 +46,7 @@
   background-color: #fff;
   border: none;
   border-radius: 9999px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 0 1px var(--color-timberwolf);
   cursor: pointer;
   transition: background-color 0.2s ease-out;
 
@@ -58,13 +58,13 @@
 
 html[data-theme='dark'] {
   .btn-outline {
-    color: #a1a1aa;
-    background-color: #18181b;
+    color: var(--color-body-text);
+    background-color: var(--docs-color-background-100);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #ededef;
+      background-color: var(--color-midnight);
+      color: var(--color-bone);
     }
   }
 }

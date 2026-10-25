@@ -1,17 +1,17 @@
 html[data-theme='light'] {
   // Warm neutral palette (marketing website alignment)
-  --toc-separator-c: rgba(0, 0, 0, 0.12);
+  --toc-separator-c: var(--color-timberwolf);
   --ifm-toc-link-color: var(--color-body-text, #686770);
-  --toc-link-hover-color: var(--color-neutral-70, #161C2D);
-  --toc-link-active-color: var(--color-neutral-70, #161C2D);
+  --toc-link-hover-color: var(--color-obsidian);
+  --toc-link-active-color: var(--color-obsidian);
 }
 
 html[data-theme='dark'] {
-  // Neutral dark palette
+  // Brand dark palette
   --toc-separator-c: rgba(255, 255, 255, 0.08);
-  --ifm-toc-link-color: #a1a1aa;
-  --toc-link-hover-color: #ededef;
-  --toc-link-active-color: #ededef;
+  --ifm-toc-link-color: var(--color-body-text);
+  --toc-link-hover-color: var(--color-bone);
+  --toc-link-active-color: var(--color-bone);
 }
 
 :root {

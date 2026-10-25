@@ -1,24 +1,23 @@
 html[data-theme='light'] {
   // Marketing website navbar colors (light mode)
-  // Nav link text: rgb(22, 28, 45) from marketing framer-styles-preset-13f9t5h
-  --navbar-link-c: #161C2D;
+  --navbar-link-c: var(--color-obsidian);
   --navbar-link-hover-bg: rgba(0, 0, 0, 0.06);
 
-  --navbar-separator-bg-c: rgba(0, 0, 0, 0.12);
+  --navbar-separator-bg-c: var(--color-timberwolf);
 
   --ifm-dropdown-background-color: var(--token-secondary-bg-c);
 
-  --navbar-icon-link-c: #161C2D;
+  --navbar-icon-link-c: var(--color-obsidian);
 }
 
 html[data-theme='dark'] {
-  // Neutral dark navbar colors
-  --navbar-link-c: #a1a1aa;
-  --navbar-link-hover-bg: rgba(255, 255, 255, 0.06);
+  // Brand dark navbar colors
+  --navbar-link-c: var(--color-body-text);
+  --navbar-link-hover-bg: var(--color-midnight);
 
   --navbar-separator-bg-c: rgba(255, 255, 255, 0.08);
 
-  --navbar-icon-link-c: #d4d4d8;
+  --navbar-icon-link-c: var(--ifm-secondary-heading-color);
 }
 
 :root {
