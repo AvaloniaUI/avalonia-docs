@@ -20,7 +20,7 @@
  *   --timeout          Request timeout ms   (default: 10000)
  *   --ignore-ext       Skip URLs matching these extensions (default: .png,.jpg,.svg,.pdf)
  *
- * Requirements: Node 18+, tsx (or tsc)
+ * Requirements: Node 24+, tsx (or tsc)
  */
 
 import { parseArgs } from 'node:util';

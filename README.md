@@ -64,7 +64,7 @@ The two suggested workflows are:
 
 ### Requirements
 
-- **Node version >= 18**
+- **Node 24 (LTS)**. The version is pinned in `.nvmrc`. If you use nvm, run `nvm install && nvm use`.
 
 ### Setup
 
