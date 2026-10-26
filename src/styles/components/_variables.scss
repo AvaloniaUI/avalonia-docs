@@ -24,15 +24,19 @@
   --color-brand-900: #0e2e4e;
   --color-brand-950: #091f34;
 
+  // Brand secondary (Ocean, avaloniaui.net/brand): light-mode links
+  --color-ocean: #005CFE;
+
   // Marketing website neutral palette
   --color-obsidian: #05051E;
   --color-bone: #F3F1F0;
   --color-cream: #FAF7F5;
   --color-snow: #FFFFFF;
+  --color-timberwolf: #DBD5D2;
   --color-nav-bg: rgb(1, 11, 20);
   --color-midnight: rgb(34, 40, 74);
   --color-body-text: #686770;
-  --color-card-title: #21253B;
+  --color-card-title: var(--color-obsidian);
   --color-muted: #696460;
 
   // Warm neutral scale (marketing website)
@@ -42,17 +46,17 @@
   --color-neutral-40: #C1BBB8;
   --color-neutral-55: #686770;
   --color-neutral-60: #21253B;
-  --color-neutral-70: #161C2D;
+  --color-neutral-70: #05051E;
 
   // Gray scale (kept for backward compatibility with semantic colors)
   --color-gray-25: #fcfcfd;
   --color-gray-50: #F3F1F0;
   --color-gray-100: #E3DFDC;
-  --color-gray-200: rgba(0, 0, 0, 0.12);
+  --color-gray-200: var(--color-timberwolf);
   --color-gray-300: #C1BBB8;
-  --color-gray-400: #98a2b3;
+  --color-gray-400: #92847E;
   --color-gray-500: #686770;
-  --color-gray-600: #475467;
+  --color-gray-600: #696460;
   --color-gray-700: #686770;
   --color-gray-800: #21253B;
   --color-gray-900: #21253B;
@@ -135,7 +139,7 @@
   --docs-color-secondary-900: 251 251 251;
   --docs-color-secondary-1000: 255 255 255;
 
-  // Text colors (marketing: #21253B for headings, #686770 for body)
+  // Text colors (marketing: Obsidian for headings, #686770 for body)
   --docs-color-text: var(--color-card-title);
   --docs-color-text-100: var(--color-body-text);
   --docs-color-text-400: 71 71 71;
@@ -147,13 +151,13 @@
   --docs-color-background-300: #C1BBB8;
   --docs-color-chrome-bg: #F3F1F0;
 
-  // Border colors (marketing: warm subtle)
-  --docs-color-border: rgba(0, 0, 0, 0.12);
+  // Border colors (brand: Timberwolf)
+  --docs-color-border: var(--color-timberwolf);
   --code-border-color: var(--docs-color-border);
 
   // Navbar colors
   --navbar-second-row-background: var(--color-bone);
-  --navbar-second-row-border: rgba(0, 0, 0, 0.12);
+  --navbar-second-row-border: var(--color-timberwolf);
 
   // Code colors (marketing: bone background)
   --docs-color-code-background: #F3F1F0;
@@ -202,7 +206,7 @@
 
   // Effects
   --ifm-navbar-shadow: none;
-  --ifm-toc-border-color: rgba(0, 0, 0, 0.12);
+  --ifm-toc-border-color: var(--color-timberwolf);
   --ifm-table-border-color: var(--docs-color-border);
   --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.15);
 
@@ -224,21 +228,23 @@
 
 // Dark theme overrides
 html[data-theme='dark'] {
-  // Neutral dark palette (Mintlify-inspired)
-  --color-gray-25: #191a1f;
-  --color-gray-50: #191a1f;
+  // Brand dark palette (matching avaloniaui.net dark sections): Obsidian page,
+  // #141734 raised panels, Midnight hover/selected, Bone text
+  --color-gray-25: #141734;
+  --color-gray-50: #141734;
   --color-gray-100: rgba(255, 255, 255, 0.06);
   --color-gray-200: rgba(255, 255, 255, 0.1);
-  --color-gray-700: #d0d5dd;
-  --color-gray-800: #e4e7ec;
-  --color-gray-900: #f1f1f1;
+  --color-gray-400: var(--color-body-text);
+  --color-gray-700: #CFCED0;
+  --color-gray-800: #E0DEDF;
+  --color-gray-900: #F3F1F0;
 
-  // Text colors
-  --docs-color-text: #ededef;
-  --docs-color-text-100: #a1a1aa;
-  --docs-color-text-400: 161 161 170;
-  --color-muted: #71717a;
-  --color-body-text: #a1a1aa;
+  // Text colors (Bone at 100%, 65% and 50% over Obsidian)
+  --docs-color-text: var(--color-bone);
+  --docs-color-text-100: #A09EA6;
+  --docs-color-text-400: 160 158 166;
+  --color-muted: #7C7B87;
+  --color-body-text: #A09EA6;
 
   // Secondary colors
   --docs-color-secondary-700: 63 63 70;
@@ -246,44 +252,39 @@ html[data-theme='dark'] {
   --docs-color-secondary-900: 24 24 27;
   --docs-color-secondary-1000: 0 0 0;
 
-  // Background colors (near-black)
-  --docs-color-background: #111113;
-  --docs-color-background-100: #191a1f;
-  --docs-color-background-200: rgba(255, 255, 255, 0.06);
+  // Background colors (Obsidian page, raised panels, Midnight hover/selected)
+  --docs-color-background: var(--color-obsidian);
+  --docs-color-background-100: #141734;
+  --docs-color-background-200: var(--color-midnight);
   --docs-color-background-300: rgba(255, 255, 255, 0.1);
 
   // Border colors (subtle)
   --docs-color-border: rgba(255, 255, 255, 0.1);
 
   // Code colors
-  --docs-color-code-background: #18181b;
+  --docs-color-code-background: var(--docs-color-background-100);
 
-  // Navbar colors
-  --navbar-second-row-background: #18181b;
+  // Navbar colors (same tone as the page)
+  --navbar-second-row-background: var(--color-obsidian);
   --navbar-second-row-border: rgba(255, 255, 255, 0.1);
 
   // Card colors
-  --docs-card-background: #18181b;
-
-  // Links (using brand colors)
-  --ifm-link-color: var(--color-brand-400);
-  --ifm-tabs-color-active-border: var(--color-brand-400);
-  --ifm-tabs-color-active: var(--color-brand-400);
+  --docs-card-background: var(--docs-color-background-100);
 
   // Brand
   --ifm-brand-logo-color: white;
 
-  // Footer
-  --ifm-footer-background-color: #111113;
+  // Footer (same tone as the page)
+  --ifm-footer-background-color: var(--color-obsidian);
   --ifm-footer-brand-color: white;
 
   // Navigation
-  --ifm-background-surface-color: #111113;
-  --ifm-background-color: #111113;
+  --ifm-background-surface-color: var(--color-obsidian);
+  --ifm-background-color: var(--color-obsidian);
   --ifm-toc-border-color: rgba(255, 255, 255, 0.1);
 
   // Content
-  --ifm-color-content: #ededef;
+  --ifm-color-content: var(--color-bone);
 
   // Code highlighting
   --docusaurus-highlighted-code-line-bg: rgba(0, 125, 249, 0.15);
@@ -336,45 +337,46 @@ html[data-theme='light'] {
   --token-primary-bg-c: #FFFFFF;
   --token-secondary-bg-c: #F3F1F0;
 
-  // Links use neutral color (matching marketing website)
-  --ifm-link-color: var(--color-neutral-70);
-  --ifm-link-hover-color: var(--color-obsidian);
+  // Links: Ocean, the brand blue that keeps 4.5:1 contrast on white and Bone
+  // (Azure, used for links on avaloniaui.net, falls short)
+  --ifm-link-color: var(--color-ocean);
+  --ifm-link-hover-color: var(--color-brand-700);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
 
   // Navbar bg: bone
   --ifm-navbar-background-color: #F3F1F0;
-  --ifm-navbar-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
+  --ifm-navbar-shadow: 0 1px 0 0 var(--color-timberwolf);
 
-  --ifm-heading-color: #21253B;
+  --ifm-heading-color: var(--color-obsidian);
   --ifm-secondary-heading-color: #686770;
 
   --ifm-code-background: #F3F1F0;
   --ifm-font-color-base: #686770;
-  --ifm-info-color-bg: #21253B;
+  --ifm-info-color-bg: var(--color-obsidian);
 }
 
 html[data-theme='dark'] {
-  // Near-black background (Mintlify-inspired)
-  --token-primary-bg-c: #111113;
-  --token-secondary-bg-c: #111113;
+  // Obsidian background (matching avaloniaui.net dark sections)
+  --token-primary-bg-c: var(--color-obsidian);
+  --token-secondary-bg-c: var(--color-obsidian);
 
-  // Links use brand color (lighter for dark mode)
-  --ifm-link-color: var(--color-brand-400);
+  // Links: avaloniaui.net dark-section accent
+  --ifm-link-color: #1F9EFF;
   --ifm-link-hover-color: var(--color-brand-300);
 
   --ifm-background-surface-color: var(--token-primary-bg-c);
 
-  --ifm-navbar-background-color: #111113;
+  --ifm-navbar-background-color: var(--color-obsidian);
   --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08);
 
-  --ifm-heading-color: #ededef;
-  --ifm-secondary-heading-color: #d4d4d8;
+  --ifm-heading-color: var(--color-bone);
+  --ifm-secondary-heading-color: #CFCED0;
 
-  --ifm-font-color-base: #a1a1aa;
+  --ifm-font-color-base: var(--color-body-text);
   --ifm-background-color: var(--token-primary-bg-c);
-  --ifm-dropdown-background-color: #18181b;
-  --ifm-info-color-bg: #a1a1aa;
+  --ifm-dropdown-background-color: var(--docs-color-background-100);
+  --ifm-info-color-bg: var(--color-body-text);
 
   --ifm-menu-link-sublist-icon-filter: invert(100%);
 }

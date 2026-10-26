@@ -73,12 +73,12 @@
 
 :global(html[data-theme='dark']) .tocDropdownButton {
   background: transparent;
-  color: #a1a1aa;
+  color: var(--color-body-text, #a09ea6);
 }
 
 :global(html[data-theme='dark']) .tocDropdownButton:hover {
-  background: var(--navbar-link-hover-bg, rgba(255, 255, 255, 0.06));
-  color: #f4f4f5;
+  background: var(--navbar-link-hover-bg, #22284a);
+  color: var(--color-bone, #f3f1f0);
 }
 
 @media (max-width: 996px) {

@@ -332,7 +332,7 @@ gtag('consent', 'default', {
       selector: '.markdown :not(em) > img:not(.Card-icon):not(.Card-image):not(.no-zoom)',
       background: {
         light: 'rgb(196, 196, 196)',
-        dark: 'rgb(17, 17, 19)'
+        dark: 'rgb(5, 5, 30)'
       },
       config: {
         margin: 50,
@@ -439,7 +439,7 @@ gtag('consent', 'default', {
       },
       darkTheme: {
         ...prismThemes.vsDark,
-        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#18181b' },
+        plain: { ...prismThemes.vsDark.plain, backgroundColor: '#141734' },
       },
       additionalLanguages: ['csharp', 'bash', 'shell-session', 'diff'],
     },
