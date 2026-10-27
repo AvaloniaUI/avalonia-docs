@@ -98,7 +98,7 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
     }
 }
 ```
-:::warning
+:::caution
 Do not dispose the `DataTransfer` you pass to `DoDragDropAsync`, and do not create it in a `using` statement. Avalonia disposes it automatically when the drag operation completes.
 :::
 
@@ -212,7 +212,7 @@ if (e.DataTransfer.TryGetValue(MyTypeFormat) is { } obj)
 
 `MyTypeFormat` is a static field created with a `DataFormat` method, for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`. See the [`DataFormat<T>` API reference](/api/avalonia/input/dataformat-1) for the full list of available methods and supported data types.
 
-:::warning
+:::caution
 Identifiers passed to `CreateStringApplicationFormat` and `CreateBytesApplicationFormat` can contain only ASCII letters, digits, dots (`.`) and hyphens (`-`). MIME-style identifiers, such as `application/x-my-type`, are not accepted.
 :::
 
@@ -228,11 +228,11 @@ See [Setting a minimum distance to start the drag](#setting-a-minimum-distance-t
 
 #### Cannot convert from `PointerEventArgs` to `PointerPressedEventArgs`.
 
-Since Avalonia 12, `DoDragDropAsync` accepts only arguments from a `PointerPressed` event, and not `Pointer` events. You must store the `PointerPressed` arguments and pass those instead.
+Since Avalonia 12, `DoDragDropAsync` requires `PointerPressedEventArgs` rather than `PointerEventArgs`. If you initiate the drag from `PointerMoved`, store the arguments from `PointerPressed` and pass those instead.
 
 #### Custom data is lost across processes.
 
-Data icreated with `CreateInProcessFormat` never leaves the current process. To drag custom data to another process, serialize it to a `string` or `byte[]` and use an application or platform format instead.
+Data in a format created with `CreateInProcessFormat` never leaves the current process. To drag custom data to another process, serialize it to a `string` or `byte[]` and use an application or platform format instead.
 
 #### Need to drag-and-drop multiple data formats.
 
