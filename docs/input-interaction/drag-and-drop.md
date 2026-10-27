@@ -1,13 +1,15 @@
 ---
 id: drag-and-drop
-title: Drag and Drop
+title: Drag and drop
+description: Drag-and-drop events, event arguments, effects, and data formats in Avalonia, for accepting drops and starting drags with DoDragDropAsync.
+doc-type: reference
 ---
 
-Avalonia supports drag-and-drop operations for transferring data between controls or between your application and the operating system. The drag-and-drop system uses the [`DragDrop`](/api/avalonia/input/dragdrop) static class and the [`DataTransfer`](/api/avalonia/input/datatransfer) type to manage data during operations.
+Avalonia supports drag-and-drop operations for transferring data between controls, or between your application and the operating system. The drag-and-drop system uses the [`DragDrop`](/api/avalonia/input/dragdrop) static class and the [`DataTransfer`](/api/avalonia/input/datatransfer) type to manage data during operations.
 
-## Enabling drop on a target
+## Accepting drops
 
-To receive dropped content, an element must have the `DragDrop.AllowDrop` attached property set to `True`. Additionally, you must set handlers for the drag-and-drop events:
+To receive dropped content, an element must have the `DragDrop.AllowDrop` attached property set to `True`. Additionally, you must set handlers for the drag-and-drop events.
 
 <Tabs>
 
@@ -53,28 +55,34 @@ public partial class MainWindow : Window
 
 ## Drag-and-drop events
 
+### Events
+
 | Event | When it fires |
 |---|---|
 | `DragEnter` | The pointer enters the target element while dragging. |
-| `DragLeave` | The pointer leaves the target element while dragging. |
+| `DragLeave` | The pointer leaves the target element while dragging. Not raised after `Drop`. |
 | `DragOver` | The pointer moves over the target element while dragging. Fires continuously. |
 | `Drop` | The user releases the pointer over the target element. |
 
-All events provide a `DragEventArgs` with these properties:
+### Event arguments
+
+All of the events listed above provide `DragEventArgs` with these properties:
 
 | Property | Description |
 |---|---|
 | `DataTransfer` | The `IDataTransfer` object containing the dragged data. |
-| `DragEffects` | The allowed and requested drag effects. Set this to indicate what your target accepts. |
-| `KeyModifiers` | The current keyboard modifiers (Ctrl, Shift, Alt). |
-| `GetPosition(Visual)` | Returns the pointer position relative to a given visual element. |
+| `DragEffects` | Allowed and requested drag effects. Set this to indicate what your target accepts. |
+| `KeyModifiers` | Current keyboard modifiers (Ctrl, Shift, Alt). |
+| `GetPosition(Visual)` | Returns the pointer position relative to the specified visual element. |
 
 ## Handling drop events
+
+Here are the basic implementations of event handlers for dragging and dropping.
 
 ```csharp
 private void OnDragOver(object? sender, DragEventArgs e)
 {
-    // Check if we can accept the data
+    // Check if the data is accepted.
     if (e.DataTransfer.Formats.Contains(DataFormat.File))
     {
         e.DragEffects = DragDropEffects.Copy;
@@ -102,22 +110,22 @@ private void OnDrop(object? sender, DragEventArgs e)
 }
 ```
 
-## DragDropEffects
+## `DragDropEffects`
 
-The `DragDropEffects` flags enum indicates what operations are permitted:
+The `DragDropEffects` flags enum indicates what operations are permitted. Set `e.DragEffects` in `DragOver` to control the cursor feedback and in `Drop` to indicate the result of the operation.
 
-| Value | Description |
-|---|---|
-| `None` | The drop target does not accept the data. |
-| `Copy` | The data is copied to the target. |
-| `Move` | The data is moved to the target. |
-| `Link` | A link to the original data is created. |
-
-Set `e.DragEffects` in `DragOver` to control the cursor feedback and in `Drop` to indicate the result of the operation.
+| Value | Cursor | Meaning |
+|---|---|---|
+| `None` | No-drop cursor | Drop is not allowed. |
+| `Copy` | Copy cursor (+) | Copies the data to the target. |
+| `Move` | Move cursor | Moves the data to the target. |
+| `Link` | Link cursor | Creates a link or shortcut to the original data. |
 
 ## Starting a drag operation
 
-To initiate a drag-and-drop operation from your control, call `DragDrop.DoDragDropAsync` in response to a pointer event. Create a `DataTransfer` object containing the data to drag:
+To initiate a drag-and-drop operation from your control, call `DragDrop.DoDragDropAsync` and pass the `PointerPressedEventArgs` of the press that starts the drag. Create a `DataTransfer` object containing the data to drag.
+
+For more usage examples of drag operations, see [How to: Implement drag and drop](/docs/how-to/drag-and-drop-how-to).
 
 ```csharp
 private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
@@ -142,17 +150,19 @@ private async void OnPointerPressed(object? sender, PointerPressedEventArgs e)
 `DoDragDropAsync` is asynchronous. The method returns when the user completes or cancels the drag operation. The return value indicates which effect the drop target applied.
 :::
 
-## DataTransfer and data formats
+## Data transfer and data formats
 
-The `DataTransfer` class is a mutable container for drag-and-drop data. Use `DataFormat` static properties for standard formats:
+The `DataTransfer` class is a mutable container for drag-and-drop data. Use `DataFormat` static properties for standard formats.
+
+See the [`DataFormat<T>` API reference](/api/avalonia/input/dataformat-1) for the full list of available methods and supported data types.
 
 | Format | Type | Description |
 |---|---|---|
-| `DataFormat.Text` | `string` | Plain text. |
-| `DataFormat.Bitmap` | `Bitmap` | Bitmap image data. |
-| `DataFormat.File` | `IStorageItem` | File system items. |
+| `DataFormat.Text` | `string` | Plain text |
+| `DataFormat.Bitmap` | `Bitmap` | Bitmap image data |
+| `DataFormat.File` | `IStorageItem` | File system items |
 
-You can also create custom formats:
+You can also create custom formats, for example:
 
 ```csharp
 var myFormat = DataFormat.CreateStringApplicationFormat("myapp-item");
@@ -180,33 +190,9 @@ if (e.DataTransfer.Formats.Contains(DataFormat.File))
 }
 ```
 
-## Visual feedback during drag
-
-Use the `DragEnter` and `DragLeave` events to provide visual feedback:
-
-```csharp
-private void OnDragEnter(object? sender, DragEventArgs e)
-{
-    if (sender is Border border)
-    {
-        border.BorderBrush = Brushes.Blue;
-        border.BorderThickness = new Thickness(2);
-    }
-}
-
-private void OnDragLeave(object? sender, DragEventArgs e)
-{
-    if (sender is Border border)
-    {
-        border.BorderBrush = null;
-        border.BorderThickness = new Thickness(0);
-    }
-}
-```
-
 ## Complete example
 
-This example creates a drop zone that accepts text and files:
+This example creates a drop zone that accepts text and files.
 
 <Tabs>
 
@@ -295,7 +281,9 @@ public partial class MainWindow : Window
 
 ## Handling events in XAML vs code
 
-Drag-and-drop events are attached events on the `DragDrop` class. You can handle them in XAML using event attribute syntax (as shown above) or register them explicitly in code:
+Drag-and-drop events are attached events on the `DragDrop` class. You can handle them in XAML using event attribute syntax, or register them explicitly in code.
+
+The `DragDrop` class provides `Add*Handler` and `Remove*Handler` static methods for each event: `DragEnter`, `DragLeave`, `DragOver`, and `Drop`.
 
 ```csharp
 // Register in code
@@ -305,10 +293,9 @@ DragDrop.AddDropHandler(myBorder, OnDrop);
 DragDrop.RemoveDropHandler(myBorder, OnDrop);
 ```
 
-The `DragDrop` class provides `Add*Handler` and `Remove*Handler` static methods for each event: `DragEnter`, `DragLeave`, `DragOver`, and `Drop`.
-
 ## See also
 
+- [How to: Implement drag and drop](/docs/how-to/drag-and-drop-how-to): Practical examples showing how to implement common uses of drag-and-drop.
 - [Pointer Events](/docs/input-interaction/pointer): Detecting pointer movement for initiating drags.
 - [Clipboard](/docs/services/clipboard): Sharing data via the clipboard.
 - [Storage Provider](/docs/services/storage/storage-provider): Working with files and folders.

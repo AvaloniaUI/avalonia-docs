@@ -57,14 +57,7 @@ private void OnDrop(object? sender, DragEventArgs e)
 }
 ```
 
-The value you set in `e.DragEffects` also controls the cursor, so that it tells your users what to expect from the drop.
-
-| `DragDropEffects` | Cursor | Meaning |
-|---|---|---|
-| `None` | No-drop cursor | Drop is not allowed. |
-| `Copy` | Copy cursor (+) | Copies the item. |
-| `Move` | Move cursor | Moves the item. |
-| `Link` | Link cursor | Creates a link or shortcut. |
+The value you set in `e.DragEffects` also controls the cursor, so that it tells your users what to expect from the drop. See [Drag and drop](/docs/input-interaction/drag-and-drop#dragdropeffects) for a list of values.
 
 :::tip
 Always set `e.DragEffects` in your `DragOver` handler. If you do not, the platform may show a "not allowed" cursor even when your control can accept the drop.
@@ -169,7 +162,7 @@ private void TargetList_Drop(object? sender, DragEventArgs e)
 
 Providing visual feedback helps your users understand where they can drop. This example changes the drop target's appearance when the user drags something over it. The chosen target is a `Border` with `x:Name="DropZone"` and `DragDrop.AllowDrop="True"`.
 
-Note that the handlers are attached to the drop zone rather than the window. This ensures the highlight appears only when the user drags over the `Border`. Otherwise, it would appear whenever the user drags anywhere in the window.
+Note that the handlers are attached to the drop zone rather than the window. This ensures the highlight appears only when the user drags over the `Border`. Otherwise, it would appear whenever the user drags over any potential drop target in the window.
 
 ```csharp
 public MainWindow()
@@ -217,7 +210,7 @@ if (e.DataTransfer.TryGetValue(MyTypeFormat) is { } obj)
 }
 ```
 
-`MyTypeFormat` is a static field created with a `DataFormat` method, for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`. See [the `DataFormat<T>` API reference](/api/avalonia/input/dataformat-1) for the full list of available methods and supported data types.
+`MyTypeFormat` is a static field created with a `DataFormat` method, for example `DataFormat.CreateInProcessFormat<MyType>("my-app-type")`. See the [`DataFormat<T>` API reference](/api/avalonia/input/dataformat-1) for the full list of available methods and supported data types.
 
 :::warning
 Identifiers passed to `CreateStringApplicationFormat` and `CreateBytesApplicationFormat` can contain only ASCII letters, digits, dots (`.`) and hyphens (`-`). MIME-style identifiers, such as `application/x-my-type`, are not accepted.
@@ -261,6 +254,6 @@ Do not dispose the `DataTransfer` you pass to `DoDragDropAsync`. Avalonia automa
 
 ## See also
 
-- [Drag and Drop](/docs/input-interaction/drag-and-drop): Conceptual overview of the drag-and-drop system.
+- [Drag and Drop](/docs/input-interaction/drag-and-drop): Reference page for drag-and-drop events, effects and data formats.
 - [Gestures](/docs/input-interaction/gestures): Touch and pointer gesture recognizers.
 - [Storage Provider](/docs/services/storage/storage-provider): File access APIs used with `IStorageItem`.
