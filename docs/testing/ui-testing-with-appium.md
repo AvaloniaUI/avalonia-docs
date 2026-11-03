@@ -291,5 +291,4 @@ dotnet test
 - [Headless Testing with XUnit](/docs/testing/headless-xunit): Fast, in-process unit testing.
 - [Headless Testing with NUnit](/docs/testing/headless-nunit): NUnit integration for headless tests.
 - [Headless Platform Setup](/docs/testing/setting-up-the-headless-platform): Simulating input and capturing frames.
-- [Avalonia's own Appium tests](https://github.com/AvaloniaUI/Avalonia/tree/master/tests/Avalonia.IntegrationTests.Appium): The test suite Avalonia uses internally.
 - [Appium documentation](https://appium.io/docs/en/latest/): Official Appium guides.
