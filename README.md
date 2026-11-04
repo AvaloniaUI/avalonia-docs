@@ -49,16 +49,17 @@ The two suggested workflows are:
   For example:
   - `/docs/get-started/create-your-first-project.md`
   - `/controls/input/buttons/togglebutton.md`
+  - `static\img\custom-controls\custom-flyout-demo.gif`
 
-- When adding an image to the repo, store them in the `img` subfolder inside `static`. Create or identify a folder matching the relevant topic, for example: `static\img\custom-controls\custom-flyout-demo.gif`.
-  
-  When you link to an image, the path and filename are case-sensitive. The convention is `kebab-case`. `import` should be used to help detect broken images and placed near the top of the document for easier maintenance. Use the `<Image>` component to insert the image inline.
+- When adding an image to the repo, store them in the `img` subfolder inside `static`. Create or identify a folder matching the relevant topic. `import` should be used near the top of the document, together with the `<Image>` component to insert the image inline.
 
-  > Example code for adding an image in markdown file:
   ```markdown
   import LayoutZonesDiagram from '/img/concepts/ui-concepts/layout/layout-zones.png';
+  ...
   <Image light={LayoutZonesDiagram} maxWidth="400" alignment="center" alt="A diagram with four overlapping rectangles, representing the layout zones of a UI window." />
   ```
+
+- Samples should use the `<XamlPreview>` component to render a live preview on the page wherever possible. If unfeasible, ensure the sample is complete, accurate, and compiles. Two spaces of indentation is preferred to improve legibility in the preview panel.
 
 ## Local setup
 
