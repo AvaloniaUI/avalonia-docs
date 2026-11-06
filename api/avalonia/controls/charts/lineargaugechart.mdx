@@ -237,7 +237,7 @@ public void ReplayAnimation()
 | [Palette](chartbase.mdx#uid-08afc4a5ef) | Gets or sets the color palette used for series colors. Inherited from [ChartBase](chartbase.mdx). |
 | [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
 | [PlotAreaContent](chartbase.mdx#uid-3f1e034bab) | Gets or sets custom content to overlay on the plot area. The content is measured and arranged within the effective plot bounds for the chart type. Inherited from [ChartBase](chartbase.mdx). |
-| [Ranges](#uid-1c532ff334) | Gets or sets the collection of colored ranges. |
+| [Ranges](#uid-1c532ff334) | Gets or sets the collection of colored ranges. The track shows wherever no range covers the scale. |
 | [RenderTransform](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -371,7 +371,7 @@ public Avalonia.Layout.Orientation Orientation { get; set; }
 
 ### Ranges Property
 
-Gets or sets the collection of colored ranges.
+Gets or sets the collection of colored ranges. The track shows wherever no range covers the scale.
 
 ```csharp
 public System.Collections.Generic.IEnumerable<Avalonia.Controls.Charts.LinearGaugeRange> Ranges { get; set; }

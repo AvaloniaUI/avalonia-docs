@@ -1,0 +1,290 @@
+---
+title: 'StaticTextPointer'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/statictextpointer'
+uid: 'Avalonia.Controls.Documents.TextModel.StaticTextPointer'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.StaticTextPointer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">StaticTextPointer Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A lightweight value type representing a document position as an offset
+with logical direction (gravity). Use this instead of [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+on hot paths where only offset and direction are needed (rendering,
+hit-testing, line queries).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct StaticTextPointer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> StaticTextPointer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IComparable&lt;StaticTextPointer&gt;, IEquatable&lt;StaticTextPointer&gt;
+</div>
+</div>
+
+## Remarks
+
+`StaticTextPointer` is 8 bytes (int + enum), stack-allocated, and
+requires zero heap allocations. It is the value-type counterpart
+to the full [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) class, following the same
+dual pattern as WPF's [StaticTextPointer](xref:Avalonia.Controls.Documents.TextModel.StaticTextPointer) / [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer).
+
+This type intentionally does not carry a node reference. To obtain a
+node-aware [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer), use the containing element's
+`ContentStart` / `ContentEnd` properties on
+`ITextLine.ContainingElement` instead of converting
+from offset alone, which cannot disambiguate between consecutive
+zero-length blocks that share the same offset.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [StaticTextPointer](#uid-af36e0a006) | A lightweight value type representing a document position as an offset with logical direction (gravity). Use this instead of [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) on hot paths where only offset and direction are needed (rendering, hit-testing, line queries). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af36e0a006"></span>
+
+### StaticTextPointer Constructor
+
+A lightweight value type representing a document position as an offset
+with logical direction (gravity). Use this instead of [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+on hot paths where only offset and direction are needed (rendering,
+hit-testing, line queries).
+
+```csharp
+public StaticTextPointer(int Offset, Avalonia.Controls.Documents.TextModel.LogicalDirection Direction)
+```
+
+#### Parameters
+
+`Offset` int
+
+
+`Direction` [Avalonia.Controls.Documents.TextModel.LogicalDirection](xref:Avalonia.Controls.Documents.TextModel.LogicalDirection)
+
+
+#### Remarks
+
+`StaticTextPointer` is 8 bytes (int + enum), stack-allocated, and
+requires zero heap allocations. It is the value-type counterpart
+to the full [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) class, following the same
+dual pattern as WPF's [StaticTextPointer](xref:Avalonia.Controls.Documents.TextModel.StaticTextPointer) / [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer).
+
+This type intentionally does not carry a node reference. To obtain a
+node-aware [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer), use the containing element's
+`ContentStart` / `ContentEnd` properties on
+`ITextLine.ContainingElement` instead of converting
+from offset alone, which cannot disambiguate between consecutive
+zero-length blocks that share the same offset.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CompareTo](#uid-c0f90ef7b3) | Compares two positions by offset. |
+| [Deconstruct](#uid-51b6634355) | No summary available. |
+| [Equals (2 overloads)](#uid-c53a2dad2e) | No summary available. |
+| [GetHashCode](#uid-8c49031b4f) | No summary available. |
+| [ToString](#uid-16ffa14b75) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0f90ef7b3"></span>
+
+### CompareTo Method
+
+Compares two positions by offset.
+
+```csharp
+public int CompareTo(Avalonia.Controls.Documents.TextModel.StaticTextPointer other)
+```
+
+#### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.StaticTextPointer](xref:Avalonia.Controls.Documents.TextModel.StaticTextPointer)
+
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51b6634355"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& Offset, Avalonia.Controls.Documents.TextModel.LogicalDirection& Direction)
+```
+
+#### Parameters
+
+`Offset` int&amp;
+
+
+`Direction` [Avalonia.Controls.Documents.TextModel.LogicalDirection](xref:Avalonia.Controls.Documents.TextModel.LogicalDirection)&amp;
+
+
+</section>
+
+<span id="uid-c53a2dad2e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e61bd3053"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.StaticTextPointer other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.StaticTextPointer](xref:Avalonia.Controls.Documents.TextModel.StaticTextPointer)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d1e05c9a2f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c49031b4f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16ffa14b75"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Direction](#uid-82a9e56dc0) | No summary available. |
+| [Offset](#uid-fc7ea39409) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82a9e56dc0"></span>
+
+### Direction Property
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.LogicalDirection Direction { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc7ea39409"></span>
+
+### Offset Property
+
+```csharp
+public int Offset { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,126 @@
+---
+title: 'ITextViewComponent'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/itextviewcomponent'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextViewComponent Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base interface for text view components that provide modular interaction functionality.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextViewComponent
+```
+
+</div>
+
+## Remarks
+
+Text view components are modular pieces that handle specific interaction functionality
+(keyboard navigation, mouse selection, caret rendering, etc.).
+
+The host controls the lifecycle: components are registered via
+[Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.RegisterComponent(Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent)](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.RegisterComponent%28Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent%29) and receive
+[Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnAttach(Avalonia.Controls.Documents.Primitives.IInteractiveTextHost)](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnAttach%28Avalonia.Controls.Documents.Primitives.IInteractiveTextHost%29)/[Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnDetach](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnDetach) callbacks when the host
+activates or deactivates them.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [OnAttach](#uid-057f3cc657) | Called by the host when this component should activate (subscribe to events, acquire resources). |
+| [OnDetach](#uid-e291727397) | Called by the host when this component should deactivate (unsubscribe from events, release resources). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-057f3cc657"></span>
+
+### OnAttach Method
+
+Called by the host when this component should activate
+(subscribe to events, acquire resources).
+
+```csharp
+public void OnAttach(Avalonia.Controls.Documents.Primitives.IInteractiveTextHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.IInteractiveTextHost](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost)
+
+The interactive text host that owns this component.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e291727397"></span>
+
+### OnDetach Method
+
+Called by the host when this component should deactivate
+(unsubscribe from events, release resources).
+
+```csharp
+public void OnDetach()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsAttached](#uid-7f3f2d7b80) | Gets whether this component is currently attached to a host. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f3f2d7b80"></span>
+
+### IsAttached Property
+
+Gets whether this component is currently attached to a host.
+
+```csharp
+public bool IsAttached { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

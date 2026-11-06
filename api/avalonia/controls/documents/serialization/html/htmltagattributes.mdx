@@ -57,8 +57,10 @@ public struct HtmlTagAttributes
 ## Remarks
 
 Names and values are spans into the tag text the tokenizer is currently holding, so reading
-them allocates nothing. The spans are only valid for the duration of the handler callback;
-call [ReadOnlySpan&lt;T&gt;.ToString](xref:System.ReadOnlySpan%601.ToString) on anything that has to outlive it.
+them allocates nothing. Values come with their character references decoded
+(`&amp;` reads as `&`); when a tag has any, the spans point into a decoded
+copy of the tag text instead. The spans are only valid for the duration of the handler
+callback; call [ReadOnlySpan&lt;T&gt;.ToString](xref:System.ReadOnlySpan%601.ToString) on anything that has to outlive it.
 
 ## Methods
 

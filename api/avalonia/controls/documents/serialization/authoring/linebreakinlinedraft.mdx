@@ -96,7 +96,7 @@ public LineBreakInlineDraft(bool preserveTextContent)
 | [Formatting](inlinedraft.mdx#uid-5bc8ad789d) | Inline-specific formatting (text decorations, baseline alignment). Inherited from [InlineDraft](inlinedraft.mdx). |
 | [Inlines](inlinedraft.mdx#uid-1eaa3c4f70) | Gets the mutable list of child inline drafts. Inherited from [InlineDraft](inlinedraft.mdx). |
 | [Kind](inlinedraft.mdx#uid-e8bc97d972) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) that identifies this draft's inline type. Inherited from [InlineDraft](inlinedraft.mdx). |
-| [PreserveTextContent](#uid-5648432486) | Gets or sets whether the builder should emit newline text for this line break. When true, [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder) inserts [Environment.NewLine](xref:System.Environment.NewLine) into the rope and assigns that length to the resulting line-break node. |
+| [PreserveTextContent](#uid-5648432486) | Has no effect. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder) gives every line break a single line feed in the text, since a break without a character cannot be laid out or addressed. Kept so existing callers still compile. |
 
 <section className="apiref-page__member-entry">
 
@@ -104,9 +104,9 @@ public LineBreakInlineDraft(bool preserveTextContent)
 
 ### PreserveTextContent Property
 
-Gets or sets whether the builder should emit newline text for this line break.
-When true, [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder) inserts [Environment.NewLine](xref:System.Environment.NewLine)
-into the rope and assigns that length to the resulting line-break node.
+Has no effect. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+gives every line break a single line feed in the text, since a break without a
+character cannot be laid out or addressed. Kept so existing callers still compile.
 
 ```csharp
 public bool PreserveTextContent { get; set; }

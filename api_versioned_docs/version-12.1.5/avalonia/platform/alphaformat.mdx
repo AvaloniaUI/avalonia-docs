@@ -1,0 +1,108 @@
+---
+title: 'AlphaFormat'
+hide_title: true
+slug: '/avalonia/platform/alphaformat'
+uid: 'Avalonia.Platform.AlphaFormat'
+commentId: 'T:Avalonia.Platform.AlphaFormat'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AlphaFormat Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes how to interpret the alpha component of a pixel.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum AlphaFormat
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> AlphaFormat
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Opaque](#uid-5927dfd9b9) | All pixels are stored as opaque. |
+| [Premul](#uid-25ca91c3bb) | All pixels have their alpha premultiplied in their color components. |
+| [Unpremul](#uid-38c98a5d65) | All pixels have their color components stored without any regard to the alpha. e.g. this is the default configuration for PNG images. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5927dfd9b9"></span>
+
+### Opaque Field
+
+All pixels are stored as opaque.
+
+```csharp
+public Avalonia.Platform.AlphaFormat Opaque
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25ca91c3bb"></span>
+
+### Premul Field
+
+All pixels have their alpha premultiplied in their color components.
+
+```csharp
+public Avalonia.Platform.AlphaFormat Premul
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38c98a5d65"></span>
+
+### Unpremul Field
+
+All pixels have their color components stored without any regard to the alpha. e.g. this is the default configuration for PNG images.
+
+```csharp
+public Avalonia.Platform.AlphaFormat Unpremul
+```
+
+</section>
+
+</ApiRefPage>
+

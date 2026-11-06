@@ -238,7 +238,7 @@ The drawing context.
 | [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Title](chartbase.mdx#uid-139e6bc0b9) | Gets or sets the chart title displayed above the chart. Inherited from [ChartBase](chartbase.mdx). |
 | [ToggleSeriesVisibility](chartbase.mdx#uid-9c88230ede) | Gets or sets whether clicking legend items toggles series visibility. This only applies to charts whose legends represent hideable series or categories. Charts with explanatory scale legends coerce this value back to . Inherited from [ChartBase](chartbase.mdx). |
-| [TotalSeats](#uid-87065ef6ab) | Gets or sets the total number of seats to display. |
+| [TotalSeats](#uid-87065ef6ab) | Gets or sets the total number of seats. When set above the parties' combined seats, the rest are drawn as vacant. |
 | [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
 | [UseLayoutRounding](../../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [VerticalAlignment](../../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
@@ -335,7 +335,7 @@ public double StartAngle { get; set; }
 
 ### TotalSeats Property
 
-Gets or sets the total number of seats to display.
+Gets or sets the total number of seats. When set above the parties' combined seats, the rest are drawn as vacant.
 
 ```csharp
 public int TotalSeats { get; set; }

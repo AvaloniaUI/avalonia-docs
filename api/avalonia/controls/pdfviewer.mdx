@@ -113,9 +113,9 @@ public PdfViewer()
 | [GetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-75a788f38f) | Gets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GetOutline](#uid-2c0b26abe0) | Gets the document outline (bookmarks). |
 | [GetPageLabel](#uid-7dcc368181) | The page's label from the document's /PageLabels ("iv", "A-2"), or null when the document defines none. `pageNumber` is 1-based. |
-| [GetPageTextAsync](#uid-124f767e74) | Extracts the plain text of a single page (0-based index). Returns an empty string when no document is loaded or the index is out of range. |
+| [GetPageTextAsync](#uid-124f767e74) | Extracts the plain text of a single page (0-based index). Returns an empty string when no document is loaded or the index is out of range. Not gated by the document's copy permission; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions). |
 | [GetSelectedText](#uid-6b2b6090c8) | Gets the currently selected text. |
-| [GetTextAsync](#uid-53cafd6109) | Extracts the plain text of the whole document, one page per element. |
+| [GetTextAsync](#uid-53cafd6109) | Extracts the plain text of the whole document, one page per element. Not gated by the document's copy permission; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions). |
 | [GetValue (3 overloads)](../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [GoToBookmark](#uid-f0b443777b) | Navigates to a bookmark's target: its full destination (page plus position) when it has one, else its page. Returns `true` if the bookmark has a page target. |
 | [GoToPage](#uid-5ec442ed9e) | Navigates to a specific page. |
@@ -135,7 +135,7 @@ public PdfViewer()
 | [OpenMoreOptions](#uid-2cd388ee1e) | Opens the More Options flyout programmatically. |
 | [PreviousPage](#uid-e5c7e8a903) | Navigates to the previous page (or previous spread in two-page mode). |
 | [Print](#uid-0ff5f10dcc) | Prints the current document (fire-and-forget). Errors surface via [Avalonia.Controls.PdfViewer.ErrorMessage](xref:Avalonia.Controls.PdfViewer.ErrorMessage). |
-| [PrintAsync](#uid-3c125f991d) | Prints the current document. Raises [Avalonia.Controls.PdfViewer.PrintRequested](xref:Avalonia.Controls.PdfViewer.PrintRequested) first; if the handler marks it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.PrintService](xref:Avalonia.Controls.PdfViewer.PrintService) shows the system print dialog. No-op when no document is loaded. |
+| [PrintAsync](#uid-3c125f991d) | Prints the current document. Raises [Avalonia.Controls.PdfViewer.PrintRequested](xref:Avalonia.Controls.PdfViewer.PrintRequested) first; if the handler marks it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.PrintService](xref:Avalonia.Controls.PdfViewer.PrintService) shows the system print dialog. No-op when no document is loaded, or when the document forbids printing and [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions) is on (the same gate as [Avalonia.Controls.PdfViewer.CanPrint](xref:Avalonia.Controls.PdfViewer.CanPrint)). |
 | [RaiseEvent](../interactivity/interactive.mdx#uid-d6aba452e6) | Raises a routed event. Inherited from [Interactive](../interactivity/interactive.mdx). |
 | [RedactSelectionAsync](#uid-bb0c61ec8a) | No summary available. |
 | [Redo](#uid-e6bcd20576) | Re-applies the most recently undone edit, if any. |
@@ -143,13 +143,13 @@ public PdfViewer()
 | [RemoveBookmark](#uid-ccf1faf57c) | Removes the bookmark for the given 1-based page. Returns if a bookmark was removed. |
 | [RemoveHandler (2 overloads)](../interactivity/interactive.mdx#uid-456e485be9) | Removes a handler for the specified routed event. Inherited from [Interactive](../interactivity/interactive.mdx). |
 | [Render](../visual.mdx#uid-615917604b) | Renders the visual to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). Inherited from [Visual](../visual.mdx). |
-| [RenderPageToImageAsync](#uid-f3573c7556) | Renders a page (0-based index) to a bitmap at the given scale (1.0 == 100%). Returns `null` when no document is loaded or the index is out of range. The caller owns the returned bitmap and should dispose it. |
+| [RenderPageToImageAsync](#uid-f3573c7556) | Renders a page (0-based index) to a bitmap at the given scale (1.0 == 100%). Returns `null` when no document is loaded or the index is out of range. The caller owns the returned bitmap and should dispose it. Not gated by the document's permission flags; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions). |
 | [ResetZoom](#uid-616811cb4f) | Resets zoom to 100%. |
 | [Save](#uid-4b216f95db) | Saves the document in place (fire-and-forget); a failure, including a stream-backed document with no path, is reported through [Avalonia.Controls.PdfViewer.ErrorMessage](xref:Avalonia.Controls.PdfViewer.ErrorMessage). See [Avalonia.Controls.PdfViewer.SaveAsync](xref:Avalonia.Controls.PdfViewer.SaveAsync). |
 | [SaveAs](#uid-10eee252a1) | Saves via the save picker (fire-and-forget). See [Avalonia.Controls.PdfViewer.SaveAsAsync(System.Threading.CancellationToken)](xref:Avalonia.Controls.PdfViewer.SaveAsAsync%28System.Threading.CancellationToken%29). |
 | [SaveAsAsync](#uid-bcf539b9a5) | Writes the document, with its annotation edits, to a file chosen by the user. Raises [Avalonia.Controls.PdfViewer.SaveAsRequested](xref:Avalonia.Controls.PdfViewer.SaveAsRequested) first; when the host does not handle it, the platform save picker of the owning [Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel) is used. Choosing the open file saves in place (see [Avalonia.Controls.PdfViewer.SaveAsync](xref:Avalonia.Controls.PdfViewer.SaveAsync)); choosing another local path writes it and the viewer switches to that file, keeping the current page. |
 | [SaveAsync](#uid-e03fdf7204) | Saves the document in place to its original [Avalonia.Controls.PdfViewer.Source](xref:Avalonia.Controls.PdfViewer.Source) path, including any annotation edits. No-op when [Avalonia.Controls.PdfViewer.AllowDocumentSaving](xref:Avalonia.Controls.PdfViewer.AllowDocumentSaving) is `false` or when no document is loaded. A document loaded from a stream or byte array has no path to save to: use [Avalonia.Controls.PdfViewer.SaveDocumentAsync(System.IO.Stream)](xref:Avalonia.Controls.PdfViewer.SaveDocumentAsync%28System.IO.Stream%29) or [Avalonia.Controls.PdfViewer.SaveAsAsync(System.Threading.CancellationToken)](xref:Avalonia.Controls.PdfViewer.SaveAsAsync%28System.Threading.CancellationToken%29) for those. |
-| [SaveDocumentAsync (2 overloads)](#uid-5804b6f4e2) | Saves the document (with all annotations) to a stream. |
+| [SaveDocumentAsync (2 overloads)](#uid-5804b6f4e2) | Saves the document (with all annotations) to a stream. Not gated by the document's permission flags; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions). |
 | [SearchAsync (2 overloads)](#uid-eb24a33012) | Searches for text in the document and publishes the results ([Avalonia.Controls.PdfViewer.SearchResults](xref:Avalonia.Controls.PdfViewer.SearchResults), find next/previous, [Avalonia.Controls.PdfViewer.SearchCompleted](xref:Avalonia.Controls.PdfViewer.SearchCompleted)). A failure is reported through [Avalonia.Controls.PdfViewer.ErrorMessage](xref:Avalonia.Controls.PdfViewer.ErrorMessage) and returns an empty list. |
 | [SelectAll](#uid-f7c64ca2c1) | Selects all text on the current page. |
 | [SetCurrentValue (2 overloads)](../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
@@ -159,7 +159,7 @@ public PdfViewer()
 | [SetIsTemplateFocusTarget](primitives/templatedcontrol.mdx#uid-281801c25f) | Sets the value of the IsTemplateFocusTargetProperty attached property on a control. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Share](#uid-b0f7f90938) | Shares the current document (fire-and-forget). Errors surface via [Avalonia.Controls.PdfViewer.ErrorMessage](xref:Avalonia.Controls.PdfViewer.ErrorMessage). |
-| [ShareAsync](#uid-0091165ee8) | Shares the current document. Raises [Avalonia.Controls.PdfViewer.ShareRequested](xref:Avalonia.Controls.PdfViewer.ShareRequested) first; if the handler marks it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.ShareService](xref:Avalonia.Controls.PdfViewer.ShareService) shows the system share sheet. No-op when no document is loaded. |
+| [ShareAsync](#uid-0091165ee8) | Shares the current document. Raises [Avalonia.Controls.PdfViewer.ShareRequested](xref:Avalonia.Controls.PdfViewer.ShareRequested) first; if the handler marks it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.ShareService](xref:Avalonia.Controls.PdfViewer.ShareService) shows the system share sheet. No-op when no document is loaded. The document's permission flags have no "share" bit and are not consulted here; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions). |
 | [SquigglySelectionAsync](#uid-22e0016781) | No summary available. |
 | [StampNameForLabel](#uid-8b627d865d) | Stamp name for a label: the label without spaces, so standard labels map to standard names. |
 | [StampStyleDisplayName](#uid-e20721c2d7) | The English name of a style as shown in the Stamp dropdown (see [Avalonia.Controls.PdfViewer.Strings](xref:Avalonia.Controls.PdfViewer.Strings) for other languages). |
@@ -564,6 +564,7 @@ string
 
 Extracts the plain text of a single page (0-based index).
 Returns an empty string when no document is loaded or the index is out of range.
+Not gated by the document's copy permission; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task<string> GetPageTextAsync(int pageIndex, System.Threading.CancellationToken cancellationToken)
@@ -612,6 +613,7 @@ The selected text, or null if no selection.
 ### GetTextAsync Method
 
 Extracts the plain text of the whole document, one page per element.
+Not gated by the document's copy permission; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<string>> GetTextAsync(System.Threading.CancellationToken cancellationToken)
@@ -943,7 +945,8 @@ public void Print()
 
 Prints the current document. Raises [Avalonia.Controls.PdfViewer.PrintRequested](xref:Avalonia.Controls.PdfViewer.PrintRequested) first; if the handler marks
 it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.PrintService](xref:Avalonia.Controls.PdfViewer.PrintService) shows the system
-print dialog. No-op when no document is loaded.
+print dialog. No-op when no document is loaded, or when the document forbids printing and
+[Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions) is on (the same gate as [Avalonia.Controls.PdfViewer.CanPrint](xref:Avalonia.Controls.PdfViewer.CanPrint)).
 
 ```csharp
 public System.Threading.Tasks.Task PrintAsync(Avalonia.Controls.Pdf.Services.PrintOptions options, System.Threading.CancellationToken cancellationToken)
@@ -1057,6 +1060,7 @@ bool
 Renders a page (0-based index) to a bitmap at the given scale (1.0 == 100%).
 Returns `null` when no document is loaded or the index is out of range.
 The caller owns the returned bitmap and should dispose it.
+Not gated by the document's permission flags; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> RenderPageToImageAsync(int pageIndex, double scale, System.Threading.CancellationToken cancellationToken)
@@ -1191,7 +1195,8 @@ System.Threading.Tasks.Task
 
 #### SaveDocumentAsync Method
 
-Saves the document (with all annotations) to a stream.
+Saves the document (with all annotations) to a stream. Not gated by the document's
+permission flags; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task SaveDocumentAsync(System.IO.Stream stream)
@@ -1215,7 +1220,8 @@ System.Threading.Tasks.Task
 
 #### SaveDocumentAsync Method
 
-Saves the document (with all annotations) to a file path.
+Saves the document (with all annotations) to a file path. Not gated by the document's
+permission flags; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task SaveDocumentAsync(string filePath)
@@ -1338,7 +1344,8 @@ public void Share()
 
 Shares the current document. Raises [Avalonia.Controls.PdfViewer.ShareRequested](xref:Avalonia.Controls.PdfViewer.ShareRequested) first; if the handler marks
 it handled nothing else happens, otherwise the [Avalonia.Controls.PdfViewer.ShareService](xref:Avalonia.Controls.PdfViewer.ShareService) shows the system
-share sheet. No-op when no document is loaded.
+share sheet. No-op when no document is loaded. The document's permission flags have no
+"share" bit and are not consulted here; see [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions).
 
 ```csharp
 public System.Threading.Tasks.Task ShareAsync(Avalonia.Controls.Pdf.Services.ShareOptions options, System.Threading.CancellationToken cancellationToken)
@@ -1612,7 +1619,7 @@ public void ZoomOut()
 
 | Name | Description |
 | --- | --- |
-| [ActiveTool](#uid-1beeb3191b) | Gets or sets the tool applied to the next pointer gesture on a page. The built-in toolbar and a host's own controls both read and write this one value: setting it arms the tool (and, for [Avalonia.Controls.PdfViewerTool.Shape](xref:Avalonia.Controls.PdfViewerTool.Shape), keeps or defaults [Avalonia.Controls.PdfViewer.SelectedShapeType](xref:Avalonia.Controls.PdfViewer.SelectedShapeType)), [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None) disarms every tool. Editing capability still applies: while [Avalonia.Controls.PdfViewer.CanEditAnnotations](xref:Avalonia.Controls.PdfViewer.CanEditAnnotations) is false the value stays [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None). |
+| [ActiveTool](#uid-1beeb3191b) | Gets or sets the tool applied to the next pointer gesture on a page. The built-in toolbar and a host's own controls both read and write this one value: setting it arms the tool (and, for [Avalonia.Controls.PdfViewerTool.Shape](xref:Avalonia.Controls.PdfViewerTool.Shape), keeps or defaults [Avalonia.Controls.PdfViewer.SelectedShapeType](xref:Avalonia.Controls.PdfViewer.SelectedShapeType)), [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None) disarms every tool. Editing capability still applies: while [Avalonia.Controls.PdfViewer.CanEditAnnotations](xref:Avalonia.Controls.PdfViewer.CanEditAnnotations) is false, or no document is open ([Avalonia.Controls.PdfViewer.HasDocument](xref:Avalonia.Controls.PdfViewer.HasDocument)), the value stays [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None). |
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
 | [AddBookmarkCommand](#uid-71713a3855) | Gets a command that bookmarks the page supplied as the command parameter (defaulting to the current page). Enabled while a document is loaded. |
 | [AllowAnnotationEditing](#uid-f26ee5524e) | Gets or sets whether annotation tools may be used. Default `true`. Ignored (treated as `false`) when [Avalonia.Controls.PdfViewer.IsReadOnly](xref:Avalonia.Controls.PdfViewer.IsReadOnly) is set. |
@@ -1628,7 +1635,7 @@ public void ZoomOut()
 | [BorderThickness](primitives/templatedcontrol.mdx#uid-4e2cc431b4) | Gets or sets the thickness of the control's border. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Bounds](../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../visual.mdx). |
 | [CacheMode](../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../visual.mdx). |
-| [CanEditAnnotations](#uid-f382d9aa81) | Gets whether annotation editing is currently permitted — when [Avalonia.Controls.PdfViewer.IsReadOnly](xref:Avalonia.Controls.PdfViewer.IsReadOnly) is set or [Avalonia.Controls.PdfViewer.AllowAnnotationEditing](xref:Avalonia.Controls.PdfViewer.AllowAnnotationEditing) is cleared. Bindable so the template can gate the annotation toolbar. |
+| [CanEditAnnotations](#uid-f382d9aa81) | Gets whether annotation editing is currently permitted — when [Avalonia.Controls.PdfViewer.IsReadOnly](xref:Avalonia.Controls.PdfViewer.IsReadOnly) is set or [Avalonia.Controls.PdfViewer.AllowAnnotationEditing](xref:Avalonia.Controls.PdfViewer.AllowAnnotationEditing) is cleared. Bindable so the template can gate the annotation toolbar. Ignores whether a document is open; the annotation tools also need [Avalonia.Controls.PdfViewer.HasDocument](xref:Avalonia.Controls.PdfViewer.HasDocument). |
 | [CanPrint](#uid-167bdc5eba) | True when a document is loaded and printing can go somewhere: either [Avalonia.Controls.PdfViewer.PrintRequested](xref:Avalonia.Controls.PdfViewer.PrintRequested) has a handler or a supported [Avalonia.Controls.PdfViewer.PrintService](xref:Avalonia.Controls.PdfViewer.PrintService) exists. |
 | [CanRedo](#uid-df0c3d497c) | Gets whether there is an undone edit that [Avalonia.Controls.PdfViewer.Redo](xref:Avalonia.Controls.PdfViewer.Redo) can re-apply. |
 | [CanShare](#uid-77c2bb7160) | True when a document is loaded and sharing can go somewhere: either [Avalonia.Controls.PdfViewer.ShareRequested](xref:Avalonia.Controls.PdfViewer.ShareRequested) has a handler or a supported [Avalonia.Controls.PdfViewer.ShareService](xref:Avalonia.Controls.PdfViewer.ShareService) exists. |
@@ -1652,7 +1659,7 @@ public void ZoomOut()
 | [DrawStrokeColor](#uid-dbfe4de051) | Gets or sets the default draw/ink stroke color. |
 | [DrawStrokeWidth](#uid-ae9c9eae45) | Gets or sets the draw stroke width in PDF points (0.5–20). |
 | [Effect](../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. Inherited from [Visual](../visual.mdx). |
-| [EnableKeyboardShortcuts](#uid-a0caf07e62) | Gets or sets whether the viewer handles its built-in keyboard shortcuts — copy, select-all, the zoom accelerators, save, arrow-key navigation and nudging. Default `true`. Set `false` when a host binds those keystrokes to its own commands and doesn't want the viewer to consume them. Form-field text input and Escape-to-deselect are unaffected. |
+| [EnableKeyboardShortcuts](#uid-a0caf07e62) | Gets or sets whether the viewer handles its built-in keyboard shortcuts — copy, select-all, the zoom accelerators, save, arrow-key and Home/End navigation and nudging. Default `true`. Set `false` when a host binds those keystrokes to its own commands and doesn't want the viewer to consume them. Form-field text input and Escape-to-deselect are unaffected. |
 | [ErrorMessage](#uid-5cab5458f8) | Gets the current error message, if any. |
 | [FitPageCommand](#uid-784cb065aa) | Gets a command that fits the whole page to the viewport. |
 | [FitWidthCommand](#uid-d3367cd6ad) | Gets a command that fits the page width to the viewport. |
@@ -1744,7 +1751,7 @@ public void ZoomOut()
 | [PageRetentionBuffer](#uid-977810dcce) | Gets or sets how many pages on each side of the viewport are kept decoded before being evicted in continuous mode. Acts as hysteresis: pages between the render buffer and this margin stay in memory so short back-and-forth scrolling does not re-render them. If set below [Avalonia.Controls.PdfViewer.PageRenderBuffer](xref:Avalonia.Controls.PdfViewer.PageRenderBuffer), the render buffer is used for retention. Clamped to [0, [Avalonia.Controls.PdfViewer.MaxPageRetentionBuffer](xref:Avalonia.Controls.PdfViewer.MaxPageRetentionBuffer)]. Default is 4. |
 | [Parent](../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../styledelement.mdx). |
 | [Password](#uid-201fd9786e) | Gets or sets the password for encrypted PDFs. |
-| [Permissions](#uid-b1d5219358) | Gets the loaded document's permission flags, or `null` when no document is open. |
+| [Permissions](#uid-b1d5219358) | Gets the loaded document's advisory permission flags (/P), or `null` when no document is open. See [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions) for how the viewer uses them. |
 | [PreviousPageCommand](#uid-fe6a677335) | Gets a command that goes to the previous page. Disabled on the first page. |
 | [PrintCommand](#uid-ac1eede509) | Gets a command that prints the document via the configured [Avalonia.Controls.PdfViewer.PrintService](xref:Avalonia.Controls.PdfViewer.PrintService). Disabled when no print service is set. |
 | [PrintService](#uid-7c77bd3c73) | Gets or sets the print service used by [Avalonia.Controls.PdfViewer.Print](xref:Avalonia.Controls.PdfViewer.Print), [Avalonia.Controls.PdfViewer.PrintAsync(Avalonia.Controls.Pdf.Services.PrintOptions,System.Threading.CancellationToken)](xref:Avalonia.Controls.PdfViewer.PrintAsync%28Avalonia.Controls.Pdf.Services.PrintOptions%2CSystem.Threading.CancellationToken%29) and [Avalonia.Controls.PdfViewer.PrintCommand](xref:Avalonia.Controls.PdfViewer.PrintCommand). While the property is unset it resolves to the built-in service for the current platform (Windows, macOS, iOS, Android; `null` elsewhere). Assign or bind your own implementation to replace it, set `null` to disable the built-in one, or clear the property to return to the platform default. Handle [Avalonia.Controls.PdfViewer.PrintRequested](xref:Avalonia.Controls.PdfViewer.PrintRequested) to bypass the service entirely. |
@@ -1827,7 +1834,8 @@ Gets or sets the tool applied to the next pointer gesture on a page. The built-i
 and a host's own controls both read and write this one value: setting it arms the tool
 (and, for [Avalonia.Controls.PdfViewerTool.Shape](xref:Avalonia.Controls.PdfViewerTool.Shape), keeps or defaults [Avalonia.Controls.PdfViewer.SelectedShapeType](xref:Avalonia.Controls.PdfViewer.SelectedShapeType)),
 [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None) disarms every tool. Editing capability still applies:
-while [Avalonia.Controls.PdfViewer.CanEditAnnotations](xref:Avalonia.Controls.PdfViewer.CanEditAnnotations) is false the value stays [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None).
+while [Avalonia.Controls.PdfViewer.CanEditAnnotations](xref:Avalonia.Controls.PdfViewer.CanEditAnnotations) is false, or no document is open
+([Avalonia.Controls.PdfViewer.HasDocument](xref:Avalonia.Controls.PdfViewer.HasDocument)), the value stays [Avalonia.Controls.PdfViewerTool.None](xref:Avalonia.Controls.PdfViewerTool.None).
 
 ```csharp
 public Avalonia.Controls.PdfViewerTool ActiveTool { get; set; }
@@ -1962,7 +1970,8 @@ public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfUs
 
 Gets whether annotation editing is currently permitted — when
 [Avalonia.Controls.PdfViewer.IsReadOnly](xref:Avalonia.Controls.PdfViewer.IsReadOnly) is set or [Avalonia.Controls.PdfViewer.AllowAnnotationEditing](xref:Avalonia.Controls.PdfViewer.AllowAnnotationEditing) is cleared. Bindable
-so the template can gate the annotation toolbar.
+so the template can gate the annotation toolbar. Ignores whether a document is open; the
+annotation tools also need [Avalonia.Controls.PdfViewer.HasDocument](xref:Avalonia.Controls.PdfViewer.HasDocument).
 
 ```csharp
 public bool CanEditAnnotations { get; set; }
@@ -2137,7 +2146,7 @@ public float DrawStrokeWidth { get; set; }
 ### EnableKeyboardShortcuts Property
 
 Gets or sets whether the viewer handles its built-in keyboard shortcuts — copy, select-all,
-the zoom accelerators, save, arrow-key navigation and nudging. Default `true`. Set `false` when a
+the zoom accelerators, save, arrow-key and Home/End navigation and nudging. Default `true`. Set `false` when a
 host binds those keystrokes to its own commands and doesn't want the viewer to consume them.
 Form-field text input and Escape-to-deselect are unaffected.
 
@@ -2912,7 +2921,8 @@ public string Password { get; set; }
 
 ### Permissions Property
 
-Gets the loaded document's permission flags, or `null` when no document is open.
+Gets the loaded document's advisory permission flags (/P), or `null` when no document is
+open. See [Avalonia.Controls.PdfViewer.RespectDocumentPermissions](xref:Avalonia.Controls.PdfViewer.RespectDocumentPermissions) for how the viewer uses them.
 
 ```csharp
 public Nullable<Avalonia.Controls.PdfPermissions> Permissions { get; set; }
@@ -3030,6 +3040,11 @@ Default `true`. A document opened with its owner password is unrestricted. Set
 ```csharp
 public bool RespectDocumentPermissions { get; set; }
 ```
+
+#### Remarks
+
+The flags are advisory (ISO 32000-2, 7.6.4.2). Only the viewer's UI and printing honour them; the
+text, render, share and save APIs are not gated, so check [Avalonia.Controls.PdfViewer.Permissions](xref:Avalonia.Controls.PdfViewer.Permissions) there yourself.
 
 </section>
 
@@ -3200,6 +3215,11 @@ Gets or sets the default shape fill color. Null means no fill.
 public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> ShapeFillColor { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3214,6 +3234,11 @@ Gets or sets the default shape stroke color. Null means no stroke.
 public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> ShapeStrokeColor { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3227,6 +3252,11 @@ Gets or sets the default shape stroke width in PDF points (0.5–20).
 ```csharp
 public float ShapeStrokeWidth { get; set; }
 ```
+
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
 
 </section>
 
@@ -3504,6 +3534,11 @@ Gets or sets the text annotation fill color. Null means no fill.
 public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> TextAnnotationFillColor { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3517,6 +3552,11 @@ Gets or sets the text annotation font name.
 ```csharp
 public string TextAnnotationFont { get; set; }
 ```
+
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
 
 </section>
 
@@ -3532,6 +3572,11 @@ Gets or sets the text annotation font attributes.
 public Avalonia.Controls.FontAttributes TextAnnotationFontAttributes { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3545,6 +3590,11 @@ Gets or sets the text annotation font size (1–144).
 ```csharp
 public float TextAnnotationFontSize { get; set; }
 ```
+
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
 
 </section>
 
@@ -3560,6 +3610,11 @@ Gets or sets the text annotation stroke color. Null means no stroke.
 public Nullable<Avalonia.Controls.Pdf.Core.PdfAnnotationColor> TextAnnotationStrokeColor { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3573,6 +3628,11 @@ Gets or sets the text annotation stroke width (0.5–20).
 ```csharp
 public float TextAnnotationStrokeWidth { get; set; }
 ```
+
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
 
 </section>
 
@@ -3588,6 +3648,11 @@ Gets or sets the text annotation text alignment.
 public Avalonia.Controls.TextAnnotationAlignment TextAnnotationTextAlign { get; set; }
 ```
 
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
+
 </section>
 
 <section className="apiref-page__member-entry">
@@ -3601,6 +3666,11 @@ Gets or sets the text annotation text color.
 ```csharp
 public Avalonia.Controls.Pdf.Core.PdfAnnotationColor TextAnnotationTextColor { get; set; }
 ```
+
+#### Remarks
+
+While a shape or text box is selected this shows and edits its style, then reverts when the
+selection ends. Set it with nothing selected to change the default for new annotations.
 
 </section>
 

@@ -217,10 +217,13 @@ and an items control.
 - [Location](location.mdx)
 - [MacOSProperties](macosproperties.mdx) - Set of MacOS specific attached properties that allow deeper customization of the application per platform.
 - [Markdown](markdown.mdx) - Displays markdown text with read-only selection support.
+- [MarkdownAppBuilderExtensions](markdownappbuilderextensions.mdx) - Extension methods that configure the [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control for a whole app.
 - [MarkdownExtensions](markdownextensions.mdx) - Extension methods for configuring Markdig pipelines for the [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control.
 - [MarkdownImageLoader](markdownimageloader.mdx) - Resolves the image URLs of a markdown document to images. Override
 [Avalonia.Controls.MarkdownImageLoader.LoadImageAsync(string)](xref:Avalonia.Controls.MarkdownImageLoader.LoadImageAsync%28System.String%29) to supply images from somewhere other than
 HTTP and the local file system.
+- [MarkdownOptions](markdownoptions.mdx) - App-wide defaults for every [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control, set up at startup with
+[Avalonia.Controls.MarkdownAppBuilderExtensions.ConfigureMarkdown(Avalonia.AppBuilder,Action&#123;Avalonia.Controls.MarkdownOptions&#125;)](xref:Avalonia.Controls.MarkdownAppBuilderExtensions.ConfigureMarkdown%28Avalonia.AppBuilder%2CSystem.Action%7BAvalonia.Controls.MarkdownOptions%7D%29).
 - [MarkdownStreamingSession](markdownstreamingsession.mdx) - Manages an active markdown streaming session. Text is appended via
 [Avalonia.Controls.MarkdownStreamingSession.Append(string)](xref:Avalonia.Controls.MarkdownStreamingSession.Append%28System.String%29) and coalesced into periodic render updates
 at display refresh rate to avoid redundant work.

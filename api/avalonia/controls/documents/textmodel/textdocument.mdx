@@ -56,27 +56,8 @@ public class TextDocument
 
 ## Remarks
 
-Mirrors the approach used by
-`MarkdownStreamingSession.ApplyDelta`: the snapshot's rope tree is
-spliced into the live document and its top-level
-[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) children are converted into
-[Avalonia.Controls.Documents.TextModel.TextDocumentNode](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNode) sub-trees with deferred element
-realization, then attached as siblings of the caret block.
-
-Two structural paths are supported:
-
-- Root-block boundary (caret at start or end of a root paragraph, empty document, or single empty placeholder paragraph): blocks splice as siblings of the caret block.
-- Mid-paragraph (caret strictly inside a root-level paragraph): the paragraph is split via [Avalonia.Controls.Documents.TextModel.TextDocument.SplitBlock(Avalonia.Controls.Documents.TextModel.TextPointer,bool)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.SplitBlock%28Avalonia.Controls.Documents.TextModel.TextPointer%2CSystem.Boolean%29), snapshot blocks splice between the halves, and the first/last grafted paragraphs merge with the surrounding split halves. Top-level Sections that carry no formatting are unwrapped before the graft so RTF/DOCX round-trips that wrap content in `\sectd`/`w:body` still merge cleanly.
-
-Other contexts (caret inside a [Avalonia.Controls.Documents.ListItem](xref:Avalonia.Controls.Documents.ListItem) /
-[Avalonia.Controls.Documents.TableCell](xref:Avalonia.Controls.Documents.TableCell) paragraph, formatted Section interior) fall
-back to plain-text lowering. Schema-aware structural paste in those
-contexts is a follow-up.
-
-The insertion anchor is a [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) rather than a raw
-offset. The pointer carries the tree node it was bound to, so block
-resolution does not depend on offset arithmetic — it walks up from
-`pointer.Node` until it reaches a child of [Avalonia.Controls.Documents.TextModel.TextDocument.RootNode](xref:Avalonia.Controls.Documents.TextModel.TextDocument.RootNode).
+None of them raise events or record undo: they are the shared bottom layer of the
+edit methods that do.
 
 ## Constructors
 
@@ -288,6 +269,9 @@ pointer lands in (e.g. a trailing empty paragraph reached by
 Select-All) is captured naturally instead of being skipped. Offsets
 are used only where they are the natural primitive: slicing the rope
 text and trimming partially-selected boundary blocks.
+A range within one paragraph of a list item, table cell, or section
+captures that paragraph alone, without its containers, unless the
+range covers the whole top-level container.
 
 </section>
 
@@ -755,7 +739,7 @@ public Avalonia.Controls.Documents.Undo.IUndoManager UndoManager { get; set; }
 | [Changed](#uid-87048c2abe) | Raised when an outermost [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope completes after producing at least one observable change. Empty / no-op scopes are suppressed entirely. |
 | [FootnotesChanged](#uid-38f1b42c12) | Raised when the set of notes changes or a note's id or label changes. |
 | [PageBandsChanged](#uid-a4462ef3e7) | Raised when the set of bands changes or a band's role or rule changes: the pages a band claims by rule follow from these, so views re-resolve. |
-| [TextChanged](#uid-b5bc3f2a17) | Raised after each individual edit operation (insert, delete, replace). Carries [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind), and [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.InsertedText](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.InsertedText). |
+| [TextChanged](#uid-b5bc3f2a17) | Raised once per operation that wrote to the text, with the net change: [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind), and [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.InsertedText](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.InsertedText). |
 
 <section className="apiref-page__member-entry">
 
@@ -814,8 +798,8 @@ public event EventHandler PageBandsChanged
 
 ### TextChanged Event
 
-Raised after each individual edit operation (insert, delete, replace).
-Carries [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset),
+Raised once per operation that wrote to the text, with the net change:
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset),
 [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength),
 [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength),
 [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Kind), and
@@ -827,9 +811,26 @@ public event EventHandler<Avalonia.Controls.Documents.TextModel.TextChangeEventA
 
 #### Remarks
 
-Multiple [Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) events may fire within a single
-[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope. Use [Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed) for the
-per-commit aggregate (with undo correlation).
+An operation is an outermost [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope. Every
+edit method, editor command and undo or redo step runs in one, and so
+does a batch an application opens itself. However many primitive edits
+the operation makes (typing over a selection deletes and then inserts,
+a paste splits a block and grafts paragraphs), the event reports one
+region: the text from [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset) that was
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength) characters long before the
+operation and is [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength) long after
+it. It is raised when the scope closes, before [Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed),
+whose [Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.TextChanges](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.TextChanges) holds the same
+change.
+
+The region covers every character the operation wrote; the text is not
+compared to find what stayed the same. A paragraph boundary is not a
+character, so splitting a paragraph (Enter) or joining adjacent ones
+(Backspace or Delete at the boundary) writes no text and raises no event,
+and neither does its undo or redo. A break character is text: Shift+Enter, or
+Enter in a preformatted block, inserts a line feed and reports it as an
+[Avalonia.Controls.Documents.TextModel.DocumentChangeKind.Insert](xref:Avalonia.Controls.Documents.TextModel.DocumentChangeKind.Insert). An operation that writes no text, or
+whose writes cancel out, raises none.
 
 </section>
 

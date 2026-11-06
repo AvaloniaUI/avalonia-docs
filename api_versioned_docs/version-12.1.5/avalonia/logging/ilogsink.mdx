@@ -1,0 +1,173 @@
+---
+title: 'ILogSink'
+hide_title: true
+slug: '/avalonia/logging/ilogsink'
+uid: 'Avalonia.Logging.ILogSink'
+commentId: 'T:Avalonia.Logging.ILogSink'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Logging'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILogSink Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Logging</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines a sink for Avalonia logging messages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILogSink
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsEnabled](#uid-fa8540479d) | Checks if given log level and area is enabled. |
+| [Log (2 overloads)](#uid-ae3dda8e0f) | Logs an event. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fa8540479d"></span>
+
+### IsEnabled Method
+
+Checks if given log level and area is enabled.
+
+```csharp
+public bool IsEnabled(Avalonia.Logging.LogEventLevel level, string area)
+```
+
+#### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The log area.
+
+
+#### Returns
+
+bool
+
+if given log level is enabled.
+
+
+</section>
+
+<span id="uid-ae3dda8e0f"></span>
+
+### Log overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f1779b2ed"></span>
+
+#### Log Method
+
+Logs an event.
+
+```csharp
+public void Log(Avalonia.Logging.LogEventLevel level, string area, object source, string messageTemplate)
+```
+
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates.
+
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7cb89d08eb"></span>
+
+#### Log Method
+
+Logs a new event.
+
+```csharp
+public void Log(Avalonia.Logging.LogEventLevel level, string area, object source, string messageTemplate, object[] propertyValues)
+```
+
+##### Parameters
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+The log event level.
+
+
+`area` string
+
+The area that the event originates.
+
+
+`source` object
+
+The object from which the event originates.
+
+
+`messageTemplate` string
+
+The message template.
+
+
+`propertyValues` object[]
+
+The message property values.
+
+
+</section>
+
+</ApiRefPage>
+

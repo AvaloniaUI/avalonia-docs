@@ -1,0 +1,239 @@
+---
+title: 'PolarDataPointWithItem'
+hide_title: true
+slug: '/avalonia/controls/charts/polardatapointwithitem'
+uid: 'Avalonia.Controls.Charts.PolarDataPointWithItem'
+commentId: 'T:Avalonia.Controls.Charts.PolarDataPointWithItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PolarDataPointWithItem Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a polar point together with the original source item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PolarDataPointWithItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PolarDataPointWithItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PolarDataPointWithItem&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PolarDataPointWithItem](#uid-3dce59fba0) | Represents a polar point together with the original source item. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3dce59fba0"></span>
+
+### PolarDataPointWithItem Constructor
+
+Represents a polar point together with the original source item.
+
+```csharp
+public PolarDataPointWithItem(Avalonia.Point Point, object DataItem)
+```
+
+#### Parameters
+
+`Point` [Avalonia.Point](xref:Avalonia.Point)
+
+The polar point, where X is angle and Y is radius.
+
+
+`DataItem` object
+
+The original item from the series data source.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-136ac7a3ba) | No summary available. |
+| [Equals (2 overloads)](#uid-11baa97f22) | No summary available. |
+| [GetHashCode](#uid-61ed6b9309) | No summary available. |
+| [ToString](#uid-3ae8ef9371) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-136ac7a3ba"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Point& Point, object& DataItem)
+```
+
+#### Parameters
+
+`Point` [Avalonia.Point](xref:Avalonia.Point)&amp;
+
+
+`DataItem` object&amp;
+
+
+</section>
+
+<span id="uid-11baa97f22"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7c32f5775"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.PolarDataPointWithItem other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.PolarDataPointWithItem](xref:Avalonia.Controls.Charts.PolarDataPointWithItem)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a617735a4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61ed6b9309"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ae8ef9371"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DataItem](#uid-f956682862) | The original item from the series data source. |
+| [Point](#uid-c66c5b0b35) | The polar point, where X is angle and Y is radius. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f956682862"></span>
+
+### DataItem Property
+
+The original item from the series data source.
+
+```csharp
+public object DataItem { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c66c5b0b35"></span>
+
+### Point Property
+
+The polar point, where X is angle and Y is radius.
+
+```csharp
+public Avalonia.Point Point { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,247 @@
+---
+title: 'ListFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/listformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ListFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+List formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct ListFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> ListFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;ListFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Memory footprint: ~8 bytes per instance (struct, inline in [SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)).
+
+Only relevant for list nodes. Null properties mean "not explicitly set, inherit from parent or use default".
+
+This struct contains only format-independent properties that map directly to UI counterparts.
+RTF-specific measurements (marker indent, text indent, etc.) are stored in BlockRtfMetadata.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-7b0f7e8d71) | No summary available. |
+| [GetHashCode](#uid-4fa4118247) | No summary available. |
+| [ToString](#uid-eaa4da1ebc) | No summary available. |
+
+<span id="uid-7b0f7e8d71"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-662872daf4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c9c125af3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4fa4118247"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eaa4da1ebc"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-1172c70b0f) | Default formatting with no explicit values set. |
+| [MarkerAlignment](#uid-243afb7d1c) | How the marker aligns within its column (Word's `w:lvlJc`), mapping to [Avalonia.Controls.Documents.List.MarkerAlignment](xref:Avalonia.Controls.Documents.List.MarkerAlignment). Null means not explicitly set (left). |
+| [MarkerOffset](#uid-155816cb8d) | The horizontal distance the marker hangs back from the item content (the list's hanging indent), in device-independent pixels. Maps to [Avalonia.Controls.Documents.List.MarkerOffset](xref:Avalonia.Controls.Documents.List.MarkerOffset). Null means not explicitly set, so the marker sits at the list's left edge. |
+| [MarkerStyle](#uid-c55a45db88) | The style of the list marker (e.g., Disc, Decimal, LowerAlpha). Null means not explicitly set. |
+| [StartIndex](#uid-386490d506) | The starting index for numbered lists (typically 1). Null means not explicitly set (use default of 1). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1172c70b0f"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.ListFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-243afb7d1c"></span>
+
+### MarkerAlignment Property
+
+How the marker aligns within its column (Word's `w:lvlJc`), mapping to
+[Avalonia.Controls.Documents.List.MarkerAlignment](xref:Avalonia.Controls.Documents.List.MarkerAlignment). Null means not explicitly set (left).
+
+```csharp
+public Nullable<Avalonia.Media.TextAlignment> MarkerAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-155816cb8d"></span>
+
+### MarkerOffset Property
+
+The horizontal distance the marker hangs back from the item content
+(the list's hanging indent), in device-independent pixels. Maps to
+[Avalonia.Controls.Documents.List.MarkerOffset](xref:Avalonia.Controls.Documents.List.MarkerOffset). Null means not explicitly set, so the
+marker sits at the list's left edge.
+
+```csharp
+public Nullable<double> MarkerOffset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c55a45db88"></span>
+
+### MarkerStyle Property
+
+The style of the list marker (e.g., Disc, Decimal, LowerAlpha).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle> MarkerStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-386490d506"></span>
+
+### StartIndex Property
+
+The starting index for numbered lists (typically 1).
+Null means not explicitly set (use default of 1).
+
+```csharp
+public Nullable<int> StartIndex { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

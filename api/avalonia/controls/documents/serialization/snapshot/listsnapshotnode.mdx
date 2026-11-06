@@ -68,6 +68,7 @@ public class ListSnapshotNode
 | Name | Description |
 | --- | --- |
 | [BlockFormatting](blocksnapshotnode.mdx#uid-b6263b5d6e) | Block formatting captured from the element. Inherited from [BlockSnapshotNode](blocksnapshotnode.mdx). |
+| [Bookmarks](blocksnapshotnode.mdx#uid-4649cdfd5b) | The bookmark names that address this block, in the order they were given; empty when none does. Only text blocks (paragraphs and the kinds that behave as one) carry names. A link reaches the block through the fragment `#name`. Inherited from [BlockSnapshotNode](blocksnapshotnode.mdx). |
 | [Children](snapshotnode.mdx#uid-b1710f532c) | Child nodes. Empty array for leaf nodes. Inherited from [SnapshotNode](snapshotnode.mdx). |
 | [CustomData](snapshotnode.mdx#uid-36dcca3067) | Extension-specific custom data for custom node kinds. Used by the builder path ([Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)) to propagate custom data from serializer importers to snapshot nodes. Must be immutable or thread-safe for background serialization. Inherited from [SnapshotNode](snapshotnode.mdx). |
 | [EndOffset](snapshotnode.mdx#uid-9d03a730e3) | Gets the absolute end offset (exclusive). Inherited from [SnapshotNode](snapshotnode.mdx). |

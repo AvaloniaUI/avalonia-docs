@@ -73,6 +73,7 @@ public class DocumentSnapshotBuilder
 | [AddPageBreak](#uid-0f618f2100) | Applies an explicit page break at the current position. The break is a split instruction, not content: a paragraph with content ends here and continues in a clone of itself, and the next committed block receives [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting.PageBreakBefore). A block that would commit empty while the break is pending is the break's own remainder (or a break-only carrier paragraph) and is dropped - the break carries forward; at a container boundary or the document end the pending break materializes as an empty flagged landing paragraph. |
 | [AddPageNumberField](#uid-5b3195e88a) | Adds a page-number field to the current paragraph. The field's cached result becomes its text content, so plain rendering and export show it until paginated rendering resolves the field per page. |
 | [AddParagraph (5 overloads)](#uid-6b0203da31) | Adds a new empty paragraph. |
+| [AddParagraphBookmark](#uid-e6aa4bed8a) | Names the current paragraph with the bookmark `name`, which a link reaches through the fragment `#name`; with no paragraph open (right after a list item or table cell starts), the next paragraph opened takes it. A paragraph can carry several names. A name already given in this snapshot is ignored, since a name addresses one block. |
 | [AddParagraphRange](#uid-bbe99d3a64) | Registers a paragraph that references a range within previously set bulk text. The text at [`offset`, `offset` + `length`) must already exist in the rope via a prior [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.SetBulkText%28System.ReadOnlyMemory%7BSystem.Char%7D%29) call. No rope insert is performed; only the snapshot node tree is updated. |
 | [AddRun](#uid-6b489b6651) | No summary available. |
 | [AddText (2 overloads)](#uid-58cfe76beb) | No summary available. |
@@ -125,7 +126,7 @@ public class DocumentSnapshotBuilder
 | [SetTableInteriorBorders](#uid-99e9da545f) | No summary available. |
 | [SetTableRowHeight](#uid-a3b6449855) | Sets the current table row's minimum height in device-independent pixels (Word's `w:trHeight`). |
 | [SetTableRowTextElementFormatting](#uid-66e6768a42) | Sets base-level element formatting for the current table row. |
-| [StartContainer](#uid-9248d08dbd) | Starts a generic block container with an arbitrary [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind). Containers nest: calling [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) while another is active pushes the outer container onto a stack. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer) pops it. A container opened while a list item or a table cell is open nests inside it - the blocks added to the container are the container's, and the finished container is added back to the item or cell that enclosed it. |
+| [StartContainer](#uid-9248d08dbd) | Starts a generic block container with an arbitrary [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind). Containers nest: calling [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting,Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.StartContainer%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CAvalonia.Controls.Documents.TextModel.Formatting.BlockFormatting%2CAvalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting%29) while another is active pushes the outer container onto a stack. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer) pops it. A container opened while a list item or a table cell is open nests inside it - the blocks added to the container are the container's, and the finished container is added back to the item or cell that enclosed it. A table started inside the container and still open when it ends is ended with it. |
 | [StartList](#uid-9ce411976f) | Starts a new list with the specified marker style. When called inside an active list item, automatically nests the new list inside the current item instead of finalizing it. |
 | [StartNestedList](#uid-637a5fbdac) | Starts a nested list inside the current list item. |
 | [StartSection (2 overloads)](#uid-77ca3ab3da) | Starts a new section container. Blocks added after this call are placed inside the section until [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndSection) is called. |
@@ -673,6 +674,36 @@ public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilde
 
 
 ##### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6aa4bed8a"></span>
+
+### AddParagraphBookmark Method
+
+Names the current paragraph with the bookmark `name`, which a
+link reaches through the fragment `#name`; with no paragraph open (right
+after a list item or table cell starts), the next paragraph opened takes it. A
+paragraph can carry several names. A name already given in this snapshot is
+ignored, since a name addresses one block.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder AddParagraphBookmark(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The bookmark name; compared ordinally.
+
+
+#### Returns
 
 [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder)
 
@@ -2029,7 +2060,8 @@ Containers nest: calling [Avalonia.Controls.Documents.Serialization.Snapshot.Doc
 pushes the outer container onto a stack. [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder.EndContainer) pops it.
 A container opened while a list item or a table cell is open nests inside it -
 the blocks added to the container are the container's, and the finished
-container is added back to the item or cell that enclosed it.
+container is added back to the item or cell that enclosed it. A table started
+inside the container and still open when it ends is ended with it.
 
 ```csharp
 public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder StartContainer(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting formatting, Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting textElementFormatting)

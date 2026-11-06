@@ -93,6 +93,7 @@ The end position.
 
 | Name | Description |
 | --- | --- |
+| [AddBookmark](#uid-c8be8f85d9) | Names the text block that contains [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) with the bookmark `name`, which a link reaches through the fragment `#name`. Records undo. |
 | [ApplyPropertyValue](#uid-303888c951) | No summary available. |
 | [ClearAllProperties](#uid-1d087e30fc) | Clears all inline formatting properties from the range. Content is preserved; only formatting is removed. Produces a single [Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit](xref:Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit) for atomic undo/redo. |
 | [ClearPropertyValue](#uid-ecf1a6ea8a) | No summary available. |
@@ -111,13 +112,49 @@ The end position.
 | [InsertTextAt](#uid-6571a17b59) | Inserts text at the specified offset relative to the range start. Manages transaction automatically. |
 | [Load](#uid-1caf2c195a) | Replaces this range with the content of a stream. |
 | [Overlaps](#uid-97e89eec06) | Checks if this range overlaps with another range. |
+| [RemoveBookmark](#uid-63592ad1c2) | Removes the bookmark `name` from the text block that contains [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start). Records undo. |
 | [ReplaceText (2 overloads)](#uid-860443a3a7) | No summary available. |
-| [ReplaceTextAt](#uid-a1020d16a5) | Replaces text at the specified range relative to this range. Manages transaction automatically. |
+| [ReplaceTextAt](#uid-a1020d16a5) | Replaces text at the specified range relative to this range, with the same semantics as [Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText%28System.ReadOnlyMemory%7BSystem.Char%7D%29). Manages transaction automatically. |
 | [Save](#uid-0ebfb1caa1) | Writes this range to a stream. |
 | [SetImageAltText](#uid-2113b9397b) | Sets the alternative text of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. |
 | [SetImageSize](#uid-15eda4245a) | Sets the display size of an existing [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) in a single undoable change. Pass [double.NaN](xref:System.Double.NaN) for a dimension to use the image's intrinsic pixel size. |
 | [ToString](#uid-2b81309a1f) | No summary available. |
 | [TryGetPropertyValue](#uid-8a1f50a579) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c8be8f85d9"></span>
+
+### AddBookmark Method
+
+Names the text block that contains [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) with the bookmark
+`name`, which a link reaches through the fragment `#name`.
+Records undo.
+
+```csharp
+public bool AddBookmark(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The bookmark name; compared ordinally.
+
+
+#### Returns
+
+bool
+
+`false`, changing nothing, when a block of the document already carries
+`name` or [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) is not inside a text block.
+
+
+#### Exceptions
+
+- [The range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -631,7 +668,7 @@ that [Avalonia.Controls.Documents.TextModel.TextRange.CreateSnapshot](xref:Avalo
 Insertion goes through [Avalonia.Controls.Documents.TextModel.TextDocument.InsertSnapshotStructural(Avalonia.Controls.Documents.TextModel.TextPointer,Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.InsertSnapshotStructural%28Avalonia.Controls.Documents.TextModel.TextPointer%2CAvalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%29),
 which splices the snapshot's rope zero-copy and grafts its block
 structure into the live tree under a structural change scope. Together
-with the preceding [Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText(int,int)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText%28System.Int32%2CSystem.Int32%29) for the
+with the preceding [Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText(Avalonia.Controls.Documents.TextModel.TextPointer,Avalonia.Controls.Documents.TextModel.TextPointer)](xref:Avalonia.Controls.Documents.TextModel.TextDocument.DeleteText%28Avalonia.Controls.Documents.TextModel.TextPointer%2CAvalonia.Controls.Documents.TextModel.TextPointer%29) for the
 existing range content, everything nests in the outer
 [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope and collapses into one
 undo entry.
@@ -736,6 +773,39 @@ True if the ranges overlap.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-63592ad1c2"></span>
+
+### RemoveBookmark Method
+
+Removes the bookmark `name` from the text block that contains
+[Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start). Records undo.
+
+```csharp
+public bool RemoveBookmark(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The bookmark name; compared ordinally.
+
+
+#### Returns
+
+bool
+
+`false` when that block does not carry `name`.
+
+
+#### Exceptions
+
+- [The range is not attached to a document.](xref:System.InvalidOperationException)
+
+</section>
+
 <span id="uid-860443a3a7"></span>
 
 ### ReplaceText overloads
@@ -768,8 +838,8 @@ public Avalonia.Controls.Documents.TextModel.TextPointer ReplaceText(ReadOnlyMem
 
 #### ReplaceText Method
 
-Replaces the content of this range with new text.
-Manages transaction automatically.
+Replaces the content of this range with new text, exactly as typing over the
+range as a selection does. Manages transaction automatically.
 
 ```csharp
 public Avalonia.Controls.Documents.TextModel.TextPointer ReplaceText(string newText)
@@ -786,8 +856,15 @@ The replacement text.
 
 [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
 
-A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) after the replaced text.
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the start of the new text.
 
+
+##### Remarks
+
+Elements the range fully covers are removed, including whole paragraphs,
+tables and footnote anchors (an anchor's note goes with it). Blocks the range
+only partly covers keep their uncovered text, and the two boundary blocks join
+into one. The new text goes where the range started, and the range then covers it.
 
 </section>
 
@@ -797,7 +874,8 @@ A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) after th
 
 ### ReplaceTextAt Method
 
-Replaces text at the specified range relative to this range.
+Replaces text at the specified range relative to this range, with the same
+semantics as [Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText%28System.ReadOnlyMemory%7BSystem.Char%7D%29).
 Manages transaction automatically.
 
 ```csharp
@@ -825,7 +903,7 @@ The replacement text.
 
 [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
 
-A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) after the replaced text.
+A [TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer) at the start of the new text.
 
 
 </section>

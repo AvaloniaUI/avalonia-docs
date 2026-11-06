@@ -47,11 +47,11 @@ without exhaustive kind enumeration.
 with logical direction (gravity). Use this instead of [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
 on hot paths where only offset and direction are needed (rendering,
 hit-testing, line queries).
-- [TextChangeEventArgs](textchangeeventargs.mdx) - Raised after a single text change is applied (via
-[Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) event). Multiple text changes may
-fire within one [Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope; consumers
-that want a per-commit view should subscribe to
-[Avalonia.Controls.Documents.TextModel.TextDocument.Changed](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Changed) instead.
+- [TextChangeEventArgs](textchangeeventargs.mdx) - The net text change of one operation, raised by
+[Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) when the operation's outermost
+[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope closes: the text at
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset) that was [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength) characters long is now
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength) characters long.
 - [TextDocument](textdocument.mdx) - Block-level operations for [TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) (split, merge, etc.).
 - [TextDocument.c.a](textdocument-c-a.mdx)
 - [TextDocument.d.a](textdocument-d-a.mdx)

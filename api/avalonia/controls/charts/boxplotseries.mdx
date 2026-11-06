@@ -226,7 +226,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [DesiredSize](../../layout/layoutable.mdx#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [Dispatcher](../../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [Effect](../../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. Inherited from [Visual](../../visual.mdx). |
-| [EmptyPointMode](cartesianseries.mdx#uid-be95f2d1ba) | Gets or sets how empty (null/NaN) data points are rendered. Inherited from [CartesianSeries](cartesianseries.mdx). |
+| [EmptyPointMode](cartesianseries.mdx#uid-be95f2d1ba) | Gets or sets how empty (null/NaN) data points are rendered. Range, box plot, error bar and financial series always leave out a point with a missing value, and histogram, moving average and trendline series compute from the valid values only. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [Fill](chartseries.mdx#uid-d890c5c158) | Gets or sets the default series brush. For fill-capable series, this is the fill brush. For line-based series, this acts as the fallback primary series color when [Avalonia.Controls.Charts.ChartSeries.Stroke](xref:Avalonia.Controls.Charts.ChartSeries.Stroke) is not set. Inherited from [ChartSeries](chartseries.mdx). |
 | [FlowDirection](../../visual.mdx#uid-c7929bde53) | Gets or sets the text flow direction. Inherited from [Visual](../../visual.mdx). |
 | [Focusable](../../input/inputelement.mdx#uid-20168c45b2) | Gets or sets a value indicating whether the control can receive focus. Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -270,7 +270,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [LabelPadding](cartesianseries.mdx#uid-360b907b65) | Gets or sets the padding of the label. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [LetterSpacing](../primitives/templatedcontrol.mdx#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [Margin](../../layout/layoutable.mdx#uid-3785e24bed) | Gets or sets the margin around the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
-| [MarkerFill](cartesianseries.mdx#uid-efe15f5a47) | Gets or sets the fill brush for the markers. Inherited from [CartesianSeries](cartesianseries.mdx). |
+| [MarkerFill](cartesianseries.mdx#uid-efe15f5a47) | Gets or sets the fill brush for the markers. A brush from [Avalonia.Controls.Charts.ChartSeries.PointBrushPath](xref:Avalonia.Controls.Charts.ChartSeries.PointBrushPath) takes precedence. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [MarkerShape](cartesianseries.mdx#uid-8d8bfcbdf5) | Gets or sets the shape of the markers. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [MarkerSize](cartesianseries.mdx#uid-1112d5bd2e) | Gets or sets the size of the markers. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [MarkerStroke](cartesianseries.mdx#uid-ccf56ed706) | Gets or sets the stroke brush for the markers. Inherited from [CartesianSeries](cartesianseries.mdx). |
@@ -307,7 +307,7 @@ public void RenderSeries(Avalonia.Controls.Charts.SeriesRenderContext& context)
 | [Stroke](chartseries.mdx#uid-dbb40e7623) | Gets or sets the explicit stroke or outline brush for the series. Line-based series should prefer this property for the rendered line color. Inherited from [ChartSeries](chartseries.mdx). |
 | [StrokeDashStyle](cartesianseries.mdx#uid-7b70e59589) | Gets or sets the dash style for the stroke. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [StrokeLineCap](cartesianseries.mdx#uid-75eec6415e) | Gets or sets the shape at the end of a line. Inherited from [CartesianSeries](cartesianseries.mdx). |
-| [StrokeLineJoin](cartesianseries.mdx#uid-6889ac3398) | Gets or sets the shape at the corners of a line. Inherited from [CartesianSeries](cartesianseries.mdx). |
+| [StrokeLineJoin](cartesianseries.mdx#uid-6889ac3398) | Gets or sets the shape at the corners of a line. Scatter line, area and area range outlines are drawn segment by segment and have no corners to join. Inherited from [CartesianSeries](cartesianseries.mdx). |
 | [StrokeThickness](chartseries.mdx#uid-ff7bc510f1) | Gets or sets the stroke thickness for the series. Inherited from [ChartSeries](chartseries.mdx). |
 | [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Styles](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../styledelement.mdx). |

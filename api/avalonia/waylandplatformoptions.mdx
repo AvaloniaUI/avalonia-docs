@@ -80,6 +80,7 @@ public WaylandPlatformOptions()
 
 | Name | Description |
 | --- | --- |
+| [AppId](#uid-2bf180617a) | The default AppId for Wayland windows (xdg_toplevel.set_app_id). If null, defaults to the entry assembly name. |
 | [DisplayFd](#uid-e5cd25d967) | An already-opened file descriptor for the Wayland display socket. When set, [Avalonia.WaylandPlatformOptions.WlDisplayName](xref:Avalonia.WaylandPlatformOptions.WlDisplayName) is ignored and `wl_display_connect_to_fd` is used instead of `wl_display_connect`. Reconnects are automatically disabled in this mode because the fd is consumed by `libwayland` and cannot be reused. |
 | [EnableReconnects](#uid-4c35df15ca) | Whether to automatically attempt to reconnect to the compositor if the connection is lost. Defaults to enabled. Reconnects are always disabled when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set, because the file descriptor is consumed by `libwayland` and cannot be reused. |
 | [ExternalGLibMainLoopExceptionLogger](#uid-36c6041010) | If Avalonia is in control of a run loop, we propagate exceptions by stopping the run loop frame and rethrowing an exception. However, if there is no Avalonia-controlled run loop frame, there is no way to report such exceptions, since allowing those to escape native-&gt;managed call boundary will likely brick GLib machinery since it's not aware of managed Exceptions. This property allows to inspect such exceptions before they will be ignored. Only used when [Avalonia.WaylandPlatformOptions.UseGLibMainLoop](xref:Avalonia.WaylandPlatformOptions.UseGLibMainLoop) is enabled. |
@@ -88,6 +89,21 @@ public WaylandPlatformOptions()
 | [UseDmabufSwapchain](#uid-c70e8ca05e) | Whether to use a dmabuf-based swapchain for GPU rendering. When `null`, the backend decides based on compositor and driver capabilities. |
 | [UseGLibMainLoop](#uid-447ba32923) | If this option is set to true, a GMainLoop and GSource based dispatcher implementation will be used for the UI thread instead of the default managed one. Use this if you need to use GLib-based libraries on the main thread. |
 | [WlDisplayName](#uid-cb99a773b5) | The name of the Wayland display to connect to (e.g. `wayland-0`). When `null`, the `WAYLAND_DISPLAY` environment variable is used. Ignored when [Avalonia.WaylandPlatformOptions.DisplayFd](xref:Avalonia.WaylandPlatformOptions.DisplayFd) is set. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bf180617a"></span>
+
+### AppId Property
+
+The default AppId for Wayland windows (xdg_toplevel.set_app_id).
+If null, defaults to the entry assembly name.
+
+```csharp
+public string AppId { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 

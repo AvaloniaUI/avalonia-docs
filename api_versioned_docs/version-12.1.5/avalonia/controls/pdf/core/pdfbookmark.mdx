@@ -1,0 +1,168 @@
+---
+title: 'PdfBookmark'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfbookmark'
+uid: 'Avalonia.Controls.Pdf.Core.PdfBookmark'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfBookmark'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfBookmark Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Bookmark (outline item) in a PDF document.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfBookmark
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfBookmark
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfBookmark](#uid-8691062c40) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8691062c40"></span>
+
+### PdfBookmark Constructor
+
+```csharp
+public PdfBookmark(string title, Nullable<int> pageIndex, System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfBookmark> children)
+```
+
+#### Parameters
+
+`title` string
+
+
+`pageIndex` Nullable&lt;int&gt;
+
+
+`children` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Pdf.Core.PdfBookmark](xref:Avalonia.Controls.Pdf.Core.PdfBookmark)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Children](#uid-f7b5d55bff) | Child bookmarks. |
+| [Destination](#uid-0ce88d4306) | The bookmark's full destination when it has one: the page plus the position and zoom of an /XYZ, /FitH, /FitV or /FitR view. Null for bookmarks without a page target. |
+| [IsExpanded](#uid-875d60edc3) | Whether this bookmark is expanded by default. |
+| [PageIndex](#uid-b15ab82f6b) | Target page index (0-based), or null if external/unsupported. |
+| [Title](#uid-cb0a62e3d9) | Bookmark title. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7b5d55bff"></span>
+
+### Children Property
+
+Child bookmarks.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfBookmark> Children { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ce88d4306"></span>
+
+### Destination Property
+
+The bookmark's full destination when it has one: the page plus the position and zoom of
+an /XYZ, /FitH, /FitV or /FitR view. Null for bookmarks without a page target.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfLinkDestination.PageDestination Destination { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-875d60edc3"></span>
+
+### IsExpanded Property
+
+Whether this bookmark is expanded by default.
+
+```csharp
+public bool IsExpanded { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b15ab82f6b"></span>
+
+### PageIndex Property
+
+Target page index (0-based), or null if external/unsupported.
+
+```csharp
+public Nullable<int> PageIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb0a62e3d9"></span>
+
+### Title Property
+
+Bookmark title.
+
+```csharp
+public string Title { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

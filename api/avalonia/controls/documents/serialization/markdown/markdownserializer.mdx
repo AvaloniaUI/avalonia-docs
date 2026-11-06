@@ -83,7 +83,7 @@ so a token cancelled during it takes effect at the next block.
 
 | Name | Description |
 | --- | --- |
-| [MarkdownSerializer (2 overloads)](#uid-84b2474dd9) | Initializes a new instance with the default options and no highlighter. |
+| [MarkdownSerializer (3 overloads)](#uid-84b2474dd9) | Initializes a new instance with the default options and no highlighter. |
 
 <span id="uid-84b2474dd9"></span>
 
@@ -125,6 +125,29 @@ Formatting choices for markdown output; defaults are used when .
 `codeHighlighter` [Avalonia.Controls.CodeHighlighter](xref:Avalonia.Controls.CodeHighlighter)
 
 Optional code highlighter applied to fenced blocks on read.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d1062ef9e"></span>
+
+#### MarkdownSerializer Constructor
+
+```csharp
+public MarkdownSerializer(Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions options, Avalonia.Controls.CodeHighlighter codeHighlighter, System.Collections.Generic.IEnumerable<Markdig.IMarkdownExtension> extensions)
+```
+
+##### Parameters
+
+`options` [Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions)
+
+
+`codeHighlighter` [Avalonia.Controls.CodeHighlighter](xref:Avalonia.Controls.CodeHighlighter)
+
+
+`extensions` System.Collections.Generic.IEnumerable&lt;Markdig.IMarkdownExtension&gt;
 
 
 </section>
@@ -413,6 +436,7 @@ the document, so the work needs no UI thread either way.
 | [CanRead](#uid-177e363974) | Whether this serializer supports reading. Read-only UIs can filter serializer lists on this instead of catching [NotSupportedException](xref:System.NotSupportedException) from [Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize(System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.IDocumentSerializer.Deserialize%28System.IO.Stream%2CSystem.Threading.CancellationToken%29). |
 | [CanWrite](#uid-e28b404cc7) | Whether this serializer supports writing documents. |
 | [CodeHighlighter](#uid-4a5ab7847d) | Gets or sets the optional code highlighter used during deserialization. |
+| [Extensions](#uid-b88b0b629e) | Gets the Markdig extensions this serializer parses with on top of the supported ones. |
 | [FileExtension](#uid-99e7be3ae3) | Gets the file extension including the dot (e.g., ".rtf"). |
 | [FormatName](#uid-3f0374df4b) | Gets the format name this serializer handles (e.g., "Rtf", "Docx", "PlainText"). |
 | [MimeType](#uid-e14e6818ef) | Gets the MIME type for the format (e.g., "application/rtf"). |
@@ -474,6 +498,20 @@ public Avalonia.Controls.CodeHighlighter CodeHighlighter { get; set; }
 
 Pass the highlighter to the constructor. A serializer handed to a background read
 and reconfigured through this setter changes the highlighter mid-read.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b88b0b629e"></span>
+
+### Extensions Property
+
+Gets the Markdig extensions this serializer parses with on top of the supported ones.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Markdig.IMarkdownExtension> Extensions { get; set; }
+```
 
 </section>
 

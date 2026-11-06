@@ -226,8 +226,8 @@ The drawing context.
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
 | [ShowLegend](chartbase.mdx#uid-7af7d16f16) | Gets or sets whether to show the legend. The meaning of each legend entry depends on the chart type. Some legends describe hideable series, while others are explanatory scales. Inherited from [ChartBase](chartbase.mdx). |
-| [ShowMarkers](#uid-2254101d12) | Gets or sets whether to show markers at each data point. |
-| [ShowMinMax](#uid-9e09daad96) | Gets or sets whether to highlight minimum and maximum values. |
+| [ShowMarkers](#uid-2254101d12) | Gets or sets whether to show markers at each data point. Applies to line and area sparklines. |
+| [ShowMinMax](#uid-9e09daad96) | Gets or sets whether to highlight minimum and maximum values. Line sparklines do by default; an area sparkline does once this is set on it. |
 | [ShowRenderDiagnosticsOverlay](chartbase.mdx#uid-b10b5000c1) | Gets or sets whether to show the render diagnostics overlay for this chart. This has no effect unless [Avalonia.Controls.Charts.ChartBase.IsRenderDiagnosticsEnabled](xref:Avalonia.Controls.Charts.ChartBase.IsRenderDiagnosticsEnabled) is also true. Inherited from [ChartBase](chartbase.mdx). |
 | [SparklineType](#uid-6e84b0ea01) | Gets or sets the type of sparkline visualization (Line, Bar, Area, WinLoss). |
 | [StrokeThickness](#uid-573ff29965) | Gets or sets the line stroke thickness. |
@@ -325,7 +325,7 @@ public Avalonia.Media.IBrush LossBrush { get; set; }
 
 ### ShowMarkers Property
 
-Gets or sets whether to show markers at each data point.
+Gets or sets whether to show markers at each data point. Applies to line and area sparklines.
 
 ```csharp
 public bool ShowMarkers { get; set; }
@@ -339,7 +339,7 @@ public bool ShowMarkers { get; set; }
 
 ### ShowMinMax Property
 
-Gets or sets whether to highlight minimum and maximum values.
+Gets or sets whether to highlight minimum and maximum values. Line sparklines do by default; an area sparkline does once this is set on it.
 
 ```csharp
 public bool ShowMinMax { get; set; }
