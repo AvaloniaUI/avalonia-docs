@@ -217,7 +217,7 @@ public void ReplayAnimation()
 | [KeyBindings](../../input/inputelement.mdx#uid-827a5420b2) | Inherited from [InputElement](../../input/inputelement.mdx). |
 | [LabelForeground](chartbase.mdx#uid-7ba97907ce) | Gets or sets the brush used for axis and chart-level labels. Series or annotations with their own label brush properties can override this locally. Inherited from [ChartBase](chartbase.mdx). |
 | [LabelPath](#uid-46f676405f) | Gets or sets the property path for item labels. |
-| [LeafSpacing](#uid-c2a4c4d9f9) | Gets or sets the spacing between leaf nodes. |
+| [LeafSpacing](#uid-c2a4c4d9f9) | Gets or sets the minimum spacing between leaf nodes. Leaves spread out to fill the available space. |
 | [LegendAlignment](chartbase.mdx#uid-8d2828bd19) | Gets or sets the legend alignment. Inherited from [ChartBase](chartbase.mdx). |
 | [LegendOffset](chartbase.mdx#uid-d6aeba2ed7) | Gets or sets the offset for the floating legend. Inherited from [ChartBase](chartbase.mdx). |
 | [LegendPosition](chartbase.mdx#uid-07b56208ce) | Gets or sets the position of the chart legend. Set this to [Avalonia.Controls.Charts.LegendPosition.None](xref:Avalonia.Controls.Charts.LegendPosition.None) to hide the legend entirely. Inherited from [ChartBase](chartbase.mdx). |
@@ -318,7 +318,7 @@ public string LabelPath { get; set; }
 
 ### LeafSpacing Property
 
-Gets or sets the spacing between leaf nodes.
+Gets or sets the minimum spacing between leaf nodes. Leaves spread out to fill the available space.
 
 ```csharp
 public double LeafSpacing { get; set; }

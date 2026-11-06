@@ -90,6 +90,7 @@ The text document containing the selection.
 
 | Name | Description |
 | --- | --- |
+| [AddBookmark](documents/textmodel/textrange.mdx#uid-c8be8f85d9) | Names the text block that contains [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start) with the bookmark `name`, which a link reaches through the fragment `#name`. Records undo. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [ApplyPropertyValue](#uid-17ce04d15c) | No summary available. |
 | [ClearAllProperties](documents/textmodel/textrange.mdx#uid-1d087e30fc) | Clears all inline formatting properties from the range. Content is preserved; only formatting is removed. Produces a single [Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit](xref:Avalonia.Controls.Documents.Undo.BlockSnapshotUndoUnit) for atomic undo/redo. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [ClearPropertyValue](documents/textmodel/textrange.mdx#uid-ecf1a6ea8a) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
@@ -115,8 +116,9 @@ The text document containing the selection.
 | [Load](documents/textmodel/textrange.mdx#uid-1caf2c195a) | Replaces this range with the content of a stream. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [MoveTo](#uid-0c8ed74160) | Moves the caret to the specified position. |
 | [Overlaps](documents/textmodel/textrange.mdx#uid-97e89eec06) | Checks if this range overlaps with another range. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [RemoveBookmark](documents/textmodel/textrange.mdx#uid-63592ad1c2) | Removes the bookmark `name` from the text block that contains [Avalonia.Controls.Documents.TextModel.TextRange.Start](xref:Avalonia.Controls.Documents.TextModel.TextRange.Start). Records undo. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [ReplaceText (2 overloads)](documents/textmodel/textrange.mdx#uid-860443a3a7) | Inherited from [TextRange](documents/textmodel/textrange.mdx). |
-| [ReplaceTextAt](documents/textmodel/textrange.mdx#uid-a1020d16a5) | Replaces text at the specified range relative to this range. Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
+| [ReplaceTextAt](documents/textmodel/textrange.mdx#uid-a1020d16a5) | Replaces text at the specified range relative to this range, with the same semantics as [Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText(ReadOnlyMemory&#123;char&#125;)](xref:Avalonia.Controls.Documents.TextModel.TextRange.ReplaceText%28System.ReadOnlyMemory%7BSystem.Char%7D%29). Manages transaction automatically. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [Save](documents/textmodel/textrange.mdx#uid-0ebfb1caa1) | Writes this range to a stream. Inherited from [TextRange](documents/textmodel/textrange.mdx). |
 | [Select](#uid-6e90cbfdbc) | Selects a range of text between two positions. |
 | [SelectAll](#uid-c1f7513a3b) | Selects all content in the document, from [Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentStart) to [Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd](xref:Avalonia.Controls.Documents.TextModel.TextDocument.ContentEnd). `ContentEnd` anchors to the document's final block, so a trailing empty paragraph is part of the selection (and survives copy). |

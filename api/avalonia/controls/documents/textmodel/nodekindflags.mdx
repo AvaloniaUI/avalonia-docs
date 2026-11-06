@@ -66,6 +66,7 @@ public enum NodeKindFlags
 | [InlineContainer](#uid-53fa31813f) | Inline container that holds [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline) children directly (Paragraph, Span, Bold, Italic, Underline, Superscript, Subscript, Hyperlink). |
 | [Leaf](#uid-fd817c4e7c) | Leaf node that never has children (Run, LineBreak). |
 | [None](#uid-669d860e07) | No flags set. |
+| [Preformatted](#uid-e42e9abc6f) | Block whose text keeps literal line breaks, such as a code listing. Combine with [Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block) and [Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer). Enter inside such a block inserts a line break into it instead of splitting it in two. |
 | [RemoveWhenChildless](#uid-b6c9a79e00) | Container that should be automatically removed when all its children have been deleted (List, [ListItem](xref:Avalonia.Controls.Documents.ListItem), Table, [TableRow](xref:Avalonia.Controls.Documents.TableRow), [TableRowGroup](xref:Avalonia.Controls.Documents.TableRowGroup), Section). |
 | [Root](#uid-afad4177c8) | The kind of a document root: the top of a tree, which no block navigation crosses. [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document) and [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.PageBand](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.PageBand) carry it; a further document variant adds another root kind with it. |
 | [TableStructure](#uid-2aa14211ac) | Table-structural node whose children form isolated editing regions (Table, [TableRowGroup](xref:Avalonia.Controls.Documents.TableRowGroup), [TableRow](xref:Avalonia.Controls.Documents.TableRow)). |
@@ -152,6 +153,22 @@ No flags set.
 
 ```csharp
 public Avalonia.Controls.Documents.TextModel.NodeKindFlags None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e42e9abc6f"></span>
+
+### Preformatted Field
+
+Block whose text keeps literal line breaks, such as a code listing. Combine
+with [Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.Block) and [Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.InlineContainer). Enter inside such
+a block inserts a line break into it instead of splitting it in two.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.NodeKindFlags Preformatted
 ```
 
 </section>

@@ -1,0 +1,146 @@
+---
+title: 'IPrintService'
+hide_title: true
+slug: '/avalonia/controls/pdf/services/iprintservice'
+uid: 'Avalonia.Controls.Pdf.Services.IPrintService'
+commentId: 'T:Avalonia.Controls.Pdf.Services.IPrintService'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Services'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPrintService Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Services</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-abstracted interface for printing PDF documents.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPrintService
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PrintAsync](#uid-2894ba8e3b) | Prints the document using the system print dialog. |
+| [ShowPrintPreviewAsync](#uid-0a92b9be62) | Shows a print preview. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2894ba8e3b"></span>
+
+### PrintAsync Method
+
+Prints the document using the system print dialog.
+
+```csharp
+public System.Threading.Tasks.Task PrintAsync(Avalonia.Controls.Pdf.Core.IPdfDocument document, Avalonia.Controls.Pdf.Services.PrintOptions options, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)
+
+The document to print.
+
+
+`options` [Avalonia.Controls.Pdf.Services.PrintOptions](xref:Avalonia.Controls.Pdf.Services.PrintOptions)
+
+Print options.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a92b9be62"></span>
+
+### ShowPrintPreviewAsync Method
+
+Shows a print preview.
+
+```csharp
+public System.Threading.Tasks.Task ShowPrintPreviewAsync(Avalonia.Controls.Pdf.Core.IPdfDocument document, Avalonia.Controls.Pdf.Services.PrintOptions options)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)
+
+The document to preview.
+
+
+`options` [Avalonia.Controls.Pdf.Services.PrintOptions](xref:Avalonia.Controls.Pdf.Services.PrintOptions)
+
+Print options.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSupported](#uid-621552f1bd) | Gets whether printing is supported on the current platform. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-621552f1bd"></span>
+
+### IsSupported Property
+
+Gets whether printing is supported on the current platform.
+
+```csharp
+public bool IsSupported { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -152,7 +152,7 @@ public CategoryAxis()
 | [FontStyle](../primitives/templatedcontrol.mdx#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [FontWeight](../primitives/templatedcontrol.mdx#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [Foreground](../primitives/templatedcontrol.mdx#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
-| [GapLength](#uid-c36784b27b) | Gets or sets the gap between categories as a fraction (0.0 to 1.0). |
+| [GapLength](#uid-c36784b27b) | Gets or sets the gap between the bars of neighboring categories as a fraction of a category slot (0.0 to 1.0). It applies once set, to bar series that do not set their own BarWidth. |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
 | [GridLineBrush](chartaxis.mdx#uid-1da37cf49e) | Gets or sets the brush for this axis's grid lines. When set, overrides the owning chart's [Avalonia.Controls.Charts.IGridLineBrushChart.GridLineBrush](xref:Avalonia.Controls.Charts.IGridLineBrushChart.GridLineBrush) for this axis. Inherited from [ChartAxis](chartaxis.mdx). |
 | [GridLineCap](chartaxis.mdx#uid-8c165bd052) | Gets or sets the line cap style for major grid lines. Inherited from [ChartAxis](chartaxis.mdx). |
@@ -177,7 +177,7 @@ public CategoryAxis()
 | [IsVisible](../../visual.mdx#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. Inherited from [Visual](../../visual.mdx). |
 | [Item](../../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [KeyBindings](../../input/inputelement.mdx#uid-827a5420b2) | Inherited from [InputElement](../../input/inputelement.mdx). |
-| [LabelFitMode](chartaxis.mdx#uid-19c1060517) | Gets or sets how axis labels should fit. Inherited from [ChartAxis](chartaxis.mdx). |
+| [LabelFitMode](chartaxis.mdx#uid-19c1060517) | Gets or sets how axis labels should fit. Vertical axes honor the rotation modes and Hide; Wrap, MultipleRows and Auto only apply to the horizontal axis of a [CartesianChart](xref:Avalonia.Controls.Charts.CartesianChart). Inherited from [ChartAxis](chartaxis.mdx). |
 | [LabelFontSize](chartaxis.mdx#uid-83d90d59c2) | Gets or sets the font size for axis labels. Inherited from [ChartAxis](chartaxis.mdx). |
 | [LabelForeground](chartaxis.mdx#uid-49db27ae71) | Gets or sets the foreground brush for axis labels. Inherited from [ChartAxis](chartaxis.mdx). |
 | [LabelFormat](chartaxis.mdx#uid-5df4afcf42) | Gets or sets the format string for axis labels. Inherited from [ChartAxis](chartaxis.mdx). |
@@ -200,7 +200,7 @@ public CategoryAxis()
 | [Padding](../primitives/templatedcontrol.mdx#uid-f5271cd58d) | Gets or sets the padding placed between the border of the control and its content. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
 | [Parent](../../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../../styledelement.mdx). |
 | [PlotBands](chartaxis.mdx#uid-3990cb7027) | Gets the collection of plot bands for this axis. Inherited from [ChartAxis](chartaxis.mdx). |
-| [PlotMode](#uid-51374f3b27) | Gets or sets how data points are plotted relative to category slots. |
+| [PlotMode](#uid-51374f3b27) | Gets or sets where categories sit along the axis. BetweenTicks (the default) gives each category its own slot; OnTicks puts the first and last categories on the edges of the plot, which suits line and area series. |
 | [Position](chartaxis.mdx#uid-43e3c91cfd) | Gets or sets where this vertical axis is arranged around the plot area. Inherited from [ChartAxis](chartaxis.mdx). |
 | [RenderTransform](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
@@ -208,7 +208,7 @@ public CategoryAxis()
 | [ShowAxisLine](chartaxis.mdx#uid-3a35faf6c4) | Gets or sets whether to show the axis line. Inherited from [ChartAxis](chartaxis.mdx). |
 | [ShowGridLines](chartaxis.mdx#uid-88202321db) | Gets or sets whether grid lines are shown. Inherited from [ChartAxis](chartaxis.mdx). |
 | [ShowLabels](chartaxis.mdx#uid-cd362d7df9) | Gets or sets whether to show axis labels. Inherited from [ChartAxis](chartaxis.mdx). |
-| [ShowMinorGridLines](chartaxis.mdx#uid-6cd40c5be2) | Gets or sets whether minor grid lines are shown. Inherited from [ChartAxis](chartaxis.mdx). |
+| [ShowMinorGridLines](chartaxis.mdx#uid-6cd40c5be2) | Gets or sets whether minor grid lines are shown. Category axes have none. Inherited from [ChartAxis](chartaxis.mdx). |
 | [ShowTickLines](chartaxis.mdx#uid-e9c3f4b4a9) | Gets or sets whether to show tick marks at each label position. Inherited from [ChartAxis](chartaxis.mdx). |
 | [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Styles](../../styledelement.mdx#uid-ae663139cc) | Gets the styles for the styled element. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -235,7 +235,7 @@ public CategoryAxis()
 
 ### GapLength Property
 
-Gets or sets the gap between categories as a fraction (0.0 to 1.0).
+Gets or sets the gap between the bars of neighboring categories as a fraction of a category slot (0.0 to 1.0). It applies once set, to bar series that do not set their own BarWidth.
 
 ```csharp
 public double GapLength { get; set; }
@@ -249,7 +249,7 @@ public double GapLength { get; set; }
 
 ### PlotMode Property
 
-Gets or sets how data points are plotted relative to category slots.
+Gets or sets where categories sit along the axis. BetweenTicks (the default) gives each category its own slot; OnTicks puts the first and last categories on the edges of the plot, which suits line and area series.
 
 ```csharp
 public Avalonia.Controls.Charts.CategoryPlotMode PlotMode { get; set; }

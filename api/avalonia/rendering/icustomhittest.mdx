@@ -40,7 +40,7 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 
 <div className="apiref-page__lead">
 
-Allows customization of hit-testing
+Allows hit-testing to use a custom area instead of the area of the rendered content.
 
 </div>
 
@@ -56,13 +56,15 @@ public interface ICustomHitTest
 
 | Name | Description |
 | --- | --- |
-| [HitTest](#uid-93cda2039d) | No summary available. |
+| [HitTest](#uid-93cda2039d) | Determines whether a point is within the hit-test area. |
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-93cda2039d"></span>
 
 ### HitTest Method
+
+Determines whether a point is within the hit-test area.
 
 ```csharp
 public bool HitTest(Avalonia.Point point)
@@ -72,7 +74,8 @@ public bool HitTest(Avalonia.Point point)
 
 `point` [Avalonia.Point](xref:Avalonia.Point)
 
-The point to hit test in global coordinate space.
+The point to hit test in local coordinate space, i.e., (0, 0)
+is the top-left corner of the visual element, not the top-left corner of the window.
 
 
 #### Returns

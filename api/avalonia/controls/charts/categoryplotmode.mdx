@@ -58,8 +58,8 @@ public enum CategoryPlotMode
 
 | Name | Description |
 | --- | --- |
-| [BetweenTicks](#uid-d6657c8416) | Points are placed between tick marks. |
-| [OnTicks](#uid-c4546c99c8) | Points are placed on tick marks. |
+| [BetweenTicks](#uid-d6657c8416) | Each category gets a slot of its own, with its points in the middle and grid lines between slots. |
+| [OnTicks](#uid-c4546c99c8) | Categories are spread from edge to edge of the plot, with grid lines through them. Bars at the first and last category are cut in half. |
 
 <section className="apiref-page__member-entry">
 
@@ -67,7 +67,7 @@ public enum CategoryPlotMode
 
 ### BetweenTicks Field
 
-Points are placed between tick marks.
+Each category gets a slot of its own, with its points in the middle and grid lines between slots.
 
 ```csharp
 public Avalonia.Controls.Charts.CategoryPlotMode BetweenTicks
@@ -81,7 +81,7 @@ public Avalonia.Controls.Charts.CategoryPlotMode BetweenTicks
 
 ### OnTicks Field
 
-Points are placed on tick marks.
+Categories are spread from edge to edge of the plot, with grid lines through them. Bars at the first and last category are cut in half.
 
 ```csharp
 public Avalonia.Controls.Charts.CategoryPlotMode OnTicks

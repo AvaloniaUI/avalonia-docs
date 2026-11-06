@@ -58,9 +58,9 @@ public enum EmptyPointMode
 
 | Name | Description |
 | --- | --- |
-| [Average](#uid-51fd0aea4b) | Empty points are calculated as the average of the neighbor points. |
-| [Gap](#uid-4b36380f60) | Empty points cause a break in the line or area. |
-| [Interpolate](#uid-97e2f065dc) | Empty points are ignored and connected to the next valid point. |
+| [Average](#uid-51fd0aea4b) | Empty points are calculated as the average of the nearest valid point on each side. |
+| [Gap](#uid-4b36380f60) | Empty points cause a break in the line or area. Series that draw one mark per point leave the point out. |
+| [Interpolate](#uid-97e2f065dc) | Empty points are ignored and connected to the next valid point. Series that draw one mark per point leave the point out. |
 | [Zero](#uid-a380e4b718) | Empty points are treated as zero. |
 
 <section className="apiref-page__member-entry">
@@ -69,7 +69,7 @@ public enum EmptyPointMode
 
 ### Average Field
 
-Empty points are calculated as the average of the neighbor points.
+Empty points are calculated as the average of the nearest valid point on each side.
 
 ```csharp
 public Avalonia.Controls.Charts.EmptyPointMode Average
@@ -83,7 +83,7 @@ public Avalonia.Controls.Charts.EmptyPointMode Average
 
 ### Gap Field
 
-Empty points cause a break in the line or area.
+Empty points cause a break in the line or area. Series that draw one mark per point leave the point out.
 
 ```csharp
 public Avalonia.Controls.Charts.EmptyPointMode Gap
@@ -97,7 +97,7 @@ public Avalonia.Controls.Charts.EmptyPointMode Gap
 
 ### Interpolate Field
 
-Empty points are ignored and connected to the next valid point.
+Empty points are ignored and connected to the next valid point. Series that draw one mark per point leave the point out.
 
 ```csharp
 public Avalonia.Controls.Charts.EmptyPointMode Interpolate

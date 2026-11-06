@@ -1,0 +1,121 @@
+---
+title: 'PdfPageChangedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfpagechangedeventargs'
+uid: 'Avalonia.Controls.PdfPageChangedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfPageChangedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfPageChangedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.PdfViewer.PageChanged](xref:Avalonia.Controls.PdfViewer.PageChanged) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfPageChangedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfPageChangedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfPageChangedEventArgs](#uid-0ccc79a972) | Initializes a new instance of the [Avalonia.Controls.PdfPageChangedEventArgs](xref:Avalonia.Controls.PdfPageChangedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ccc79a972"></span>
+
+### PdfPageChangedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfPageChangedEventArgs](xref:Avalonia.Controls.PdfPageChangedEventArgs) class.
+
+```csharp
+public PdfPageChangedEventArgs(int oldPage, int newPage)
+```
+
+#### Parameters
+
+`oldPage` int
+
+
+`newPage` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [NewPage](#uid-f64d1bdcfe) | Gets the 1-based page number that is now current. |
+| [OldPage](#uid-5556588388) | Gets the 1-based page number that was previously current (0 if none). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f64d1bdcfe"></span>
+
+### NewPage Property
+
+Gets the 1-based page number that is now current.
+
+```csharp
+public int NewPage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5556588388"></span>
+
+### OldPage Property
+
+Gets the 1-based page number that was previously current (0 if none).
+
+```csharp
+public int OldPage { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

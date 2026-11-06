@@ -85,6 +85,7 @@ public class Block
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Background](richtextelement.mdx#uid-2c999b14d1) | Gets or sets the brush used to fill the background of the control. Inherited from [RichTextElement](richtextelement.mdx). |
+| [Bookmarks](#uid-283655883e) | Gets the bookmark names that address this block, in the order they were given; empty when none does or the block is not attached to a document. A link reaches the block through the fragment `#name`. |
 | [BorderBrush](#uid-d9afa85d5e) | Gets or sets the brush used to paint the block border. |
 | [BorderThickness](#uid-c60c403f1e) | Gets or sets the thickness of the block border. |
 | [BreakPageBefore](#uid-9e81e629ea) | Gets or sets whether paginated output (print/PDF export) starts a new page before this block. The continuous on-screen flow ignores it. |
@@ -129,6 +130,29 @@ public class Block
 | [TextIndent](#uid-514cf7c51b) | Gets or sets the first-line indent in device-independent pixels; a negative value is a hanging indent. [double.NaN](xref:System.Double.NaN) (the default) means not set. Maps to Word's `w:ind w:firstLine`/`w:hanging` and RTF `\fi`. |
 | [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-283655883e"></span>
+
+### Bookmarks Property
+
+Gets the bookmark names that address this block, in the order they were given;
+empty when none does or the block is not attached to a document. A link reaches
+the block through the fragment `#name`.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<string> Bookmarks { get; set; }
+```
+
+#### Remarks
+
+The names belong to the document, not to the element: they survive snapshots,
+undo and serialization whether or not the element is realized. Only text blocks
+(paragraphs and kinds that behave as one) carry names. Add or remove one with
+[Avalonia.Controls.Documents.TextModel.TextRange.AddBookmark(string)](xref:Avalonia.Controls.Documents.TextModel.TextRange.AddBookmark%28System.String%29) and [Avalonia.Controls.Documents.TextModel.TextRange.RemoveBookmark(string)](xref:Avalonia.Controls.Documents.TextModel.TextRange.RemoveBookmark%28System.String%29).
+
+</section>
 
 <section className="apiref-page__member-entry">
 

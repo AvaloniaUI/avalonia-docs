@@ -1,0 +1,161 @@
+---
+title: 'ITextViewHost'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/itextviewhost'
+uid: 'Avalonia.Controls.Documents.Primitives.ITextViewHost'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.ITextViewHost'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextViewHost Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the host container for a text view, providing viewport and scrolling capabilities.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextViewHost
+```
+
+</div>
+
+## Remarks
+
+This interface separates viewport management (which belongs to the host container like [RichTextEditor](xref:Avalonia.Controls.RichTextEditor))
+from text rendering (which belongs to [ITextView](xref:Avalonia.Controls.Documents.Primitives.ITextView) / [TextViewBase](xref:Avalonia.Controls.Documents.Primitives.TextViewBase)).
+Typically implemented by controls that contain a [ScrollViewer](xref:Avalonia.Controls.ScrollViewer) and a text view.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BringRectIntoView](#uid-81e32569c1) | Scrolls to bring the specified rectangle into view. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81e32569c1"></span>
+
+### BringRectIntoView Method
+
+Scrolls to bring the specified rectangle into view.
+
+```csharp
+public bool BringRectIntoView(Avalonia.Rect rect)
+```
+
+#### Parameters
+
+`rect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rectangle to bring into view (in text view coordinates).
+
+
+#### Returns
+
+bool
+
+True if scrolling occurred, false otherwise.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Extent](#uid-4373d6c051) | Gets the extent (total content size). |
+| [Offset](#uid-15349d5595) | Gets or sets the current scroll offset. |
+| [TextView](#uid-4c4d3a846d) | Gets the text view being hosted. |
+| [Viewport](#uid-629fde32e6) | Gets the viewport (visible area size). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4373d6c051"></span>
+
+### Extent Property
+
+Gets the extent (total content size).
+
+```csharp
+public Avalonia.Size Extent { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15349d5595"></span>
+
+### Offset Property
+
+Gets or sets the current scroll offset.
+
+```csharp
+public Avalonia.Vector Offset { get; set; }
+```
+
+#### Remarks
+
+When setting, the offset will be clamped to valid scroll bounds.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c4d3a846d"></span>
+
+### TextView Property
+
+Gets the text view being hosted.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.ITextView TextView { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-629fde32e6"></span>
+
+### Viewport Property
+
+Gets the viewport (visible area size).
+
+```csharp
+public Avalonia.Size Viewport { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

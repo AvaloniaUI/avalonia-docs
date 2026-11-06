@@ -268,6 +268,7 @@ public void ShowCaret()
 | [ContextFlyout](../control.mdx#uid-3821ce41c2) | Gets or sets a context flyout to the control Inherited from [Control](../control.mdx). |
 | [ContextMenu](../control.mdx#uid-95e5e3ccc3) | Gets or sets a context menu to the control. Inherited from [Control](../control.mdx). |
 | [Cursor](../../input/inputelement.mdx#uid-4222de38cf) | Gets or sets associated mouse cursor. Inherited from [InputElement](../../input/inputelement.mdx). |
+| [CursorRectangle](#uid-94697d8bb5) | Gets the caret rectangle relative to this presenter. |
 | [DataContext](../../styledelement.mdx#uid-647f924a56) | Gets or sets the control's data context. Inherited from [StyledElement](../../styledelement.mdx). |
 | [DataTemplates](../control.mdx#uid-78ff251b26) | Gets or sets the data templates for the control. Inherited from [Control](../control.mdx). |
 | [DesiredSize](../../layout/layoutable.mdx#uid-5eb61af32f) | Gets the size that this element computed during the measure pass of the layout process. Inherited from [Layoutable](../../layout/layoutable.mdx). |
@@ -390,6 +391,25 @@ public Avalonia.Media.IBrush CaretBrush { get; set; }
 ```csharp
 public int CaretIndex { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94697d8bb5"></span>
+
+### CursorRectangle Property
+
+Gets the caret rectangle relative to this presenter.
+
+```csharp
+public Avalonia.Rect CursorRectangle { get; set; }
+```
+
+#### Remarks
+
+The rectangle has zero width. Its X/Y position and height describe the caret location
+within the presenter's text layout coordinates.
 
 </section>
 

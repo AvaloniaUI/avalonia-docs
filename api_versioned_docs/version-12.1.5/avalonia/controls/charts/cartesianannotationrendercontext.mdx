@@ -1,0 +1,512 @@
+---
+title: 'CartesianAnnotationRenderContext'
+hide_title: true
+slug: '/avalonia/controls/charts/cartesianannotationrendercontext'
+uid: 'Avalonia.Controls.Charts.CartesianAnnotationRenderContext'
+commentId: 'T:Avalonia.Controls.Charts.CartesianAnnotationRenderContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CartesianAnnotationRenderContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Supplies plot bounds and axis-space conversion helpers to Cartesian annotation renderers.
+X values are interpreted in horizontal-axis space and Y values in vertical-axis space.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CartesianAnnotationRenderContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CartesianAnnotationRenderContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;CartesianAnnotationRenderContext&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CartesianAnnotationRenderContext](#uid-e25baec046) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e25baec046"></span>
+
+### CartesianAnnotationRenderContext Constructor
+
+```csharp
+public CartesianAnnotationRenderContext(Avalonia.Rect ChartArea, double MinX, double MaxX, double MinY, double MaxY, bool UsesContinuousHorizontalAxis, Func<double, double> NormalizeContinuousX, Func<double, double> NormalizeY)
+```
+
+#### Parameters
+
+`ChartArea` [Avalonia.Rect](xref:Avalonia.Rect)
+
+
+`MinX` double
+
+
+`MaxX` double
+
+
+`MinY` double
+
+
+`MaxY` double
+
+
+`UsesContinuousHorizontalAxis` bool
+
+
+`NormalizeContinuousX` Func&lt;double, double&gt;
+
+
+`NormalizeY` Func&lt;double, double&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [DataXToPixel](#uid-53982eeb07) | Converts a horizontal-axis value to a pixel X coordinate inside [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea). |
+| [DataYToPixel](#uid-67ce9aa81f) | Converts a vertical-axis value to a pixel Y coordinate inside [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea). |
+| [Deconstruct](#uid-ba1716d713) | No summary available. |
+| [DeltaXToPixels](#uid-65fb17a6e7) | Converts an X-axis data delta to pixels using a midpoint origin. For logarithmic or scale-break axes, use [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaXToPixelsAt(double,double)](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaXToPixelsAt%28System.Double%2CSystem.Double%29) so the conversion is measured at the annotation's actual data origin. |
+| [DeltaXToPixelsAt](#uid-a34c8ecf80) | Converts an X-axis data delta to pixels at the specified data origin. |
+| [DeltaYToPixels](#uid-accbcd9ab6) | Converts a Y-axis data delta to pixels using a midpoint origin. For logarithmic or scale-break axes, use [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaYToPixelsAt(double,double)](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaYToPixelsAt%28System.Double%2CSystem.Double%29) so the conversion is measured at the annotation's actual data origin. |
+| [DeltaYToPixelsAt](#uid-f08e59ec31) | Converts a Y-axis data delta to pixels at the specified data origin. |
+| [Equals (2 overloads)](#uid-256d45595c) | No summary available. |
+| [GetHashCode](#uid-cc54e9d018) | No summary available. |
+| [ToString](#uid-0801a6c09e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-53982eeb07"></span>
+
+### DataXToPixel Method
+
+Converts a horizontal-axis value to a pixel X coordinate inside [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea).
+
+```csharp
+public double DataXToPixel(double value)
+```
+
+#### Parameters
+
+`value` double
+
+The horizontal-axis value to convert.
+
+
+#### Returns
+
+double
+
+The pixel X coordinate for the supplied axis value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67ce9aa81f"></span>
+
+### DataYToPixel Method
+
+Converts a vertical-axis value to a pixel Y coordinate inside [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.ChartArea).
+
+```csharp
+public double DataYToPixel(double value)
+```
+
+#### Parameters
+
+`value` double
+
+The vertical-axis value to convert.
+
+
+#### Returns
+
+double
+
+The pixel Y coordinate for the supplied axis value.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba1716d713"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Rect& ChartArea, double& MinX, double& MaxX, double& MinY, double& MaxY, bool& UsesContinuousHorizontalAxis, Func<double, double>& NormalizeContinuousX, Func<double, double>& NormalizeY)
+```
+
+#### Parameters
+
+`ChartArea` [Avalonia.Rect](xref:Avalonia.Rect)&amp;
+
+
+`MinX` double&amp;
+
+
+`MaxX` double&amp;
+
+
+`MinY` double&amp;
+
+
+`MaxY` double&amp;
+
+
+`UsesContinuousHorizontalAxis` bool&amp;
+
+
+`NormalizeContinuousX` Func&lt;double, double&gt;&amp;
+
+
+`NormalizeY` Func&lt;double, double&gt;&amp;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65fb17a6e7"></span>
+
+### DeltaXToPixels Method
+
+Converts an X-axis data delta to pixels using a midpoint origin.
+For logarithmic or scale-break axes, use [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaXToPixelsAt(double,double)](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaXToPixelsAt%28System.Double%2CSystem.Double%29) so the
+conversion is measured at the annotation's actual data origin.
+
+```csharp
+public double DeltaXToPixels(double value)
+```
+
+#### Parameters
+
+`value` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a34c8ecf80"></span>
+
+### DeltaXToPixelsAt Method
+
+Converts an X-axis data delta to pixels at the specified data origin.
+
+```csharp
+public double DeltaXToPixelsAt(double origin, double value)
+```
+
+#### Parameters
+
+`origin` double
+
+
+`value` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-accbcd9ab6"></span>
+
+### DeltaYToPixels Method
+
+Converts a Y-axis data delta to pixels using a midpoint origin.
+For logarithmic or scale-break axes, use [Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaYToPixelsAt(double,double)](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext.DeltaYToPixelsAt%28System.Double%2CSystem.Double%29) so the
+conversion is measured at the annotation's actual data origin.
+
+```csharp
+public double DeltaYToPixels(double value)
+```
+
+#### Parameters
+
+`value` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f08e59ec31"></span>
+
+### DeltaYToPixelsAt Method
+
+Converts a Y-axis data delta to pixels at the specified data origin.
+
+```csharp
+public double DeltaYToPixelsAt(double origin, double value)
+```
+
+#### Parameters
+
+`origin` double
+
+
+`value` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<span id="uid-256d45595c"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d50631d9d9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.CartesianAnnotationRenderContext other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.CartesianAnnotationRenderContext](xref:Avalonia.Controls.Charts.CartesianAnnotationRenderContext)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a29c59072c"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc54e9d018"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0801a6c09e"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ChartArea](#uid-3ff9041975) | No summary available. |
+| [MaxX](#uid-26b9396ea6) | No summary available. |
+| [MaxY](#uid-a2b3ad783a) | No summary available. |
+| [MinX](#uid-8832f98e76) | No summary available. |
+| [MinY](#uid-b981b1441b) | No summary available. |
+| [NormalizeContinuousX](#uid-27bf84305b) | No summary available. |
+| [NormalizeY](#uid-0a05fec34b) | No summary available. |
+| [UsesContinuousHorizontalAxis](#uid-f8fe065a78) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ff9041975"></span>
+
+### ChartArea Property
+
+```csharp
+public Avalonia.Rect ChartArea { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-26b9396ea6"></span>
+
+### MaxX Property
+
+```csharp
+public double MaxX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2b3ad783a"></span>
+
+### MaxY Property
+
+```csharp
+public double MaxY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8832f98e76"></span>
+
+### MinX Property
+
+```csharp
+public double MinX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b981b1441b"></span>
+
+### MinY Property
+
+```csharp
+public double MinY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27bf84305b"></span>
+
+### NormalizeContinuousX Property
+
+```csharp
+public Func<double, double> NormalizeContinuousX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a05fec34b"></span>
+
+### NormalizeY Property
+
+```csharp
+public Func<double, double> NormalizeY { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8fe065a78"></span>
+
+### UsesContinuousHorizontalAxis Property
+
+```csharp
+public bool UsesContinuousHorizontalAxis { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

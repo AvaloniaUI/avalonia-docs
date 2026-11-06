@@ -51,7 +51,7 @@ public class TreeViewItemAutomationPeer
 <span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="itemscontrolautomationpeer">ItemsControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeViewItemAutomationPeer
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/iselectionitemprovider">ISelectionItemProvider</a>
+<span className="apiref-page__meta-label">Implements:</span> <a href="../provider/iexpandcollapseprovider">IExpandCollapseProvider</a>, <a href="../provider/iselectionitemprovider">ISelectionItemProvider</a>
 </div>
 </div>
 
@@ -83,7 +83,9 @@ public TreeViewItemAutomationPeer(Avalonia.Controls.TreeViewItem owner)
 | Name | Description |
 | --- | --- |
 | [BringIntoView](automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](automationpeer.mdx). |
+| [Collapse](#uid-22b4f21948) | No summary available. |
 | [CreatePeerForElement](controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
+| [Expand](#uid-a301522c0b) | No summary available. |
 | [FromElement](controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](controlautomationpeer.mdx). |
 | [GetAcceleratorKey](automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
 | [GetAccessKey](automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. Inherited from [AutomationPeer](automationpeer.mdx). |
@@ -121,6 +123,30 @@ public TreeViewItemAutomationPeer(Avalonia.Controls.TreeViewItem owner)
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-22b4f21948"></span>
+
+### Collapse Method
+
+```csharp
+public void Collapse()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a301522c0b"></span>
+
+### Expand Method
+
+```csharp
+public void Expand()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-98e85a0afa"></span>
 
 ### Select Method
@@ -135,15 +161,29 @@ public void Select()
 
 | Name | Description |
 | --- | --- |
+| [ExpandCollapseState](#uid-487b13dcb6) | No summary available. |
 | [HorizontallyScrollable](itemscontrolautomationpeer.mdx#uid-403fdefb72) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [HorizontalScrollPercent](itemscontrolautomationpeer.mdx#uid-1e829f5a03) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [HorizontalViewSize](itemscontrolautomationpeer.mdx#uid-f21b32fa62) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [IsSelected](#uid-dc9511c253) | No summary available. |
-| [Owner](itemscontrolautomationpeer.mdx#uid-2fcb4ff7b1) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+| [Owner](#uid-393b01404c) | No summary available. |
 | [SelectionContainer](#uid-b92a6eee4f) | No summary available. |
+| [ShowsMenu](#uid-667f0f491a) | No summary available. |
 | [VerticallyScrollable](itemscontrolautomationpeer.mdx#uid-48e6351711) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [VerticalScrollPercent](itemscontrolautomationpeer.mdx#uid-a77dc96d28) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
 | [VerticalViewSize](itemscontrolautomationpeer.mdx#uid-6da1a7bd7d) | Inherited from [ItemsControlAutomationPeer](itemscontrolautomationpeer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-487b13dcb6"></span>
+
+### ExpandCollapseState Property
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -159,12 +199,36 @@ public bool IsSelected { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-393b01404c"></span>
+
+### Owner Property
+
+```csharp
+public Avalonia.Controls.TreeViewItem Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-b92a6eee4f"></span>
 
 ### SelectionContainer Property
 
 ```csharp
 public Avalonia.Automation.Provider.ISelectionProvider SelectionContainer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-667f0f491a"></span>
+
+### ShowsMenu Property
+
+```csharp
+public bool ShowsMenu { get; set; }
 ```
 
 </section>

@@ -75,7 +75,7 @@ documentation for the four scenarios.
 | --- | --- |
 | [HasChanges](#uid-c865289cba) | True when the scope produced at least one change. Always when this event fires — empty scopes are suppressed entirely. Reserved for future use when structure-only mutations may broaden the meaning of "changed." |
 | [Origin](#uid-d2b6dc5714) | Indicates whether this commit is a normal edit, an undo replay, or a redo replay. Use this to skip pushing replays into a replication log or autosave queue. |
-| [TextChanges](#uid-1f3d29eca7) | All text changes recorded during the scope, in invocation order. Read-only; the underlying buffer is the recorder's storage. |
+| [TextChanges](#uid-1f3d29eca7) | The scope's net text change, the same one [Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) raised; empty when the scope changed no text. |
 | [UndoUnit](#uid-5d206aed93) | The undo unit involved in this commit, or when undo is disabled or no unit was opened. For [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Edit) this is the unit just committed to the undo stack; for [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Undo) / [Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo](xref:Avalonia.Controls.Documents.TextModel.ChangeOrigin.Redo) it is the unit being replayed. |
 
 <section className="apiref-page__member-entry">
@@ -117,8 +117,8 @@ public Avalonia.Controls.Documents.TextModel.ChangeOrigin Origin { get; set; }
 
 ### TextChanges Property
 
-All text changes recorded during the scope, in invocation order.
-Read-only; the underlying buffer is the recorder's storage.
+The scope's net text change, the same one [Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged)
+raised; empty when the scope changed no text.
 
 ```csharp
 public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.TextModel.TextChangeEventArgs> TextChanges { get; set; }

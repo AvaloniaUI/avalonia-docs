@@ -223,7 +223,7 @@ The drawing context.
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Series](#uid-e35df72fcc) | Gets the collection of series to display. |
-| [SeriesHeight](#uid-b220a626e7) | Gets or sets the target height for each series. |
+| [SeriesHeight](#uid-b220a626e7) | Gets or sets the height each series adds when the chart sizes to its content. NaN (the default) gives the chart no preferred height. Series always fill the plot. |
 | [ShowLegend](chartbase.mdx#uid-7af7d16f16) | Gets or sets whether to show the legend. The meaning of each legend entry depends on the chart type. Some legends describe hideable series, while others are explanatory scales. Inherited from [ChartBase](chartbase.mdx). |
 | [ShowRenderDiagnosticsOverlay](chartbase.mdx#uid-b10b5000c1) | Gets or sets whether to show the render diagnostics overlay for this chart. This has no effect unless [Avalonia.Controls.Charts.ChartBase.IsRenderDiagnosticsEnabled](xref:Avalonia.Controls.Charts.ChartBase.IsRenderDiagnosticsEnabled) is also true. Inherited from [ChartBase](chartbase.mdx). |
 | [StyleKey](../../styledelement.mdx#uid-081584075e) | Gets the type by which the element is styled. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -288,7 +288,7 @@ public Avalonia.Collections.AvaloniaList<Avalonia.Controls.Charts.AreaSeries> Se
 
 ### SeriesHeight Property
 
-Gets or sets the target height for each series.
+Gets or sets the height each series adds when the chart sizes to its content. NaN (the default) gives the chart no preferred height. Series always fill the plot.
 
 ```csharp
 public double SeriesHeight { get; set; }

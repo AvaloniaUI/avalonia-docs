@@ -481,6 +481,7 @@ If the component is currently attached, it receives an
 | [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Document](#uid-7c5e08bcb4) | Gets the document displayed by this control. |
 | [Effect](../visual.mdx#uid-65e2be6b7c) | Gets or sets the effect of the control. Inherited from [Visual](../visual.mdx). |
+| [Extensions](#uid-a9c181c00a) | Gets the Markdig extensions added to the parse pipeline after the supported ones, such as one that draws a fence language its own way. |
 | [FlowDirection](../visual.mdx#uid-c7929bde53) | Gets or sets the text flow direction. Inherited from [Visual](../visual.mdx). |
 | [Focusable](../input/inputelement.mdx#uid-20168c45b2) | Gets or sets a value indicating whether the control can receive focus. Inherited from [InputElement](../input/inputelement.mdx). |
 | [FocusAdorner](control.mdx#uid-96de66ccc5) | Gets or sets the control's focus adorner. Inherited from [Control](control.mdx). |
@@ -616,6 +617,30 @@ Gets the document displayed by this control.
 ```csharp
 public Avalonia.Controls.Documents.FlowDocument Document { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9c181c00a"></span>
+
+### Extensions Property
+
+Gets the Markdig extensions added to the parse pipeline after the supported ones, such as one that draws a
+fence language its own way.
+
+```csharp
+public System.Collections.Generic.IList<Markdig.IMarkdownExtension> Extensions { get; set; }
+```
+
+#### Remarks
+
+The app-wide [Avalonia.Controls.MarkdownOptions.Extensions](xref:Avalonia.Controls.MarkdownOptions.Extensions) are added before these, so this collection only needs
+what this control parses differently from the rest of the app.
+Changing the collection parses [Avalonia.Controls.Markdown.Text](xref:Avalonia.Controls.Markdown.Text) again with the new pipeline. A streaming session keeps the
+pipeline it began with; the next session or text change uses the new one.
+[Avalonia.Controls.Markdown.ConfigurePipeline(Markdig.MarkdownPipelineBuilder)](xref:Avalonia.Controls.Markdown.ConfigurePipeline%28Markdig.MarkdownPipelineBuilder%29) runs after these are added, so an override sees and can remove them.
+Adding throws [ArgumentNullException](xref:System.ArgumentNullException).
 
 </section>
 

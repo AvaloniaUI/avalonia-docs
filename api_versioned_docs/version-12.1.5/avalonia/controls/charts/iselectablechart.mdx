@@ -1,0 +1,189 @@
+---
+title: 'ISelectableChart'
+hide_title: true
+slug: '/avalonia/controls/charts/iselectablechart'
+uid: 'Avalonia.Controls.Charts.ISelectableChart'
+commentId: 'T:Avalonia.Controls.Charts.ISelectableChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISelectableChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Shared selection contract for chart components and layers.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISelectableChart
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ClearSelection](#uid-5b5523b66d) | Clears the current selection. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b5523b66d"></span>
+
+### ClearSelection Method
+
+Clears the current selection.
+
+```csharp
+public void ClearSelection()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSelectionEnabled](#uid-257e7192fa) | Gets whether selection is enabled. |
+| [SelectionBrush](#uid-a76ce47fd3) | Gets the brush used to highlight selected items. |
+| [SelectionMode](#uid-8ff0fb6590) | Gets the selection behavior (Single, Multiple, etc.). |
+| [SelectionStroke](#uid-ceb022c03c) | Gets the stroke brush used to outline selected items. |
+| [SelectionStrokeThickness](#uid-4b36aee7f4) | Gets the stroke thickness for the selection outline. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-257e7192fa"></span>
+
+### IsSelectionEnabled Property
+
+Gets whether selection is enabled.
+
+```csharp
+public bool IsSelectionEnabled { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a76ce47fd3"></span>
+
+### SelectionBrush Property
+
+Gets the brush used to highlight selected items.
+
+```csharp
+public Avalonia.Media.IBrush SelectionBrush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8ff0fb6590"></span>
+
+### SelectionMode Property
+
+Gets the selection behavior (Single, Multiple, etc.).
+
+```csharp
+public Avalonia.Controls.Charts.ChartSelectionMode SelectionMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ceb022c03c"></span>
+
+### SelectionStroke Property
+
+Gets the stroke brush used to outline selected items.
+
+```csharp
+public Avalonia.Media.IBrush SelectionStroke { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b36aee7f4"></span>
+
+### SelectionStrokeThickness Property
+
+Gets the stroke thickness for the selection outline.
+
+```csharp
+public double SelectionStrokeThickness { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [SelectionChanged](#uid-90a82264bf) | Raised after the selection changes, with snapshots of the applied and previous selections. |
+| [SelectionChanging](#uid-f4b32886ad) | Raised before the selection changes. Handlers may cancel the change or edit the requested selection in the event args before it is applied. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90a82264bf"></span>
+
+### SelectionChanged Event
+
+Raised after the selection changes, with snapshots of the applied and
+previous selections.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Charts.ChartSelectionChangedEventArgs> SelectionChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f4b32886ad"></span>
+
+### SelectionChanging Event
+
+Raised before the selection changes. Handlers may cancel the change or
+edit the requested selection in the event args before it is applied.
+
+```csharp
+public event EventHandler<Avalonia.Controls.Charts.ChartSelectionChangingEventArgs> SelectionChanging
+```
+
+</section>
+
+</ApiRefPage>
+

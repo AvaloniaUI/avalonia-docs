@@ -160,7 +160,7 @@ The drawing context.
 | [Clip](../../visual.mdx#uid-7623faaeaf) | Gets or sets the geometry clip for this visual. Inherited from [Visual](../../visual.mdx). |
 | [ClipToBounds](../../visual.mdx#uid-63c348aebd) | Gets or sets a value indicating whether the control should be clipped to its bounds. Inherited from [Visual](../../visual.mdx). |
 | [Columns](#uid-5d9b754e3b) | Gets or sets the list of column definitions. |
-| [ColumnWidth](#uid-de55adf56e) | Gets or sets the width of data columns. |
+| [ColumnWidth](#uid-de55adf56e) | Gets or sets the minimum width of data columns. Columns grow to fill the available width. |
 | [ContextFlyout](../control.mdx#uid-3821ce41c2) | Gets or sets a context flyout to the control Inherited from [Control](../control.mdx). |
 | [ContextMenu](../control.mdx#uid-95e5e3ccc3) | Gets or sets a context menu to the control. Inherited from [Control](../control.mdx). |
 | [CornerRadius](../primitives/templatedcontrol.mdx#uid-91a447dd4a) | Gets or sets the radius of the border rounded corners. Inherited from [TemplatedControl](../primitives/templatedcontrol.mdx). |
@@ -227,7 +227,7 @@ The drawing context.
 | [RenderTransform](../../visual.mdx#uid-7ee76ff32a) | Gets or sets the render transform of the control. Inherited from [Visual](../../visual.mdx). |
 | [RenderTransformOrigin](../../visual.mdx#uid-3501120c25) | Gets or sets the transform origin of the control. Inherited from [Visual](../../visual.mdx). |
 | [Resources](../../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../../styledelement.mdx). |
-| [RowHeight](#uid-919ddd43b5) | Gets or sets the height of each row. |
+| [RowHeight](#uid-919ddd43b5) | Gets or sets the minimum height of each row. Rows grow to fill the available height. |
 | [RowLabelPath](#uid-56f95c924e) | Gets or sets the property path for row labels. |
 | [RowLabelWidth](#uid-e04ccfed3f) | Gets or sets the width of the row label column. |
 | [ShowGridLines](#uid-8d0fe3ba47) | Gets or sets whether grid lines are visible. |
@@ -282,7 +282,7 @@ public System.Collections.Generic.IList<Avalonia.Controls.Charts.TableChartColum
 
 ### ColumnWidth Property
 
-Gets or sets the width of data columns.
+Gets or sets the minimum width of data columns. Columns grow to fill the available width.
 
 ```csharp
 public double ColumnWidth { get; set; }
@@ -338,7 +338,7 @@ public double LabelFontSize { get; set; }
 
 ### RowHeight Property
 
-Gets or sets the height of each row.
+Gets or sets the minimum height of each row. Rows grow to fill the available height.
 
 ```csharp
 public double RowHeight { get; set; }

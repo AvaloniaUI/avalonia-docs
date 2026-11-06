@@ -1,0 +1,199 @@
+---
+title: 'EmbeddedImageSource'
+hide_title: true
+slug: '/avalonia/controls/documents/embeddedimagesource'
+uid: 'Avalonia.Controls.Documents.EmbeddedImageSource'
+commentId: 'T:Avalonia.Controls.Documents.EmbeddedImageSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EmbeddedImageSource Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A [Avalonia.Controls.Documents.RichImageSource](xref:Avalonia.Controls.Documents.RichImageSource) whose encoded pixel bytes are embedded in the
+document. Decodes once from the retained bytes, caches and owns the decoded
+bitmap, and reports the intrinsic size from the image header without a full
+decode. Dispose to release the cached bitmap.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EmbeddedImageSource
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="richimagesource">RichImageSource</a> <span className="apiref-page__relation-separator">-&gt;</span> EmbeddedImageSource
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [EmbeddedImageSource](#uid-543902a9c3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-543902a9c3"></span>
+
+### EmbeddedImageSource Constructor
+
+```csharp
+public EmbeddedImageSource(ReadOnlyMemory<byte> data, string mimeType)
+```
+
+#### Parameters
+
+`data` ReadOnlyMemory&lt;byte&gt;
+
+
+`mimeType` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-0c7393c7a6) | Releases the cached decoded bitmap. Subsequent [Avalonia.Controls.Documents.EmbeddedImageSource.ResolveAsync](xref:Avalonia.Controls.Documents.EmbeddedImageSource.ResolveAsync) calls return . |
+| [ResolveAsync](#uid-9ea790fe4a) | Resolves the decoded image, decoding once and caching the result. The returned bitmap is owned by this source and released by [Avalonia.Controls.Documents.EmbeddedImageSource.Dispose](xref:Avalonia.Controls.Documents.EmbeddedImageSource.Dispose); callers must not dispose it. Returns once disposed or when the payload cannot be decoded. |
+| [TryGetIntrinsicPixelSize](#uid-efd6741ffb) | No summary available. |
+| [TryGetPixels](richimagesource.mdx#uid-a7a2ec7a6f) | Inherited from [RichImageSource](richimagesource.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c7393c7a6"></span>
+
+### Dispose Method
+
+Releases the cached decoded bitmap. Subsequent [Avalonia.Controls.Documents.EmbeddedImageSource.ResolveAsync](xref:Avalonia.Controls.Documents.EmbeddedImageSource.ResolveAsync)
+calls return .
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ea790fe4a"></span>
+
+### ResolveAsync Method
+
+Resolves the decoded image, decoding once and caching the result. The
+returned bitmap is owned by this source and released by [Avalonia.Controls.Documents.EmbeddedImageSource.Dispose](xref:Avalonia.Controls.Documents.EmbeddedImageSource.Dispose);
+callers must not dispose it. Returns once disposed or
+when the payload cannot be decoded.
+
+```csharp
+public System.Threading.Tasks.Task<Avalonia.Media.IImage> ResolveAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;[Avalonia.Media.IImage](xref:Avalonia.Media.IImage)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efd6741ffb"></span>
+
+### TryGetIntrinsicPixelSize Method
+
+```csharp
+public bool TryGetIntrinsicPixelSize(int& width, int& height)
+```
+
+#### Parameters
+
+`width` int&amp;
+
+
+`height` int&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [EncodedBytes](#uid-c6c603a994) | The encoded image bytes when the payload is embedded in the document, or an empty buffer for reference (URI) sources. Serializers that embed pixel data read this. |
+| [MimeType](#uid-ee414a0e48) | The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known. |
+| [SourceUri](richimagesource.mdx#uid-be73e8d59d) | The reference URI for a deferred/linked source (e.g. an image URL), or for an embedded source. Inherited from [RichImageSource](richimagesource.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6c603a994"></span>
+
+### EncodedBytes Property
+
+The encoded image bytes when the payload is embedded in the document,
+or an empty buffer for reference (URI) sources. Serializers that embed
+pixel data read this.
+
+```csharp
+public ReadOnlyMemory<byte> EncodedBytes { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee414a0e48"></span>
+
+### MimeType Property
+
+The MIME type of [Avalonia.Controls.Documents.RichImageSource.EncodedBytes](xref:Avalonia.Controls.Documents.RichImageSource.EncodedBytes), when known.
+
+```csharp
+public string MimeType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

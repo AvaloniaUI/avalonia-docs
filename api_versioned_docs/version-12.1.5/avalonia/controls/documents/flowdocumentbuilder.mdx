@@ -1,0 +1,699 @@
+---
+title: 'FlowDocumentBuilder'
+hide_title: true
+slug: '/avalonia/controls/documents/flowdocumentbuilder'
+uid: 'Avalonia.Controls.Documents.FlowDocumentBuilder'
+commentId: 'T:Avalonia.Controls.Documents.FlowDocumentBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FlowDocumentBuilder Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Builder for creating FlowDocuments.
+Provides a fluent API for constructing document content.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FlowDocumentBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FlowDocumentBuilder
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddBold](#uid-cfc17574c3) | Adds bold text to the current paragraph. |
+| [AddHyperlink](#uid-4cf5e990b3) | Adds a hyperlink to the current paragraph. |
+| [AddInline](#uid-d5f9c27ab1) | Adds an inline element to the current paragraph. |
+| [AddItalic](#uid-aceba1bdc3) | Adds italic text to the current paragraph. |
+| [AddListItem (2 overloads)](#uid-a5742234e0) | Adds a new empty list item to the current list. |
+| [AddParagraph (3 overloads)](#uid-fe4723b0ad) | Adds a new empty paragraph. |
+| [AddSection](#uid-e919d305dc) | No summary available. |
+| [AddTableCell](#uid-bd686955f5) | Adds a table cell with the specified text. |
+| [AddText](#uid-5214197cca) | Adds text to the current paragraph. |
+| [AddUnderline](#uid-efa8fcf96b) | Adds underlined text to the current paragraph. |
+| [Build](#uid-185ce01b88) | Builds the document and creates its backing store, so the content the builder staged is live when the caller receives it. |
+| [Create](#uid-8d8952c156) | Creates a new [FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder). |
+| [EndList](#uid-bd2c9b4570) | Ends the current list and restores the parent list if nested. |
+| [EndTable](#uid-09d350cd63) | Ends the current table. |
+| [EndTableCell](#uid-d371a092cd) | Ends the current table cell. |
+| [EndTableRow](#uid-8f2585dc88) | Ends the current table row. |
+| [GetDocument](#uid-dbb89b8626) | Gets the document without initializing its [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument). |
+| [SetTableCellBackground](#uid-a6644a3ed0) | Sets the background color of the current table cell. |
+| [SetTableColumns](#uid-8c0b8946a9) | No summary available. |
+| [StartList](#uid-5ba9a38442) | Starts a new list with the specified marker style. |
+| [StartNestedList](#uid-5214604bef) | Starts a nested list inside the current list item. |
+| [StartTable](#uid-0577a50a1f) | Starts a new table. |
+| [StartTableCell](#uid-7e80fac71c) | Starts a new table cell. |
+| [StartTableRow](#uid-11c2c85531) | Starts a new table row. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cfc17574c3"></span>
+
+### AddBold Method
+
+Adds bold text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddBold(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cf5e990b3"></span>
+
+### AddHyperlink Method
+
+Adds a hyperlink to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddHyperlink(string text, Uri navigateUri)
+```
+
+#### Parameters
+
+`text` string
+
+
+`navigateUri` Uri
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5f9c27ab1"></span>
+
+### AddInline Method
+
+Adds an inline element to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddInline(Avalonia.Controls.Documents.RichInline inline)
+```
+
+#### Parameters
+
+`inline` [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aceba1bdc3"></span>
+
+### AddItalic Method
+
+Adds italic text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddItalic(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<span id="uid-a5742234e0"></span>
+
+### AddListItem overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f02d5fbad5"></span>
+
+#### AddListItem Method
+
+Adds a new empty list item to the current list.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddListItem()
+```
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-db4493ae33"></span>
+
+#### AddListItem Method
+
+Adds a new list item to the current list.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddListItem(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<span id="uid-fe4723b0ad"></span>
+
+### AddParagraph overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91874afc10"></span>
+
+#### AddParagraph Method
+
+Adds a new empty paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddParagraph()
+```
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-774807fcf5"></span>
+
+#### AddParagraph Method
+
+Adds a paragraph with the specified inline elements.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddParagraph(Avalonia.Controls.Documents.RichInline[] inlines)
+```
+
+##### Parameters
+
+`inlines` [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline)[]
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f284c8604"></span>
+
+#### AddParagraph Method
+
+Adds a new paragraph with the specified text.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddParagraph(string text)
+```
+
+##### Parameters
+
+`text` string
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e919d305dc"></span>
+
+### AddSection Method
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddSection(Action<Avalonia.Controls.Documents.SectionBuilder> configure)
+```
+
+#### Parameters
+
+`configure` Action&lt;[Avalonia.Controls.Documents.SectionBuilder](xref:Avalonia.Controls.Documents.SectionBuilder)&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd686955f5"></span>
+
+### AddTableCell Method
+
+Adds a table cell with the specified text.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddTableCell(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5214197cca"></span>
+
+### AddText Method
+
+Adds text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddText(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efa8fcf96b"></span>
+
+### AddUnderline Method
+
+Adds underlined text to the current paragraph.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder AddUnderline(string text)
+```
+
+#### Parameters
+
+`text` string
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-185ce01b88"></span>
+
+### Build Method
+
+Builds the document and creates its backing store, so the content the builder
+staged is live when the caller receives it.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument Build()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+The built document.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8d8952c156"></span>
+
+### Create Method
+
+Creates a new [FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder).
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder Create()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd2c9b4570"></span>
+
+### EndList Method
+
+Ends the current list and restores the parent list if nested.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder EndList()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09d350cd63"></span>
+
+### EndTable Method
+
+Ends the current table.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder EndTable()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d371a092cd"></span>
+
+### EndTableCell Method
+
+Ends the current table cell.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder EndTableCell()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f2585dc88"></span>
+
+### EndTableRow Method
+
+Ends the current table row.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder EndTableRow()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbb89b8626"></span>
+
+### GetDocument Method
+
+Gets the document without initializing its [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument).
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocument GetDocument()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+
+The document under construction.
+
+
+#### Remarks
+
+Call [Avalonia.Controls.Documents.FlowDocumentBuilder.Build](xref:Avalonia.Controls.Documents.FlowDocumentBuilder.Build). A document handed out here carries no text model, so
+reading or serializing it sees an empty document until something initializes one.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a6644a3ed0"></span>
+
+### SetTableCellBackground Method
+
+Sets the background color of the current table cell.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder SetTableCellBackground(Avalonia.Media.Color color)
+```
+
+#### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c0b8946a9"></span>
+
+### SetTableColumns Method
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder SetTableColumns(System.Collections.Generic.IReadOnlyList<double> widths)
+```
+
+#### Parameters
+
+`widths` System.Collections.Generic.IReadOnlyList&lt;double&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5ba9a38442"></span>
+
+### StartList Method
+
+Starts a new list with the specified marker style.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder StartList(Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle markerStyle, int startIndex)
+```
+
+#### Parameters
+
+`markerStyle` [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle)
+
+
+`startIndex` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5214604bef"></span>
+
+### StartNestedList Method
+
+Starts a nested list inside the current list item.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder StartNestedList(Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle markerStyle, int startIndex)
+```
+
+#### Parameters
+
+`markerStyle` [Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.TextMarkerStyle)
+
+
+`startIndex` int
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0577a50a1f"></span>
+
+### StartTable Method
+
+Starts a new table.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder StartTable()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e80fac71c"></span>
+
+### StartTableCell Method
+
+Starts a new table cell.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder StartTableCell()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11c2c85531"></span>
+
+### StartTableRow Method
+
+Starts a new table row.
+
+```csharp
+public Avalonia.Controls.Documents.FlowDocumentBuilder StartTableRow()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.FlowDocumentBuilder](xref:Avalonia.Controls.Documents.FlowDocumentBuilder)
+
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,335 @@
+---
+title: 'IInteractiveTextHost'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/iinteractivetexthost'
+uid: 'Avalonia.Controls.Documents.Primitives.IInteractiveTextHost'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IInteractiveTextHost Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Host interface for interactive text views that support selection, navigation,
+and modular components — but not necessarily editing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IInteractiveTextHost
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itextviewhost">ITextViewHost</a>
+</div>
+</div>
+
+## Remarks
+
+This interface provides everything a read-only interactive view needs:
+document access, selection, component registration, and input scope.
+Read-only controls like `Markdown` and `FlowDocumentScrollViewer`
+implement this interface directly.
+
+For editing support (text insertion, deletion, formatting), see
+`ITextEditorHost` which extends this interface with
+editing-specific members.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ActivateDocument](#uid-6ec996fa7d) | Makes `document` the document the host's selection covers: a nested document of the main one (a page band, a footnote), or the main document itself when null. The selection moves to `position` when one is given. Components call this when a pointer they resolved belongs to another document than the selection's. Reading needs the switch as much as editing does, so the viewers answer it too; a host without nested documents declines and the move is dropped, which keeps a nested document's text unselectable there. |
+| [GetComponent](#uid-dd6bb02fcf) | No summary available. |
+| [RegisterComponent](#uid-55e9929d46) | Registers a component with this host. |
+| [UnregisterComponent](#uid-d04f48d374) | Unregisters a component from this host. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ec996fa7d"></span>
+
+### ActivateDocument Method
+
+Makes `document` the document the host's selection covers: a
+nested document of the main one (a page band, a footnote), or the main document
+itself when null. The selection moves to `position` when one
+is given. Components call this when a pointer they resolved belongs to another
+document than the selection's. Reading needs the switch as much as editing does,
+so the viewers answer it too; a host without nested documents declines and the
+move is dropped, which keeps a nested document's text unselectable there.
+
+```csharp
+public bool ActivateDocument(Avalonia.Controls.Documents.TextModel.TextDocument document, Avalonia.Controls.Documents.TextModel.TextPointer position)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+
+`position` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+
+#### Returns
+
+bool
+
+Whether the document is the active one afterwards.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd6bb02fcf"></span>
+
+### GetComponent Method
+
+```csharp
+public T GetComponent<T>()
+```
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-55e9929d46"></span>
+
+### RegisterComponent Method
+
+Registers a component with this host.
+
+```csharp
+public void RegisterComponent(Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent component)
+```
+
+#### Parameters
+
+`component` [Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent)
+
+The component to register.
+
+
+#### Remarks
+
+If the host is already in the attached state, the component receives
+an immediate [Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnAttach(Avalonia.Controls.Documents.Primitives.IInteractiveTextHost)](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnAttach%28Avalonia.Controls.Documents.Primitives.IInteractiveTextHost%29) callback.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d04f48d374"></span>
+
+### UnregisterComponent Method
+
+Unregisters a component from this host.
+
+```csharp
+public void UnregisterComponent(Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent component)
+```
+
+#### Parameters
+
+`component` [Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent)
+
+The component to unregister.
+
+
+#### Remarks
+
+If the component is currently attached, it receives an
+[Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnDetach](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent.OnDetach) callback before removal.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActiveDocument](#uid-f412cd08d9) | Gets the nested document the selection is in (a page band or a footnote the caret entered), or null while the selection is in the main document. A host without nested documents always answers null. |
+| [Selection](#uid-776a60c8a7) | Gets the current text selection. |
+| [TextDocument](#uid-9c77226b13) | Gets the underlying text document. |
+| [UIScope](#uid-65f19a2e63) | Gets the UI element scope for input handling (pointer events, etc.). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f412cd08d9"></span>
+
+### ActiveDocument Property
+
+Gets the nested document the selection is in (a page band or a footnote the
+caret entered), or null while the selection is in the main document. A host
+without nested documents always answers null.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument ActiveDocument { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-776a60c8a7"></span>
+
+### Selection Property
+
+Gets the current text selection.
+
+```csharp
+public Avalonia.Controls.TextSelection Selection { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9c77226b13"></span>
+
+### TextDocument Property
+
+Gets the underlying text document.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument TextDocument { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-65f19a2e63"></span>
+
+### UIScope Property
+
+Gets the UI element scope for input handling (pointer events, etc.).
+
+```csharp
+public Avalonia.Input.InputElement UIScope { get; set; }
+```
+
+#### Remarks
+
+This property returns the element that should be used as the scope for
+pointer/mouse event handling. This is typically a container that wraps
+the document area but excludes UI elements like toolbars.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ActiveDocumentChanged](#uid-f3522e207c) | Occurs when [Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.ActiveDocument](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.ActiveDocument) changes: the selection entered a page band or a footnote, or returned to the main document. A host without nested documents never raises it, but must still declare it - a component that follows the caret across documents has no other way to learn of the move, because a pure activation carries no selection change. |
+| [ContentChanged](#uid-78f3ed8b4a) | Occurs when the document content changes. |
+| [DocumentChanged](#uid-2bf45a283a) | Occurs when the document is replaced. |
+| [SelectionChanged](#uid-d2145c6272) | Occurs when the selection changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3522e207c"></span>
+
+### ActiveDocumentChanged Event
+
+Occurs when [Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.ActiveDocument](xref:Avalonia.Controls.Documents.Primitives.IInteractiveTextHost.ActiveDocument) changes: the selection entered a page
+band or a footnote, or returned to the main document. A host without nested
+documents never raises it, but must still declare it - a component that follows
+the caret across documents has no other way to learn of the move, because a
+pure activation carries no selection change.
+
+```csharp
+public event EventHandler ActiveDocumentChanged
+```
+
+#### Remarks
+
+Defaults to a no-op so a host written before this member existed still compiles. Such a
+host has no nested documents to move between, so there is nothing for it to raise.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78f3ed8b4a"></span>
+
+### ContentChanged Event
+
+Occurs when the document content changes.
+
+```csharp
+public event EventHandler ContentChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2bf45a283a"></span>
+
+### DocumentChanged Event
+
+Occurs when the document is replaced.
+
+```csharp
+public event EventHandler DocumentChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2145c6272"></span>
+
+### SelectionChanged Event
+
+Occurs when the selection changes.
+
+```csharp
+public event EventHandler SelectionChanged
+```
+
+</section>
+
+</ApiRefPage>
+

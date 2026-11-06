@@ -1,0 +1,243 @@
+---
+title: 'ImageInlineDraft'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/authoring/imageinlinedraft'
+uid: 'Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Authoring'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ImageInlineDraft Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Authoring</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Inline draft for embedded images. The builder inserts an object replacement
+character (U+FFFC) for the image, giving the resulting
+[Avalonia.Controls.Documents.Serialization.Snapshot.ImageSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.ImageSnapshotNode) a length of one.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ImageInlineDraft
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="inlinedraft">InlineDraft</a> <span className="apiref-page__relation-separator">-&gt;</span> ImageInlineDraft
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ImageInlineDraft (2 overloads)](#uid-73ac6ca004) | No summary available. |
+
+<span id="uid-73ac6ca004"></span>
+
+### ImageInlineDraft overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b996ed1854"></span>
+
+#### ImageInlineDraft Constructor
+
+```csharp
+public ImageInlineDraft(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, ReadOnlyMemory<byte> imageData, string imageMimeType, double width, double height, string altText)
+```
+
+##### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+`imageData` ReadOnlyMemory&lt;byte&gt;
+
+
+`imageMimeType` string
+
+
+`width` double
+
+
+`height` double
+
+
+`altText` string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e40fc34e5"></span>
+
+#### ImageInlineDraft Constructor
+
+```csharp
+public ImageInlineDraft(ReadOnlyMemory<byte> imageData, string imageMimeType, double width, double height, string altText)
+```
+
+##### Parameters
+
+`imageData` ReadOnlyMemory&lt;byte&gt;
+
+
+`imageMimeType` string
+
+
+`width` double
+
+
+`height` double
+
+
+`altText` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetFormatMetadata](inlinedraft.mdx#uid-4509e823fd) | Inherited from [InlineDraft](inlinedraft.mdx). |
+| [SetFormatMetadata](inlinedraft.mdx#uid-61215c6735) | Inherited from [InlineDraft](inlinedraft.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AltText](#uid-354182e0de) | Gets or sets the alternative text describing the image. |
+| [CustomData](inlinedraft.mdx#uid-df8d35d8af) | Extension-specific custom data. Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) during document building. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [ElementFormatting](inlinedraft.mdx#uid-e72d04f6a2) | Base-level element formatting (font, foreground, background, letter spacing). Inherited from [InlineDraft](inlinedraft.mdx). |
+| [FormatMetadata](inlinedraft.mdx#uid-44323a64b0) | Format-specific metadata for round-trip preservation (e.g. RTF underline variant). Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) during document building. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Formatting](inlinedraft.mdx#uid-5bc8ad789d) | Inline-specific formatting (text decorations, baseline alignment). Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Height](#uid-a3a34d3b4e) | Gets or sets the display height in device-independent pixels. [double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size. |
+| [ImageData](#uid-7ade528876) | Gets or sets the encoded image bytes. |
+| [ImageMimeType](#uid-b0c1561d88) | Gets or sets the MIME type of [Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData](xref:Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData). |
+| [Inlines](inlinedraft.mdx#uid-1eaa3c4f70) | Gets the mutable list of child inline drafts. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [Kind](inlinedraft.mdx#uid-e8bc97d972) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) that identifies this draft's inline type. Inherited from [InlineDraft](inlinedraft.mdx). |
+| [SourceUri](#uid-31b02025f7) | The reference URI for a deferred/linked image (e.g. an image URL), or for an embedded-byte image. When set, [Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData](xref:Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData) is typically empty. |
+| [Width](#uid-3b553ad985) | Gets or sets the display width in device-independent pixels. [double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-354182e0de"></span>
+
+### AltText Property
+
+Gets or sets the alternative text describing the image.
+
+```csharp
+public string AltText { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3a34d3b4e"></span>
+
+### Height Property
+
+Gets or sets the display height in device-independent pixels.
+[double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7ade528876"></span>
+
+### ImageData Property
+
+Gets or sets the encoded image bytes.
+
+```csharp
+public ReadOnlyMemory<byte> ImageData { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0c1561d88"></span>
+
+### ImageMimeType Property
+
+Gets or sets the MIME type of [Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData](xref:Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData).
+
+```csharp
+public string ImageMimeType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31b02025f7"></span>
+
+### SourceUri Property
+
+The reference URI for a deferred/linked image (e.g. an image URL), or
+for an embedded-byte image. When set,
+[Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData](xref:Avalonia.Controls.Documents.Serialization.Authoring.ImageInlineDraft.ImageData) is typically empty.
+
+```csharp
+public string SourceUri { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b553ad985"></span>
+
+### Width Property
+
+Gets or sets the display width in device-independent pixels.
+[double.NaN](xref:System.Double.NaN) uses the intrinsic pixel size.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

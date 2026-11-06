@@ -1,0 +1,111 @@
+---
+title: 'IUndoScope'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/iundoscope'
+uid: 'Avalonia.Controls.Documents.Undo.IUndoScope'
+commentId: 'T:Avalonia.Controls.Documents.Undo.IUndoScope'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IUndoScope Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Scope returned by [Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29). Disposing
+the scope commits the unit to the undo stack (or nests it inside a
+parent scope). Callers may attach a post-edit selection snapshot via
+[Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter(Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.IUndoScope.SetSelectionAfter%28System.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) before disposing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IUndoScope
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [SetSelectionAfter](#uid-dd33381416) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd33381416"></span>
+
+### SetSelectionAfter Method
+
+```csharp
+public void SetSelectionAfter(Nullable<Avalonia.Controls.Documents.Undo.SelectionSnapshot> snapshot)
+```
+
+#### Parameters
+
+`snapshot` Nullable&lt;[Avalonia.Controls.Documents.Undo.SelectionSnapshot](xref:Avalonia.Controls.Documents.Undo.SelectionSnapshot)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Unit](#uid-83c47aca9c) | The unit being built (or replayed) by this scope. For empty scopes (undo disabled or replay in progress) this returns the [Avalonia.Controls.Documents.Undo.EmptyUndoUnit](xref:Avalonia.Controls.Documents.Undo.EmptyUndoUnit) sentinel — never — so consumers can read [Avalonia.Controls.Documents.Undo.IUndoUnit.Description](xref:Avalonia.Controls.Documents.Undo.IUndoUnit.Description) without a null check. The [Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit) property, in contrast, is for scopes that did not open a real unit, preserving a distinct semantic. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83c47aca9c"></span>
+
+### Unit Property
+
+The unit being built (or replayed) by this scope. For empty scopes
+(undo disabled or replay in progress) this returns the
+[Avalonia.Controls.Documents.Undo.EmptyUndoUnit](xref:Avalonia.Controls.Documents.Undo.EmptyUndoUnit) sentinel — never
+— so consumers can read [Avalonia.Controls.Documents.Undo.IUndoUnit.Description](xref:Avalonia.Controls.Documents.Undo.IUndoUnit.Description) without
+a null check. The
+[Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit) property,
+in contrast, is for scopes that did not open
+a real unit, preserving a distinct semantic.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.IUndoUnit Unit { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
