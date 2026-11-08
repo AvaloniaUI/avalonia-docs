@@ -1,6 +1,8 @@
 ---
 id: colorpicker
 title: ColorPicker
+description: A dropdown control for selecting colors, plus primitives for building custom color pickers.
+doc-type: reference
 ---
 
 import ColorPaletteFluent from '/img/controls/colorpicker/color-palette-fluent.png';
@@ -10,7 +12,7 @@ import ColorPaletteMaterial from '/img/controls/colorpicker/color-palette-materi
 import ColorPaletteMaterialHalf from '/img/controls/colorpicker/color-palette-material-half.png';
 import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen.png';
 
-`ColorPicker` provides a customizable, general-purpose control for selecting colors in an RGB or HSV color space. This implementation is designed as a primitive control for you to build your own color picker, rather than a predefined ready-to-use color picker.
+`ColorPicker` provides a customizable, general-purpose control for selecting colors in an RGB or HSV color space. You can use `ColorPicker` as-is, or build a custom color picker from the related primitive components.
 
 `ColorPicker` includes a family of related components. Each primitive component can be used on its own, or mixed and matched with the others to compose a custom color picker.
 
@@ -24,11 +26,11 @@ import ColorPaletteSixteen from '/img/controls/colorpicker/color-palette-sixteen
 
 ## When to use
 
-This control is intended to act as a direct color selection interface with options for developer customization. Typically, it is configured either as a canvas-type `ColorView` control or a company `ColorPicker` dropdown.
+This control is intended to act as a direct color selection interface with options for developer customization. Typically, it is configured either as a canvas-type `ColorView` control or a compact `ColorPicker` dropdown.
 
 For apps with more special-purpose needs, each control and primitive component can be independently customized to create a new color picker, without needing to work with complex rendering and color logic.
 
-You usage options for this control are:
+Your usage options for this control are:
 
 1. Use `ColorView` or `ColorPicker` as-is, directly in your app.
 2. Customize `ColorView` or `ColorPicker` using the included properties. (e.g., To disable component sliders, show different palettes, hide tabs, etc.)
