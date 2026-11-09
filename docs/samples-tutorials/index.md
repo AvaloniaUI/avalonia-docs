@@ -213,7 +213,7 @@ Explore tutorials, sample apps, and quick guides to accelerate your Avalonia lea
   </DocsCard>
 
   <DocsCard header="Basic view locator" href="https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Routing/BasicViewLocatorSample">
-    <p>Change the contents of your UI using a view locator.</p>
+    <p>Automatically match UI contents to a given view model using a view locator.</p>
   </DocsCard>
 
   <DocsCard header="Native AOT" href="https://github.com/AvaloniaUI/AvaloniaUI.QuickGuides/tree/main/NativeAot">
