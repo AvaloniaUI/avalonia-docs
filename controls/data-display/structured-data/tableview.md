@@ -1,6 +1,8 @@
 ---
 id: tableview
 title: TableView
+description: A read-only control that displays a collection of items in configurable, resizable columns with virtualized rows.
+doc-type: reference
 ---
 
 import Tabs from '@theme/Tabs';
@@ -192,4 +194,4 @@ The `TableView` virtualizes its rows but does **not** virtualize columns. Every 
 ## See also
 
 - [ListBox](/controls/data-display/collections/listbox)
-- [TableView API reference](https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_TableView)
+- [TableView API reference](/api/avalonia/controls/tableview)
