@@ -1,0 +1,155 @@
+---
+title: 'IHtmlTagHandler'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/html/ihtmltaghandler'
+uid: 'Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Html.IHtmlTagHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Html'
+assembly: 'Avalonia.Controls.Documents.Serialization.Html'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Html'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IHtmlTagHandler Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Html</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Html</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface for custom HTML tag handlers that transform specific tags
+into [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder) operations.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IHtmlTagHandler
+```
+
+</div>
+
+## Remarks
+
+Register handlers by passing them to the [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions) constructor;
+they surface on [Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.TagHandlers](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlSerializerOptions.TagHandlers).
+Built-in tags are processed first; custom handlers are only consulted
+for tags that do not have a built-in mapping.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [HandleCloseTag](#uid-6e1f50eb2a) | No summary available. |
+| [HandleOpenTag](#uid-b806760697) | No summary available. |
+| [HandleSelfClosingTag](#uid-0c43fc9555) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e1f50eb2a"></span>
+
+### HandleCloseTag Method
+
+```csharp
+public void HandleCloseTag(Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext context, ReadOnlySpan<char> tagName)
+```
+
+#### Parameters
+
+`context` [Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext)
+
+
+`tagName` ReadOnlySpan&lt;char&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b806760697"></span>
+
+### HandleOpenTag Method
+
+```csharp
+public void HandleOpenTag(Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext context, ReadOnlySpan<char> tagName, Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes attributes)
+```
+
+#### Parameters
+
+`context` [Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext)
+
+
+`tagName` ReadOnlySpan&lt;char&gt;
+
+
+`attributes` [Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0c43fc9555"></span>
+
+### HandleSelfClosingTag Method
+
+```csharp
+public void HandleSelfClosingTag(Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext context, ReadOnlySpan<char> tagName, Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes attributes)
+```
+
+#### Parameters
+
+`context` [Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlReaderContext)
+
+
+`tagName` ReadOnlySpan&lt;char&gt;
+
+
+`attributes` [Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes](xref:Avalonia.Controls.Documents.Serialization.Html.HtmlTagAttributes)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsBlockLevel](#uid-f5c9fe739e) | Whether this tag acts as a block-level element (creates paragraphs/structures) rather than an inline element (applies formatting within a paragraph). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5c9fe739e"></span>
+
+### IsBlockLevel Property
+
+Whether this tag acts as a block-level element (creates paragraphs/structures)
+rather than an inline element (applies formatting within a paragraph).
+
+```csharp
+public bool IsBlockLevel { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

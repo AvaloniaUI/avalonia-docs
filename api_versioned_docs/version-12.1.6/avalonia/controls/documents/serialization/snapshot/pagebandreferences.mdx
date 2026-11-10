@@ -1,0 +1,315 @@
+---
+title: 'PageBandReferences'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/pagebandreferences'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageBandReferences Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A section's explicit band references by band identity: the running header and
+footer, and the first-page header and footer, whose presence is what makes the
+section's first page special. An identity no band of the document carries binds to
+nothing, so a section pasted from another document arrives without references.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PageBandReferences
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PageBandReferences
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PageBandReferences&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-e2b7d4c22c) | No summary available. |
+| [GetHashCode](#uid-d119fd25de) | No summary available. |
+| [ToString](#uid-f553a877d6) | No summary available. |
+| [With](#uid-09baca3976) | No summary available. |
+
+<span id="uid-e2b7d4c22c"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7abd69238f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07105900a1"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d119fd25de"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f553a877d6"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09baca3976"></span>
+
+### With Method
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences With(Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule, Nullable<Guid> id)
+```
+
+#### Parameters
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+`id` Nullable&lt;Guid&gt;
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [FirstPageFooter](#uid-6a33e58150) | The footer of the section's first page, or null for no special first page. |
+| [FirstPageHeader](#uid-38c3b8c149) | The header of the section's first page, or null for no special first page. |
+| [Footer](#uid-60d5907927) | The running footer, or null for the document's default band. |
+| [HasFirstPage](#uid-d55ba22b5d) | Whether the section's first page is special: a first-page slot is set. |
+| [Header](#uid-1891b57d99) | The running header, or null for the document's default band. |
+| [IsEmpty](#uid-4554d3b2d3) | Whether no slot is set. |
+| [Item](#uid-d19ff0e2e5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a33e58150"></span>
+
+### FirstPageFooter Property
+
+The footer of the section's first page, or null for no special first page.
+
+```csharp
+public Nullable<Guid> FirstPageFooter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38c3b8c149"></span>
+
+### FirstPageHeader Property
+
+The header of the section's first page, or null for no special first page.
+
+```csharp
+public Nullable<Guid> FirstPageHeader { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60d5907927"></span>
+
+### Footer Property
+
+The running footer, or null for the document's default band.
+
+```csharp
+public Nullable<Guid> Footer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d55ba22b5d"></span>
+
+### HasFirstPage Property
+
+Whether the section's first page is special: a first-page slot is set.
+
+```csharp
+public bool HasFirstPage { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1891b57d99"></span>
+
+### Header Property
+
+The running header, or null for the document's default band.
+
+```csharp
+public Nullable<Guid> Header { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4554d3b2d3"></span>
+
+### IsEmpty Property
+
+Whether no slot is set.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d19ff0e2e5"></span>
+
+### Item Property
+
+```csharp
+public Nullable<Guid> Item { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Slots](#uid-29431b4f63) | The four slots in the order the indexer and [Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences.With(Avalonia.Controls.Documents.PageBandRole,Avalonia.Controls.Documents.PageBandRule,Nullable&#123;Guid&#125;)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences.With%28Avalonia.Controls.Documents.PageBandRole%2CAvalonia.Controls.Documents.PageBandRule%2CSystem.Nullable%7BSystem.Guid%7D%29) address them: the running band per role, then the first-page band per role. Enumerate this to walk every reference a section can hold. A section addresses bands by [Avalonia.Controls.Documents.PageBandRule.Default](xref:Avalonia.Controls.Documents.PageBandRule.Default) and [Avalonia.Controls.Documents.PageBandRule.FirstPage](xref:Avalonia.Controls.Documents.PageBandRule.FirstPage) only; the document-level pool carries the other rules. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29431b4f63"></span>
+
+### Slots Field
+
+The four slots in the order the indexer and [Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences.With(Avalonia.Controls.Documents.PageBandRole,Avalonia.Controls.Documents.PageBandRule,Nullable&#123;Guid&#125;)](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandReferences.With%28Avalonia.Controls.Documents.PageBandRole%2CAvalonia.Controls.Documents.PageBandRule%2CSystem.Nullable%7BSystem.Guid%7D%29) address them:
+the running band per role, then the first-page band per role. Enumerate this to
+walk every reference a section can hold. A section addresses bands by
+[Avalonia.Controls.Documents.PageBandRule.Default](xref:Avalonia.Controls.Documents.PageBandRule.Default) and [Avalonia.Controls.Documents.PageBandRule.FirstPage](xref:Avalonia.Controls.Documents.PageBandRule.FirstPage)
+only; the document-level pool carries the other rules.
+
+```csharp
+public ValueTuple<Avalonia.Controls.Documents.PageBandRole, Avalonia.Controls.Documents.PageBandRule>[] Slots
+```
+
+</section>
+
+</ApiRefPage>
+

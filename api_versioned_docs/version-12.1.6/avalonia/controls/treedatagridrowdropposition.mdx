@@ -1,0 +1,133 @@
+---
+title: 'TreeDataGridRowDropPosition'
+hide_title: true
+slug: '/avalonia/controls/treedatagridrowdropposition'
+uid: 'Avalonia.Controls.TreeDataGridRowDropPosition'
+commentId: 'T:Avalonia.Controls.TreeDataGridRowDropPosition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowDropPosition Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies the position where a dragged row should be dropped relative to the target row.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum TreeDataGridRowDropPosition
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowDropPosition
+</div>
+</div>
+
+## Remarks
+
+This enum is used during drag and drop operations in [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) to indicate
+where a dragged row should be positioned in relation to the target row.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [After](#uid-918c996123) | The row should be dropped after (below) the target row. |
+| [Before](#uid-12104fea8e) | The row should be dropped before (above) the target row. |
+| [Inside](#uid-a3b31ad1b7) | The row should be dropped as a child of the target row. |
+| [None](#uid-4ca7c35e5a) | No drop position is specified or the drop operation is not allowed. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-918c996123"></span>
+
+### After Field
+
+The row should be dropped after (below) the target row.
+
+```csharp
+public Avalonia.Controls.TreeDataGridRowDropPosition After
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12104fea8e"></span>
+
+### Before Field
+
+The row should be dropped before (above) the target row.
+
+```csharp
+public Avalonia.Controls.TreeDataGridRowDropPosition Before
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3b31ad1b7"></span>
+
+### Inside Field
+
+The row should be dropped as a child of the target row.
+
+```csharp
+public Avalonia.Controls.TreeDataGridRowDropPosition Inside
+```
+
+#### Remarks
+
+This option is only meaningful for hierarchical data structures. When used,
+the dragged row becomes a child node of the target row.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4ca7c35e5a"></span>
+
+### None Field
+
+No drop position is specified or the drop operation is not allowed.
+
+```csharp
+public Avalonia.Controls.TreeDataGridRowDropPosition None
+```
+
+</section>
+
+</ApiRefPage>
+

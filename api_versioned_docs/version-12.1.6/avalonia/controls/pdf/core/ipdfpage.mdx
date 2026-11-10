@@ -1,0 +1,163 @@
+---
+title: 'IPdfPage'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfpage'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfPage'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfPage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfPage Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single PDF page.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfPage
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetLinks](#uid-1058ca8f79) | Gets links on this page. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1058ca8f79"></span>
+
+### GetLinks Method
+
+Gets links on this page.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfLink> GetLinks()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Pdf.Core.PdfLink](xref:Avalonia.Controls.Pdf.Core.PdfLink)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Height](#uid-fbabe934c5) | Gets the page height in points. |
+| [Index](#uid-71e8816b0a) | Gets the page index (0-based). |
+| [Label](#uid-3bb3415795) | Gets the page label (e.g., "i", "ii", "1", "2"). |
+| [Rotation](#uid-bcb64b88bb) | Gets the page rotation in degrees (0, 90, 180, 270). |
+| [Width](#uid-8af1468a0b) | Gets the page width in points (1/72 inch). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fbabe934c5"></span>
+
+### Height Property
+
+Gets the page height in points.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71e8816b0a"></span>
+
+### Index Property
+
+Gets the page index (0-based).
+
+```csharp
+public int Index { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3bb3415795"></span>
+
+### Label Property
+
+Gets the page label (e.g., "i", "ii", "1", "2").
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bcb64b88bb"></span>
+
+### Rotation Property
+
+Gets the page rotation in degrees (0, 90, 180, 270).
+
+```csharp
+public int Rotation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8af1468a0b"></span>
+
+### Width Property
+
+Gets the page width in points (1/72 inch).
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

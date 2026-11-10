@@ -1,0 +1,157 @@
+---
+title: 'TreeDataGridColumnReorderingEventArgs'
+hide_title: true
+slug: '/avalonia/controls/treedatagridcolumnreorderingeventargs'
+uid: 'Avalonia.Controls.TreeDataGridColumnReorderingEventArgs'
+commentId: 'T:Avalonia.Controls.TreeDataGridColumnReorderingEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridColumnReorderingEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.TreeDataGrid.ColumnReordering](xref:Avalonia.Controls.TreeDataGrid.ColumnReordering) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridColumnReorderingEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/cancelroutedeventargs">CancelRoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridColumnReorderingEventArgs
+</div>
+</div>
+
+## Remarks
+
+This event is raised when the user drops a dragged column header at a new position, before
+the column is moved. Setting [Avalonia.Interactivity.CancelRoutedEventArgs.Cancel](xref:Avalonia.Interactivity.CancelRoutedEventArgs.Cancel) to true prevents
+the move.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridColumnReorderingEventArgs](#uid-b9e055556a) | Initializes a new instance of the [Avalonia.Controls.TreeDataGridColumnReorderingEventArgs](xref:Avalonia.Controls.TreeDataGridColumnReorderingEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9e055556a"></span>
+
+### TreeDataGridColumnReorderingEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TreeDataGridColumnReorderingEventArgs](xref:Avalonia.Controls.TreeDataGridColumnReorderingEventArgs)
+class.
+
+```csharp
+public TreeDataGridColumnReorderingEventArgs(Avalonia.Controls.TreeDataGridColumn column, int oldIndex, int newIndex)
+```
+
+#### Parameters
+
+`column` [Avalonia.Controls.TreeDataGridColumn](xref:Avalonia.Controls.TreeDataGridColumn)
+
+The column being reordered.
+
+
+`oldIndex` int
+
+The current index of the column.
+
+
+`newIndex` int
+
+The index to which the column will be moved.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Cancel](../interactivity/cancelroutedeventargs.mdx#uid-bfc03d80c6) | Gets or sets a value indicating whether the routed event should be canceled. Inherited from [CancelRoutedEventArgs](../interactivity/cancelroutedeventargs.mdx). |
+| [Column](#uid-c6806e6a32) | Gets the column being reordered. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [NewIndex](#uid-b929b2dd94) | Gets the index in the columns collection to which the column will be moved. |
+| [OldIndex](#uid-3516e4d847) | Gets the current index of the column in the columns collection. |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6806e6a32"></span>
+
+### Column Property
+
+Gets the column being reordered.
+
+```csharp
+public Avalonia.Controls.TreeDataGridColumn Column { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b929b2dd94"></span>
+
+### NewIndex Property
+
+Gets the index in the columns collection to which the column will be moved.
+
+```csharp
+public int NewIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3516e4d847"></span>
+
+### OldIndex Property
+
+Gets the current index of the column in the columns collection.
+
+```csharp
+public int OldIndex { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,241 @@
+---
+title: 'SnapshotNodeChildren'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/snapshotnodechildren'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SnapshotNodeChildren Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Lightweight view over a children array with an explicit count.
+Avoids copying when builder arrays are over-allocated.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SnapshotNodeChildren
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SnapshotNodeChildren
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;SnapshotNode&gt;, IReadOnlyCollection&lt;SnapshotNode&gt;, IReadOnlyList&lt;SnapshotNode&gt;, IEnumerable, IEquatable&lt;SnapshotNodeChildren&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SnapshotNodeChildren](#uid-9b6fec5577) | Initializes a view over `items`, of which the first `count` entries are children. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9b6fec5577"></span>
+
+### SnapshotNodeChildren Constructor
+
+Initializes a view over `items`, of which the first
+`count` entries are children.
+
+```csharp
+public SnapshotNodeChildren(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode[] items, int count)
+```
+
+#### Parameters
+
+`items` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)[]
+
+The backing array. Stored by reference, not copied.
+
+
+`count` int
+
+How many leading entries are in use.
+
+
+#### Remarks
+
+The array is stored by reference, so a later write to it changes an object
+the rest of the surface presents as immutable. Building a snapshot tree goes
+through [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder), which owns its arrays;
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Empty](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Empty) is the only instance a caller outside the assembly needs
+to name.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-1d300ecffb) | No summary available. |
+| [GetEnumerator](#uid-b15a852735) | Returns a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator) over this collection. |
+| [GetHashCode](#uid-70ab55d883) | No summary available. |
+
+<span id="uid-1d300ecffb"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9e75d52ad7"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8617efdaf6"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b15a852735"></span>
+
+### GetEnumerator Method
+
+Returns a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator) over this collection.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator GetEnumerator()
+```
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren.Enumerator)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70ab55d883"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-36bd3aebef) | No summary available. |
+| [Empty](#uid-96dff02d00) | Gets an empty [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren) instance. |
+| [Item](#uid-aef3d0ee76) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36bd3aebef"></span>
+
+### Count Property
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-96dff02d00"></span>
+
+### Empty Property
+
+Gets an empty [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren) instance.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren Empty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aef3d0ee76"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode Item { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

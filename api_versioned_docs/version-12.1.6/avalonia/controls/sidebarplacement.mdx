@@ -1,0 +1,111 @@
+---
+title: 'SidebarPlacement'
+hide_title: true
+slug: '/avalonia/controls/sidebarplacement'
+uid: 'Avalonia.Controls.SidebarPlacement'
+commentId: 'T:Avalonia.Controls.SidebarPlacement'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SidebarPlacement Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Controls how the sidebar is positioned relative to the document canvas.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum SidebarPlacement
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> SidebarPlacement
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Auto](#uid-4c8fe33182) | Chooses on the same basis as the toolbar layout: the mobile/touch layout uses [Avalonia.Controls.SidebarPlacement.Overlay](xref:Avalonia.Controls.SidebarPlacement.Overlay); the desktop layout uses [Avalonia.Controls.SidebarPlacement.Offset](xref:Avalonia.Controls.SidebarPlacement.Offset). Follows the effective [Avalonia.Controls.PdfViewer.IsMobileLayout](xref:Avalonia.Controls.PdfViewer.IsMobileLayout), so it tracks platform, width and overflow. Default. |
+| [Offset](#uid-219fe5b17c) | The document canvas is offset to the right by the sidebar's width, so the sidebar and document sit side by side without overlapping. |
+| [Overlay](#uid-d4e445e5d4) | The sidebar floats over the left of the document, which stays centered in the full control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c8fe33182"></span>
+
+### Auto Field
+
+Chooses on the same basis as the toolbar layout: the mobile/touch layout uses
+[Avalonia.Controls.SidebarPlacement.Overlay](xref:Avalonia.Controls.SidebarPlacement.Overlay); the desktop layout uses [Avalonia.Controls.SidebarPlacement.Offset](xref:Avalonia.Controls.SidebarPlacement.Offset). Follows the effective
+[Avalonia.Controls.PdfViewer.IsMobileLayout](xref:Avalonia.Controls.PdfViewer.IsMobileLayout), so it tracks platform, width and overflow. Default.
+
+```csharp
+public Avalonia.Controls.SidebarPlacement Auto
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-219fe5b17c"></span>
+
+### Offset Field
+
+The document canvas is offset to the right by the sidebar's width, so the sidebar and
+document sit side by side without overlapping.
+
+```csharp
+public Avalonia.Controls.SidebarPlacement Offset
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d4e445e5d4"></span>
+
+### Overlay Field
+
+The sidebar floats over the left of the document, which stays centered in the full control.
+
+```csharp
+public Avalonia.Controls.SidebarPlacement Overlay
+```
+
+</section>
+
+</ApiRefPage>
+

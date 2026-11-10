@@ -1,0 +1,118 @@
+---
+title: 'PdfPageRenderedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfpagerenderedeventargs'
+uid: 'Avalonia.Controls.PdfPageRenderedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfPageRenderedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfPageRenderedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.PdfViewer.PageRendered](xref:Avalonia.Controls.PdfViewer.PageRendered) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfPageRenderedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfPageRenderedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfPageRenderedEventArgs](#uid-b35d263659) | Initializes a new instance of the [Avalonia.Controls.PdfPageRenderedEventArgs](xref:Avalonia.Controls.PdfPageRenderedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b35d263659"></span>
+
+### PdfPageRenderedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfPageRenderedEventArgs](xref:Avalonia.Controls.PdfPageRenderedEventArgs) class.
+
+```csharp
+public PdfPageRenderedEventArgs(int pageIndex)
+```
+
+#### Parameters
+
+`pageIndex` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PageIndex](#uid-64b7f77e73) | Gets the 0-based index of the page whose bitmap was rendered. |
+| [PageNumber](#uid-cb46d252aa) | Gets the 1-based page number whose bitmap was rendered. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64b7f77e73"></span>
+
+### PageIndex Property
+
+Gets the 0-based index of the page whose bitmap was rendered.
+
+```csharp
+public int PageIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb46d252aa"></span>
+
+### PageNumber Property
+
+Gets the 1-based page number whose bitmap was rendered.
+
+```csharp
+public int PageNumber { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

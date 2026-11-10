@@ -1,0 +1,77 @@
+---
+title: 'IActivityResultHandler'
+hide_title: true
+slug: '/avalonia/android/iactivityresulthandler'
+uid: 'Avalonia.Android.IActivityResultHandler'
+commentId: 'T:Avalonia.Android.IActivityResultHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Android'
+assembly: 'Avalonia.Android'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Android'
+tfms:
+  - 'net10.0-android36.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IActivityResultHandler Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Android</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Android</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Android</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IActivityResultHandler
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ActivityResult](#uid-2d2dd684ba) | No summary available. |
+| [RequestPermissionsResult](#uid-4bd4ce0b94) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2d2dd684ba"></span>
+
+### ActivityResult Property
+
+```csharp
+public Action<int, Android.App.Result, Android.Content.Intent> ActivityResult { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bd4ce0b94"></span>
+
+### RequestPermissionsResult Property
+
+```csharp
+public Action<int, string[], Android.Content.PM.Permission[]> RequestPermissionsResult { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

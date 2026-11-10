@@ -1,0 +1,215 @@
+---
+title: 'HighlightRegion'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/highlighting/highlightregion'
+uid: 'Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Highlighting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HighlightRegion Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Highlighting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a region of text to be highlighted.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HighlightRegion
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HighlightRegion
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HighlightRegion](#uid-eae12cd839) | Initializes a new instance of the [Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eae12cd839"></span>
+
+### HighlightRegion Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion) class.
+
+```csharp
+public HighlightRegion(Avalonia.Controls.Documents.TextModel.TextPointer start, Avalonia.Controls.Documents.TextModel.TextPointer end, Avalonia.Media.IBrush brush, double opacity, Avalonia.Controls.Documents.Primitives.Highlighting.HighlightStyle style)
+```
+
+#### Parameters
+
+`start` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The start position of the highlight region.
+
+
+`end` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The end position of the highlight region.
+
+
+`brush` [Avalonia.Media.IBrush](xref:Avalonia.Media.IBrush)
+
+The brush to use for highlighting.
+
+
+`opacity` double
+
+The opacity of the highlight (0.0 to 1.0).
+
+
+`style` [Avalonia.Controls.Documents.Primitives.Highlighting.HighlightStyle](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightStyle)
+
+The style of highlight.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Brush](#uid-e3134ec3ad) | Gets or sets the brush to use for highlighting. |
+| [End](#uid-2dbc6a8022) | Gets the end position of the highlight region. |
+| [Opacity](#uid-134bc1b11b) | Gets or sets the opacity of the highlight (0.0 to 1.0). |
+| [Pen](#uid-f7ce96aa14) | Gets or sets the optional pen for underline/strikethrough. |
+| [Start](#uid-5e1e9d2bc3) | Gets the start position of the highlight region. |
+| [Style](#uid-49777f6ff6) | Gets or sets the style of highlight (background, underline, etc.). |
+| [Tag](#uid-1e17f5f676) | Gets or sets custom data associated with this region. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3134ec3ad"></span>
+
+### Brush Property
+
+Gets or sets the brush to use for highlighting.
+
+```csharp
+public Avalonia.Media.IBrush Brush { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2dbc6a8022"></span>
+
+### End Property
+
+Gets the end position of the highlight region.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer End { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-134bc1b11b"></span>
+
+### Opacity Property
+
+Gets or sets the opacity of the highlight (0.0 to 1.0).
+
+```csharp
+public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7ce96aa14"></span>
+
+### Pen Property
+
+Gets or sets the optional pen for underline/strikethrough.
+
+```csharp
+public Avalonia.Media.IPen Pen { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e1e9d2bc3"></span>
+
+### Start Property
+
+Gets the start position of the highlight region.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPointer Start { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-49777f6ff6"></span>
+
+### Style Property
+
+Gets or sets the style of highlight (background, underline, etc.).
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Highlighting.HighlightStyle Style { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e17f5f676"></span>
+
+### Tag Property
+
+Gets or sets custom data associated with this region.
+
+```csharp
+public object Tag { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,198 @@
+---
+title: 'PasteAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/pasteaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.PasteAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.PasteAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PasteAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action that pastes content from the clipboard.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PasteAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> PasteAction
+</div>
+</div>
+
+## Remarks
+
+Probes the clipboard for the richest available format that the editor can
+deserialize (RTF first via [Avalonia.Controls.Documents.Primitives.Actions.EditorClipboardSerializers.Default](xref:Avalonia.Controls.Documents.Primitives.Actions.EditorClipboardSerializers.Default),
+then plain text). The resulting `DocumentSnapshot` is grafted into the
+current selection through `TextRange.InsertSnapshot`, preserving
+block, inline, and formatting structure.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PasteAction](#uid-780f4aa98d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-780f4aa98d"></span>
+
+### PasteAction Constructor
+
+```csharp
+public PasteAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-c236bcb540) | No summary available. |
+| [Execute](#uid-ba9af0664d) | No summary available. |
+| [ExecuteAsync](#uid-f1e799357f) | No summary available. |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c236bcb540"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ba9af0664d"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f1e799357f"></span>
+
+### ExecuteAsync Method
+
+```csharp
+public System.Threading.Tasks.Task ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-ec478aea18) | No summary available. |
+| [Gesture](#uid-d6a8ca0c9d) | No summary available. |
+| [Id](#uid-21f1f8ef68) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec478aea18"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d6a8ca0c9d"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-21f1f8ef68"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -121,6 +121,8 @@ public TableViewColumn()
 | [IsInitialized](../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../styledelement.mdx). |
 | [IsVisible](#uid-de436f58a6) | Gets or sets whether the column is visible. The default is true. |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
+| [MaxWidth](#uid-1967bb2ded) | Gets or sets the maximum column width, in device independent pixels. The default is [double.PositiveInfinity](xref:System.Double.PositiveInfinity). |
+| [MinWidth](#uid-ce3312e505) | Gets or sets the minimum column width, in device independent pixels. The default is 0. |
 | [Name](../styledelement.mdx#uid-245f4ccff5) | Gets or sets the name of the styled element. Inherited from [StyledElement](../styledelement.mdx). |
 | [Parent](../styledelement.mdx#uid-aad2c5c78d) | Gets the styled element's logical parent. Inherited from [StyledElement](../styledelement.mdx). |
 | [Resources](../styledelement.mdx#uid-f6488ca4b7) | Gets or sets the styled element's resource dictionary. Inherited from [StyledElement](../styledelement.mdx). |
@@ -301,6 +303,49 @@ public bool IsVisible { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-1967bb2ded"></span>
+
+### MaxWidth Property
+
+Gets or sets the maximum column width, in device independent pixels.
+The default is [double.PositiveInfinity](xref:System.Double.PositiveInfinity).
+
+```csharp
+public double MaxWidth { get; set; }
+```
+
+#### Remarks
+
+Applies to pixel, star and auto sizing, and interactive resizing.
+Must be non-negative. Column limits take precedence over the resize handle's minimum width.
+Star columns redistribute space when a column reaches a limit; they can leave unused space
+if all maxima are reached, or overflow if their minima exceed the available space.
+Layout rounding can adjust the resulting width to device pixel boundaries.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce3312e505"></span>
+
+### MinWidth Property
+
+Gets or sets the minimum column width, in device independent pixels. The default is 0.
+
+```csharp
+public double MinWidth { get; set; }
+```
+
+#### Remarks
+
+Applies to pixel, star and auto sizing, and interactive resizing.
+Must be finite and non-negative. Takes precedence over [Avalonia.Controls.TableViewColumn.MaxWidth](xref:Avalonia.Controls.TableViewColumn.MaxWidth) if the limits conflict.
+Layout rounding can adjust the resulting width to device pixel boundaries.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-0410018295"></span>
 
 ### TableView Property
@@ -343,6 +388,8 @@ public Avalonia.Controls.GridLength Width { get; set; }
 | [HeaderThemeProperty](#uid-c7ced6f71d) | Defines the [Avalonia.Controls.TableViewColumn.HeaderTheme](xref:Avalonia.Controls.TableViewColumn.HeaderTheme) property. |
 | [HorizontalContentAlignmentProperty](#uid-2a55df5d3c) | Defines the [Avalonia.Controls.TableViewColumn.HorizontalContentAlignment](xref:Avalonia.Controls.TableViewColumn.HorizontalContentAlignment) property. |
 | [IsVisibleProperty](#uid-25d0f1bb4e) | Defines the [Avalonia.Controls.TableViewColumn.IsVisible](xref:Avalonia.Controls.TableViewColumn.IsVisible) property. |
+| [MaxWidthProperty](#uid-ef4218900a) | Defines the [Avalonia.Controls.TableViewColumn.MaxWidth](xref:Avalonia.Controls.TableViewColumn.MaxWidth) property. |
+| [MinWidthProperty](#uid-2733cd0918) | Defines the [Avalonia.Controls.TableViewColumn.MinWidth](xref:Avalonia.Controls.TableViewColumn.MinWidth) property. |
 | [NameProperty](../styledelement.mdx#uid-bcdbb9de56) | Defines the [Avalonia.StyledElement.Name](xref:Avalonia.StyledElement.Name) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [ParentProperty](../styledelement.mdx#uid-dc6481a488) | Defines the [Avalonia.StyledElement.Parent](xref:Avalonia.StyledElement.Parent) property. Inherited from [StyledElement](../styledelement.mdx). |
 | [TableViewProperty](#uid-d2f9716072) | Defines the [Avalonia.Controls.TableViewColumn.TableView](xref:Avalonia.Controls.TableViewColumn.TableView) property. |
@@ -501,6 +548,34 @@ Defines the [Avalonia.Controls.TableViewColumn.IsVisible](xref:Avalonia.Controls
 
 ```csharp
 public Avalonia.StyledProperty<bool> IsVisibleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef4218900a"></span>
+
+### MaxWidthProperty Field
+
+Defines the [Avalonia.Controls.TableViewColumn.MaxWidth](xref:Avalonia.Controls.TableViewColumn.MaxWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<double> MaxWidthProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2733cd0918"></span>
+
+### MinWidthProperty Field
+
+Defines the [Avalonia.Controls.TableViewColumn.MinWidth](xref:Avalonia.Controls.TableViewColumn.MinWidth) property.
+
+```csharp
+public Avalonia.StyledProperty<double> MinWidthProperty
 ```
 
 </section>

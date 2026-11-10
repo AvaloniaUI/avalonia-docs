@@ -1,0 +1,218 @@
+---
+title: 'INodeKindHandler'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/inodekindhandler'
+uid: 'Avalonia.Controls.Documents.TextModel.INodeKindHandler'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.INodeKindHandler'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">INodeKindHandler Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Handles the full lifecycle for a specific [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind):
+element creation, snapshot capture/restore, and visual node creation.
+Each registered kind is bound to exactly one handler.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface INodeKindHandler
+```
+
+</div>
+
+## Remarks
+
+Handlers are registered once at startup via
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags,Avalonia.Controls.Documents.TextModel.INodeKindHandler)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%2CAvalonia.Controls.Documents.TextModel.INodeKindHandler%29)
+or by the built-in kind initialization. The correct handler is invoked automatically
+during snapshot capture, restore, and rendering.
+
+Thread-safety: [Avalonia.Controls.Documents.TextModel.INodeKindHandler.CaptureSnapshot(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind,int,int,Avalonia.Controls.Documents.RichTextElement,Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode,Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren)](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler.CaptureSnapshot%28Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind%2CSystem.Int32%2CSystem.Int32%2CAvalonia.Controls.Documents.RichTextElement%2CAvalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode%2CAvalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren%29) is called on the UI thread during
+snapshot creation. The [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) it returns is stored on the
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) and may be read from background threads by
+serializers. Return only immutable or thread-safe snapshot nodes.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ApplyFormatting](#uid-4c564f06e8) | Applies formatting from a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) to a restored element. Called during both eager and lazy element materialization from a snapshot. |
+| [CaptureSnapshot](#uid-39cdb08c5a) | Creates a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) from a live document node. Called during [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) creation on the UI thread. |
+| [CreateDocumentNode](#uid-98083044ec) | Creates a [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) visual wrapper for the given element. Called by the rendering layer to wrap model elements in layout/rendering nodes. |
+| [CreateElement](#uid-13bbf20e4c) | Creates a new [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) instance for the given kind. Called during snapshot restoration (eager and lazy paths) and undo/redo. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4c564f06e8"></span>
+
+### ApplyFormatting Method
+
+Applies formatting from a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) to a restored element.
+Called during both eager and lazy element materialization from a snapshot.
+
+```csharp
+public void ApplyFormatting(Avalonia.Controls.Documents.RichTextElement element, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode snapshotNode)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+The element to apply formatting to.
+
+
+`snapshotNode` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+The snapshot node containing the formatting data.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39cdb08c5a"></span>
+
+### CaptureSnapshot Method
+
+Creates a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) from a live document node.
+Called during [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) creation on the UI thread.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode CaptureSnapshot(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind, int startOffset, int length, Avalonia.Controls.Documents.RichTextElement element, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode deferredSnapshot, Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren children)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The kind of the document node.
+
+
+`startOffset` int
+
+The absolute start offset of the node in the document text.
+
+
+`length` int
+
+The length of the node's content in characters.
+
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+The element attached to the node, or `null` if the element
+has not been materialized (deferred snapshot path).
+
+
+`deferredSnapshot` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+The previously captured snapshot for this node when the element was never
+realized (deferred path), or `null` on the normal capture path.
+When non-null, formatting should be seeded from this snapshot.
+
+
+`children` [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren)
+
+Pre-captured child snapshot nodes.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)
+
+An immutable snapshot node capturing all kind-specific state.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98083044ec"></span>
+
+### CreateDocumentNode Method
+
+Creates a [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode) visual wrapper for the given element.
+Called by the rendering layer to wrap model elements in layout/rendering nodes.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode CreateDocumentNode(Avalonia.Controls.Documents.RichTextElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+The rich text element to wrap.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode)
+
+A new [Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode](xref:Avalonia.Controls.Documents.Primitives.DocumentNodes.DocumentNode), or `null` for inline-only kinds
+that render inside their parent's text layout (Run, Span, Bold, etc.).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-13bbf20e4c"></span>
+
+### CreateElement Method
+
+Creates a new [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) instance for the given kind.
+Called during snapshot restoration (eager and lazy paths) and undo/redo.
+
+```csharp
+public Avalonia.Controls.Documents.RichTextElement CreateElement(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind kind)
+```
+
+#### Parameters
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The node kind to create an element for.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement)
+
+A new element instance, or `null` if the kind is not handled.
+
+
+</section>
+
+</ApiRefPage>
+
