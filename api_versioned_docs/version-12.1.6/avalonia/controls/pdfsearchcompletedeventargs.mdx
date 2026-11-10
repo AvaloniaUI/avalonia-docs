@@ -1,0 +1,121 @@
+---
+title: 'PdfSearchCompletedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfsearchcompletedeventargs'
+uid: 'Avalonia.Controls.PdfSearchCompletedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfSearchCompletedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfSearchCompletedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for the [Avalonia.Controls.PdfViewer.SearchCompleted](xref:Avalonia.Controls.PdfViewer.SearchCompleted) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfSearchCompletedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfSearchCompletedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfSearchCompletedEventArgs](#uid-dd60ab41fc) | Initializes a new instance of the [Avalonia.Controls.PdfSearchCompletedEventArgs](xref:Avalonia.Controls.PdfSearchCompletedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd60ab41fc"></span>
+
+### PdfSearchCompletedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfSearchCompletedEventArgs](xref:Avalonia.Controls.PdfSearchCompletedEventArgs) class.
+
+```csharp
+public PdfSearchCompletedEventArgs(string query, int matchCount)
+```
+
+#### Parameters
+
+`query` string
+
+
+`matchCount` int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MatchCount](#uid-83626647b2) | Gets the number of matches found. |
+| [Query](#uid-12f1fb3e50) | Gets the query that was searched. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83626647b2"></span>
+
+### MatchCount Property
+
+Gets the number of matches found.
+
+```csharp
+public int MatchCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-12f1fb3e50"></span>
+
+### Query Property
+
+Gets the query that was searched.
+
+```csharp
+public string Query { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

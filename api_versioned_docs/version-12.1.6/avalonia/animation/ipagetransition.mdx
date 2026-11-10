@@ -1,0 +1,101 @@
+---
+title: 'IPageTransition'
+hide_title: true
+slug: '/avalonia/animation/ipagetransition'
+uid: 'Avalonia.Animation.IPageTransition'
+commentId: 'T:Avalonia.Animation.IPageTransition'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Animation'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPageTransition Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Animation</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Interface for animations that transition between two pages.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPageTransition
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Start](#uid-eeae41f0d0) | Starts the animation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eeae41f0d0"></span>
+
+### Start Method
+
+Starts the animation.
+
+```csharp
+public System.Threading.Tasks.Task Start(Avalonia.Visual from, Avalonia.Visual to, bool forward, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`from` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned away from. May be null.
+
+
+`to` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The control that is being transitioned to. May be null.
+
+
+`forward` bool
+
+If the animation is bidirectional, controls the direction of the animation.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Animation cancellation.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+A [System.Threading.Tasks.Task](xref:System.Threading.Tasks.Task) that tracks the progress of the animation.
+
+
+</section>
+
+</ApiRefPage>
+

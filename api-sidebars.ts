@@ -312,6 +312,7 @@ const sidebars = {
         "avalonia/automation/peers/selectingitemscontrolautomationpeer",
         "avalonia/automation/peers/splitbuttonautomationpeer",
         "avalonia/automation/peers/tabbedpageautomationpeer",
+        "avalonia/automation/peers/tableviewrowautomationpeer",
         "avalonia/automation/peers/textblockautomationpeer",
         "avalonia/automation/peers/textboxautomationpeer",
         "avalonia/automation/peers/timepickerautomationpeer",

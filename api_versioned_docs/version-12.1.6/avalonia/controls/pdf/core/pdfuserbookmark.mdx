@@ -1,0 +1,244 @@
+---
+title: 'PdfUserBookmark'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/pdfuserbookmark'
+uid: 'Avalonia.Controls.Pdf.Core.PdfUserBookmark'
+commentId: 'T:Avalonia.Controls.Pdf.Core.PdfUserBookmark'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfUserBookmark Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A user-created bookmark that flags a page as a saved reading position.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfUserBookmark
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PdfUserBookmark
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PdfUserBookmark&gt;
+</div>
+</div>
+
+## Remarks
+
+These are distinct from the document outline ([Avalonia.Controls.Pdf.Core.PdfBookmark](xref:Avalonia.Controls.Pdf.Core.PdfBookmark)): the outline
+is the author-defined table of contents embedded in the PDF, whereas user bookmarks are
+positions the reader saves themselves. They are persisted in the document's XMP metadata
+under Apple's private `apple-preview` namespace (`http://ns.apple.com/Preview/1.0/`),
+so bookmarks created here interoperate with macOS Preview and vice versa. The schema is a
+page index plus a stable UUID; there is at most one bookmark per page.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfUserBookmark](#uid-c977c0f315) | Creates a user bookmark for the given page. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c977c0f315"></span>
+
+### PdfUserBookmark Constructor
+
+Creates a user bookmark for the given page.
+
+```csharp
+public PdfUserBookmark(int pageIndex, string uuid)
+```
+
+#### Parameters
+
+`pageIndex` int
+
+Zero-based page index.
+
+
+`uuid` string
+
+Stable identifier; a new one is generated when omitted.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-9e8844bd5c) | Two bookmarks are equal when they flag the same page. |
+| [GetHashCode](#uid-440ecc14c4) | No summary available. |
+| [ToString](#uid-110a183663) | No summary available. |
+
+<span id="uid-9e8844bd5c"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f95f95fe16"></span>
+
+#### Equals Method
+
+Two bookmarks are equal when they flag the same page.
+
+```csharp
+public bool Equals(Avalonia.Controls.Pdf.Core.PdfUserBookmark other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Pdf.Core.PdfUserBookmark](xref:Avalonia.Controls.Pdf.Core.PdfUserBookmark)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec0d3d6e03"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-440ecc14c4"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-110a183663"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PageIndex](#uid-83b1307d57) | Zero-based index of the bookmarked page. |
+| [PageNumber](#uid-1819eaf3ce) | One-based page number of the bookmarked page. |
+| [Uuid](#uid-afbbc5eb65) | Stable identifier that round-trips with Preview (its `apple-preview:UUID`). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83b1307d57"></span>
+
+### PageIndex Property
+
+Zero-based index of the bookmarked page.
+
+```csharp
+public int PageIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1819eaf3ce"></span>
+
+### PageNumber Property
+
+One-based page number of the bookmarked page.
+
+```csharp
+public int PageNumber { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afbbc5eb65"></span>
+
+### Uuid Property
+
+Stable identifier that round-trips with Preview (its `apple-preview:UUID`).
+
+```csharp
+public string Uuid { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,125 @@
+---
+title: 'IPdfAdapterWithTextExtraction'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfadapterwithtextextraction'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfAdapterWithTextExtraction'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfAdapterWithTextExtraction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfAdapterWithTextExtraction Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Extension interface for adapters that support text extraction.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfAdapterWithTextExtraction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipdfadapter">IPdfAdapter</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ExtractTextAsync](#uid-6b16e77a1f) | Extracts text from a page. |
+| [SearchAsync](#uid-7a1b72af6b) | Searches for text in the document. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b16e77a1f"></span>
+
+### ExtractTextAsync Method
+
+Extracts text from a page.
+
+```csharp
+public System.Threading.Tasks.Task<string> ExtractTextAsync(Avalonia.Controls.Pdf.Core.IPdfPage page, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`page` [Avalonia.Controls.Pdf.Core.IPdfPage](xref:Avalonia.Controls.Pdf.Core.IPdfPage)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;string&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a1b72af6b"></span>
+
+### SearchAsync Method
+
+Searches for text in the document.
+
+```csharp
+public System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Pdf.Core.PdfSearchResult>> SearchAsync(Avalonia.Controls.Pdf.Core.IPdfDocument document, string query, Avalonia.Controls.Pdf.Core.SearchOptions options, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)
+
+
+`query` string
+
+
+`options` [Avalonia.Controls.Pdf.Core.SearchOptions](xref:Avalonia.Controls.Pdf.Core.SearchOptions)
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+
+#### Returns
+
+System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Pdf.Core.PdfSearchResult](xref:Avalonia.Controls.Pdf.Core.PdfSearchResult)&gt;&gt;
+
+
+</section>
+
+</ApiRefPage>
+

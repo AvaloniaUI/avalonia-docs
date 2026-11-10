@@ -1,0 +1,122 @@
+---
+title: 'PdfShapeSubtypeMode'
+hide_title: true
+slug: '/avalonia/controls/pdfshapesubtypemode'
+uid: 'Avalonia.Controls.PdfShapeSubtypeMode'
+commentId: 'T:Avalonia.Controls.PdfShapeSubtypeMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfShapeSubtypeMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+How shape annotations (rectangles, ellipses, lines, arrows, polygons, stars) are written to
+the file. Text boxes are always written as `/FreeText`, and curved lines, which have no
+standard subtype, as `/Stamp`.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PdfShapeSubtypeMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PdfShapeSubtypeMode
+</div>
+</div>
+
+## Remarks
+
+A standard subtype (`/Square`, `/Circle`, `/Line`, `/Polygon`) lets other
+readers select and edit the shape, but a reader that edits it regenerates the appearance from
+the dictionary and drops what the specification has no keys for: rotation, corner radius,
+star geometry and any text drawn inside the shape. A `/Stamp` is never regenerated, so it
+survives round trips through other editors pixel for pixel, but is not editable there.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Auto](#uid-124415f0a5) | Standard subtype for shapes without text; a shape that carries text is written as a `/Stamp` so no reader regenerates over the text. This is how macOS Preview stores its own shapes. |
+| [Standard](#uid-5b9358fab6) | Standard subtype for every shape, text or not. Text is kept in `/Contents` and in the appearance stream, and is lost if another reader edits the shape. |
+| [Strict](#uid-396d7607d1) | Standard subtype for every shape, and nothing non-standard can be produced: text cannot be added to shapes (text already in a loaded file still displays) and lines cannot be curved. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-124415f0a5"></span>
+
+### Auto Field
+
+Standard subtype for shapes without text; a shape that carries text is written as a
+`/Stamp` so no reader regenerates over the text. This is how macOS Preview stores its
+own shapes.
+
+```csharp
+public Avalonia.Controls.PdfShapeSubtypeMode Auto
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b9358fab6"></span>
+
+### Standard Field
+
+Standard subtype for every shape, text or not. Text is kept in `/Contents` and in the
+appearance stream, and is lost if another reader edits the shape.
+
+```csharp
+public Avalonia.Controls.PdfShapeSubtypeMode Standard
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-396d7607d1"></span>
+
+### Strict Field
+
+Standard subtype for every shape, and nothing non-standard can be produced: text cannot be
+added to shapes (text already in a loaded file still displays) and lines cannot be curved.
+
+```csharp
+public Avalonia.Controls.PdfShapeSubtypeMode Strict
+```
+
+</section>
+
+</ApiRefPage>
+

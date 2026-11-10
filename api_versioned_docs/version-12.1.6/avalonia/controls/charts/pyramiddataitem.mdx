@@ -1,0 +1,282 @@
+---
+title: 'PyramidDataItem'
+hide_title: true
+slug: '/avalonia/controls/charts/pyramiddataitem'
+uid: 'Avalonia.Controls.Charts.PyramidDataItem'
+commentId: 'T:Avalonia.Controls.Charts.PyramidDataItem'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PyramidDataItem Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a data item for a pyramid chart, typically used for population pyramids
+showing age distribution by gender.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PyramidDataItem
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PyramidDataItem
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PyramidDataItem&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PyramidDataItem](#uid-4417439a46) | Represents a data item for a pyramid chart, typically used for population pyramids showing age distribution by gender. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4417439a46"></span>
+
+### PyramidDataItem Constructor
+
+Represents a data item for a pyramid chart, typically used for population pyramids
+showing age distribution by gender.
+
+```csharp
+public PyramidDataItem(string AgeLabel, double MaleValue, double FemaleValue)
+```
+
+#### Parameters
+
+`AgeLabel` string
+
+The age group or category label (e.g., "0-4", "5-9").
+
+
+`MaleValue` double
+
+The value for the male population in this age group.
+
+
+`FemaleValue` double
+
+The value for the female population in this age group.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-5a30a8d670) | No summary available. |
+| [Deconstruct](#uid-b899851d54) | No summary available. |
+| [Equals (2 overloads)](#uid-3c7eafb3bb) | No summary available. |
+| [GetHashCode](#uid-a2a663a3ed) | No summary available. |
+| [ToString](#uid-f2776202e5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a30a8d670"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Controls.Charts.PyramidDataItem <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Controls.Charts.PyramidDataItem](xref:Avalonia.Controls.Charts.PyramidDataItem)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b899851d54"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(string& AgeLabel, double& MaleValue, double& FemaleValue)
+```
+
+#### Parameters
+
+`AgeLabel` string&amp;
+
+
+`MaleValue` double&amp;
+
+
+`FemaleValue` double&amp;
+
+
+</section>
+
+<span id="uid-3c7eafb3bb"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f5a2e2733"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Charts.PyramidDataItem other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Charts.PyramidDataItem](xref:Avalonia.Controls.Charts.PyramidDataItem)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84c09045df"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a2a663a3ed"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2776202e5"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AgeLabel](#uid-885f2b62f6) | The age group or category label (e.g., "0-4", "5-9"). |
+| [FemaleValue](#uid-b13570ce07) | The value for the female population in this age group. |
+| [MaleValue](#uid-ed525c126f) | The value for the male population in this age group. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-885f2b62f6"></span>
+
+### AgeLabel Property
+
+The age group or category label (e.g., "0-4", "5-9").
+
+```csharp
+public string AgeLabel { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b13570ce07"></span>
+
+### FemaleValue Property
+
+The value for the female population in this age group.
+
+```csharp
+public double FemaleValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ed525c126f"></span>
+
+### MaleValue Property
+
+The value for the male population in this age group.
+
+```csharp
+public double MaleValue { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

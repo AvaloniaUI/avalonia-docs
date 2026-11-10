@@ -1,0 +1,165 @@
+---
+title: 'HotReloadEngine'
+hide_title: true
+slug: '/avaloniaui/diagnosticssupport/hotreload/hotreloadengine'
+uid: 'AvaloniaUI.DiagnosticsSupport.HotReload.HotReloadEngine'
+commentId: 'T:AvaloniaUI.DiagnosticsSupport.HotReload.HotReloadEngine'
+docset: 'avalonia-docs'
+packageId: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+assembly: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'AvaloniaUI.DiagnosticsSupport.HotReload'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HotReloadEngine Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">AvaloniaUI.DiagnosticsSupport.HotReload</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>AvaloniaUI.DiagnosticsSupport.HotReload</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>AvaloniaUI.DiagnosticsSupport.HotReload</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HotReloadEngine
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HotReloadEngine
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HotReloadEngine](#uid-4fa651376d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4fa651376d"></span>
+
+### HotReloadEngine Constructor
+
+```csharp
+public HotReloadEngine(Avalonia.Application application, System.Collections.Generic.IReadOnlyDictionary<Type, string> typeToXamlPath, System.Collections.Generic.IReadOnlyDictionary<string, int> pathToKind, AvaloniaUI.DiagnosticsSupport.HotReload.XamlFileResolver fileResolver, Func<System.Collections.Generic.IEnumerable<Avalonia.Controls.TopLevel>> topLevelProvider)
+```
+
+#### Parameters
+
+`application` [Avalonia.Application](xref:Avalonia.Application)
+
+
+`typeToXamlPath` System.Collections.Generic.IReadOnlyDictionary&lt;Type, string&gt;
+
+
+`pathToKind` System.Collections.Generic.IReadOnlyDictionary&lt;string, int&gt;
+
+
+`fileResolver` [AvaloniaUI.DiagnosticsSupport.HotReload.XamlFileResolver](xref:AvaloniaUI.DiagnosticsSupport.HotReload.XamlFileResolver)
+
+
+`topLevelProvider` Func&lt;System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.TopLevel](xref:Avalonia.Controls.TopLevel)&gt;&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [HandleUpdate](#uid-603c346760) | No summary available. |
+| [HandleXamlFileChanged](#uid-7a49f3b2b8) | No summary available. |
+| [InitializeVersionStampHashes](#uid-591c51f6ce) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-603c346760"></span>
+
+### HandleUpdate Method
+
+```csharp
+public void HandleUpdate(Type[] updatedTypes)
+```
+
+#### Parameters
+
+`updatedTypes` Type[]
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a49f3b2b8"></span>
+
+### HandleXamlFileChanged Method
+
+```csharp
+public void HandleXamlFileChanged(string relativePath, string xamlContent, int kind)
+```
+
+#### Parameters
+
+`relativePath` string
+
+
+`xamlContent` string
+
+
+`kind` int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-591c51f6ce"></span>
+
+### InitializeVersionStampHashes Method
+
+```csharp
+public void InitializeVersionStampHashes()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IncrementalReloadEnabled](#uid-379096c66d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-379096c66d"></span>
+
+### IncrementalReloadEnabled Property
+
+```csharp
+public bool IncrementalReloadEnabled { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

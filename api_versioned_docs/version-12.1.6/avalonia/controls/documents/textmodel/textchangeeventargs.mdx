@@ -1,0 +1,149 @@
+---
+title: 'TextChangeEventArgs'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textchangeeventargs'
+uid: 'Avalonia.Controls.Documents.TextModel.TextChangeEventArgs'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextChangeEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The net text change of one operation, raised by
+[Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged](xref:Avalonia.Controls.Documents.TextModel.TextDocument.TextChanged) when the operation's outermost
+[Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange](xref:Avalonia.Controls.Documents.TextModel.TextDocument.BeginChange) scope closes: the text at
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset) that was [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.OldLength) characters long is now
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength) characters long.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextChangeEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> TextChangeEventArgs
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [InsertedText](#uid-388cd755ca) | Gets the text at [[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset) + [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength)) right after the change. Empty for pure deletions. |
+| [Kind](#uid-803e57ef0a) | Gets the kind of change (Insert, Delete, or Replace). |
+| [NewLength](#uid-48d344cf3b) | Gets the length of text that was inserted (0 for pure deletions). |
+| [Offset](#uid-534457e531) | Gets the offset where the change occurred. |
+| [OldLength](#uid-9da55b757c) | Gets the length of text that was deleted (0 for pure insertions). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-388cd755ca"></span>
+
+### InsertedText Property
+
+Gets the text at [[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset), [Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.Offset) +
+[Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength](xref:Avalonia.Controls.Documents.TextModel.TextChangeEventArgs.NewLength)) right after the change. Empty for pure deletions.
+
+```csharp
+public ReadOnlyMemory<char> InsertedText { get; set; }
+```
+
+#### Remarks
+
+The event holds an immutable reference to that text, not a copy; reading this
+property returns a zero-copy view when the text lies in one storage chunk and
+copies it on first read otherwise. Later edits do not change it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-803e57ef0a"></span>
+
+### Kind Property
+
+Gets the kind of change (Insert, Delete, or Replace).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.DocumentChangeKind Kind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48d344cf3b"></span>
+
+### NewLength Property
+
+Gets the length of text that was inserted (0 for pure deletions).
+
+```csharp
+public int NewLength { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-534457e531"></span>
+
+### Offset Property
+
+Gets the offset where the change occurred.
+
+```csharp
+public int Offset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9da55b757c"></span>
+
+### OldLength Property
+
+Gets the length of text that was deleted (0 for pure insertions).
+
+```csharp
+public int OldLength { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
