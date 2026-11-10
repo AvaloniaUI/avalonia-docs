@@ -1,5 +1,5 @@
 {
-  "docsetVersion": "12.1.5",
+  "docsetVersion": "12.1.6",
   "docsetId": "avalonia",
   "feeds": [
     "https://api.nuget.org/v3/index.json"
@@ -7,75 +7,75 @@
   "packages": [
     {
       "id": "Avalonia",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Controls.ColorPicker",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Desktop",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Themes.Fluent",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Fonts.Inter",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Skia",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Native",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.X11",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.FreeDesktop",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Markup.Xaml.Loader",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Browser",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Android",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.iOS",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Headless.XUnit",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.LinuxFramebuffer",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
      {
       "id": "Avalonia.Headless.NUnit",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Win32.Interoperability",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Headless.Vnc",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "AvaloniaUI.DiagnosticsSupport",
@@ -139,7 +139,7 @@
     },
     {
       "id": "Avalonia.Wayland",
-      "version": "12.1.5"
+      "version": "12.1.6"
     },
     {
       "id": "Avalonia.Controls.PdfViewer",
