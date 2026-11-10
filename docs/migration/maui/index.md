@@ -1,53 +1,49 @@
 ---
 title: .NET MAUI
-description: Migrate from .NET MAUI to Avalonia or extend MAUI apps with the Avalonia MAUI Backend.
+description: Migrate from .NET MAUI to Avalonia or extend MAUI apps with Avalonia.Controls.Maui.
 doc-type: migration
 ---
 
-If you are a .NET MAUI developer, you have two paths to Avalonia. You can keep your existing MAUI codebase and use the Avalonia MAUI Backend to extend it to new platforms, or you can migrate your application to Avalonia directly for full control over the UI framework. This page covers both options.
+If you are a .NET MAUI developer, you have two paths to Avalonia. You can keep your existing MAUI codebase and use Avalonia.Controls.Maui to extend it to new platforms, or you can migrate your application to Avalonia directly for full control over the UI framework. This page covers both options.
 
 :::tip[Need help?]
-The Avalonia team has hands-on experience working with MAUI codebases. Whether you want to adopt the Avalonia MAUI Backend or migrate fully to Avalonia, this is a service we provide. See [Avalonia Services](https://avaloniaui.net/services) for more information.
+The Avalonia team has hands-on experience working with MAUI codebases. Whether you want to adopt Avalonia.Controls.Maui or migrate fully to Avalonia, this is a service we provide. See [Avalonia Services](https://avaloniaui.net/services) for more information.
 :::
 
-## Option 1: Avalonia MAUI backend
+## Option 1: Avalonia.Controls.Maui
 
-The Avalonia MAUI Backend lets you keep your .NET MAUI codebase and replace the rendering layer with Avalonia. Your existing MAUI code, controls, handlers, and layouts continue to work, but they render through Avalonia's cross-platform engine instead of native platform controls.
+Avalonia.Controls.Maui lets you keep your .NET MAUI codebase and replace the rendering layer with Avalonia. Your existing MAUI code, controls, handlers, and layouts continue to work, but they render through Avalonia's cross-platform engine instead of native platform controls.
 
 This gives your MAUI application access to platforms that MAUI does not support on its own:
 
 - **Desktop Linux:** First-class desktop support on Ubuntu, Debian, Fedora, and other distributions, using the same Avalonia renderer that powers demanding desktop applications in production today.
-- **Embedded Linux:** Avalonia already runs on embedded Linux devices, from Raspberry Pi panels to industrial HMIs. The MAUI Backend brings those same capabilities to your MAUI applications.
+- **Embedded Linux:** Avalonia already runs on embedded Linux devices, from Raspberry Pi panels to industrial HMIs. Avalonia.Controls.Maui brings those same capabilities to your MAUI applications.
 - **WebAssembly:** Deploy your MAUI application to the browser with no native dependencies on the client.
-- **Improved desktop performance:** On Windows and macOS, the Avalonia backend plugs into Avalonia's mature desktop story. Early testing on macOS shows significantly improved performance compared to the Mac Catalyst approach.
+- **Improved desktop performance:** On Windows and macOS, Avalonia.Controls.Maui plugs into Avalonia's mature desktop story. Early testing on macOS shows significantly improved performance compared to the Mac Catalyst approach.
 
-Because Avalonia draws every control itself, your MAUI application looks and behaves consistently whether it runs on Windows, macOS, Linux, mobile, or in a browser tab.
+Because Avalonia draws every control itself, your MAUI application looks and behaves consistently whether it runs on Windows, macOS, Linux, or in a browser tab.
 
 ### How it works
 
-At its core, the Avalonia MAUI Backend builds a single set of handlers that map MAUI controls to Avalonia controls. When you create a [`Button`](/api/avalonia/controls/button) in MAUI, it renders as an Avalonia `Button` on every platform, rather than a platform-specific native control.
+At its core, Avalonia.Controls.Maui is a single set of handlers that map MAUI controls to Avalonia controls. When you create a `Button` in MAUI, it renders as an Avalonia [`Button`](/api/avalonia/controls/button), rather than a platform-specific native control. On the native MAUI target frameworks (Android, iOS, Mac Catalyst, and WinUI), your app keeps the native MAUI controls, and you can [embed Avalonia controls](/docs/platform-specific-guides/maui/embedding) in its pages.
 
-MAUI's layout system works similarly. MAUI handles the positioning and constraint calculations itself, and the Avalonia backend positions controls exactly as MAUI specifies. In practice, this means many standard MAUI layout controls work without modification.
+MAUI's layout system works similarly. MAUI handles the positioning and constraint calculations itself, and Avalonia.Controls.Maui positions controls exactly as MAUI specifies. In practice, this means many standard MAUI layout controls work without modification.
 
 Libraries that use `SkiaSharp` and `Microsoft.Maui.Graphics` also work, since Avalonia includes a SkiaSharp-based renderer. This enables a direct mapping of drawn controls with minimal changes.
 
 ### What this means for your code
 
-You do not need to rewrite your application. You add the Avalonia MAUI Backend libraries to your existing project and target the new platforms. Your MAUI XAML, view models, services, and business logic stay the same.
+You do not need to rewrite your application. You add the Avalonia.Controls.Maui packages to your existing project and target the new platforms. Your MAUI XAML, view models, services, and business logic stay the same.
 
-Build-time tools like Resizetizer continue to work. During the build, Resizetizer converts your images, SVGs, and fonts into resources, and the Avalonia backend maps them to Avalonia resources automatically.
+Build-time tools like Resizetizer continue to work. During the build, Resizetizer converts your images, SVGs, and fonts into resources, and Avalonia.Controls.Maui maps them to Avalonia resources automatically.
 
-### Current status
+### Get started
 
-The Avalonia team is developing the MAUI Backend in collaboration with engineers from the MAUI ecosystem. The goal is a stable release alongside .NET 11. Preview releases will follow the .NET MAUI release cadence, with nightly builds available from CI.
+Avalonia.Controls.Maui is available for .NET 11. To create a new app, or to add Avalonia.Controls.Maui to an existing .NET MAUI app, see [Getting started with Avalonia.Controls.Maui](/docs/platform-specific-guides/maui/getting-started). For an overview of the packages and the supported platforms, see [.NET MAUI with Avalonia](/docs/platform-specific-guides/maui).
 
-The initial focus is on Linux and WebAssembly, since MAUI does not target those platforms today. The backend also runs on Windows and macOS, and support for all Avalonia targets is planned.
+Avalonia.Controls.Maui does not fork .NET MAUI. It uses the official .NET MAUI packages, and changes that the integration needs are contributed to the .NET MAUI repository.
 
-The project will not fork .NET MAUI. Any changes needed to support the integration are contributed upstream to the official .NET MAUI repository, so the work benefits the entire ecosystem.
-
-:::note
-The Avalonia MAUI Backend is in active development. Register your interest at [avaloniaui.net](https://avaloniaui.net) to get updates and early access.
-:::
+Before you start, read [Limitations](/docs/platform-specific-guides/maui/limitations) for the .NET MAUI features that are not supported.
 
 ## Option 2: migrate to Avalonia
 
