@@ -5,27 +5,42 @@ description: A top-level content control that represents an operating-system win
 doc-type: reference
 ---
 
-[`Window`](/api/avalonia/controls/window) is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating-system window. It provides the title bar, icon, and system chrome (close, minimize, maximize buttons) that your users expect from a desktop application.
-
-You do not usually create instances of `Window` directly. Instead, you subclass `Window` for each type of window your application needs.
+`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating system (OS) window. It provides the title bar, icon, and system chrome (close, minimize and maximize buttons).
 
 :::tip
-`Window` is only available on desktop platforms (Windows, macOS, Linux). If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
+`Window` is only available on desktop platforms, i.e., Windows, macOS and Linux. If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
 :::
+
+## When to use
+
+You do not usually create direct instances of `Window`. Instead, subclass `Window` for each type of window your application needs.
 
 ## Common properties
 
 | Property | Type | Description |
 | :--- | :--- | :--- |
-| `Title` | `string` | The text displayed in the title bar. |
-| `Icon` | `WindowIcon` | The icon displayed in the title bar and taskbar. |
-| `SizeToContent` | `SizeToContent` | Controls whether the window auto-sizes to fit its content horizontally, vertically, or both. |
-| `WindowState` | `WindowState` | Gets or sets whether the window is `Normal`, `Minimized`, `Maximized`, or `FullScreen`. |
-| `CanResize` | `bool` | Gets or sets whether the user can resize the window. |
-| `ShowInTaskbar` | `bool` | Gets or sets whether the window appears in the operating-system taskbar. |
-| `Topmost` | `bool` | Gets or sets whether the window stays above all other windows. |
-| `WindowDecorations` | `WindowDecorations` | Controls the window chrome (title bar and borders). Set to `None` for a borderless window. |
-| `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area, allowing custom chrome. |
+| `Title` | `string` | Text displayed in the title bar. |
+| `Icon` | `WindowIcon?` | Icon displayed in the title bar and taskbar. |
+| `Height` | `double` | Height of the window. |
+| `Width` | `double` | Width of the window. |
+| `MaxHeight` | `double` | Maximum allowed height of the window. |
+| `MaxWidth` | `double` | Maximum allowed width of the window. |
+| `MinHeight` | `double` | Minimum allowed height of the window. |
+| `MinWidth` | `double` | Minimum allowed width of the window. |
+| `Position` | `PixelPoint` | Position of the window in screen coordinates. |
+| `CanResize` | `bool` | Whether the user can resize the window. Defaults to `true`. |
+| `CanMinimize` | `bool` | Whether the user can minimize the window. Defaults to `true`. |
+| `CanMaximize` | `bool` | Whether the user can maximize the window. Defaults to `true`. Always `false` if `CanResize` is `false`. |
+| `SizeToContent` | `SizeToContent` | Controls whether the window auto-sizes to fit its content. `Height`, `Width`, `WidthAndHeight`, or `Manual`. |
+| `WindowStartupLocation` | `WindowStartupLocation` | Where the window appears on startup. `Manual`, `CenterScreen`, or `CenterOwner`. |
+| `WindowState` | `WindowState` | Current state of the window. `Normal`, `Minimized`, `Maximized` or `FullScreen`. |
+| `IsDialog` | `bool` | Whether the window is a dialog. `true` if opened with `ShowDialog`, `false` if opened with `Show`. |
+| `ShowInTaskbar` | `bool` | Whether the window appears in the OS taskbar. |
+| `Topmost` | `bool` | Whether the window stays above all other windows. |
+| `WindowDecorations` | `WindowDecorations` | Whether to show the window chrome and/or borders. `Full`, `BorderOnly`, or `None`. |
+| `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
+| `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
+| `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes. `OwnerAndChildWindows` is the default and closes children before the window. Set to `OwnerWindowOnly` to close only the owner window. |
 
 ## Show, hide, and close a window
 
@@ -134,6 +149,7 @@ window.Closing += (s, e) =>
 - [Main window](/docs/fundamentals/main-window)
 - [Window management](/docs/app-development/window-management)
 - [How to: Work with windows](/docs/how-to/window-how-to)
+- [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations)
 - [`ContentControl`](/controls/data-display/contentcontrol)
 - [`UserControl`](/controls/primitives/usercontrol)
 - [`Window` source code (GitHub)](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Window.cs)

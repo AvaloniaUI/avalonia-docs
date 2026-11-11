@@ -59,29 +59,6 @@ Close("user clicked OK");
 
 The value is returned from the `ShowDialog<T>` call in the parent.
 
-## Window properties
-
-| Property | Description |
-|---|---|
-| `Title` | The text displayed in the window title bar. |
-| `Width`, `Height` | Initial size. |
-| `MinWidth`, `MinHeight` | Minimum allowed size. |
-| `MaxWidth`, `MaxHeight` | Maximum allowed size. |
-| `WindowStartupLocation` | Where the window appears: `Manual`, `CenterScreen`, `CenterOwner`. |
-| `Position` | The window position in screen coordinates (when `WindowStartupLocation` is `Manual`). |
-| `CanResize` | Whether the user can resize the window. |
-| `CanMinimize` | Whether the minimize button is enabled. Defaults to `true`. |
-| `CanMaximize` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |
-| `IsDialog` | Read-only. `true` when the window was opened with `ShowDialog`, `false` when opened with `Show`. |
-| `ShowInTaskbar` | Whether the window appears in the OS taskbar. |
-| `Topmost` | Whether the window stays on top of other windows. |
-| `WindowState` | Current state: `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
-| `WindowDecorations` | Title bar and border style: `Full`, `BorderOnly`, `None`. |
-| `ExtendClientAreaToDecorationsHint` | Extends the client area into the title bar area for custom chrome. Uses `WindowDrawnDecorations` for application-drawn decorations. |
-| `Icon` | The window icon displayed in the title bar and taskbar. |
-| `TransparencyLevelHint` | Enables window transparency: `None`, `Transparent`, `AcrylicBlur`, `Mica`. See [How to work with windows](/docs/how-to/window-how-to) for more information. |
-| `ClosingBehavior` | Controls how child windows behave when the owner closes: `OwnerAndChildWindows` (default, children close first and can cancel) or `OwnerWindowOnly` (only the owner's `Closing` event is checked). |
-
 ## Window sizing
 
 ### Sizing to content

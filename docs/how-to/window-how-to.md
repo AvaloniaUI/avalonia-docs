@@ -266,22 +266,6 @@ Or set it in code:
 Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.ico")));
 ```
 
-## Key Properties
-
-| Property | Type | Description |
-|---|---|---|
-| `Title` | `string` | Window title bar text. |
-| `WindowState` | `WindowState` | `Normal`, `Minimized`, `Maximized`, `FullScreen`. |
-| `WindowStartupLocation` | `WindowStartupLocation` | `Manual`, `CenterScreen`, `CenterOwner`. |
-| `WindowDecorations` | `WindowDecorations` | `Full`, `BorderOnly`, `None`. |
-| `CanResize` | `bool` | Whether the user can resize the window. |
-| `CanMinimize` | `bool` | Whether the minimize button is enabled. Defaults to `true`. |
-| `CanMaximize` | `bool` | Whether the maximize button is enabled. Defaults to `true`. Automatically `false` when `CanResize` is `false`. |
-| `Topmost` | `bool` | Keep the window above all others. |
-| `ShowInTaskbar` | `bool` | Show in the OS taskbar. |
-| `Icon` | `WindowIcon` | Window icon for title bar and taskbar. |
-| `TransparencyLevelHint` | `WindowTransparencyLevel` | Requested transparency: `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. |
-
 ## See Also
 
 - [Window Control Reference](/controls/primitives/window): Property tables.
