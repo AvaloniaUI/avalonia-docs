@@ -139,9 +139,13 @@ Create a borderless window by disabling system decorations:
         TransparencyLevelHint="AcrylicBlur">
 ```
 
-### Custom title bar with drag region
+### Creating a custom title bar
 
-Mark an element as a title bar drag region using the `WindowDecorationProperties.ElementRole` attached property. The operating system handles drag and double-click-to-maximize behavior automatically:
+Mark an element as a title bar to allow users to drag the window using that element. On most platforms, the operating system automatically enables drag and double-click-to-maximize behavior on the designated title bar.
+
+1. In your `<Window>` tag, set `ExtendClientAreaToDecorationsHint` to `True`.
+2. Add a control to act as your custom title bar.
+3. Set its `WindowDecorationProperties.ElementRole` to `TitleBar`.
 
 ```xml
 <Grid RowDefinitions="32,*">
