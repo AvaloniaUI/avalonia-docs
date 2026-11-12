@@ -442,6 +442,7 @@ const sidebars: SidebarsConfig = {
         'how-to/responsive-layout-how-to',
         'how-to/coded-ui-how-to',
         'how-to/custom-font-how-to',
+        'how-to/screens-how-to',
       ],
     },
     {
