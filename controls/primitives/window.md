@@ -28,17 +28,17 @@ You do not usually create direct instances of `Window`. Instead, subclass `Windo
 | `MinHeight` | `double` | Minimum allowed height of the window. |
 | `MinWidth` | `double` | Minimum allowed width of the window. |
 | `Position` | `PixelPoint` | Position of the window in screen coordinates. |
-| `CanResize` | `bool` | Whether the user can resize the window. Defaults to `true`. |
-| `CanMinimize` | `bool` | Whether the user can minimize the window. Defaults to `true`. |
-| `CanMaximize` | `bool` | Whether the user can maximize the window. Defaults to `true`. Always `false` if `CanResize` is `false`. |
+| `CanResize` | `bool` | Whether the user can resize the window. Defaults to `True`. |
+| `CanMinimize` | `bool` | Whether the user can minimize the window. Defaults to `True`. |
+| `CanMaximize` | `bool` | Whether the user can maximize the window. Defaults to `True`. Always `False` if `CanResize` is `False`. |
 | `SizeToContent` | `SizeToContent` | Controls whether the window auto-sizes to fit its content. `Height`, `Width`, `WidthAndHeight`, or `Manual`. |
 | `WindowStartupLocation` | `WindowStartupLocation` | Where the window appears on startup. `Manual`, `CenterScreen`, or `CenterOwner`. |
 | `WindowState` | `WindowState` | Current state of the window. `Normal`, `Minimized`, `Maximized` or `FullScreen`. |
-| `IsDialog` | `bool` | Whether the window is a dialog. `true` if opened with `ShowDialog`, `false` if opened with `Show`. |
+| `IsDialog` | `bool` | Whether the window is a dialog. `True` if opened with `ShowDialog`, `False` if opened with `Show`. |
 | `ShowInTaskbar` | `bool` | Whether the window appears in the OS taskbar. |
 | `Topmost` | `bool` | Whether the window stays above all other windows. |
 | `WindowDecorations` | `WindowDecorations` | Whether to show the window chrome and/or borders. `Full`, `BorderOnly`, or `None`. |
-| `ExtendClientAreaToDecorationsHint` | `bool` | When `true`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
+| `ExtendClientAreaToDecorationsHint` | `bool` | When `True`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
 | `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
 | `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes. `OwnerAndChildWindows` is the default and closes children before the window. Set to `OwnerWindowOnly` to close only the owner window. |
 
