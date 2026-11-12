@@ -194,18 +194,6 @@ Elements marked with `WindowDecorationProperties.ElementRole="TitleBar"` support
 
 For more details on the `ElementRole` values, see the [custom title bar how-to](/docs/how-to/window-how-to#custom-title-bar-with-drag-region).
 
-## Window events
-
-| Event | When it fires |
-|---|---|
-| `Opened` | The window has been shown for the first time. |
-| `Closing` | The window is about to close. Can be cancelled. |
-| `Closed` | The window has closed. |
-| `Activated` | The window received focus. |
-| `Deactivated` | The window lost focus. |
-| `PositionChanged` | The window was moved. |
-| `Resized` | The window was resized. |
-
 ## Working with screens
 
 The `Screens` API provides information about connected monitors. Access it from any `TopLevel`:
@@ -260,10 +248,9 @@ screens.Changed += (sender, args) =>
 | Feature | Windows | macOS | Linux |
 |---|---|---|---|
 | `Topmost` | Supported | Supported | Supported |
-| `TransparencyLevelHint` | All levels | `Transparent` only | Depends on compositor |
+| `TransparencyLevelHint` | All levels | `Transparent` and native blur (mapped to `AcrylicBlur`) | Depends on compositor |
 | `WindowDecorations.None` | Supported | Supported | Supported |
 | `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
-| Modal dialogs | Blocks parent window | Sheet-style on macOS | Blocks parent window |
 
 ## See also
 

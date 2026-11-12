@@ -42,6 +42,18 @@ You do not usually create direct instances of `Window`. Instead, subclass `Windo
 | `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
 | `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes. `OwnerAndChildWindows` is the default and closes children before the window. Set to `OwnerWindowOnly` to close only the owner window. |
 
+## Window events
+
+| Event | When it fires |
+|---|---|
+| `Opened` | Window is shown for the first time. |
+| `Closing` | Window is about to close. Can be cancelled. |
+| `Closed` | Window has closed. |
+| `Activated` | Window has received focus. |
+| `Deactivated` | Window has lost focus. |
+| `PositionChanged` | Window was moved. |
+| `Resized` | Window was resized. |
+
 ## Show, hide, and close a window
 
 You can show a window by calling the `Show` method:
