@@ -243,15 +243,6 @@ screens.Changed += (sender, args) =>
 };
 ```
 
-## Platform differences
-
-| Feature | Windows | macOS | Linux |
-|---|---|---|---|
-| `Topmost` | Supported | Supported | Supported |
-| `TransparencyLevelHint` | All levels | `Transparent` and native blur (mapped to `AcrylicBlur`) | Depends on compositor |
-| `WindowDecorations.None` | Supported | Supported | Supported |
-| `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
-
 ## See also
 
 - [Main Window](/docs/fundamentals/main-window): The primary application window.

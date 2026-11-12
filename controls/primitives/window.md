@@ -5,7 +5,9 @@ description: A top-level content control that represents an operating-system win
 doc-type: reference
 ---
 
-`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating system (OS) window. It provides the title bar, icon, and system chrome (close, minimize and maximize buttons).
+`Window` is a top-level [`ContentControl`](/controls/data-display/contentcontrol) that represents an operating system (OS) window. It provides the title bar, icon, and system chrome, i.e., close, minimize and maximize buttons.
+
+This page covers technical reference information for the `Window` control. For practical guidance on using `Window`, see [How to: Work with windows](/docs/how-to/window-how-to).
 
 :::tip
 `Window` is only available on desktop platforms, i.e., Windows, macOS and Linux. If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
@@ -41,6 +43,15 @@ You do not usually create direct instances of `Window`. Instead, subclass `Windo
 | `ExtendClientAreaToDecorationsHint` | `bool` | When `True`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
 | `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
 | `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes. `OwnerAndChildWindows` is the default and closes children before the window. Set to `OwnerWindowOnly` to close only the owner window. |
+
+### Platform differences
+
+| Feature | Windows | macOS | Linux |
+|---|---|---|---|
+| `Topmost` | Supported | Supported | Supported |
+| `TransparencyLevelHint` | All levels | `Transparent` and native blur (mapped to `AcrylicBlur`) | Depends on compositor |
+| `WindowDecorations.None` | Supported | Supported | Supported |
+| `ExtendClientAreaToDecorationsHint` | Supported | Supported | Limited support |
 
 ## Window events
 
