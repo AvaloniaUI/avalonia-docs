@@ -65,6 +65,9 @@ const config: RedirectConfig = {
     { from: '/docs/styling/style-precedence', to: '/docs/properties/value-precedence' },
     // Redirect retired ItemsRepeater pages
     { from: ['/controls/data-display/collections/itemsrepeater', '/docs/reference/controls/itemsrepeater'], to: '/controls/data-display/collections/itemscontrol' },
+
+    // Redirect window-management page to window-how-to following combination
+    { from: '/docs/app-development/window-management', to: '/docs/how-to/window-how-to' },
   ],
   createRedirects(existingPath: string): string[] | undefined {
     const redirects = [

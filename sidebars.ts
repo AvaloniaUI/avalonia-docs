@@ -314,7 +314,6 @@ const sidebars: SidebarsConfig = {
         'app-development/xaml-preview-and-design-settings',
         'app-development/data-validation',
         'app-development/threading',
-        'app-development/window-management',
         'app-development/performance',
         'app-development/accessibility',
         'app-development/native-interop',

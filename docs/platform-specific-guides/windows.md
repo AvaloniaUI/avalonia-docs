@@ -124,7 +124,7 @@ var actual = myWindow.ActualTransparencyLevel;
 
 You must set the window's `Background` property to `Transparent` for any transparency level to take effect. An opaque background covers transparency effects entirely.
 
-For details, see [Window Management](/docs/app-development/window-management).
+For details, see [How to: Work with windows](/docs/how-to/window-how-to).
 
 :::warning[Set a non-transparent fallback!]
 Windows may suppress transparency at the OS level regardless of your Avalonia configuration. Common causes are battery saver mode or remote/virtual sessions. It is advisable to set a non-transparent fallback that fits your UI, in case your users run your app under such conditions.
@@ -156,7 +156,7 @@ Setting `WindowDecorations="None"` removes the system chrome entirely, giving yo
 
 Setting `WindowDecorations="Full"` keeps the system's minimize, maximize, and close buttons visible. They will appear alongside your custom title bar, if you have made one. On Windows, disabled caption buttons are hidden rather than greyed out.
 
-For details, see [Window Management](/docs/app-development/window-management#custom-title-bar).
+For details, see [How to: Work with windows](/docs/how-to/window-how-to#creating-a-custom-title-bar).
 
 ## Dark mode and system theme detection
 
@@ -214,7 +214,7 @@ var scaling = screen?.Scaling ?? 1.0;
 
 For bitmap assets, Avalonia automatically selects `@2x` variants when the display scaling is 2.0 or higher.
 
-For details, see [Window Management](/docs/app-development/window-management#working-with-screens).
+For details, see [How to: Work with screens](/docs/how-to/screens-how-to).
 
 ## Embedding native Win32 controls
 
@@ -419,7 +419,7 @@ On Windows, Avalonia's platform services use Win32 APIs. Here is a summary of th
 - [Packaging for Windows](/tools/parcel/packaging-for-windows)
 - [WPF migration guide](/docs/migration/wpf)
 - [Native Platform Interop](/docs/app-development/native-interop)
-- [Window Management](/docs/app-development/window-management)
+- [How to: Work with windows](/docs/how-to/window-how-to)
 - [Platform Settings](/docs/services/platform-settings)
 - [Keyboard and hotkeys](/docs/input-interaction/keyboard-and-hotkeys)
 - [Accessibility](/docs/app-development/accessibility)

@@ -170,7 +170,6 @@ window.Closing += (s, e) =>
 ## See also
 
 - [Main window](/docs/fundamentals/main-window)
-- [Window management](/docs/app-development/window-management)
 - [How to: Work with windows](/docs/how-to/window-how-to)
 - [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations)
 - [`ContentControl`](/controls/data-display/contentcontrol)

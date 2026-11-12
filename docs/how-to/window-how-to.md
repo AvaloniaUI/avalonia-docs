@@ -274,5 +274,4 @@ Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.i
 
 - [Window Control Reference](/controls/primitives/window): Property tables.
 - [Dialogs How-To](/docs/how-to/dialogs-how-to): Dialog patterns and file pickers.
-- [Window Management](/docs/app-development/window-management): Window lifecycle.
 - [Application Lifetimes](/docs/fundamentals/application-lifetimes): Desktop vs mobile lifetime models.
