@@ -1,7 +1,7 @@
 ---
 id: data-context
 title: Data context
-description: Understand how DataContext provides the default data source for bindings, how it inherits through the control tree, and where to set it.
+description: Understand how data context provides the default data source for bindings, how it inherits through the control tree, and where to set it.
 doc-type: explanation
 ---
 
@@ -14,30 +14,35 @@ When Avalonia performs data binding, it must locate an application object to bin
 
 <Image light={DataContextOverviewDiagram} alt="Diagram showing how data context connects controls to view model properties" position="center" maxWidth={400} cornerRadius="true"/>
 
-Every control in Avalonia has a `DataContext` property, including built-in controls, user controls, and windows.
+## Overview
+
+Every control in Avalonia has a `DataContext` property, whether [built-in controls](/controls/), [user controls](/controls/primitives/usercontrol), or [windows](/controls/primitives/window).
 
 When binding, Avalonia performs a hierarchical search of the logical control tree, starting with the control where you define the binding, until it finds a data context to use.
 
 <Image light={DataContextTreeSearchDiagram} alt="Diagram showing data context inheritance through the control tree" position="center" maxWidth={400} cornerRadius="true"/>
+<br />
 
-This means that a control defined in a window can use the data context of the window; or (as above) a control in a control in a window can use the window's data context.
+This means that a control defined in a window can use the data context of the window. Or, as above, a control in a control in a window can use the window's data context.
 
 :::info
 For information about the control trees in Avalonia, and how to see them at run-time, see [Control trees](/docs/custom-controls/control-trees).
 :::
 
-## Example
+## New projects
 
-You can see the window's data context being set if you create a new project using the _Avalonia MVVM Application_ template. Open the **App.axaml.cs** file to see the code:
+### Main window data context
 
-```csharp
+New projects created with the **Avalonia MVVM Application** template automatically include a `MainWindow` whose data context is set to `MainViewModel`. You can find this in the `App.axaml.cs` file:
+
+```csharp title="App.axaml.cs"
 public override void OnFrameworkInitializationCompleted()
 {
     if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
     {
         desktop.MainWindow = new MainWindow
         {
-            DataContext = new MainWindowViewModel(),
+            DataContext = new MainViewModel(),
         };
     }
 
@@ -45,38 +50,45 @@ public override void OnFrameworkInitializationCompleted()
 }
 ```
 
-You can find the object being set to the window's data context in the file **MainWindowViewModel.cs**:
+### Data context objects
 
-```csharp
-public class MainWindowViewModel : ViewModelBase
+Objects included in the main window's data context can be found in the file `MainViewModel.cs`:
+
+```csharp title="MainViewModel.cs"
+public partial class MainViewModel : ViewModelBase
 {
-    public string Greeting => "Welcome to Avalonia!";
+    [ObservableProperty] public partial string Greeting { get; set; } = "Welcome to Avalonia!";
 }
 ```
 
-In the main window file **MainWindow.axaml**, you can see that the window content area contains a `TextBlock` with its `Text` property bound to the `Greeting` property.
+### Binding to the data context
 
-```xml
+In the main window file `MainWindow.axaml`, you can see that the window's content area contains a `TextBox` that uses a `Text` property bound to `Greeting`.
+
+When the project runs, the data binder searches up the logical control tree from the text box and finds a data context set at the main window level. So the bound text appears as "Welcome to Avalonia!", as defined in the main view model.
+
+```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:AvaloniaMVVMApplication2.ViewModels"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaMVVMApplication2.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaMVVMApplication2">
 
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainViewModel />
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <TextBox Text="{Binding Greeting}"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center" />
 
 </Window>
 ```
-
-When the project runs, the data binder searches up the logical control tree from the text block and finds a data context set at the main window level. So the bound text appears as:
 
 <Image light={DataContextGreetingBindingScreenshot} alt="App window showing a greeting bound from the data context" position="center" maxWidth={400} cornerRadius="true"/>
 
@@ -189,4 +201,4 @@ Further discussion of data binding requires a background in the MVVM pattern. Fo
 - [Introduction to data binding](/docs/data-binding/introduction-to-data-binding): Data binding overview.
 - [Data binding syntax](/docs/data-binding/data-binding-syntax): Binding paths, modes, and converters.
 - [XAML preview and design settings](/docs/app-development/xaml-preview-and-design-settings): Design-time data context configuration.
-- [Binding debugging](/docs/data-binding/binding-debugging): Diagnose bindings that produce no value, including a `null` data context.
+- [Binding debugging](/docs/data-binding/binding-debugging): Diagnose data binding issues.
