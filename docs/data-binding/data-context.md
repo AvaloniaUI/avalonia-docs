@@ -69,7 +69,7 @@ When the project runs, the data binder searches up the logical control tree from
 ```xml title="MainWindow.axaml"
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:vm="using:AvaloniaMVVMApplication2.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -93,7 +93,7 @@ When the project runs, the data binder searches up the logical control tree from
 
 ## Setting the data context
 
-Avalonia does not automatically assign a control's data context. Until `DataContext` is set, any bindings on the control do not work, as they have no source to read from.
+Avalonia does not automatically assign a control's data context. Because of this, any bindings that require a source `DataContext` do not work until it is set.
 
 As described above, [new projects](#new-projects) started with the **Avalonia MVVM Application** template automatically set `MainViewModel` as the data context for `MainWindow` in the `App.axaml.cs` file. Any additional window you create needs its own data context.
 
@@ -126,7 +126,7 @@ When data context is set in the code-behind, the window always creates its own v
 ```csharp
 public partial class MyWindow : Window
 {
-    public SettingsWindow()
+    public MyWindow()
     {
         InitializeComponent();
         DataContext = new MyViewModel();
