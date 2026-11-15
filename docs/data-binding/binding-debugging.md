@@ -55,6 +55,10 @@ public static AppBuilder BuildAvaloniaApp()
 
 **Fix:** Use [DevTools](#using-avalonia-devtools) to inspect the `DataContext` at the control level.
 
+:::info
+See [Setting the data context](/docs/data-binding/data-context#setting-the-data-context) for guidance on how to set the data context on controls.
+:::
+
 ### Binding mode mismatch
 
 **Symptom:** Changes in the UI do not propagate to the view model, or vice versa.
