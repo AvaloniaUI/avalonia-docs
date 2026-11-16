@@ -34,7 +34,7 @@ You must also add an `<xpf-nightly>` entry under `packageSourceCredentials` in t
   <add key="xpf-nightly" value="https://xpf-nightly-nuget-feed.avaloniaui.net/v3/index.json" />
 
   <!-- Avalonia nightly feed to ensure dependencies resolve -->
-  <add key="avalonia-nightly" value="https://nuget-feed-all.avaloniaui.net/v3/index.json" />
+  <add key="avalonia-nightly" value="https://nuget-feed-nightly.avaloniaui.net/v3/index.json" />
 </packageSources>
 
 <packageSourceCredentials>
