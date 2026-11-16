@@ -7,30 +7,6 @@ doc-type: overview
 
 Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.
 
-## Creating windows
-
-Windows are typically defined in XAML with a code-behind class:
-
-```xml title="SecondWindow.axaml"
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="MyApp.SecondWindow"
-        Title="Second Window"
-        Width="400" Height="300">
-    <TextBlock Text="Hello from the second window" />
-</Window>
-```
-
-```csharp title="SecondWindow.axaml.cs"
-public partial class SecondWindow : Window
-{
-    public SecondWindow()
-    {
-        InitializeComponent();
-    }
-}
-```
-
 ### Opening a window
 
 ```csharp

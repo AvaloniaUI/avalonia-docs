@@ -5,7 +5,49 @@ description: Sizing, positioning, dialogs, multi-window apps, startup behavior, 
 doc-type: how-to
 ---
 
-This guide covers common Window scenarios: sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome.
+This guide covers practical usage of the [`Window`](/controls/primitives/window) control.
+
+## Creating a window
+
+Add a new `.axaml` file for the window, together with a dependent [code-behind](/docs/fundamentals/code-behind) class.
+
+<Tabs>
+
+<TabItem value="xaml" label="MyWindow.axaml">
+
+```xml
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="MyApp.MyWindow"
+        Title="MyWindow"
+        Width="400" Height="300">
+    <TextBlock Text="Hello world!" />
+</Window>
+```
+
+</TabItem>
+
+<TabItem value="code-behind" label="MyWindow.axaml.cs">
+
+```csharp
+using Avalonia.Controls;
+
+namespace MyApp.Views;
+
+public partial class MyWindow : Window
+{
+    public MyWindow()
+    {
+        InitializeComponent();
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Showing, hiding and closing
 
 ## Setting Window Size and Position
 

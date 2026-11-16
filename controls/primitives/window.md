@@ -13,10 +13,6 @@ This page covers technical reference information for the `Window` control. For p
 `Window` is only available on desktop platforms, i.e., Windows, macOS and Linux. If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
 :::
 
-## When to use
-
-You do not usually create direct instances of `Window`. Instead, subclass `Window` for each type of window your application needs.
-
 ## Common properties
 
 | Property | Type | Description |
