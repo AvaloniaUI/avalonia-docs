@@ -22,7 +22,9 @@ When you add the feed to your `NuGet.config` file, supply these same credentials
 
 ## Configuring feeds for nightly builds
 
-Nightly builds of XPF may depend on pre-release versions of Avalonia. To make sure all dependencies resolve correctly, add the following package sources to your `NuGet.config` file. (See [Add a `nuget.config`](/xpf/getting-started#step-2-add-a-nugetconfig) for the full setup.)
+Nightly builds of XPF may depend on pre-release versions of Avalonia. To make sure all dependencies resolve correctly, add the following package sources to your `NuGet.config` file.
+
+You must also add an `<xpf-nightly>` entry under `packageSourceCredentials` in the same file, using "license" as the username and your XPF license key as the password. See [Add a `nuget.config`](/xpf/getting-started#step-2-add-a-nugetconfig) for the credential setup.
 
 ```xml
 <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
