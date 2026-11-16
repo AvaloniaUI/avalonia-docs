@@ -40,15 +40,26 @@ You can get your license key from the [Avalonia portal](https://portal.avaloniau
 <configuration>
   <packageSources>
     <clear />
-    <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
+    <!-- XPF stable versions -->
     <add key="xpf" value="https://xpf-nuget-feed.avaloniaui.net/v3/index.json" />
-    <add key="avalonia-nightly" value="https://nuget-feed-all.avaloniaui.net/v3/index.json" />
+    <add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
+    
+    <!-- Optional: XPF nightly feed -->
+    <add key="xpf-nightly" value="https://xpf-nightly-nuget-feed.avaloniaui.net/v3/index.json" />
+    <add key="avalonia-nightly" value="https://nuget-feed-nightly.avaloniaui.net/v3/index.json" />
   </packageSources>
   <packageSourceCredentials>
+    <!-- XPF credentials. Get your license key from https://portal.avaloniaui.net/ -->
     <xpf>
       <add key="Username" value="license" />
-      <add key="ClearTextPassword" value="<YOUR_LICENSE_KEY>" />
+      <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
     </xpf>
+
+    <!-- Optional: Repeat credential configuration for xpf-nightly if using the XPF nightly feed -->
+    <xpf-nightly>
+      <add key="Username" value="license" />
+      <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
+  </xpf-nightly>
   </packageSourceCredentials>
 </configuration>
 ```

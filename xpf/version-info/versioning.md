@@ -22,14 +22,28 @@ When you add the feed to your `NuGet.config` file, supply these same credentials
 
 ## Configuring feeds for nightly builds
 
-Nightly builds of XPF may depend on pre-release versions of Avalonia. To make sure all dependencies resolve correctly, add the following package sources to your `NuGet.config` file.
+To use nightly builds of XPF, add the package source `https://xpf-nightly-nuget-feed.avaloniaui.net/v3/index.json` to your `nuget.config` file. (See [Add a `nuget.config`](/xpf/getting-started#step-2-add-a-nugetconfig) for the full setup.)
 
-You must also add an `<xpf-nightly>` entry under `packageSourceCredentials` in the same file, using "license" as the username and your XPF license key as the password. See [Add a `nuget.config`](/xpf/getting-started#step-2-add-a-nugetconfig) for the credential setup.
+XPF nightly builds may depend on pre-release versions of Avalonia. To make sure all dependencies resolve correctly, you should also add the Avalonia nightly package source, `https://nuget-feed-nightly.avaloniaui.net/v3/index.json`.
 
-```xml
-<add key="api.nuget.org" value="https://api.nuget.org/v3/index.json" />
-<add key="xpf-nightly" value="https://xpf-nightly-nuget-feed.avaloniaui.net/v3/index.json" />
-<add key="avalonia-nightly" value="https://nuget-feed-all.avaloniaui.net/v3/index.json" />
+You must also add an `<xpf-nightly>` entry under `packageSourceCredentials` in the same file, using "license" as the username and your XPF license key as the password.
+
+```xml title="nuget.config"
+<packageSources>
+  <!-- XPF nightly feed -->
+  <add key="xpf-nightly" value="https://xpf-nightly-nuget-feed.avaloniaui.net/v3/index.json" />
+
+  <!-- Avalonia nightly feed to ensure dependencies resolve -->
+  <add key="avalonia-nightly" value="https://nuget-feed-all.avaloniaui.net/v3/index.json" />
+</packageSources>
+
+<packageSourceCredentials>
+  <!-- Add credentials for xpf-nightly. Credentials stored for xpf are not applied automatically. -->
+  <xpf-nightly>
+    <add key="Username" value="license" />
+    <add key="ClearTextPassword" value="YOUR_LICENSE_KEY" />
+  </xpf-nightly>
+</packageSourceCredentials>
 ```
 
 ## Pinning a specific version
