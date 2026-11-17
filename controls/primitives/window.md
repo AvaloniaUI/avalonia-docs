@@ -13,6 +13,20 @@ This page covers technical reference information for the `Window` control. For p
 `Window` is only available on desktop platforms, i.e., Windows, macOS and Linux. If you are targeting mobile or browser, use [`UserControl`](/controls/primitives/usercontrol) with a navigation framework instead.
 :::
 
+## When to use
+
+The default **Avalonia MVVM Application** template includes only a main window. If you are making a single-view app, this is usually all you need. You can change what the user sees by swapping content inside the main window, without having to open new windows.
+
+Add new windows when some content needs to exist separately from the main window. For example:
+
+- **Dialogs** that ask for input or confirmation before the user can continue, such as a "Save changes?" prompt. Open these with [`ShowDialog`](/docs/how-to/window-how-to#opening-a-modal-dialog).
+- **Settings or preferences screens** that the user may open now and then.
+- **Tool windows** that should stay open beside the main window, such as palettes, inspectors, or property panels.
+- **Document windows** in apps where users can work on several files at once, each in its own window.
+- **Views on other monitors**, such as a presenter view on one screen and full-screen output on another.
+
+A new window does not inherit the data context of the window that opens it. Each window is the root of its own logical tree, so its `DataContext` is `null` until you set it. When creating a new window, always remember to give it a `DataContext`, usually a view model of its own. See [Setting the data context](/docs/data-binding/data-context#setting-the-data-context) for more information.
+
 ## Common properties
 
 | Property | Type | Description |
