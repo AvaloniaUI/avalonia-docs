@@ -1,0 +1,57 @@
+/* Cookie consent banner, lifted from the marketing site (Avalonia.Web
+   src/marketing/src/index.css) so both properties present the same banner. */
+
+@keyframes cookie-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookie-slide-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes cookie-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cookie-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Mobile: full-width, bottom-center */
+@media (max-width: 640px) {
+  .cookie-banner-position {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .cookie-actions {
+    flex-direction: column !important;
+  }
+
+  .cookie-actions button {
+    width: 100% !important;
+  }
+
+  .cookie-actions > div {
+    display: none !important;
+  }
+}

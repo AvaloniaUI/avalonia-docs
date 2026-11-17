@@ -32,6 +32,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          POSTHOG_PROJECT_TOKEN: ${{ vars.POSTHOG_PROJECT_TOKEN }}
+          POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
         run: npm run build || true
 
       - name: Verify build output

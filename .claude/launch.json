@@ -6,6 +6,20 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "start", "--", "--port", "3099"],
       "port": 3099
+    },
+    {
+      "name": "docs-posthog-test",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "POSTHOG_PROJECT_TOKEN=phc_uPnRmJcpWhq4MTrppkfrA2B8RgSNiEugFKi2gL5o7o2X",
+        "npm",
+        "run",
+        "start:light",
+        "--",
+        "--port",
+        "3099"
+      ],
+      "port": 3099
     }
   ]
 }

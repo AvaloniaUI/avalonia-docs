@@ -26,7 +26,16 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  clientModules: ['./src/clientModules/analyticsClient.ts'],
+  clientModules: [
+    './src/clientModules/analyticsClient.ts',
+    './src/clientModules/posthogClient.ts',
+  ],
+  // The PostHog token is a public, send-only key baked in at build time. CI
+  // sets the production project's token; builds without one send nothing.
+  customFields: {
+    posthogToken: process.env.POSTHOG_PROJECT_TOKEN,
+    posthogHost: process.env.POSTHOG_HOST,
+  },
   headTags: [
     {
       tagName: "link",
