@@ -75,11 +75,10 @@ A new window does not inherit the data context of the window that opens it. Each
 | `PositionChanged` | Window was moved. |
 | `Resized` | Window was resized. |
 
-## Practical notes
+## Notes
 
-- **Startup window.** Your application's main window is typically set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
-- **Multiple windows.** You can open as many windows as you need by creating new instances and calling `Show`. Each window runs independently within the same application.
-- **Positioning.** Use the `Position` property (of type `PixelPoint`) to set the window's screen coordinates, or set `WindowStartupLocation` to `CenterScreen` or `CenterOwner`.
+- **Startup window.** Your application's main window is set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
+- **Multiple windows.** You can open as many windows as you need by creating new instances and calling [`Show`](/docs/how-to/window-how-to#opening-a-window). Each window runs independently within the same application.
 - **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime.
 
 ## See also
