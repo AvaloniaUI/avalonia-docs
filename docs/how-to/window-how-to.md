@@ -9,7 +9,7 @@ This guide covers practical usage of the [`Window`](/controls/primitives/window)
 
 ## Creating a window
 
-Add a new `.axaml` file for the window, together with a dependent [code-behind](/docs/fundamentals/code-behind) class.
+Add a new `.axaml` file containing the window's XAML, together with a dependent [code-behind](/docs/fundamentals/code-behind) class.
 
 <Tabs>
 
@@ -47,7 +47,71 @@ public partial class MyWindow : Window
 
 </Tabs>
 
-## Showing, hiding and closing
+## Opening and closing
+
+### Opening a window
+
+Open a window by calling the `Show` method.
+
+```csharp
+var window = new MyWindow();
+window.Show();
+```
+
+### Opening a modal dialog
+
+Open a window as a modal dialog by calling the `ShowDialog` method. This method requires you to pass an owner window, so that the system knows which window the dialog belongs to. The owner window is inactive while the dialog is open.
+
+```csharp
+var dialog = new MyWindow();
+var ownerWindow = this; // "this" makes the current window the owner
+dialog.ShowDialog(ownerWindow);
+```
+
+### Closing a window
+
+Close a window by calling the `Close` method.
+
+```csharp
+Close();
+```
+
+### Hiding a window
+
+Hide a window by calling the `Hide` method. `Hide` does not close the window, meaning you can show the same window again by calling `Show`.
+
+```csharp
+Hide();
+```
+
+:::danger
+If the window was closed instead of hidden, calling `Show` throws an exception.
+:::
+
+### Closing a modal dialog with a result
+
+A window opened as a [modal dialog](#opening-a-modal-dialog) can be set to return a result on close. You can do this by giving the `Close` method a value.
+
+```csharp title="MyWindow.axaml.cs"
+Close("User has acknowledged");
+```
+
+The owner window can read the result through the `ShowDialog<T>` method. Use this method with `async` so that it can await the dialog closure.
+
+```csharp title="MainWindow.axaml.cs"
+private async void OpenModal(object? sender, RoutedEventArgs e)
+{
+    var dialog = new MyWindow();
+    var ownerWindow = this; // "this" makes the current window the owner
+    var result = await dialog.ShowDialog<string?>(ownerWindow);
+}
+```
+
+You can then further process the result however you need. For example, to use the text of the result elsewhere on the UI:
+
+```csharp
+DialogResultText.Text = result;
+```
 
 ## Setting Window Size and Position
 

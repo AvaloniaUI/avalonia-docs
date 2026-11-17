@@ -7,34 +7,6 @@ doc-type: overview
 
 Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.
 
-### Opening a window
-
-```csharp
-var window = new SecondWindow();
-window.Show(); // Non-modal: both windows remain interactive
-```
-
-### Opening a modal dialog
-
-```csharp
-var dialog = new SecondWindow();
-var result = await dialog.ShowDialog<string>(parentWindow);
-// Execution resumes here after the dialog closes
-```
-
-The parent window is disabled while the dialog is open. Pass the owner window as the parameter to `ShowDialog`.
-
-### Closing with a result
-
-In the dialog, set the result by calling `Close` with a value:
-
-```csharp
-// Inside the dialog
-Close("user clicked OK");
-```
-
-The value is returned from the `ShowDialog<T>` call in the parent.
-
 ## Window sizing
 
 ### Sizing to content
