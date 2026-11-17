@@ -75,6 +75,23 @@ A new window does not inherit the data context of the window that opens it. Each
 | `PositionChanged` | Window was moved. |
 | `Resized` | Window was resized. |
 
+## Methods
+
+For examples of how to use these methods, see [How to: Work with windows](/docs/how-to/window-how-to).
+
+| Method | Description |
+|---|---|
+| `Show()` | Opens the window. Throws `InvalidOperationException` if the window has already been closed. |
+| `Show(Window owner)` | Opens the window as a child of `owner`. |
+| `ShowDialog(Window owner)` | Opens the window as a modal dialog that belongs to `owner`. Returns a `Task` that completes when the dialog closes. |
+| `ShowDialog<TResult>(Window owner)` | Opens the window as a modal dialog that belongs to `owner`. Returns a `Task<TResult>` that produces the value passed to `Close(object?)`. |
+| `Close()` | Closes the window and its child windows. Raises the `Closing` event. A closed window cannot be shown again. |
+| `Close(object? dialogResult)` | Closes the window and sets the result that `ShowDialog<TResult>` produces. |
+| `Hide()` | Hides the window and its child windows without closing them. Call `Show` to display the window again. |
+| `Activate()` | Brings the window to the front and gives it focus. |
+| `BeginMoveDrag(PointerPressedEventArgs e)` | Starts moving the window with the pointer. Call it from a `PointerPressed` handler for the left mouse button. |
+| `BeginResizeDrag(WindowEdge edge, PointerPressedEventArgs e)` | Starts resizing the window from the given edge. Call it from a `PointerPressed` handler for the left mouse button. |
+
 ## Notes
 
 - **Startup window.** Your application's main window is set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
