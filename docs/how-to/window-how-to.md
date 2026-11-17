@@ -113,6 +113,21 @@ You can then further process the result however you need. For example, to use th
 DialogResultText.Text = result;
 ```
 
+## Preventing a window from closing
+
+You can prevent a window from closing by handling the `Closing` event and cancelling it with `e.Cancel = true`. A common pattern, demonstrated below, is to stop the window from closing and have it [hide](#hiding-a-window) instead, so that it can be opened again later.
+
+```csharp
+window.Closing += (s, e) =>
+{
+    // Change the window to hide instead of close
+    ((Window)s!).Hide();
+
+    // Cancel the closing event
+    e.Cancel = true;
+};
+```
+
 ## Setting Window Size and Position
 
 ### Fixed size on startup

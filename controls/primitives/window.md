@@ -61,27 +61,6 @@ This page covers technical reference information for the `Window` control. For p
 | `PositionChanged` | Window was moved. |
 | `Resized` | Window was resized. |
 
-## Prevent a window from closing
-
-You can prevent a window from closing by handling the `Closing` event and setting `e.Cancel = true`:
-
-```csharp
-window.Closing += (s, e) =>
-{
-    e.Cancel = true;
-};
-```
-
-A common pattern is to hide the window instead of closing it so you can show it again later:
-
-```csharp
-window.Closing += (s, e) =>
-{
-    ((Window)s!).Hide();
-    e.Cancel = true;
-};
-```
-
 ## Practical notes
 
 - **Startup window.** Your application's main window is typically set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
