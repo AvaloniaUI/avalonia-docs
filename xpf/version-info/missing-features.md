@@ -27,6 +27,7 @@ The following features require significant engineering effort and will be availa
 - `Viewport3D` and related 3D APIs
 - `MediaElement` and `MediaPlayer`
 - `InkCanvas`
+- Spell checking
 
 If your application depends on any of these features, check the [release notes](/xpf/version-info/release-notes) regularly for updates on their progress.
 
