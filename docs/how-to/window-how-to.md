@@ -128,6 +128,64 @@ window.Closing += (s, e) =>
 };
 ```
 
+## Window states: Minimize and maximize
+
+### Changing window state in code
+
+To programmatically control the window state, set `WindowState` to one of `Minimized`, `Maximized` or `Normal`.
+
+```csharp
+window.WindowState = WindowState.Minimized;
+window.WindowState = WindowState.Maximized;
+window.WindowState = WindowState.Normal;
+```
+
+As an example, you may wish to let the user maximize the window with a button on the UI, rather than with the window chrome.
+
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
+
+```xml
+<Button Content="Maximize" Command="{Binding MaximizeCommand}" />
+```
+
+</TabItem>
+
+<TabItem value="code-behind" label="Code-behind">
+
+```csharp
+[RelayCommand]
+private void Maximize()
+{
+    if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+    {
+        var window = desktop.MainWindow;
+        window.WindowState = window.WindowState == WindowState.Maximized
+            ? WindowState.Normal
+            : WindowState.Maximized;
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Disabling minimize and maximize chrome buttons
+
+Use `CanMinimize` and `CanMaximize` to control whether the minimize and maximize buttons in the title bar are enabled.
+
+Note that, if [`CanResize`](/controls/primitives/window#common-properties) is `False`, `CanMaximize` is always `False`.
+
+```xml
+<Window CanMinimize="False" CanMaximize="False">
+```
+
+:::note
+Platform behavior varies. Some platforms hide disabled buttons (e.g., Windows). Others may gray out disabled buttons (e.g., macOS).
+:::
+
 ## Sizing and positioning
 
 ### Default size
@@ -282,47 +340,6 @@ if (topLevel is Window window)
     // Do something with the window
 }
 ```
-
-## Window State (Minimize, Maximize, Restore)
-
-```csharp
-// Programmatically control window state
-window.WindowState = WindowState.Maximized;
-window.WindowState = WindowState.Minimized;
-window.WindowState = WindowState.Normal;
-```
-
-```xml
-<Button Content="Maximize" Command="{Binding MaximizeCommand}" />
-```
-
-```csharp
-[RelayCommand]
-private void Maximize()
-{
-    if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-    {
-        var window = desktop.MainWindow;
-        window.WindowState = window.WindowState == WindowState.Maximized
-            ? WindowState.Normal
-            : WindowState.Maximized;
-    }
-}
-```
-
-## Disabling Minimize and Maximize Buttons
-
-Use `CanMinimize` and `CanMaximize` to control whether the title bar buttons are enabled:
-
-```xml
-<Window CanMinimize="False" CanMaximize="False">
-```
-
-When `CanResize` is `false`, `CanMaximize` is automatically set to `false`.
-
-:::note
-Platform behavior varies. On Windows, disabled buttons are hidden. On macOS, they appear greyed out. On Linux, behavior depends on the window manager.
-:::
 
 ## Hiding the Title Bar (Chromeless Window)
 
