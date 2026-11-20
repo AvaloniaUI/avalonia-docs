@@ -357,46 +357,43 @@ You can combine a borderless window with `ExtendClientAreaToDecorationsHint="Tru
 
 ### Creating a custom title bar
 
-Mark an element as a title bar to allow users to drag the window using that element. On most platforms, the operating system automatically enables drag and double-click-to-maximize behavior on the designated title bar.
+Mark an element as a title bar to allow users to drag the window using that element.
+
+On most platforms, the operating system automatically enables drag and double-click-to-maximize behavior on the designated title bar. Interactive controls inside a `TitleBar` region, such as buttons, receive input normally without triggering window drag.
 
 1. In your `<Window>` tag, set `ExtendClientAreaToDecorationsHint` to `True`.
 2. Add a control to act as your custom title bar.
 3. Set its `WindowDecorationProperties.ElementRole` to `TitleBar`.
 
 ```xml
-<Grid RowDefinitions="32,*">
+<Window ExtendClientAreaToDecorationsHint="True"
+        WindowDecorations="None">
+  <Grid RowDefinitions="32,*">
 
     <!-- Custom title bar -->
-    <Border Grid.Row="0" Background="#1E1E2E"
+    <Border Grid.Row="0"
+            Background="Blue"
             WindowDecorationProperties.ElementRole="TitleBar">
-        <DockPanel Margin="8,0">
-            <TextBlock Text="My App" VerticalAlignment="Center" Foreground="White" />
-            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"
-                        HorizontalAlignment="Right">
-                <!-- ElementRole must be set per button for some platforms -->
-                <Button WindowDecorationProperties.ElementRole="MinimizeButton" Content="_" Click="OnMinimize" />
-                <Button WindowDecorationProperties.ElementRole="MaximizeButton" Content="□" Click="OnMaximize" />
-                <Button WindowDecorationProperties.ElementRole="CloseButton" Content="✕" Click="OnClose" />
-            </StackPanel>
-        </DockPanel>
+      <TextBlock Text="My App"
+                 VerticalAlignment="Center"
+                 Foreground="White" />
     </Border>
 
     <!-- Content -->
     <ContentControl Grid.Row="1" Content="Hello world!" />
 
-</Grid>
+  </Grid>
+</Window>
 ```
 
-The `ElementRole` property supports these values:
+Accepted values for the `ElementRole` property are:
 
 | Value | Behavior |
 |---|---|
-| `None` | No special window chrome behavior (default). |
-| `TitleBar` | Acts as a draggable title bar region. |
+| `None` | Default. No window chrome behavior. |
+| `TitleBar` | Draggable title bar. |
 | `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
 | `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
-
-Interactive controls inside a `TitleBar` region (such as buttons) continue to receive input normally and do not trigger window dragging.
 
 ## Multi-Window Application
 
