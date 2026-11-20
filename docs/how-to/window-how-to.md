@@ -345,15 +345,14 @@ if (topLevel is Window window)
 }
 ```
 
-## Hiding the Title Bar (Chromeless Window)
+## Creating a chromeless or borderless window
 
-Create a borderless window by disabling system decorations:
+Set [`WindowDecorations`](/controls/primitives/window#common-properties) to `BorderOnly` to hide the title bar. Set the same property to `None` to hide both the title bar and the border lines.
+
+You can combine a borderless window with `ExtendClientAreaToDecorationsHint="True"` to create a [custom title bar](#creating-a-custom-title-bar).
 
 ```xml
-<Window WindowDecorations="None"
-        ExtendClientAreaToDecorationsHint="True"
-        Background="Transparent"
-        TransparencyLevelHint="AcrylicBlur">
+<Window WindowDecorations="None">
 ```
 
 ### Creating a custom title bar
