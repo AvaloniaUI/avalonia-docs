@@ -185,31 +185,92 @@ Accepted values for `WindowStartupLocation` are:
 
 ### Saving and restoring window position
 
-```csharp
-protected override void OnOpened(EventArgs e)
-{
-    base.OnOpened(e);
+To remember the window's position on close so that it can reopen at its last location:
 
-    // Restore saved position
-    if (Settings.WindowLeft >= 0 && Settings.WindowTop >= 0)
+1. In the window's code-behind file, set a save destination to save the window's position to disk.
+2. Add a method that saves the window's `PixelPoint` coordinates to the specified save file.
+3. Add a method that loads `PixelPoint` coordinates from the specified save file.
+4. Add an `OnClosing` event to trigger the save method when the window is closing.
+5. Add an `OnOpened` event to trigger the load method when the window opens, and use its output to position the window.
+
+```csharp title="MyWindow.axaml.cs"
+using System;
+using System.IO;
+using System.Linq;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+
+namespace MyApp.Views;
+
+public partial class MyWindow : Window
+{
+    // Window's last position is saved to disk as a file.
+    private static readonly string PositionFile = Path.Combine(
+        Environment.GetFolderPath(DESTINATION_FOLDER),
+        "MyWindow.position");
+
+    public MyWindow()
     {
-        Position = new PixelPoint(Settings.WindowLeft, Settings.WindowTop);
-        Width = Settings.WindowWidth;
-        Height = Settings.WindowHeight;
+        InitializeComponent();
+    }
+
+    // On open, restore the saved position.
+    protected override void OnOpened(EventArgs e)
+    {
+        base.OnOpened(e);
+
+        if (TryLoadPosition(out var saved) && IsOnAnyScreen(saved))
+        {
+            Position = saved;
+        }
+    }
+
+    // On close, save the window's position.
+    protected override void OnClosing(WindowClosingEventArgs e)
+    {
+        base.OnClosing(e);
+
+        // Do not save if the close is cancelled,
+        // or the window is in a minimized/maximized state.
+        if (!e.Cancel && WindowState == WindowState.Normal)
+        {
+            SavePosition(Position);
+        }
+    }
+
+    // Method to load the window's saved position from the filepath specified above.
+    private static bool TryLoadPosition(out PixelPoint position)
+    {
+        try
+        {
+            position = PixelPoint.Parse(File.ReadAllText(PositionFile));
+            return true;
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or FormatException)
+        {
+            // Use default placement if the file is unreadable or does not exist.
+            position = default;
+            return false;
+        }
+    }
+
+    // Method to save the window's position to the filepath specified above.
+    private static void SavePosition(PixelPoint position)
+    {
+        try
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(PositionFile)!);
+            File.WriteAllText(PositionFile, position.ToString());
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+        {
+            // Failing to save the position must not prevent the window from closing.
+        }
     }
 }
-
-protected override void OnClosing(WindowClosingEventArgs e)
-{
-    base.OnClosing(e);
-
-    // Save position
-    Settings.WindowLeft = Position.X;
-    Settings.WindowTop = Position.Y;
-    Settings.WindowWidth = Width;
-    Settings.WindowHeight = Height;
-}
 ```
+
 
 ## Getting the parent window
 
