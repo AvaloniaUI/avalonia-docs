@@ -172,7 +172,7 @@ private void Maximize()
 
 </Tabs>
 
-## Disabling minimize and maximize chrome buttons
+### Disabling minimize and maximize chrome buttons
 
 Use `CanMinimize` and `CanMaximize` to control whether the minimize and maximize buttons in the title bar are enabled.
 
