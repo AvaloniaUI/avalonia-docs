@@ -128,83 +128,98 @@ window.Closing += (s, e) =>
 };
 ```
 
-## Setting Window Size and Position
+## Sizing and positioning
 
-### Fixed size on startup
+### Default size
+
+The size set by `Width` and `Height` is the window's default size on startup. It can still be resized by the user, unless `CanResize` is `False`.
 
 ```xml
-<Window Width="800" Height="600"
-        WindowStartupLocation="CenterScreen">
+<Window Width="800" Height="600">
 ```
 
 ### Minimum and maximum size
+
+Set a minimum and/or maximum window size by using the `Min`- and `Max`-prefixed properties.
 
 ```xml
 <Window MinWidth="400" MinHeight="300"
         MaxWidth="1920" MaxHeight="1080">
 ```
 
+### Size to content
+
+Set `SizeToContent` to let the window size itself based on its content.
+
+```xml
+<Window SizeToContent="WidthAndHeight">
+```
+
+Accepted values for `SizeToContent` are:
+
+| Value | Behavior |
+|---|---|
+| `Manual` | Default. Window uses the values of `Width` and `Height`. |
+| `Width` | Width sizes to content, height is explicit. |
+| `Height` | Height sizes to content, width is explicit. |
+| `WidthAndHeight` | Both dimensions size to content. |
+
 ### Startup location
+
+Use `WindowStartupLocation` and/or `Position` to have the window open at a specific location on the screen.
+
+`Position` coordinates are ignored if you set `WindowStartupLocation` to any value other than `Manual`.
+
+```xml
+<Window WindowStartupLocation="Manual"
+        Position="100,100">
+```
+
+Accepted values for `WindowStartupLocation` are:
 
 | Value | Description |
 |---|---|
-| `Manual` | Position set by `Position` property. |
+| `Manual` | Default. Uses coordinates from the `Position` property. |
 | `CenterScreen` | Centered on the primary screen. |
-| `CenterOwner` | Centered on the owner window (for dialogs). |
+| `CenterOwner` | [Modal dialogs](#opening-a-modal-dialog) only. Centered on the owner window. |
 
-## Showing a Dialog Window
-
-Use `ShowDialog<T>` to open a modal dialog and get a result:
+### Saving and restoring window position
 
 ```csharp
-var dialog = new SettingsWindow();
-var result = await dialog.ShowDialog<bool>(this);
-if (result)
+protected override void OnOpened(EventArgs e)
 {
-    // User confirmed
+    base.OnOpened(e);
+
+    // Restore saved position
+    if (Settings.WindowLeft >= 0 && Settings.WindowTop >= 0)
+    {
+        Position = new PixelPoint(Settings.WindowLeft, Settings.WindowTop);
+        Width = Settings.WindowWidth;
+        Height = Settings.WindowHeight;
+    }
+}
+
+protected override void OnClosing(WindowClosingEventArgs e)
+{
+    base.OnClosing(e);
+
+    // Save position
+    Settings.WindowLeft = Position.X;
+    Settings.WindowTop = Position.Y;
+    Settings.WindowWidth = Width;
+    Settings.WindowHeight = Height;
 }
 ```
 
-Return a result by calling `Close` with a value:
+## Getting the parent window
 
-```csharp
-// In the dialog window
-private void OnOkClick(object sender, RoutedEventArgs e)
-{
-    Close(true);
-}
-
-private void OnCancelClick(object sender, RoutedEventArgs e)
-{
-    Close(false);
-}
-```
-
-## Getting the Parent Window
-
-From any control, use `TopLevel.GetTopLevel`:
+From any control, use `TopLevel.GetTopLevel` to get its parent window.
 
 ```csharp
 var topLevel = TopLevel.GetTopLevel(this);
 if (topLevel is Window window)
 {
-    await new MyDialog().ShowDialog<bool>(window);
-}
-```
-
-## Preventing Window Close
-
-Handle the `Closing` event to intercept close attempts:
-
-```csharp
-protected override void OnClosing(WindowClosingEventArgs e)
-{
-    if (HasUnsavedChanges)
-    {
-        e.Cancel = true;
-        // Show save prompt
-    }
-    base.OnClosing(e);
+    // Do something with the window
 }
 ```
 

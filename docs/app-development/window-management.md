@@ -9,26 +9,6 @@ Avalonia provides a flexible windowing system for creating single-window and mul
 
 ## Window sizing
 
-### Sizing to content
-
-Set `SizeToContent` to let the window size itself based on its content:
-
-```xml
-<Window SizeToContent="WidthAndHeight">
-    <StackPanel Margin="20">
-        <TextBlock Text="The window will size to fit this content." />
-        <Button Content="OK" HorizontalAlignment="Right" Margin="0,10,0,0" />
-    </StackPanel>
-</Window>
-```
-
-| Value | Behavior |
-|---|---|
-| `Manual` | Window uses `Width` and `Height` explicitly (default). |
-| `Width` | Width sizes to content, height is explicit. |
-| `Height` | Height sizes to content, width is explicit. |
-| `WidthAndHeight` | Both dimensions size to content. |
-
 ### Saving and restoring window position
 
 ```csharp
@@ -78,40 +58,6 @@ public static class WindowManager
     {
         foreach (var window in _openWindows.ToList())
             window.Close();
-    }
-}
-```
-
-### Finding the parent window from a control
-
-```csharp
-var topLevel = TopLevel.GetTopLevel(myControl);
-if (topLevel is Window window)
-{
-    // Use window
-}
-```
-
-Or using the extension method:
-
-```csharp
-var window = myControl.FindAncestorOfType<Window>();
-```
-
-## Preventing window close
-
-Handle the `Closing` event to intercept the close action. Set `e.Cancel = true` to prevent closing:
-
-```csharp
-protected override void OnClosing(WindowClosingEventArgs e)
-{
-    base.OnClosing(e);
-
-    if (HasUnsavedChanges)
-    {
-        e.Cancel = true;
-        // Show a save confirmation dialog instead
-        _ = ShowSavePromptAsync();
     }
 }
 ```
