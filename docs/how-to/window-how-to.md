@@ -457,8 +457,9 @@ Or set it in code:
 Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.ico")));
 ```
 
-## See Also
+## See also
 
-- [Window Control Reference](/controls/primitives/window): Property tables.
-- [Dialogs How-To](/docs/how-to/dialogs-how-to): Dialog patterns and file pickers.
-- [Application Lifetimes](/docs/fundamentals/application-lifetimes): Desktop vs mobile lifetime models.
+- [Window control reference](/controls/primitives/window): Full property, event and method tables for `Window`.
+- [Main window](/docs/fundamentals/main-window): The primary application window.
+- [How to: Work with dialogs](/docs/how-to/dialogs-how-to): Dialog patterns and file pickers.
+- [Application lifetimes](/docs/fundamentals/application-lifetimes): Desktop vs mobile lifetime models.
