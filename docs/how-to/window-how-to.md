@@ -185,9 +185,9 @@ Accepted values for `WindowStartupLocation` are:
 
 ### Saving and restoring window position
 
-To remember the window's position on close so that it can reopen at its last location:
+To remember the window's position on close so that it can reopen at its last location, make the following changes in its code-behind file:
 
-1. In the window's code-behind file, set a save destination to save the window's position to disk.
+1. Set a save destination to save the window's position to disk.
 2. Add a method that saves the window's `PixelPoint` coordinates to the specified save file.
 3. Add a method that loads `PixelPoint` coordinates from the specified save file.
 4. Add an `OnClosing` event to trigger the save method when the window is closing.
@@ -270,7 +270,6 @@ public partial class MyWindow : Window
     }
 }
 ```
-
 
 ## Getting the parent window
 
