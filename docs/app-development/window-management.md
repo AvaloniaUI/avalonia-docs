@@ -7,36 +7,6 @@ doc-type: overview
 
 Avalonia provides a flexible windowing system for creating single-window and multi-window desktop applications. This page covers common window management patterns.
 
-## Window sizing
-
-### Saving and restoring window position
-
-```csharp
-protected override void OnOpened(EventArgs e)
-{
-    base.OnOpened(e);
-
-    // Restore saved position
-    if (Settings.WindowLeft >= 0 && Settings.WindowTop >= 0)
-    {
-        Position = new PixelPoint(Settings.WindowLeft, Settings.WindowTop);
-        Width = Settings.WindowWidth;
-        Height = Settings.WindowHeight;
-    }
-}
-
-protected override void OnClosing(WindowClosingEventArgs e)
-{
-    base.OnClosing(e);
-
-    // Save position
-    Settings.WindowLeft = Position.X;
-    Settings.WindowTop = Position.Y;
-    Settings.WindowWidth = Width;
-    Settings.WindowHeight = Height;
-}
-```
-
 ## Multi-window patterns
 
 ### Tracking open windows

@@ -243,7 +243,7 @@ Accepted values for `WindowStartupLocation` are:
 
 ### Saving and restoring window position
 
-To remember the window's position on close so that it can reopen at its last location, make the following changes in its code-behind file:
+To remember the window's position on close so that it can reopen at its last location, make the following changes in its [code-behind](/docs/fundamentals/code-behind) file:
 
 1. Set a save destination to save the window's position to disk.
 2. Add a method that saves the window's `PixelPoint` coordinates to the specified save file.
@@ -328,6 +328,10 @@ public partial class MyWindow : Window
     }
 }
 ```
+
+:::tip
+You can use the same approach to save and restore a window's height, width and [window state](#window-states-minimize-and-maximize).
+:::
 
 ## Getting the parent window
 
@@ -416,32 +420,6 @@ For a non-modal window that stays on top of the owner:
 ```csharp
 var toolWindow = new ToolWindow();
 toolWindow.Show(ownerWindow); // Stays above owner
-```
-
-## Saving and Restoring Window Position
-
-```csharp
-protected override void OnOpened(EventArgs e)
-{
-    base.OnOpened(e);
-    var settings = LoadSettings();
-    if (settings.WindowWidth > 0)
-    {
-        Width = settings.WindowWidth;
-        Height = settings.WindowHeight;
-    }
-}
-
-protected override void OnClosing(WindowClosingEventArgs e)
-{
-    SaveSettings(new AppSettings
-    {
-        WindowWidth = Width,
-        WindowHeight = Height,
-        WindowState = WindowState
-    });
-    base.OnClosing(e);
-}
 ```
 
 ## Window Transparency
