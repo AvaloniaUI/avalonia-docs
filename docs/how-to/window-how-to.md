@@ -1,7 +1,7 @@
 ---
 id: window-how-to
 title: "How to: Work with windows"
-description: Sizing, positioning, dialogs, multi-window apps, startup behavior, and system chrome options.
+description: Practical usage of the Window control, such as opening and closing, using modal dialogs, window states, sizing, positioning, and customizing window appearance or behavior.
 doc-type: how-to
 ---
 
