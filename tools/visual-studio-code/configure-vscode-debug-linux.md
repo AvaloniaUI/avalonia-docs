@@ -15,7 +15,7 @@ Before you begin, make sure you have:
 - Visual Studio Code installed on Linux.
 - The .NET SDK (6.0 or later) installed and available on your `PATH`.
 - An Android emulator running, or a physical Android device connected via USB with USB debugging enabled from the developer options.
-- The **Mono Debug** extension installed from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
+- A Visual Studio Code extension that enables .NET mobile debugging. Check the [Visual Studio Marketplace](https://marketplace.visualstudio.com/) for options.
 
 ## Configure the launch profile
 
