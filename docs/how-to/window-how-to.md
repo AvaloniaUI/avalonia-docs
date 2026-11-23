@@ -443,10 +443,13 @@ public static class WindowManager
 }
 ```
 
-## Window Transparency
+## Window transparency
+
+To set transparency effects for the window's background, set the window's `Background` to `Transparent`. Then, set the desired `TransparencyLevelHint`.
+
+See [`Window` properties](/controls/primitives/window#common-properties) for supported transparency level values.
 
 ```xml
-<!-- Acrylic blur (platform-dependent) -->
 <Window TransparencyLevelHint="AcrylicBlur"
         Background="Transparent">
     <Panel>
@@ -456,7 +459,7 @@ public static class WindowManager
 </Window>
 ```
 
-Check which transparency levels are supported at runtime:
+Availability of transparency effects varies by platform. To check which transparency levels are supported at runtime:
 
 ```csharp
 var supported = this.ActualTransparencyLevel;
