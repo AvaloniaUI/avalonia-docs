@@ -58,6 +58,10 @@ var window = new MyWindow();
 window.Show();
 ```
 
+:::tip
+New windows typically require their own data context. See [Setting the data context](/docs/data-binding/data-context#setting-the-data-context) for how to do so.
+:::
+
 ### Opening a modal dialog
 
 Open a window as a modal dialog by calling the `ShowDialog` method. This method requires you to pass an owner window, so that the system knows which window the dialog belongs to. The owner window is inactive while the dialog is open.
@@ -66,6 +70,18 @@ Open a window as a modal dialog by calling the `ShowDialog` method. This method 
 var dialog = new MyWindow();
 var ownerWindow = this; // "this" makes the current window the owner
 dialog.ShowDialog(ownerWindow);
+```
+
+### Opening a non-modal window that stays on top
+
+To open a non-modal window that is always displayed on top of the owner window, set `var ownerWindow = this` as in the modal example above. Then, pass `ownerWindow` to the `Show` method.
+
+This approach can be used to create tool or settings windows that should never be obstructed by the main window.
+
+```csharp
+var window = new MyWindow();
+var ownerWindow = this; // "this" makes the current window the owner
+window.Show(ownerWindow);
 ```
 
 ### Closing a window
@@ -395,27 +411,36 @@ Accepted values for the `ElementRole` property are:
 | `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
 | `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
 
-## Multi-Window Application
+## Tracking open windows
 
-Open additional windows from the main window:
+The below sample creates a window manager class that acts as a single, app-wide registry listing all open windows.
+
+This may be useful if you need to do something to every open window (e.g., close all windows on logout), or check whether a specific window is already open before creating another.
 
 ```csharp
-[RelayCommand]
-private void OpenNewWindow()
+public static class WindowManager
 {
-    var window = new SecondaryWindow
+    // Make a list of open windows across the entire app.
+    private static readonly List<Window> _openWindows = new();
+
+    // Return a read-only list for callers.
+    public static IReadOnlyList<Window> OpenWindows => _openWindows;
+
+    // Register new windows on open, then unregister on close
+    public static void Register(Window window)
     {
-        DataContext = new SecondaryViewModel()
-    };
-    window.Show();
+        _openWindows.Add(window);
+        window.Closed += (_, _) => _openWindows.Remove(window);
+    }
+
+    // On close all, make a copy of the list.
+    // Prevents crashes due to foreach running on an emptying list.
+    public static void CloseAll()
+    {
+        foreach (var window in _openWindows.ToList())
+            window.Close();
+    }
 }
-```
-
-For a non-modal window that stays on top of the owner:
-
-```csharp
-var toolWindow = new ToolWindow();
-toolWindow.Show(ownerWindow); // Stays above owner
 ```
 
 ## Window Transparency
