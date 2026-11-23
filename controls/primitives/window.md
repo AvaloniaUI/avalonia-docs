@@ -32,7 +32,7 @@ A new window does not inherit the data context of the window that opens it. Each
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `Title` | `string` | Text displayed in the title bar. |
-| `Icon` | `WindowIcon?` | Icon displayed in the title bar and taskbar. |
+| `Icon` | `WindowIcon?` | Icon displayed in the title bar and taskbar. Ignored on macOS, where the Dock icon comes from the app bundle. |
 | `Height` | `double` | Height of the window. |
 | `Width` | `double` | Width of the window. |
 | `MaxHeight` | `double` | Maximum allowed height of the window. |
@@ -52,7 +52,7 @@ A new window does not inherit the data context of the window that opens it. Each
 | `WindowDecorations` | `WindowDecorations` | Whether to show the window chrome and/or borders. `Full`, `BorderOnly`, or `None`. |
 | `ExtendClientAreaToDecorationsHint` | `bool` | When `True`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
 | `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
-| `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes. `OwnerAndChildWindows` is the default and closes children before the window. Set to `OwnerWindowOnly` to close only the owner window. |
+| `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes.<br /><br />`OwnerAndChildWindows` is the default and closes children before the owner. If a child cancels the close, the owner's close is also cancelled.<br /><br />`OwnerWindowOnly` closes the owner directly. Children cannot cancel.
 
 ### Platform differences
 
@@ -67,7 +67,7 @@ A new window does not inherit the data context of the window that opens it. Each
 
 | Event | When it fires |
 |---|---|
-| `Opened` | Window is shown for the first time. |
+| `Opened` | Window is shown. |
 | `Closing` | Window is about to close. Can be cancelled. |
 | `Closed` | Window has closed. |
 | `Activated` | Window has received focus. |
@@ -96,7 +96,7 @@ For examples of how to use these methods, see [How to: Work with windows](/docs/
 
 - **Startup window.** Your application's main window is set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
 - **Multiple windows.** You can open as many windows as you need by creating new instances and calling [`Show`](/docs/how-to/window-how-to#opening-a-window). Each window runs independently within the same application.
-- **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime.
+- **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime. Note that hidden windows count as open and may keep the application running.
 
 ## See also
 

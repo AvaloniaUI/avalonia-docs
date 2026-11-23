@@ -18,7 +18,7 @@ Add a new `.axaml` file containing the window's XAML, together with a dependent 
 ```xml
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="MyApp.MyWindow"
+        x:Class="MyApp.Views.MyWindow"
         Title="MyWindow"
         Width="400" Height="300">
     <TextBlock Text="Hello world!" />
@@ -64,7 +64,7 @@ New windows typically require their own data context. See [Setting the data cont
 
 ### Opening a modal dialog
 
-Open a window as a modal dialog by calling the `ShowDialog` method. This method requires you to pass an owner window, so that the system knows which window the dialog belongs to. The owner window is inactive while the dialog is open.
+Open a window as a modal dialog by calling the `ShowDialog` method. This method requires you to pass an owner window, so that the system knows which window the dialog belongs to. The owner window is disabled while the dialog is open.
 
 ```csharp
 var dialog = new MyWindow();
@@ -148,11 +148,12 @@ window.Closing += (s, e) =>
 
 ### Changing window state in code
 
-To programmatically control the window state, set `WindowState` to one of `Minimized`, `Maximized` or `Normal`.
+To programmatically control the window state, set `WindowState` to one of `Minimized`, `Maximized`, `FullScreen` or `Normal`.
 
 ```csharp
 window.WindowState = WindowState.Minimized;
 window.WindowState = WindowState.Maximized;
+window.WindowState = WindowState.FullScreen;
 window.WindowState = WindowState.Normal;
 ```
 
@@ -168,7 +169,7 @@ As an example, you may wish to let the user maximize the window with a button on
 
 </TabItem>
 
-<TabItem value="code-behind" label="Code-behind">
+<TabItem value="code" label="View model">
 
 ```csharp
 [RelayCommand]
@@ -254,8 +255,8 @@ Accepted values for `WindowStartupLocation` are:
 | Value | Description |
 |---|---|
 | `Manual` | Default. Uses coordinates from the `Position` property. |
-| `CenterScreen` | Centered on the primary screen. |
-| `CenterOwner` | [Modal dialogs](#opening-a-modal-dialog) only. Centered on the owner window. |
+| `CenterScreen` | Centered on the screen. |
+| `CenterOwner` | Centered on the owner window. Falls back to `CenterScreen` if there is no owner or the owner is minimized. |
 
 ### Saving and restoring window position
 
@@ -264,8 +265,8 @@ To remember the window's position on close so that it can reopen at its last loc
 1. Set a save destination to save the window's position to disk.
 2. Add a method that saves the window's `PixelPoint` coordinates to the specified save file.
 3. Add a method that loads `PixelPoint` coordinates from the specified save file.
-4. Add an `OnClosing` event to trigger the save method when the window is closing.
-5. Add an `OnOpened` event to trigger the load method when the window opens, and use its output to position the window.
+4. Add an `OnClosing` method override to trigger the save method when the window is closing.
+5. Add an `OnOpened` method override to trigger the load method when the window opens, and use its output to position the window.
 
 ```csharp title="MyWindow.axaml.cs"
 using System;
@@ -280,6 +281,7 @@ namespace MyApp.Views;
 public partial class MyWindow : Window
 {
     // Window's last position is saved to disk as a file.
+    // Replace DESTINATION_FOLDER with the target path.
     private static readonly string PositionFile = Path.Combine(
         Environment.GetFolderPath(DESTINATION_FOLDER),
         "MyWindow.position");
@@ -411,11 +413,11 @@ Accepted values for the `ElementRole` property are:
 | `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
 | `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
 
-## Tracking open windows
+## Creating a window manager
 
-The below sample creates a window manager class that acts as a single, app-wide registry listing all open windows.
+The below sample creates a custom window manager class that acts as a single, app-wide registry listing all open windows.
 
-This may be useful if you need to do something to every open window (e.g., close all windows on logout), or check whether a specific window is already open before creating another.
+Tracking of windows is provided by default by `IClassicDesktopStyleApplicationLifetime.Windows`. However, you may wish to use a custom window manager if you need custom logic to do something to every open window, e.g., close all windows on logout.
 
 ```csharp
 public static class WindowManager
@@ -459,13 +461,13 @@ See [`Window` properties](/controls/primitives/window#common-properties) for sup
 </Window>
 ```
 
-Availability of transparency effects varies by platform. To check which transparency levels are supported at runtime:
+Availability of transparency effects varies by platform. To check which transparency levels is actually applied at runtime:
 
 ```csharp
 var supported = this.ActualTransparencyLevel;
 ```
 
-If `ActualTransparencyLevel` returns a lower level than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
+If `ActualTransparencyLevel` returns a different value than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
 
 :::note
 Avalonia currently does not support WPF-like transparent click-through behavior.
@@ -476,6 +478,10 @@ If you wish to create a transparent click-through window using native platform A
 ## Window icon
 
 Set the icon displayed in the title bar and taskbar using the `Icon` property. This can be done either in XAML or in code.
+
+:::note
+On macOS, the Dock icon is taken from the app bundle and cannot be set using `Icon`.
+:::
 
 <Tabs>
 
