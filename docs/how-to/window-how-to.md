@@ -473,17 +473,29 @@ Avalonia currently does not support WPF-like transparent click-through behavior.
 If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
 :::
 
-## Window Icon
+## Window icon
+
+Set the icon displayed in the title bar and taskbar using the `Icon` property. This can be done either in XAML or in code.
+
+<Tabs>
+
+<TabItem value="xaml" label="XAML">
 
 ```xml
 <Window Icon="/Assets/app-icon.ico">
 ```
 
-Or set it in code:
+</TabItem>
+
+<TabItem value="code" label="Code">
 
 ```csharp
 Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://MyApp/Assets/app-icon.ico")));
 ```
+
+</TabItem>
+
+</Tabs>
 
 ## See also
 
