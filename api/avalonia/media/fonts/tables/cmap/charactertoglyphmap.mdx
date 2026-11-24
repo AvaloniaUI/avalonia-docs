@@ -68,11 +68,39 @@ supporting both Format 4 (BMP) and Format 12 (Unicode full repertoire) cmap subt
 
 | Name | Description |
 | --- | --- |
+| [AsReadOnlyDictionary](#uid-cd5037faaa) | Exposes the character-to-glyph map as an [System.Collections.Generic.IReadOnlyDictionary&lt;T1, T2&gt;](xref:System.Collections.Generic.IReadOnlyDictionary%602). |
 | [ContainsGlyph](#uid-5861530b4d) | Determines whether the character map contains a glyph for the specified Unicode code point. |
 | [GetGlyph](#uid-928bce08d1) | Retrieves the glyph index that corresponds to the specified Unicode code point. |
 | [GetGlyphs](#uid-d213acbde0) | No summary available. |
 | [GetMappedRanges](#uid-76a2fe12c3) | Returns an enumerator that iterates through all code point ranges mapped by this instance. |
 | [TryGetGlyph](#uid-7c39a96845) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd5037faaa"></span>
+
+### AsReadOnlyDictionary Method
+
+Exposes the character-to-glyph map as an [System.Collections.Generic.IReadOnlyDictionary&lt;T1, T2&gt;](xref:System.Collections.Generic.IReadOnlyDictionary%602).
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<int, ushort> AsReadOnlyDictionary()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyDictionary&lt;int, ushort&gt;
+
+An [System.Collections.Generic.IReadOnlyDictionary&lt;T1, T2&gt;](xref:System.Collections.Generic.IReadOnlyDictionary%602) view of this character-to-glyph map.
+
+
+#### Remarks
+
+This method returns a lightweight wrapper that provides dictionary-like access to the glyph mappings.
+The wrapper does not allocate memory for storing all mappings; instead, it dynamically computes keys and values
+from the underlying cmap table using the mapped code point ranges and the GetGlyph method.
+
+</section>
 
 <section className="apiref-page__member-entry">
 

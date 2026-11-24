@@ -1,0 +1,302 @@
+---
+title: 'SentenceBreakClass'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/sentencebreakclass'
+uid: 'Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SentenceBreakClass Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/TextFormatting/Unicode/SentenceBreakClass.cs">SentenceBreakClass.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Sentence_Break property values, as defined by UAX #29.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum SentenceBreakClass
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> SentenceBreakClass
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [ATerm](#uid-cb0c5d978d) | A full stop or equivalent, which may end a sentence or may mark an abbreviation or a decimal point. Which one it is depends on what surrounds it. |
+| [CarriageReturn](#uid-5a785bed6d) | U+000D CARRIAGE RETURN. Ends a sentence, and joins to a following [Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.LineFeed](xref:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.LineFeed) rather than breaking between the two. |
+| [Close](#uid-3184bfdd40) | Closing punctuation, such as a bracket or quotation mark, which may sit between a terminator and the sentence boundary. |
+| [Extend](#uid-6f2175077b) | A combining mark or other code point that attaches to the one before it. Transparent to the sentence rules, which read through it to the code point it attaches to. |
+| [Format](#uid-86a10cf7e0) | A format code point. Transparent to the sentence rules, in the same way as [Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.Extend](xref:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.Extend). |
+| [LineFeed](#uid-f17ab06dc6) | U+000A LINE FEED. Ends a sentence. |
+| [Lower](#uid-2537cd3d11) | A lowercase letter. Reached after a full stop, it marks that stop as an abbreviation rather than the end of a sentence. |
+| [Numeric](#uid-febf939b88) | A numeric code point. Keeps a full stop between digits from ending a sentence, so that decimal numbers stay whole. |
+| [OLetter](#uid-83f9d7ef78) | A letter that is neither uppercase nor lowercase, as in scripts without case such as Han, Hebrew or Devanagari. |
+| [Other](#uid-cc4ce3b607) | A code point in none of the other classes, carrying no meaning of its own for the sentence rules. |
+| [SContinue](#uid-d41ad9a438) | A code point that carries a sentence on past a terminator, such as a comma, instead of allowing a boundary there. |
+| [Sep](#uid-bdaedb65b1) | A paragraph or line separator, such as U+2029 PARAGRAPH SEPARATOR. Ends a sentence. |
+| [Sp](#uid-6b825b06d9) | Whitespace that is not a paragraph separator. A run of it following a terminator belongs to the sentence that terminator ends, so the boundary falls after the run. |
+| [STerm](#uid-b407e6ffbc) | A sentence terminator that is unambiguous, such as an exclamation or question mark. |
+| [Upper](#uid-70319f25d7) | An uppercase or titlecase letter. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb0c5d978d"></span>
+
+### ATerm Field
+
+A full stop or equivalent, which may end a sentence or may mark an abbreviation or a
+decimal point. Which one it is depends on what surrounds it.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass ATerm
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a785bed6d"></span>
+
+### CarriageReturn Field
+
+U+000D CARRIAGE RETURN. Ends a sentence, and joins to a following
+[Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.LineFeed](xref:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.LineFeed) rather than breaking between the two.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass CarriageReturn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3184bfdd40"></span>
+
+### Close Field
+
+Closing punctuation, such as a bracket or quotation mark, which may sit between a
+terminator and the sentence boundary.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Close
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f2175077b"></span>
+
+### Extend Field
+
+A combining mark or other code point that attaches to the one before it. Transparent
+to the sentence rules, which read through it to the code point it attaches to.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Extend
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86a10cf7e0"></span>
+
+### Format Field
+
+A format code point. Transparent to the sentence rules, in the same way as
+[Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.Extend](xref:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass.Extend).
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Format
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f17ab06dc6"></span>
+
+### LineFeed Field
+
+U+000A LINE FEED. Ends a sentence.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass LineFeed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2537cd3d11"></span>
+
+### Lower Field
+
+A lowercase letter. Reached after a full stop, it marks that stop as an abbreviation
+rather than the end of a sentence.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Lower
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-febf939b88"></span>
+
+### Numeric Field
+
+A numeric code point. Keeps a full stop between digits from ending a sentence, so that
+decimal numbers stay whole.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Numeric
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83f9d7ef78"></span>
+
+### OLetter Field
+
+A letter that is neither uppercase nor lowercase, as in scripts without case such as
+Han, Hebrew or Devanagari.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass OLetter
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc4ce3b607"></span>
+
+### Other Field
+
+A code point in none of the other classes, carrying no meaning of its own for the
+sentence rules.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Other
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d41ad9a438"></span>
+
+### SContinue Field
+
+A code point that carries a sentence on past a terminator, such as a comma, instead of
+allowing a boundary there.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass SContinue
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bdaedb65b1"></span>
+
+### Sep Field
+
+A paragraph or line separator, such as U+2029 PARAGRAPH SEPARATOR. Ends a sentence.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Sep
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b825b06d9"></span>
+
+### Sp Field
+
+Whitespace that is not a paragraph separator. A run of it following a terminator
+belongs to the sentence that terminator ends, so the boundary falls after the run.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Sp
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b407e6ffbc"></span>
+
+### STerm Field
+
+A sentence terminator that is unambiguous, such as an exclamation or question mark.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass STerm
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70319f25d7"></span>
+
+### Upper Field
+
+An uppercase or titlecase letter.
+
+```csharp
+public Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass Upper
+```
+
+</section>
+
+</ApiRefPage>
+

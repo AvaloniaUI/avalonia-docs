@@ -256,6 +256,9 @@ public void ShowCaret()
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Background](#uid-474bdfcf3c) | Gets or sets a brush used to paint the control's background. |
 | [Bounds](../../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../../visual.mdx). |
 | [CacheMode](../../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../../visual.mdx). |
@@ -282,6 +285,7 @@ public void ShowCaret()
 | [FontSize](#uid-dc8be5dd77) | Gets or sets the font size. |
 | [FontStretch](#uid-1509d67b12) | Gets or sets the font stretch. |
 | [FontStyle](#uid-58cf308c8a) | Gets or sets the font style. |
+| [FontVariations](#uid-8f23b08e53) | Gets or sets the variable-font axis values (e.g. `wght=700`). `null` means the font's design defaults. |
 | [FontWeight](#uid-4fe368c480) | Gets or sets the font weight. |
 | [Foreground](#uid-f24d44650b) | Gets or sets a brush used to paint the text. |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -479,6 +483,21 @@ Gets or sets the font style.
 
 ```csharp
 public Avalonia.Media.FontStyle FontStyle { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8f23b08e53"></span>
+
+### FontVariations Property
+
+Gets or sets the variable-font axis values (e.g. `wght=700`).
+`null` means the font's design defaults.
+
+```csharp
+public Avalonia.Media.FontVariationSettings FontVariations { get; set; }
 ```
 
 </section>
@@ -709,6 +728,9 @@ public Avalonia.Media.TextWrapping TextWrapping { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BackgroundProperty](#uid-d8ec66a31e) | Defines the [Avalonia.Controls.Presenters.TextPresenter.Background](xref:Avalonia.Controls.Presenters.TextPresenter.Background) property. |
 | [BoundsProperty](../../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../../visual.mdx). |
 | [CacheModeProperty](../../visual.mdx#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. Inherited from [Visual](../../visual.mdx). |

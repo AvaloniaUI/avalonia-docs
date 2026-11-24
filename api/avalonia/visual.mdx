@@ -211,6 +211,9 @@ The property value to set.
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](styledelement.mdx). |
+| [BackdropEffect](#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. |
+| [BackdropEffectBoundsSource](#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. |
+| [BackdropEffectCache](#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. |
 | [Bounds](#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. |
 | [CacheMode](#uid-c565afad32) | Gets or sets the cache mode of the visual. |
 | [Classes](styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](styledelement.mdx). |
@@ -238,6 +241,49 @@ The property value to set.
 | [Theme](styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](styledelement.mdx). |
 | [Transitions](animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](animation/animatable.mdx). |
 | [ZIndex](#uid-a3275ade9d) | Gets or sets the Z index of the control. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-887ee2655e"></span>
+
+### BackdropEffect Property
+
+Gets or sets the effect that is applied to what is drawn behind this visual.
+
+```csharp
+public Avalonia.Media.IEffect BackdropEffect { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75361af092"></span>
+
+### BackdropEffectBoundsSource Property
+
+Gets or sets which bounds of this visual the backdrop effect is limited to.
+
+```csharp
+public Avalonia.Media.BackdropEffectBoundsSource BackdropEffectBoundsSource { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-503dfd717a"></span>
+
+### BackdropEffectCache Property
+
+Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it
+again on every draw. When null, the compositor chooses.
+
+```csharp
+public Avalonia.Media.BackdropEffectCache BackdropEffectCache { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -445,6 +491,9 @@ later in the containing element's children collection will appear on top.
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. |
+| [BackdropEffectCacheProperty](#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. |
+| [BackdropEffectProperty](#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. |
 | [BoundsProperty](#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. |
 | [CacheModeProperty](#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. |
 | [ClipProperty](#uid-06ffce3308) | Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property. |
@@ -465,6 +514,48 @@ later in the containing element's children collection will appear on top.
 | [TransitionsProperty](animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](animation/animatable.mdx). |
 | [VisualParentProperty](#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. |
 | [ZIndexProperty](#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fcbf93be1b"></span>
+
+### BackdropEffectBoundsSourceProperty Field
+
+Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.BackdropEffectBoundsSource> BackdropEffectBoundsSourceProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b4282dcd8b"></span>
+
+### BackdropEffectCacheProperty Field
+
+Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.BackdropEffectCache> BackdropEffectCacheProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-858aac9ee4"></span>
+
+### BackdropEffectProperty Field
+
+Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.IEffect> BackdropEffectProperty
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 

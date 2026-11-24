@@ -1,0 +1,270 @@
+---
+title: 'PlatformGraphicsExternalImageDmaBufProperties'
+hide_title: true
+slug: '/avalonia/platform/platformgraphicsexternalimagedmabufproperties'
+uid: 'Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties'
+commentId: 'T:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlatformGraphicsExternalImageDmaBufProperties Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Platform/PlatformGraphicsExternalMemory.cs">PlatformGraphicsExternalMemory.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the DRM layout of a dma-buf image.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PlatformGraphicsExternalImageDmaBufProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PlatformGraphicsExternalImageDmaBufProperties
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PlatformGraphicsExternalImageDmaBufProperties&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-830828271f) | No summary available. |
+| [GetHashCode](#uid-f68ebdd35c) | No summary available. |
+| [ToString](#uid-c63b15d52c) | No summary available. |
+
+<span id="uid-830828271f"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-319791019b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8853a6de2"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f68ebdd35c"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c63b15d52c"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DrmFormat](#uid-443fc84818) | The DRM_FORMAT_* fourcc of the buffer. |
+| [DrmModifier](#uid-f8d09791ac) | The DRM_FORMAT_MOD_* layout modifier of the buffer, or [Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid) for the implicit layout. |
+| [PlaneCount](#uid-1290ed7e1e) | The number of memory planes. When zero, a single plane described by the handle itself and [Avalonia.Platform.PlatformGraphicsExternalImageProperties.MemoryOffset](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties.MemoryOffset) is assumed. |
+| [PlaneFds](#uid-b1a174d3d7) | Per-plane dma-buf file descriptors. When null, the handle's file descriptor is used for every plane. |
+| [PlaneOffsets](#uid-9586eef6bc) | Per-plane byte offsets into the corresponding file descriptor. |
+| [PlaneStrides](#uid-97a03c962f) | Per-plane row pitches in bytes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-443fc84818"></span>
+
+### DrmFormat Property
+
+The DRM_FORMAT_* fourcc of the buffer.
+
+```csharp
+public uint DrmFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8d09791ac"></span>
+
+### DrmModifier Property
+
+The DRM_FORMAT_MOD_* layout modifier of the buffer, or [Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid) for the implicit layout.
+
+```csharp
+public ulong DrmModifier { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1290ed7e1e"></span>
+
+### PlaneCount Property
+
+The number of memory planes. When zero, a single plane described by the handle itself and
+[Avalonia.Platform.PlatformGraphicsExternalImageProperties.MemoryOffset](xref:Avalonia.Platform.PlatformGraphicsExternalImageProperties.MemoryOffset) is assumed.
+
+```csharp
+public int PlaneCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1a174d3d7"></span>
+
+### PlaneFds Property
+
+Per-plane dma-buf file descriptors. When null, the handle's file descriptor is used for every plane.
+
+```csharp
+public int[] PlaneFds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9586eef6bc"></span>
+
+### PlaneOffsets Property
+
+Per-plane byte offsets into the corresponding file descriptor.
+
+```csharp
+public uint[] PlaneOffsets { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97a03c962f"></span>
+
+### PlaneStrides Property
+
+Per-plane row pitches in bytes.
+
+```csharp
+public uint[] PlaneStrides { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DrmModifierInvalid](#uid-6baaa755a2) | The DRM_FORMAT_MOD_INVALID modifier. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6baaa755a2"></span>
+
+### DrmModifierInvalid Field
+
+The DRM_FORMAT_MOD_INVALID modifier.
+
+```csharp
+public ulong DrmModifierInvalid
+```
+
+</section>
+
+</ApiRefPage>
+

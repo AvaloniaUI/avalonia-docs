@@ -1,0 +1,264 @@
+---
+title: 'GlyphDrawingOptions'
+hide_title: true
+slug: '/avalonia/media/glyphdrawingoptions'
+uid: 'Avalonia.Media.GlyphDrawingOptions'
+commentId: 'T:Avalonia.Media.GlyphDrawingOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GlyphDrawingOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Options that influence how a single glyph is drawn, independent of variable-font
+axis configuration: which CPAL palette to use for color glyphs, and which bitmap
+strike size to prefer for bitmap-based glyphs.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GlyphDrawingOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> GlyphDrawingOptions
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;GlyphDrawingOptions&gt;
+</div>
+</div>
+
+## Remarks
+
+All properties are optional. `null` means "use the font's default" (palette 0
+for color glyphs; no bitmap strike preference). Concerns specific to variable fonts
+(axis coordinates, named instances) live on [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings).
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GlyphDrawingOptions](#uid-a4a9f25d5e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4a9f25d5e"></span>
+
+### GlyphDrawingOptions Constructor
+
+```csharp
+public GlyphDrawingOptions()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-826d4c53f3) | No summary available. |
+| [Equals (2 overloads)](#uid-2fd4e37675) | No summary available. |
+| [GetHashCode](#uid-7f936edf49) | No summary available. |
+| [ToString](#uid-4820c08273) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-826d4c53f3"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Media.GlyphDrawingOptions <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Media.GlyphDrawingOptions](xref:Avalonia.Media.GlyphDrawingOptions)
+
+
+</section>
+
+<span id="uid-2fd4e37675"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8bb76fb716"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.GlyphDrawingOptions other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.GlyphDrawingOptions](xref:Avalonia.Media.GlyphDrawingOptions)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d149c3cbe"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f936edf49"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4820c08273"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-7c63b9c891) | Singleton instance representing "use the font's defaults". |
+| [PaletteIndex](#uid-95178f5009) | Gets the optional `CPAL` palette index used to resolve colors for COLR v0 / COLR v1 glyphs. |
+| [PixelSize](#uid-4a275249c6) | Gets the optional pixel size used to select a bitmap strike from `sbix`, `CBDT` or `EBDT` tables. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c63b9c891"></span>
+
+### Default Property
+
+Singleton instance representing "use the font's defaults".
+
+```csharp
+public Avalonia.Media.GlyphDrawingOptions Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-95178f5009"></span>
+
+### PaletteIndex Property
+
+Gets the optional `CPAL` palette index used to resolve colors for
+COLR v0 / COLR v1 glyphs.
+
+```csharp
+public Nullable<int> PaletteIndex { get; set; }
+```
+
+#### Remarks
+
+When `null`, the font's default palette (palette 0) is used.
+
+#### Exceptions
+
+- [Set to a negative value.](xref:System.ArgumentOutOfRangeException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4a275249c6"></span>
+
+### PixelSize Property
+
+Gets the optional pixel size used to select a bitmap strike from `sbix`,
+`CBDT` or `EBDT` tables.
+
+```csharp
+public Nullable<int> PixelSize { get; set; }
+```
+
+#### Remarks
+
+When `null`, no bitmap strike is selected and the font's outline (or
+color-layer) representation is used instead.
+
+#### Exceptions
+
+- [Set to a value less than 1.](xref:System.ArgumentOutOfRangeException)
+
+</section>
+
+</ApiRefPage>
+

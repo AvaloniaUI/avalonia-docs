@@ -28,6 +28,8 @@ Namespace `Avalonia.OpenGL`
 
 ## Types
 
+- [CompositionGlContextOptions](compositionglcontextoptions.mdx) - Options for [Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync(Avalonia.Rendering.Composition.Compositor,Avalonia.OpenGL.CompositionGlContextOptions)](xref:Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync%28Avalonia.Rendering.Composition.Compositor%2CAvalonia.OpenGL.CompositionGlContextOptions%29).
+- [CompositionGlTextureInfo](compositiongltextureinfo.mdx) - Describes an OpenGL texture provided by [Avalonia.OpenGL.ICompositionGlTextureLease](xref:Avalonia.OpenGL.ICompositionGlTextureLease).
 - [GlBasicInfoInterface](glbasicinfointerface.mdx)
 - [GlConsts](glconsts.mdx)
 - [GlErrors](glerrors.mdx)
@@ -36,6 +38,13 @@ It is not a general-purpose interface for OpenGL API.
 - [GlInterface.GlContextInfo](glinterface-glcontextinfo.mdx)
 - [GlProfileType](glprofiletype.mdx)
 - [GlVersion](glversion.mdx)
+- [ICompositionGlContext](icompositionglcontext.mdx) - An OpenGL context that is suitable for interop with a [Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor).
+Create instances via [Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync(Avalonia.Rendering.Composition.Compositor,Avalonia.OpenGL.CompositionGlContextOptions)](xref:Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync%28Avalonia.Rendering.Composition.Compositor%2CAvalonia.OpenGL.CompositionGlContextOptions%29).
+- [ICompositionGlTexture](icompositiongltexture.mdx) - A texture that can be drawn to by user code and presented to a [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface).
+Create instances via [Avalonia.OpenGL.ICompositionGlContext.CreateTexture(Avalonia.Rendering.Composition.CompositionDrawingSurface,Avalonia.PixelSize)](xref:Avalonia.OpenGL.ICompositionGlContext.CreateTexture%28Avalonia.Rendering.Composition.CompositionDrawingSurface%2CAvalonia.PixelSize%29).
+- [ICompositionGlTextureLease](icompositiongltexturelease.mdx) - An active drawing session on an [Avalonia.OpenGL.ICompositionGlTexture](xref:Avalonia.OpenGL.ICompositionGlTexture).
+The lease is ended either by [Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync](xref:Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync) or by [IDisposable.Dispose](xref:System.IDisposable.Dispose),
+the latter discards the frame. Disposing after [Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync](xref:Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync) is a no-op.
 - [ICompositionImportableOpenGlSharedTexture](icompositionimportableopenglsharedtexture.mdx)
 - [IGlContext](iglcontext.mdx)
 - [IGlContextExternalObjectsFeature](iglcontextexternalobjectsfeature.mdx)
@@ -46,6 +55,7 @@ It is not a general-purpose interface for OpenGL API.
 - [IGlPlatformSurfaceRenderTargetFactory](iglplatformsurfacerendertargetfactory.mdx)
 - [IOpenGlTextureSharingRenderInterfaceContextFeature](iopengltexturesharingrenderinterfacecontextfeature.mdx)
 - [IPlatformGraphicsOpenGlContextFactory](iplatformgraphicsopenglcontextfactory.mdx)
+- [OpenGlCompositionInterop](openglcompositioninterop.mdx) - Provides OpenGL interop facilities for the composition engine.
 - [OpenGlException](openglexception.mdx)
 </ApiRefPage>
 

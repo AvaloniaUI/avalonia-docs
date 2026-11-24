@@ -1,0 +1,200 @@
+---
+title: 'ITextLine'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/itextline'
+uid: 'Avalonia.Controls.Documents.Primitives.ITextLine'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.ITextLine'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITextLine Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a single visual line of formatted text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITextLine
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Baseline](#uid-51ea79b491) | Gets the baseline offset from the top of the line. |
+| [Bounds](#uid-b50c8458ed) | Gets the bounding rectangle of this line in view coordinates. |
+| [ContainingElement](#uid-1101022e19) | Gets the node whose content this line belongs to, if any. Selection rendering and vertical navigation group lines by it, so a line that reports none is skipped by both. |
+| [EndPosition](#uid-b66caf3cd4) | Gets the end position of this line as a lightweight value type. |
+| [HasLineBreak](#uid-fb809b2c64) | Gets whether this line ends with a hard line break. |
+| [Height](#uid-182cd43021) | Gets the height of this line. |
+| [Length](#uid-cc5ea53799) | Gets the character length of text in this line. |
+| [StartPosition](#uid-bd3a8aa765) | Gets the start position of this line as a lightweight value type. |
+| [Width](#uid-dd50ef7964) | Gets the width of this line. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51ea79b491"></span>
+
+### Baseline Property
+
+Gets the baseline offset from the top of the line.
+
+```csharp
+public double Baseline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b50c8458ed"></span>
+
+### Bounds Property
+
+Gets the bounding rectangle of this line in view coordinates.
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1101022e19"></span>
+
+### ContainingElement Property
+
+Gets the node whose content this line belongs to, if any. Selection
+rendering and vertical navigation group lines by it, so a line that
+reports none is skipped by both.
+
+```csharp
+public object ContainingElement { get; set; }
+```
+
+#### Remarks
+
+Defaults to so a line written before this member existed
+still compiles. Such a line is skipped by selection rendering and by vertical
+navigation, which is the same treatment it received before the member was added.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b66caf3cd4"></span>
+
+### EndPosition Property
+
+Gets the end position of this line as a lightweight value type.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.StaticTextPointer EndPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fb809b2c64"></span>
+
+### HasLineBreak Property
+
+Gets whether this line ends with a hard line break.
+
+```csharp
+public bool HasLineBreak { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-182cd43021"></span>
+
+### Height Property
+
+Gets the height of this line.
+
+```csharp
+public double Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc5ea53799"></span>
+
+### Length Property
+
+Gets the character length of text in this line.
+
+```csharp
+public int Length { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd3a8aa765"></span>
+
+### StartPosition Property
+
+Gets the start position of this line as a lightweight value type.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.StaticTextPointer StartPosition { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd50ef7964"></span>
+
+### Width Property
+
+Gets the width of this line.
+
+```csharp
+public double Width { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

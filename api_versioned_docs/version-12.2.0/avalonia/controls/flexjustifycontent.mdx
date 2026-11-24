@@ -1,0 +1,171 @@
+---
+title: 'FlexJustifyContent'
+hide_title: true
+slug: '/avalonia/controls/flexjustifycontent'
+uid: 'Avalonia.Controls.FlexJustifyContent'
+commentId: 'T:Avalonia.Controls.FlexJustifyContent'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FlexJustifyContent Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the main-axis alignment of items inside a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel) line.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum FlexJustifyContent
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> FlexJustifyContent
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Center](#uid-32ddd71562) | Child items are packed toward the center of the line. |
+| [FlexEnd](#uid-cb5149bd7b) | Child items are packed toward the end of the line. |
+| [FlexStart](#uid-6951821913) | Child items are packed toward the start of the line. |
+| [SpaceAround](#uid-45623b23e8) | Child items are evenly distributed in the line, with half-size spaces on either end. |
+| [SpaceBetween](#uid-6ae33d81bb) | Child items are evenly distributed in the line, with no space on either end. |
+| [SpaceEvenly](#uid-e013940427) | Child items are evenly distributed in the line, with equal-size spaces between each item and on either end. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32ddd71562"></span>
+
+### Center Field
+
+Child items are packed toward the center of the line.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent Center
+```
+
+#### Remarks
+
+If the leftover free-space is negative, the child items will overflow equally in both directions.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb5149bd7b"></span>
+
+### FlexEnd Field
+
+Child items are packed toward the end of the line.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent FlexEnd
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6951821913"></span>
+
+### FlexStart Field
+
+Child items are packed toward the start of the line.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent FlexStart
+```
+
+#### Remarks
+
+This is the default value.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-45623b23e8"></span>
+
+### SpaceAround Field
+
+Child items are evenly distributed in the line, with half-size spaces on either end.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent SpaceAround
+```
+
+#### Remarks
+
+If the leftover free-space is negative or there is only a single child item on the line,
+this value is identical to [Avalonia.Controls.FlexJustifyContent.Center](xref:Avalonia.Controls.FlexJustifyContent.Center).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ae33d81bb"></span>
+
+### SpaceBetween Field
+
+Child items are evenly distributed in the line, with no space on either end.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent SpaceBetween
+```
+
+#### Remarks
+
+If the leftover free-space is negative or there is only a single child item on the line,
+this value is identical to [Avalonia.Controls.FlexJustifyContent.FlexStart](xref:Avalonia.Controls.FlexJustifyContent.FlexStart).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e013940427"></span>
+
+### SpaceEvenly Field
+
+Child items are evenly distributed in the line, with equal-size spaces between each item and on either end.
+
+```csharp
+public Avalonia.Controls.FlexJustifyContent SpaceEvenly
+```
+
+</section>
+
+</ApiRefPage>
+

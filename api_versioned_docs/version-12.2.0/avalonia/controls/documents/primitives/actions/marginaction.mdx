@@ -1,0 +1,162 @@
+---
+title: 'MarginAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/marginaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.MarginAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.MarginAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarginAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for setting uniform margin on block elements (Paragraph, Section, etc.).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarginAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> BlockPropertyAction&lt;Thickness&gt; <span className="apiref-page__relation-separator">-&gt;</span> MarginAction
+</div>
+</div>
+
+## Remarks
+
+Margin controls the spacing outside the block element's border.
+This action sets uniform margins on all four sides (top, right, bottom, left).
+
+Common margin values:
+
+- 0 - No margin (flush with container)
+- 5 - Minimal spacing
+- 10 - Standard paragraph spacing
+- 15 - Moderate spacing
+- 20 - Large spacing for visual separation
+
+When applied to a selection spanning multiple paragraphs, all affected paragraphs
+will have their margins set to the specified value.
+
+Note: This action sets uniform margins only. For non-uniform margins
+(different values for each side), use a dedicated margin editor panel.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MarginAction](#uid-eae89bae72) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-eae89bae72"></span>
+
+### MarginAction Constructor
+
+```csharp
+public MarginAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAvailableValues](#uid-e9e80f369b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e9e80f369b"></span>
+
+### GetAvailableValues Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Thickness> GetAvailableValues()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Thickness](xref:Avalonia.Thickness)&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-635267ba1d) | No summary available. |
+| [Gesture](#uid-2e47a92ee9) | No summary available. |
+| [Id](#uid-f741e9e3b3) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-635267ba1d"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e47a92ee9"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f741e9e3b3"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

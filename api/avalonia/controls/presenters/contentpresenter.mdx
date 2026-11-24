@@ -59,6 +59,9 @@ public class ContentPresenter
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Derived types:</span> <a href="scrollcontentpresenter">ScrollContentPresenter</a>
 </div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IVisualWithRoundRectClip
+</div>
 </div>
 
 ## Constructors
@@ -183,6 +186,9 @@ and is particularly useful in unit tests.
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Background](#uid-492998d98c) | Gets or sets a brush with which to paint the background. |
 | [BackgroundSizing](#uid-13da265e18) | Gets or sets how the background is drawn relative to the border. |
 | [BorderBrush](#uid-9e4c555ce5) | Gets or sets a brush with which to paint the border. |
@@ -212,6 +218,7 @@ and is particularly useful in unit tests.
 | [FontSize](#uid-4896f54973) | Gets or sets the font size. |
 | [FontStretch](#uid-e092f9847a) | Gets or sets the font stretch. |
 | [FontStyle](#uid-a4d0ca80db) | Gets or sets the font style. |
+| [FontVariations](#uid-320751775b) | Gets or sets the variable-font axis values (e.g. `wght=700`). `null` means the font's design defaults. |
 | [FontWeight](#uid-cac23aeaf5) | Gets or sets the font weight. |
 | [Foreground](#uid-ab823f29e6) | Gets or sets a brush used to paint the text. |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -451,6 +458,21 @@ public Avalonia.Media.FontStyle FontStyle { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-320751775b"></span>
+
+### FontVariations Property
+
+Gets or sets the variable-font axis values (e.g. `wght=700`).
+`null` means the font's design defaults.
+
+```csharp
+public Avalonia.Media.FontVariationSettings FontVariations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-cac23aeaf5"></span>
 
 ### FontWeight Property
@@ -621,6 +643,9 @@ public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BackgroundProperty](#uid-f91519f611) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.Background](xref:Avalonia.Controls.Presenters.ContentPresenter.Background) property. |
 | [BackgroundSizingProperty](#uid-d7151e21bd) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizing](xref:Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizing) property. |
 | [BorderBrushProperty](#uid-a6779dfd7e) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.BorderBrush](xref:Avalonia.Controls.Presenters.ContentPresenter.BorderBrush) property. |
@@ -650,6 +675,7 @@ public Avalonia.Layout.VerticalAlignment VerticalContentAlignment { get; set; }
 | [FontSizeProperty](#uid-fed6bc5e74) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontSize](xref:Avalonia.Controls.Presenters.ContentPresenter.FontSize) property. |
 | [FontStretchProperty](#uid-2f02752ec6) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontStretch](xref:Avalonia.Controls.Presenters.ContentPresenter.FontStretch) property. |
 | [FontStyleProperty](#uid-0ce369ef2c) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontStyle](xref:Avalonia.Controls.Presenters.ContentPresenter.FontStyle) property. |
+| [FontVariationsProperty](#uid-6cbdc57b2e) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontVariations](xref:Avalonia.Controls.Presenters.ContentPresenter.FontVariations) property. |
 | [FontWeightProperty](#uid-eee65ead30) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontWeight](xref:Avalonia.Controls.Presenters.ContentPresenter.FontWeight) property. |
 | [ForegroundProperty](#uid-f8e4bbe80d) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.Foreground](xref:Avalonia.Controls.Presenters.ContentPresenter.Foreground) property. |
 | [GettingFocusEvent](../../input/inputelement.mdx#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -909,6 +935,20 @@ Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontStyle](xref:Avalo
 
 ```csharp
 public Avalonia.StyledProperty<Avalonia.Media.FontStyle> FontStyleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6cbdc57b2e"></span>
+
+### FontVariationsProperty Field
+
+Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontVariations](xref:Avalonia.Controls.Presenters.ContentPresenter.FontVariations) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Media.FontVariationSettings> FontVariationsProperty
 ```
 
 </section>

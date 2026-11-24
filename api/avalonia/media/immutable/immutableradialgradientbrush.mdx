@@ -65,7 +65,7 @@ public class ImmutableRadialGradientBrush
 
 | Name | Description |
 | --- | --- |
-| [ImmutableRadialGradientBrush (3 overloads)](#uid-fd395255a5) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableRadialGradientBrush](xref:Avalonia.Media.Immutable.ImmutableRadialGradientBrush) class. |
+| [ImmutableRadialGradientBrush (4 overloads)](#uid-fd395255a5) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableRadialGradientBrush](xref:Avalonia.Media.Immutable.ImmutableRadialGradientBrush) class. |
 
 <span id="uid-fd395255a5"></span>
 
@@ -171,6 +171,50 @@ public ImmutableRadialGradientBrush(System.Collections.Generic.IReadOnlyList<Ava
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-35c01a36a8"></span>
+
+#### ImmutableRadialGradientBrush Constructor
+
+```csharp
+public ImmutableRadialGradientBrush(System.Collections.Generic.IReadOnlyList<Avalonia.Media.Immutable.ImmutableGradientStop> gradientStops, double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Nullable<Avalonia.RelativePoint> transformOrigin, Avalonia.Media.GradientSpreadMethod spreadMethod, Nullable<Avalonia.RelativePoint> center, Nullable<Avalonia.RelativePoint> gradientOrigin, Nullable<Avalonia.RelativeScalar> radiusX, Nullable<Avalonia.RelativeScalar> radiusY, Avalonia.Media.Immutable.ImmutableTransform relativeTransform)
+```
+
+##### Parameters
+
+`gradientStops` System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Media.Immutable.ImmutableGradientStop](xref:Avalonia.Media.Immutable.ImmutableGradientStop)&gt;
+
+
+`opacity` double
+
+
+`transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+
+`transformOrigin` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`spreadMethod` [Avalonia.Media.GradientSpreadMethod](xref:Avalonia.Media.GradientSpreadMethod)
+
+
+`center` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`gradientOrigin` Nullable&lt;[Avalonia.RelativePoint](xref:Avalonia.RelativePoint)&gt;
+
+
+`radiusX` Nullable&lt;[Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar)&gt;
+
+
+`radiusY` Nullable&lt;[Avalonia.RelativeScalar](xref:Avalonia.RelativeScalar)&gt;
+
+
+`relativeTransform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
@@ -181,6 +225,7 @@ public ImmutableRadialGradientBrush(System.Collections.Generic.IReadOnlyList<Ava
 | [Opacity](immutablegradientbrush.mdx#uid-5f6e07ee47) | Gets the opacity of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
 | [RadiusX](#uid-671077e5fe) | Gets the horizontal radius of the outermost circle of the radial gradient. |
 | [RadiusY](#uid-eeeecb9b88) | Gets the vertical radius of the outermost circle of the radial gradient. |
+| [RelativeTransform](immutablegradientbrush.mdx#uid-f3bf2b9185) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
 | [SpreadMethod](immutablegradientbrush.mdx#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
 | [Transform](immutablegradientbrush.mdx#uid-2c0dd3ffd3) | Gets the transform of the brush. Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |
 | [TransformOrigin](immutablegradientbrush.mdx#uid-56b8b5945b) | Gets the transform origin of the brush Inherited from [ImmutableGradientBrush](immutablegradientbrush.mdx). |

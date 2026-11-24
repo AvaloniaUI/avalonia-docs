@@ -1,0 +1,82 @@
+---
+title: 'IGridLineBrushChart'
+hide_title: true
+slug: '/avalonia/controls/charts/igridlinebrushchart'
+uid: 'Avalonia.Controls.Charts.IGridLineBrushChart'
+commentId: 'T:Avalonia.Controls.Charts.IGridLineBrushChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGridLineBrushChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes chart-level grid-line styling for chart types that render grid lines.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGridLineBrushChart
+```
+
+</div>
+
+## Remarks
+
+Implement this contract only when a chart has a real grid-line rendering surface.
+This keeps [Avalonia.Controls.Charts.IGridLineBrushChart.GridLineBrush](xref:Avalonia.Controls.Charts.IGridLineBrushChart.GridLineBrush) off chart types where a grid brush would be
+misleading or visually meaningless.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [GridLineBrush](#uid-a9be4f3f60) | Gets or sets the default brush used for grid lines. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9be4f3f60"></span>
+
+### GridLineBrush Property
+
+Gets or sets the default brush used for grid lines.
+
+```csharp
+public Avalonia.Media.IBrush GridLineBrush { get; set; }
+```
+
+#### Remarks
+
+A null value lets the chart choose its theme-aware default grid-line brush.
+
+</section>
+
+</ApiRefPage>
+

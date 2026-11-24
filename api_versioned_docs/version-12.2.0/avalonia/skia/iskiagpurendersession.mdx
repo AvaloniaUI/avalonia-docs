@@ -1,0 +1,121 @@
+---
+title: 'ISkiaGpuRenderSession'
+hide_title: true
+slug: '/avalonia/skia/iskiagpurendersession'
+uid: 'Avalonia.Skia.ISkiaGpuRenderSession'
+commentId: 'T:Avalonia.Skia.ISkiaGpuRenderSession'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Skia'
+assembly: 'Avalonia.Skia'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Skia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ISkiaGpuRenderSession Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Skia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Skia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Skia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Custom render session for Skia render target.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ISkiaGpuRenderSession
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [GrContext](#uid-ffa8d69d60) | GrContext used by this session. |
+| [ScaleFactor](#uid-11b1dfc9bc) | Scaling factor. |
+| [SkSurface](#uid-3609396a7c) | Canvas that will be used to render. |
+| [SurfaceOrigin](#uid-abd625cc08) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ffa8d69d60"></span>
+
+### GrContext Property
+
+GrContext used by this session.
+
+```csharp
+public SkiaSharp.GRContext GrContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11b1dfc9bc"></span>
+
+### ScaleFactor Property
+
+Scaling factor.
+
+```csharp
+public double ScaleFactor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3609396a7c"></span>
+
+### SkSurface Property
+
+Canvas that will be used to render.
+
+```csharp
+public SkiaSharp.SKSurface SkSurface { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-abd625cc08"></span>
+
+### SurfaceOrigin Property
+
+```csharp
+public SkiaSharp.GRSurfaceOrigin SurfaceOrigin { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,291 @@
+---
+title: 'MediaPlayerLogEntry'
+hide_title: true
+slug: '/avalonia/media/mediaplayerlogentry'
+uid: 'Avalonia.Media.MediaPlayerLogEntry'
+commentId: 'T:Avalonia.Media.MediaPlayerLogEntry'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.MediaPlayer.Abstractions'
+assembly: 'Avalonia.Controls.MediaPlayer.Abstractions'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MediaPlayerLogEntry Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.MediaPlayer.Abstractions</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MediaPlayerLogEntry
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MediaPlayerLogEntry
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;MediaPlayerLogEntry&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MediaPlayerLogEntry](#uid-544607e61d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-544607e61d"></span>
+
+### MediaPlayerLogEntry Constructor
+
+```csharp
+public MediaPlayerLogEntry(DateTimeOffset timestamp, Avalonia.Logging.LogEventLevel level, string component, string message)
+```
+
+#### Parameters
+
+`timestamp` DateTimeOffset
+
+
+`level` [Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+`component` string
+
+
+`message` string
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [&lt;Clone&gt;$](#uid-2e0af9b188) | No summary available. |
+| [Equals (2 overloads)](#uid-228730ddd4) | No summary available. |
+| [GetHashCode](#uid-9afe344355) | No summary available. |
+| [ToString](#uid-dedbad378a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e0af9b188"></span>
+
+### &lt;Clone&gt;$ Method
+
+```csharp
+public Avalonia.Media.MediaPlayerLogEntry <Clone>$()
+```
+
+#### Returns
+
+[Avalonia.Media.MediaPlayerLogEntry](xref:Avalonia.Media.MediaPlayerLogEntry)
+
+
+</section>
+
+<span id="uid-228730ddd4"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6eff2a8843"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.MediaPlayerLogEntry other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.MediaPlayerLogEntry](xref:Avalonia.Media.MediaPlayerLogEntry)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b287b8056"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9afe344355"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dedbad378a"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Backend](#uid-ca272dd1f2) | No summary available. |
+| [Component](#uid-c31ff9698f) | No summary available. |
+| [Exception](#uid-bacf78617d) | No summary available. |
+| [Level](#uid-91da14deda) | No summary available. |
+| [Message](#uid-998089c905) | No summary available. |
+| [Metadata](#uid-be746555c4) | No summary available. |
+| [Timestamp](#uid-cd290cb6b8) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca272dd1f2"></span>
+
+### Backend Property
+
+```csharp
+public string Backend { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c31ff9698f"></span>
+
+### Component Property
+
+```csharp
+public string Component { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bacf78617d"></span>
+
+### Exception Property
+
+```csharp
+public Exception Exception { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-91da14deda"></span>
+
+### Level Property
+
+```csharp
+public Avalonia.Logging.LogEventLevel Level { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-998089c905"></span>
+
+### Message Property
+
+```csharp
+public string Message { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be746555c4"></span>
+
+### Metadata Property
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<string, string> Metadata { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd290cb6b8"></span>
+
+### Timestamp Property
+
+```csharp
+public DateTimeOffset Timestamp { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -34,6 +34,9 @@ Namespace `Avalonia.Media`
 - [AlignmentY](alignmenty.mdx) - Describes how content is positioned vertically in a container.
 - [ArcSegment](arcsegment.mdx)
 - [AvFoundationMediaPlayerOptions](avfoundationmediaplayeroptions.mdx)
+- [BackdropEffectBoundsSource](backdropeffectboundssource.mdx) - Specifies which bounds of a visual its backdrop effect is limited to.
+- [BackdropEffectCache](backdropeffectcache.mdx) - Selects whether a backdrop effect keeps a snapshot of what is behind the visual, or reads it again on
+every draw. With a null value the compositor chooses.
 - [BackgroundSizing](backgroundsizing.mdx) - Defines how a background is drawn relative to its border.
 - [BaselineAlignment](baselinealignment.mdx) - Enum specifying where a box should be positioned Vertically
 - [BaselinePixelAlignment](baselinepixelalignment.mdx) - Specifies the baseline pixel alignment options for rendering text or graphics.
@@ -94,6 +97,11 @@ Bold and oblique simulations can be combined via bitwise OR operation.
 - [FontStretch](fontstretch.mdx) - [FontStretch](xref:Avalonia.Media.FontStretch) describes relative change from the normal aspect ratio
 as specified by a font designer for the glyphs in a font.
 - [FontStyle](fontstyle.mdx) - Defines the available font styles.
+- [FontVariation](fontvariation.mdx) - A single variation axis setting in designer units, e.g. `wght = 700`.
+- [FontVariationAxis](fontvariationaxis.mdx) - Describes a single variation axis declared by a variable font's `fvar` table.
+- [FontVariationInstance](fontvariationinstance.mdx) - Describes a named variation instance declared by a variable font's `fvar` table.
+- [FontVariationSettings](fontvariationsettings.mdx) - An immutable, order-independent set of user-space variation axis values that
+configures variable fonts (fonts with an `fvar` table) for rendering.
 - [FontWeight](fontweight.mdx) - Defines a set of predefined font weights.
 - [FormattedText](formattedtext.mdx) - The [FormattedText](xref:Avalonia.Media.FormattedText) class is targeted at programmers needing to add some simple text to a MIL visual.
 - [Geometry](geometry.mdx) - Defines a geometric shape.
@@ -102,7 +110,12 @@ as specified by a font designer for the glyphs in a font.
 - [GeometryDrawing](geometrydrawing.mdx) - Represents a drawing operation that combines
 a geometry with and brush and/or pen to produce rendered content.
 - [GeometryGroup](geometrygroup.mdx) - Represents a composite geometry, composed of other [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) objects.
+- [GeometryHitTestResult](geometryhittestresult.mdx) - Returns the results of a hit test that uses a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) as a hit test parameter.
 - [GeometryTypeConverter](geometrytypeconverter.mdx)
+- [GlyphDrawingOptions](glyphdrawingoptions.mdx) - Options that influence how a single glyph is drawn, independent of variable-font
+axis configuration: which CPAL palette to use for color glyphs, and which bitmap
+strike size to prefer for bitmap-based glyphs.
+- [GlyphDrawingType](glyphdrawingtype.mdx) - Specifies the format used to render a glyph, such as outline, color layers, SVG, or bitmap.
 - [GlyphMetrics](glyphmetrics.mdx)
 - [GlyphRun](glyphrun.mdx) - Represents a sequence of glyphs from a single face of a single font at a single size, and with a single rendering style.
 - [GlyphRunDrawing](glyphrundrawing.mdx)
@@ -126,11 +139,12 @@ This uses a cylindrical-coordinate representation of a color.
 - [IEffect](ieffect.mdx)
 - [IExperimentalAcrylicMaterial](iexperimentalacrylicmaterial.mdx) - Experimental Interface for producing Acrylic-like materials.
 - [IFontMemory](ifontmemory.mdx)
+- [IGlyphDrawing](iglyphdrawing.mdx) - Represents a glyph that knows how to draw itself into a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
 - [IGradientBrush](igradientbrush.mdx) - A brush that draws with a gradient.
 - [IGradientStop](igradientstop.mdx) - Describes the location and color of a transition point in a gradient.
 - [IImage](iimage.mdx) - Represents a raster or vector image.
 - [IImageBrush](iimagebrush.mdx) - Paints an area with an [Avalonia.Media.Imaging.IBitmap](xref:Avalonia.Media.Imaging.IBitmap).
-- [IImageBrushSource](iimagebrushsource.mdx)
+- [IImageBrushSource](iimagebrushsource.mdx) - Provides access to the image source of an [Avalonia.Media.IImageBrush](xref:Avalonia.Media.IImageBrush).
 - [IImmutableBrush](iimmutablebrush.mdx) - Represents an immutable brush which can be safely used with various threading contexts
 - [IImmutableEffect](iimmutableeffect.mdx)
 - [IImmutableGlyphRunReference](iimmutableglyphrunreference.mdx)
@@ -143,6 +157,8 @@ This uses a cylindrical-coordinate representation of a color.
 - [IMutableTransform](imutabletransform.mdx)
 - [IPen](ipen.mdx) - Describes how a stroke is drawn.
 - [IPlatformTypeface](iplatformtypeface.mdx)
+- [IPlatformTypefaceSimulator](iplatformtypefacesimulator.mdx) - Optionally implemented by an [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) that can create variants of
+itself with other [Avalonia.Media.FontSimulations](xref:Avalonia.Media.FontSimulations).
 - [IRadialGradientBrush](iradialgradientbrush.mdx) - Paints an area with a radial gradient.
 - [ISceneBrush](iscenebrush.mdx)
 - [ISceneBrushContent](iscenebrushcontent.mdx)
@@ -159,6 +175,7 @@ This uses a cylindrical-coordinate representation of a color.
 - [ImmutableDropShadowDirectionEffect](immutabledropshadowdirectioneffect.mdx)
 - [ImmutableDropShadowEffect](immutabledropshadoweffect.mdx)
 - [ImmutableExperimentalAcrylicMaterial](immutableexperimentalacrylicmaterial.mdx)
+- [IntersectionResult](intersectionresult.mdx) - Provides information about the intersection between a hit geometry and a target geometry or visual.
 - [LineGeometry](linegeometry.mdx) - Represents the geometry of a line.
 - [LineSegment](linesegment.mdx)
 - [LinearGradientBrush](lineargradientbrush.mdx) - A brush that draws with a linear gradient.
@@ -191,6 +208,7 @@ This uses a cylindrical-coordinate representation of a color.
 - [RectangleGeometry](rectanglegeometry.mdx) - Represents the geometry of a rectangle.
 - [RenderOptions](renderoptions.mdx) - Provides a set of options that control rendering behavior for visuals, including text rendering, bitmap
 interpolation, edge rendering, blending, and opacity handling.
+- [RetainedBackdropEffectCache](retainedbackdropeffectcache.mdx) - Keeps a snapshot of what is behind the visual and updates only its changed parts.
 - [Rotate3DTransform](rotate3dtransform.mdx) - Non-Affine 3D transformation for rotating a visual around a definable axis
 - [RotateTransform](rotatetransform.mdx) - Rotates a [Avalonia.Visual](xref:Avalonia.Visual).
 - [ScaleTransform](scaletransform.mdx) - Scale an [Avalonia.Visual](xref:Avalonia.Visual).
@@ -241,5 +259,6 @@ Controls the smoothing and antialiasing applied during text rasterization.
 - [UnicodeRangeSegment](unicoderangesegment.mdx)
 - [UriSource](urisource.mdx)
 - [VisualBrush](visualbrush.mdx) - Paints an area with an [Avalonia.Media.VisualBrush.Visual](xref:Avalonia.Media.VisualBrush.Visual).
+- [VolatileBackdropEffectCache](volatilebackdropeffectcache.mdx) - Reads what is behind the visual again on every draw.
 </ApiRefPage>
 

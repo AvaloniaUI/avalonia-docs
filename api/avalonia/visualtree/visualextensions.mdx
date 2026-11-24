@@ -74,11 +74,11 @@ public class VisualExtensions
 | [GetSelfAndVisualDescendants](#uid-a62ec3fa53) | Enumerates an [Avalonia.Visual](xref:Avalonia.Visual) and its descendants in the visual tree. |
 | [GetTransformedBounds](#uid-9dd6a1542d) | No summary available. |
 | [GetVisualAncestors](#uid-3718ba8e9e) | Enumerates the ancestors of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
-| [GetVisualAt (2 overloads)](#uid-558e3c5252) | Gets the first visual in the visual tree whose bounds contain a point. |
+| [GetVisualAt (4 overloads)](#uid-558e3c5252) | Gets the first visual in the visual tree whose bounds intersects a geometry. |
 | [GetVisualChildren](#uid-46c0f766d8) | Enumerates the children of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
 | [GetVisualDescendants](#uid-b12bb1e778) | Enumerates the descendants of an [Avalonia.Visual](xref:Avalonia.Visual) in the visual tree. |
 | [GetVisualParent](#uid-3b19a7efbd) | Gets the visual parent of an [Avalonia.Visual](xref:Avalonia.Visual). |
-| [GetVisualsAt (2 overloads)](#uid-80be4d730c) | Enumerates the visible visuals in the visual tree whose bounds contain a point. |
+| [GetVisualsAt (4 overloads)](#uid-80be4d730c) | Enumerates the visible visuals in the visual tree whose bounds intersects a geometry. |
 | [IsAttachedToVisualTree](#uid-6f068f121d) | Returns a value indicating whether this control is attached to a visual root. |
 | [IsVisualAncestorOf](#uid-7d9754bffc) | Tests whether an [Avalonia.Visual](xref:Avalonia.Visual) is an ancestor of another visual. |
 | [SortByZIndex](#uid-d2c1ad496d) | No summary available. |
@@ -495,6 +495,67 @@ The visual's ancestors.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-b9e9ec7257"></span>
+
+#### GetVisualAt Method
+
+Gets the first visual in the visual tree whose bounds intersects a geometry.
+
+```csharp
+public Avalonia.Media.GeometryHitTestResult GetVisualAt(Avalonia.Visual visual, Avalonia.Media.Geometry geometry)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The root visual to test.
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry.
+
+
+##### Returns
+
+[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)
+
+A [Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult) containing the visual intersecting the requested geometry and intersection details, or null if no intersection.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f179bcf4e"></span>
+
+#### GetVisualAt Method
+
+```csharp
+public Avalonia.Media.GeometryHitTestResult GetVisualAt(Avalonia.Visual visual, Avalonia.Media.Geometry geometry, Func<Avalonia.Visual, bool> filter)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+##### Returns
+
+[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-645d3d4da8"></span>
 
 #### GetVisualAt Method
@@ -641,6 +702,67 @@ The parent, or null if the visual is unparented.
 <span id="uid-80be4d730c"></span>
 
 ### GetVisualsAt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca8ce69b9f"></span>
+
+#### GetVisualsAt Method
+
+Enumerates the visible visuals in the visual tree whose bounds intersects a geometry.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.GeometryHitTestResult> GetVisualsAt(Avalonia.Visual visual, Avalonia.Media.Geometry geometry)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+The root visual to test.
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry.
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)&gt;
+
+The visuals intersecting the requested geometry with intersection details.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dde8a7965c"></span>
+
+#### GetVisualsAt Method
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.GeometryHitTestResult> GetVisualsAt(Avalonia.Visual visual, Avalonia.Media.Geometry geometry, Func<Avalonia.Visual, bool> filter)
+```
+
+##### Parameters
+
+`visual` [Avalonia.Visual](xref:Avalonia.Visual)
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)&gt;
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 

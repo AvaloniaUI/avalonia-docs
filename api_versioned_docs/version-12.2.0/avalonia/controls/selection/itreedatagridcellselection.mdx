@@ -1,0 +1,132 @@
+---
+title: 'ITreeDataGridCellSelection'
+hide_title: true
+slug: '/avalonia/controls/selection/itreedatagridcellselection'
+uid: 'Avalonia.Controls.Selection.ITreeDataGridCellSelection'
+commentId: 'T:Avalonia.Controls.Selection.ITreeDataGridCellSelection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Selection'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ITreeDataGridCellSelection Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Selection</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides non-generic access to cell selection state.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ITreeDataGridCellSelection
+```
+
+</div>
+
+## Remarks
+
+[Avalonia.Controls.Selection.TreeDataGridCellSelectionModel&lt;T&gt;](xref:Avalonia.Controls.Selection.TreeDataGridCellSelectionModel%601) is generic, but the
+[Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) and its automation peers need non-generic access to the cell
+selection state. Custom cell selection models should implement this interface in order to
+expose their selection to UI Automation clients such as screen readers.
+
+This interface is experimental: it is exposed to allow custom selection models to be
+implemented, but it may be changed or removed in a future release.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsSelected](#uid-38c155fe67) | Determines whether the specified cell is selected. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38c155fe67"></span>
+
+### IsSelected Method
+
+Determines whether the specified cell is selected.
+
+```csharp
+public bool IsSelected(Avalonia.Controls.CellIndex index)
+```
+
+#### Parameters
+
+`index` [Avalonia.Controls.CellIndex](xref:Avalonia.Controls.CellIndex)
+
+The index of the cell.
+
+
+#### Returns
+
+bool
+
+true if the cell is selected; otherwise false.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [SelectedIndex](#uid-c3960ed8e5) | Gets or sets the index of the selected cell. Setting this value clears the existing selection and selects the single specified cell. |
+| [SelectedIndexes](#uid-ca594e8363) | Gets the indexes of the selected cells. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c3960ed8e5"></span>
+
+### SelectedIndex Property
+
+Gets or sets the index of the selected cell. Setting this value clears the existing
+selection and selects the single specified cell.
+
+```csharp
+public Avalonia.Controls.CellIndex SelectedIndex { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca594e8363"></span>
+
+### SelectedIndexes Property
+
+Gets the indexes of the selected cells.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.CellIndex> SelectedIndexes { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,265 @@
+---
+title: 'TextPageBand'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textpageband'
+uid: 'Avalonia.Controls.Documents.TextModel.TextPageBand'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextPageBand'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPageBand Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A page band at the text-model level: a nested [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) with the
+role and rule that place it and the identity a section's references name. The
+owning document keeps its bands in [Avalonia.Controls.Documents.TextModel.TextDocument.PageBands](xref:Avalonia.Controls.Documents.TextModel.TextDocument.PageBands), snapshots
+them with itself, and restores them from a snapshot; the [Avalonia.Controls.Documents.PageBand](xref:Avalonia.Controls.Documents.PageBand)
+element is the optional facade over one of these, the way [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument)
+is over a text document.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPageBand
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextPageBand
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextPageBand (3 overloads)](#uid-bb9cebf571) | Initializes a band over a new empty band document with a fresh identity. |
+
+<span id="uid-bb9cebf571"></span>
+
+### TextPageBand overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-64a93b6452"></span>
+
+#### TextPageBand Constructor
+
+Initializes a band over a new empty band document with a fresh identity.
+
+```csharp
+public TextPageBand(Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule)
+```
+
+##### Parameters
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-09e1fe8378"></span>
+
+#### TextPageBand Constructor
+
+Initializes a band over `document`, a band-rooted document, with a fresh identity.
+
+```csharp
+public TextPageBand(Avalonia.Controls.Documents.TextModel.TextDocument document, Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule)
+```
+
+##### Parameters
+
+`document` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0d35647e7"></span>
+
+#### TextPageBand Constructor
+
+Initializes a band over `document` with a known identity (a restored snapshot).
+
+```csharp
+public TextPageBand(Guid id, Avalonia.Controls.Documents.TextModel.TextDocument document, Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule)
+```
+
+##### Parameters
+
+`id` Guid
+
+
+`document` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Document](#uid-c28d6caaa5) | The band's content. |
+| [Id](#uid-97ae960624) | The band's identity, kept through snapshots and clones: what a section's references name. |
+| [Name](#uid-0a46247550) | The band's name, when the source format named it; null otherwise. Formats that reference bands by name rather than by identity write it back on save, so a document loaded and saved keeps the names it arrived with. |
+| [Owner](#uid-7a91ed9807) | The document that owns the band, null while it is unowned. |
+| [Role](#uid-8fd810da93) | Whether the band is a header or a footer. |
+| [Rule](#uid-502d1f43f7) | Which pages the band claims by itself; see [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c28d6caaa5"></span>
+
+### Document Property
+
+The band's content.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97ae960624"></span>
+
+### Id Property
+
+The band's identity, kept through snapshots and clones: what a section's references name.
+
+```csharp
+public Guid Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a46247550"></span>
+
+### Name Property
+
+The band's name, when the source format named it; null otherwise. Formats that
+reference bands by name rather than by identity write it back on save, so a
+document loaded and saved keeps the names it arrived with.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a91ed9807"></span>
+
+### Owner Property
+
+The document that owns the band, null while it is unowned.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8fd810da93"></span>
+
+### Role Property
+
+Whether the band is a header or a footer.
+
+```csharp
+public Avalonia.Controls.Documents.PageBandRole Role { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-502d1f43f7"></span>
+
+### Rule Property
+
+Which pages the band claims by itself; see [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule).
+
+```csharp
+public Avalonia.Controls.Documents.PageBandRule Rule { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-86dc8ebe0c) | Raised when the role or rule changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-86dc8ebe0c"></span>
+
+### Changed Event
+
+Raised when the role or rule changes.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

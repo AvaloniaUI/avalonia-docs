@@ -123,6 +123,9 @@ public void Render(Avalonia.Media.DrawingContext context)
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Bounds](../../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../../visual.mdx). |
 | [CacheMode](../../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../../visual.mdx). |
 | [Classes](../../styledelement.mdx#uid-b7b7edea05) | Gets or sets the styled element's classes. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -351,6 +354,9 @@ public double StrokeThickness { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BoundsProperty](../../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../../visual.mdx). |
 | [CacheModeProperty](../../visual.mdx#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. Inherited from [Visual](../../visual.mdx). |
 | [ClipProperty](../../visual.mdx#uid-06ffce3308) | Defines the [Avalonia.Visual.Clip](xref:Avalonia.Visual.Clip) property. Inherited from [Visual](../../visual.mdx). |

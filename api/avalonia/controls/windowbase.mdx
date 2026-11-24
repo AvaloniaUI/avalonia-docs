@@ -162,6 +162,7 @@ public WindowBase(Avalonia.Platform.IWindowBaseImpl impl, Avalonia.IAvaloniaDepe
 | [SetSystemBarColor](toplevel.mdx#uid-1359f0a6ef) | Gets or sets the keyboard navigation handler for the window. Inherited from [TopLevel](toplevel.mdx). |
 | [SetValue (3 overloads)](../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Show](#uid-b82835c647) | Shows the window. |
+| [TryGetClipboard](toplevel.mdx#uid-c225cc7c61) | Gets the platform's clipboard of the specified type, or null if the platform doesn't provide it. Inherited from [TopLevel](toplevel.mdx). |
 | [TryGetPlatformHandle](toplevel.mdx#uid-f886eb2cf2) | Trys to get the platform handle for the [TopLevel](xref:Avalonia.Controls.TopLevel)-derived control. Inherited from [TopLevel](toplevel.mdx). |
 | [TryGetResource](../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../styledelement.mdx). |
 | [UpdateLayout](../layout/layoutable.mdx#uid-529d4a08ea) | Executes a layout pass. Inherited from [Layoutable](../layout/layoutable.mdx). |
@@ -215,6 +216,9 @@ public void Show()
 | --- | --- |
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
 | [ActualTransparencyLevel](toplevel.mdx#uid-b06b4e75d1) | Gets the achieved [Avalonia.Controls.WindowTransparencyLevel](xref:Avalonia.Controls.WindowTransparencyLevel) that the platform was able to provide. Inherited from [TopLevel](toplevel.mdx). |
+| [BackdropEffect](../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectBoundsSource](../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCache](../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../visual.mdx). |
 | [Background](primitives/templatedcontrol.mdx#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BackgroundSizing](primitives/templatedcontrol.mdx#uid-07ef33f604) | Gets or sets how the control's background is drawn relative to the control's border. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BorderBrush](primitives/templatedcontrol.mdx#uid-cf666d3678) | Gets or sets the brush used to draw the control's border. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -247,6 +251,7 @@ public void Show()
 | [FontSize](primitives/templatedcontrol.mdx#uid-0a8445793b) | Gets or sets the size of the control's text in points. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStretch](primitives/templatedcontrol.mdx#uid-f23e3b5938) | Gets or sets the font stretch used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStyle](primitives/templatedcontrol.mdx#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
+| [FontVariations](primitives/templatedcontrol.mdx#uid-11608368de) | Gets or sets the variable-font axis values (e.g. `wght=700`) used to draw the control's text. `null` means the font's design defaults. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontWeight](primitives/templatedcontrol.mdx#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Foreground](primitives/templatedcontrol.mdx#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FrameSize](toplevel.mdx#uid-f8415332cb) | Gets or sets the total size of the window. Inherited from [TopLevel](toplevel.mdx). |
@@ -403,6 +408,9 @@ public bool Topmost { get; set; }
 | [ActualThemeVariantProperty](toplevel.mdx#uid-3449282ab9) | Inherited from [TopLevel](toplevel.mdx). |
 | [ActualTransparencyLevelProperty](toplevel.mdx#uid-bc59cb5fcd) | Defines the [Avalonia.Controls.TopLevel.ActualTransparencyLevel](xref:Avalonia.Controls.TopLevel.ActualTransparencyLevel) property. Inherited from [TopLevel](toplevel.mdx). |
 | [AutoSafeAreaPaddingProperty](toplevel.mdx#uid-89a01534af) | Defines the AutoSafeAreaPadding attached property. Inherited from [TopLevel](toplevel.mdx). |
+| [BackdropEffectBoundsSourceProperty](../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCacheProperty](../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectProperty](../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../visual.mdx). |
 | [BackgroundProperty](primitives/templatedcontrol.mdx#uid-dbbd1ffb9b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Background](xref:Avalonia.Controls.Primitives.TemplatedControl.Background) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BackgroundSizingProperty](primitives/templatedcontrol.mdx#uid-316d7708c4) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing](xref:Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BackRequestedEvent](toplevel.mdx#uid-781fe51795) | Defines the [Avalonia.Controls.TopLevel.BackRequested](xref:Avalonia.Controls.TopLevel.BackRequested) event. Inherited from [TopLevel](toplevel.mdx). |
@@ -433,6 +441,7 @@ public bool Topmost { get; set; }
 | [FontSizeProperty](primitives/templatedcontrol.mdx#uid-c06c71299f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontSize](xref:Avalonia.Controls.Primitives.TemplatedControl.FontSize) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStretchProperty](primitives/templatedcontrol.mdx#uid-d4a988cc8c) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStyleProperty](primitives/templatedcontrol.mdx#uid-14162a470d) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontStyle](xref:Avalonia.Controls.Primitives.TemplatedControl.FontStyle) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
+| [FontVariationsProperty](primitives/templatedcontrol.mdx#uid-d8d82208af) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontVariations](xref:Avalonia.Controls.Primitives.TemplatedControl.FontVariations) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontWeightProperty](primitives/templatedcontrol.mdx#uid-b911f20b9f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [ForegroundProperty](primitives/templatedcontrol.mdx#uid-65cd93050b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Foreground](xref:Avalonia.Controls.Primitives.TemplatedControl.Foreground) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FrameSizeProperty](toplevel.mdx#uid-eea3e5caa1) | Defines the [Avalonia.Controls.TopLevel.FrameSize](xref:Avalonia.Controls.TopLevel.FrameSize) property. Inherited from [TopLevel](toplevel.mdx). |

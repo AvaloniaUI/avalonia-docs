@@ -1,0 +1,113 @@
+---
+title: 'ICompositionGlTextureLease'
+hide_title: true
+slug: '/avalonia/opengl/icompositiongltexturelease'
+uid: 'Avalonia.OpenGL.ICompositionGlTextureLease'
+commentId: 'T:Avalonia.OpenGL.ICompositionGlTextureLease'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICompositionGlTextureLease Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An active drawing session on an [Avalonia.OpenGL.ICompositionGlTexture](xref:Avalonia.OpenGL.ICompositionGlTexture).
+The lease is ended either by [Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync](xref:Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync) or by [IDisposable.Dispose](xref:System.IDisposable.Dispose),
+the latter discards the frame. Disposing after [Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync](xref:Avalonia.OpenGL.ICompositionGlTextureLease.PresentAsync) is a no-op.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICompositionGlTextureLease
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [PresentAsync](#uid-7e0abc32df) | Ends the lease and asynchronously presents the texture to the associated [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface). This will happen when the next composition commit is processed by the render thread. The texture must be unbound from user framebuffers before calling this method. The returned task completes when the texture can be drawn to again, NOT when the frame becomes visible on the screen. You should NOT await the returned task while keeping hold of a [Avalonia.OpenGL.IGlContext.MakeCurrent](xref:Avalonia.OpenGL.IGlContext.MakeCurrent) disposable. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7e0abc32df"></span>
+
+### PresentAsync Method
+
+Ends the lease and asynchronously presents the texture to the associated
+[Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface). This will happen when the next composition commit
+is processed by the render thread.
+The texture must be unbound from user framebuffers before calling this method.
+The returned task completes when the texture can be drawn to again, NOT when the frame
+becomes visible on the screen.
+You should NOT await the returned task while keeping hold of a
+[Avalonia.OpenGL.IGlContext.MakeCurrent](xref:Avalonia.OpenGL.IGlContext.MakeCurrent) disposable.
+
+```csharp
+public System.Threading.Tasks.Task PresentAsync()
+```
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [TextureInfo](#uid-27ab0c0143) | Describes the OpenGL texture to draw into. Only valid until the lease ends; [Avalonia.OpenGL.CompositionGlTextureInfo.TextureId](xref:Avalonia.OpenGL.CompositionGlTextureInfo.TextureId) is not guaranteed to be stable between leases. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-27ab0c0143"></span>
+
+### TextureInfo Property
+
+Describes the OpenGL texture to draw into. Only valid until the lease ends;
+[Avalonia.OpenGL.CompositionGlTextureInfo.TextureId](xref:Avalonia.OpenGL.CompositionGlTextureInfo.TextureId) is not guaranteed to be stable between leases.
+
+```csharp
+public Avalonia.OpenGL.CompositionGlTextureInfo TextureInfo { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

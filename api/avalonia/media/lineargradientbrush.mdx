@@ -125,6 +125,7 @@ public Avalonia.Media.IImmutableBrush ToImmutable()
 | [GradientStops](gradientbrush.mdx#uid-383377499c) | Gets the brush's gradient stops. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Opacity](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. Inherited from [Brush](brush.mdx). |
+| [RelativeTransform](brush.mdx#uid-f7096bbee7) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. Inherited from [Brush](brush.mdx). |
 | [SpreadMethod](gradientbrush.mdx#uid-e79c8aab1c) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [StartPoint](#uid-f7373fd7ef) | Gets or sets the start point for the gradient. |
 | [Transform](brush.mdx#uid-8d25869723) | Gets or sets the transform of the brush. Inherited from [Brush](brush.mdx). |
@@ -166,6 +167,7 @@ public Avalonia.RelativePoint StartPoint { get; set; }
 | [EndPointProperty](#uid-2cf51dd226) | Defines the [Avalonia.Media.LinearGradientBrush.EndPoint](xref:Avalonia.Media.LinearGradientBrush.EndPoint) property. |
 | [GradientStopsProperty](gradientbrush.mdx#uid-dafe8f75b0) | Defines the [Avalonia.Media.GradientBrush.GradientStops](xref:Avalonia.Media.GradientBrush.GradientStops) property. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [OpacityProperty](brush.mdx#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. Inherited from [Brush](brush.mdx). |
+| [RelativeTransformProperty](brush.mdx#uid-e92f247126) | Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property. Inherited from [Brush](brush.mdx). |
 | [SpreadMethodProperty](gradientbrush.mdx#uid-b6bed14182) | Defines the [Avalonia.Media.GradientBrush.SpreadMethod](xref:Avalonia.Media.GradientBrush.SpreadMethod) property. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [StartPointProperty](#uid-d85ce21d31) | Defines the [Avalonia.Media.LinearGradientBrush.StartPoint](xref:Avalonia.Media.LinearGradientBrush.StartPoint) property. |
 | [TransformOriginProperty](brush.mdx#uid-3a3c0bc732) | Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property Inherited from [Brush](brush.mdx). |

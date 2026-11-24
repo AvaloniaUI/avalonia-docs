@@ -1,0 +1,344 @@
+---
+title: 'TreeDataGridRowAutomationPeer'
+hide_title: true
+slug: '/avalonia/controls/automation/peers/treedatagridrowautomationpeer'
+uid: 'Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer'
+commentId: 'T:Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Automation.Peers'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowAutomationPeer Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Automation.Peers</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An automation peer which represents a [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRowAutomationPeer
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../automation/peers/automationpeer">AutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="../../../automation/peers/controlautomationpeer">ControlAutomationPeer</a> <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowAutomationPeer
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../../automation/provider/iexpandcollapseprovider">IExpandCollapseProvider</a>, <a href="../../../automation/provider/iselectionitemprovider">ISelectionItemProvider</a>
+</div>
+</div>
+
+## Remarks
+
+Exposes a row to UI Automation clients. Rows in a hierarchical grid are reported as tree
+items and support the expand/collapse pattern; rows in a flat grid are reported as data
+items. In both cases the peer supports the selection-item pattern so a row can be selected.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRowAutomationPeer](#uid-d00effe480) | Initializes a new instance of the [Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer](xref:Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d00effe480"></span>
+
+### TreeDataGridRowAutomationPeer Constructor
+
+Initializes a new instance of the [Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer](xref:Avalonia.Controls.Automation.Peers.TreeDataGridRowAutomationPeer) class.
+
+```csharp
+public TreeDataGridRowAutomationPeer(Avalonia.Controls.Primitives.TreeDataGridRow owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow)
+
+The [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) being represented.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [AddToSelection](#uid-249044e167) | Adds the current element to the collection of selected items. |
+| [BringIntoView](../../../automation/peers/automationpeer.mdx#uid-0ce0c26ad7) | Attempts to bring the element associated with the automation peer into view. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [Collapse](#uid-e6bff69dda) | Hides all nodes, controls, or content that are descendants of the control. |
+| [CreatePeerForElement](../../../automation/peers/controlautomationpeer.mdx#uid-01e76040e7) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control), creating it if necessary. Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
+| [Expand](#uid-e786d85bb0) | Displays all child nodes, controls, or content of the control. |
+| [FromElement](../../../automation/peers/controlautomationpeer.mdx#uid-f0c358c33d) | Gets an existing [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) for a [Avalonia.Controls.Control](xref:Avalonia.Controls.Control). Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
+| [GetAcceleratorKey](../../../automation/peers/automationpeer.mdx#uid-b27b870e23) | Gets the accelerator key combinations for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetAccessKey](../../../automation/peers/automationpeer.mdx#uid-0c0606dfaf) | Gets the access key for the element that is associated with the automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetAutomationControlType](../../../automation/peers/automationpeer.mdx#uid-f7daf3a583) | Gets the control type for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetAutomationId](../../../automation/peers/automationpeer.mdx#uid-ec722c2168) | Gets the automation ID of the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetBoundingRectangle](../../../automation/peers/automationpeer.mdx#uid-f04c4b54df) | Gets the bounding rectangle of the element that is associated with the automation peer in top-level coordinates. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetChildren](../../../automation/peers/automationpeer.mdx#uid-1974fa1efa) | Gets the child automation peers. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetClassName](../../../automation/peers/automationpeer.mdx#uid-ee7505094d) | Gets a string that describes the class of the element. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetHeadingLevel](../../../automation/peers/automationpeer.mdx#uid-52680c5dea) | Gets the heading level that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetHelpText](../../../automation/peers/automationpeer.mdx#uid-3613ae2a30) | Gets text that provides help for the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetItemStatus](../../../automation/peers/automationpeer.mdx#uid-798f219773) | Gets the item status that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetItemType](../../../automation/peers/automationpeer.mdx#uid-d858421abf) | Gets the item type that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetLabeledBy](../../../automation/peers/automationpeer.mdx#uid-98bd49471d) | Gets the automation peer for the label that is targeted to the element. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetLandmarkType](../../../automation/peers/automationpeer.mdx#uid-57bba04eba) | Gets the control type for the element that is associated with the UI Automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetLiveSetting](../../../automation/peers/automationpeer.mdx#uid-75007f578a) | Gets the current live setting that is associated with this this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetLocalizedControlType](../../../automation/peers/automationpeer.mdx#uid-262763e857) | Gets a human-readable localized string that represents the type of the control that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetName](../../../automation/peers/automationpeer.mdx#uid-ac6dd5a547) | Gets text that describes the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetOrCreate](../../../automation/peers/controlautomationpeer.mdx#uid-d5fc666c05) | Inherited from [ControlAutomationPeer](../../../automation/peers/controlautomationpeer.mdx). |
+| [GetParent](../../../automation/peers/automationpeer.mdx#uid-947969c77f) | Gets the [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer) that is the parent of this [Avalonia.Automation.Peers.AutomationPeer](xref:Avalonia.Automation.Peers.AutomationPeer). Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetPlaceholderText](../../../automation/peers/automationpeer.mdx#uid-1ced74e763) | Gets text that provides a placeholder for the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [GetProvider](../../../automation/peers/automationpeer.mdx#uid-ee05fc8d1e) | Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [HasKeyboardFocus](../../../automation/peers/automationpeer.mdx#uid-5f0d3a3d10) | Gets a value that indicates whether the element that is associated with this automation peer currently has keyboard focus. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [IsContentElement](../../../automation/peers/automationpeer.mdx#uid-5202d69eb1) | Gets a value that indicates whether the element that is associated with this automation peer contains data that is presented to the user. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [IsControlElement](../../../automation/peers/automationpeer.mdx#uid-665cdd1957) | Gets a value that indicates whether the element is understood by the user as interactive or as contributing to the logical structure of the control in the GUI. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [IsEnabled](../../../automation/peers/automationpeer.mdx#uid-cc55d0a61a) | Gets a value indicating whether the control is enabled for user interaction. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [IsKeyboardFocusable](../../../automation/peers/automationpeer.mdx#uid-c9dfcdf842) | Gets a value that indicates whether the element can accept keyboard focus. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [IsOffscreen](../../../automation/peers/automationpeer.mdx#uid-72084dcbfb) | Gets a value that indicates whether an element is off the screen. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [RaisePropertyChangedEvent](../../../automation/peers/automationpeer.mdx#uid-ffcc0e3d63) | Raises an event to notify the automation client of a changed property value. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [RemoveFromSelection](#uid-b651bcd61f) | Removes the current element from the collection of selected items. |
+| [Select](#uid-0cca0f84bb) | Clears any existing selection and then selects the current element. |
+| [SetFocus](../../../automation/peers/automationpeer.mdx#uid-6a8d233e48) | Sets the keyboard focus on the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [ShowContextMenu](../../../automation/peers/automationpeer.mdx#uid-8bfe04d25b) | Shows the context menu for the element that is associated with this automation peer. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [ToScreen](../../../automation/peers/automationpeer.mdx#uid-51bb13f806) | Converts a rectangle in the peer's coordinate space, as returned by [Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle](xref:Avalonia.Automation.Peers.AutomationPeer.GetBoundingRectangle), to screen coordinates; returns null if the peer is not currently hosted in a rendered visual tree. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-249044e167"></span>
+
+### AddToSelection Method
+
+Adds the current element to the collection of selected items.
+
+```csharp
+public void AddToSelection()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.AddToSelection`
+- macOS`NSAccessibilityProtocol.accessibilityPerformPick` (not implemented). `NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6bff69dda"></span>
+
+### Collapse Method
+
+Hides all nodes, controls, or content that are descendants of the control.
+
+```csharp
+public void Collapse()
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Collapse`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to false.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e786d85bb0"></span>
+
+### Expand Method
+
+Displays all child nodes, controls, or content of the control.
+
+```csharp
+public void Expand()
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.Expand`
+- macOS Called by setting `NSAccessibilityProtocol.setAccessibilityExpanded` to true, by calling `NSAccessibilityProtocol.accessibilityPerformPress`, or by calling `NSAccessibilityProtocol.accessibilityPerformShowMenu` when [Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.ShowsMenu) is true.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b651bcd61f"></span>
+
+### RemoveFromSelection Method
+
+Removes the current element from the collection of selected items.
+
+```csharp
+public void RemoveFromSelection()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.RemoveFromSelection`
+- macOS`NSAccessibilityProtocol.setAccessibilitySelected` (not implemented).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cca0f84bb"></span>
+
+### Select Method
+
+Clears any existing selection and then selects the current element.
+
+```csharp
+public void Select()
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.Select`
+- macOSNo mapping.
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [ExpandCollapseState](#uid-e715a8c691) | Gets the state, expanded or collapsed, of the control. |
+| [IsSelected](#uid-5addc6e3b8) | Gets a value that indicates whether an item is selected. |
+| [Owner](#uid-8226161734) | Gets the [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) being represented. |
+| [SelectionContainer](#uid-ab7f4cd68c) | Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and acts as the container for the calling object. |
+| [ShowsMenu](#uid-9da489ce76) | Gets a value indicating whether expanding the element shows a menu of items to the user, such as drop-down list. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e715a8c691"></span>
+
+### ExpandCollapseState Property
+
+Gets the state, expanded or collapsed, of the control.
+
+```csharp
+public Avalonia.Automation.ExpandCollapseState ExpandCollapseState { get; set; }
+```
+
+#### Remarks
+
+- Windows`IExpandCollapseProvider.ExpandCollapseState`
+- macOS`NSAccessibilityProtocol.isAccessibilityExpanded`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5addc6e3b8"></span>
+
+### IsSelected Property
+
+Gets a value that indicates whether an item is selected.
+
+```csharp
+public bool IsSelected { get; set; }
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.IsSelected`
+- macOS`NSAccessibilityProtocol.isAccessibilitySelected`
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8226161734"></span>
+
+### Owner Property
+
+Gets the [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) being represented.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridRow Owner { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ab7f4cd68c"></span>
+
+### SelectionContainer Property
+
+Gets the UI Automation provider that implements [Avalonia.Automation.Provider.ISelectionProvider](xref:Avalonia.Automation.Provider.ISelectionProvider) and
+acts as the container for the calling object.
+
+```csharp
+public Avalonia.Automation.Provider.ISelectionProvider SelectionContainer { get; set; }
+```
+
+#### Remarks
+
+- Windows`ISelectionItemProvider.SelectionContainer`
+- macOSNo mapping.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9da489ce76"></span>
+
+### ShowsMenu Property
+
+Gets a value indicating whether expanding the element shows a menu of items to the user,
+such as drop-down list.
+
+```csharp
+public bool ShowsMenu { get; set; }
+```
+
+#### Remarks
+
+Used in OSX to allow `accessibilityPerformShowMenu` to open expandable controls such as a
+[Avalonia.Controls.ComboBox](xref:Avalonia.Controls.ComboBox); in macOS, a combo box drop-down is considered a menu.
+
+- WindowsNo mapping.
+- macOS When true, `NSAccessibilityProtocol.accessibilityPerformShowMenu` will cause the [Avalonia.Automation.Provider.IExpandCollapseProvider.Expand](xref:Avalonia.Automation.Provider.IExpandCollapseProvider.Expand) method to be triggered.
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [ChildrenChanged](../../../automation/peers/automationpeer.mdx#uid-d7771086b7) | Occurs when the children of the automation peer have changed. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+| [PropertyChanged](../../../automation/peers/automationpeer.mdx#uid-7b87077a9e) | Occurs when a property value of the automation peer has changed. Inherited from [AutomationPeer](../../../automation/peers/automationpeer.mdx). |
+
+</ApiRefPage>
+

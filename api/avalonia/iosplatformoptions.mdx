@@ -79,7 +79,28 @@ public iOSPlatformOptions()
 
 | Name | Description |
 | --- | --- |
+| [EnableHighRefreshRate](#uid-a5b0bc5f1f) | Gets or sets whether rendering follows the display refresh rate, up to 120 Hz on ProMotion displays. The default value is true. |
 | [RenderingMode](#uid-f2fe66e26a) | Gets or sets Avalonia rendering modes with fallbacks. The first element in the array has the highest priority. The default value is: [Avalonia.iOSRenderingMode.OpenGl](xref:Avalonia.iOSRenderingMode.OpenGl). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5b0bc5f1f"></span>
+
+### EnableHighRefreshRate Property
+
+Gets or sets whether rendering follows the display refresh rate, up to 120 Hz on ProMotion displays.
+The default value is true.
+
+```csharp
+public bool EnableHighRefreshRate { get; set; }
+```
+
+#### Remarks
+
+On iPhone, rates above 60 Hz also need CADisableMinimumFrameDurationOnPhone set to true in the app's Info.plist.
+Set this to false to keep the system's default rate, for example if the app can't sustain high frame rates.
+
+</section>
 
 <section className="apiref-page__member-entry">
 

@@ -1,0 +1,217 @@
+---
+title: 'InlineDraft'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/authoring/inlinedraft'
+uid: 'Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Authoring'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InlineDraft Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Authoring</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for mutable inline draft elements consumed by
+[Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshotBuilder). Drafts are pre-offset authoring DTOs
+that the builder converts into immutable [Avalonia.Controls.Documents.Serialization.Snapshot.InlineSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.InlineSnapshotNode) instances.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InlineDraft
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> InlineDraft
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="boldinlinedraft">BoldInlineDraft</a>, <a href="custominlinedraft">CustomInlineDraft</a>, <a href="footnotecitationinlinedraft">FootnoteCitationInlineDraft</a>, <a href="footnotereferenceinlinedraft">FootnoteReferenceInlineDraft</a>, <a href="hyperlinkinlinedraft">HyperlinkInlineDraft</a>, <a href="imageinlinedraft">ImageInlineDraft</a>, <a href="italicinlinedraft">ItalicInlineDraft</a>, <a href="linebreakinlinedraft">LineBreakInlineDraft</a>, <a href="pagenumberfieldinlinedraft">PageNumberFieldInlineDraft</a>, <a href="runinlinedraft">RunInlineDraft</a>, <a href="spaninlinedraft">SpanInlineDraft</a>, <a href="subscriptinlinedraft">SubscriptInlineDraft</a>, <a href="superscriptinlinedraft">SuperscriptInlineDraft</a>, <a href="underlineinlinedraft">UnderlineInlineDraft</a>
+</div>
+</div>
+
+## Remarks
+
+Drafts are mutable for convenience while parsing/importing. Once handed to the
+builder they are read once and discarded; the resulting snapshot tree is the
+thread-safe immutable view of the document.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetFormatMetadata](#uid-4509e823fd) | No summary available. |
+| [SetFormatMetadata](#uid-61215c6735) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4509e823fd"></span>
+
+### GetFormatMetadata Method
+
+```csharp
+public T GetFormatMetadata<T>()
+```
+
+#### Type Parameters
+
+`T`
+
+
+#### Returns
+
+T
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-61215c6735"></span>
+
+### SetFormatMetadata Method
+
+```csharp
+public void SetFormatMetadata<T>(T metadata)
+```
+
+#### Parameters
+
+`metadata` T
+
+
+#### Type Parameters
+
+`T`
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CustomData](#uid-df8d35d8af) | Extension-specific custom data. Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) during document building. |
+| [ElementFormatting](#uid-e72d04f6a2) | Base-level element formatting (font, foreground, background, letter spacing). |
+| [FormatMetadata](#uid-44323a64b0) | Format-specific metadata for round-trip preservation (e.g. RTF underline variant). Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) during document building. |
+| [Formatting](#uid-5bc8ad789d) | Inline-specific formatting (text decorations, baseline alignment). |
+| [Inlines](#uid-1eaa3c4f70) | Gets the mutable list of child inline drafts. |
+| [Kind](#uid-e8bc97d972) | Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) that identifies this draft's inline type. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-df8d35d8af"></span>
+
+### CustomData Property
+
+Extension-specific custom data. Transferred to the resulting
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.CustomData) during document building.
+
+```csharp
+public object CustomData { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e72d04f6a2"></span>
+
+### ElementFormatting Property
+
+Base-level element formatting (font, foreground, background, letter spacing).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting ElementFormatting { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44323a64b0"></span>
+
+### FormatMetadata Property
+
+Format-specific metadata for round-trip preservation (e.g. RTF underline variant).
+Transferred to the resulting [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode) during document building.
+
+```csharp
+public object FormatMetadata { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5bc8ad789d"></span>
+
+### Formatting Property
+
+Inline-specific formatting (text decorations, baseline alignment).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting Formatting { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1eaa3c4f70"></span>
+
+### Inlines Property
+
+Gets the mutable list of child inline drafts.
+
+```csharp
+public System.Collections.Generic.IList<Avalonia.Controls.Documents.Serialization.Authoring.InlineDraft> Inlines { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8bc97d972"></span>
+
+### Kind Property
+
+Gets the [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind) that identifies this draft's inline type.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Kind { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

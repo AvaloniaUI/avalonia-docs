@@ -56,21 +56,25 @@ public class LoggingExtensions
 
 | Name | Description |
 | --- | --- |
-| [LogToDelegate](#uid-52dbc3a8d1) | No summary available. |
+| [LogToDelegate (2 overloads)](#uid-5f558b4ea5) | No summary available. |
 | [LogToTextWriter](#uid-71d387a690) | Logs Avalonia events to a TextWriter |
-| [LogToTrace](#uid-72a79dec94) | Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink. |
+| [LogToTrace (2 overloads)](#uid-94b2d0d165) | Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink. |
+
+<span id="uid-5f558b4ea5"></span>
+
+### LogToDelegate overloads
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-52dbc3a8d1"></span>
 
-### LogToDelegate Method
+#### LogToDelegate Method
 
 ```csharp
 public Avalonia.AppBuilder LogToDelegate(Avalonia.AppBuilder builder, Action<string> logCallback, Avalonia.Logging.LogEventLevel level, string[] areas)
 ```
 
-#### Parameters
+##### Parameters
 
 `builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
 
@@ -84,7 +88,35 @@ public Avalonia.AppBuilder LogToDelegate(Avalonia.AppBuilder builder, Action<str
 `areas` string[]
 
 
-#### Returns
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e44aa5906"></span>
+
+#### LogToDelegate Method
+
+```csharp
+public Avalonia.AppBuilder LogToDelegate(Avalonia.AppBuilder builder, Action<string> logCallback, Avalonia.LoggingExtensions.LogToTraceAreaVerbosity verbosityCallback)
+```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+
+`logCallback` Action&lt;string&gt;
+
+
+`verbosityCallback` [Avalonia.LoggingExtensions.LogToTraceAreaVerbosity](xref:Avalonia.LoggingExtensions.LogToTraceAreaVerbosity)
+
+
+##### Returns
 
 [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
 
@@ -134,11 +166,15 @@ The app builder instance.
 
 </section>
 
+<span id="uid-94b2d0d165"></span>
+
+### LogToTrace overloads
+
 <section className="apiref-page__member-entry">
 
 <span id="uid-72a79dec94"></span>
 
-### LogToTrace Method
+#### LogToTrace Method
 
 Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink.
 
@@ -146,7 +182,7 @@ Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.T
 public Avalonia.AppBuilder LogToTrace(Avalonia.AppBuilder builder, Avalonia.Logging.LogEventLevel level, string[] areas)
 ```
 
-#### Parameters
+##### Parameters
 
 `builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
 
@@ -163,7 +199,40 @@ The minimum level to log.
 The areas to log. Valid values are listed in [Avalonia.Logging.LogArea](xref:Avalonia.Logging.LogArea).
 
 
-#### Returns
+##### Returns
+
+[Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1367dd232c"></span>
+
+#### LogToTrace Method
+
+Logs Avalonia events to the [System.Diagnostics.Trace](xref:System.Diagnostics.Trace) sink.
+
+```csharp
+public Avalonia.AppBuilder LogToTrace(Avalonia.AppBuilder builder, Avalonia.LoggingExtensions.LogToTraceAreaVerbosity verbosityCallback)
+```
+
+##### Parameters
+
+`builder` [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
+
+The app builder instance.
+
+
+`verbosityCallback` [Avalonia.LoggingExtensions.LogToTraceAreaVerbosity](xref:Avalonia.LoggingExtensions.LogToTraceAreaVerbosity)
+
+The callback that returns the minimum level to log for each area.
+
+
+##### Returns
 
 [Avalonia.AppBuilder](xref:Avalonia.AppBuilder)
 

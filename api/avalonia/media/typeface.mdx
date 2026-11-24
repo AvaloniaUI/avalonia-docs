@@ -65,7 +65,7 @@ public struct Typeface
 
 | Name | Description |
 | --- | --- |
-| [Typeface (2 overloads)](#uid-ec0511fb00) | Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) class. |
+| [Typeface (4 overloads)](#uid-ec0511fb00) | Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) class. |
 
 <span id="uid-ec0511fb00"></span>
 
@@ -109,6 +109,50 @@ The font stretch.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-37a4beecce"></span>
+
+#### Typeface Constructor
+
+Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) struct bound to a
+variable-font position.
+
+```csharp
+public Typeface(Avalonia.Media.FontFamily fontFamily, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.FontVariationSettings fontVariations)
+```
+
+##### Parameters
+
+`fontFamily` [Avalonia.Media.FontFamily](xref:Avalonia.Media.FontFamily)
+
+The font family.
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style.
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight.
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch.
+
+
+`fontVariations` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+Variable-font axis values in user space (e.g. `wght = 700`), applied when the
+resolved font is a variable font. `null` and
+[Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) both mean the design defaults.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-c1ddc03c16"></span>
 
 #### Typeface Constructor
@@ -139,6 +183,50 @@ The font weight.
 `stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
 
 The font stretch.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-710d615af5"></span>
+
+#### Typeface Constructor
+
+Initializes a new instance of the [Avalonia.Media.Typeface](xref:Avalonia.Media.Typeface) struct bound to a
+variable-font position.
+
+```csharp
+public Typeface(string fontFamilyName, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.FontVariationSettings fontVariations)
+```
+
+##### Parameters
+
+`fontFamilyName` string
+
+The name of the font family.
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+The font style.
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+The font weight.
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+The font stretch.
+
+
+`fontVariations` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+Variable-font axis values in user space (e.g. `wght = 700`), applied when the
+resolved font is a variable font. `null` and
+[Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) both mean the design defaults.
 
 
 </section>
@@ -244,6 +332,7 @@ public Avalonia.Media.Typeface Normalize(string& normalizedFamilyName)
 | --- | --- |
 | [Default](#uid-e3791f6243) | No summary available. |
 | [FontFamily](#uid-9880ff516f) | Gets the font family. |
+| [FontVariations](#uid-273a83b706) | Gets the variable-font axis values in user space, or `null` when the typeface uses the font's design defaults. Never [Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) — empty settings are normalized to `null` at construction. |
 | [GlyphTypeface](#uid-b68bfe8140) | Gets the glyph typeface. |
 | [Stretch](#uid-581db379bc) | Gets the font stretch. |
 | [Style](#uid-f2d5e74904) | Gets the font style. |
@@ -271,6 +360,23 @@ Gets the font family.
 
 ```csharp
 public Avalonia.Media.FontFamily FontFamily { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-273a83b706"></span>
+
+### FontVariations Property
+
+Gets the variable-font axis values in user space, or `null` when the
+typeface uses the font's design defaults. Never
+[Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) — empty settings are normalized to
+`null` at construction.
+
+```csharp
+public Avalonia.Media.FontVariationSettings FontVariations { get; set; }
 ```
 
 </section>

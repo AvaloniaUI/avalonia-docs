@@ -62,13 +62,17 @@ public struct WordSegment
 
 | Name | Description |
 | --- | --- |
-| [WordSegment](#uid-3332dd7528) | Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSegment](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment) struct. |
+| [WordSegment (2 overloads)](#uid-edda61296d) | Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSegment](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment) struct. |
+
+<span id="uid-edda61296d"></span>
+
+### WordSegment overloads
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-3332dd7528"></span>
 
-### WordSegment Constructor
+#### WordSegment Constructor
 
 Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSegment](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment) struct.
 
@@ -76,7 +80,7 @@ Initializes a new instance of the [Avalonia.Media.TextFormatting.Unicode.WordSeg
 public WordSegment(int offset, int length, int codepointOffset, int codepointLength)
 ```
 
-#### Parameters
+##### Parameters
 
 `offset` int
 
@@ -98,6 +102,36 @@ The segment offset in Unicode code points.
 The segment length in Unicode code points.
 
 
+##### Remarks
+
+Segments created through this constructor carry no [Avalonia.Media.TextFormatting.Unicode.WordSegment.Text](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment.Text) slice.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4f461099be"></span>
+
+#### WordSegment Constructor
+
+```csharp
+public WordSegment(int offset, ReadOnlySpan<char> text, int codepointOffset, int codepointLength)
+```
+
+##### Parameters
+
+`offset` int
+
+
+`text` ReadOnlySpan&lt;char&gt;
+
+
+`codepointOffset` int
+
+
+`codepointLength` int
+
+
 </section>
 
 ## Properties
@@ -108,6 +142,7 @@ The segment length in Unicode code points.
 | [CodepointOffset](#uid-71b4691422) | Gets the segment offset in Unicode code points. |
 | [Length](#uid-ecd1c52e13) | Gets the segment length in UTF-16 code units. |
 | [Offset](#uid-fe2ccb9262) | Gets the segment offset in UTF-16 code units. |
+| [Text](#uid-06c2875a63) | Gets the text content of this segment as a slice of the source span. |
 
 <section className="apiref-page__member-entry">
 
@@ -162,6 +197,26 @@ Gets the segment offset in UTF-16 code units.
 ```csharp
 public int Offset { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06c2875a63"></span>
+
+### Text Property
+
+Gets the text content of this segment as a slice of the source span.
+
+```csharp
+public ReadOnlySpan<char> Text { get; set; }
+```
+
+#### Remarks
+
+Empty for segments created through the constructor that takes a code-unit length
+instead of a slice, whose source span is unknown. Use [Avalonia.Media.TextFormatting.Unicode.WordSegment.Length](xref:Avalonia.Media.TextFormatting.Unicode.WordSegment.Length) when the
+segment may come from an arbitrary caller rather than from [Avalonia.Media.TextFormatting.Unicode.WordBreakEnumerator](xref:Avalonia.Media.TextFormatting.Unicode.WordBreakEnumerator).
 
 </section>
 

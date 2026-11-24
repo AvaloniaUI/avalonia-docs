@@ -1,0 +1,226 @@
+---
+title: 'FontVariationInstance'
+hide_title: true
+slug: '/avalonia/media/fontvariationinstance'
+uid: 'Avalonia.Media.FontVariationInstance'
+commentId: 'T:Avalonia.Media.FontVariationInstance'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontVariationInstance Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/FontVariationInstance.cs">FontVariationInstance.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a named variation instance declared by a variable font's `fvar` table.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FontVariationInstance
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontVariationInstance
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontVariationInstance&gt;
+</div>
+</div>
+
+## Remarks
+
+Named instances are pre-defined points in variation space the font designer has
+labeled — for example "Regular" at `wght=400`, or "Light Condensed" at
+`wght=300, wdth=75`. They give applications a curated set of preset combinations
+without having to invent their own.
+
+Coordinates are in user-space (the same values the font designer chose to
+expose) — the same space [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings) speaks, so an
+instance's coordinates translate directly into settings values. Normalization to
+the font's internal coordinate space happens when the settings are applied.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-532e09d919) | Two instances are equal when they describe the same preset on the same font — i.e. they have the same name, index, and PostScript name ID. Coordinates are not compared because the dictionary type doesn't support value equality; within a font, [Avalonia.Media.FontVariationInstance.Index](xref:Avalonia.Media.FontVariationInstance.Index) already uniquely identifies an instance. |
+| [GetHashCode](#uid-724e7fca45) | No summary available. |
+
+<span id="uid-532e09d919"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-508ad83dd0"></span>
+
+#### Equals Method
+
+Two instances are equal when they describe the same preset on the same font —
+i.e. they have the same name, index, and PostScript name ID. Coordinates are
+not compared because the dictionary type doesn't support value equality;
+within a font, [Avalonia.Media.FontVariationInstance.Index](xref:Avalonia.Media.FontVariationInstance.Index) already uniquely identifies an instance.
+
+```csharp
+public bool Equals(Avalonia.Media.FontVariationInstance other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontVariationInstance](xref:Avalonia.Media.FontVariationInstance)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d2fda7288"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-724e7fca45"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Coordinates](#uid-11adb1381a) | Gets the user-space axis coordinates that define this instance, keyed by axis tag (e.g. `{ wght: 700, wdth: 100 }` for a Bold). Always non-null; empty when the instance has no axis values declared (a malformed font). |
+| [Index](#uid-29a1ac76a3) | Gets the zero-based position of this instance in the font's `fvar` instance array. Use this with the `instanceIndex` parameter on `GlyphTypeface.CreateNormalizedPosition` as a shorthand for "give me the position of this preset". |
+| [Name](#uid-adff84321a) | Gets the human-readable instance name resolved from the font's `name` table (e.g. "Regular", "SemiBold", "Light Condensed"). Empty when the font omits the name record for this instance. |
+| [PostScriptNameId](#uid-33d1cc2283) | Gets the optional name-ID of a PostScript name record for this instance, when the font declares one. `null` when not present. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-11adb1381a"></span>
+
+### Coordinates Property
+
+Gets the user-space axis coordinates that define this instance, keyed by axis tag
+(e.g. `{ wght: 700, wdth: 100 }` for a Bold). Always non-null; empty when the
+instance has no axis values declared (a malformed font).
+
+```csharp
+public System.Collections.Generic.IReadOnlyDictionary<Avalonia.Media.Fonts.OpenTypeTag, float> Coordinates { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29a1ac76a3"></span>
+
+### Index Property
+
+Gets the zero-based position of this instance in the font's `fvar` instance
+array. Use this with the `instanceIndex` parameter on
+`GlyphTypeface.CreateNormalizedPosition` as a shorthand for "give me the
+position of this preset".
+
+```csharp
+public int Index { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-adff84321a"></span>
+
+### Name Property
+
+Gets the human-readable instance name resolved from the font's `name` table
+(e.g. "Regular", "SemiBold", "Light Condensed"). Empty when the font omits the
+name record for this instance.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-33d1cc2283"></span>
+
+### PostScriptNameId Property
+
+Gets the optional name-ID of a PostScript name record for this instance, when the
+font declares one. `null` when not present.
+
+```csharp
+public Nullable<int> PostScriptNameId { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

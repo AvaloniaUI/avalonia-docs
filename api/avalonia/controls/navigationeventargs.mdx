@@ -62,13 +62,17 @@ public class NavigationEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigationEventArgs](#uid-70b564bd1d) | Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class. |
+| [NavigationEventArgs (2 overloads)](#uid-a6f1e788d5) | Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class. |
+
+<span id="uid-a6f1e788d5"></span>
+
+### NavigationEventArgs overloads
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-70b564bd1d"></span>
 
-### NavigationEventArgs Constructor
+#### NavigationEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:Avalonia.Controls.NavigationEventArgs) class.
 
@@ -76,7 +80,7 @@ Initializes a new instance of the [Avalonia.Controls.NavigationEventArgs](xref:A
 public NavigationEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.NavigationType navigationType)
 ```
 
-#### Parameters
+##### Parameters
 
 `page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
 
@@ -90,12 +94,36 @@ The type of navigation that triggered this event.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-fddc7d47e5"></span>
+
+#### NavigationEventArgs Constructor
+
+```csharp
+public NavigationEventArgs(Avalonia.Controls.Page page, Avalonia.Controls.NavigationType navigationType, object parameter)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+
+`parameter` object
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [NavigationType](#uid-e1dae8ea68) | Gets the type of navigation that triggered this event. |
 | [Page](#uid-0d71c8e71b) | Gets the page involved in the navigation operation. |
+| [Parameter](#uid-a9d4abd968) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -121,6 +149,18 @@ Gets the page involved in the navigation operation.
 
 ```csharp
 public Avalonia.Controls.Page Page { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9d4abd968"></span>
+
+### Parameter Property
+
+```csharp
+public object Parameter { get; set; }
 ```
 
 </section>

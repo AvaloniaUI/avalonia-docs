@@ -74,7 +74,7 @@ public RuntimeXamlLoaderConfiguration()
 
 | Name | Description |
 | --- | --- |
-| [CreateSourceInfo](#uid-d4d9a1c382) | When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code. Default is 'false'. |
+| [CreateSourceInfo](#uid-d4d9a1c382) | When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code. When not explicitly set, the 'AvaloniaXamlCreateSourceInfo' from the LocalAssembly will be used to determine the value. |
 | [DesignMode](#uid-e3929fafda) | Indicates whether the XAML is being loaded in design mode. Default is 'false'. |
 | [DiagnosticHandler](#uid-5bfabbf87e) | XAML diagnostics handler. |
 | [LocalAssembly](#uid-aa3a33f9ca) | Default assembly for clr-namespace:. |
@@ -87,7 +87,7 @@ public RuntimeXamlLoaderConfiguration()
 ### CreateSourceInfo Property
 
 When enabled, the XAML compiler embeds SourceInfo metadata (file path, line, and column) into generated code.
-Default is 'false'.
+When not explicitly set, the 'AvaloniaXamlCreateSourceInfo' from the LocalAssembly will be used to determine the value.
 
 ```csharp
 public bool CreateSourceInfo { get; set; }

@@ -1,0 +1,74 @@
+---
+title: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+commentId: 'N:Avalonia.Controls.Documents.Serialization.Snapshot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Snapshot Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Serialization.Snapshot`
+
+</div>
+
+## Types
+
+- [BlockSnapshotNode](blocksnapshotnode.mdx) - Base class for block-level snapshot nodes.
+Contains block formatting information.
+- [DocumentSnapshot](documentsnapshot.mdx) - Immutable snapshot of document state for background serialization.
+Created on UI thread, safe to read from any thread.
+- [DocumentSnapshotBuilder](documentsnapshotbuilder.mdx) - Builder for creating [DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot) instances without [FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) dependencies.
+Provides a fluent API for constructing snapshot content.
+- [FootnoteReferenceSnapshotNode](footnotereferencesnapshotnode.mdx) - Snapshot node for a [Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) anchor or a
+[Avalonia.Controls.Documents.RichFootnoteCitation](xref:Avalonia.Controls.Documents.RichFootnoteCitation), which carry the same data and differ by
+[Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.Kind](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode.Kind): the anchor owns the note, a citation only points
+at it. The node's text range is one object replacement character;
+[Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode.NoteId](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode.NoteId) pairs it with its [Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteSnapshot) body, whose
+position among the snapshot's [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot.Footnotes) is the
+number both show.
+- [FootnoteSnapshot](footnotesnapshot.mdx) - A footnote in a document snapshot: the note's body as a nested document snapshot,
+the id pairing it with the [Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.FootnoteReferenceSnapshotNode) anchor of
+the same id, and an optional name for formats that address notes by name.
+- [HyperlinkSnapshotNode](hyperlinksnapshotnode.mdx) - Snapshot node for hyperlinks. Contains the target URI and the optional
+link title (markdown `[text](url "title")`, HTML `title`
+attribute; surfaced on the element as its string tooltip).
+- [ImageSnapshotNode](imagesnapshotnode.mdx) - Snapshot node for images. Contains image data and metadata.
+Can be used in both inline and block contexts.
+- [InlineSnapshotNode](inlinesnapshotnode.mdx) - Base class for inline-level snapshot nodes.
+Contains inline formatting information.
+- [ListSnapshotNode](listsnapshotnode.mdx) - Snapshot node for lists. Contains list-specific formatting.
+- [PageBandReferences](pagebandreferences.mdx) - A section's explicit band references by band identity: the running header and
+footer, and the first-page header and footer, whose presence is what makes the
+section's first page special. An identity no band of the document carries binds to
+nothing, so a section pasted from another document arrives without references.
+- [PageBandSnapshot](pagebandsnapshot.mdx) - A page band in a document snapshot: the band's content as a nested document
+snapshot, the role and rule that place it, its identity, and an optional name for
+formats that reference bands by name.
+- [PageNumberFieldSnapshotNode](pagenumberfieldsnapshotnode.mdx) - Snapshot node for a [Avalonia.Controls.Documents.RichPageNumberField](xref:Avalonia.Controls.Documents.RichPageNumberField). The node's text range holds
+the field's last calculated result; [Avalonia.Controls.Documents.Serialization.Snapshot.PageNumberFieldSnapshotNode.FieldKind](xref:Avalonia.Controls.Documents.Serialization.Snapshot.PageNumberFieldSnapshotNode.FieldKind) is what the field
+resolves to.
+- [RunSnapshotNode](runsnapshotnode.mdx) - Snapshot node for text runs.
+- [SectionSnapshotNode](sectionsnapshotnode.mdx) - Snapshot node for sections. Contains the section's page setup.
+- [SnapshotNode](snapshotnode.mdx) - Base class for all snapshot nodes. Contains no UI references.
+All data is owned by the snapshot and safe to access from any thread.
+- [SnapshotNodeChildren](snapshotnodechildren.mdx) - Lightweight view over a children array with an explicit count.
+Avoids copying when builder arrays are over-allocated.
+- [SnapshotNodeChildren.Enumerator](snapshotnodechildren-enumerator.mdx) - Enumerates the children of a [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNodeChildren) without heap allocation.
+- [TableSnapshotNode](tablesnapshotnode.mdx) - Snapshot node for tables. Contains table-specific formatting.
+</ApiRefPage>
+

@@ -49,6 +49,8 @@ Namespace `Avalonia.Controls.Platform`
 - [InsetsManagerBase](insetsmanagerbase.mdx)
 - [ManagedDispatcherImpl](manageddispatcherimpl.mdx)
 - [ManagedDispatcherImpl.IManagedDispatcherInputProvider](manageddispatcherimpl-imanageddispatcherinputprovider.mdx)
+- [ManagedDispatcherImpl.IWakeupEvent](manageddispatcherimpl-iwakeupevent.mdx) - Auto-reset wake-up primitive the loop blocks on. [Avalonia.Controls.Platform.ManagedDispatcherImpl.IWakeupEvent.Set](xref:Avalonia.Controls.Platform.ManagedDispatcherImpl.IWakeupEvent.Set) may be called from any thread,
+[Avalonia.Controls.Platform.ManagedDispatcherImpl.IWakeupEvent.Wait(Nullable&#123;TimeSpan&#125;)](xref:Avalonia.Controls.Platform.ManagedDispatcherImpl.IWakeupEvent.Wait%28System.Nullable%7BSystem.TimeSpan%7D%29) only from the loop thread.
 - [MountedVolumeInfo](mountedvolumeinfo.mdx) - Describes a Drive's properties.
 - [PlatformAllowedWindowActions](platformallowedwindowactions.mdx) - Flags indicating which window actions the underlying platform supports.
 - [PlatformManager](platformmanager.mdx)

@@ -161,6 +161,9 @@ True if the scroll offset was changed; otherwise false.
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Background](contentpresenter.mdx#uid-492998d98c) | Gets or sets a brush with which to paint the background. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [BackgroundSizing](contentpresenter.mdx#uid-13da265e18) | Gets or sets how the background is drawn relative to the border. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [BorderBrush](contentpresenter.mdx#uid-9e4c555ce5) | Gets or sets a brush with which to paint the border. Inherited from [ContentPresenter](contentpresenter.mdx). |
@@ -193,6 +196,7 @@ True if the scroll offset was changed; otherwise false.
 | [FontSize](contentpresenter.mdx#uid-4896f54973) | Gets or sets the font size. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontStretch](contentpresenter.mdx#uid-e092f9847a) | Gets or sets the font stretch. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontStyle](contentpresenter.mdx#uid-a4d0ca80db) | Gets or sets the font style. Inherited from [ContentPresenter](contentpresenter.mdx). |
+| [FontVariations](contentpresenter.mdx#uid-320751775b) | Gets or sets the variable-font axis values (e.g. `wght=700`). `null` means the font's design defaults. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontWeight](contentpresenter.mdx#uid-cac23aeaf5) | Gets or sets the font weight. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [Foreground](contentpresenter.mdx#uid-ab823f29e6) | Gets or sets a brush used to paint the text. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -405,6 +409,9 @@ public Avalonia.Size Viewport { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BackgroundProperty](contentpresenter.mdx#uid-f91519f611) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.Background](xref:Avalonia.Controls.Presenters.ContentPresenter.Background) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [BackgroundSizingProperty](contentpresenter.mdx#uid-d7151e21bd) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizing](xref:Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizing) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [BorderBrushProperty](contentpresenter.mdx#uid-a6779dfd7e) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.BorderBrush](xref:Avalonia.Controls.Presenters.ContentPresenter.BorderBrush) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
@@ -437,6 +444,7 @@ public Avalonia.Size Viewport { get; set; }
 | [FontSizeProperty](contentpresenter.mdx#uid-fed6bc5e74) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontSize](xref:Avalonia.Controls.Presenters.ContentPresenter.FontSize) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontStretchProperty](contentpresenter.mdx#uid-2f02752ec6) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontStretch](xref:Avalonia.Controls.Presenters.ContentPresenter.FontStretch) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontStyleProperty](contentpresenter.mdx#uid-0ce369ef2c) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontStyle](xref:Avalonia.Controls.Presenters.ContentPresenter.FontStyle) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
+| [FontVariationsProperty](contentpresenter.mdx#uid-6cbdc57b2e) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontVariations](xref:Avalonia.Controls.Presenters.ContentPresenter.FontVariations) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [FontWeightProperty](contentpresenter.mdx#uid-eee65ead30) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.FontWeight](xref:Avalonia.Controls.Presenters.ContentPresenter.FontWeight) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [ForegroundProperty](contentpresenter.mdx#uid-f8e4bbe80d) | Defines the [Avalonia.Controls.Presenters.ContentPresenter.Foreground](xref:Avalonia.Controls.Presenters.ContentPresenter.Foreground) property. Inherited from [ContentPresenter](contentpresenter.mdx). |
 | [GettingFocusEvent](../../input/inputelement.mdx#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. Inherited from [InputElement](../../input/inputelement.mdx). |

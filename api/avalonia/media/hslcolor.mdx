@@ -58,7 +58,7 @@ public struct HslColor
 <span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> HslColor
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;HslColor&gt;
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;HslColor&gt;, IFormattable
 </div>
 </div>
 
@@ -141,7 +141,7 @@ The Lightness component in the range from 0..1.
 | [Parse](#uid-15827e9261) | Parses an HSL color string. |
 | [ToHsv (2 overloads)](#uid-3593b92da3) | Returns the HSV color model equivalent of this HSL color. |
 | [ToRgb (2 overloads)](#uid-ceaa63583d) | Returns the RGB color model equivalent of this HSL color. |
-| [ToString](#uid-b0e056e00f) | No summary available. |
+| [ToString (2 overloads)](#uid-25908f40a2) | No summary available. |
 | [TryParse](#uid-ae06564c0e) | No summary available. |
 
 <span id="uid-a5eaa48948"></span>
@@ -469,20 +469,75 @@ A new RGB [Avalonia.Media.Color](xref:Avalonia.Media.Color) equivalent to the gi
 
 </section>
 
+<span id="uid-25908f40a2"></span>
+
+### ToString overloads
+
 <section className="apiref-page__member-entry">
 
 <span id="uid-b0e056e00f"></span>
 
-### ToString Method
+#### ToString Method
 
 ```csharp
 public string ToString()
 ```
 
-#### Returns
+##### Returns
 
 string
 
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-512850c0c3"></span>
+
+#### ToString Method
+
+Returns a formatted string representation of the HSL color.
+
+```csharp
+public string ToString(string format, IFormatProvider formatProvider)
+```
+
+##### Parameters
+
+`format` string
+
+The format specifier. All color types support all specifiers via auto-conversion.
+Uppercase includes alpha, lowercase excludes it. `%` suffix = percent mode.
+
+- `null` or `""` — Default (full-precision `hsla(h, s, l, a)`)
+- `"X"` — XAML hex: `#AARRGGBB`
+- `"x"` — Hex: `#RRGGBB`
+- `"H"` — HTML hex: `#RRGGBBAA`
+- `"R"/"r"/"R%"/"r%"` — CSS rgb/rgba (auto-converts to RGB)
+- `"L"` — CSS hsla: `hsla(h, s%, l%, a)`
+- `"l"` — CSS hsl: `hsl(h, s%, l%)`
+- `"L%"` — All percent: `hsla(h%, s%, l%, a%)`
+- `"l%"` — All percent: `hsl(h%, s%, l%)`
+- `"V"/"v"/"V%"/"v%"` — CSS hsv/hsva (auto-converts to HSV)
+
+`"C"` and `"A"` are reserved for future complex format strings.
+
+
+`formatProvider` IFormatProvider
+
+Ignored. Color formatting is culture-invariant.
+
+
+##### Returns
+
+string
+
+The formatted string representation.
+
+
+##### Exceptions
+
+- [Thrown when \`format\` is not recognized.](xref:System.FormatException)
 
 </section>
 

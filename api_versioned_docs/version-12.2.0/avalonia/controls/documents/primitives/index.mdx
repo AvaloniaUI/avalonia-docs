@@ -1,0 +1,64 @@
+---
+title: 'Avalonia.Controls.Documents.Primitives'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives'
+uid: 'Avalonia.Controls.Documents.Primitives'
+commentId: 'N:Avalonia.Controls.Documents.Primitives'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Primitives Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Controls.Documents.Primitives`
+
+</div>
+
+## Types
+
+- [CaretElement](caretelement.mdx) - Renders the text caret (insertion point) in the editor.
+Blinks at 500ms intervals and hides when selection is non-empty.
+- [EditorContextMenu](editorcontextmenu.mdx) - A [Avalonia.Controls.MenuFlyout](xref:Avalonia.Controls.MenuFlyout) used as the right-click context menu for the editor.
+- [EditorSelectionFlyout](editorselectionflyout.mdx) - Selection flyout that hosts a unified toolbar for the editor mini-bar.
+- [IInteractiveTextHost](iinteractivetexthost.mdx) - Host interface for interactive text views that support selection, navigation,
+and modular components — but not necessarily editing.
+- [ITextEditorHost](itexteditorhost.mdx) - Host interface for text editor controls that support text mutation.
+- [ITextLine](itextline.mdx) - Represents a single visual line of formatted text.
+- [ITextView](itextview.mdx) - Provides coordinate mapping and hit testing for document content.
+Bridges between the document model ([TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)) and visual representation (coordinates).
+- [ITextViewHost](itextviewhost.mdx) - Represents the host container for a text view, providing viewport and scrolling capabilities.
+- [InteractiveTextView](interactivetextview.mdx) - A [Avalonia.Controls.Documents.Primitives.TextViewBase](xref:Avalonia.Controls.Documents.Primitives.TextViewBase) with caret, adorner layer, and highlight support.
+Used by read-only interactive views such as `Markdown`.
+Editor-specific extensions live in the `EditorTextView` subclass.
+- [PageContext](pagecontext.mdx) - The page a band host presents: the one-based page number and the page count. Set
+on a host by the paged view and inherited by the views inside it, so page-number
+fields resolve per page.
+- [PagedTextView](pagedtextview.mdx) - A text view that lays the document out as discrete pages (Word's print layout): blocks
+fill page bands until the page content height is reached or a page break forces a new
+page, page sheets render behind the content, and the placement seams of
+[Avalonia.Controls.Documents.Primitives.TextViewBase](xref:Avalonia.Controls.Documents.Primitives.TextViewBase) are answered from a break table so the anchored
+virtualization, extent, and scrollbar projections work unchanged.
+- [TextLineInfo](textlineinfo.mdx) - A lightweight struct representing line information for caret positioning and navigation.
+Implements [Avalonia.Controls.Documents.Primitives.ITextLine](xref:Avalonia.Controls.Documents.Primitives.ITextLine) as a value type to avoid allocations.
+- [TextViewBase](textviewbase.mdx) - A virtualizing text view that only realizes document blocks overlapping the viewport.
+Implements [Avalonia.Controls.Documents.Primitives.ITextView](xref:Avalonia.Controls.Documents.Primitives.ITextView) for coordinate mapping and [Avalonia.Controls.Primitives.ILogicalScrollable](xref:Avalonia.Controls.Primitives.ILogicalScrollable)
+to drive a parent [Avalonia.Controls.ScrollViewer](xref:Avalonia.Controls.ScrollViewer).
+- [VirtualizingContentHost](virtualizingcontenthost.mdx) - A lightweight [Avalonia.Controls.Control](xref:Avalonia.Controls.Control) whose children are measured and arranged
+externally by [Avalonia.Controls.Documents.Primitives.TextViewBase](xref:Avalonia.Controls.Documents.Primitives.TextViewBase). Its own
+[Avalonia.Controls.Documents.Primitives.VirtualizingContentHost.MeasureOverride(Avalonia.Size)](xref:Avalonia.Controls.Documents.Primitives.VirtualizingContentHost.MeasureOverride%28Avalonia.Size%29)/[Avalonia.Controls.Documents.Primitives.VirtualizingContentHost.ArrangeOverride(Avalonia.Size)](xref:Avalonia.Controls.Documents.Primitives.VirtualizingContentHost.ArrangeOverride%28Avalonia.Size%29) are intentional
+no-ops so the template layout engine does not interfere with the virtualizing
+measure/arrange pass driven by [Avalonia.Controls.Documents.Primitives.TextViewBase](xref:Avalonia.Controls.Documents.Primitives.TextViewBase).
+</ApiRefPage>
+

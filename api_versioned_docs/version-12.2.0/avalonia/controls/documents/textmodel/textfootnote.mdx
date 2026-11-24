@@ -1,0 +1,202 @@
+---
+title: 'TextFootnote'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textfootnote'
+uid: 'Avalonia.Controls.Documents.TextModel.TextFootnote'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextFootnote'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextFootnote Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A footnote at the text-model level: a nested [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument) holding
+the note's body, paired by [Avalonia.Controls.Documents.TextModel.TextFootnote.NoteId](xref:Avalonia.Controls.Documents.TextModel.TextFootnote.NoteId) with the
+[Avalonia.Controls.Documents.RichFootnoteReference](xref:Avalonia.Controls.Documents.RichFootnoteReference) anchor that carries the number. The owning
+document keeps its notes in [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes) in anchor order,
+snapshots them with itself and restores them from a snapshot; the
+[Avalonia.Controls.Documents.Footnote](xref:Avalonia.Controls.Documents.Footnote) element is the optional facade over one of these, the way
+[Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) is over a text document. The rendered number is the
+note's position among the document's notes, never stored here.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextFootnote
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextFootnote
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TextFootnote (2 overloads)](#uid-6a9a96cc3c) | Initializes a note over a new empty note document, unpaired until an anchor claims it. |
+
+<span id="uid-6a9a96cc3c"></span>
+
+### TextFootnote overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17ff1272a3"></span>
+
+#### TextFootnote Constructor
+
+Initializes a note over a new empty note document, unpaired until an anchor claims it.
+
+```csharp
+public TextFootnote()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d36d9bc1ff"></span>
+
+#### TextFootnote Constructor
+
+Initializes a note over `document`, a note-rooted document.
+
+```csharp
+public TextFootnote(Avalonia.Controls.Documents.TextModel.TextDocument document, int noteId, string label)
+```
+
+##### Parameters
+
+`document` [Avalonia.Controls.Documents.TextModel.TextDocument](xref:Avalonia.Controls.Documents.TextModel.TextDocument)
+
+
+`noteId` int
+
+
+`label` string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Document](#uid-9fe48918cc) | The note's body. |
+| [Label](#uid-041db1784b) | The note's name in formats that address notes by name (markdown's `[^label]`); never displayed, null for a note created in the editor. |
+| [NoteId](#uid-829086fa7a) | The identity pairing this note with its anchor, document-unique and assigned by the pairing; 0 while unpaired. The displayed number is not the id: ordinals follow anchor order. |
+| [Owner](#uid-8346e4fcf5) | The document that owns the note, null while it is unowned. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9fe48918cc"></span>
+
+### Document Property
+
+The note's body.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument Document { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-041db1784b"></span>
+
+### Label Property
+
+The note's name in formats that address notes by name (markdown's
+`[^label]`); never displayed, null for a note created in the editor.
+
+```csharp
+public string Label { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-829086fa7a"></span>
+
+### NoteId Property
+
+The identity pairing this note with its anchor, document-unique and assigned
+by the pairing; 0 while unpaired. The displayed number is not the id: ordinals
+follow anchor order.
+
+```csharp
+public int NoteId { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8346e4fcf5"></span>
+
+### Owner Property
+
+The document that owns the note, null while it is unowned.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocument Owner { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [Changed](#uid-f2fd055b39) | Raised when the id or label changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f2fd055b39"></span>
+
+### Changed Event
+
+Raised when the id or label changes.
+
+```csharp
+public event EventHandler Changed
+```
+
+</section>
+
+</ApiRefPage>
+

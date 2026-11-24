@@ -1,0 +1,312 @@
+---
+title: 'HighlightLayerCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/highlighting/highlightlayercollection'
+uid: 'Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Highlighting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HighlightLayerCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Highlighting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Manages a collection of highlight layers with Z-ordering. Enumeration and the
+indexer walk the layers in render order, lowest [Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer.ZIndex](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer.ZIndex)
+first.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HighlightLayerCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HighlightLayerCollection
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEnumerable&lt;IHighlightLayer&gt;, IReadOnlyCollection&lt;IHighlightLayer&gt;, IReadOnlyList&lt;IHighlightLayer&gt;, IEnumerable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [HighlightLayerCollection](#uid-29d41f9bd5) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29d41f9bd5"></span>
+
+### HighlightLayerCollection Constructor
+
+```csharp
+public HighlightLayerCollection()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Add](#uid-6106bf7a74) | Adds a highlight layer to the collection. |
+| [Clear](#uid-d2edcf0297) | Clears all layers from the collection. |
+| [GetEnumerator](#uid-9ff12f020b) | Returns an enumerator that walks the layers in render order. |
+| [GetLayer](#uid-6f11117844) | Gets a layer by name. |
+| [GetLayers](#uid-8b38baa2ab) | Gets all layers ordered by Z-index. |
+| [Remove](#uid-39f4055166) | Removes a highlight layer from the collection. |
+| [Render](#uid-f0864c0cbe) | Renders all visible layers. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6106bf7a74"></span>
+
+### Add Method
+
+Adds a highlight layer to the collection.
+
+```csharp
+public void Add(Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer layer)
+```
+
+#### Parameters
+
+`layer` [Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer)
+
+The layer to add.
+
+
+#### Exceptions
+
+- [A layer with the same \[Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer.Name\](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer.Name) is already in the
+collection, which would make \[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection.GetLayer(string)\](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection.GetLayer%28System.String%29) ambiguous.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2edcf0297"></span>
+
+### Clear Method
+
+Clears all layers from the collection.
+
+```csharp
+public void Clear()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ff12f020b"></span>
+
+### GetEnumerator Method
+
+Returns an enumerator that walks the layers in render order.
+
+```csharp
+public System.Collections.Generic.IEnumerator<Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer> GetEnumerator()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerator&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f11117844"></span>
+
+### GetLayer Method
+
+Gets a layer by name.
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer GetLayer(string name)
+```
+
+#### Parameters
+
+`name` string
+
+The name of the layer.
+
+
+#### Returns
+
+[Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer)
+
+The layer with the specified name, or null if not found.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8b38baa2ab"></span>
+
+### GetLayers Method
+
+Gets all layers ordered by Z-index.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer> GetLayers()
+```
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer)&gt;
+
+An enumerable of layers ordered by Z-index.
+
+
+#### Remarks
+
+Enumerate the collection itself, which walks the same order.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39f4055166"></span>
+
+### Remove Method
+
+Removes a highlight layer from the collection.
+
+```csharp
+public bool Remove(Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer layer)
+```
+
+#### Parameters
+
+`layer` [Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer](xref:Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer)
+
+The layer to remove.
+
+
+#### Returns
+
+bool
+
+True if the layer was removed; otherwise, false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0864c0cbe"></span>
+
+### Render Method
+
+Renders all visible layers.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Controls.Documents.Primitives.ITextView textView)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`textView` [Avalonia.Controls.Documents.Primitives.ITextView](xref:Avalonia.Controls.Documents.Primitives.ITextView)
+
+The text view for coordinate mapping.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Count](#uid-732b1fcd12) | Gets the number of layers in the collection. |
+| [Item](#uid-138f8c3378) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-732b1fcd12"></span>
+
+### Count Property
+
+Gets the number of layers in the collection.
+
+```csharp
+public int Count { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-138f8c3378"></span>
+
+### Item Property
+
+```csharp
+public Avalonia.Controls.Documents.Primitives.Highlighting.IHighlightLayer Item { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [RegionsChanged](#uid-80acc2cdc2) | Event raised when any layer's regions change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80acc2cdc2"></span>
+
+### RegionsChanged Event
+
+Event raised when any layer's regions change.
+
+```csharp
+public event EventHandler RegionsChanged
+```
+
+</section>
+
+</ApiRefPage>
+

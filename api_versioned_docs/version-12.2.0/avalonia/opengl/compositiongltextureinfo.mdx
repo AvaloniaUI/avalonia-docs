@@ -1,0 +1,269 @@
+---
+title: 'CompositionGlTextureInfo'
+hide_title: true
+slug: '/avalonia/opengl/compositiongltextureinfo'
+uid: 'Avalonia.OpenGL.CompositionGlTextureInfo'
+commentId: 'T:Avalonia.OpenGL.CompositionGlTextureInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionGlTextureInfo Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes an OpenGL texture provided by [Avalonia.OpenGL.ICompositionGlTextureLease](xref:Avalonia.OpenGL.ICompositionGlTextureLease).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct CompositionGlTextureInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> CompositionGlTextureInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;CompositionGlTextureInfo&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CompositionGlTextureInfo](#uid-e973d204e8) | Describes an OpenGL texture provided by [Avalonia.OpenGL.ICompositionGlTextureLease](xref:Avalonia.OpenGL.ICompositionGlTextureLease). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e973d204e8"></span>
+
+### CompositionGlTextureInfo Constructor
+
+Describes an OpenGL texture provided by [Avalonia.OpenGL.ICompositionGlTextureLease](xref:Avalonia.OpenGL.ICompositionGlTextureLease).
+
+```csharp
+public CompositionGlTextureInfo(int TextureId, int Target, int InternalFormat, Avalonia.PixelSize Size)
+```
+
+#### Parameters
+
+`TextureId` int
+
+
+`Target` int
+
+
+`InternalFormat` int
+
+
+`Size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-8cbd76ce2b) | No summary available. |
+| [Equals (2 overloads)](#uid-84810993a5) | No summary available. |
+| [GetHashCode](#uid-969b232f2f) | No summary available. |
+| [ToString](#uid-15a41f0450) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8cbd76ce2b"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& TextureId, int& Target, int& InternalFormat, Avalonia.PixelSize& Size)
+```
+
+#### Parameters
+
+`TextureId` int&amp;
+
+
+`Target` int&amp;
+
+
+`InternalFormat` int&amp;
+
+
+`Size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)&amp;
+
+
+</section>
+
+<span id="uid-84810993a5"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d64546d7a"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.OpenGL.CompositionGlTextureInfo other)
+```
+
+##### Parameters
+
+`other` [Avalonia.OpenGL.CompositionGlTextureInfo](xref:Avalonia.OpenGL.CompositionGlTextureInfo)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-547c6c1fb4"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-969b232f2f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15a41f0450"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [InternalFormat](#uid-6fbe975ced) | No summary available. |
+| [Size](#uid-73a8d1a2a6) | No summary available. |
+| [Target](#uid-683a169d4c) | No summary available. |
+| [TextureId](#uid-c98ed58f25) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6fbe975ced"></span>
+
+### InternalFormat Property
+
+```csharp
+public int InternalFormat { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73a8d1a2a6"></span>
+
+### Size Property
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-683a169d4c"></span>
+
+### Target Property
+
+```csharp
+public int Target { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c98ed58f25"></span>
+
+### TextureId Property
+
+```csharp
+public int TextureId { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

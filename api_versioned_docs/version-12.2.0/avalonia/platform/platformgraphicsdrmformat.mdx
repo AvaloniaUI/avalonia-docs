@@ -1,0 +1,239 @@
+---
+title: 'PlatformGraphicsDrmFormat'
+hide_title: true
+slug: '/avalonia/platform/platformgraphicsdrmformat'
+uid: 'Avalonia.Platform.PlatformGraphicsDrmFormat'
+commentId: 'T:Avalonia.Platform.PlatformGraphicsDrmFormat'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlatformGraphicsDrmFormat Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A DRM fourcc format + modifier pair the GPU backend can import as a
+[Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) image.
+[Avalonia.Platform.PlatformGraphicsDrmFormat.Format](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Format) is a DRM_FORMAT_* fourcc; [Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier) is a
+DRM_FORMAT_MOD_* layout ([Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid)
+meaning the implicit, driver-chosen layout).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PlatformGraphicsDrmFormat
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PlatformGraphicsDrmFormat
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PlatformGraphicsDrmFormat&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PlatformGraphicsDrmFormat](#uid-f582df1ee9) | A DRM fourcc format + modifier pair the GPU backend can import as a [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) image. [Avalonia.Platform.PlatformGraphicsDrmFormat.Format](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Format) is a DRM_FORMAT_* fourcc; [Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier) is a DRM_FORMAT_MOD_* layout ([Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid) meaning the implicit, driver-chosen layout). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f582df1ee9"></span>
+
+### PlatformGraphicsDrmFormat Constructor
+
+A DRM fourcc format + modifier pair the GPU backend can import as a
+[Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) image.
+[Avalonia.Platform.PlatformGraphicsDrmFormat.Format](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Format) is a DRM_FORMAT_* fourcc; [Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier](xref:Avalonia.Platform.PlatformGraphicsDrmFormat.Modifier) is a
+DRM_FORMAT_MOD_* layout ([Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid](xref:Avalonia.Platform.PlatformGraphicsExternalImageDmaBufProperties.DrmModifierInvalid)
+meaning the implicit, driver-chosen layout).
+
+```csharp
+public PlatformGraphicsDrmFormat(uint Format, ulong Modifier)
+```
+
+#### Parameters
+
+`Format` uint
+
+
+`Modifier` ulong
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-2181c8bddb) | No summary available. |
+| [Equals (2 overloads)](#uid-fb5f43e61a) | No summary available. |
+| [GetHashCode](#uid-02a186d83a) | No summary available. |
+| [ToString](#uid-5f98d1aa79) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2181c8bddb"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(uint& Format, ulong& Modifier)
+```
+
+#### Parameters
+
+`Format` uint&amp;
+
+
+`Modifier` ulong&amp;
+
+
+</section>
+
+<span id="uid-fb5f43e61a"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6dc9e06b0a"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Platform.PlatformGraphicsDrmFormat other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Platform.PlatformGraphicsDrmFormat](xref:Avalonia.Platform.PlatformGraphicsDrmFormat)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8915a51e74"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-02a186d83a"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5f98d1aa79"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Format](#uid-68a8f9db0b) | No summary available. |
+| [Modifier](#uid-0b64f79121) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68a8f9db0b"></span>
+
+### Format Property
+
+```csharp
+public uint Format { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b64f79121"></span>
+
+### Modifier Property
+
+```csharp
+public ulong Modifier { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

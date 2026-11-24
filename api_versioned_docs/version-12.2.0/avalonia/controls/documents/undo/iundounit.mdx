@@ -1,0 +1,75 @@
+---
+title: 'IUndoUnit'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/iundounit'
+uid: 'Avalonia.Controls.Documents.Undo.IUndoUnit'
+commentId: 'T:Avalonia.Controls.Documents.Undo.IUndoUnit'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IUndoUnit Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Read-only metadata for an undo/redo operation. The reversal mechanics
+live on an internal contract, so a unit obtained from
+[Avalonia.Controls.Documents.Undo.UndoManager.Undo](xref:Avalonia.Controls.Documents.Undo.UndoManager.Undo) or [Avalonia.Controls.Documents.Undo.IUndoScope.Unit](xref:Avalonia.Controls.Documents.Undo.IUndoScope.Unit) can be
+described but not replayed by a caller.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IUndoUnit
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Description](#uid-15b1f4c6f5) | Gets a description of the operation. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15b1f4c6f5"></span>
+
+### Description Property
+
+Gets a description of the operation.
+
+```csharp
+public string Description { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

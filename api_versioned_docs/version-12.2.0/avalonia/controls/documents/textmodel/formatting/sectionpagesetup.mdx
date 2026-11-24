@@ -1,0 +1,243 @@
+---
+title: 'SectionPageSetup'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/sectionpagesetup'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SectionPageSetup Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Page geometry declared by a [Avalonia.Controls.Documents.Section](xref:Avalonia.Controls.Documents.Section). Value type for zero-reference
+safety; carried on the section's snapshot node, not in [Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.BlockFormatting).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SectionPageSetup
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SectionPageSetup
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;SectionPageSetup&gt;
+</div>
+</div>
+
+## Remarks
+
+Null members mean "not declared" and inherit the document-level page setup.
+A section that declares any member starts on a new page in paginated output and
+spans pages with this geometry; a section that declares none is a plain grouping
+container with no page semantics.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-c9e6730436) | No summary available. |
+| [GetHashCode](#uid-78b3b10e11) | No summary available. |
+| [ToString](#uid-7f0c691c75) | No summary available. |
+
+<span id="uid-c9e6730436"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-882079f060"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup](xref:Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e7cec90b5b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78b3b10e11"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f0c691c75"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-68b4a90a10) | Setup with no declared values. |
+| [IsEmpty](#uid-577f9f33f7) | Gets whether no geometry member is declared - the section carries no page semantics. |
+| [PageHeight](#uid-32b639650d) | The page height in device-independent pixels for pages this section spans. Null inherits the document's page height. |
+| [PagePadding](#uid-8a457e8bb1) | The page margins (distance from the paper edge to the content area) for pages this section spans. Null inherits the document's page padding. |
+| [PageWidth](#uid-16148b2dfa) | The page width in device-independent pixels for pages this section spans. Null inherits the document's page width. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-68b4a90a10"></span>
+
+### Default Property
+
+Setup with no declared values.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.SectionPageSetup Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-577f9f33f7"></span>
+
+### IsEmpty Property
+
+Gets whether no geometry member is declared - the section carries no page
+semantics.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32b639650d"></span>
+
+### PageHeight Property
+
+The page height in device-independent pixels for pages this section spans.
+Null inherits the document's page height.
+
+```csharp
+public Nullable<double> PageHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a457e8bb1"></span>
+
+### PagePadding Property
+
+The page margins (distance from the paper edge to the content area) for pages
+this section spans. Null inherits the document's page padding.
+
+```csharp
+public Nullable<Avalonia.Thickness> PagePadding { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16148b2dfa"></span>
+
+### PageWidth Property
+
+The page width in device-independent pixels for pages this section spans.
+Null inherits the document's page width.
+
+```csharp
+public Nullable<double> PageWidth { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

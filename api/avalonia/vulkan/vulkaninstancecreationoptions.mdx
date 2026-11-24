@@ -78,6 +78,7 @@ public VulkanInstanceCreationOptions()
 | [CustomGetProcAddressDelegate](#uid-ec6a86b40c) | No summary available. |
 | [EnabledLayers](#uid-c76666d4fc) | Specifies layers to enable if available on the instance |
 | [InstanceExtensions](#uid-c6aa9ee2b2) | Specifies additional extensions to enable if available on the instance |
+| [RequireSurfaceExtension](#uid-37936c6823) | Requires and enables VK_KHR_surface on the created instance. Disable for offscreen-only rendering with drivers that don't expose the extension. |
 | [UseDebug](#uid-9831ff634e) | Enables the debug layer |
 | [VulkanVersion](#uid-7d301663b2) | Specifies the vulkan api version to use |
 
@@ -131,6 +132,21 @@ Specifies additional extensions to enable if available on the instance
 
 ```csharp
 public System.Collections.Generic.IList<string> InstanceExtensions { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37936c6823"></span>
+
+### RequireSurfaceExtension Property
+
+Requires and enables VK_KHR_surface on the created instance. Disable for offscreen-only
+rendering with drivers that don't expose the extension.
+
+```csharp
+public bool RequireSurfaceExtension { get; set; }
 ```
 
 </section>

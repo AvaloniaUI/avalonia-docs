@@ -64,6 +64,8 @@ public class XamlIlRuntimeHelpers
 | [DeferredTransformationFactoryV1](#uid-37f819a2e0) | No summary available. |
 | [DeferredTransformationFactoryV2](#uid-3a715139d1) | No summary available. |
 | [DeferredTransformationFactoryV3](#uid-220107fbfa) | No summary available. |
+| [GetPropertyInfoFromPointers](#uid-41706d0149) | No summary available. |
+| [GetTypedPropertyInfoFromPointers](#uid-4102cb19d1) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -258,6 +260,87 @@ public Avalonia.Controls.IDeferredContent DeferredTransformationFactoryV3<T>(Int
 #### Returns
 
 [Avalonia.Controls.IDeferredContent](xref:Avalonia.Controls.IDeferredContent)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41706d0149"></span>
+
+### GetPropertyInfoFromPointers Method
+
+```csharp
+public Avalonia.Data.Core.IPropertyInfo GetPropertyInfoFromPointers<THelper, TValue>(Avalonia.Data.Core.IPropertyInfo& field, string name, IntPtr getter, IntPtr setter)
+```
+
+#### Parameters
+
+`field` [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)&amp;
+
+
+`name` string
+
+
+`getter` IntPtr
+
+
+`setter` IntPtr
+
+
+#### Type Parameters
+
+`THelper`
+
+
+`TValue`
+
+
+#### Returns
+
+[Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4102cb19d1"></span>
+
+### GetTypedPropertyInfoFromPointers Method
+
+```csharp
+public Avalonia.Data.Core.IPropertyInfo<TSource, TValue> GetTypedPropertyInfoFromPointers<THelper, TSource, TValue>(Avalonia.Data.Core.IPropertyInfo<TSource, TValue>& field, string name, IntPtr getter, IntPtr setter)
+```
+
+#### Parameters
+
+`field` [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)&lt;TSource, TValue&gt;&amp;
+
+
+`name` string
+
+
+`getter` IntPtr
+
+
+`setter` IntPtr
+
+
+#### Type Parameters
+
+`THelper`
+
+
+`TSource`
+
+
+`TValue`
+
+
+#### Returns
+
+[Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)&lt;TSource, TValue&gt;
 
 
 </section>

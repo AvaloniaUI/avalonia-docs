@@ -70,6 +70,7 @@ public class ImmutableGradientBrush
 | --- | --- |
 | [GradientStops](#uid-9d195fdf3e) | Gets the brush's gradient stops. |
 | [Opacity](#uid-5f6e07ee47) | Gets the opacity of the brush. |
+| [RelativeTransform](#uid-f3bf2b9185) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. |
 | [SpreadMethod](#uid-9b5fcc3168) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. |
 | [Transform](#uid-2c0dd3ffd3) | Gets the transform of the brush. |
 | [TransformOrigin](#uid-56b8b5945b) | Gets the transform origin of the brush |
@@ -98,6 +99,24 @@ Gets the opacity of the brush.
 
 ```csharp
 public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3bf2b9185"></span>
+
+### RelativeTransform Property
+
+Gets the transform applied in the relative coordinate space of the area being painted:
+the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside
+that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush
+express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox
+units, for example - without baking any one consumer's bounds into a matrix.
+
+```csharp
+public Avalonia.Media.ITransform RelativeTransform { get; set; }
 ```
 
 </section>

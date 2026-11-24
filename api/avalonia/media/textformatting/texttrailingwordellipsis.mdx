@@ -149,6 +149,13 @@ Iterate the source line's runs via
 [Avalonia.Media.TextFormatting.TextCollapsingProperties.CreateCollapsedRuns(Avalonia.Media.TextFormatting.TextLine,int,Avalonia.Media.TextFormatting.TextRun)](xref:Avalonia.Media.TextFormatting.TextCollapsingProperties.CreateCollapsedRuns%28Avalonia.Media.TextFormatting.TextLine%2CSystem.Int32%2CAvalonia.Media.TextFormatting.TextRun%29) when an implementation only
 needs the standard "logical prefix + symbol" shape.
 
+The returned runs may be in any arrangement, for example a leading or middle
+symbol, and may reuse runs of `textLine` as they are. The collapsed
+line takes its own reference to each reused run, so disposing either line leaves the
+other intact. Every other run in the result, such as the symbol from
+[Avalonia.Media.TextFormatting.TextFormatter.CreateSymbol(Avalonia.Media.TextFormatting.TextRun,Avalonia.Media.FlowDirection)](xref:Avalonia.Media.TextFormatting.TextFormatter.CreateSymbol%28Avalonia.Media.TextFormatting.TextRun%2CAvalonia.Media.FlowDirection%29), passes to the collapsed line, which
+disposes it with itself; dispose the symbol when the result does not contain it.
+
 </section>
 
 ## Properties

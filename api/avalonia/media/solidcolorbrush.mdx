@@ -232,6 +232,7 @@ A string representation of the brush.
 | [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Opacity](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. Inherited from [Brush](brush.mdx). |
+| [RelativeTransform](brush.mdx#uid-f7096bbee7) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. Inherited from [Brush](brush.mdx). |
 | [Transform](brush.mdx#uid-8d25869723) | Gets or sets the transform of the brush. Inherited from [Brush](brush.mdx). |
 | [TransformOrigin](brush.mdx#uid-406d6c9e88) | Gets or sets the origin of the brush [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) Inherited from [Brush](brush.mdx). |
 | [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
@@ -256,6 +257,7 @@ public Avalonia.Media.Color Color { get; set; }
 | --- | --- |
 | [ColorProperty](#uid-fe536852f4) | Defines the [Avalonia.Media.SolidColorBrush.Color](xref:Avalonia.Media.SolidColorBrush.Color) property. |
 | [OpacityProperty](brush.mdx#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. Inherited from [Brush](brush.mdx). |
+| [RelativeTransformProperty](brush.mdx#uid-e92f247126) | Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property. Inherited from [Brush](brush.mdx). |
 | [TransformOriginProperty](brush.mdx#uid-3a3c0bc732) | Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property Inherited from [Brush](brush.mdx). |
 | [TransformProperty](brush.mdx#uid-933d2c0564) | Defines the [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) property. Inherited from [Brush](brush.mdx). |
 | [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |

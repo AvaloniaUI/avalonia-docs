@@ -1,0 +1,320 @@
+---
+title: 'InlineFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/inlineformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InlineFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Inline-specific formatting snapshot. Value type for zero-reference safety.
+Contains only properties specific to [Avalonia.Controls.Documents.RichInline](xref:Avalonia.Controls.Documents.RichInline) elements.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct InlineFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> InlineFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;InlineFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Base-level properties (font, foreground, background, letter spacing) are stored
+in [Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextElementFormatting) on the [Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode).
+This struct holds the remaining inline-only properties: text decorations
+and baseline alignment.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-669a2d6115) | No summary available. |
+| [GetHashCode](#uid-571347bc4e) | No summary available. |
+| [ToString](#uid-c9792e6caf) | No summary available. |
+
+<span id="uid-669a2d6115"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e425736948"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dea7a023a9"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-571347bc4e"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c9792e6caf"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BaselineAlignment](#uid-5a3b3a01b0) | The baseline alignment (e.g., Baseline, Superscript, Subscript). Null means not explicitly set. |
+| [Default](#uid-62bd490ae3) | Default formatting with no explicit values set. |
+| [HasOverline](#uid-084f70590d) | Gets whether overline decoration is applied. |
+| [HasStrikethrough](#uid-4b8f9477e5) | Gets whether strikethrough decoration is applied. |
+| [HasSuperOrSubscript](#uid-66596a3f3d) | Gets whether any superscript or subscript flag is set. |
+| [HasUnderline](#uid-89a1b5bd8b) | Gets whether underline decoration is applied. |
+| [IsSubscript](#uid-42626755e2) | Whether this inline is subscript. The higher layer decides how to represent this ([BaselineAlignment](xref:Avalonia.Media.BaselineAlignment), FontFeatures, etc.). |
+| [IsSuperscript](#uid-35e56b6e3d) | Whether this inline is superscript. The higher layer decides how to represent this ([BaselineAlignment](xref:Avalonia.Media.BaselineAlignment), FontFeatures, etc.). |
+| [TextDecorations](#uid-cc4c08e7ec) | Text decoration flags (underline, strikethrough, overline). Null means not explicitly set. |
+| [UnderlineStyle](#uid-6572d9f33c) | The line style of the underline. Only takes effect when [Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) is set in [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.TextDecorations](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.TextDecorations). Null means not explicitly set and renders as [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5a3b3a01b0"></span>
+
+### BaselineAlignment Property
+
+The baseline alignment (e.g., Baseline, Superscript, Subscript).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Media.BaselineAlignment> BaselineAlignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62bd490ae3"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-084f70590d"></span>
+
+### HasOverline Property
+
+Gets whether overline decoration is applied.
+
+```csharp
+public bool HasOverline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4b8f9477e5"></span>
+
+### HasStrikethrough Property
+
+Gets whether strikethrough decoration is applied.
+
+```csharp
+public bool HasStrikethrough { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66596a3f3d"></span>
+
+### HasSuperOrSubscript Property
+
+Gets whether any superscript or subscript flag is set.
+
+```csharp
+public bool HasSuperOrSubscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89a1b5bd8b"></span>
+
+### HasUnderline Property
+
+Gets whether underline decoration is applied.
+
+```csharp
+public bool HasUnderline { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42626755e2"></span>
+
+### IsSubscript Property
+
+Whether this inline is subscript. The higher layer decides
+how to represent this ([BaselineAlignment](xref:Avalonia.Media.BaselineAlignment), FontFeatures, etc.).
+
+```csharp
+public bool IsSubscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35e56b6e3d"></span>
+
+### IsSuperscript Property
+
+Whether this inline is superscript. The higher layer decides
+how to represent this ([BaselineAlignment](xref:Avalonia.Media.BaselineAlignment), FontFeatures, etc.).
+
+```csharp
+public bool IsSuperscript { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc4c08e7ec"></span>
+
+### TextDecorations Property
+
+Text decoration flags (underline, strikethrough, overline).
+Null means not explicitly set.
+
+```csharp
+public Nullable<Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags> TextDecorations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6572d9f33c"></span>
+
+### UnderlineStyle Property
+
+The line style of the underline. Only takes effect when
+[Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) is set in [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.TextDecorations](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.TextDecorations).
+Null means not explicitly set and renders as [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single).
+
+```csharp
+public Nullable<Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle> UnderlineStyle { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -69,6 +69,7 @@ public class ImmutableTileBrush
 | [AlignmentY](#uid-5ce5d983f2) | Gets the horizontal alignment of a tile in the destination. |
 | [DestinationRect](#uid-c040ea2847) | Gets the rectangle on the destination in which to paint a tile. |
 | [Opacity](#uid-bc234e730d) | Gets the opacity of the brush. |
+| [RelativeTransform](#uid-a88100234e) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. |
 | [SourceRect](#uid-e832a55183) | Gets the rectangle of the source image that will be displayed. |
 | [Stretch](#uid-2d17a7a145) | Gets a value indicating how the source rectangle will be stretched to fill the destination rect. |
 | [TileMode](#uid-ff11f8a04a) | Gets the brush's tile mode. |
@@ -127,6 +128,24 @@ Gets the opacity of the brush.
 
 ```csharp
 public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a88100234e"></span>
+
+### RelativeTransform Property
+
+Gets the transform applied in the relative coordinate space of the area being painted:
+the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside
+that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush
+express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox
+units, for example - without baking any one consumer's bounds into a matrix.
+
+```csharp
+public Avalonia.Media.ITransform RelativeTransform { get; set; }
 ```
 
 </section>

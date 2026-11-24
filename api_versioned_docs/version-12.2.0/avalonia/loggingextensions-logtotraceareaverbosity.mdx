@@ -1,0 +1,164 @@
+---
+title: 'LoggingExtensions.LogToTraceAreaVerbosity'
+hide_title: true
+slug: '/avalonia/loggingextensions-logtotraceareaverbosity'
+uid: 'Avalonia.LoggingExtensions.LogToTraceAreaVerbosity'
+commentId: 'T:Avalonia.LoggingExtensions.LogToTraceAreaVerbosity'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">LoggingExtensions.LogToTraceAreaVerbosity Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Returns the minimum level to log for a log area.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate LoggingExtensions.LogToTraceAreaVerbosity
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> LoggingExtensions.LogToTraceAreaVerbosity
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [LoggingExtensions.LogToTraceAreaVerbosity](#uid-118c2508d0) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-118c2508d0"></span>
+
+### LoggingExtensions.LogToTraceAreaVerbosity Constructor
+
+```csharp
+public LoggingExtensions.LogToTraceAreaVerbosity(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-7c7ed71ae6) | No summary available. |
+| [EndInvoke](#uid-a3210f2cce) | No summary available. |
+| [Invoke](#uid-cdb9b1b912) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7c7ed71ae6"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(string area, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`area` string
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a3210f2cce"></span>
+
+### EndInvoke Method
+
+```csharp
+public Avalonia.Logging.LogEventLevel EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+[Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cdb9b1b912"></span>
+
+### Invoke Method
+
+```csharp
+public Avalonia.Logging.LogEventLevel Invoke(string area)
+```
+
+#### Parameters
+
+`area` string
+
+
+#### Returns
+
+[Avalonia.Logging.LogEventLevel](xref:Avalonia.Logging.LogEventLevel)
+
+
+</section>
+
+</ApiRefPage>
+

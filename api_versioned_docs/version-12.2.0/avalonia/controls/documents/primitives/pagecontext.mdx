@@ -1,0 +1,235 @@
+---
+title: 'PageContext'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/pagecontext'
+uid: 'Avalonia.Controls.Documents.Primitives.PageContext'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.PageContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The page a band host presents: the one-based page number and the page count. Set
+on a host by the paged view and inherited by the views inside it, so page-number
+fields resolve per page.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PageContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PageContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PageContext&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageContext](#uid-7b41295c3a) | The page a band host presents: the one-based page number and the page count. Set on a host by the paged view and inherited by the views inside it, so page-number fields resolve per page. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b41295c3a"></span>
+
+### PageContext Constructor
+
+The page a band host presents: the one-based page number and the page count. Set
+on a host by the paged view and inherited by the views inside it, so page-number
+fields resolve per page.
+
+```csharp
+public PageContext(int PageNumber, int PageCount)
+```
+
+#### Parameters
+
+`PageNumber` int
+
+
+`PageCount` int
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-ef1c9a43e3) | No summary available. |
+| [Equals (2 overloads)](#uid-3f234bf50e) | No summary available. |
+| [GetHashCode](#uid-afa6d2d25f) | No summary available. |
+| [ToString](#uid-80e9273123) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef1c9a43e3"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(int& PageNumber, int& PageCount)
+```
+
+#### Parameters
+
+`PageNumber` int&amp;
+
+
+`PageCount` int&amp;
+
+
+</section>
+
+<span id="uid-3f234bf50e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-478bf7c2b7"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Primitives.PageContext other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Primitives.PageContext](xref:Avalonia.Controls.Documents.Primitives.PageContext)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5800973664"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afa6d2d25f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80e9273123"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [PageCount](#uid-74e1513e5d) | No summary available. |
+| [PageNumber](#uid-18ce92e82d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-74e1513e5d"></span>
+
+### PageCount Property
+
+```csharp
+public int PageCount { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18ce92e82d"></span>
+
+### PageNumber Property
+
+```csharp
+public int PageNumber { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

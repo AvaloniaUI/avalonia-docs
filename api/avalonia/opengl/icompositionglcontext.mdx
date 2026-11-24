@@ -1,0 +1,167 @@
+---
+title: 'ICompositionGlContext'
+hide_title: true
+slug: '/avalonia/opengl/icompositionglcontext'
+uid: 'Avalonia.OpenGL.ICompositionGlContext'
+commentId: 'T:Avalonia.OpenGL.ICompositionGlContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICompositionGlContext Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.OpenGL/Composition/ICompositionGlContext.cs">ICompositionGlContext.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An OpenGL context that is suitable for interop with a [Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor).
+Create instances via [Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync(Avalonia.Rendering.Composition.Compositor,Avalonia.OpenGL.CompositionGlContextOptions)](xref:Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync%28Avalonia.Rendering.Composition.Compositor%2CAvalonia.OpenGL.CompositionGlContextOptions%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICompositionGlContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAsyncDisposable
+</div>
+</div>
+
+## Remarks
+
+All members can only be used on the thread the associated [Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor)
+belongs to.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateTexture](#uid-bf008aad0c) | Creates a texture that can be used to update a [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface) instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf008aad0c"></span>
+
+### CreateTexture Method
+
+Creates a texture that can be used to update a [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface) instance.
+
+```csharp
+public Avalonia.OpenGL.ICompositionGlTexture CreateTexture(Avalonia.Rendering.Composition.CompositionDrawingSurface surface, Avalonia.PixelSize size)
+```
+
+#### Parameters
+
+`surface` [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface)
+
+The surface that will be updated by the texture. Must belong to [Avalonia.OpenGL.ICompositionGlContext.Compositor](xref:Avalonia.OpenGL.ICompositionGlContext.Compositor).
+
+
+`size` [Avalonia.PixelSize](xref:Avalonia.PixelSize)
+
+The pixel size of the texture.
+
+
+#### Returns
+
+[Avalonia.OpenGL.ICompositionGlTexture](xref:Avalonia.OpenGL.ICompositionGlTexture)
+
+
+#### Exceptions
+
+- [The context is no longer valid for interop or the surface belongs to a different compositor.](xref:System.InvalidOperationException)
+- [The context has been disposed.](xref:System.ObjectDisposedException)
+- [\`surface\` is null.](xref:System.ArgumentNullException)
+- [\`size\` is empty or negative.](xref:System.ArgumentOutOfRangeException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Compositor](#uid-c7702baed9) | The associated compositor. |
+| [GlContext](#uid-b360a4076c) | The OpenGL context. |
+| [IsValidForInterop](#uid-cc7709e04d) | Returns true if this OpenGL context is still suitable for interop with the Compositor. This property might become false in cases like a device loss event on the compositor side. In that case presentation is no longer possible, however [Avalonia.OpenGL.ICompositionGlContext.GlContext](xref:Avalonia.OpenGL.ICompositionGlContext.GlContext) itself might still be usable for salvaging user resources. Once the property becomes false, this instance should be disposed and recreated via [Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync(Avalonia.Rendering.Composition.Compositor,Avalonia.OpenGL.CompositionGlContextOptions)](xref:Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync%28Avalonia.Rendering.Composition.Compositor%2CAvalonia.OpenGL.CompositionGlContextOptions%29). A recreated context shares no OpenGL objects with the old one. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7702baed9"></span>
+
+### Compositor Property
+
+The associated compositor.
+
+```csharp
+public Avalonia.Rendering.Composition.Compositor Compositor { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b360a4076c"></span>
+
+### GlContext Property
+
+The OpenGL context.
+
+```csharp
+public Avalonia.OpenGL.IGlContext GlContext { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc7709e04d"></span>
+
+### IsValidForInterop Property
+
+Returns true if this OpenGL context is still suitable for interop with the Compositor.
+This property might become false in cases like a device loss event on the compositor side.
+In that case presentation is no longer possible, however [Avalonia.OpenGL.ICompositionGlContext.GlContext](xref:Avalonia.OpenGL.ICompositionGlContext.GlContext) itself might
+still be usable for salvaging user resources. Once the property becomes false, this instance
+should be disposed and recreated via
+[Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync(Avalonia.Rendering.Composition.Compositor,Avalonia.OpenGL.CompositionGlContextOptions)](xref:Avalonia.OpenGL.OpenGlCompositionInterop.TryCreateCompatibleGlContextAsync%28Avalonia.Rendering.Composition.Compositor%2CAvalonia.OpenGL.CompositionGlContextOptions%29).
+A recreated context shares no OpenGL objects with the old one.
+
+```csharp
+public bool IsValidForInterop { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

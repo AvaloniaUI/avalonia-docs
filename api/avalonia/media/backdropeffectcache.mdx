@@ -1,0 +1,96 @@
+---
+title: 'BackdropEffectCache'
+hide_title: true
+slug: '/avalonia/media/backdropeffectcache'
+uid: 'Avalonia.Media.BackdropEffectCache'
+commentId: 'T:Avalonia.Media.BackdropEffectCache'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BackdropEffectCache Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/BackdropEffectCache.cs">BackdropEffectCache.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Selects whether a backdrop effect keeps a snapshot of what is behind the visual, or reads it again on
+every draw. With a null value the compositor chooses.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BackdropEffectCache
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> BackdropEffectCache
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="retainedbackdropeffectcache">RetainedBackdropEffectCache</a>, <a href="volatilebackdropeffectcache">VolatileBackdropEffectCache</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Parse](#uid-fede798c1b) | Parses a backdrop cache mode name, for the `BackdropEffectCache="Retained"` attribute syntax. `"Default"` gives `null` (the compositor chooses). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fede798c1b"></span>
+
+### Parse Method
+
+Parses a backdrop cache mode name, for the `BackdropEffectCache="Retained"` attribute syntax.
+`"Default"` gives `null` (the compositor chooses).
+
+```csharp
+public Avalonia.Media.BackdropEffectCache Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+
+#### Returns
+
+[Avalonia.Media.BackdropEffectCache](xref:Avalonia.Media.BackdropEffectCache)
+
+
+</section>
+
+</ApiRefPage>
+

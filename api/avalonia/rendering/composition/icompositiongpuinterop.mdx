@@ -198,6 +198,7 @@ A semaphore that belongs to the same GPU context or the same GPU context sharing
 | [DeviceLuid](#uid-f066fdfc57) | The LUID of the graphics adapter used by the compositor |
 | [DeviceUuid](#uid-204c32b69b) | The UUID of the graphics adapter used by the compositor |
 | [IsLost](#uid-f2b8219cb6) | Indicates if the device context this instance is associated with is no longer available |
+| [SupportedDmaBufFormats](#uid-8898c9cea8) | Returns the DRM format/modifier pairs the current GPU backend can import as [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) images, or null when the backend cannot enumerate them. |
 | [SupportedImageHandleTypes](#uid-7233179774) | Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes) |
 | [SupportedSemaphoreTypes](#uid-44a8fa91dd) | Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes) |
 
@@ -239,6 +240,22 @@ Indicates if the device context this instance is associated with is no longer av
 
 ```csharp
 public bool IsLost { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8898c9cea8"></span>
+
+### SupportedDmaBufFormats Property
+
+Returns the DRM format/modifier pairs the current GPU backend can import as
+[Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) images,
+or null when the backend cannot enumerate them.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.PlatformGraphicsDrmFormat> SupportedDmaBufFormats { get; set; }
 ```
 
 </section>

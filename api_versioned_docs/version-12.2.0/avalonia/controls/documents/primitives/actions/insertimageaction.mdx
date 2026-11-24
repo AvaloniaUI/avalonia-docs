@@ -1,0 +1,219 @@
+---
+title: 'InsertImageAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/insertimageaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">InsertImageAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action for inserting an inline [Avalonia.Controls.Documents.RichImage](xref:Avalonia.Controls.Documents.RichImage) at the current selection.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class InsertImageAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> InsertImageAction
+</div>
+</div>
+
+## Remarks
+
+Call [Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction.ExecuteWith(Avalonia.Controls.Documents.Primitives.ITextEditorHost,ReadOnlyMemory&#123;byte&#125;,string,double,double,string)](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction.ExecuteWith%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%2CSystem.ReadOnlyMemory%7BSystem.Byte%7D%2CSystem.String%2CSystem.Double%2CSystem.Double%2CSystem.String%29) when the image bytes are already available
+(drag-drop, application logic, custom pickers).
+
+The default [Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction.ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost)](xref:Avalonia.Controls.Documents.Primitives.Actions.InsertImageAction.ExecuteAsync%28Avalonia.Controls.Documents.Primitives.ITextEditorHost%29) opens a file picker via the host's
+[Avalonia.Controls.TopLevel.StorageProvider](xref:Avalonia.Controls.TopLevel.StorageProvider) and inserts the chosen image file.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [InsertImageAction](#uid-4cadb14485) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4cadb14485"></span>
+
+### InsertImageAction Constructor
+
+```csharp
+public InsertImageAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-4daa4960b0) | No summary available. |
+| [Execute](#uid-07766e7700) | No summary available. |
+| [ExecuteAsync](#uid-35a1eee556) | No summary available. |
+| [ExecuteWith](#uid-b2fd6b481e) | No summary available. |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4daa4960b0"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-07766e7700"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35a1eee556"></span>
+
+### ExecuteAsync Method
+
+```csharp
+public System.Threading.Tasks.Task ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b2fd6b481e"></span>
+
+### ExecuteWith Method
+
+```csharp
+public void ExecuteWith(Avalonia.Controls.Documents.Primitives.ITextEditorHost host, ReadOnlyMemory<byte> data, string mimeType, double width, double height, string altText)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+`data` ReadOnlyMemory&lt;byte&gt;
+
+
+`mimeType` string
+
+
+`width` double
+
+
+`height` double
+
+
+`altText` string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-5b74884fe2) | No summary available. |
+| [Gesture](editoraction.mdx#uid-557e9af400) | Gets the optional keyboard gesture for this action. Inherited from [EditorAction](editoraction.mdx). |
+| [Id](#uid-78fd6c3def) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b74884fe2"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78fd6c3def"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

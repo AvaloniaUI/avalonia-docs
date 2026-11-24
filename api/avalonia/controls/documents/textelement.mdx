@@ -80,6 +80,7 @@ public class TextElement
 | [GetFontSize](#uid-c0f4278d7f) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontSizeProperty](xref:Avalonia.Controls.Documents.TextElement.FontSizeProperty) on a control. |
 | [GetFontStretch](#uid-72d0eaa7f6) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStretchProperty](xref:Avalonia.Controls.Documents.TextElement.FontStretchProperty) on a control. |
 | [GetFontStyle](#uid-6751a83a3d) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStyleProperty](xref:Avalonia.Controls.Documents.TextElement.FontStyleProperty) on a control. |
+| [GetFontVariations](#uid-b1727bc72d) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontVariationsProperty](xref:Avalonia.Controls.Documents.TextElement.FontVariationsProperty) on a control. |
 | [GetFontWeight](#uid-bb5b16d4db) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontWeightProperty](xref:Avalonia.Controls.Documents.TextElement.FontWeightProperty) on a control. |
 | [GetForeground](#uid-69f108c6e9) | Gets the value of the attached [Avalonia.Controls.Documents.TextElement.ForegroundProperty](xref:Avalonia.Controls.Documents.TextElement.ForegroundProperty) on a control. |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
@@ -93,6 +94,7 @@ public class TextElement
 | [SetFontSize](#uid-f673d66a15) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontSizeProperty](xref:Avalonia.Controls.Documents.TextElement.FontSizeProperty) on a control. |
 | [SetFontStretch](#uid-445315add7) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStretchProperty](xref:Avalonia.Controls.Documents.TextElement.FontStretchProperty) on a control. |
 | [SetFontStyle](#uid-be1a243b99) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontStyleProperty](xref:Avalonia.Controls.Documents.TextElement.FontStyleProperty) on a control. |
+| [SetFontVariations](#uid-41cb6d2398) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontVariationsProperty](xref:Avalonia.Controls.Documents.TextElement.FontVariationsProperty) on a control. |
 | [SetFontWeight](#uid-9c88d2bfb1) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontWeightProperty](xref:Avalonia.Controls.Documents.TextElement.FontWeightProperty) on a control. |
 | [SetForeground](#uid-af4d1d4aed) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.ForegroundProperty](xref:Avalonia.Controls.Documents.TextElement.ForegroundProperty) on a control. |
 | [SetLetterSpacing](#uid-4e0846dc4b) | Sets the value of the attached [Avalonia.Controls.Documents.TextElement.LetterSpacingProperty](xref:Avalonia.Controls.Documents.TextElement.LetterSpacingProperty) on a control. |
@@ -236,6 +238,34 @@ The control.
 [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
 
 The font style.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1727bc72d"></span>
+
+### GetFontVariations Method
+
+Gets the value of the attached [Avalonia.Controls.Documents.TextElement.FontVariationsProperty](xref:Avalonia.Controls.Documents.TextElement.FontVariationsProperty) on a control.
+
+```csharp
+public Avalonia.Media.FontVariationSettings GetFontVariations(Avalonia.Controls.Control control)
+```
+
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control.
+
+
+#### Returns
+
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+The font variation settings.
 
 
 </section>
@@ -456,6 +486,32 @@ The property value to set.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-41cb6d2398"></span>
+
+### SetFontVariations Method
+
+Sets the value of the attached [Avalonia.Controls.Documents.TextElement.FontVariationsProperty](xref:Avalonia.Controls.Documents.TextElement.FontVariationsProperty) on a control.
+
+```csharp
+public void SetFontVariations(Avalonia.Controls.Control control, Avalonia.Media.FontVariationSettings value)
+```
+
+#### Parameters
+
+`control` [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)
+
+The control.
+
+
+`value` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+The property value to set.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-9c88d2bfb1"></span>
 
 ### SetFontWeight Method
@@ -546,6 +602,7 @@ The letter spacing to apply.
 | [FontSize](#uid-87408bf877) | Gets or sets the font size. |
 | [FontStretch](#uid-2d7762947c) | Gets or sets the font stretch. |
 | [FontStyle](#uid-07648f353f) | Gets or sets the font style. |
+| [FontVariations](#uid-f770ffaf1d) | Gets or sets the variable-font axis values in user space, e.g. `wght=700, wdth=85`. `null` means the font's design defaults. Fonts that are not variable ignore the settings; variable fonts clamp each value to their own axis range. |
 | [FontWeight](#uid-860a9d701a) | Gets or sets the font weight. |
 | [Foreground](#uid-1e9279a865) | Gets or sets a brush used to paint the text. |
 | [IsInitialized](../../styledelement.mdx#uid-59a7cddacb) | Gets a value that indicates whether the element has finished initialization. Inherited from [StyledElement](../../styledelement.mdx). |
@@ -646,6 +703,23 @@ public Avalonia.Media.FontStyle FontStyle { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-f770ffaf1d"></span>
+
+### FontVariations Property
+
+Gets or sets the variable-font axis values in user space, e.g.
+`wght=700, wdth=85`. `null` means the font's design defaults.
+Fonts that are not variable ignore the settings; variable fonts clamp each
+value to their own axis range.
+
+```csharp
+public Avalonia.Media.FontVariationSettings FontVariations { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-860a9d701a"></span>
 
 ### FontWeight Property
@@ -697,6 +771,7 @@ public double LetterSpacing { get; set; }
 | [FontSizeProperty](#uid-59b255c1cf) | Defines the [Avalonia.Controls.Documents.TextElement.FontSize](xref:Avalonia.Controls.Documents.TextElement.FontSize) property. |
 | [FontStretchProperty](#uid-a945a04355) | Defines the [Avalonia.Controls.Documents.TextElement.FontStretch](xref:Avalonia.Controls.Documents.TextElement.FontStretch) property. |
 | [FontStyleProperty](#uid-af151c4d46) | Defines the [Avalonia.Controls.Documents.TextElement.FontStyle](xref:Avalonia.Controls.Documents.TextElement.FontStyle) property. |
+| [FontVariationsProperty](#uid-b1a71ccad3) | Defines the [Avalonia.Controls.Documents.TextElement.FontVariations](xref:Avalonia.Controls.Documents.TextElement.FontVariations) property. |
 | [FontWeightProperty](#uid-de168eb28f) | Defines the [Avalonia.Controls.Documents.TextElement.FontWeight](xref:Avalonia.Controls.Documents.TextElement.FontWeight) property. |
 | [ForegroundProperty](#uid-ed0572d506) | Defines the [Avalonia.Controls.Documents.TextElement.Foreground](xref:Avalonia.Controls.Documents.TextElement.Foreground) property. |
 | [LetterSpacingProperty](#uid-17f1013907) | Defines the [Avalonia.Controls.Documents.TextElement.LetterSpacing](xref:Avalonia.Controls.Documents.TextElement.LetterSpacing) property. |
@@ -786,6 +861,20 @@ Defines the [Avalonia.Controls.Documents.TextElement.FontStyle](xref:Avalonia.Co
 
 ```csharp
 public Avalonia.AttachedProperty<Avalonia.Media.FontStyle> FontStyleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1a71ccad3"></span>
+
+### FontVariationsProperty Field
+
+Defines the [Avalonia.Controls.Documents.TextElement.FontVariations](xref:Avalonia.Controls.Documents.TextElement.FontVariations) property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Media.FontVariationSettings> FontVariationsProperty
 ```
 
 </section>

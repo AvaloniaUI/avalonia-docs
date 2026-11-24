@@ -149,10 +149,44 @@ string
 
 | Name | Description |
 | --- | --- |
-| [Height](#uid-c94b5240e0) | Distance from the top extremum of the glyph to the bottom extremum. |
-| [Width](#uid-2729151e33) | Distance from the left extremum of the glyph to the right extremum. |
-| [XBearing](#uid-68c4dbeff3) | Distance from the x-origin to the left extremum of the glyph. |
-| [YBearing](#uid-4d0388ffca) | Distance from the top extremum of the glyph to the y-origin. |
+| [AdvanceHeight](#uid-764175caff) | Vertical advance height (distance to the next glyph's origin in vertical layout). |
+| [AdvanceWidth](#uid-1187dff706) | Horizontal advance width (distance to the next glyph's origin). |
+| [Height](#uid-c94b5240e0) | Height of the glyph's outline bounding box. |
+| [VerticalOriginX](#uid-1bdb399a5a) | X coordinate of the vertical origin (used for vertical layout). |
+| [VerticalOriginY](#uid-ae665b3702) | Y coordinate of the vertical origin (used for vertical layout). |
+| [Width](#uid-2729151e33) | Width of the glyph's outline bounding box. |
+| [XBearing](#uid-68c4dbeff3) | Distance from the x-origin to the leftmost outline point. |
+| [XOffset](#uid-2c1b6645d1) | Horizontal offset from the glyph's origin to the leftmost outline point (used for bitmap glyphs). |
+| [YBearing](#uid-4d0388ffca) | Distance from the topmost outline point to the y-origin. |
+| [YOffset](#uid-70cabcb0ba) | Vertical offset from the glyph's origin to the topmost outline point (used for bitmap glyphs). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-764175caff"></span>
+
+### AdvanceHeight Property
+
+Vertical advance height (distance to the next glyph's origin in vertical layout).
+
+```csharp
+public ushort AdvanceHeight { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1187dff706"></span>
+
+### AdvanceWidth Property
+
+Horizontal advance width (distance to the next glyph's origin).
+
+```csharp
+public ushort AdvanceWidth { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -160,10 +194,38 @@ string
 
 ### Height Property
 
-Distance from the top extremum of the glyph to the bottom extremum.
+Height of the glyph's outline bounding box.
 
 ```csharp
 public ushort Height { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1bdb399a5a"></span>
+
+### VerticalOriginX Property
+
+X coordinate of the vertical origin (used for vertical layout).
+
+```csharp
+public ushort VerticalOriginX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ae665b3702"></span>
+
+### VerticalOriginY Property
+
+Y coordinate of the vertical origin (used for vertical layout).
+
+```csharp
+public ushort VerticalOriginY { get; set; }
 ```
 
 </section>
@@ -174,7 +236,7 @@ public ushort Height { get; set; }
 
 ### Width Property
 
-Distance from the left extremum of the glyph to the right extremum.
+Width of the glyph's outline bounding box.
 
 ```csharp
 public ushort Width { get; set; }
@@ -188,10 +250,24 @@ public ushort Width { get; set; }
 
 ### XBearing Property
 
-Distance from the x-origin to the left extremum of the glyph.
+Distance from the x-origin to the leftmost outline point.
 
 ```csharp
 public int XBearing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c1b6645d1"></span>
+
+### XOffset Property
+
+Horizontal offset from the glyph's origin to the leftmost outline point (used for bitmap glyphs).
+
+```csharp
+public ushort XOffset { get; set; }
 ```
 
 </section>
@@ -202,10 +278,24 @@ public int XBearing { get; set; }
 
 ### YBearing Property
 
-Distance from the top extremum of the glyph to the y-origin.
+Distance from the topmost outline point to the y-origin.
 
 ```csharp
 public int YBearing { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-70cabcb0ba"></span>
+
+### YOffset Property
+
+Vertical offset from the glyph's origin to the topmost outline point (used for bitmap glyphs).
+
+```csharp
+public ushort YOffset { get; set; }
 ```
 
 </section>

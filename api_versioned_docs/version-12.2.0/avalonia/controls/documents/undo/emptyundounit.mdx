@@ -1,0 +1,102 @@
+---
+title: 'EmptyUndoUnit'
+hide_title: true
+slug: '/avalonia/controls/documents/undo/emptyundounit'
+uid: 'Avalonia.Controls.Documents.Undo.EmptyUndoUnit'
+commentId: 'T:Avalonia.Controls.Documents.Undo.EmptyUndoUnit'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Undo'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">EmptyUndoUnit Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Undo</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Sentinel [Avalonia.Controls.Documents.Undo.IUndoUnit](xref:Avalonia.Controls.Documents.Undo.IUndoUnit) returned by empty / no-op undo scopes
+(when undo is disabled, or while a replay is in progress and
+[Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit(string,Nullable&#123;Avalonia.Controls.Documents.Undo.SelectionSnapshot&#125;)](xref:Avalonia.Controls.Documents.Undo.UndoManager.BeginUndoUnit%28System.String%2CSystem.Nullable%7BAvalonia.Controls.Documents.Undo.SelectionSnapshot%7D%29) short-circuits to an empty
+scope). Never appears on
+[Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit](xref:Avalonia.Controls.Documents.TextModel.DocumentChangedEventArgs.UndoUnit) — that
+property is when no real unit was opened, so
+`null` and [Avalonia.Controls.Documents.Undo.EmptyUndoUnit.Instance](xref:Avalonia.Controls.Documents.Undo.EmptyUndoUnit.Instance) retain distinct semantics.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class EmptyUndoUnit
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> EmptyUndoUnit
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="iundounit">IUndoUnit</a>
+</div>
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Description](#uid-6a2ed9006c) | Gets a description of the operation. |
+| [Instance](#uid-c40808c2e9) | Singleton instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a2ed9006c"></span>
+
+### Description Property
+
+Gets a description of the operation.
+
+```csharp
+public string Description { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c40808c2e9"></span>
+
+### Instance Property
+
+Singleton instance.
+
+```csharp
+public Avalonia.Controls.Documents.Undo.EmptyUndoUnit Instance { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

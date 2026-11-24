@@ -62,13 +62,17 @@ public class NavigatedToEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigatedToEventArgs](#uid-1328a76043) | Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class. |
+| [NavigatedToEventArgs (2 overloads)](#uid-1ca5c513f3) | Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class. |
+
+<span id="uid-1ca5c513f3"></span>
+
+### NavigatedToEventArgs overloads
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-1328a76043"></span>
 
-### NavigatedToEventArgs Constructor
+#### NavigatedToEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:Avalonia.Controls.NavigatedToEventArgs) class.
 
@@ -76,7 +80,7 @@ Initializes a new instance of the [Avalonia.Controls.NavigatedToEventArgs](xref:
 public NavigatedToEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.NavigationType navigationType)
 ```
 
-#### Parameters
+##### Parameters
 
 `previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
 
@@ -90,11 +94,35 @@ The type of navigation that triggered this event.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3b25e3a9a"></span>
+
+#### NavigatedToEventArgs Constructor
+
+```csharp
+public NavigatedToEventArgs(Avalonia.Controls.Page previousPage, Avalonia.Controls.NavigationType navigationType, object parameter)
+```
+
+##### Parameters
+
+`previousPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+
+`parameter` object
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [NavigationType](#uid-c13412353f) | Gets the type of navigation that triggered this event. |
+| [Parameter](#uid-25783c4069) | No summary available. |
 | [PreviousPage](#uid-91752c6d3e) | Gets the page that was active before this navigation. |
 
 <section className="apiref-page__member-entry">
@@ -107,6 +135,18 @@ Gets the type of navigation that triggered this event.
 
 ```csharp
 public Avalonia.Controls.NavigationType NavigationType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25783c4069"></span>
+
+### Parameter Property
+
+```csharp
+public object Parameter { get; set; }
 ```
 
 </section>

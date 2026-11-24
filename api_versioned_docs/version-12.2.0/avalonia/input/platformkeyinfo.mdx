@@ -1,0 +1,269 @@
+---
+title: 'PlatformKeyInfo'
+hide_title: true
+slug: '/avalonia/input/platformkeyinfo'
+uid: 'Avalonia.Input.PlatformKeyInfo'
+commentId: 'T:Avalonia.Input.PlatformKeyInfo'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Input'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PlatformKeyInfo Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Input</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-specific data of a key event, for code that knows the platform, for example terminal emulators that
+encode keys the way a native terminal does. Each value is null when the platform doesn't provide it.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct PlatformKeyInfo
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> PlatformKeyInfo
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;PlatformKeyInfo&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PlatformKeyInfo](#uid-e3d9f5cc41) | Initializes a new instance of the [Avalonia.Input.PlatformKeyInfo](xref:Avalonia.Input.PlatformKeyInfo) struct. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e3d9f5cc41"></span>
+
+### PlatformKeyInfo Constructor
+
+Initializes a new instance of the [Avalonia.Input.PlatformKeyInfo](xref:Avalonia.Input.PlatformKeyInfo) struct.
+
+```csharp
+public PlatformKeyInfo(string format)
+```
+
+#### Parameters
+
+`format` string
+
+The platform that produced the values, usually one of
+[Avalonia.Input.KnownPlatformKeyInfoFormats](xref:Avalonia.Input.KnownPlatformKeyInfoFormats).
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-dc98b3d583) | No summary available. |
+| [GetHashCode](#uid-94372b2e45) | No summary available. |
+| [ToString](#uid-f395bdb155) | No summary available. |
+
+<span id="uid-dc98b3d583"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-04e13a7d7f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Input.PlatformKeyInfo other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Input.PlatformKeyInfo](xref:Avalonia.Input.PlatformKeyInfo)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be4f982c52"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-94372b2e45"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f395bdb155"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Format](#uid-1da1833cfb) | Gets the platform that produced the values, usually one of [Avalonia.Input.KnownPlatformKeyInfoFormats](xref:Avalonia.Input.KnownPlatformKeyInfoFormats). It is null only for a default instance. |
+| [Modifiers](#uid-d5d3d0591c) | Gets the modifier state. |
+| [ScanCode](#uid-ce8433e5db) | Gets the scan code of the key. |
+| [VirtualKey](#uid-3fc76f1987) | Gets the virtual key. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1da1833cfb"></span>
+
+### Format Property
+
+Gets the platform that produced the values, usually one of [Avalonia.Input.KnownPlatformKeyInfoFormats](xref:Avalonia.Input.KnownPlatformKeyInfoFormats). It is
+null only for a default instance.
+
+```csharp
+public string Format { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5d3d0591c"></span>
+
+### Modifiers Property
+
+Gets the modifier state.
+
+```csharp
+public Nullable<ulong> Modifiers { get; set; }
+```
+
+#### Remarks
+
+Win32: console `dwControlKeyState` flags (LEFT_CTRL_PRESSED, RIGHT_ALT_PRESSED, ENHANCED_KEY, ...),
+including the key being pressed.
+X11: `XKeyEvent.state`, the state before the event.
+Wayland: the effective XKB modifier mask, the state before the event.
+macOS: `NSEventModifierFlags`.
+Only the core XKB modifiers (Shift, Lock, Control, Mod1 to Mod5) have fixed bits. What Mod1 to Mod5 mean
+depends on the XKB keymap.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce8433e5db"></span>
+
+### ScanCode Property
+
+Gets the scan code of the key.
+
+```csharp
+public Nullable<uint> ScanCode { get; set; }
+```
+
+#### Remarks
+
+Win32: the hardware scan code, plus 0xE000 for extended keys.
+X11 and Wayland: the XKB keycode (evdev code + 8).
+macOS: `NSEvent.keyCode`, which identifies the physical key on every layout. Qt reports it as the native
+virtual key.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3fc76f1987"></span>
+
+### VirtualKey Property
+
+Gets the virtual key.
+
+```csharp
+public Nullable<uint> VirtualKey { get; set; }
+```
+
+#### Remarks
+
+Win32: the virtual-key code.
+X11 and Wayland: the keysym.
+macOS: null, because macOS has no layout-dependent key code. See [Avalonia.Input.PlatformKeyInfo.ScanCode](xref:Avalonia.Input.PlatformKeyInfo.ScanCode).
+
+</section>
+
+</ApiRefPage>
+

@@ -1,0 +1,190 @@
+---
+title: 'CutAction'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/actions/cutaction'
+uid: 'Avalonia.Controls.Documents.Primitives.Actions.CutAction'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Actions.CutAction'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.RichTextEditor'
+assembly: 'Avalonia.Controls.RichTextEditor'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Actions'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CutAction Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Actions</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.RichTextEditor</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Action that cuts the current selection to the clipboard.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CutAction
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="editoraction">EditorAction</a> <span className="apiref-page__relation-separator">-&gt;</span> CutAction
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [CutAction](#uid-bb820b7363) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb820b7363"></span>
+
+### CutAction Constructor
+
+```csharp
+public CutAction()
+```
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CanExecute](#uid-5d82b31232) | No summary available. |
+| [Execute](#uid-5722ef8591) | No summary available. |
+| [ExecuteAsync](#uid-d500cd8142) | No summary available. |
+| [GetState](editoraction.mdx#uid-e9737aed90) | Gets the current state of the action. Inherited from [EditorAction](editoraction.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5d82b31232"></span>
+
+### CanExecute Method
+
+```csharp
+public bool CanExecute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5722ef8591"></span>
+
+### Execute Method
+
+```csharp
+public void Execute(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d500cd8142"></span>
+
+### ExecuteAsync Method
+
+```csharp
+public System.Threading.Tasks.Task ExecuteAsync(Avalonia.Controls.Documents.Primitives.ITextEditorHost host)
+```
+
+#### Parameters
+
+`host` [Avalonia.Controls.Documents.Primitives.ITextEditorHost](xref:Avalonia.Controls.Documents.Primitives.ITextEditorHost)
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DisplayName](#uid-8956d580f9) | No summary available. |
+| [Gesture](#uid-6c13fcef6f) | No summary available. |
+| [Id](#uid-b91160d521) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8956d580f9"></span>
+
+### DisplayName Property
+
+```csharp
+public string DisplayName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6c13fcef6f"></span>
+
+### Gesture Property
+
+```csharp
+public Avalonia.Input.KeyGesture Gesture { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b91160d521"></span>
+
+### Id Property
+
+```csharp
+public string Id { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -145,6 +145,9 @@ The drawing context.
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
+| [BackdropEffect](../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectBoundsSource](../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCache](../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../visual.mdx). |
 | [Background](#uid-6b4827590b) | Gets or sets a brush with which to paint the background. |
 | [BackgroundSizing](#uid-26099e05f6) | Gets or sets how the background is drawn relative to the border. |
 | [BorderBrush](#uid-03bdd0353a) | Gets or sets a brush with which to paint the border. |
@@ -313,6 +316,9 @@ public Avalonia.CornerRadius CornerRadius { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCacheProperty](../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectProperty](../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../visual.mdx). |
 | [BackgroundProperty](#uid-ba9af43579) | Defines the [Avalonia.Controls.Border.Background](xref:Avalonia.Controls.Border.Background) property. |
 | [BackgroundSizingProperty](#uid-c28240b4f6) | Defines the [Avalonia.Controls.Border.BackgroundSizing](xref:Avalonia.Controls.Border.BackgroundSizing) property. |
 | [BorderBrushProperty](#uid-aac0a252fe) | Defines the [Avalonia.Controls.Border.BorderBrush](xref:Avalonia.Controls.Border.BorderBrush) property. |

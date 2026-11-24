@@ -138,6 +138,9 @@ public AccessText()
 | --- | --- |
 | [AccessKey](#uid-5236542f6a) | Gets the access key. |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Background](../textblock.mdx#uid-5d51627e22) | Gets or sets a brush used to paint the control's background. Inherited from [TextBlock](../textblock.mdx). |
 | [BaselineOffset](../textblock.mdx#uid-dbdea5da78) | The BaselineOffset property provides an adjustment to baseline offset Inherited from [TextBlock](../textblock.mdx). |
 | [Bounds](../../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../../visual.mdx). |
@@ -161,6 +164,7 @@ public AccessText()
 | [FontSize](../textblock.mdx#uid-824bdb92c4) | Gets or sets the size of the control's text in points. Inherited from [TextBlock](../textblock.mdx). |
 | [FontStretch](../textblock.mdx#uid-2fb56e104a) | Gets or sets the font stretch used to draw the control's text. Inherited from [TextBlock](../textblock.mdx). |
 | [FontStyle](../textblock.mdx#uid-e7885ca5ea) | Gets or sets the font style used to draw the control's text. Inherited from [TextBlock](../textblock.mdx). |
+| [FontVariations](../textblock.mdx#uid-e9661e2de2) | Gets or sets the variable-font axis values (e.g. `wght=700`) used to draw the control's text. `null` means the font's design defaults. Inherited from [TextBlock](../textblock.mdx). |
 | [FontWeight](../textblock.mdx#uid-68e93dfc82) | Gets or sets the font weight used to draw the control's text. Inherited from [TextBlock](../textblock.mdx). |
 | [Foreground](../textblock.mdx#uid-80d6d8c758) | Gets or sets the brush used to draw the control's text and other foreground elements. Inherited from [TextBlock](../textblock.mdx). |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -251,6 +255,9 @@ public bool ShowAccessKey { get; set; }
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BackgroundProperty](../textblock.mdx#uid-1f9a7153a4) | Defines the [Avalonia.Controls.TextBlock.Background](xref:Avalonia.Controls.TextBlock.Background) property. Inherited from [TextBlock](../textblock.mdx). |
 | [BaselineOffsetProperty](../textblock.mdx#uid-5da60d4f73) | DependencyProperty for [Avalonia.Controls.TextBlock.BaselineOffset](xref:Avalonia.Controls.TextBlock.BaselineOffset) property. Inherited from [TextBlock](../textblock.mdx). |
 | [BoundsProperty](../../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../../visual.mdx). |
@@ -274,6 +281,7 @@ public bool ShowAccessKey { get; set; }
 | [FontSizeProperty](../textblock.mdx#uid-3ed105c0cf) | Defines the [Avalonia.Controls.TextBlock.FontSize](xref:Avalonia.Controls.TextBlock.FontSize) property. Inherited from [TextBlock](../textblock.mdx). |
 | [FontStretchProperty](../textblock.mdx#uid-7e8863561f) | Defines the [Avalonia.Controls.TextBlock.FontStretch](xref:Avalonia.Controls.TextBlock.FontStretch) property. Inherited from [TextBlock](../textblock.mdx). |
 | [FontStyleProperty](../textblock.mdx#uid-50378cfdc8) | Defines the [Avalonia.Controls.TextBlock.FontStyle](xref:Avalonia.Controls.TextBlock.FontStyle) property. Inherited from [TextBlock](../textblock.mdx). |
+| [FontVariationsProperty](../textblock.mdx#uid-b5f0ddfdb7) | Defines the [Avalonia.Controls.TextBlock.FontVariations](xref:Avalonia.Controls.TextBlock.FontVariations) property. Inherited from [TextBlock](../textblock.mdx). |
 | [FontWeightProperty](../textblock.mdx#uid-da15be63b3) | Defines the [Avalonia.Controls.TextBlock.FontWeight](xref:Avalonia.Controls.TextBlock.FontWeight) property. Inherited from [TextBlock](../textblock.mdx). |
 | [ForegroundProperty](../textblock.mdx#uid-c9c21e0533) | Defines the [Avalonia.Controls.TextBlock.Foreground](xref:Avalonia.Controls.TextBlock.Foreground) property. Inherited from [TextBlock](../textblock.mdx). |
 | [GettingFocusEvent](../../input/inputelement.mdx#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. Inherited from [InputElement](../../input/inputelement.mdx). |

@@ -62,13 +62,17 @@ public class NavigatedFromEventArgs
 
 | Name | Description |
 | --- | --- |
-| [NavigatedFromEventArgs](#uid-769c60e97a) | Initializes a new instance of the [Avalonia.Controls.NavigatedFromEventArgs](xref:Avalonia.Controls.NavigatedFromEventArgs) class. |
+| [NavigatedFromEventArgs (2 overloads)](#uid-52410da9f4) | Initializes a new instance of the [Avalonia.Controls.NavigatedFromEventArgs](xref:Avalonia.Controls.NavigatedFromEventArgs) class. |
+
+<span id="uid-52410da9f4"></span>
+
+### NavigatedFromEventArgs overloads
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-769c60e97a"></span>
 
-### NavigatedFromEventArgs Constructor
+#### NavigatedFromEventArgs Constructor
 
 Initializes a new instance of the [Avalonia.Controls.NavigatedFromEventArgs](xref:Avalonia.Controls.NavigatedFromEventArgs) class.
 
@@ -76,7 +80,7 @@ Initializes a new instance of the [Avalonia.Controls.NavigatedFromEventArgs](xre
 public NavigatedFromEventArgs(Avalonia.Controls.Page destinationPage, Avalonia.Controls.NavigationType navigationType)
 ```
 
-#### Parameters
+##### Parameters
 
 `destinationPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
 
@@ -90,12 +94,36 @@ The type of navigation that triggered this event.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-92d627896e"></span>
+
+#### NavigatedFromEventArgs Constructor
+
+```csharp
+public NavigatedFromEventArgs(Avalonia.Controls.Page destinationPage, Avalonia.Controls.NavigationType navigationType, object parameter)
+```
+
+##### Parameters
+
+`destinationPage` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`navigationType` [Avalonia.Controls.NavigationType](xref:Avalonia.Controls.NavigationType)
+
+
+`parameter` object
+
+
+</section>
+
 ## Properties
 
 | Name | Description |
 | --- | --- |
 | [DestinationPage](#uid-2d6393ab78) | Gets the page that became active after this navigation. |
 | [NavigationType](#uid-0074806c5f) | Gets the type of navigation that triggered this event. |
+| [Parameter](#uid-50f10bf6e0) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -121,6 +149,18 @@ Gets the type of navigation that triggered this event.
 
 ```csharp
 public Avalonia.Controls.NavigationType NavigationType { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-50f10bf6e0"></span>
+
+### Parameter Property
+
+```csharp
+public object Parameter { get; set; }
 ```
 
 </section>

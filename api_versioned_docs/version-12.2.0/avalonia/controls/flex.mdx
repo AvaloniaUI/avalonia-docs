@@ -1,0 +1,441 @@
+---
+title: 'Flex'
+hide_title: true
+slug: '/avalonia/controls/flex'
+uid: 'Avalonia.Controls.Flex'
+commentId: 'T:Avalonia.Controls.Flex'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Flex Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides attached properties for controlling the layout behavior of child elements within a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class Flex
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> Flex
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAlignSelf](#uid-f379f4067b) | Gets the cross-axis alignment override for a child item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel) |
+| [GetBasis](#uid-b428dc5979) | Gets the initial size along the main-axis of an item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel), before free space is distributed according to the flex factors. |
+| [GetGrow](#uid-6b7c3d6a56) | Gets the factor by which an item can grow along the main-axis, relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+| [GetOrder](#uid-e641e0ac71) | Retrieves the order in which a child item appears within the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+| [GetShrink](#uid-6d3bda141a) | Gets the factor by which an item can shrink along the main-axis, relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+| [SetAlignSelf](#uid-fe2b6413bf) | No summary available. |
+| [SetBasis](#uid-1a4f8bbedb) | Sets the initial size along the main-axis of an item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel), before free space is distributed according to the flex factors. |
+| [SetGrow](#uid-056ab08c1d) | Sets the factor by which an item can grow along the main-axis, relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+| [SetOrder](#uid-f06a34f0ea) | Sets the order in which a child item appears within the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+| [SetShrink](#uid-79010a9c17) | Sets the factor by which an item can shrink along the main-axis, relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f379f4067b"></span>
+
+### GetAlignSelf Method
+
+Gets the cross-axis alignment override for a child item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel)
+
+```csharp
+public Nullable<Avalonia.Controls.FlexAlignItems> GetAlignSelf(Avalonia.Layout.Layoutable layoutable)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+#### Returns
+
+Nullable&lt;[Avalonia.Controls.FlexAlignItems](xref:Avalonia.Controls.FlexAlignItems)&gt;
+
+
+#### Remarks
+
+This property is used to override the [Avalonia.Controls.FlexPanel.AlignItems](xref:Avalonia.Controls.FlexPanel.AlignItems) property for a specific child.
+When omitted, [Avalonia.Controls.FlexPanel.AlignItems](xref:Avalonia.Controls.FlexPanel.AlignItems) in not overridden.
+Equivalent to CSS align-self property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b428dc5979"></span>
+
+### GetBasis Method
+
+Gets the initial size along the main-axis of an item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel),
+before free space is distributed according to the flex factors.
+
+```csharp
+public Avalonia.Controls.FlexBasis GetBasis(Avalonia.Layout.Layoutable layoutable)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+#### Returns
+
+[Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+#### Remarks
+
+Either automatic size, a fixed length, or a percentage of the container's size.
+When omitted, it is set to [Avalonia.Controls.FlexBasis.Auto](xref:Avalonia.Controls.FlexBasis.Auto).
+Equivalent to CSS flex-basis property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6b7c3d6a56"></span>
+
+### GetGrow Method
+
+Gets the factor by which an item can grow along the main-axis,
+relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public double GetGrow(Avalonia.Layout.Layoutable layoutable)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+#### Returns
+
+double
+
+
+#### Remarks
+
+When omitted, it is set to 0.
+Equivalent to CSS flex-grow property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e641e0ac71"></span>
+
+### GetOrder Method
+
+Retrieves the order in which a child item appears within the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public int GetOrder(Avalonia.Layout.Layoutable layoutable)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+#### Returns
+
+int
+
+
+#### Remarks
+
+A lower order value means the item will be positioned earlier within the container.
+Items with the same order value are laid out in their source document order.
+When omitted, it is set to 0.
+Equivalent to CSS order property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d3bda141a"></span>
+
+### GetShrink Method
+
+Gets the factor by which an item can shrink along the main-axis,
+relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public double GetShrink(Avalonia.Layout.Layoutable layoutable)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+#### Returns
+
+double
+
+
+#### Remarks
+
+When omitted, it is set to 1.
+Equivalent to CSS flex-shrink property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fe2b6413bf"></span>
+
+### SetAlignSelf Method
+
+```csharp
+public void SetAlignSelf(Avalonia.Layout.Layoutable layoutable, Nullable<Avalonia.Controls.FlexAlignItems> value)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+`value` Nullable&lt;[Avalonia.Controls.FlexAlignItems](xref:Avalonia.Controls.FlexAlignItems)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1a4f8bbedb"></span>
+
+### SetBasis Method
+
+Sets the initial size along the main-axis of an item in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel),
+before free space is distributed according to the flex factors.
+
+```csharp
+public void SetBasis(Avalonia.Layout.Layoutable layoutable, Avalonia.Controls.FlexBasis value)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+`value` [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+#### Remarks
+
+Either automatic size, a fixed length, or a percentage of the container's size.
+When omitted, it is set to [Avalonia.Controls.FlexBasis.Auto](xref:Avalonia.Controls.FlexBasis.Auto).
+Equivalent to CSS flex-basis property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-056ab08c1d"></span>
+
+### SetGrow Method
+
+Sets the factor by which an item can grow along the main-axis,
+relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public void SetGrow(Avalonia.Layout.Layoutable layoutable, double value)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+`value` double
+
+
+#### Remarks
+
+When omitted, it is set to 0.
+Equivalent to CSS flex-grow property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f06a34f0ea"></span>
+
+### SetOrder Method
+
+Sets the order in which a child item appears within the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public void SetOrder(Avalonia.Layout.Layoutable layoutable, int value)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+`value` int
+
+
+#### Remarks
+
+A lower order value means the item will be positioned earlier within the container.
+Items with the same order value are laid out in their source document order.
+When omitted, it is set to 0.
+Equivalent to CSS order property.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-79010a9c17"></span>
+
+### SetShrink Method
+
+Sets the factor by which an item can shrink along the main-axis,
+relative to other items in a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+
+```csharp
+public void SetShrink(Avalonia.Layout.Layoutable layoutable, double value)
+```
+
+#### Parameters
+
+`layoutable` [Avalonia.Layout.Layoutable](xref:Avalonia.Layout.Layoutable)
+
+
+`value` double
+
+
+#### Remarks
+
+When omitted, it is set to 1.
+Equivalent to CSS flex-shrink property.
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AlignSelfProperty](#uid-257cf8d601) | Defines an attached property to control the cross-axis alignment of a specific child in a flex layout. |
+| [BasisProperty](#uid-e94bf36c8c) | Defines an attached property to control the initial main-axis size of a specific child in a flex layout. |
+| [GrowProperty](#uid-83c72127b3) | Defines an attached property to control the factor by which a specific child can grow along the main-axis in a flex layout. |
+| [OrderProperty](#uid-47bb3fe8af) | Defines an attached property to control the order of a specific child in a flex layout. |
+| [ShrinkProperty](#uid-1b9e904cfe) | Defines an attached property to control the factor by which a specific child can shrink along the main-axis in a flex layout. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-257cf8d601"></span>
+
+### AlignSelfProperty Field
+
+Defines an attached property to control the cross-axis alignment of a specific child in a flex layout.
+
+```csharp
+public Avalonia.AttachedProperty<Nullable<Avalonia.Controls.FlexAlignItems>> AlignSelfProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e94bf36c8c"></span>
+
+### BasisProperty Field
+
+Defines an attached property to control the initial main-axis size of a specific child in a flex layout.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.FlexBasis> BasisProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83c72127b3"></span>
+
+### GrowProperty Field
+
+Defines an attached property to control the factor by which a specific child can grow
+along the main-axis in a flex layout.
+
+```csharp
+public Avalonia.AttachedProperty<double> GrowProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47bb3fe8af"></span>
+
+### OrderProperty Field
+
+Defines an attached property to control the order of a specific child in a flex layout.
+
+```csharp
+public Avalonia.AttachedProperty<int> OrderProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b9e904cfe"></span>
+
+### ShrinkProperty Field
+
+Defines an attached property to control the factor by which a specific child can shrink
+along the main-axis in a flex layout.
+
+```csharp
+public Avalonia.AttachedProperty<double> ShrinkProperty
+```
+
+</section>
+
+</ApiRefPage>
+

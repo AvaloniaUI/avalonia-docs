@@ -1,0 +1,137 @@
+---
+title: 'ICompositionGlTexture'
+hide_title: true
+slug: '/avalonia/opengl/icompositiongltexture'
+uid: 'Avalonia.OpenGL.ICompositionGlTexture'
+commentId: 'T:Avalonia.OpenGL.ICompositionGlTexture'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.OpenGL'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.OpenGL'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ICompositionGlTexture Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.OpenGL</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.OpenGL</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.OpenGL/Composition/ICompositionGlTexture.cs">ICompositionGlTexture.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A texture that can be drawn to by user code and presented to a [Avalonia.Rendering.Composition.CompositionDrawingSurface](xref:Avalonia.Rendering.Composition.CompositionDrawingSurface).
+Create instances via [Avalonia.OpenGL.ICompositionGlContext.CreateTexture(Avalonia.Rendering.Composition.CompositionDrawingSurface,Avalonia.PixelSize)](xref:Avalonia.OpenGL.ICompositionGlContext.CreateTexture%28Avalonia.Rendering.Composition.CompositionDrawingSurface%2CAvalonia.PixelSize%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ICompositionGlTexture
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IAsyncDisposable
+</div>
+</div>
+
+## Remarks
+
+All members can only be used on the thread the associated [Avalonia.Rendering.Composition.Compositor](xref:Avalonia.Rendering.Composition.Compositor) belongs to.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginDraw](#uid-25101691d4) | Prepares the texture to be rendered to by user code. User code can bind the texture to their framebuffer, however the texture should be unbound before ending the returned lease. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25101691d4"></span>
+
+### BeginDraw Method
+
+Prepares the texture to be rendered to by user code.
+User code can bind the texture to their framebuffer, however the texture should be unbound
+before ending the returned lease.
+
+```csharp
+public Avalonia.OpenGL.ICompositionGlTextureLease BeginDraw()
+```
+
+#### Returns
+
+[Avalonia.OpenGL.ICompositionGlTextureLease](xref:Avalonia.OpenGL.ICompositionGlTextureLease)
+
+
+#### Exceptions
+
+- [The texture is not ready for drawing (\[Avalonia.OpenGL.ICompositionGlTexture.IsReadyForDraw\](xref:Avalonia.OpenGL.ICompositionGlTexture.IsReadyForDraw) is false) or the owning
+context is no longer valid for interop.](xref:System.InvalidOperationException)
+- [The texture has been disposed.](xref:System.ObjectDisposedException)
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsReadyForDraw](#uid-9517aa3657) | Returns true when the texture can be drawn to: there is no active lease and the last presentation, if any, has completed successfully. A presentation failure leaves this property permanently false, check [Avalonia.OpenGL.ICompositionGlContext.IsValidForInterop](xref:Avalonia.OpenGL.ICompositionGlContext.IsValidForInterop) in that case. |
+| [Size](#uid-bbc4db3aac) | The pixel size of the texture. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9517aa3657"></span>
+
+### IsReadyForDraw Property
+
+Returns true when the texture can be drawn to: there is no active lease and the last
+presentation, if any, has completed successfully.
+A presentation failure leaves this property permanently false, check
+[Avalonia.OpenGL.ICompositionGlContext.IsValidForInterop](xref:Avalonia.OpenGL.ICompositionGlContext.IsValidForInterop) in that case.
+
+```csharp
+public bool IsReadyForDraw { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bbc4db3aac"></span>
+
+### Size Property
+
+The pixel size of the texture.
+
+```csharp
+public Avalonia.PixelSize Size { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

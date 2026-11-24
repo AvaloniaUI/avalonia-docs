@@ -1,0 +1,123 @@
+---
+title: 'ActivationKind'
+hide_title: true
+slug: '/avalonia/controls/applicationlifetimes/activationkind'
+uid: 'Avalonia.Controls.ApplicationLifetimes.ActivationKind'
+commentId: 'T:Avalonia.Controls.ApplicationLifetimes.ActivationKind'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.ApplicationLifetimes'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ActivationKind Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.ApplicationLifetimes</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum ActivationKind
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> ActivationKind
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Background](#uid-f75e3d153d) | When the application enters or leaves a background state. An example is when on MacOS the user hides or shows and application (not window), or when a browser application switchs tabs or when a mobile applications goes into the background. |
+| [File](#uid-5b8c727dd2) | When the application is passed a file to open. |
+| [OpenUri](#uid-1476bdf1fb) | When the application is passed a URI to open, protocol activation. |
+| [Reopen](#uid-705efe2470) | When the application is asked to reopen. An example of this is on MacOS when all the windows are closed, application continues to run in the background and the user clicks the application's dock icon. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f75e3d153d"></span>
+
+### Background Field
+
+When the application enters or leaves a background state.
+An example is when on MacOS the user hides or shows and application (not window),
+or when a browser application switchs tabs or when a mobile applications goes into
+the background.
+
+```csharp
+public Avalonia.Controls.ApplicationLifetimes.ActivationKind Background
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b8c727dd2"></span>
+
+### File Field
+
+When the application is passed a file to open.
+
+```csharp
+public Avalonia.Controls.ApplicationLifetimes.ActivationKind File
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1476bdf1fb"></span>
+
+### OpenUri Field
+
+When the application is passed a URI to open, protocol activation.
+
+```csharp
+public Avalonia.Controls.ApplicationLifetimes.ActivationKind OpenUri
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-705efe2470"></span>
+
+### Reopen Field
+
+When the application is asked to reopen.
+An example of this is on MacOS when all the windows are closed,
+application continues to run in the background and the user clicks
+the application's dock icon.
+
+```csharp
+public Avalonia.Controls.ApplicationLifetimes.ActivationKind Reopen
+```
+
+</section>
+
+</ApiRefPage>
+

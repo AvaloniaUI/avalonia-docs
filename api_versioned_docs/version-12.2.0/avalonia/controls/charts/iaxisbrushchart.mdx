@@ -1,0 +1,81 @@
+---
+title: 'IAxisBrushChart'
+hide_title: true
+slug: '/avalonia/controls/charts/iaxisbrushchart'
+uid: 'Avalonia.Controls.Charts.IAxisBrushChart'
+commentId: 'T:Avalonia.Controls.Charts.IAxisBrushChart'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Charts'
+assembly: 'Avalonia.Controls.Charts'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Charts'
+tfms:
+  - 'net9.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAxisBrushChart Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Charts</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Charts</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Exposes chart-level axis styling for chart types that render axis lines or ticks.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAxisBrushChart
+```
+
+</div>
+
+## Remarks
+
+Implement this contract only when a chart renders an axis-like surface such as axis
+lines, ticks, radial axes, or comparable scale guides.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AxisBrush](#uid-bf948ffae7) | Gets or sets the brush used for axis lines and ticks. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bf948ffae7"></span>
+
+### AxisBrush Property
+
+Gets or sets the brush used for axis lines and ticks.
+
+```csharp
+public Avalonia.Media.IBrush AxisBrush { get; set; }
+```
+
+#### Remarks
+
+A null value lets the chart choose its theme-aware default axis brush.
+
+</section>
+
+</ApiRefPage>
+

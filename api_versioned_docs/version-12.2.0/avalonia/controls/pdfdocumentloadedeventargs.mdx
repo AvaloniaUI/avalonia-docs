@@ -1,0 +1,125 @@
+---
+title: 'PdfDocumentLoadedEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pdfdocumentloadedeventargs'
+uid: 'Avalonia.Controls.PdfDocumentLoadedEventArgs'
+commentId: 'T:Avalonia.Controls.PdfDocumentLoadedEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PdfDocumentLoadedEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Event arguments for document loaded event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PdfDocumentLoadedEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> PdfDocumentLoadedEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PdfDocumentLoadedEventArgs](#uid-c822e57f23) | Initializes a new instance of the [Avalonia.Controls.PdfDocumentLoadedEventArgs](xref:Avalonia.Controls.PdfDocumentLoadedEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c822e57f23"></span>
+
+### PdfDocumentLoadedEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PdfDocumentLoadedEventArgs](xref:Avalonia.Controls.PdfDocumentLoadedEventArgs) class.
+
+```csharp
+public PdfDocumentLoadedEventArgs(int pageCount, Avalonia.Controls.Pdf.Core.PdfMetadata metadata)
+```
+
+#### Parameters
+
+`pageCount` int
+
+The number of pages in the loaded document.
+
+
+`metadata` [Avalonia.Controls.Pdf.Core.PdfMetadata](xref:Avalonia.Controls.Pdf.Core.PdfMetadata)
+
+The document's metadata.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Metadata](#uid-a4577374cb) | Gets the loaded document's metadata (title, author, subject, and so on). |
+| [PageCount](#uid-598233af3c) | Gets the number of pages in the loaded document. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a4577374cb"></span>
+
+### Metadata Property
+
+Gets the loaded document's metadata (title, author, subject, and so on).
+
+```csharp
+public Avalonia.Controls.Pdf.Core.PdfMetadata Metadata { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-598233af3c"></span>
+
+### PageCount Property
+
+Gets the number of pages in the loaded document.
+
+```csharp
+public int PageCount { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+
