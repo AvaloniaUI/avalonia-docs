@@ -122,7 +122,7 @@ const config: Config = {
           breadcrumbs: true,
           versions: {
             current: {
-              label: "12.1.x",
+              label: "12.2.x",
               banner: "none"
             }
           }
@@ -324,7 +324,7 @@ gtag('consent', 'default', {
         routeBasePath: "api",
         disableVersioning: true,
         sidebarPath: require.resolve("./api-sidebars.ts"),
-        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.1.6.xrefmap.json" }]],
+        remarkPlugins: [[require("./plugins/apiref-xref"), { indexPath: "./dist/xref/12.2.0.xrefmap.json" }]],
       },
     ]
   ],
