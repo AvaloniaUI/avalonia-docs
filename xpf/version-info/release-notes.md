@@ -3,6 +3,27 @@ id: release-notes
 title: Release notes
 ---
 
+## XPF 1.6.10 (2026-11-23)
+* Avalonia version updated from 11.3.22 to 11.3.23
+* Fixed crash when using buttons on a pen device
+* Fixed crash reading clipboard while dispatcher processing is disabled (now reads as empty clipboard)
+* Fixed crash when showing a browser window
+* Implemented dropping text onto a TextBox (macOS)
+* Aligned text line gap calculation with WPF
+* Added fonts cache for system fonts
+* Fixed EnumDisplayMonitors API shim to return monitor rectangle
+* Implemented ShowWindow, MoveWindow, CallNextHookEx, PathCompactPath, StrFormatBytesSize API shims
+
+## XPF 1.6.9 (2026-10-08)
+
+Servicing release to allow anyone with XPF 1.6.0 and newer license to receive security updates published in XPF 1.6.8.
+
+## XPF 1.6.8 (2026-10-08)
+
+* Security vulnerability fixes in SixLabors.ImageSharp
+* Fixed a possible infinite layout cycle (macOS with Retina disaply)
+* An accidentally exposed Bgr555 struct made internal
+
 ## XPF 1.6.7 (2026-09-15)
 
 * Avalonia version updated from 11.3.20 to 11.3.22
