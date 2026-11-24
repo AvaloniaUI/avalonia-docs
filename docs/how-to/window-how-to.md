@@ -377,7 +377,7 @@ You can combine a borderless window with `ExtendClientAreaToDecorationsHint="Tru
 
 Mark an element as a title bar to allow users to drag the window using that element.
 
-On most platforms, the operating system automatically enables drag and double-click-to-maximize behavior on the designated title bar. Interactive controls inside a `TitleBar` region, such as buttons, receive input normally without triggering window drag.
+On most platforms, the operating system automatically enables drag and double-click-to-maximize behavior on the designated title bar.
 
 1. In your `<Window>` tag, set `ExtendClientAreaToDecorationsHint` to `True`.
 2. Add a control to act as your custom title bar.
@@ -404,6 +404,8 @@ On most platforms, the operating system automatically enables drag and double-cl
 </Window>
 ```
 
+Interactive controls inside a `TitleBar` region, such as buttons, should be given a corresponding `ElementRole` (e.g., `CloseButton`, `MinimizeButton`) to ensure they function as intended.
+
 Accepted values for the `ElementRole` property are:
 
 | Value | Behavior |
@@ -412,12 +414,18 @@ Accepted values for the `ElementRole` property are:
 | `TitleBar` | Draggable title bar. |
 | `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
 | `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
+| `CloseButton` | Button that closes the window. |
+| `MinimizeButton` | Button that minimizes the window. |
+| `MaximizeButton` | Button that maximizes the window. |
+| `FullScreenButton` | Button that toggles full-screen. |
+| `User` | Defined by your code. Use this to customize the title bar with additional controls, such as a search field or menu button. |
+| `DecorationsElement` | Set by certain themes for built-in title bar elements. |
 
 ## Creating a window manager
 
 The below sample creates a custom window manager class that acts as a single, app-wide registry listing all open windows.
 
-Tracking of windows is provided by default by `IClassicDesktopStyleApplicationLifetime.Windows`. However, you may wish to use a custom window manager if you need custom logic to do something to every open window, e.g., close all windows on logout.
+Tracking of windows is provided by default by `IClassicDesktopStyleApplicationLifetime.Windows`. However, you may wish to use a separate window manager if you wish to implement some custom logic for windows, e.g., close all windows on logout.
 
 ```csharp
 public static class WindowManager
@@ -447,19 +455,29 @@ public static class WindowManager
 
 ## Window transparency
 
-To set transparency effects for the window's background, set the window's `Background` to `Transparent`. Then, set the desired `TransparencyLevelHint`.
+### Setting transparency effects
 
-See [`Window` properties](/controls/primitives/window#common-properties) for supported transparency level values.
+To use transparency effects for the window's background, set the window's `Background` to `Transparent`. Then, set the desired `TransparencyLevelHint`.
+
+`TransparencyLevelHint` accepts a `List` of transparency level values, which are tried in priority order until one is successfully applied. See [`Window` properties](/controls/primitives/window#common-properties) for supported transparency level values.
+
+In addition, you can set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback), so that the window uses a solid color if no transparency effect can be applied.
 
 ```xml
-<Window TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent">
-    <Panel>
-        <ExperimentalAcrylicBorder Material="{DynamicResource AcrylicMaterial}" />
-        <!-- Content on top of acrylic -->
-    </Panel>
+<Window Background="Transparent"
+        TransparencyLevelHint="Mica, AcrylicBlur"
+        TransparencyBackgroundFallback="Green">
+  <!-- Your UI -->
 </Window>
 ```
+
+:::note
+Avalonia currently does not support WPF-like transparent click-through behavior.
+
+If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
+:::
+
+### Checking the actual transparency level
 
 Availability of transparency effects varies by platform. To check which transparency levels is actually applied at runtime:
 
@@ -467,13 +485,9 @@ Availability of transparency effects varies by platform. To check which transpar
 var supported = this.ActualTransparencyLevel;
 ```
 
-If `ActualTransparencyLevel` returns a different value than requested, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode. It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
+If `ActualTransparencyLevel` returns a different value than you expect, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode.
 
-:::note
-Avalonia currently does not support WPF-like transparent click-through behavior.
-
-If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
-:::
+It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
 
 ## Window icon
 

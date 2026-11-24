@@ -96,7 +96,7 @@ For examples of how to use these methods, see [How to: Work with windows](/docs/
 
 - **Startup window.** Your application's main window is set in `App.axaml.cs` by assigning `MainWindow` on the `IClassicDesktopStyleApplicationLifetime`. See [Main window](/docs/fundamentals/main-window) for details.
 - **Multiple windows.** You can open as many windows as you need by creating new instances and calling [`Show`](/docs/how-to/window-how-to#opening-a-window). Each window runs independently within the same application.
-- **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime. Note that hidden windows count as open and may keep the application running.
+- **Closing behavior.** When the last window closes, your application exits by default. You can change this by setting `ShutdownMode` on the application lifetime. Note that hidden windows count as open and may keep the application running invisibly.
 
 ## See also
 
