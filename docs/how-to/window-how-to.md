@@ -1,7 +1,7 @@
 ---
 id: window-how-to
 title: "How to: Work with windows"
-description: Practical usage of the Window control, such as opening and closing, using modal dialogs, window states, sizing, positioning, and customizing window appearance or behavior.
+description: Practical usage of the Window control, such as opening and closing, using modal dialogs, sizing, positioning, and customizing window appearance or behavior.
 doc-type: how-to
 ---
 
@@ -76,7 +76,7 @@ dialog.ShowDialog(ownerWindow);
 
 To open a non-modal window that is always displayed on top of the owner window, set `var ownerWindow = this` as in the modal example above. Then, pass `ownerWindow` to the `Show` method.
 
-This approach can be used to create tool or settings windows that should never be obstructed by the main window.
+Use this approach to create tool or settings windows that should never be obstructed by the main window.
 
 ```csharp
 var window = new MyWindow();
@@ -406,52 +406,7 @@ On most platforms, the operating system automatically enables drag and double-cl
 
 Interactive controls inside a `TitleBar` region, such as buttons, should be given a corresponding `ElementRole` (e.g., `CloseButton`, `MinimizeButton`) to ensure they function as intended.
 
-Accepted values for the `ElementRole` property are:
-
-| Value | Behavior |
-|---|---|
-| `None` | Default. No window chrome behavior. |
-| `TitleBar` | Draggable title bar. |
-| `ResizeN`, `ResizeS`, `ResizeE`, `ResizeW` | Resize grip for the specified edge. |
-| `ResizeNE`, `ResizeNW`, `ResizeSE`, `ResizeSW` | Resize grip for the specified corner. |
-| `CloseButton` | Button that closes the window. |
-| `MinimizeButton` | Button that minimizes the window. |
-| `MaximizeButton` | Button that maximizes the window. |
-| `FullScreenButton` | Button that toggles full-screen. |
-| `User` | Defined by your code. Use this to customize the title bar with additional controls, such as a search field or menu button. |
-| `DecorationsElement` | Set by certain themes for built-in title bar elements. |
-
-## Creating a window manager
-
-The below sample creates a custom window manager class that acts as a single, app-wide registry listing all open windows.
-
-Tracking of windows is provided by default by `IClassicDesktopStyleApplicationLifetime.Windows`. However, you may wish to use a separate window manager if you wish to implement some custom logic for windows, e.g., close all windows on logout.
-
-```csharp
-public static class WindowManager
-{
-    // Make a list of open windows across the entire app.
-    private static readonly List<Window> _openWindows = new();
-
-    // Return a read-only list for callers.
-    public static IReadOnlyList<Window> OpenWindows => _openWindows;
-
-    // Register new windows on open, then unregister on close
-    public static void Register(Window window)
-    {
-        _openWindows.Add(window);
-        window.Closed += (_, _) => _openWindows.Remove(window);
-    }
-
-    // On close all, make a copy of the list.
-    // Prevents crashes due to foreach running on an emptying list.
-    public static void CloseAll()
-    {
-        foreach (var window in _openWindows.ToList())
-            window.Close();
-    }
-}
-```
+See the [`WindowDecorationsElementRole` API reference](/api/avalonia/input/windowdecorationselementrole) for a full list of `ElementRole` values.
 
 ## Window transparency
 
@@ -472,20 +427,20 @@ In addition, you can set a [`TransparencyBackgroundFallback`](/docs/fundamentals
 ```
 
 :::note
-Avalonia currently does not support WPF-like transparent click-through behavior.
+Avalonia does not support WPF-like transparent click-through behavior.
 
-If you wish to create a transparent click-through window using native platform APIs, please see our guidance on [Native platform interop](/docs/app-development/native-interop).
+If you wish to create a transparent click-through window using native platform APIs, see [Native platform interop](/docs/app-development/native-interop).
 :::
 
 ### Checking the actual transparency level
 
-Availability of transparency effects varies by platform. To check which transparency levels is actually applied at runtime:
+Availability of transparency effects varies by platform. To check which transparency level is actually applied at runtime:
 
 ```csharp
 var supported = this.ActualTransparencyLevel;
 ```
 
-If `ActualTransparencyLevel` returns a different value than you expect, this may be due to an OS restriction rather than a configuration error. For example, macOS and Linux have more limited support for transparency, and Windows may suppress compositor effects when in battery saver mode.
+If `ActualTransparencyLevel` returns a different value than you expect, this may be due to an OS restriction rather than a configuration error. Linux and macOS, for example, do not support every transparency level value.
 
 It is advisable to set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback) with a solid color appropriate for your UI, in case transparency is unavailable on the user's device.
 
