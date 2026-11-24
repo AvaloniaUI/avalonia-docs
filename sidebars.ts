@@ -314,7 +314,6 @@ const sidebars: SidebarsConfig = {
         'app-development/xaml-preview-and-design-settings',
         'app-development/data-validation',
         'app-development/threading',
-        'app-development/window-management',
         'app-development/performance',
         'app-development/accessibility',
         'app-development/native-interop',
@@ -442,6 +441,7 @@ const sidebars: SidebarsConfig = {
         'how-to/responsive-layout-how-to',
         'how-to/coded-ui-how-to',
         'how-to/custom-font-how-to',
+        'how-to/screens-how-to',
       ],
     },
     {

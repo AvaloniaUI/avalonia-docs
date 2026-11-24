@@ -294,6 +294,6 @@ This approach works on all platforms including WebAssembly where separate window
 
 ## See Also
 
-- [Window Management](/docs/app-development/window-management): Show, ShowDialog, and window lifecycle.
+- [How to: Work with windows](/docs/how-to/window-how-to): Show, ShowDialog, and window lifecycle.
 - [Storage Provider](/docs/services/storage/storage-provider): File and folder picker dialogs.
 - [Commanding](/docs/input-interaction/commanding): Binding buttons to commands.

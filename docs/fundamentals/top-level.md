@@ -8,28 +8,28 @@ video:
   title: Avalonia TopLevel vs MainWindow — GetTopLevel, Clipboard & FocusManager
 ---
 
-The [`TopLevel`](/api/avalonia/controls/toplevel) acts as the visual root, and is the base class for all top level controls, for example [`Window`](/api/avalonia/controls/window). It handles scheduling layout, styling and rendering as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
+The [`TopLevel`](/api/avalonia/controls/toplevel) acts as the visual root and base class for all top-level controls, for example [`Window`](/api/avalonia/controls/window). It handles scheduling layout, styling and rendering, as well as keeping track of the client size. Most services are accessed through the `TopLevel`.
 
-## Getting the TopLevel
+## Getting the `TopLevel`
 
-Here are two common ways to access a `TopLevel` instance.
+There are two common ways to access a `TopLevel` instance: `GetTopLevel` and the `Window` class.
 
-### Using TopLevel.GetTopLevel
+### Using `TopLevel.GetTopLevel`
 
 You can use the static `GetTopLevel` method of the `TopLevel` class to get the top-level control that contains the current control.
 
 ```csharp
 var topLevel = TopLevel.GetTopLevel(control);
-// Here you can reference various services like Clipboard or StorageProvider from topLevel instance.
+// Reference services like Clipboard or StorageProvider from topLevel instance.
 ```
 
-This method can be helpful if you're working within a user control or a lower-level component and need access to the TopLevel services.
+This method is appropriate if you are working within a [user control](/controls/primitives/usercontrol) or a lower-level component and need access to `TopLevel` services.
 
-:::note
-If `TopLevel.GetTopLevel` returns null, likely control is not yet attached to the root. To ensure control is attached, you should handle `Control.Loaded` and `Control.Unloaded` events and keep track of current top level from these events.
+:::tip
+If `TopLevel.GetTopLevel` returns `null`, it is likely the control is not yet attached to the root. To ensure the control is attached, handle `Control.Loaded` and `Control.Unloaded` events to keep track of top level status.
 :::
 
-### Using the Window class
+### Using the `Window` class
 
 Since the `Window` class inherits from `TopLevel`, you can directly access services from an instance of `Window`:
 
@@ -37,11 +37,11 @@ Since the `Window` class inherits from `TopLevel`, you can directly access servi
 var topLevel = window;
 ```
 
-This method is typically used when you're already working within the context of a window, such as in a ViewModel or an event handler within the `Window` class.
+This method is typically used when you are working within the context of a window, such as a `ViewModel` or an event handler for the `Window`.
 
 ## Common properties
 
-### ActualTransparencyLevel
+### `ActualTransparencyLevel`
 
 Gets the achieved `WindowTransparencyLevel` that the platform was able to provide.
 
@@ -49,7 +49,7 @@ Gets the achieved `WindowTransparencyLevel` that the platform was able to provid
 WindowTransparencyLevel ActualTransparencyLevel { get; }
 ```
 
-### ClientSize
+### `ClientSize`
 
 Gets the client size of the window.
 
@@ -57,39 +57,39 @@ Gets the client size of the window.
 Size ClientSize { get; }
 ```
 
-### Clipboard
+### `Clipboard`
 
-Gets the platform's [Clipboard](/docs/services/clipboard) implementation.
+Gets the platform's [clipboard](/docs/services/clipboard) implementation.
 
 ```csharp
 IClipboard? Clipboard { get; }
 ```
 
-### FocusManager
+### `FocusManager`
 
-Gets [focus manager](/docs/services/focus-manager) of the root.
+Gets the [focus manager](/docs/services/focus-manager) of the root.
 
 ```csharp
 IFocusManager? FocusManager { get; }
 ```
 
-### FrameSize
+### `FrameSize`
 
-Gets the total size of the top level including system frame if presented.
+Gets the total size of the top level, including system frame if present.
 
 ```csharp
 Size? FrameSize { get; }
 ```
 
-### InsetsManager
+### `InsetsManager`
 
-Gets the platform's [InsetsManager](/docs/services/insets-manager) implementation.
+Gets the platform's [insets manager](/docs/services/insets-manager) implementation.
 
 ```csharp
 IInsetsManager? InsetsManager { get; }
 ```
 
-### PlatformSettings
+### `PlatformSettings`
 
 Represents a contract for accessing top-level [platform-specific settings](/docs/services/platform-settings).
 
@@ -97,7 +97,7 @@ Represents a contract for accessing top-level [platform-specific settings](/docs
 IPlatformSettings? PlatformSettings { get; }
 ```
 
-### RendererDiagnostics
+### `RendererDiagnostics`
 
 Gets a value indicating whether the renderer should draw specific diagnostics.
 
@@ -105,7 +105,7 @@ Gets a value indicating whether the renderer should draw specific diagnostics.
 RendererDiagnostics RendererDiagnostics { get; }
 ```
 
-### RenderScaling
+### `RenderScaling`
 
 Gets the scaling factor to use in rendering.
 
@@ -113,43 +113,45 @@ Gets the scaling factor to use in rendering.
 double RenderScaling { get; }
 ```
 
-### Screens
+### `Screens`
 
-Gets the [`Screens`](/api/avalonia/controls/screens) instance that provides information about connected monitors, including resolution, working area, scaling, and orientation.
+Gets the [`Screens`](/api/avalonia/controls/screens) instance, which provides information about connected monitors, including resolution, working area, scaling, and orientation.
+
+Use `Screens` to query the primary display, enumerate all displays, or find the screen containing a specific window or point. See [How to: Work with screens](/docs/how-to/screens-how-to) for usage guidance.
 
 ```csharp
 Screens Screens { get; }
 ```
 
-Use `Screens` to query the primary display, enumerate all displays, or find the screen containing a specific window or point. See [Working with screens](/docs/app-development/window-management#working-with-screens) for usage examples.
+### `RequestedThemeVariant`
 
-### RequestedThemeVariant
-
-Gets or sets the UI theme variant that is used by the control (and its child elements) for resource determination. The UI theme you specify with `ThemeVariant` can override the app-level `ThemeVariant`.
+Gets or sets the UI theme variant that is used by the control and its child elements. The UI theme you specify with `ThemeVariant` can override the app-level `ThemeVariant`.
 
 ```csharp
 ThemeVariant? RequestedThemeVariant { get; set; }
 ```
 
-### StorageProvider
+### `StorageProvider`
 
-[File System storage](/docs/services/storage/storage-provider) service used for file pickers and bookmarks.
+Gets the [file system storage](/docs/services/storage/storage-provider) service used for file pickers and bookmarks.
 
 ```csharp
 IStorageProvider StorageProvider { get; }
 ```
 
-### TransparencyBackgroundFallback
+### `TransparencyBackgroundFallback`
 
-Gets or sets the `IBrush` that transparency will blend with when transparency is not supported or is restricted. By default this is a solid white brush.
+Gets or sets the color that fills the background if transparency is not supported or is restricted. Default is white.
 
 ```csharp
 IBrush TransparencyBackgroundFallback { get; set; }
 ```
 
-### TransparencyLevelHint
+### `TransparencyLevelHint`
 
-Gets or sets the `WindowTransparencyLevel` that the TopLevel should use when possible. Accepts multiple values which are applied in a fallback order. For instance, with "Mica, Blur" Mica will be applied only on platforms where it is possible, and Blur will be used on the rest of them. Default value is an empty array or "None".
+Gets or sets the `WindowTransparencyLevel` that the top level should use if possible. Accepts multiple values, which are applied in a fallback order.
+
+For example, if you set `Mica, Blur`, the top level attempts to apply `Mica` first. If the platform disallows this transparency level, `Blur` is applied instead. Default is an empty array.
 
 ```csharp
 IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
@@ -157,33 +159,33 @@ IReadOnlyList<WindowTransparencyLevel> TransparencyLevelHint { get; set; }
 
 ## Common events
 
-### BackRequested
+### `BackRequested`
 
-Occurs when physical Back Button is pressed or a back navigation has been requested.
+Physical Back button is pressed, or back navigation has been requested.
 
 ```csharp
 event EventHandler<RoutedEventArgs> BackRequested { add; remove; }
 ```
 
-### Closed
+### `Closed`
 
-Fired when the window is closed.
+Window is closed.
 
 ```csharp
 event EventHandler Closed;
 ```
 
-### Opened
+### `Opened`
 
-Fired when the window is opened.
+Window is opened.
 
 ```csharp
 event EventHandler Opened;
 ```
 
-### ScalingChanged
+### `ScalingChanged`
 
-Occurs when the TopLevel's scaling changes.
+Scaling of the top level has changed.
 
 ```csharp
 event EventHandler ScalingChanged;
@@ -191,7 +193,7 @@ event EventHandler ScalingChanged;
 
 ## Common methods
 
-### GetTopLevel
+### `GetTopLevel`
 
 Gets the `TopLevel` in which the given `Visual` is hosted.
 
@@ -201,17 +203,19 @@ The `visual` parameter indicates the visual to be queried.
 static TopLevel? GetTopLevel(Visual? visual)
 ```
 
-### RequestAnimationFrame
+### `RequestAnimationFrame`
 
-Enqueues a callback to be called on the next animation tick. The callback runs on the UI thread, synchronized with Avalonia's rendering cycle. Each call schedules a single invocation. To create a continuous animation loop, call `RequestAnimationFrame` again from within the callback.
+Enqueues a callback to be called on the next animation tick. The callback runs on the UI thread, synchronized with Avalonia's rendering cycle.
 
-The `action` parameter receives a `TimeSpan` representing the elapsed time since the animation system started. Use this value to calculate frame-independent animation progress.
+Each call schedules a single invocation. To create a continuous animation loop, call `RequestAnimationFrame` again from within the callback.
+
+The `action` parameter receives a `TimeSpan`, representing the elapsed time since the animation system started. Use this value to calculate frame-independent animation progress.
 
 ```csharp
 void RequestAnimationFrame(Action<TimeSpan> action)
 ```
 
-#### Example: continuous animation loop
+#### Example: Continuous animation loop
 
 ```csharp
 var topLevel = TopLevel.GetTopLevel(this);
@@ -231,17 +235,19 @@ private void OnAnimationFrame(TimeSpan elapsed)
 
 This is the Avalonia equivalent of WPF's `CompositionTarget.Rendering`. For render-thread callbacks that do not block the UI thread, see [CompositionCustomVisualHandler](/docs/graphics-animation/custom-rendering#compositioncustomvisualhandler).
 
-### RequestPlatformInhibition
+### `RequestPlatformInhibition`
 
-Requests a `PlatformInhibitionType` to be inhibited. The behavior remains inhibited until the return value is disposed. The available set of `PlatformInhibitionType`s depends on the platform. If a behavior is inhibited on a platform where this type is not supported the request will have no effect.
+Requests a `PlatformInhibitionType` to be inhibited. The behavior remains inhibited until the return value is disposed.
+
+Available options for `PlatformInhibitionType` depends on the platform. If a behavior is inhibited on a platform where its type is not supported, the request has no effect.
 
 ```csharp
 async Task<IDisposable> RequestPlatformInhibition(PlatformInhibitionType type, string reason)
 ```
 
-### TryGetPlatformHandle
+### `TryGetPlatformHandle`
 
-Tries to get the platform handle for the TopLevel-derived control.
+Tries to get the platform handle for the `TopLevel`-derived control.
 
 ```csharp
 IPlatformHandle? TryGetPlatformHandle()
@@ -251,7 +257,7 @@ IPlatformHandle? TryGetPlatformHandle()
 
 - [Main window](/docs/fundamentals/main-window)
 - [Application lifetimes](/docs/fundamentals/application-lifetimes)
-- [Working with screens](/docs/app-development/window-management#working-with-screens): Query monitor resolution, bounds, and scaling.
+- [Working with screens](/docs/how-to/screens-how-to): Query monitor resolution, bounds, and scaling.
 - [Custom rendering](/docs/graphics-animation/custom-rendering): Custom drawing and render-thread callbacks.
 - [Composition animations](/docs/graphics-animation/composition-animations): Render-thread property animations.
 - [`TopLevel.cs` source code on GitHub](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/TopLevel.cs)

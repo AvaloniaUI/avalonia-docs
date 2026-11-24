@@ -241,7 +241,7 @@ Or with a binding converter:
 | `System.Windows.Forms.Screen.PrimaryScreen.WorkingArea` | `TopLevel.GetTopLevel(this).Screens.Primary.WorkingArea` | Excludes taskbar/dock |
 | `PresentationSource.FromVisual().CompositionTarget.TransformToDevice` | `TopLevel.GetTopLevel(this).Screens.Primary.Scaling` | DPI scaling factor |
 
-See [Working with screens](/docs/app-development/window-management#working-with-screens) for full usage details.
+See [How to: Work with screens](/docs/how-to/screens-how-to) for full usage details.
 
 ## File structure
 

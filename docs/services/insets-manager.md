@@ -14,7 +14,7 @@ var insetsManager = TopLevel.GetTopLevel(control).InsetsManager;
 ```
 
 :::note
-This service is implemented on mobile and browser backends. For desktop window decoration customization, use `Window.ExtendClientAreaToDecorationsHint` with `WindowDrawnDecorations`. See [Window Management](/docs/app-development/window-management#custom-title-bar) for details.
+This service is implemented on mobile and browser backends. For desktop window decoration customization, use `Window.ExtendClientAreaToDecorationsHint` with `WindowDrawnDecorations`. See [How to: Work with windows](/docs/how-to/window-how-to#creating-a-custom-title-bar) for details.
 :::
 
 :::note

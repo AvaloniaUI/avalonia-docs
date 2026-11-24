@@ -520,15 +520,8 @@ const sidebars: SidebarsConfig = {
       items:[
         'primitives/scrollbar',
         'primitives/themevariantscope',
-        'primitives/usercontrol',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'System',
-      collapsed: true,
-      items:[
         'navigation/trayicon',
+        'primitives/usercontrol',
         'primitives/window',
         'primitives/windowdrawndecorations',
       ],

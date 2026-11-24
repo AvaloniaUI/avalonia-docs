@@ -303,5 +303,5 @@ See [Bookmarks](/docs/services/storage/bookmarks) for full details on the bookma
 - [Storage Provider](/docs/services/storage/storage-provider): File and folder access across platforms.
 - [Bookmarks](/docs/services/storage/bookmarks): Persisting file access across sessions on sandboxed platforms.
 - [Storage Item](/docs/services/storage/storage-item): Working with `IStorageFile` and `IStorageFolder` instances.
-- [Window Management](/docs/app-development/window-management): Window lifecycle, positioning, and state.
+- [How to: Work with windows](/docs/how-to/window-how-to): Window lifecycle, positioning, and state.
 - [Dependency Injection](/docs/app-development/dependency-injection): Registering services like `SettingsService` in your application.
