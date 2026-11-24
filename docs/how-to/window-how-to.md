@@ -344,6 +344,10 @@ public partial class MyWindow : Window
             // Failing to save the position must not prevent the window from closing.
         }
     }
+
+    // Do not restore onto a monitor that has since been disconnected.
+    private bool IsOnAnyScreen(PixelPoint point) =>
+        Screens.All.Any(screen => screen.WorkingArea.Contains(point));
 }
 ```
 
