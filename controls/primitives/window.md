@@ -22,7 +22,7 @@ Add new windows when some content needs to exist separately from the main window
 - **Dialogs** that ask for input or confirmation before the user can continue, such as a "Save changes?" prompt. Open these with [`ShowDialog`](/docs/how-to/window-how-to#opening-a-modal-dialog).
 - **Settings or preferences screens** that the user may open now and then.
 - **Tool windows** that should stay open beside the main window, such as palettes, inspectors, or property panels.
-- **Document windows** in apps where users can work on several files at once, each in its own window.
+- **Document windows** in apps where users can work on multiple files at once, each in its own window.
 - **Views on other monitors**, such as a presenter view on one screen and full-screen output on another.
 
 A new window does not inherit the data context of the window that opens it. Each window is the root of its own logical tree, so its `DataContext` is `null` until you set it. When creating a new window, always remember to give it a `DataContext`, usually a view model of its own. See [Setting the data context](/docs/data-binding/data-context#setting-the-data-context) for more information.
@@ -52,7 +52,7 @@ A new window does not inherit the data context of the window that opens it. Each
 | `WindowDecorations` | `WindowDecorations` | Whether to show the window chrome and/or borders. `Full`, `BorderOnly`, or `None`. |
 | `ExtendClientAreaToDecorationsHint` | `bool` | When `True`, your content extends into the title bar area so you can create custom chrome with [`WindowDrawnDecorations`](/controls/primitives/windowdrawndecorations). |
 | `TransparencyLevelHint` | `IReadOnlyList<WindowTransparencyLevel>` | Window transparency. `None`, `Transparent`, `Blur`, `AcrylicBlur`, `Mica`. Default is an empty array.<br /><br />See [How to work with windows](/docs/how-to/window-how-to) for details. |
-| `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes.<br /><br />`OwnerAndChildWindows` is the default and closes children before the owner. If a child cancels the close, the owner's close is also cancelled.<br /><br />`OwnerWindowOnly` closes the owner directly. Children cannot cancel.
+| `ClosingBehavior` | `WindowClosingBehavior` | How child windows behave when the owner window closes.<br /><br />`OwnerAndChildWindows` is the default and closes children before the owner. If a child cancels the close, the owner's close is also cancelled.<br /><br />`OwnerWindowOnly` closes the owner directly. Children are also closed, but their `Closing` events are skipped so they cannot cancel. |
 
 ### Platform differences
 

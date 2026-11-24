@@ -281,7 +281,7 @@ namespace MyApp.Views;
 public partial class MyWindow : Window
 {
     // Window's last position is saved to disk as a file.
-    // Replace DESTINATION_FOLDER with the target path.
+    // Replace DESTINATION_FOLDER with the target folder.
     private static readonly string PositionFile = Path.Combine(
         Environment.GetFolderPath(DESTINATION_FOLDER),
         "MyWindow.position");
@@ -404,7 +404,7 @@ On most platforms, the operating system automatically enables drag and double-cl
 </Window>
 ```
 
-Interactive controls inside a `TitleBar` region, such as buttons, should be given a corresponding `ElementRole` (e.g., `CloseButton`, `MinimizeButton`) to ensure they function as intended.
+Interactive controls inside a `TitleBar` region, such as buttons, should be given a corresponding `ElementRole` (e.g., `CloseButton`, `MinimizeButton`). Otherwise, on some platforms, clicking them may drag the window.
 
 See the [`WindowDecorationsElementRole` API reference](/api/avalonia/input/windowdecorationselementrole) for a full list of `ElementRole` values.
 
@@ -414,7 +414,7 @@ See the [`WindowDecorationsElementRole` API reference](/api/avalonia/input/windo
 
 To use transparency effects for the window's background, set the window's `Background` to `Transparent`. Then, set the desired `TransparencyLevelHint`.
 
-`TransparencyLevelHint` accepts a `List` of transparency level values, which are tried in priority order until one is successfully applied. See [`Window` properties](/controls/primitives/window#common-properties) for supported transparency level values.
+`TransparencyLevelHint` accepts a list of transparency level values, which are tried in priority order until one is successfully applied. See [`Window` properties](/controls/primitives/window#common-properties) for supported transparency level values.
 
 In addition, you can set a [`TransparencyBackgroundFallback`](/docs/fundamentals/top-level#transparencybackgroundfallback), so that the window uses a solid color if no transparency effect can be applied.
 
