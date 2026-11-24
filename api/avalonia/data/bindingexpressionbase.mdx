@@ -35,6 +35,11 @@ import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
 <div className="apiref-page__meta-row">
 <span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Data/BindingExpressionBase.cs">BindingExpressionBase.cs</a>
 </div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the base class for binding expressions.
 
 </div>
 
@@ -54,9 +59,13 @@ public class BindingExpressionBase
 <span className="apiref-page__meta-label">Derived types:</span> <a href="core/untypedbindingexpressionbase">UntypedBindingExpressionBase</a>
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> <a href="../styling/isetterinstance">ISetterInstance</a>, IDisposable
+<span className="apiref-page__meta-label">Implements:</span> IValueEntry, <a href="../styling/isetterinstance">ISetterInstance</a>, IDisposable
 </div>
 </div>
+
+## Remarks
+
+A binding expression represents an instantiation of a binding on an object.
 
 ## Methods
 
@@ -113,6 +122,41 @@ Forces a data transfer from the binding source to the binding target.
 
 ```csharp
 public void UpdateTarget()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Priority](#uid-0f9338f7c6) | Gets the priority of the binding expression. |
+| [TargetProperty](#uid-afd26df4fa) | Gets the [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) that the binding expression is targeting. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f9338f7c6"></span>
+
+### Priority Property
+
+Gets the priority of the binding expression.
+
+```csharp
+public Avalonia.Data.BindingPriority Priority { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-afd26df4fa"></span>
+
+### TargetProperty Property
+
+Gets the [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) that the binding expression is targeting.
+
+```csharp
+public Avalonia.AvaloniaProperty TargetProperty { get; set; }
 ```
 
 </section>

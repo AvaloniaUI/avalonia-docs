@@ -1,0 +1,151 @@
+---
+title: 'IShareService'
+hide_title: true
+slug: '/avalonia/controls/pdf/services/ishareservice'
+uid: 'Avalonia.Controls.Pdf.Services.IShareService'
+commentId: 'T:Avalonia.Controls.Pdf.Services.IShareService'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Services'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IShareService Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Services</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Platform-abstracted interface for sharing PDF documents.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IShareService
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ShareAsync](#uid-ee9f4512a4) | Shares the document using the system share dialog. |
+| [ShareFileAsync](#uid-7f3b4683d2) | Shares a file using the system share dialog. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ee9f4512a4"></span>
+
+### ShareAsync Method
+
+Shares the document using the system share dialog.
+
+```csharp
+public System.Threading.Tasks.Task ShareAsync(Avalonia.Controls.Pdf.Core.IPdfDocument document, Avalonia.Controls.Pdf.Services.ShareOptions options, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`document` [Avalonia.Controls.Pdf.Core.IPdfDocument](xref:Avalonia.Controls.Pdf.Core.IPdfDocument)
+
+The document to share.
+
+
+`options` [Avalonia.Controls.Pdf.Services.ShareOptions](xref:Avalonia.Controls.Pdf.Services.ShareOptions)
+
+Share options.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7f3b4683d2"></span>
+
+### ShareFileAsync Method
+
+Shares a file using the system share dialog.
+
+```csharp
+public System.Threading.Tasks.Task ShareFileAsync(string filePath, Avalonia.Controls.Pdf.Services.ShareOptions options, System.Threading.CancellationToken cancellationToken)
+```
+
+#### Parameters
+
+`filePath` string
+
+Path to the file to share.
+
+
+`options` [Avalonia.Controls.Pdf.Services.ShareOptions](xref:Avalonia.Controls.Pdf.Services.ShareOptions)
+
+Share options.
+
+
+`cancellationToken` System.Threading.CancellationToken
+
+Cancellation token.
+
+
+#### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSupported](#uid-718300922e) | Gets whether sharing is supported on the current platform. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-718300922e"></span>
+
+### IsSupported Property
+
+Gets whether sharing is supported on the current platform.
+
+```csharp
+public bool IsSupported { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -613,6 +613,7 @@ public string UserAgent { get; set; }
 | [NavigationCompleted](#uid-ef7eaf1bc9) | No summary available. |
 | [NavigationStarted](#uid-5d8c1d9cf0) | No summary available. |
 | [NewWindowRequested](#uid-5ed1493b23) | No summary available. |
+| [ProcessTerminated](#uid-51c8d4a1c0) | No summary available. |
 | [WebMessageReceived](#uid-56d50970d7) | No summary available. |
 | [WebResourceRequested](#uid-cf5fb58e62) | No summary available. |
 
@@ -696,6 +697,18 @@ public event EventHandler<Avalonia.Controls.WebViewNavigationStartingEventArgs> 
 
 ```csharp
 public event EventHandler<Avalonia.Controls.WebViewNewWindowRequestedEventArgs> NewWindowRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51c8d4a1c0"></span>
+
+### ProcessTerminated Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewProcessTerminatedEventArgs> ProcessTerminated
 ```
 
 </section>

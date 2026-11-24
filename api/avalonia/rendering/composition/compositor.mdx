@@ -67,14 +67,21 @@ public class Compositor
 | [CreateBooleanKeyFrameAnimation](#uid-e22ef80cc8) | No summary available. |
 | [CreateColorKeyFrameAnimation](#uid-d6d63e3e92) | No summary available. |
 | [CreateCompositionVisualSnapshot](#uid-928469a2b5) | No summary available. |
+| [CreateConicGradientBrush](#uid-66bd0ddee6) | No summary available. |
 | [CreateContainerVisual](#uid-b184a8da59) | No summary available. |
 | [CreateCustomVisual](#uid-71904a36c2) | No summary available. |
 | [CreateDoubleKeyFrameAnimation](#uid-536d7926d6) | No summary available. |
 | [CreateDrawingSurface](#uid-1b1323db16) | No summary available. |
 | [CreateExpressionAnimation (2 overloads)](#uid-dd602c8ad0) | No summary available. |
+| [CreateGradientStop (2 overloads)](#uid-a2545fce52) | No summary available. |
 | [CreateImplicitAnimationCollection](#uid-8583a670e4) | No summary available. |
+| [CreateLinearGradientBrush](#uid-6d7e55350f) | No summary available. |
 | [CreateQuaternionKeyFrameAnimation](#uid-b1df178619) | No summary available. |
+| [CreateRadialGradientBrush](#uid-8e33cd7538) | No summary available. |
+| [CreateRelativePointKeyFrameAnimation](#uid-e39f2e58b8) | No summary available. |
+| [CreateRelativeScalarKeyFrameAnimation](#uid-bb55dcc1db) | No summary available. |
 | [CreateScalarKeyFrameAnimation](#uid-835956d6ab) | No summary available. |
+| [CreateSolidColorBrush (2 overloads)](#uid-8010d857dd) | No summary available. |
 | [CreateSolidColorVisual](#uid-ceff242099) | No summary available. |
 | [CreateSurfaceVisual](#uid-142c919484) | No summary available. |
 | [CreateVector2KeyFrameAnimation](#uid-f882fc73a5) | No summary available. |
@@ -161,6 +168,23 @@ public System.Threading.Tasks.Task<Avalonia.Media.Imaging.Bitmap> CreateComposit
 #### Returns
 
 System.Threading.Tasks.Task&lt;[Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap)&gt;
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-66bd0ddee6"></span>
+
+### CreateConicGradientBrush Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionConicGradientBrush CreateConicGradientBrush()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionConicGradientBrush](xref:Avalonia.Rendering.Composition.CompositionConicGradientBrush)
 
 
 </section>
@@ -281,6 +305,52 @@ public Avalonia.Rendering.Composition.Animations.ExpressionAnimation CreateExpre
 
 </section>
 
+<span id="uid-a2545fce52"></span>
+
+### CreateGradientStop overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e6c6778d0a"></span>
+
+#### CreateGradientStop Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGradientStop CreateGradientStop()
+```
+
+##### Returns
+
+[Avalonia.Rendering.Composition.CompositionGradientStop](xref:Avalonia.Rendering.Composition.CompositionGradientStop)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfb60464c3"></span>
+
+#### CreateGradientStop Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionGradientStop CreateGradientStop(double offset, Avalonia.Media.Color color)
+```
+
+##### Parameters
+
+`offset` double
+
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.CompositionGradientStop](xref:Avalonia.Rendering.Composition.CompositionGradientStop)
+
+
+</section>
+
 <section className="apiref-page__member-entry">
 
 <span id="uid-8583a670e4"></span>
@@ -294,6 +364,23 @@ public Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection Cre
 #### Returns
 
 [Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection](xref:Avalonia.Rendering.Composition.Animations.ImplicitAnimationCollection)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6d7e55350f"></span>
+
+### CreateLinearGradientBrush Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionLinearGradientBrush CreateLinearGradientBrush()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionLinearGradientBrush](xref:Avalonia.Rendering.Composition.CompositionLinearGradientBrush)
 
 
 </section>
@@ -317,6 +404,57 @@ public Avalonia.Rendering.Composition.QuaternionKeyFrameAnimation CreateQuaterni
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-8e33cd7538"></span>
+
+### CreateRadialGradientBrush Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionRadialGradientBrush CreateRadialGradientBrush()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.CompositionRadialGradientBrush](xref:Avalonia.Rendering.Composition.CompositionRadialGradientBrush)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e39f2e58b8"></span>
+
+### CreateRelativePointKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.RelativePointKeyFrameAnimation CreateRelativePointKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.RelativePointKeyFrameAnimation](xref:Avalonia.Rendering.Composition.RelativePointKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb55dcc1db"></span>
+
+### CreateRelativeScalarKeyFrameAnimation Method
+
+```csharp
+public Avalonia.Rendering.Composition.RelativeScalarKeyFrameAnimation CreateRelativeScalarKeyFrameAnimation()
+```
+
+#### Returns
+
+[Avalonia.Rendering.Composition.RelativeScalarKeyFrameAnimation](xref:Avalonia.Rendering.Composition.RelativeScalarKeyFrameAnimation)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-835956d6ab"></span>
 
 ### CreateScalarKeyFrameAnimation Method
@@ -328,6 +466,49 @@ public Avalonia.Rendering.Composition.ScalarKeyFrameAnimation CreateScalarKeyFra
 #### Returns
 
 [Avalonia.Rendering.Composition.ScalarKeyFrameAnimation](xref:Avalonia.Rendering.Composition.ScalarKeyFrameAnimation)
+
+
+</section>
+
+<span id="uid-8010d857dd"></span>
+
+### CreateSolidColorBrush overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c2bae7843f"></span>
+
+#### CreateSolidColorBrush Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionSolidColorBrush CreateSolidColorBrush()
+```
+
+##### Returns
+
+[Avalonia.Rendering.Composition.CompositionSolidColorBrush](xref:Avalonia.Rendering.Composition.CompositionSolidColorBrush)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f2a79a5ff"></span>
+
+#### CreateSolidColorBrush Method
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionSolidColorBrush CreateSolidColorBrush(Avalonia.Media.Color color)
+```
+
+##### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+
+##### Returns
+
+[Avalonia.Rendering.Composition.CompositionSolidColorBrush](xref:Avalonia.Rendering.Composition.CompositionSolidColorBrush)
 
 
 </section>

@@ -1,0 +1,208 @@
+---
+title: 'IStatusNotifierItemHandler.GetAllPropertiesContext'
+hide_title: true
+slug: '/avalonia/freedesktop/dbus/istatusnotifieritemhandler-getallpropertiescontext'
+uid: 'Avalonia.FreeDesktop.DBus.IStatusNotifierItemHandler.GetAllPropertiesContext'
+commentId: 'T:Avalonia.FreeDesktop.DBus.IStatusNotifierItemHandler.GetAllPropertiesContext'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.FreeDesktop'
+assembly: 'Avalonia.FreeDesktop'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.FreeDesktop.DBus'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStatusNotifierItemHandler.GetAllPropertiesContext Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.FreeDesktop.DBus</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.FreeDesktop</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct IStatusNotifierItemHandler.GetAllPropertiesContext
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> IStatusNotifierItemHandler.GetAllPropertiesContext
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IDisposable
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [IStatusNotifierItemHandler.GetAllPropertiesContext](#uid-82e7cff99d) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82e7cff99d"></span>
+
+### IStatusNotifierItemHandler.GetAllPropertiesContext Constructor
+
+```csharp
+public IStatusNotifierItemHandler.GetAllPropertiesContext(Tmds.DBus.Protocol.MethodContext methodContext)
+```
+
+#### Parameters
+
+`methodContext` Tmds.DBus.Protocol.MethodContext
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Dispose](#uid-80e219810d) | No summary available. |
+| [Handle (2 overloads)](#uid-0d0c9233cf) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-80e219810d"></span>
+
+### Dispose Method
+
+```csharp
+public void Dispose()
+```
+
+</section>
+
+<span id="uid-0d0c9233cf"></span>
+
+### Handle overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d88c66dede"></span>
+
+#### Handle Method
+
+```csharp
+public System.Threading.Tasks.ValueTask Handle(Avalonia.FreeDesktop.DBus.IStatusNotifierItemProperties properties)
+```
+
+##### Parameters
+
+`properties` Avalonia.FreeDesktop.DBus.IStatusNotifierItemProperties
+
+
+##### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-37752e8a64"></span>
+
+#### Handle Method
+
+```csharp
+public System.Threading.Tasks.ValueTask Handle(string attentionIconName, ValueTuple<int, int, byte[]>[] attentionIconPixmap, string attentionMovieName, string category, string iconName, ValueTuple<int, int, byte[]>[] iconPixmap, string iconThemePath, string id, Nullable<bool> itemIsMenu, Nullable<Tmds.DBus.Protocol.ObjectPath> menu, string overlayIconName, ValueTuple<int, int, byte[]>[] overlayIconPixmap, string status, string title, Nullable<ValueTuple<string,ValueTuple<int,int,byte[]>[],string,string>> toolTip, Nullable<int> windowId)
+```
+
+##### Parameters
+
+`attentionIconName` string
+
+
+`attentionIconPixmap` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+`attentionMovieName` string
+
+
+`category` string
+
+
+`iconName` string
+
+
+`iconPixmap` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+`iconThemePath` string
+
+
+`id` string
+
+
+`itemIsMenu` Nullable&lt;bool&gt;
+
+
+`menu` Nullable&lt;Tmds.DBus.Protocol.ObjectPath&gt;
+
+
+`overlayIconName` string
+
+
+`overlayIconPixmap` ValueTuple&lt;int, int, byte[]&gt;[]
+
+
+`status` string
+
+
+`title` string
+
+
+`toolTip` Nullable&lt;ValueTuple&lt;string,ValueTuple&lt;int,int,byte[]&gt;[],string,string&gt;&gt;
+
+
+`windowId` Nullable&lt;int&gt;
+
+
+##### Returns
+
+System.Threading.Tasks.ValueTask
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [MethodContext](#uid-83e96bc613) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-83e96bc613"></span>
+
+### MethodContext Property
+
+```csharp
+public Tmds.DBus.Protocol.MethodContext MethodContext { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

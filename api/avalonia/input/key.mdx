@@ -942,6 +942,11 @@ The key is used with another key to create a single combined character.
 public Avalonia.Input.Key DeadCharProcessed
 ```
 
+#### Remarks
+
+Reported for the key down that completes a dead key sequence. The matching key up reports the real key.
+Use `KeyEventArgs.PhysicalKey` to identify the key.
+
 </section>
 
 <section className="apiref-page__member-entry">

@@ -63,10 +63,10 @@ public interface INavigation
 | [PopModalAsync (2 overloads)](#uid-1f98367bea) | Pops the top modal page using the host's modal transition. |
 | [PopToPageAsync (2 overloads)](#uid-b00afe5f7d) | Pops all pages above `page` using the host's default transition. |
 | [PopToRootAsync (2 overloads)](#uid-a047944b32) | Pops all pages above the root using the host's default transition. |
-| [PushAsync (2 overloads)](#uid-efed8dca8f) | Pushes `page` using the host's default transition. |
-| [PushModalAsync (2 overloads)](#uid-9e90393b6e) | Pushes `page` as a modal using the host's modal transition. |
+| [PushAsync (3 overloads)](#uid-efed8dca8f) | Pushes `page` using the host's default transition. |
+| [PushModalAsync (3 overloads)](#uid-9e90393b6e) | Pushes `page` as a modal using the host's modal transition. |
 | [RemovePage](#uid-9985148e2b) | Removes `page` from the navigation stack without animation. If `page` is not in the stack the call is a no-op. |
-| [ReplaceAsync (2 overloads)](#uid-eb81155046) | Replaces the current top page with `page` using the host's default transition. |
+| [ReplaceAsync (3 overloads)](#uid-eb81155046) | Replaces the current top page with `page` using the host's default transition. |
 
 <section className="apiref-page__member-entry">
 
@@ -394,6 +394,36 @@ System.Threading.Tasks.Task
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ba69e9924"></span>
+
+#### PushAsync Method
+
+Pushes `page` using `transition` with optional `parameter`.
+
+```csharp
+public System.Threading.Tasks.Task PushAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition, object parameter)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+`parameter` object
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
 <span id="uid-9e90393b6e"></span>
 
 ### PushModalAsync overloads
@@ -440,6 +470,36 @@ public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page, A
 
 
 `transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0a0b0ac9c9"></span>
+
+#### PushModalAsync Method
+
+Pushes `page` as a modal using `transition` with optional `parameter`.
+
+```csharp
+public System.Threading.Tasks.Task PushModalAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition, object parameter)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+`parameter` object
 
 
 ##### Returns
@@ -519,6 +579,36 @@ public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page, Ava
 
 
 `transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+##### Returns
+
+System.Threading.Tasks.Task
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-357eba92e7"></span>
+
+#### ReplaceAsync Method
+
+Replaces the current top page with `page` using `transition` with optional `parameter`.
+
+```csharp
+public System.Threading.Tasks.Task ReplaceAsync(Avalonia.Controls.Page page, Avalonia.Animation.IPageTransition transition, object parameter)
+```
+
+##### Parameters
+
+`page` [Avalonia.Controls.Page](xref:Avalonia.Controls.Page)
+
+
+`transition` [Avalonia.Animation.IPageTransition](xref:Avalonia.Animation.IPageTransition)
+
+
+`parameter` object
 
 
 ##### Returns

@@ -1,0 +1,194 @@
+---
+title: 'GeneratedAttachedPropertyAttribute'
+hide_title: true
+slug: '/avalonia/generatedattachedpropertyattribute'
+uid: 'Avalonia.GeneratedAttachedPropertyAttribute'
+commentId: 'T:Avalonia.GeneratedAttachedPropertyAttribute'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">GeneratedAttachedPropertyAttribute Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/GeneratedAttachedPropertyAttribute.cs">GeneratedAttachedPropertyAttribute.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Instructs the Avalonia property source generator to emit an [Avalonia.AttachedProperty&lt;T&gt;](xref:Avalonia.AttachedProperty%601)
+registration and accessor methods for the annotated partial `Get` method.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class GeneratedAttachedPropertyAttribute
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Attribute <span className="apiref-page__relation-separator">-&gt;</span> GeneratedAttachedPropertyAttribute
+</div>
+</div>
+
+## Remarks
+
+Apply to a `static partial T Get{Name}(THost element)` method declared on a `partial` class.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [GeneratedAttachedPropertyAttribute](#uid-0e8a1d4162) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0e8a1d4162"></span>
+
+### GeneratedAttachedPropertyAttribute Constructor
+
+```csharp
+public GeneratedAttachedPropertyAttribute()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [AddOwnerFrom](#uid-c7757bcb15) | Re-owns an existing attached property from the specified base type instead of registering a new property. The source property must be a static `{Name}Property` member of the given type. Metadata may still be overridden with [Avalonia.GeneratedAttachedPropertyAttribute.DefaultValue](xref:Avalonia.GeneratedAttachedPropertyAttribute.DefaultValue), [Avalonia.GeneratedAttachedPropertyAttribute.DefaultBindingMode](xref:Avalonia.GeneratedAttachedPropertyAttribute.DefaultBindingMode) and [Avalonia.GeneratedAttachedPropertyAttribute.CoerceMethodName](xref:Avalonia.GeneratedAttachedPropertyAttribute.CoerceMethodName). |
+| [CoerceMethodName](#uid-baecaa2209) | The name of the coercion method, with signature `static T {Method}(AvaloniaObject sender, T value)`. Declare it as an `private static` method on the same type. |
+| [DefaultBindingMode](#uid-3ba1c3025c) | The default binding mode for the property. |
+| [DefaultValue](#uid-c04d897900) | The default value of the property. Must be a compile-time constant. For non-constant defaults, call `{Name}Property.OverrideDefaultValue(...)` in a static constructor instead. |
+| [Inherits](#uid-f3d9dbeff2) | Whether the property inherits its value down the logical tree. |
+| [ValidateMethodName](#uid-a7f6ad2997) | The name of the validation method, with signature `static bool {Method}(T value)`. Pass via `nameof(...)`. Declare it as an `private static` method on the same type. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c7757bcb15"></span>
+
+### AddOwnerFrom Property
+
+Re-owns an existing attached property from the specified base type instead of registering a new property.
+The source property must be a static `{Name}Property` member of the given type.
+Metadata may still be overridden with [Avalonia.GeneratedAttachedPropertyAttribute.DefaultValue](xref:Avalonia.GeneratedAttachedPropertyAttribute.DefaultValue), [Avalonia.GeneratedAttachedPropertyAttribute.DefaultBindingMode](xref:Avalonia.GeneratedAttachedPropertyAttribute.DefaultBindingMode) and [Avalonia.GeneratedAttachedPropertyAttribute.CoerceMethodName](xref:Avalonia.GeneratedAttachedPropertyAttribute.CoerceMethodName).
+
+```csharp
+public Type AddOwnerFrom { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-baecaa2209"></span>
+
+### CoerceMethodName Property
+
+The name of the coercion method, with signature
+`static T {Method}(AvaloniaObject sender, T value)`.
+Declare it as an `private static` method on the same type.
+
+```csharp
+public string CoerceMethodName { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ba1c3025c"></span>
+
+### DefaultBindingMode Property
+
+The default binding mode for the property.
+
+```csharp
+public Avalonia.Data.BindingMode DefaultBindingMode { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c04d897900"></span>
+
+### DefaultValue Property
+
+The default value of the property. Must be a compile-time constant.
+For non-constant defaults, call `{Name}Property.OverrideDefaultValue(...)` in a static constructor instead.
+
+```csharp
+public object DefaultValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f3d9dbeff2"></span>
+
+### Inherits Property
+
+Whether the property inherits its value down the logical tree.
+
+```csharp
+public bool Inherits { get; set; }
+```
+
+#### Remarks
+
+Cannot be used with [Avalonia.GeneratedAttachedPropertyAttribute.AddOwnerFrom](xref:Avalonia.GeneratedAttachedPropertyAttribute.AddOwnerFrom).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a7f6ad2997"></span>
+
+### ValidateMethodName Property
+
+The name of the validation method, with signature
+`static bool {Method}(T value)`. Pass via `nameof(...)`.
+Declare it as an `private static` method on the same type.
+
+```csharp
+public string ValidateMethodName { get; set; }
+```
+
+#### Remarks
+
+Cannot be used with [Avalonia.GeneratedAttachedPropertyAttribute.AddOwnerFrom](xref:Avalonia.GeneratedAttachedPropertyAttribute.AddOwnerFrom).
+
+</section>
+
+</ApiRefPage>
+

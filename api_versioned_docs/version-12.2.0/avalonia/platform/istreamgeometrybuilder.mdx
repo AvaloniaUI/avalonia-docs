@@ -1,0 +1,89 @@
+---
+title: 'IStreamGeometryBuilder'
+hide_title: true
+slug: '/avalonia/platform/istreamgeometrybuilder'
+uid: 'Avalonia.Platform.IStreamGeometryBuilder'
+commentId: 'T:Avalonia.Platform.IStreamGeometryBuilder'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IStreamGeometryBuilder Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Builds a geometry using drawing commands.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IStreamGeometryBuilder
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="igeometrycontext">IGeometryContext</a>, IDisposable
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [ToGeometry](#uid-da39c95eef) | Creates the geometry described by the commands issued so far. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da39c95eef"></span>
+
+### ToGeometry Method
+
+Creates the geometry described by the commands issued so far.
+
+```csharp
+public Avalonia.Platform.IGeometryImpl ToGeometry()
+```
+
+#### Returns
+
+[Avalonia.Platform.IGeometryImpl](xref:Avalonia.Platform.IGeometryImpl)
+
+The resulting geometry, which is immutable.
+
+
+#### Remarks
+
+This method can only be called once: the context can't be used afterwards, except to be disposed.
+
+</section>
+
+</ApiRefPage>
+

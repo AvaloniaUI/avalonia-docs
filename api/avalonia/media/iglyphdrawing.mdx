@@ -1,0 +1,143 @@
+---
+title: 'IGlyphDrawing'
+hide_title: true
+slug: '/avalonia/media/iglyphdrawing'
+uid: 'Avalonia.Media.IGlyphDrawing'
+commentId: 'T:Avalonia.Media.IGlyphDrawing'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IGlyphDrawing Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/IGlyphDrawing.cs">IGlyphDrawing.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a glyph that knows how to draw itself into a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IGlyphDrawing
+```
+
+</div>
+
+## Remarks
+
+Implementations are produced by the per-format renderers (color layers from
+COLR/CPAL, bitmap strikes from sbix/CBDT, etc.) and shielded behind this contract
+so callers can render any color glyph without caring which font-table format
+produced it. For plain outline glyphs, use `GlyphTypeface.GetGlyphOutline`
+instead — outlines are returned as [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) rather than via this
+interface.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Draw](#uid-ec44e8b3ff) | Draws the glyph into `context` at `origin`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec44e8b3ff"></span>
+
+### Draw Method
+
+Draws the glyph into `context` at `origin`.
+
+```csharp
+public void Draw(Avalonia.Media.DrawingContext context, Avalonia.Point origin)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context to render to.
+
+
+`origin` [Avalonia.Point](xref:Avalonia.Point)
+
+The drawing-space point (Y-down) at which the glyph's local origin should
+land. For text rendering this is typically the pen position on the baseline.
+Implementations apply the Y-flip from font-space (Y-up) internally, so
+callers don't need to flip `origin` themselves.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Bounds](#uid-0833938008) | Gets the axis-aligned bounding rectangle of the drawing, in drawing-space coordinates (Y-down). |
+| [Type](#uid-06fb9b6bbe) | Gets the format this drawing was produced from. Callers can use this to branch on rendering behaviour without downcasting. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0833938008"></span>
+
+### Bounds Property
+
+Gets the axis-aligned bounding rectangle of the drawing, in drawing-space
+coordinates (Y-down).
+
+```csharp
+public Avalonia.Rect Bounds { get; set; }
+```
+
+#### Remarks
+
+The rectangle is relative to the drawing's local origin. To get bounds at a
+specific paint location, translate by the origin passed to [Avalonia.Media.IGlyphDrawing.Draw(Avalonia.Media.DrawingContext,Avalonia.Point)](xref:Avalonia.Media.IGlyphDrawing.Draw%28Avalonia.Media.DrawingContext%2CAvalonia.Point%29).
+Implementations are expected to compute this once (e.g. from the font's clip
+box or layer extents) and cache it.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06fb9b6bbe"></span>
+
+### Type Property
+
+Gets the format this drawing was produced from. Callers can use this to
+branch on rendering behaviour without downcasting.
+
+```csharp
+public Avalonia.Media.GlyphDrawingType Type { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

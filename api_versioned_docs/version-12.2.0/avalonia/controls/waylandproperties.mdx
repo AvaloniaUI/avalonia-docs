@@ -1,0 +1,149 @@
+---
+title: 'WaylandProperties'
+hide_title: true
+slug: '/avalonia/controls/waylandproperties'
+uid: 'Avalonia.Controls.WaylandProperties'
+commentId: 'T:Avalonia.Controls.WaylandProperties'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">WaylandProperties Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Set of Wayland specific properties and events that allow deeper customization of the application per platform.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class WaylandProperties
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> WaylandProperties
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetAppId](#uid-e4386153bc) | Gets the value of the `AppId` attached property of the specified window. |
+| [SetAppId](#uid-4bbac25def) | Sets the value of the `AppId` attached property of the specified window. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4386153bc"></span>
+
+### GetAppId Method
+
+Gets the value of the `AppId` attached property of the specified window.
+
+```csharp
+public string GetAppId(Avalonia.Controls.Window obj)
+```
+
+#### Parameters
+
+`obj` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+The window.
+
+
+#### Returns
+
+string
+
+The application ID for `obj`.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4bbac25def"></span>
+
+### SetAppId Method
+
+Sets the value of the `AppId` attached property of the specified window.
+
+```csharp
+public void SetAppId(Avalonia.Controls.Window obj, string value)
+```
+
+#### Parameters
+
+`obj` [Avalonia.Controls.Window](xref:Avalonia.Controls.Window)
+
+The window.
+
+
+`value` string
+
+The application ID value to set.
+
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [AppIdProperty](#uid-f5ee7b3da9) | Defines the `AppId` attached property. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f5ee7b3da9"></span>
+
+### AppIdProperty Field
+
+Defines the `AppId` attached property.
+
+```csharp
+public Avalonia.AttachedProperty<string> AppIdProperty
+```
+
+#### Remarks
+
+Specifies the application ID (`app_id`) sent to the Wayland compositor via `xdg_toplevel`
+for window management, application identification, and window grouping.
+
+In Wayland environments, client windows do not directly provide their own window icons. Instead,
+compositors, docks, and taskbars resolve the application icon, launcher identity, and notifications by
+matching the `AppId` against the filename of the application's installed `.desktop` file
+(for example, using `org.example.myapp` to match `org.example.myapp.desktop`).
+
+</section>
+
+</ApiRefPage>
+

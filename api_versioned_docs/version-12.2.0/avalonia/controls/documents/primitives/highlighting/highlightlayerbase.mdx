@@ -1,0 +1,225 @@
+---
+title: 'HighlightLayerBase'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/highlighting/highlightlayerbase'
+uid: 'Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerBase'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Highlighting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">HighlightLayerBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Highlighting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for highlight layer implementations.
+Provides common functionality for managing and rendering highlight regions.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class HighlightLayerBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> HighlightLayerBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="selectionhighlightlayer">SelectionHighlightLayer</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ihighlightlayer">IHighlightLayer</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [GetRegions](#uid-144ab4b076) | Gets all highlight regions in this layer. |
+| [GetRegionsInRange](#uid-d2e912ad5d) | Gets highlight regions that intersect with the specified range. |
+| [Render](#uid-da49a17564) | Renders this layer. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-144ab4b076"></span>
+
+### GetRegions Method
+
+Gets all highlight regions in this layer.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion> GetRegions()
+```
+
+#### Returns
+
+System.Collections.Generic.IReadOnlyList&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion)&gt;
+
+A read-only list of highlight regions.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2e912ad5d"></span>
+
+### GetRegionsInRange Method
+
+Gets highlight regions that intersect with the specified range.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion> GetRegionsInRange(Avalonia.Controls.Documents.TextModel.TextPointer start, Avalonia.Controls.Documents.TextModel.TextPointer end)
+```
+
+#### Parameters
+
+`start` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The start position of the range.
+
+
+`end` [Avalonia.Controls.Documents.TextModel.TextPointer](xref:Avalonia.Controls.Documents.TextModel.TextPointer)
+
+The end position of the range.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightRegion)&gt;
+
+An enumerable of regions that intersect with the range.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-da49a17564"></span>
+
+### Render Method
+
+Renders this layer.
+
+```csharp
+public void Render(Avalonia.Media.DrawingContext context, Avalonia.Controls.Documents.Primitives.ITextView textView)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`textView` [Avalonia.Controls.Documents.Primitives.ITextView](xref:Avalonia.Controls.Documents.Primitives.ITextView)
+
+The text view for coordinate mapping.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsVisible](#uid-cd67c451b3) | Gets or sets a value indicating whether this layer is currently visible. |
+| [Name](#uid-48a5e007e0) | Gets the name that identifies this layer within a [Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection), which rejects a second layer carrying the same one and looks layers up by it. |
+| [ZIndex](#uid-82f2b21bb7) | Gets the Z-index for rendering order (higher = on top). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd67c451b3"></span>
+
+### IsVisible Property
+
+Gets or sets a value indicating whether this layer is currently visible.
+
+```csharp
+public bool IsVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-48a5e007e0"></span>
+
+### Name Property
+
+Gets the name that identifies this layer within a
+[Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection](xref:Avalonia.Controls.Documents.Primitives.Highlighting.HighlightLayerCollection), which rejects a second layer
+carrying the same one and looks layers up by it.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-82f2b21bb7"></span>
+
+### ZIndex Property
+
+Gets the Z-index for rendering order (higher = on top).
+
+```csharp
+public int ZIndex { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [RegionsChanged](#uid-29ba96f891) | Event raised when regions change. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29ba96f891"></span>
+
+### RegionsChanged Event
+
+Event raised when regions change.
+
+```csharp
+public event EventHandler RegionsChanged
+```
+
+</section>
+
+</ApiRefPage>
+

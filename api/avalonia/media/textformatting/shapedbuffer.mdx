@@ -161,6 +161,7 @@ The split result.
 | --- | --- |
 | [BidiLevel](#uid-5ded254761) | The buffer's bidi level. |
 | [FontRenderingEmSize](#uid-5c7c9ef6ae) | The buffers font rendering em size. |
+| [GlyphIndices](#uid-c501505286) | Contiguous view of the glyph indices for this buffer, kept in sync with [Avalonia.Media.TextFormatting.ShapedBuffer.GlyphInfos](xref:Avalonia.Media.TextFormatting.ShapedBuffer.GlyphInfos) by the indexer setter. Consumers needing a [ReadOnlySpan&lt;T&gt;](xref:System.ReadOnlySpan%601) of glyph IDs (e.g. for `GlyphTypeface.TryGetGlyphBounds` or `SKFont.GetGlyphWidths`) can use this directly without allocating a parallel array. |
 | [GlyphTypeface](#uid-9c4431840f) | The buffer's glyph typeface. |
 | [IsLeftToRight](#uid-980dd70041) | The buffer's reading direction. |
 | [Item](#uid-f74462311e) | No summary available. |
@@ -191,6 +192,25 @@ The buffers font rendering em size.
 
 ```csharp
 public double FontRenderingEmSize { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c501505286"></span>
+
+### GlyphIndices Property
+
+Contiguous view of the glyph indices for this buffer, kept in sync with
+[Avalonia.Media.TextFormatting.ShapedBuffer.GlyphInfos](xref:Avalonia.Media.TextFormatting.ShapedBuffer.GlyphInfos) by the indexer setter. Consumers needing a
+[ReadOnlySpan&lt;T&gt;](xref:System.ReadOnlySpan%601) of glyph IDs (e.g. for
+`GlyphTypeface.TryGetGlyphBounds` or
+`SKFont.GetGlyphWidths`) can use this directly without allocating
+a parallel array.
+
+```csharp
+public ReadOnlySpan<ushort> GlyphIndices { get; set; }
 ```
 
 </section>

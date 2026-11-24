@@ -85,10 +85,12 @@ public AvaloniaView()
 | [AccessibilityElementCount](#uid-bf8258776b) | No summary available. |
 | [BecomeFirstResponder](#uid-a7a180a483) | No summary available. |
 | [GetAccessibilityElementAt](#uid-c33fbc2973) | No summary available. |
+| [GetAccessibilityElements](#uid-506722b0c8) | No summary available. |
 | [GetIndexOfAccessibilityElement](#uid-30c3b1f13f) | No summary available. |
 | [InitWithController](#uid-87954b4c1f) | No summary available. |
 | [LayerClass](#uid-ba18894f18) | No summary available. |
 | [LayoutSubviews](#uid-335734b34b) | No summary available. |
+| [MovedToWindow](#uid-b7f57f1fbf) | No summary available. |
 | [PressesBegan](#uid-031bfb47b7) | No summary available. |
 | [PressesCancelled](#uid-1b651a6c78) | No summary available. |
 | [PressesChanged](#uid-a3d6edc4b1) | No summary available. |
@@ -100,6 +102,7 @@ public AvaloniaView()
 | [TouchesEnded](#uid-a78dc00726) | No summary available. |
 | [TouchesMoved](#uid-793adf9321) | No summary available. |
 | [TraitCollectionDidChange](#uid-7e9b099e33) | No summary available. |
+| [WillMoveToWindow](#uid-25e4849609) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -149,6 +152,23 @@ public Foundation.NSObject GetAccessibilityElementAt(IntPtr index)
 
 `index` IntPtr
 
+
+#### Returns
+
+Foundation.NSObject
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-506722b0c8"></span>
+
+### GetAccessibilityElements Method
+
+```csharp
+public Foundation.NSObject GetAccessibilityElements()
+```
 
 #### Returns
 
@@ -226,6 +246,18 @@ ObjCRuntime.Class
 
 ```csharp
 public void LayoutSubviews()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b7f57f1fbf"></span>
+
+### MovedToWindow Method
+
+```csharp
+public void MovedToWindow()
 ```
 
 </section>
@@ -432,6 +464,23 @@ public void TraitCollectionDidChange(UIKit.UITraitCollection previousTraitCollec
 #### Parameters
 
 `previousTraitCollection` UIKit.UITraitCollection
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25e4849609"></span>
+
+### WillMoveToWindow Method
+
+```csharp
+public void WillMoveToWindow(UIKit.UIWindow window)
+```
+
+#### Parameters
+
+`window` UIKit.UIWindow
 
 
 </section>

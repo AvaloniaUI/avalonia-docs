@@ -1,0 +1,228 @@
+---
+title: 'UnderlineStyle'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/underlinestyle'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UnderlineStyle Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The line style of an underline. Qualifies an underline that
+[Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) has already switched on; it never switches one on
+by itself, so a value here with no [Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) flag draws nothing.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum UnderlineStyle
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> UnderlineStyle
+</div>
+</div>
+
+## Remarks
+
+A null [Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.UnderlineStyle](xref:Avalonia.Controls.Documents.TextModel.Formatting.InlineFormatting.UnderlineStyle) means unset and draws as
+[Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single). Null stays distinct from an explicit [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single) so that
+merging formatting down an inline chain keeps the `child ?? parent` idiom: an unset child
+takes the ancestor's style, while a child that says [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single) overrides it.
+
+The values cover the underline variants RTF and DOCX can express, so a document that carries
+one survives an edit instead of degrading to a plain underline.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [DashDot](#uid-875d5da0e7) | An alternating dash-dot line. |
+| [DashDotDot](#uid-73628a4118) | An alternating dash-dot-dot line. |
+| [Dashed](#uid-c6ae1b958a) | A dashed line. |
+| [Dotted](#uid-9e0e949b90) | A dotted line. |
+| [Double](#uid-29bb0e82ec) | Two parallel solid lines. |
+| [None](#uid-f76fa1965d) | No underline style. Distinct from an unset (null) style: it records that the source explicitly said "no style", which is what RTF `\ulnone` and DOCX `w:val="none"` produce. Those also leave [Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) off, so nothing draws. |
+| [Single](#uid-05f4b6d824) | A single solid line. |
+| [Thick](#uid-876d4452b1) | A single line of increased thickness. |
+| [Wave](#uid-a27dc9939b) | A wavy line. Approximated when drawn, because a text decoration is a straight stroke. |
+| [Word](#uid-453eeddde3) | Words are underlined but the spaces between them are not. A scope rather than a line style, so it draws as [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-875d5da0e7"></span>
+
+### DashDot Field
+
+An alternating dash-dot line.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle DashDot
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73628a4118"></span>
+
+### DashDotDot Field
+
+An alternating dash-dot-dot line.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle DashDotDot
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6ae1b958a"></span>
+
+### Dashed Field
+
+A dashed line.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Dashed
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9e0e949b90"></span>
+
+### Dotted Field
+
+A dotted line.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Dotted
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-29bb0e82ec"></span>
+
+### Double Field
+
+Two parallel solid lines.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Double
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f76fa1965d"></span>
+
+### None Field
+
+No underline style. Distinct from an unset (null) style: it records that the source
+explicitly said "no style", which is what RTF `\ulnone` and DOCX `w:val="none"`
+produce. Those also leave [Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline](xref:Avalonia.Controls.Documents.TextModel.Formatting.TextDecorationFlags.Underline) off, so nothing draws.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05f4b6d824"></span>
+
+### Single Field
+
+A single solid line.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Single
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-876d4452b1"></span>
+
+### Thick Field
+
+A single line of increased thickness.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Thick
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a27dc9939b"></span>
+
+### Wave Field
+
+A wavy line. Approximated when drawn, because a text decoration is a straight stroke.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Wave
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-453eeddde3"></span>
+
+### Word Field
+
+Words are underlined but the spaces between them are not. A scope rather than a line style,
+so it draws as [Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single](xref:Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle.Single).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.UnderlineStyle Word
+```
+
+</section>
+
+</ApiRefPage>
+

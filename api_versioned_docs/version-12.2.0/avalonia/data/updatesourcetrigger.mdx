@@ -1,0 +1,125 @@
+---
+title: 'UpdateSourceTrigger'
+hide_title: true
+slug: '/avalonia/data/updatesourcetrigger'
+uid: 'Avalonia.Data.UpdateSourceTrigger'
+commentId: 'T:Avalonia.Data.UpdateSourceTrigger'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">UpdateSourceTrigger Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes the timing of binding source updates.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum UpdateSourceTrigger
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> UpdateSourceTrigger
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Default](#uid-06aed589ee) | The default [Avalonia.Data.UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger) value of the binding target property. This currently defaults to [Avalonia.Data.UpdateSourceTrigger.PropertyChanged](xref:Avalonia.Data.UpdateSourceTrigger.PropertyChanged). |
+| [Explicit](#uid-ebbc6f7463) | Updates the binding source only when you call the [Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method. |
+| [LostFocus](#uid-f97bb78415) | Updates the binding source whenever the binding target element loses focus. |
+| [PropertyChanged](#uid-cd9510bdb3) | Updates the binding source immediately whenever the binding target property changes. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-06aed589ee"></span>
+
+### Default Field
+
+The default [Avalonia.Data.UpdateSourceTrigger](xref:Avalonia.Data.UpdateSourceTrigger) value of the binding target property.
+This currently defaults to [Avalonia.Data.UpdateSourceTrigger.PropertyChanged](xref:Avalonia.Data.UpdateSourceTrigger.PropertyChanged).
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger Default
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebbc6f7463"></span>
+
+### Explicit Field
+
+Updates the binding source only when you call the
+[Avalonia.Data.BindingExpressionBase.UpdateSource](xref:Avalonia.Data.BindingExpressionBase.UpdateSource) method.
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger Explicit
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f97bb78415"></span>
+
+### LostFocus Field
+
+Updates the binding source whenever the binding target element loses focus.
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger LostFocus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cd9510bdb3"></span>
+
+### PropertyChanged Field
+
+Updates the binding source immediately whenever the binding target property changes.
+
+```csharp
+public Avalonia.Data.UpdateSourceTrigger PropertyChanged
+```
+
+</section>
+
+</ApiRefPage>
+

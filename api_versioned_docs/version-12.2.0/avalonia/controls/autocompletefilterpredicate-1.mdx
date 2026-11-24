@@ -1,0 +1,172 @@
+---
+title: 'AutoCompleteFilterPredicate<T>'
+hide_title: true
+slug: '/avalonia/controls/autocompletefilterpredicate-1'
+uid: 'Avalonia.Controls.AutoCompleteFilterPredicate`1'
+commentId: 'T:Avalonia.Controls.AutoCompleteFilterPredicate`1'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Delegate'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">AutoCompleteFilterPredicate&lt;T&gt; Delegate</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the filter used by the
+[Avalonia.Controls.AutoCompleteBox](xref:Avalonia.Controls.AutoCompleteBox) control to
+determine whether an item is a possible match for the specified text.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public delegate AutoCompleteFilterPredicate<T>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> MulticastDelegate <span className="apiref-page__relation-separator">-&gt;</span> AutoCompleteFilterPredicate&lt;T&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [AutoCompleteFilterPredicate&lt;T&gt;](#uid-be086b96a6) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be086b96a6"></span>
+
+### AutoCompleteFilterPredicate&lt;T&gt; Constructor
+
+```csharp
+public AutoCompleteFilterPredicate<T>(object object, IntPtr method)
+```
+
+#### Parameters
+
+`object` object
+
+
+`method` IntPtr
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [BeginInvoke](#uid-a90cb946a8) | No summary available. |
+| [EndInvoke](#uid-a09e76fa89) | No summary available. |
+| [Invoke](#uid-f942fc608a) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a90cb946a8"></span>
+
+### BeginInvoke Method
+
+```csharp
+public IAsyncResult BeginInvoke(string search, T item, AsyncCallback callback, object object)
+```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+`callback` AsyncCallback
+
+
+`object` object
+
+
+#### Returns
+
+IAsyncResult
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a09e76fa89"></span>
+
+### EndInvoke Method
+
+```csharp
+public bool EndInvoke(IAsyncResult result)
+```
+
+#### Parameters
+
+`result` IAsyncResult
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f942fc608a"></span>
+
+### Invoke Method
+
+```csharp
+public bool Invoke(string search, T item)
+```
+
+#### Parameters
+
+`search` string
+
+
+`item` T
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+</ApiRefPage>
+

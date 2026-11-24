@@ -62,10 +62,56 @@ public class ObjectConverters
 
 | Name | Description |
 | --- | --- |
+| [AreAllEqual](#uid-5edf0f1cfc) | A multi-value converter that returns true if all inputs are equal to each other. Null values are not considered equal to anything since they don't have Equals method. |
+| [AreAllNull](#uid-0fa77495bf) | A multi-value converter that returns true if all inputs are null. |
+| [AreAnyNull](#uid-53ad48daed) | A multi-value converter that returns true if at least one input is null. |
 | [Equal](#uid-b8b3bdf146) | A value converter that returns true if the input object is equal to a parameter object. |
 | [IsNotNull](#uid-de9d01a84f) | A value converter that returns true if the input object is not null. |
 | [IsNull](#uid-7d80d3d4a4) | A value converter that returns true if the input object is a null reference. |
 | [NotEqual](#uid-baab3ae999) | A value converter that returns true if the input object is not equal to a parameter object. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5edf0f1cfc"></span>
+
+### AreAllEqual Field
+
+A multi-value converter that returns true if all inputs are equal to each other.
+Null values are not considered equal to anything since they don't have Equals method.
+
+```csharp
+public Avalonia.Data.Converters.IMultiValueConverter AreAllEqual
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0fa77495bf"></span>
+
+### AreAllNull Field
+
+A multi-value converter that returns true if all inputs are null.
+
+```csharp
+public Avalonia.Data.Converters.IMultiValueConverter AreAllNull
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-53ad48daed"></span>
+
+### AreAnyNull Field
+
+A multi-value converter that returns true if at least one input is null.
+
+```csharp
+public Avalonia.Data.Converters.IMultiValueConverter AreAnyNull
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 

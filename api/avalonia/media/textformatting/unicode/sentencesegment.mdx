@@ -1,0 +1,122 @@
+---
+title: 'SentenceSegment'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/sentencesegment'
+uid: 'Avalonia.Media.TextFormatting.Unicode.SentenceSegment'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.SentenceSegment'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SentenceSegment Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/TextFormatting/Unicode/SentenceSegment.cs">SentenceSegment.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a segment between two Unicode sentence boundaries (UAX #29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SentenceSegment
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SentenceSegment
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SentenceSegment](#uid-e4cb82e082) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e4cb82e082"></span>
+
+### SentenceSegment Constructor
+
+```csharp
+public SentenceSegment(int offset, ReadOnlySpan<char> text)
+```
+
+#### Parameters
+
+`offset` int
+
+
+`text` ReadOnlySpan&lt;char&gt;
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Offset](#uid-3b9b8196b5) | Gets the segment start offset in UTF-16 code units within the source span. |
+| [Text](#uid-ebff440a47) | Gets the text content of this segment as a slice of the source span. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3b9b8196b5"></span>
+
+### Offset Property
+
+Gets the segment start offset in UTF-16 code units within the source span.
+
+```csharp
+public int Offset { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ebff440a47"></span>
+
+### Text Property
+
+Gets the text content of this segment as a slice of the source span.
+
+```csharp
+public ReadOnlySpan<char> Text { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

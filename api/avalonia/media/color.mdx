@@ -57,7 +57,7 @@ public struct Color
 <span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> Color
 </div>
 <div className="apiref-page__meta-row">
-<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Color&gt;
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;Color&gt;, IFormattable
 </div>
 </div>
 
@@ -115,7 +115,7 @@ The blue component.
 | [Parse (2 overloads)](#uid-5ca4765242) | No summary available. |
 | [ToHsl (2 overloads)](#uid-d769ee9358) | Returns the HSL color model equivalent of this RGB color. |
 | [ToHsv (2 overloads)](#uid-27b49b139b) | Returns the HSV color model equivalent of this RGB color. |
-| [ToString](#uid-0fad8fd540) | Returns the string representation of the color. |
+| [ToString (2 overloads)](#uid-976550a2e3) | Returns the string representation of the color. |
 | [ToUInt32](#uid-7a7df0058c) | Returns the integer representation of the color. |
 | [TryParse (2 overloads)](#uid-7415fd8e5e) | No summary available. |
 
@@ -483,11 +483,15 @@ A new [Avalonia.Media.HsvColor](xref:Avalonia.Media.HsvColor) equivalent to the 
 
 </section>
 
+<span id="uid-976550a2e3"></span>
+
+### ToString overloads
+
 <section className="apiref-page__member-entry">
 
 <span id="uid-0fad8fd540"></span>
 
-### ToString Method
+#### ToString Method
 
 Returns the string representation of the color.
 
@@ -495,12 +499,63 @@ Returns the string representation of the color.
 public string ToString()
 ```
 
-#### Returns
+##### Returns
 
 string
 
 The string representation of the color.
 
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ec28c33239"></span>
+
+#### ToString Method
+
+Returns a formatted string representation of the color.
+
+```csharp
+public string ToString(string format, IFormatProvider formatProvider)
+```
+
+##### Parameters
+
+`format` string
+
+The format specifier. All color types support all specifiers via auto-conversion.
+Uppercase includes alpha, lowercase excludes it. `%` suffix = percent mode:
+
+- `null` or `""` — Default (known name or `#aarrggbb`)
+- `"X"` — XAML hex with alpha: `#AARRGGBB`
+- `"x"` — Hex without alpha: `#RRGGBB`
+- `"H"` — HTML hex with alpha: `#RRGGBBAA`
+- `"R"` — CSS rgba absolute: `rgba(r, g, b, a)`
+- `"r"` — CSS rgb absolute: `rgb(r, g, b)`
+- `"R%"` — CSS rgba percent: `rgba(r%, g%, b%, a%)`
+- `"r%"` — CSS rgb percent: `rgb(r%, g%, b%)`
+- `"L"/"l"/"L%"/"l%"` — CSS hsl/hsla (auto-converts to HSL)
+- `"V"/"v"/"V%"/"v%"` — CSS hsv/hsva (auto-converts to HSV)
+
+`"C"` and `"A"` are reserved for future complex format strings.
+
+
+`formatProvider` IFormatProvider
+
+Ignored. Color formatting is culture-invariant.
+
+
+##### Returns
+
+string
+
+The formatted string representation.
+
+
+##### Exceptions
+
+- [Thrown when \`format\` is not recognized.](xref:System.FormatException)
 
 </section>
 

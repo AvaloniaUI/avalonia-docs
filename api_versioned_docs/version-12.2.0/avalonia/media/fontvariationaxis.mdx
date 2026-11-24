@@ -1,0 +1,361 @@
+---
+title: 'FontVariationAxis'
+hide_title: true
+slug: '/avalonia/media/fontvariationaxis'
+uid: 'Avalonia.Media.FontVariationAxis'
+commentId: 'T:Avalonia.Media.FontVariationAxis'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontVariationAxis Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Describes a single variation axis declared by a variable font's `fvar` table.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FontVariationAxis
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontVariationAxis
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontVariationAxis&gt;
+</div>
+</div>
+
+## Remarks
+
+Variation axes are the design dimensions a variable font exposes — typical examples
+include `wght` (weight, 1..1000), `wdth` (width, percentage), `opsz`
+(optical size, points), `ital` (italic, 0..1), and `slnt` (slant, degrees).
+
+Values are in user-space: the same values the font designer chose to expose to
+end users (e.g. weight `700` for "Bold"). The platform-neutral
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings) also speaks user-space values; they are
+normalized into `[-1, 1]` through the font's `fvar` / `avar` tables
+per font when the settings are applied.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontVariationAxis](#uid-d917aa9595) | Describes a single variation axis declared by a variable font's `fvar` table. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d917aa9595"></span>
+
+### FontVariationAxis Constructor
+
+Describes a single variation axis declared by a variable font's `fvar` table.
+
+```csharp
+public FontVariationAxis(Avalonia.Media.Fonts.OpenTypeTag Tag, string Name, float MinimumValue, float DefaultValue, float MaximumValue, bool IsHidden)
+```
+
+#### Parameters
+
+`Tag` [Avalonia.Media.Fonts.OpenTypeTag](xref:Avalonia.Media.Fonts.OpenTypeTag)
+
+The four-character OpenType axis tag (e.g. `wght`).
+
+
+`Name` string
+
+A human-readable axis name resolved from the font's `name` table. Falls back to the
+tag's string form when no name record is available.
+
+
+`MinimumValue` float
+
+The minimum allowed user-space value for this axis.
+
+
+`DefaultValue` float
+
+The default user-space value (selected when no variation is applied).
+
+
+`MaximumValue` float
+
+The maximum allowed user-space value for this axis.
+
+
+`IsHidden` bool
+
+`true` if the font designer flagged this axis as hidden (intended for internal use
+rather than direct user exposure). Hidden axes are typically still functional but should
+not be surfaced in a font-picker UI.
+
+
+#### Remarks
+
+Variation axes are the design dimensions a variable font exposes — typical examples
+include `wght` (weight, 1..1000), `wdth` (width, percentage), `opsz`
+(optical size, points), `ital` (italic, 0..1), and `slnt` (slant, degrees).
+
+Values are in user-space: the same values the font designer chose to expose to
+end users (e.g. weight `700` for "Bold"). The platform-neutral
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings) also speaks user-space values; they are
+normalized into `[-1, 1]` through the font's `fvar` / `avar` tables
+per font when the settings are applied.
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-6f2266920c) | No summary available. |
+| [Equals (2 overloads)](#uid-7afffecda9) | No summary available. |
+| [GetHashCode](#uid-1c71d23f47) | No summary available. |
+| [ToString](#uid-81e8fc8b92) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6f2266920c"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Media.Fonts.OpenTypeTag& Tag, string& Name, float& MinimumValue, float& DefaultValue, float& MaximumValue, bool& IsHidden)
+```
+
+#### Parameters
+
+`Tag` [Avalonia.Media.Fonts.OpenTypeTag](xref:Avalonia.Media.Fonts.OpenTypeTag)&amp;
+
+
+`Name` string&amp;
+
+
+`MinimumValue` float&amp;
+
+
+`DefaultValue` float&amp;
+
+
+`MaximumValue` float&amp;
+
+
+`IsHidden` bool&amp;
+
+
+</section>
+
+<span id="uid-7afffecda9"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bc5834c82f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.FontVariationAxis other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontVariationAxis](xref:Avalonia.Media.FontVariationAxis)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-17f9c1cd1e"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1c71d23f47"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-81e8fc8b92"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [DefaultValue](#uid-fbaeaee37c) | The default user-space value (selected when no variation is applied). |
+| [IsHidden](#uid-b505489077) | `true` if the font designer flagged this axis as hidden (intended for internal use rather than direct user exposure). Hidden axes are typically still functional but should not be surfaced in a font-picker UI. |
+| [MaximumValue](#uid-d5ebc3cc6d) | The maximum allowed user-space value for this axis. |
+| [MinimumValue](#uid-dfc097457f) | The minimum allowed user-space value for this axis. |
+| [Name](#uid-c55b3fec51) | A human-readable axis name resolved from the font's `name` table. Falls back to the tag's string form when no name record is available. |
+| [Tag](#uid-290fcbb7bc) | The four-character OpenType axis tag (e.g. `wght`). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fbaeaee37c"></span>
+
+### DefaultValue Property
+
+The default user-space value (selected when no variation is applied).
+
+```csharp
+public float DefaultValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b505489077"></span>
+
+### IsHidden Property
+
+`true` if the font designer flagged this axis as hidden (intended for internal use
+rather than direct user exposure). Hidden axes are typically still functional but should
+not be surfaced in a font-picker UI.
+
+```csharp
+public bool IsHidden { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5ebc3cc6d"></span>
+
+### MaximumValue Property
+
+The maximum allowed user-space value for this axis.
+
+```csharp
+public float MaximumValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dfc097457f"></span>
+
+### MinimumValue Property
+
+The minimum allowed user-space value for this axis.
+
+```csharp
+public float MinimumValue { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c55b3fec51"></span>
+
+### Name Property
+
+A human-readable axis name resolved from the font's `name` table. Falls back to the
+tag's string form when no name record is available.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-290fcbb7bc"></span>
+
+### Tag Property
+
+The four-character OpenType axis tag (e.g. `wght`).
+
+```csharp
+public Avalonia.Media.Fonts.OpenTypeTag Tag { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

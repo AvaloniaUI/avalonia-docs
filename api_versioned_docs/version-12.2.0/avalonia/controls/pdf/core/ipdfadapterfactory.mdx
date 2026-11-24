@@ -1,0 +1,112 @@
+---
+title: 'IPdfAdapterFactory'
+hide_title: true
+slug: '/avalonia/controls/pdf/core/ipdfadapterfactory'
+uid: 'Avalonia.Controls.Pdf.Core.IPdfAdapterFactory'
+commentId: 'T:Avalonia.Controls.Pdf.Core.IPdfAdapterFactory'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.PdfViewer'
+assembly: 'Avalonia.Controls.PdfViewer'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Pdf.Core'
+tfms:
+  - 'net10.0-ios26.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPdfAdapterFactory Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Pdf.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.PdfViewer</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Factory for creating platform-specific PDF adapters.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPdfAdapterFactory
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [CreateAdapter](#uid-9a3387a246) | Creates a new adapter instance. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9a3387a246"></span>
+
+### CreateAdapter Method
+
+Creates a new adapter instance.
+
+```csharp
+public Avalonia.Controls.Pdf.Core.IPdfAdapter CreateAdapter()
+```
+
+#### Returns
+
+[Avalonia.Controls.Pdf.Core.IPdfAdapter](xref:Avalonia.Controls.Pdf.Core.IPdfAdapter)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsSupported](#uid-312dede108) | Gets whether this factory can create adapters on the current platform. |
+| [Priority](#uid-f0eadc2750) | Gets the priority of this factory (higher = preferred). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-312dede108"></span>
+
+### IsSupported Property
+
+Gets whether this factory can create adapters on the current platform.
+
+```csharp
+public bool IsSupported { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f0eadc2750"></span>
+
+### Priority Property
+
+Gets the priority of this factory (higher = preferred).
+
+```csharp
+public int Priority { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

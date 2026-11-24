@@ -155,6 +155,7 @@ public Avalonia.Platform.IPlatformRenderInterfaceImportedSemaphore ImportSemapho
 | --- | --- |
 | [DeviceLuid](#uid-50b8b6c55d) | No summary available. |
 | [DeviceUuid](#uid-eaceb219d1) | No summary available. |
+| [SupportedDmaBufFormats](#uid-b0fbf20793) | Returns the DRM format/modifier pairs the current GPU backend can import as [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) images, or null when the backend cannot enumerate them. |
 | [SupportedImageHandleTypes](#uid-7d19d9997b) | Returns the list of image handle types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes) |
 | [SupportedSemaphoreTypes](#uid-cd6e7bd9dc) | Returns the list of semaphore types supported by the current GPU backend, see [Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes](xref:Avalonia.Platform.KnownPlatformGraphicsExternalSemaphoreHandleTypes) |
 
@@ -178,6 +179,22 @@ public byte[] DeviceLuid { get; set; }
 
 ```csharp
 public byte[] DeviceUuid { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b0fbf20793"></span>
+
+### SupportedDmaBufFormats Property
+
+Returns the DRM format/modifier pairs the current GPU backend can import as
+[Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor](xref:Avalonia.Platform.KnownPlatformGraphicsExternalImageHandleTypes.DmaBufFileDescriptor) images,
+or null when the backend cannot enumerate them.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Platform.PlatformGraphicsDrmFormat> SupportedDmaBufFormats { get; set; }
 ```
 
 </section>

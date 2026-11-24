@@ -163,6 +163,12 @@ Gets the designed weight of the font represented by the [Avalonia.Media.IPlatfor
 public Avalonia.Media.FontWeight Weight { get; set; }
 ```
 
+#### Remarks
+
+A typeface the platform font manager matched to a request it satisfies with
+[Avalonia.Media.IPlatformTypeface.FontSimulations](xref:Avalonia.Media.IPlatformTypeface.FontSimulations) stands for the requested face, so it reports the requested
+weight when it simulates bold and the requested style when it simulates a slant.
+
 </section>
 
 </ApiRefPage>

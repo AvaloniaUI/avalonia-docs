@@ -1,0 +1,190 @@
+---
+title: 'ClrPropertyInfo<TSource, TValue>'
+hide_title: true
+slug: '/avalonia/data/core/clrpropertyinfo-2'
+uid: 'Avalonia.Data.Core.ClrPropertyInfo`2'
+commentId: 'T:Avalonia.Data.Core.ClrPropertyInfo`2'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Data.Core'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ClrPropertyInfo&lt;TSource, TValue&gt; Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Data.Core</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class ClrPropertyInfo<TSource, TValue>
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> ClrPropertyInfo&lt;TSource, TValue&gt;
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="ipropertyinfo">IPropertyInfo</a>, IPropertyInfo&lt;,&lt;T&gt;&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [ClrPropertyInfo&lt;TSource, TValue&gt;](#uid-0de0fc59ea) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0de0fc59ea"></span>
+
+### ClrPropertyInfo&lt;TSource, TValue&gt; Constructor
+
+```csharp
+public ClrPropertyInfo<TSource, TValue>(string name, Func<TSource, TValue> getter, Action<TSource, TValue> setter)
+```
+
+#### Parameters
+
+`name` string
+
+
+`getter` Func&lt;TSource, TValue&gt;
+
+
+`setter` Action&lt;TSource, TValue&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Get](#uid-9db4269789) | No summary available. |
+| [Set](#uid-d89de73efa) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9db4269789"></span>
+
+### Get Method
+
+```csharp
+public TValue Get(TSource target)
+```
+
+#### Parameters
+
+`target` TSource
+
+
+#### Returns
+
+TValue
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d89de73efa"></span>
+
+### Set Method
+
+```csharp
+public void Set(TSource target, TValue value)
+```
+
+#### Parameters
+
+`target` TSource
+
+
+`value` TValue
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [CanGet](#uid-bad0dc4631) | No summary available. |
+| [CanSet](#uid-f40adce594) | No summary available. |
+| [Name](#uid-c4d3fd9620) | No summary available. |
+| [PropertyType](#uid-3f51009d3b) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bad0dc4631"></span>
+
+### CanGet Property
+
+```csharp
+public bool CanGet { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f40adce594"></span>
+
+### CanSet Property
+
+```csharp
+public bool CanSet { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c4d3fd9620"></span>
+
+### Name Property
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3f51009d3b"></span>
+
+### PropertyType Property
+
+```csharp
+public Type PropertyType { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

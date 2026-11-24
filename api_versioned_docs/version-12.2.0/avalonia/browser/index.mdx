@@ -1,0 +1,51 @@
+---
+title: 'Avalonia.Browser'
+hide_title: true
+slug: '/avalonia/browser'
+uid: 'Avalonia.Browser'
+commentId: 'N:Avalonia.Browser'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Browser'
+assembly: 'Avalonia.Browser'
+apiKind: 'Namespace'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Browser'
+tfms:
+  - 'net11.0-browser1.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">Browser Namespace</h1>
+
+<div className="apiref-page__lead">
+
+Namespace `Avalonia.Browser`
+
+</div>
+
+## Types
+
+- [AvaloniaView](avaloniaview.mdx)
+- [BrowserAppBuilder](browserappbuilder.mdx)
+- [BrowserInputLayout.ControlBlock](browserinputlayout-controlblock.mdx) - Addresses are absolute WASM addresses; the queue is empty when [Avalonia.Browser.BrowserInputLayout.ControlBlock.Head](xref:Avalonia.Browser.BrowserInputLayout.ControlBlock.Head) equals [Avalonia.Browser.BrowserInputLayout.ControlBlock.Tail](xref:Avalonia.Browser.BrowserInputLayout.ControlBlock.Tail).
+JS sets [Avalonia.Browser.BrowserInputLayout.ControlBlock.WakeRequested](xref:Avalonia.Browser.BrowserInputLayout.ControlBlock.WakeRequested) after publishing a tail and signals the dispatcher if it was clear;
+C# clears it before reading the tail, so a record published after the last read always gets a wake.
+- [BrowserInputLayout.DomKeyModifiers](browserinputlayout-domkeymodifiers.mdx)
+- [BrowserInputLayout.KeyRecord](browserinputlayout-keyrecord.mdx) - UTF-16 key[[Avalonia.Browser.BrowserInputLayout.KeyRecord.KeyLength](xref:Avalonia.Browser.BrowserInputLayout.KeyRecord.KeyLength)], then code[[Avalonia.Browser.BrowserInputLayout.KeyRecord.CodeLength](xref:Avalonia.Browser.BrowserInputLayout.KeyRecord.CodeLength)] follow.
+- [BrowserInputLayout.PointRecord](browserinputlayout-pointrecord.mdx)
+- [BrowserInputLayout.PointerRecord](browserinputlayout-pointerrecord.mdx) - [Avalonia.Browser.BrowserInputLayout.PointRecord](xref:Avalonia.Browser.BrowserInputLayout.PointRecord)[[Avalonia.Browser.BrowserInputLayout.PointerRecord.CoalescedCount](xref:Avalonia.Browser.BrowserInputLayout.PointerRecord.CoalescedCount)] follows, oldest first, excluding the primary point.
+- [BrowserInputLayout.PointerType](browserinputlayout-pointertype.mdx)
+- [BrowserInputLayout.RecordHeader](browserinputlayout-recordheader.mdx)
+- [BrowserInputLayout.RecordType](browserinputlayout-recordtype.mdx)
+- [BrowserInputLayout.SegmentHeader](browserinputlayout-segmentheader.mdx) - Precedes the records of every segment. Both fields stay 0 until JS seals the segment:
+it writes [Avalonia.Browser.BrowserInputLayout.SegmentHeader.End](xref:Avalonia.Browser.BrowserInputLayout.SegmentHeader.End), then [Avalonia.Browser.BrowserInputLayout.SegmentHeader.Next](xref:Avalonia.Browser.BrowserInputLayout.SegmentHeader.Next), then publishes a tail in the next segment.
+- [BrowserInputLayout.WheelRecord](browserinputlayout-wheelrecord.mdx) - Deltas are in DOM [Avalonia.Browser.BrowserInputLayout.WheelRecord.DeltaMode](xref:Avalonia.Browser.BrowserInputLayout.WheelRecord.DeltaMode) units; the page size is the event target's client size.
+- [BrowserPlatformOptions](browserplatformoptions.mdx)
+- [BrowserRenderingMode](browserrenderingmode.mdx)
+- [JSObjectControlHandle](jsobjectcontrolhandle.mdx)
+- [JSObjectPlatformHandle](jsobjectplatformhandle.mdx)
+</ApiRefPage>
+

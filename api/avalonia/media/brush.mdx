@@ -118,6 +118,7 @@ The [Avalonia.Media.Color](xref:Avalonia.Media.Color).
 | [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Opacity](#uid-56a58be17e) | Gets or sets the opacity of the brush. |
+| [RelativeTransform](#uid-f7096bbee7) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. |
 | [Transform](#uid-8d25869723) | Gets or sets the transform of the brush. |
 | [TransformOrigin](#uid-406d6c9e88) | Gets or sets the origin of the brush [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) |
 | [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
@@ -132,6 +133,24 @@ Gets or sets the opacity of the brush.
 
 ```csharp
 public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f7096bbee7"></span>
+
+### RelativeTransform Property
+
+Gets the transform applied in the relative coordinate space of the area being painted:
+the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside
+that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush
+express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox
+units, for example - without baking any one consumer's bounds into a matrix.
+
+```csharp
+public Avalonia.Media.ITransform RelativeTransform { get; set; }
 ```
 
 </section>
@@ -169,6 +188,7 @@ public Avalonia.RelativePoint TransformOrigin { get; set; }
 | Name | Description |
 | --- | --- |
 | [OpacityProperty](#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. |
+| [RelativeTransformProperty](#uid-e92f247126) | Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property. |
 | [TransformOriginProperty](#uid-3a3c0bc732) | Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property |
 | [TransformProperty](#uid-933d2c0564) | Defines the [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) property. |
 | [TransitionsProperty](../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../animation/animatable.mdx). |
@@ -183,6 +203,20 @@ Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) pr
 
 ```csharp
 public Avalonia.StyledProperty<TValue><double> OpacityProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e92f247126"></span>
+
+### RelativeTransformProperty Field
+
+Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property.
+
+```csharp
+public Avalonia.StyledProperty<TValue><Avalonia.Media.ITransform> RelativeTransformProperty
 ```
 
 </section>

@@ -1,0 +1,236 @@
+---
+title: 'PopupPositionerConstraintAdjustment'
+hide_title: true
+slug: '/avalonia/controls/primitives/popuppositioning/popuppositionerconstraintadjustment'
+uid: 'Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment'
+commentId: 'T:Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Primitives.PopupPositioning'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PopupPositionerConstraintAdjustment Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Primitives.PopupPositioning</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Defines how a popup position will be adjusted if the unadjusted position would result in
+the popup being partly constrained.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum PopupPositionerConstraintAdjustment
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> PopupPositionerConstraintAdjustment
+</div>
+</div>
+
+## Remarks
+
+Whether a popup is considered 'constrained' is left to the positioner to determine. For
+example, the popup may be partly outside the target platform defined 'work area', thus
+necessitating the popup's position be adjusted until it is entirely inside the work area.
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [All](#uid-bd444164a2) | No summary available. |
+| [FlipX](#uid-fc685a9208) | Invert the anchor and gravity on the x axis if the surface is constrained on the x axis. |
+| [FlipY](#uid-23f76e2bf2) | Invert the anchor and gravity on the y axis if the surface is constrained on the y axis. |
+| [None](#uid-ef20e4c52a) | Don't alter the surface position even if it is constrained on some axis, for example partially outside the edge of an output. |
+| [ResizeX](#uid-c87eafcdce) | Horizontally resize the surface |
+| [ResizeY](#uid-75fd72f902) | Vertically resize the surface |
+| [SlideX](#uid-6537111134) | Slide the surface along the x axis until it is no longer constrained. |
+| [SlideY](#uid-715cc76d91) | Slide the surface along the y axis until it is no longer constrained. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bd444164a2"></span>
+
+### All Field
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment All
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-fc685a9208"></span>
+
+### FlipX Field
+
+Invert the anchor and gravity on the x axis if the surface is constrained on the x axis.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment FlipX
+```
+
+#### Remarks
+
+For example, if the left edge of the surface is constrained, the gravity is 'left' and
+the anchor is 'left', change the gravity to 'right' and the anchor to 'right'.
+
+If the adjusted position also ends up being constrained, the resulting position of the
+FlipX adjustment will be the one before the adjustment.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-23f76e2bf2"></span>
+
+### FlipY Field
+
+Invert the anchor and gravity on the y axis if the surface is constrained on the y axis.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment FlipY
+```
+
+#### Remarks
+
+For example, if the bottom edge of the surface is constrained, the gravity is 'bottom'
+and the anchor is 'bottom', change the gravity to 'top' and the anchor to 'top'.
+
+The adjusted position is calculated given the original anchor rectangle and offset, but
+with the new flipped anchor and gravity values.
+
+If the adjusted position also ends up being constrained, the resulting position of the
+FlipY adjustment will be the one before the adjustment.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ef20e4c52a"></span>
+
+### None Field
+
+Don't alter the surface position even if it is constrained on some
+axis, for example partially outside the edge of an output.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment None
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c87eafcdce"></span>
+
+### ResizeX Field
+
+Horizontally resize the surface
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment ResizeX
+```
+
+#### Remarks
+
+Resize the surface horizontally so that it is completely unconstrained.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75fd72f902"></span>
+
+### ResizeY Field
+
+Vertically resize the surface
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment ResizeY
+```
+
+#### Remarks
+
+Resize the surface vertically so that it is completely unconstrained.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6537111134"></span>
+
+### SlideX Field
+
+Slide the surface along the x axis until it is no longer constrained.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment SlideX
+```
+
+#### Remarks
+
+First try to slide towards the direction of the gravity on the x axis until either the
+edge in the opposite direction of the gravity is unconstrained or the edge in the
+direction of the gravity is constrained.
+
+Then try to slide towards the opposite direction of the gravity on the x axis until
+either the edge in the direction of the gravity is unconstrained or the edge in the
+opposite direction of the gravity is constrained.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-715cc76d91"></span>
+
+### SlideY Field
+
+Slide the surface along the y axis until it is no longer constrained.
+
+```csharp
+public Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment SlideY
+```
+
+#### Remarks
+
+First try to slide towards the direction of the gravity on the y axis until either the
+edge in the opposite direction of the gravity is unconstrained or the edge in the
+direction of the gravity is constrained.
+
+Then try to slide towards the opposite direction of the gravity on the y axis until
+either the edge in the direction of the gravity is unconstrained or the edge in the
+opposite direction of the gravity is constrained.
+
+</section>
+
+</ApiRefPage>
+

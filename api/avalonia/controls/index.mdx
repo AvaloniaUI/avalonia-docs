@@ -149,6 +149,17 @@ and ColumnDefinitionCollection / RowDefinitionCollection
 - [FlatColorPalette.FlatColor](flatcolorpalette-flatcolor.mdx) - Defines all colors in the [Avalonia.Controls.FlatColorPalette](xref:Avalonia.Controls.FlatColorPalette).
 - [FlatHalfColorPalette](flathalfcolorpalette.mdx) - Implements half of the [Avalonia.Controls.FlatColorPalette](xref:Avalonia.Controls.FlatColorPalette) for improved usability.
 - [FlatTreeDataGridSource&lt;TModel&gt;](flattreedatagridsource-1.mdx) - A data source for a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) which displays a flat grid.
+- [Flex](flex.mdx) - Provides attached properties for controlling the layout behavior of child elements within a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel).
+- [FlexAlignContent](flexaligncontent.mdx) - Defines the alignment mode of the lines inside a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel) along the cross-axis.
+- [FlexAlignItems](flexalignitems.mdx) - Defines the alignment mode along the cross-axis of [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel) child items.
+- [FlexBasis](flexbasis.mdx) - Specifies the initial size of a flex item.
+- [FlexBasisKind](flexbasiskind.mdx) - Determines how [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) affects the size of the flex item
+- [FlexDirection](flexdirection.mdx) - Describes the orientation and direction along which items are placed inside the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel)
+- [FlexJustifyContent](flexjustifycontent.mdx) - Describes the main-axis alignment of items inside a [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel) line.
+- [FlexPanel](flexpanel.mdx) - A panel that arranges child controls using CSS FlexBox principles.
+It organizes child items in one or more lines along a main-axis (either row or column)
+and provides advanced control over their sizing and layout.
+- [FlexWrap](flexwrap.mdx) - Describes the wrap behavior of the [Avalonia.Controls.FlexPanel](xref:Avalonia.Controls.FlexPanel)
 - [FlowDocumentPageViewer](flowdocumentpageviewer.mdx) - A read-only viewer that displays a [Avalonia.Controls.Documents.FlowDocument](xref:Avalonia.Controls.Documents.FlowDocument) as discrete
 pages (Word's print layout), scrolled as a continuous vertical stack of sheets.
 Inherits the selection and copy behavior of [Avalonia.Controls.FlowDocumentScrollViewer](xref:Avalonia.Controls.FlowDocumentScrollViewer);
@@ -205,6 +216,8 @@ Can be used with [Avalonia.Controls.IResourceDictionary.ThemeDictionaries](xref:
 - [Image](image.mdx) - Displays a [Avalonia.Media.Imaging.Bitmap](xref:Avalonia.Media.Imaging.Bitmap) image.
 - [IndexPath](indexpath.mdx) - Represents a path of indexes used to identify a specific item in a hierarchical data
 structure. Each index in the path represents a level of depth in the hierarchy.
+- [InputPaneAwareBehavior](inputpaneawarebehavior.mdx) - Specifies the behavior [Avalonia.Controls.InputPaneAwareDecorator](xref:Avalonia.Controls.InputPaneAwareDecorator) takes when input pane state changes.
+- [InputPaneAwareDecorator](inputpaneawaredecorator.mdx) - A control that automatically adjusts its child position or height based on the input pane's height to ensure the content is visible.
 - [ItemCollection](itemcollection.mdx) - Holds the list of items that constitute the content of an [Avalonia.Controls.ItemsControl](xref:Avalonia.Controls.ItemsControl).
 - [ItemsControl](itemscontrol.mdx) - Displays a collection of items.
 - [ItemsSourceView](itemssourceview.mdx) - Represents a standardized view of the supported interactions between an items collection
@@ -267,12 +280,14 @@ at display refresh rate to avoid redundant work.
 - [NumericUpDownValueChangedEventArgs](numericupdownvaluechangedeventargs.mdx)
 - [Page](page.mdx) - Abstract base class for all page types.
 - [PageInsertedEventArgs](pageinsertedeventargs.mdx) - Provides data for the [Avalonia.Controls.NavigationPage.PageInserted](xref:Avalonia.Controls.NavigationPage.PageInserted) event.
+- [PageNavigationExtensions](pagenavigationextensions.mdx) - Provides extension methods for [Avalonia.Controls.INavigation](xref:Avalonia.Controls.INavigation) to simplify navigation operations.
 - [PageNavigationHost](pagenavigationhost.mdx) - A content control that hosts a root [Avalonia.Controls.PageNavigationHost.Page](xref:Avalonia.Controls.PageNavigationHost.Page), wires up safe-area insets,
 and forwards the system back-button event into the page tree.
 - [PageRemovedEventArgs](pageremovedeventargs.mdx) - Provides data for the [Avalonia.Controls.NavigationPage.PageRemoved](xref:Avalonia.Controls.NavigationPage.PageRemoved) event.
 - [PageSelectionChangedEventArgs](pageselectionchangedeventargs.mdx) - Provides data for a page selection-changed event.
 - [PageZoomMode](pagezoommode.mdx) - How a paged view resolves its zoom factor.
 - [Panel](panel.mdx) - Base class for controls that can contain multiple children.
+- [PastingFromClipboardEventArgs](pastingfromclipboardeventargs.mdx) - Provides data specific to a [Avalonia.Controls.TextBox.PastingFromClipboard](xref:Avalonia.Controls.TextBox.PastingFromClipboard) event.
 - [PathIcon](pathicon.mdx)
 - [PdfAnnotationErrorEventArgs](pdfannotationerroreventargs.mdx) - Event arguments describing an annotation operation that failed.
 - [PdfAnnotationOperation](pdfannotationoperation.mdx) - Identifies the annotation operation that failed, so a host can respond to (or ignore)
@@ -476,12 +491,14 @@ based on the current input focus
 - [WebViewAdapter.NativeHostAdapterFactory](webviewadapter-nativehostadapterfactory.mdx)
 - [WebViewAdapter.NativeWebViewAdapterBuilder](webviewadapter-nativewebviewadapterbuilder.mdx)
 - [WebViewAdapter.OffscreenWebViewAdapterBuilder](webviewadapter-offscreenwebviewadapterbuilder.mdx)
+- [WebViewAdapter.UnavailableAdapterFactory](webviewadapter-unavailableadapterfactory.mdx)
 - [WebViewAdapterEventArgs](webviewadaptereventargs.mdx)
 - [WebViewEnvironmentRequestedEventArgs](webviewenvironmentrequestedeventargs.mdx)
 - [WebViewNavigationCompletedEventArgs](webviewnavigationcompletedeventargs.mdx)
 - [WebViewNavigationEventArgs](webviewnavigationeventargs.mdx)
 - [WebViewNavigationStartingEventArgs](webviewnavigationstartingeventargs.mdx)
 - [WebViewNewWindowRequestedEventArgs](webviewnewwindowrequestedeventargs.mdx)
+- [WebViewProcessTerminatedEventArgs](webviewprocessterminatedeventargs.mdx)
 - [WebViewWebRequestHeaders](webviewwebrequestheaders.mdx)
 - [WebViewWebResourceRequest](webviewwebresourcerequest.mdx)
 - [Win32Properties](win32properties.mdx) - Set of Win32 specific properties and events that allow deeper customization of the application per platform.

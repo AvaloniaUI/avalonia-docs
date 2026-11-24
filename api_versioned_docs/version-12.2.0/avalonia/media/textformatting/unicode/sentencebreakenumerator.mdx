@@ -1,0 +1,118 @@
+---
+title: 'SentenceBreakEnumerator'
+hide_title: true
+slug: '/avalonia/media/textformatting/unicode/sentencebreakenumerator'
+uid: 'Avalonia.Media.TextFormatting.Unicode.SentenceBreakEnumerator'
+commentId: 'T:Avalonia.Media.TextFormatting.Unicode.SentenceBreakEnumerator'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media.TextFormatting.Unicode'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">SentenceBreakEnumerator Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media.TextFormatting.Unicode</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Enumerates Unicode sentence-boundary segments per UAX #29 rules SB1–SB11, SB998.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct SentenceBreakEnumerator
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> SentenceBreakEnumerator
+</div>
+</div>
+
+## Remarks
+
+The enumerator is a operating on a [ReadOnlySpan&lt;T&gt;](xref:System.ReadOnlySpan%601)
+so every operation is allocation-free. It reads codepoints with
+[Avalonia.Media.TextFormatting.Unicode.Codepoint.ReadAt(ReadOnlySpan&#123;char&#125;,int,int@)](xref:Avalonia.Media.TextFormatting.Unicode.Codepoint.ReadAt%28System.ReadOnlySpan%7BSystem.Char%7D%2CSystem.Int32%2CSystem.Int32%40%29) and classifies them via the [Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass](xref:Avalonia.Media.TextFormatting.Unicode.SentenceBreakClass)
+property backed by the `SentenceBreak` trie. Each codepoint is visited a constant
+number of times: the left-hand context every rule needs is folded into a few fields as the
+walk advances, and the one rule that looks ahead reuses the scan it already made.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [SentenceBreakEnumerator](#uid-9ccf3a8821) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ccf3a8821"></span>
+
+### SentenceBreakEnumerator Constructor
+
+```csharp
+public SentenceBreakEnumerator(ReadOnlySpan<char> text)
+```
+
+#### Parameters
+
+`text` ReadOnlySpan&lt;char&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [MoveNext](#uid-758e14d968) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-758e14d968"></span>
+
+### MoveNext Method
+
+```csharp
+public bool MoveNext(Avalonia.Media.TextFormatting.Unicode.SentenceSegment& segment)
+```
+
+#### Parameters
+
+`segment` [Avalonia.Media.TextFormatting.Unicode.SentenceSegment](xref:Avalonia.Media.TextFormatting.Unicode.SentenceSegment)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+</ApiRefPage>
+

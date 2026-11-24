@@ -1,0 +1,243 @@
+---
+title: 'TableFormatting'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/formatting/tableformatting'
+uid: 'Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel.Formatting'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TableFormatting Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel.Formatting</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Table formatting snapshot. Value type for zero-reference safety.
+All data is stored as primitive types to ensure thread-safety.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TableFormatting
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TableFormatting
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TableFormatting&gt;
+</div>
+</div>
+
+## Remarks
+
+Memory footprint: ~8 bytes + array overhead (struct, inline in [SnapshotNode](xref:Avalonia.Controls.Documents.Serialization.Snapshot.SnapshotNode)).
+
+Only relevant for table nodes. Null properties mean "not explicitly set, inherit from parent or use default".
+
+Format-agnostic: Contains only primitive values in device-independent pixels (DIPs).
+Format-specific details (RTF cell spacing/padding, border styles, cell merge flags, etc.)
+are stored in format-specific metadata (e.g., TableRtfMetadata).
+
+Properties are optimized for extraction from [RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) during snapshot creation
+and reconstruction to [RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) from snapshot. Values use device-independent pixels
+to match Avalonia property system conventions.
+
+Cell padding maps to `TableCell.Padding`, with the original RTF values (\trgaph) preserved in TableRtfMetadata for round-trip.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-a41f555fad) | No summary available. |
+| [GetHashCode](#uid-ce36a5e4ce) | No summary available. |
+| [ToString](#uid-75d85fb254) | No summary available. |
+
+<span id="uid-a41f555fad"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7735cb5b20"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting](xref:Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-35edb1333b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce36a5e4ce"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-75d85fb254"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Columns](#uid-ca3dd5d605) | Column definitions with width value and unit type. Default means not explicitly set (use auto-layout or equal distribution). |
+| [Default](#uid-0cbd20d509) | Default formatting with no explicit values set. |
+| [InsideBorderArgb](#uid-0ff1c50e43) | Packed ARGB colour of the interior gridlines. Null means no interior grid. |
+| [InsideBorderWidth](#uid-22adf359b7) | Width, in device-independent pixels, of the interior gridlines drawn between cells (Word's `w:insideH` / `w:insideV`). Zero means no interior grid. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ca3dd5d605"></span>
+
+### Columns Property
+
+Column definitions with width value and unit type.
+Default means not explicitly set (use auto-layout or equal distribution).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TableColumnWidth[] Columns { get; set; }
+```
+
+#### Remarks
+
+The widths carry their [Avalonia.Controls.GridUnitType](xref:Avalonia.Controls.GridUnitType), so a Star column stays a
+Star column across snapshot capture, undo and a serializer round trip. The
+array is immutable: these widths reach undo and redo through
+`TableSnapshotNode`, where a write through an alias would rewrite a
+recorded state.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0cbd20d509"></span>
+
+### Default Property
+
+Default formatting with no explicit values set.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.Formatting.TableFormatting Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0ff1c50e43"></span>
+
+### InsideBorderArgb Property
+
+Packed ARGB colour of the interior gridlines. Null means no interior grid.
+
+```csharp
+public Nullable<uint> InsideBorderArgb { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22adf359b7"></span>
+
+### InsideBorderWidth Property
+
+Width, in device-independent pixels, of the interior gridlines drawn between cells
+(Word's `w:insideH` / `w:insideV`). Zero means no interior grid.
+
+```csharp
+public double InsideBorderWidth { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

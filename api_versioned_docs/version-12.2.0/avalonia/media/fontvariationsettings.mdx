@@ -1,0 +1,348 @@
+---
+title: 'FontVariationSettings'
+hide_title: true
+slug: '/avalonia/media/fontvariationsettings'
+uid: 'Avalonia.Media.FontVariationSettings'
+commentId: 'T:Avalonia.Media.FontVariationSettings'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontVariationSettings Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+An immutable, order-independent set of user-space variation axis values that
+configures variable fonts (fonts with an `fvar` table) for rendering.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class FontVariationSettings
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> FontVariationSettings
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontVariationSettings&gt;
+</div>
+</div>
+
+## Remarks
+
+Values are expressed in the font's user coordinate space (`wght = 700`), the
+same space CSS `font-variation-settings`, DirectWrite and HarfBuzz use.
+Normalization to the OpenType `[-1, 1]` range — including the `avar`
+mapping — happens per font when the settings are applied, so one settings value is
+meaningful across fonts: each font clamps to its own axis ranges and ignores axes
+it does not declare.
+
+Instances have structural equality with a cached hash code and are usable as cache
+keys. Variations are stored sorted by axis tag, so equality is order-independent;
+when the same tag is given more than once, the last value wins (CSS behavior).
+`null` and [Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) both mean "design defaults".
+
+The string form accepted by [Avalonia.Media.FontVariationSettings.Parse(string)](xref:Avalonia.Media.FontVariationSettings.Parse%28System.String%29) (and produced by
+[Avalonia.Media.FontVariationSettings.ToString](xref:Avalonia.Media.FontVariationSettings.ToString)) is a comma-separated list of `tag=value` pairs, e.g.
+`"wght=700, wdth=85"`, usable directly in XAML.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontVariationSettings](#uid-926a61d198) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-926a61d198"></span>
+
+### FontVariationSettings Constructor
+
+```csharp
+public FontVariationSettings(System.Collections.Generic.IEnumerable<Avalonia.Media.FontVariation> variations)
+```
+
+#### Parameters
+
+`variations` System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.FontVariation](xref:Avalonia.Media.FontVariation)&gt;
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-0f9bc6259e) | No summary available. |
+| [GetHashCode](#uid-01ed1ff335) | No summary available. |
+| [Interpolate](#uid-d631067478) | Interpolates between two settings values, for animation. |
+| [Parse](#uid-18f97c32c3) | Parses a comma-separated list of `tag=value` pairs, e.g. `"wght=700, wdth=85"`. Whitespace around pairs, tags and values is ignored; an empty string yields [Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty); duplicate tags collapse to the last value. |
+| [ToString](#uid-05ffcb99ea) | Returns the parseable string form, e.g. `wght=700,wdth=85`. |
+| [TryGetValue](#uid-cc90daa85e) | No summary available. |
+
+<span id="uid-0f9bc6259e"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-54ee9b88a3"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.FontVariationSettings other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e31b7f500e"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01ed1ff335"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d631067478"></span>
+
+### Interpolate Method
+
+Interpolates between two settings values, for animation.
+
+```csharp
+public Avalonia.Media.FontVariationSettings Interpolate(Avalonia.Media.FontVariationSettings from, Avalonia.Media.FontVariationSettings to, double progress)
+```
+
+#### Parameters
+
+`from` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+`to` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+`progress` double
+
+
+#### Returns
+
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+#### Remarks
+
+Matches CSS `font-variation-settings` interpolation: when both endpoints
+set exactly the same axes, each axis value is interpolated linearly (easing
+overshoot extrapolates); otherwise the result is discrete — `from`
+below the midpoint, `to` at and above it. Discrete is the only
+sound fallback because a missing axis means "the font's default", a value that
+is not knowable in user space. `null` and [Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty) both mean
+"no axes set".
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18f97c32c3"></span>
+
+### Parse Method
+
+Parses a comma-separated list of `tag=value` pairs, e.g.
+`"wght=700, wdth=85"`. Whitespace around pairs, tags and values is
+ignored; an empty string yields [Avalonia.Media.FontVariationSettings.Empty](xref:Avalonia.Media.FontVariationSettings.Empty); duplicate tags collapse
+to the last value.
+
+```csharp
+public Avalonia.Media.FontVariationSettings Parse(string s)
+```
+
+#### Parameters
+
+`s` string
+
+
+#### Returns
+
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+#### Exceptions
+
+- [A pair is not \`tag=value\`, a tag is not
+a valid four-character OpenType tag, or a value is not an invariant number
+(\`NaN\` is rejected; infinite values are accepted and clamp to the axis
+range when applied).](xref:System.FormatException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-05ffcb99ea"></span>
+
+### ToString Method
+
+Returns the parseable string form, e.g. `wght=700,wdth=85`.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc90daa85e"></span>
+
+### TryGetValue Method
+
+```csharp
+public bool TryGetValue(Avalonia.Media.Fonts.OpenTypeTag tag, double& value)
+```
+
+#### Parameters
+
+`tag` [Avalonia.Media.Fonts.OpenTypeTag](xref:Avalonia.Media.Fonts.OpenTypeTag)
+
+
+`value` double&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Empty](#uid-992ee77606) | Gets the empty settings — the font's design defaults. |
+| [IsEmpty](#uid-683406ce6d) | Gets a value indicating whether no axis is set. |
+| [Variations](#uid-5fcc3bd944) | Gets the variations, sorted by axis tag ascending. Duplicate tags passed at construction have already been collapsed to their last value. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-992ee77606"></span>
+
+### Empty Property
+
+Gets the empty settings — the font's design defaults.
+
+```csharp
+public Avalonia.Media.FontVariationSettings Empty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-683406ce6d"></span>
+
+### IsEmpty Property
+
+Gets a value indicating whether no axis is set.
+
+```csharp
+public bool IsEmpty { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5fcc3bd944"></span>
+
+### Variations Property
+
+Gets the variations, sorted by axis tag ascending. Duplicate tags passed at
+construction have already been collapsed to their last value.
+
+```csharp
+public System.Collections.Immutable.ImmutableArray<Avalonia.Media.FontVariation> Variations { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

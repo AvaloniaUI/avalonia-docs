@@ -1,0 +1,175 @@
+---
+title: 'MarkdownSerializerOptions'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/markdown/markdownserializeroptions'
+uid: 'Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Markdown'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownSerializerOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Markdown</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Formatting choices for markdown output produced by
+[Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize(Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot,System.IO.Stream,System.Threading.CancellationToken)](xref:Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializer.Serialize%28Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken%29). These control the
+canonical spellings the writer uses for syntax the document model does
+not preserve (delimiters, markers, fences); document content itself is
+unaffected.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownSerializerOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MarkdownSerializerOptions
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [MarkdownSerializerOptions](#uid-5e758753fe) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5e758753fe"></span>
+
+### MarkdownSerializerOptions Constructor
+
+```csharp
+public MarkdownSerializerOptions()
+```
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [BulletMarker](#uid-63599203d4) | Bullet list marker. Valid values: `-`, `+`, `*`. |
+| [Default](#uid-efc602a2b7) | The default options: `-` bullets, `*` emphasis, backtick fences, `.` ordered delimiter, backslash hard breaks. |
+| [EmphasisChar](#uid-315a5e9d57) | Emphasis delimiter for bold and italic. Valid values: `*`, `_`. |
+| [FenceChar](#uid-b587d79297) | Code fence character. Valid values: backtick, `~`. |
+| [HardBreak](#uid-e556489bd1) | Spelling used for hard line breaks. |
+| [OrderedDelimiter](#uid-c6aceb463e) | Delimiter after ordered list numbers. Valid values: `.`, `)`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63599203d4"></span>
+
+### BulletMarker Property
+
+Bullet list marker. Valid values: `-`, `+`, `*`.
+
+```csharp
+public char BulletMarker { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-efc602a2b7"></span>
+
+### Default Property
+
+The default options: `-` bullets, `*` emphasis, backtick fences, `.` ordered delimiter, backslash hard breaks.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Markdown.MarkdownSerializerOptions Default { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-315a5e9d57"></span>
+
+### EmphasisChar Property
+
+Emphasis delimiter for bold and italic. Valid values: `*`, `_`.
+
+```csharp
+public char EmphasisChar { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b587d79297"></span>
+
+### FenceChar Property
+
+Code fence character. Valid values: backtick, `~`.
+
+```csharp
+public char FenceChar { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e556489bd1"></span>
+
+### HardBreak Property
+
+Spelling used for hard line breaks.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Markdown.MarkdownHardBreak HardBreak { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c6aceb463e"></span>
+
+### OrderedDelimiter Property
+
+Delimiter after ordered list numbers. Valid values: `.`, `)`.
+
+```csharp
+public char OrderedDelimiter { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

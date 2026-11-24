@@ -1,0 +1,177 @@
+---
+title: 'PageBandSnapshot'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/snapshot/pagebandsnapshot'
+uid: 'Avalonia.Controls.Documents.Serialization.Snapshot.PageBandSnapshot'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Snapshot.PageBandSnapshot'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Snapshot'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageBandSnapshot Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Snapshot</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A page band in a document snapshot: the band's content as a nested document
+snapshot, the role and rule that place it, its identity, and an optional name for
+formats that reference bands by name.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageBandSnapshot
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PageBandSnapshot
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PageBandSnapshot](#uid-1b0b8b3ca8) | Initializes a band snapshot. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1b0b8b3ca8"></span>
+
+### PageBandSnapshot Constructor
+
+Initializes a band snapshot.
+
+```csharp
+public PageBandSnapshot(string name, Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot content, Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule, Guid id)
+```
+
+#### Parameters
+
+`name` string
+
+
+`content` [Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot](xref:Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot)
+
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+`id` Guid
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-2ffe5c3e5f) | The band's content. |
+| [Id](#uid-cde6efdf90) | The band's identity: what a section's references name, kept by the restored band. |
+| [Name](#uid-dbcb3d369a) | The band's name, when the source format named it; null otherwise. |
+| [Role](#uid-00e4518c3d) | Whether the band is a header or a footer. |
+| [Rule](#uid-7fc1db60c3) | Which pages the band claims by itself. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ffe5c3e5f"></span>
+
+### Content Property
+
+The band's content.
+
+```csharp
+public Avalonia.Controls.Documents.Serialization.Snapshot.DocumentSnapshot Content { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cde6efdf90"></span>
+
+### Id Property
+
+The band's identity: what a section's references name, kept by the restored band.
+
+```csharp
+public Guid Id { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dbcb3d369a"></span>
+
+### Name Property
+
+The band's name, when the source format named it; null otherwise.
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-00e4518c3d"></span>
+
+### Role Property
+
+Whether the band is a header or a footer.
+
+```csharp
+public Avalonia.Controls.Documents.PageBandRole Role { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7fc1db60c3"></span>
+
+### Rule Property
+
+Which pages the band claims by itself.
+
+```csharp
+public Avalonia.Controls.Documents.PageBandRule Rule { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

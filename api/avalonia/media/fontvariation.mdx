@@ -1,0 +1,250 @@
+---
+title: 'FontVariation'
+hide_title: true
+slug: '/avalonia/media/fontvariation'
+uid: 'Avalonia.Media.FontVariation'
+commentId: 'T:Avalonia.Media.FontVariation'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FontVariation Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/FontVariationSettings.cs">FontVariationSettings.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+A single variation axis setting in designer units, e.g. `wght = 700`.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FontVariation
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FontVariation
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FontVariation&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FontVariation](#uid-af0fe167d4) | A single variation axis setting in designer units, e.g. `wght = 700`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-af0fe167d4"></span>
+
+### FontVariation Constructor
+
+A single variation axis setting in designer units, e.g. `wght = 700`.
+
+```csharp
+public FontVariation(Avalonia.Media.Fonts.OpenTypeTag Tag, double Value)
+```
+
+#### Parameters
+
+`Tag` [Avalonia.Media.Fonts.OpenTypeTag](xref:Avalonia.Media.Fonts.OpenTypeTag)
+
+The OpenType axis tag (e.g. `wght`, `wdth`, `opsz`).
+
+
+`Value` double
+
+The axis position in the font's user coordinate space — the same units the font's
+`fvar` table declares for the axis (weight 100–900, width percentages, optical
+sizes in points). Values are clamped to the axis range and normalized per font when
+the settings are applied; axes a font does not declare are ignored.
+
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Deconstruct](#uid-d7c0637a92) | No summary available. |
+| [Equals (2 overloads)](#uid-1c5f4ac579) | No summary available. |
+| [GetHashCode](#uid-cc007445e8) | No summary available. |
+| [ToString](#uid-2e1685d3f9) | Returns the `tag=value` form, e.g. `wght=700`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d7c0637a92"></span>
+
+### Deconstruct Method
+
+```csharp
+public void Deconstruct(Avalonia.Media.Fonts.OpenTypeTag& Tag, double& Value)
+```
+
+#### Parameters
+
+`Tag` [Avalonia.Media.Fonts.OpenTypeTag](xref:Avalonia.Media.Fonts.OpenTypeTag)&amp;
+
+
+`Value` double&amp;
+
+
+</section>
+
+<span id="uid-1c5f4ac579"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2a5076c4b"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Media.FontVariation other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Media.FontVariation](xref:Avalonia.Media.FontVariation)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea090e780d"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cc007445e8"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e1685d3f9"></span>
+
+### ToString Method
+
+Returns the `tag=value` form, e.g. `wght=700`.
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Tag](#uid-47ab0c28d9) | The OpenType axis tag (e.g. `wght`, `wdth`, `opsz`). |
+| [Value](#uid-447d77f269) | The axis position in the font's user coordinate space — the same units the font's `fvar` table declares for the axis (weight 100–900, width percentages, optical sizes in points). Values are clamped to the axis range and normalized per font when the settings are applied; axes a font does not declare are ignored. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-47ab0c28d9"></span>
+
+### Tag Property
+
+The OpenType axis tag (e.g. `wght`, `wdth`, `opsz`).
+
+```csharp
+public Avalonia.Media.Fonts.OpenTypeTag Tag { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-447d77f269"></span>
+
+### Value Property
+
+The axis position in the font's user coordinate space — the same units the font's
+`fvar` table declares for the axis (weight 100–900, width percentages, optical
+sizes in points). Values are clamped to the axis range and normalized per font when
+the settings are applied; axes a font does not declare are ignored.
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

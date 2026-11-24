@@ -1,0 +1,87 @@
+---
+title: 'IPresentationSource'
+hide_title: true
+slug: '/avalonia/rendering/ipresentationsource'
+uid: 'Avalonia.Rendering.IPresentationSource'
+commentId: 'T:Avalonia.Rendering.IPresentationSource'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPresentationSource Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents the host of the visual tree. On desktop platforms this is typically backed by a native window.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPresentationSource
+```
+
+</div>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [RenderScaling](#uid-662eff2314) | The scaling factor to use in rendering. |
+| [RootVisual](#uid-be6f81943b) | The current root of the visual tree |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-662eff2314"></span>
+
+### RenderScaling Property
+
+The scaling factor to use in rendering.
+
+```csharp
+public double RenderScaling { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be6f81943b"></span>
+
+### RootVisual Property
+
+The current root of the visual tree
+
+```csharp
+public Avalonia.Visual RootVisual { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

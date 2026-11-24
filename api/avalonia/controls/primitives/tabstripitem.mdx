@@ -123,6 +123,9 @@ public TabStripItem()
 | Name | Description |
 | --- | --- |
 | [ActualThemeVariant](../../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../../styledelement.mdx). |
+| [BackdropEffect](../../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectBoundsSource](../../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCache](../../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../../visual.mdx). |
 | [Background](templatedcontrol.mdx#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [BackgroundSizing](templatedcontrol.mdx#uid-07ef33f604) | Gets or sets how the control's background is drawn relative to the control's border. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [BorderBrush](templatedcontrol.mdx#uid-cf666d3678) | Gets or sets the brush used to draw the control's border. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -151,6 +154,7 @@ public TabStripItem()
 | [FontSize](templatedcontrol.mdx#uid-0a8445793b) | Gets or sets the size of the control's text in points. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontStretch](templatedcontrol.mdx#uid-f23e3b5938) | Gets or sets the font stretch used to draw the control's text. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontStyle](templatedcontrol.mdx#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. Inherited from [TemplatedControl](templatedcontrol.mdx). |
+| [FontVariations](templatedcontrol.mdx#uid-11608368de) | Gets or sets the variable-font axis values (e.g. `wght=700`) used to draw the control's text. `null` means the font's design defaults. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontWeight](templatedcontrol.mdx#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [Foreground](templatedcontrol.mdx#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GestureRecognizers](../../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -158,6 +162,8 @@ public TabStripItem()
 | [Height](../../layout/layoutable.mdx#uid-4334ab83b4) | Gets or sets the height of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [HorizontalAlignment](../../layout/layoutable.mdx#uid-c621d98d6c) | Gets or sets the element's preferred horizontal alignment in its parent. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [HorizontalContentAlignment](../contentcontrol.mdx#uid-91c4dbcd1a) | Gets or sets the horizontal alignment of the content within the control. Inherited from [ContentControl](../contentcontrol.mdx). |
+| [Icon](#uid-0f19a6f4aa) | Gets or sets the icon displayed alongside the content. |
+| [IconTemplate](#uid-77e1b8f84b) | Gets or sets the data template used to display the icon of the control. |
 | [IsArrangeValid](../../layout/layoutable.mdx#uid-97d1d86c71) | Gets a value indicating whether the control's layouts arrange is valid. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [IsEffectivelyEnabled](../../input/inputelement.mdx#uid-48ba4c0379) | Gets a value indicating whether this control and all its parents are enabled. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [IsEffectivelyVisible](../../visual.mdx#uid-03d6c15a63) | Gets a value indicating whether this control and all its parents are visible. Inherited from [Visual](../../visual.mdx). |
@@ -203,10 +209,41 @@ public TabStripItem()
 | [Width](../../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [ZIndex](../../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../../visual.mdx). |
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f19a6f4aa"></span>
+
+### Icon Property
+
+Gets or sets the icon displayed alongside the content.
+
+```csharp
+public object Icon { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-77e1b8f84b"></span>
+
+### IconTemplate Property
+
+Gets or sets the data template used to display the icon of the control.
+
+```csharp
+public Avalonia.Controls.Templates.IDataTemplate IconTemplate { get; set; }
+```
+
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
+| [BackdropEffectBoundsSourceProperty](../../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectCacheProperty](../../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../../visual.mdx). |
+| [BackdropEffectProperty](../../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../../visual.mdx). |
 | [BackgroundProperty](templatedcontrol.mdx#uid-dbbd1ffb9b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Background](xref:Avalonia.Controls.Primitives.TemplatedControl.Background) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [BackgroundSizingProperty](templatedcontrol.mdx#uid-316d7708c4) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing](xref:Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [BorderBrushProperty](templatedcontrol.mdx#uid-a4e6335f37) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.BorderBrush](xref:Avalonia.Controls.Primitives.TemplatedControl.BorderBrush) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
@@ -235,6 +272,7 @@ public TabStripItem()
 | [FontSizeProperty](templatedcontrol.mdx#uid-c06c71299f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontSize](xref:Avalonia.Controls.Primitives.TemplatedControl.FontSize) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontStretchProperty](templatedcontrol.mdx#uid-d4a988cc8c) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontStyleProperty](templatedcontrol.mdx#uid-14162a470d) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontStyle](xref:Avalonia.Controls.Primitives.TemplatedControl.FontStyle) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
+| [FontVariationsProperty](templatedcontrol.mdx#uid-d8d82208af) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontVariations](xref:Avalonia.Controls.Primitives.TemplatedControl.FontVariations) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [FontWeightProperty](templatedcontrol.mdx#uid-b911f20b9f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [ForegroundProperty](templatedcontrol.mdx#uid-65cd93050b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Foreground](xref:Avalonia.Controls.Primitives.TemplatedControl.Foreground) property. Inherited from [TemplatedControl](templatedcontrol.mdx). |
 | [GettingFocusEvent](../../input/inputelement.mdx#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -244,6 +282,8 @@ public TabStripItem()
 | [HoldingEvent](../../input/inputelement.mdx#uid-b1eab1bcd8) | Defines the [Avalonia.Input.InputElement.Holding](xref:Avalonia.Input.InputElement.Holding) event. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [HorizontalAlignmentProperty](../../layout/layoutable.mdx#uid-43606c2354) | Defines the [Avalonia.Layout.Layoutable.HorizontalAlignment](xref:Avalonia.Layout.Layoutable.HorizontalAlignment) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [HorizontalContentAlignmentProperty](../contentcontrol.mdx#uid-a0ed10f05c) | Defines the [Avalonia.Controls.ContentControl.HorizontalContentAlignment](xref:Avalonia.Controls.ContentControl.HorizontalContentAlignment) property. Inherited from [ContentControl](../contentcontrol.mdx). |
+| [IconProperty](#uid-b229f40acc) | Defines the [Avalonia.Controls.Primitives.TabStripItem.Icon](xref:Avalonia.Controls.Primitives.TabStripItem.Icon) property. |
+| [IconTemplateProperty](#uid-a76ad50c49) | Defines the [Avalonia.Controls.Primitives.TabStripItem.IconTemplate](xref:Avalonia.Controls.Primitives.TabStripItem.IconTemplate) property. |
 | [IsEffectivelyEnabledProperty](../../input/inputelement.mdx#uid-df18a2cff1) | Defines the [Avalonia.Input.InputElement.IsEffectivelyEnabled](xref:Avalonia.Input.InputElement.IsEffectivelyEnabled) property. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [IsEnabledProperty](../../input/inputelement.mdx#uid-2f2893a804) | Defines the [Avalonia.Input.InputElement.IsEnabled](xref:Avalonia.Input.InputElement.IsEnabled) property. Inherited from [InputElement](../../input/inputelement.mdx). |
 | [IsFocusedProperty](../../input/inputelement.mdx#uid-ec811cc35b) | Defines the [Avalonia.Input.InputElement.IsFocused](xref:Avalonia.Input.InputElement.IsFocused) property. Inherited from [InputElement](../../input/inputelement.mdx). |
@@ -313,6 +353,34 @@ public TabStripItem()
 | [VisualParentProperty](../../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../../visual.mdx). |
 | [WidthProperty](../../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../../layout/layoutable.mdx). |
 | [ZIndexProperty](../../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../../visual.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b229f40acc"></span>
+
+### IconProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TabStripItem.Icon](xref:Avalonia.Controls.Primitives.TabStripItem.Icon) property.
+
+```csharp
+public Avalonia.StyledProperty<object> IconProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a76ad50c49"></span>
+
+### IconTemplateProperty Field
+
+Defines the [Avalonia.Controls.Primitives.TabStripItem.IconTemplate](xref:Avalonia.Controls.Primitives.TabStripItem.IconTemplate) property.
+
+```csharp
+public Avalonia.StyledProperty<Avalonia.Controls.Templates.IDataTemplate> IconTemplateProperty
+```
+
+</section>
 
 ## Events
 

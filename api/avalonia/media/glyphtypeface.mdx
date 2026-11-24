@@ -118,10 +118,14 @@ font simulations.
 | [CanShapeScript](#uid-4a392458ef) | Determines whether this font can shape the specified script, not merely map its codepoints. Scripts that need OpenType complex shaping (e.g. Arabic joining, Indic conjuncts) require the font to declare the script in its GSUB/GPOS tables; scripts that render acceptably from cmap alone always return `true`. Used by the fallback itemizer to avoid selecting a font that has the glyphs but cannot form them correctly. |
 | [DeclaresLanguageCoverage](#uid-e6ee88bf43) | Determines whether this font self-declares coverage for the supplied culture via its OpenType `meta` table `dlng` or `slng` tag list. |
 | [Dispose](#uid-611d5d5c3c) | No summary available. |
+| [GetGlyphOutline](#uid-55efa45842) | Retrieves the vector outline geometry for the specified glyph, in font design-unit space. |
 | [SupportsScript](#uid-bfbc66e215) | Determines whether the font advertises support for the supplied Unicode script. |
 | [TryGetGlyphMetrics (2 overloads)](#uid-224187e3e5) | No summary available. |
 | [TryGetHorizontalGlyphAdvance](#uid-327caa7a57) | No summary available. |
 | [TryGetHorizontalGlyphAdvances](#uid-fff209abba) | No summary available. |
+| [TryGetVerticalGlyphAdvance](#uid-5b0fddf8bc) | No summary available. |
+| [TryGetVerticalGlyphAdvances](#uid-c143731a4b) | No summary available. |
+| [WithVariations](#uid-dd31f9b0e2) | No summary available. |
 
 <section className="apiref-page__member-entry">
 
@@ -202,6 +206,47 @@ public void Dispose()
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-55efa45842"></span>
+
+### GetGlyphOutline Method
+
+Retrieves the vector outline geometry for the specified glyph, in font design-unit space.
+
+```csharp
+public Avalonia.Platform.IGeometryImpl GetGlyphOutline(ushort glyphIndex)
+```
+
+#### Parameters
+
+`glyphIndex` ushort
+
+The identifier of the glyph to retrieve.
+
+
+#### Returns
+
+[Avalonia.Platform.IGeometryImpl](xref:Avalonia.Platform.IGeometryImpl)
+
+An immutable [Avalonia.Platform.IGeometryImpl](xref:Avalonia.Platform.IGeometryImpl) outline — safe to cache and share, and drawable
+via the `DrawGeometry` overload that takes an [Avalonia.Platform.IGeometryImpl](xref:Avalonia.Platform.IGeometryImpl) — or
+`null` when no outline is available. Returned as the lightweight platform geometry
+rather than a [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry) ([Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)) so it can be cached
+and used on the hot path; do not mutate it.
+
+
+#### Remarks
+
+Returns `null` when the glyph ID is out of range, the font has no `glyf` table
+(e.g. CFF / CFF2), or the glyph data cannot be parsed (malformed font, cyclic composite,
+depth limit exceeded). The outline is in font design units (Y-up): apply the
+`emSize / DesignEmHeight` scale, the Y-flip, and the glyph position yourself — via
+`IGeometryImpl.WithTransform` or a drawing-context transform. Variable-font axis
+configuration is taken from the typeface instance itself.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-bfbc66e215"></span>
 
 ### SupportsScript Method
@@ -243,12 +288,12 @@ this falls back to probing the cmap with a representative codepoint for the scri
 #### TryGetGlyphMetrics Method
 
 ```csharp
-public bool TryGetGlyphMetrics(ReadOnlySpan<ushort> glyphIds, Span<Avalonia.Media.GlyphMetrics> metrics)
+public bool TryGetGlyphMetrics(ReadOnlySpan<ushort> glyphIndices, Span<Avalonia.Media.GlyphMetrics> metrics)
 ```
 
 ##### Parameters
 
-`glyphIds` ReadOnlySpan&lt;ushort&gt;
+`glyphIndices` ReadOnlySpan&lt;ushort&gt;
 
 
 `metrics` Span&lt;[Avalonia.Media.GlyphMetrics](xref:Avalonia.Media.GlyphMetrics)&gt;
@@ -293,12 +338,12 @@ bool
 ### TryGetHorizontalGlyphAdvance Method
 
 ```csharp
-public bool TryGetHorizontalGlyphAdvance(ushort glyphId, ushort& advance)
+public bool TryGetHorizontalGlyphAdvance(ushort glyphIndex, ushort& advance)
 ```
 
 #### Parameters
 
-`glyphId` ushort
+`glyphIndex` ushort
 
 
 `advance` ushort&amp;
@@ -318,12 +363,12 @@ bool
 ### TryGetHorizontalGlyphAdvances Method
 
 ```csharp
-public bool TryGetHorizontalGlyphAdvances(ReadOnlySpan<ushort> glyphIds, Span<ushort> advances)
+public bool TryGetHorizontalGlyphAdvances(ReadOnlySpan<ushort> glyphIndices, Span<ushort> advances)
 ```
 
 #### Parameters
 
-`glyphIds` ReadOnlySpan&lt;ushort&gt;
+`glyphIndices` ReadOnlySpan&lt;ushort&gt;
 
 
 `advances` Span&lt;ushort&gt;
@@ -332,6 +377,81 @@ public bool TryGetHorizontalGlyphAdvances(ReadOnlySpan<ushort> glyphIds, Span<us
 #### Returns
 
 bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b0fddf8bc"></span>
+
+### TryGetVerticalGlyphAdvance Method
+
+```csharp
+public bool TryGetVerticalGlyphAdvance(ushort glyphIndex, ushort& advance)
+```
+
+#### Parameters
+
+`glyphIndex` ushort
+
+
+`advance` ushort&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c143731a4b"></span>
+
+### TryGetVerticalGlyphAdvances Method
+
+```csharp
+public bool TryGetVerticalGlyphAdvances(ReadOnlySpan<ushort> glyphIndices, Span<ushort> advances)
+```
+
+#### Parameters
+
+`glyphIndices` ReadOnlySpan&lt;ushort&gt;
+
+
+`advances` Span&lt;ushort&gt;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd31f9b0e2"></span>
+
+### WithVariations Method
+
+```csharp
+public Avalonia.Media.GlyphTypeface WithVariations(Avalonia.Media.FontVariationSettings settings, Nullable<int> instanceIndex)
+```
+
+#### Parameters
+
+`settings` [Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings)
+
+
+`instanceIndex` Nullable&lt;int&gt;
+
+
+#### Returns
+
+[Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface)
 
 
 </section>
@@ -349,6 +469,7 @@ bool
 | [FontSimulations](#uid-d4b3d5b8f6) | Gets the font simulation settings applied to the [Avalonia.Media.GlyphTypeface](xref:Avalonia.Media.GlyphTypeface). |
 | [GlyphCount](#uid-f8b29671db) | Gets the number of glyphs held by this font. |
 | [Metrics](#uid-49ad964e00) | Gets the font metrics associated with this font. |
+| [NamedInstances](#uid-ea4d5a26c2) | Gets the named variation instances declared by the font's `fvar` table, in declaration order. Empty for static fonts. |
 | [PlatformTypeface](#uid-239ceb6ee3) | Gets the platform-specific typeface associated with this font. |
 | [Stretch](#uid-bef0dfc38f) | Gets the font stretch. |
 | [Style](#uid-d762ed5152) | Gets the font style. |
@@ -357,6 +478,7 @@ bool
 | [SupportedUnicodeRange](#uid-c0034604d7) | Gets the union of Unicode codepoint ranges covered by the font's character map. |
 | [TextShaperTypeface](#uid-df45934655) | Gets the typeface information used by the text shaper for this font. |
 | [TypographicFamilyName](#uid-5249100e36) | Gets the typographic family name of the font. |
+| [VariationAxes](#uid-62599f8abb) | Gets the variation axes declared by the font's `fvar` table, in declaration order. Empty for static fonts. |
 | [Weight](#uid-076de7204b) | Gets the font weight. |
 
 <section className="apiref-page__member-entry">
@@ -516,6 +638,29 @@ public Avalonia.Media.FontMetrics Metrics { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-ea4d5a26c2"></span>
+
+### NamedInstances Property
+
+Gets the named variation instances declared by the font's `fvar` table, in
+declaration order. Empty for static fonts.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontVariationInstance> NamedInstances { get; set; }
+```
+
+#### Remarks
+
+Named instances are pre-defined points in variation space the font designer has
+labeled (e.g. "SemiBold" at `wght=600`). Pass an instance's
+[Avalonia.Media.FontVariationInstance.Index](xref:Avalonia.Media.FontVariationInstance.Index) to
+[Avalonia.Media.GlyphTypeface.CreateNormalizedPosition(Avalonia.Media.FontVariationSettings,Nullable&#123;int&#125;)](xref:Avalonia.Media.GlyphTypeface.CreateNormalizedPosition%28Avalonia.Media.FontVariationSettings%2CSystem.Nullable%7BSystem.Int32%7D%29) as a shorthand for "give me the
+position of this preset".
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-239ceb6ee3"></span>
 
 ### PlatformTypeface Property
@@ -631,9 +776,17 @@ public Avalonia.Media.ITextShaperTypeface TextShaperTypeface { get; set; }
 
 #### Remarks
 
-The returned typeface is created on demand and cached for subsequent accesses. This
-property is typically used by text rendering components that require low-level font shaping
-details.
+The returned typeface is created on demand and cached for subsequent accesses.
+This property is typically used by text rendering components that require
+low-level font shaping details.
+
+For variation clones, the shaper is derived from the source's shaper via
+[Avalonia.Media.ITextShaperTypeface.WithVariation(Avalonia.Media.NormalizedVariationPosition)](xref:Avalonia.Media.ITextShaperTypeface.WithVariation%28Avalonia.Media.NormalizedVariationPosition%29) so face-level state (HarfBuzz
+`hb_face_t`, parsed shaping tables) stays shared. The HarfBuzz shaper
+returns a distinct shaping font carrying the clone's normalized coordinates,
+which the clone owns and releases on [Avalonia.Media.GlyphTypeface.Dispose](xref:Avalonia.Media.GlyphTypeface.Dispose). A shaper without
+variation support returns the source's instance, and the clone is shaped at
+the default instance.
 
 </section>
 
@@ -648,6 +801,31 @@ Gets the typographic family name of the font.
 ```csharp
 public string TypographicFamilyName { get; set; }
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-62599f8abb"></span>
+
+### VariationAxes Property
+
+Gets the variation axes declared by the font's `fvar` table, in declaration
+order. Empty for static fonts.
+
+```csharp
+public System.Collections.Generic.IReadOnlyList<Avalonia.Media.FontVariationAxis> VariationAxes { get; set; }
+```
+
+#### Remarks
+
+Axes describe the design dimensions the font exposes — common ones are
+`wght` (weight), `wdth` (width), `opsz` (optical size),
+`ital` (italic), and `slnt` (slant). Each [Avalonia.Media.FontVariationAxis](xref:Avalonia.Media.FontVariationAxis)
+carries its minimum / default / maximum user-space values and a human-readable
+name. Desired user-space values are expressed as a
+[Avalonia.Media.FontVariationSettings](xref:Avalonia.Media.FontVariationSettings); the renderer normalizes them per font when
+the settings are applied.
 
 </section>
 

@@ -1,0 +1,142 @@
+---
+title: 'TreeDataGridRowEventArgs'
+hide_title: true
+slug: '/avalonia/controls/treedatagridroweventargs'
+uid: 'Avalonia.Controls.TreeDataGridRowEventArgs'
+commentId: 'T:Avalonia.Controls.TreeDataGridRowEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.TreeDataGrid'
+assembly: 'Avalonia.Controls.TreeDataGrid'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TreeDataGridRowEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.TreeDataGrid</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data for events related to row operations in a [Avalonia.Controls.TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid) control.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TreeDataGridRowEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TreeDataGridRowEventArgs
+</div>
+</div>
+
+## Remarks
+
+This class is used in events such as [Avalonia.Controls.TreeDataGrid.RowPrepared](xref:Avalonia.Controls.TreeDataGrid.RowPrepared) and
+[Avalonia.Controls.TreeDataGrid.RowClearing](xref:Avalonia.Controls.TreeDataGrid.RowClearing) to provide information about the row that triggered
+the event.
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [TreeDataGridRowEventArgs](#uid-78381945eb) | Initializes a new instance of the [Avalonia.Controls.TreeDataGridRowEventArgs](xref:Avalonia.Controls.TreeDataGridRowEventArgs) class with the specified row and row index. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-78381945eb"></span>
+
+### TreeDataGridRowEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.TreeDataGridRowEventArgs](xref:Avalonia.Controls.TreeDataGridRowEventArgs) class with the
+specified row and row index.
+
+```csharp
+public TreeDataGridRowEventArgs(Avalonia.Controls.Primitives.TreeDataGridRow row, int rowIndex)
+```
+
+#### Parameters
+
+`row` [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow)
+
+The row control that triggered the event.
+
+
+`rowIndex` int
+
+The index of the row in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Row](#uid-73bb169e87) | Gets the row control that triggered the event. |
+| [RowIndex](#uid-2da0e5bc50) | Gets the index of the row that triggered the event. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-73bb169e87"></span>
+
+### Row Property
+
+Gets the row control that triggered the event.
+
+```csharp
+public Avalonia.Controls.Primitives.TreeDataGridRow Row { get; set; }
+```
+
+#### Value
+
+A [Avalonia.Controls.Primitives.TreeDataGridRow](xref:Avalonia.Controls.Primitives.TreeDataGridRow) that represents the row in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2da0e5bc50"></span>
+
+### RowIndex Property
+
+Gets the index of the row that triggered the event.
+
+```csharp
+public int RowIndex { get; set; }
+```
+
+#### Value
+
+The zero-based index of the row in the [TreeDataGrid](xref:Avalonia.Controls.TreeDataGrid).
+
+
+</section>
+
+</ApiRefPage>
+

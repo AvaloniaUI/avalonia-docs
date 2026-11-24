@@ -62,12 +62,50 @@ public class InputExtensions
 
 | Name | Description |
 | --- | --- |
-| [GetInputElementsAt (2 overloads)](#uid-65f6aa8f40) | Returns the active input elements at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
-| [InputHitTest (4 overloads)](#uid-f46f08bee9) | Returns the topmost active input element at a point on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
+| [GetInputElementsAt (3 overloads)](#uid-65f6aa8f40) | Returns the active input elements intersecting a geometry on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
+| [InputHitTest (6 overloads)](#uid-f46f08bee9) | Returns the topmost active input element intersecting a geometry on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement). |
 
 <span id="uid-65f6aa8f40"></span>
 
 ### GetInputElementsAt overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d5d34de23e"></span>
+
+#### GetInputElementsAt Method
+
+Returns the active input elements intersecting a geometry on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public System.Collections.Generic.IEnumerable<Avalonia.Media.GeometryHitTestResult> GetInputElementsAt(Avalonia.Input.IInputElement element, Avalonia.Media.Geometry geometry, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry on `element`.
+
+
+`enabledElementsOnly` bool
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+System.Collections.Generic.IEnumerable&lt;[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)&gt;
+
+The active input elements found intersecting the geometry, with intersection details, ordered topmost first.
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 
@@ -148,6 +186,75 @@ The active input elements found at the point, ordered topmost first.
 <span id="uid-f46f08bee9"></span>
 
 ### InputHitTest overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-344a1569ee"></span>
+
+#### InputHitTest Method
+
+Returns the topmost active input element intersecting a geometry on an [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement).
+
+```csharp
+public Avalonia.Media.GeometryHitTestResult InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Media.Geometry geometry, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+The element to test.
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry on `element`.
+
+
+`enabledElementsOnly` bool
+
+Whether to only return elements for which [Avalonia.Input.IInputElement.IsEffectivelyEnabled](xref:Avalonia.Input.IInputElement.IsEffectivelyEnabled) is true.
+
+
+##### Returns
+
+[Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult)
+
+A [Avalonia.Media.GeometryHitTestResult](xref:Avalonia.Media.GeometryHitTestResult) containing the topmost [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement) intersecting the specified geometry and intersection details, or null if no element intersects.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3cf2269544"></span>
+
+#### InputHitTest Method
+
+```csharp
+public Avalonia.Input.IInputElement InputHitTest(Avalonia.Input.IInputElement element, Avalonia.Media.Geometry geometry, Func<Avalonia.Visual, bool> filter, bool enabledElementsOnly)
+```
+
+##### Parameters
+
+`element` [Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+
+`filter` Func&lt;[Avalonia.Visual](xref:Avalonia.Visual), bool&gt;
+
+
+`enabledElementsOnly` bool
+
+
+##### Returns
+
+[Avalonia.Input.IInputElement](xref:Avalonia.Input.IInputElement)
+
+
+</section>
 
 <section className="apiref-page__member-entry">
 

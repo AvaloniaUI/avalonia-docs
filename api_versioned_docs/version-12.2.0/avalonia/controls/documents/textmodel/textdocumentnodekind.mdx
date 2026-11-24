@@ -1,0 +1,824 @@
+---
+title: 'TextDocumentNodeKind'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textdocumentnodekind'
+uid: 'Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextDocumentNodeKind Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Identifies the kind of a document node. Built-in kinds are provided as static fields.
+Custom kinds can be registered via [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct TextDocumentNodeKind
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> TextDocumentNodeKind
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;TextDocumentNodeKind&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-62a622ca16) | Returns if this kind equals `other`. |
+| [GetHashCode](#uid-39828a42fb) | No summary available. |
+| [Register (4 overloads)](#uid-90b270bf5a) | Registers a custom node kind with the given name and category flags. |
+| [ToString](#uid-6379fb71d9) | No summary available. |
+| [TryGetByName](#uid-98fed80bc1) | No summary available. |
+
+<span id="uid-62a622ca16"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dcd90d20c5"></span>
+
+#### Equals Method
+
+Returns if this kind equals `other`.
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97e18fda86"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39828a42fb"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<span id="uid-90b270bf5a"></span>
+
+### Register overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-447db6dfb5"></span>
+
+#### Register Method
+
+Registers a custom node kind with the given name and category flags.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Register<TElement>(string name, Avalonia.Controls.Documents.TextModel.NodeKindFlags flags)
+```
+
+##### Parameters
+
+`name` string
+
+Unique name for the kind. Must not collide with an existing registration.
+
+
+`flags` [Avalonia.Controls.Documents.TextModel.NodeKindFlags](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags)
+
+Category flags that determine schema behavior.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The newly registered kind.
+
+
+##### Exceptions
+
+- [A kind with the same \`name\` is already registered.](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-60b1c9a4a2"></span>
+
+#### Register Method
+
+Registers a custom node kind with an [Avalonia.Controls.Documents.TextModel.INodeKindHandler](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler) that provides
+element creation, snapshot capture, and formatting restoration.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Register<TElement>(string name, Avalonia.Controls.Documents.TextModel.NodeKindFlags flags, Avalonia.Controls.Documents.TextModel.INodeKindHandler handler)
+```
+
+##### Parameters
+
+`name` string
+
+Unique name for the kind.
+
+
+`flags` [Avalonia.Controls.Documents.TextModel.NodeKindFlags](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags)
+
+Category flags that determine schema behavior.
+
+
+`handler` [Avalonia.Controls.Documents.TextModel.INodeKindHandler](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler)
+
+Handler that manages the snapshot lifecycle for this kind.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The newly registered kind.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e26ff95caa"></span>
+
+#### Register Method
+
+Registers a custom node kind and associates it with a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement) type
+so that [Avalonia.Controls.Documents.TextModel.TextDocumentNodeFactory.GetKindForElement(Avalonia.Controls.Documents.RichTextElement)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeFactory.GetKindForElement%28Avalonia.Controls.Documents.RichTextElement%29) can resolve it.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Register(string name, Avalonia.Controls.Documents.TextModel.NodeKindFlags flags, Type elementType)
+```
+
+##### Parameters
+
+`name` string
+
+Unique name for the kind. Must not collide with an existing registration.
+
+
+`flags` [Avalonia.Controls.Documents.TextModel.NodeKindFlags](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags)
+
+Category flags that determine schema behavior.
+
+
+`elementType` Type
+
+The element type this kind maps to.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The newly registered kind.
+
+
+##### Remarks
+
+Call [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register&lt;T&gt;(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%60%601%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%29), which cannot be handed a
+type that is not a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8376284c85"></span>
+
+#### Register Method
+
+Registers a custom node kind with an element type mapping and an
+[Avalonia.Controls.Documents.TextModel.INodeKindHandler](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler) for full snapshot lifecycle support.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Register(string name, Avalonia.Controls.Documents.TextModel.NodeKindFlags flags, Type elementType, Avalonia.Controls.Documents.TextModel.INodeKindHandler handler)
+```
+
+##### Parameters
+
+`name` string
+
+Unique name for the kind. Must not collide with an existing registration.
+
+
+`flags` [Avalonia.Controls.Documents.TextModel.NodeKindFlags](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags)
+
+Category flags that determine schema behavior.
+
+
+`elementType` Type
+
+The element type this kind maps to.
+
+
+`handler` [Avalonia.Controls.Documents.TextModel.INodeKindHandler](xref:Avalonia.Controls.Documents.TextModel.INodeKindHandler)
+
+Handler that manages the snapshot lifecycle for this kind.
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)
+
+The newly registered kind.
+
+
+##### Remarks
+
+Call [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register&lt;T&gt;(string,Avalonia.Controls.Documents.TextModel.NodeKindFlags,Avalonia.Controls.Documents.TextModel.INodeKindHandler)](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Register%60%601%28System.String%2CAvalonia.Controls.Documents.TextModel.NodeKindFlags%2CAvalonia.Controls.Documents.TextModel.INodeKindHandler%29), which
+cannot be handed a type that is not a [Avalonia.Controls.Documents.RichTextElement](xref:Avalonia.Controls.Documents.RichTextElement).
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6379fb71d9"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-98fed80bc1"></span>
+
+### TryGetByName Method
+
+```csharp
+public bool TryGetByName(string name, Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind& kind)
+```
+
+#### Parameters
+
+`name` string
+
+
+`kind` [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Flags](#uid-2c6c0a94ae) | Category flags used by schema validation. |
+| [IsRoot](#uid-32a1ac2f55) | Whether the kind is a document root; see [Avalonia.Controls.Documents.TextModel.NodeKindFlags.Root](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.Root). |
+| [Name](#uid-0f283eb229) | Human-readable name (e.g. "Paragraph", "CodeBlock"). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c6c0a94ae"></span>
+
+### Flags Property
+
+Category flags used by schema validation.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.NodeKindFlags Flags { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32a1ac2f55"></span>
+
+### IsRoot Property
+
+Whether the kind is a document root; see [Avalonia.Controls.Documents.TextModel.NodeKindFlags.Root](xref:Avalonia.Controls.Documents.TextModel.NodeKindFlags.Root).
+
+```csharp
+public bool IsRoot { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0f283eb229"></span>
+
+### Name Property
+
+Human-readable name (e.g. "Paragraph", "CodeBlock").
+
+```csharp
+public string Name { get; set; }
+```
+
+</section>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Block](#uid-6acbd08c49) | A generic block kind. |
+| [BlockUIContainer](#uid-b93e566a8b) | A block UI container kind. |
+| [Bold](#uid-a25e2f9ab9) | A bold inline container kind. |
+| [Document](#uid-ff32c0760e) | The root document node kind. |
+| [Footnote](#uid-aa945c6546) | The root of a footnote's document: a note is a nested document paired with its anchor by note id. It survives while empty - the note goes with its anchor. |
+| [FootnoteCitation](#uid-93917fe535) | A further citation of a note that already has its anchor: a second reference to the same note, or a reference from inside another note. Like the anchor it is an atom of one object replacement character showing the note's number, but it owns no note - deleting it leaves the note and the numbering alone. |
+| [FootnoteReference](#uid-15e678f369) | A footnote anchor leaf. Its text range holds the note's number (the anchor order ordinal), so it renders and exports as plain text; the paired note is a nested document in the document's [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes). |
+| [Hyperlink](#uid-1efb56ee40) | A hyperlink inline container kind. |
+| [Image](#uid-be6660fa38) | An inline image kind. Occupies a single object-replacement character. |
+| [InlineUIContainer](#uid-9bba0173cf) | An inline UI container kind. |
+| [Italic](#uid-550716d226) | An italic inline container kind. |
+| [LineBreak](#uid-e855071e17) | A line break leaf kind. |
+| [List](#uid-916dbfcdbd) | A list block kind. |
+| [ListItem](#uid-6334b8c488) | A list item block container kind. |
+| [PageBand](#uid-ce57f8778d) | The root of a page band's document: a header or footer is a nested document whose root carries this kind instead of [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document), so what a document is travels with its tree and its snapshots. |
+| [PageNumberField](#uid-6351057c60) | A page-number field kind (current page / page count). Its text range holds the field's last calculated result, so it renders and exports as plain text until paginated rendering resolves it. |
+| [Paragraph](#uid-e627f4b468) | A paragraph inline container kind. |
+| [Run](#uid-28b803a475) | A text run leaf kind. |
+| [Section](#uid-8279f55fb8) | A section block container kind. |
+| [Span](#uid-4202fee56d) | A span inline container kind. |
+| [Subscript](#uid-71360df36d) | A subscript inline container kind. |
+| [Superscript](#uid-7b1ad0401f) | A superscript inline container kind. |
+| [Table](#uid-cf9861b8bf) | A table block kind. |
+| [TableCell](#uid-7bc6449b4e) | A table cell block container kind. |
+| [TableRow](#uid-7784249dc8) | A table row kind. |
+| [TableRowGroup](#uid-8461af6fb0) | A table row group kind. |
+| [Underline](#uid-39fce4ff0f) | An underline inline container kind. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6acbd08c49"></span>
+
+### Block Field
+
+A generic block kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Block
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b93e566a8b"></span>
+
+### BlockUIContainer Field
+
+A block UI container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind BlockUIContainer
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a25e2f9ab9"></span>
+
+### Bold Field
+
+A bold inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Bold
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ff32c0760e"></span>
+
+### Document Field
+
+The root document node kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Document
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-aa945c6546"></span>
+
+### Footnote Field
+
+The root of a footnote's document: a note is a nested document paired with its
+anchor by note id. It survives while empty - the note goes with its anchor.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Footnote
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-93917fe535"></span>
+
+### FootnoteCitation Field
+
+A further citation of a note that already has its anchor: a second reference to
+the same note, or a reference from inside another note. Like the anchor it is an
+atom of one object replacement character showing the note's number, but it owns
+no note - deleting it leaves the note and the numbering alone.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind FootnoteCitation
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-15e678f369"></span>
+
+### FootnoteReference Field
+
+A footnote anchor leaf. Its text range holds the note's number (the anchor
+order ordinal), so it renders and exports as plain text; the paired note is a
+nested document in the document's [Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes](xref:Avalonia.Controls.Documents.TextModel.TextDocument.Footnotes).
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind FootnoteReference
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1efb56ee40"></span>
+
+### Hyperlink Field
+
+A hyperlink inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Hyperlink
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-be6660fa38"></span>
+
+### Image Field
+
+An inline image kind. Occupies a single object-replacement character.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Image
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9bba0173cf"></span>
+
+### InlineUIContainer Field
+
+An inline UI container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind InlineUIContainer
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-550716d226"></span>
+
+### Italic Field
+
+An italic inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Italic
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e855071e17"></span>
+
+### LineBreak Field
+
+A line break leaf kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind LineBreak
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-916dbfcdbd"></span>
+
+### List Field
+
+A list block kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind List
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6334b8c488"></span>
+
+### ListItem Field
+
+A list item block container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind ListItem
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ce57f8778d"></span>
+
+### PageBand Field
+
+The root of a page band's document: a header or footer is a nested document whose
+root carries this kind instead of [Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document](xref:Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind.Document), so what a document is
+travels with its tree and its snapshots.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind PageBand
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6351057c60"></span>
+
+### PageNumberField Field
+
+A page-number field kind (current page / page count). Its text range holds the
+field's last calculated result, so it renders and exports as plain text until
+paginated rendering resolves it.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind PageNumberField
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e627f4b468"></span>
+
+### Paragraph Field
+
+A paragraph inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Paragraph
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28b803a475"></span>
+
+### Run Field
+
+A text run leaf kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Run
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8279f55fb8"></span>
+
+### Section Field
+
+A section block container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Section
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4202fee56d"></span>
+
+### Span Field
+
+A span inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Span
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-71360df36d"></span>
+
+### Subscript Field
+
+A subscript inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Subscript
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b1ad0401f"></span>
+
+### Superscript Field
+
+A superscript inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Superscript
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cf9861b8bf"></span>
+
+### Table Field
+
+A table block kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Table
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7bc6449b4e"></span>
+
+### TableCell Field
+
+A table cell block container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind TableCell
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7784249dc8"></span>
+
+### TableRow Field
+
+A table row kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind TableRow
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8461af6fb0"></span>
+
+### TableRowGroup Field
+
+A table row group kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind TableRowGroup
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-39fce4ff0f"></span>
+
+### Underline Field
+
+An underline inline container kind.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextDocumentNodeKind Underline
+```
+
+</section>
+
+</ApiRefPage>
+

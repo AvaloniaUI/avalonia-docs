@@ -1,0 +1,202 @@
+---
+title: 'RtfTabStopMetadata'
+hide_title: true
+slug: '/avalonia/controls/documents/serialization/rtf/rtftabstopmetadata'
+uid: 'Avalonia.Controls.Documents.Serialization.Rtf.RtfTabStopMetadata'
+commentId: 'T:Avalonia.Controls.Documents.Serialization.Rtf.RtfTabStopMetadata'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents.Serialization.Rtf'
+assembly: 'Avalonia.Controls.Documents.Serialization.Rtf'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Serialization.Rtf'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">RtfTabStopMetadata Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Serialization.Rtf</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents.Serialization.Rtf</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents.Serialization.Rtf</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+RTF tab stop metadata preserving exact RTF representation.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct RtfTabStopMetadata
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> RtfTabStopMetadata
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;RtfTabStopMetadata&gt;
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-19fb57e121) | No summary available. |
+| [GetHashCode](#uid-a1915c340f) | No summary available. |
+| [ToString](#uid-46a98e16a8) | No summary available. |
+
+<span id="uid-19fb57e121"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44346b5f25"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.Documents.Serialization.Rtf.RtfTabStopMetadata other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.Documents.Serialization.Rtf.RtfTabStopMetadata](xref:Avalonia.Controls.Documents.Serialization.Rtf.RtfTabStopMetadata)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0d5f53a470"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a1915c340f"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-46a98e16a8"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Alignment](#uid-84456dcf34) | Tab stop alignment: "tql" (left), "tqc" (center), "tqr" (right), "tqdec" (decimal), "tb" (bar). |
+| [Leader](#uid-982946b89a) | Tab leader: "tldot" (dotted), "tlhyph" (dashed), "tlul" (underline), "tlth" (thick), "tleq" (equal). Null if no leader. |
+| [PositionTwips](#uid-ea0c393525) | Tab stop position in twips. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-84456dcf34"></span>
+
+### Alignment Property
+
+Tab stop alignment: "tql" (left), "tqc" (center), "tqr" (right), "tqdec" (decimal), "tb" (bar).
+
+```csharp
+public string Alignment { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-982946b89a"></span>
+
+### Leader Property
+
+Tab leader: "tldot" (dotted), "tlhyph" (dashed), "tlul" (underline), "tlth" (thick), "tleq" (equal).
+Null if no leader.
+
+```csharp
+public string Leader { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-ea0c393525"></span>
+
+### PositionTwips Property
+
+Tab stop position in twips.
+
+```csharp
+public int PositionTwips { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

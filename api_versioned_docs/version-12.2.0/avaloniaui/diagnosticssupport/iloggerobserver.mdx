@@ -1,0 +1,110 @@
+---
+title: 'ILoggerObserver'
+hide_title: true
+slug: '/avaloniaui/diagnosticssupport/iloggerobserver'
+uid: 'AvaloniaUI.DiagnosticsSupport.ILoggerObserver'
+commentId: 'T:AvaloniaUI.DiagnosticsSupport.ILoggerObserver'
+docset: 'avalonia-docs'
+packageId: 'AvaloniaUI.DiagnosticsSupport'
+assembly: 'AvaloniaUI.DiagnosticsSupport.Avalonia'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'AvaloniaUI.DiagnosticsSupport'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">ILoggerObserver Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">AvaloniaUI.DiagnosticsSupport</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>AvaloniaUI.DiagnosticsSupport.Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>AvaloniaUI.DiagnosticsSupport</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface ILoggerObserver
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [IsEnabled](#uid-708f771f20) | No summary available. |
+| [Log](#uid-f8eb4fe79e) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-708f771f20"></span>
+
+### IsEnabled Method
+
+```csharp
+public bool IsEnabled(AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity level, string area)
+```
+
+#### Parameters
+
+`level` [AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity](xref:AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity)
+
+
+`area` string
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-f8eb4fe79e"></span>
+
+### Log Method
+
+```csharp
+public void Log(AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity level, string area, object source, string messageTemplate, Exception exception, ReadOnlySpan<object> propertyValues)
+```
+
+#### Parameters
+
+`level` [AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity](xref:AvaloniaUI.DiagnosticsProtocol.Application.LogEntryVerbosity)
+
+
+`area` string
+
+
+`source` object
+
+
+`messageTemplate` string
+
+
+`exception` Exception
+
+
+`propertyValues` ReadOnlySpan&lt;object&gt;
+
+
+</section>
+
+</ApiRefPage>
+

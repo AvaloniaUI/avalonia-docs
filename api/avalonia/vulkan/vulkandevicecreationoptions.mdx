@@ -77,6 +77,7 @@ public VulkanDeviceCreationOptions()
 | [DeviceExtensions](#uid-0d4f84aa49) | Specifies extensions to enable if available on the logical device |
 | [PreferDiscreteGpu](#uid-bb73ae5af6) | Selects the first suitable discrete gpu available |
 | [RequireComputeBit](#uid-01a547c17f) | No summary available. |
+| [RequireSwapchainExtension](#uid-832226d208) | Requires and enables VK_KHR_swapchain on the created device. Disable for offscreen-only rendering with drivers that don't expose the extension. |
 
 <section className="apiref-page__member-entry">
 
@@ -114,6 +115,21 @@ public bool PreferDiscreteGpu { get; set; }
 
 ```csharp
 public bool RequireComputeBit { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-832226d208"></span>
+
+### RequireSwapchainExtension Property
+
+Requires and enables VK_KHR_swapchain on the created device. Disable for offscreen-only
+rendering with drivers that don't expose the extension.
+
+```csharp
+public bool RequireSwapchainExtension { get; set; }
 ```
 
 </section>

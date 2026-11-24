@@ -1,0 +1,105 @@
+---
+title: 'IPlatformTypefaceSimulator'
+hide_title: true
+slug: '/avalonia/media/iplatformtypefacesimulator'
+uid: 'Avalonia.Media.IPlatformTypefaceSimulator'
+commentId: 'T:Avalonia.Media.IPlatformTypefaceSimulator'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IPlatformTypefaceSimulator Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Base/Media/IPlatformTypefaceSimulator.cs">IPlatformTypefaceSimulator.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Optionally implemented by an [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface) that can create variants of
+itself with other [Avalonia.Media.FontSimulations](xref:Avalonia.Media.FontSimulations).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IPlatformTypefaceSimulator
+```
+
+</div>
+
+## Remarks
+
+A font collection that needs a synthetic bold or oblique face asks the platform typeface it
+already holds for a simulated variant. The variant shares the font data of its source, so no
+copy of the font file is made. When this method returns `false`, the collection uses the
+source face without the simulations. Only when the platform typeface does not implement this
+interface does the collection create the synthetic face from the font stream returned by
+[Avalonia.Media.IPlatformTypeface.TryGetStream(System.IO.Stream@)](xref:Avalonia.Media.IPlatformTypeface.TryGetStream%28System.IO.Stream%40%29).
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [TryCreateSimulatedTypeface](#uid-69a9d724db) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-69a9d724db"></span>
+
+### TryCreateSimulatedTypeface Method
+
+```csharp
+public bool TryCreateSimulatedTypeface(Avalonia.Media.FontSimulations fontSimulations, Avalonia.Media.FontStyle style, Avalonia.Media.FontWeight weight, Avalonia.Media.FontStretch stretch, Avalonia.Media.IPlatformTypeface& typeface)
+```
+
+#### Parameters
+
+`fontSimulations` [Avalonia.Media.FontSimulations](xref:Avalonia.Media.FontSimulations)
+
+
+`style` [Avalonia.Media.FontStyle](xref:Avalonia.Media.FontStyle)
+
+
+`weight` [Avalonia.Media.FontWeight](xref:Avalonia.Media.FontWeight)
+
+
+`stretch` [Avalonia.Media.FontStretch](xref:Avalonia.Media.FontStretch)
+
+
+`typeface` [Avalonia.Media.IPlatformTypeface](xref:Avalonia.Media.IPlatformTypeface)&amp;
+
+
+#### Returns
+
+bool
+
+
+</section>
+
+</ApiRefPage>
+

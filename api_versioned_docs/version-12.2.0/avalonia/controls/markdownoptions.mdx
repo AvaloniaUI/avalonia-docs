@@ -1,0 +1,90 @@
+---
+title: 'MarkdownOptions'
+hide_title: true
+slug: '/avalonia/controls/markdownoptions'
+uid: 'Avalonia.Controls.MarkdownOptions'
+commentId: 'T:Avalonia.Controls.MarkdownOptions'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Markdown'
+assembly: 'Avalonia.Controls.Markdown'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">MarkdownOptions Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Markdown</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+App-wide defaults for every [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control, set up at startup with
+[Avalonia.Controls.MarkdownAppBuilderExtensions.ConfigureMarkdown(Avalonia.AppBuilder,Action&#123;Avalonia.Controls.MarkdownOptions&#125;)](xref:Avalonia.Controls.MarkdownAppBuilderExtensions.ConfigureMarkdown%28Avalonia.AppBuilder%2CSystem.Action%7BAvalonia.Controls.MarkdownOptions%7D%29).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class MarkdownOptions
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> MarkdownOptions
+</div>
+</div>
+
+## Remarks
+
+A control reads the options when it builds its parse pipeline. App setup runs before any control exists, so
+every control sees them.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Extensions](#uid-dc240308a3) | Gets the Markdig extensions every [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control adds to its parse pipeline after the supported ones and before its own [Avalonia.Controls.Markdown.Extensions](xref:Avalonia.Controls.Markdown.Extensions). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dc240308a3"></span>
+
+### Extensions Property
+
+Gets the Markdig extensions every [Avalonia.Controls.Markdown](xref:Avalonia.Controls.Markdown) control adds to its parse pipeline after the
+supported ones and before its own [Avalonia.Controls.Markdown.Extensions](xref:Avalonia.Controls.Markdown.Extensions).
+
+```csharp
+public System.Collections.Generic.IList<Markdig.IMarkdownExtension> Extensions { get; set; }
+```
+
+#### Remarks
+
+`MarkdownSerializer` does not read these; pass them to its constructor to parse the way the controls do.
+Adding throws [ArgumentNullException](xref:System.ArgumentNullException).
+
+</section>
+
+</ApiRefPage>
+

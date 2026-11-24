@@ -1,0 +1,492 @@
+---
+title: 'CompositionBlendMode'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositionblendmode'
+uid: 'Avalonia.Rendering.Composition.CompositionBlendMode'
+commentId: 'T:Avalonia.Rendering.Composition.CompositionBlendMode'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Enum'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionBlendMode Enum</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public enum CompositionBlendMode
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Enum <span className="apiref-page__relation-separator">-&gt;</span> CompositionBlendMode
+</div>
+</div>
+
+## Fields
+
+| Name | Description |
+| --- | --- |
+| [Clear](#uid-b8ce225220) | No regions are enabled. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_clr.svg) |
+| [Color](#uid-38759ed325) | Creates a CompositionColorwith the hue and saturation of the source CompositionColorand the luminosity of the backdrop color. [Non-Separable Blend Modes] |
+| [ColorBurn](#uid-42cbe50e5f) | Darkens the backdrop CompositionColorto reflect the source color. [Separable Blend Modes] |
+| [ColorDodge](#uid-3ba1d56201) | Brightens the backdrop CompositionColorto reflect the source color. [Separable Blend Modes] |
+| [Darken](#uid-629180d5aa) | Selects the darker of the backdrop and source colors. [Separable Blend Modes] |
+| [Difference](#uid-6647e61df2) | Subtracts the darker of the two constituent colors from the lighter color. [Separable Blend Modes] |
+| [Dst](#uid-a37c340b95) | Only the destination will be present. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst.svg) |
+| [DstATop](#uid-9ee2d530d3) | Destination which overlaps the source replaces the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-atop.svg) |
+| [DstIn](#uid-01c52e00f4) | Destination which overlaps the source, replaces the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-in.svg) |
+| [DstOut](#uid-8a1563ce29) | Destination is placed, where it falls outside of the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-out.svg) |
+| [DstOver](#uid-1938a8906f) | Destination is placed over the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-over.svg) |
+| [Exclusion](#uid-1e3c87a5df) | Produces an effect similar to that of the Difference mode but lower in contrast. [Separable Blend Modes] |
+| [HardLight](#uid-758ca30629) | Multiplies or screens the colors, depending on the source CompositionColorvalue. [Separable Blend Modes] |
+| [Hue](#uid-32345efc5a) | Creates a CompositionColorwith the hue of the source CompositionColorand the saturation and luminosity of the backdrop color. [Non-Separable Blend Modes] |
+| [Lighten](#uid-6e4209f524) | Selects the lighter of the backdrop and source colors. [Separable Blend Modes] |
+| [Luminosity](#uid-125962f081) | Creates a CompositionColorwith the luminosity of the source CompositionColorand the hue and saturation of the backdrop color. [Non-Separable Blend Modes] |
+| [Modulate](#uid-e2d711ca6a) | Multiplies all components (= alpha and color). [Separable Blend Modes] |
+| [Multiply](#uid-1e495a4041) | The source CompositionColoris multiplied by the destination CompositionColorand replaces the destination [Separable Blend Modes] |
+| [Overlay](#uid-968aa205db) | Multiplies or screens the colors, depending on the backdrop CompositionColorvalue. [Separable Blend Modes] |
+| [Plus](#uid-5b2c05cedc) | Display the sum of the source image and destination image. [Porter Duff Compositing Operators] |
+| [Saturation](#uid-688d3b5133) | Creates a CompositionColorwith the saturation of the source CompositionColorand the hue and luminosity of the backdrop color. [Non-Separable Blend Modes] |
+| [Screen](#uid-51f85de9ea) | Multiplies the complements of the backdrop and source CompositionColorvalues, then complements the result. [Separable Blend Modes] |
+| [SoftLight](#uid-31b7f5a8d4) | Darkens or lightens the colors, depending on the source CompositionColorvalue. [Separable Blend Modes] |
+| [Src](#uid-d0cad58ab6) | Only the source will be present. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src.svg) |
+| [SrcATop](#uid-367b5b75ee) | Source which overlaps the destination, replaces the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-atop.svg) |
+| [SrcIn](#uid-267245586e) | The source that overlaps the destination, replaces the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-in.svg) |
+| [SrcOut](#uid-6a93f97f08) | Source is placed, where it falls outside of the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-out.svg) |
+| [SrcOver](#uid-8843b5ecad) | Source is placed over the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-over.svg) |
+| [Xor](#uid-4daa3d3edc) | The non-overlapping regions of source and destination are combined. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_xor.svg) |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b8ce225220"></span>
+
+### Clear Field
+
+No regions are enabled. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_clr.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Clear
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-38759ed325"></span>
+
+### Color Field
+
+Creates a CompositionColorwith the hue and saturation of the source CompositionColorand the luminosity of the backdrop color. [Non-Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Color
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42cbe50e5f"></span>
+
+### ColorBurn Field
+
+Darkens the backdrop CompositionColorto reflect the source color. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode ColorBurn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3ba1d56201"></span>
+
+### ColorDodge Field
+
+Brightens the backdrop CompositionColorto reflect the source color. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode ColorDodge
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-629180d5aa"></span>
+
+### Darken Field
+
+Selects the darker of the backdrop and source colors. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Darken
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6647e61df2"></span>
+
+### Difference Field
+
+Subtracts the darker of the two constituent colors from the lighter color. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Difference
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a37c340b95"></span>
+
+### Dst Field
+
+Only the destination will be present. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Dst
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-9ee2d530d3"></span>
+
+### DstATop Field
+
+Destination which overlaps the source replaces the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-atop.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode DstATop
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01c52e00f4"></span>
+
+### DstIn Field
+
+Destination which overlaps the source, replaces the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-in.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode DstIn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8a1563ce29"></span>
+
+### DstOut Field
+
+Destination is placed, where it falls outside of the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-out.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode DstOut
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1938a8906f"></span>
+
+### DstOver Field
+
+Destination is placed over the source. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_dst-over.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode DstOver
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e3c87a5df"></span>
+
+### Exclusion Field
+
+Produces an effect similar to that of the Difference mode but lower in contrast. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Exclusion
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-758ca30629"></span>
+
+### HardLight Field
+
+Multiplies or screens the colors, depending on the source CompositionColorvalue. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode HardLight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-32345efc5a"></span>
+
+### Hue Field
+
+Creates a CompositionColorwith the hue of the source CompositionColorand the saturation and luminosity of the backdrop color. [Non-Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Hue
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6e4209f524"></span>
+
+### Lighten Field
+
+Selects the lighter of the backdrop and source colors. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Lighten
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-125962f081"></span>
+
+### Luminosity Field
+
+Creates a CompositionColorwith the luminosity of the source CompositionColorand the hue and saturation of the backdrop color. [Non-Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Luminosity
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e2d711ca6a"></span>
+
+### Modulate Field
+
+Multiplies all components (= alpha and color). [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Modulate
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1e495a4041"></span>
+
+### Multiply Field
+
+The source CompositionColoris multiplied by the destination CompositionColorand replaces the destination [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Multiply
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-968aa205db"></span>
+
+### Overlay Field
+
+Multiplies or screens the colors, depending on the backdrop CompositionColorvalue. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Overlay
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-5b2c05cedc"></span>
+
+### Plus Field
+
+Display the sum of the source image and destination image. [Porter Duff Compositing Operators]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Plus
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-688d3b5133"></span>
+
+### Saturation Field
+
+Creates a CompositionColorwith the saturation of the source CompositionColorand the hue and luminosity of the backdrop color. [Non-Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Saturation
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-51f85de9ea"></span>
+
+### Screen Field
+
+Multiplies the complements of the backdrop and source CompositionColorvalues, then complements the result. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Screen
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-31b7f5a8d4"></span>
+
+### SoftLight Field
+
+Darkens or lightens the colors, depending on the source CompositionColorvalue. [Separable Blend Modes]
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode SoftLight
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d0cad58ab6"></span>
+
+### Src Field
+
+Only the source will be present. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Src
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-367b5b75ee"></span>
+
+### SrcATop Field
+
+Source which overlaps the destination, replaces the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-atop.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode SrcATop
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-267245586e"></span>
+
+### SrcIn Field
+
+The source that overlaps the destination, replaces the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-in.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode SrcIn
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6a93f97f08"></span>
+
+### SrcOut Field
+
+Source is placed, where it falls outside of the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-out.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode SrcOut
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8843b5ecad"></span>
+
+### SrcOver Field
+
+Source is placed over the destination. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_src-over.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode SrcOver
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4daa3d3edc"></span>
+
+### Xor Field
+
+The non-overlapping regions of source and destination are combined. [Porter Duff Compositing Operators] (https://drafts.fxtf.org/compositing-1/examples/PD_xor.svg)
+
+```csharp
+public Avalonia.Rendering.Composition.CompositionBlendMode Xor
+```
+
+</section>
+
+</ApiRefPage>
+

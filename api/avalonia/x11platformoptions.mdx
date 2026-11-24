@@ -91,7 +91,9 @@ public X11PlatformOptions()
 | [UseDBusFilePicker](#uid-2ea5009019) | Enables DBus file picker instead of GTK. The default value is true. |
 | [UseDBusMenu](#uid-d169320b9a) | Enables global menu support on Linux desktop environments where it's supported (e. g. XFCE and MATE with plugin, KDE, etc). The default value is true. |
 | [UseGLibMainLoop](#uid-d79a79f8ea) | If this option is set to true, GMainLoop and GSource based dispatcher implementation will be used instead of epoll-based one. Use this if you need to use GLib-based libraries on the main thread |
+| [UsePartialPresentation](#uid-bf42816178) | Enables partial presentation when supported by the rendering backend. Currently supported with [Avalonia.X11RenderingMode.Egl](xref:Avalonia.X11RenderingMode.Egl). When `null`, uses the platform default, which is currently disabled. |
 | [UseRetainedFramebuffer](#uid-4179d7f252) | Retain window framebuffer contents if using CPU rendering mode. This will keep an offscreen bitmap for each window with contents of the previous frame While improving performance by saving a blit, it will increase memory consumption if you have many windows |
+| [UseXShmFramebuffer](#uid-2c519490d6) | Enables the MIT-SHM extension for CPU rendering mode, which uses shared memory to transfer the framebuffer contents to the X server instead of sending pixels over the connection socket. Only used when set to true and the extension is supported by the server. The default value is null. |
 | [WmClass](#uid-101d63096a) | No summary available. |
 
 <section className="apiref-page__member-entry">
@@ -348,6 +350,22 @@ public bool UseGLibMainLoop { get; set; }
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-bf42816178"></span>
+
+### UsePartialPresentation Property
+
+Enables partial presentation when supported by the rendering backend.
+Currently supported with [Avalonia.X11RenderingMode.Egl](xref:Avalonia.X11RenderingMode.Egl).
+When `null`, uses the platform default, which is currently disabled.
+
+```csharp
+public Nullable<bool> UsePartialPresentation { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-4179d7f252"></span>
 
 ### UseRetainedFramebuffer Property
@@ -359,6 +377,24 @@ if you have many windows
 
 ```csharp
 public Nullable<bool> UseRetainedFramebuffer { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2c519490d6"></span>
+
+### UseXShmFramebuffer Property
+
+Enables the MIT-SHM extension for CPU rendering mode, which uses shared memory
+to transfer the framebuffer contents to the X server instead of sending pixels
+over the connection socket.
+Only used when set to true and the extension is supported by the server.
+The default value is null.
+
+```csharp
+public Nullable<bool> UseXShmFramebuffer { get; set; }
 ```
 
 </section>

@@ -93,6 +93,7 @@ public class TileBrush
 | [Dispatcher](../avaloniaobject.mdx#uid-b25fa51632) | Returns the [Avalonia.AvaloniaObject.Dispatcher](xref:Avalonia.AvaloniaObject.Dispatcher) that this [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject) is associated with. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [Opacity](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. Inherited from [Brush](brush.mdx). |
+| [RelativeTransform](brush.mdx#uid-f7096bbee7) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. Inherited from [Brush](brush.mdx). |
 | [SourceRect](#uid-7ec3a0bf52) | Gets or sets the rectangle of the source image that will be displayed. |
 | [Stretch](#uid-0f3e8a1b10) | Gets or sets a value controlling how the source rectangle will be stretched to fill the destination rect. |
 | [TileMode](#uid-dc5dc1a38f) | Gets or sets the brush's tile mode. |
@@ -193,6 +194,7 @@ public Avalonia.Media.TileMode TileMode { get; set; }
 | [AlignmentYProperty](#uid-f8b166babe) | Defines the [Avalonia.Media.TileBrush.AlignmentY](xref:Avalonia.Media.TileBrush.AlignmentY) property. |
 | [DestinationRectProperty](#uid-6fecc189d1) | Defines the [Avalonia.Media.TileBrush.DestinationRect](xref:Avalonia.Media.TileBrush.DestinationRect) property. |
 | [OpacityProperty](brush.mdx#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. Inherited from [Brush](brush.mdx). |
+| [RelativeTransformProperty](brush.mdx#uid-e92f247126) | Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property. Inherited from [Brush](brush.mdx). |
 | [SourceRectProperty](#uid-94d60976da) | Defines the [Avalonia.Media.TileBrush.SourceRect](xref:Avalonia.Media.TileBrush.SourceRect) property. |
 | [StretchProperty](#uid-52077d5dbb) | Defines the [Avalonia.Media.TileBrush.Stretch](xref:Avalonia.Media.TileBrush.Stretch) property. |
 | [TileModeProperty](#uid-03d37e0b80) | Defines the [Avalonia.Media.TileBrush.TileMode](xref:Avalonia.Media.TileBrush.TileMode) property. |

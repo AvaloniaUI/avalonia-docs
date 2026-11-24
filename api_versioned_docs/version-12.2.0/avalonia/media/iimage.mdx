@@ -1,0 +1,109 @@
+---
+title: 'IImage'
+hide_title: true
+slug: '/avalonia/media/iimage'
+uid: 'Avalonia.Media.IImage'
+commentId: 'T:Avalonia.Media.IImage'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Media'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IImage Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Media</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents a raster or vector image.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IImage
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Draw](#uid-44209dd3b4) | Draws the image to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-44209dd3b4"></span>
+
+### Draw Method
+
+Draws the image to a [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext).
+
+```csharp
+public void Draw(Avalonia.Media.DrawingContext context, Avalonia.Rect sourceRect, Avalonia.Rect destRect)
+```
+
+#### Parameters
+
+`context` [Avalonia.Media.DrawingContext](xref:Avalonia.Media.DrawingContext)
+
+The drawing context.
+
+
+`sourceRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the image to draw.
+
+
+`destRect` [Avalonia.Rect](xref:Avalonia.Rect)
+
+The rect in the output to draw to.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Size](#uid-e8ee007c6b) | Gets the size of the image, in device independent pixels. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e8ee007c6b"></span>
+
+### Size Property
+
+Gets the size of the image, in device independent pixels.
+
+```csharp
+public Avalonia.Size Size { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

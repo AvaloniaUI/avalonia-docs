@@ -419,6 +419,9 @@ public Avalonia.Platform.IPlatformHandle TryGetPlatformHandle()
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
 | [AdapterInfo](#uid-27a05e400f) | No summary available. |
 | [AdapterPreference](#uid-ce0f44548b) | No summary available. |
+| [BackdropEffect](../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectBoundsSource](../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCache](../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../visual.mdx). |
 | [Background](#uid-da42293a8a) | No summary available. |
 | [Bounds](../visual.mdx#uid-a01c3022f7) | Gets the bounds of the control relative to its parent. Inherited from [Visual](../visual.mdx). |
 | [CacheMode](../visual.mdx#uid-c565afad32) | Gets or sets the cache mode of the visual. Inherited from [Visual](../visual.mdx). |
@@ -572,6 +575,9 @@ public string UserAgent { get; set; }
 | Name | Description |
 | --- | --- |
 | [AdapterInfoProperty](#uid-b6c9c885d4) | No summary available. |
+| [BackdropEffectBoundsSourceProperty](../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCacheProperty](../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectProperty](../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../visual.mdx). |
 | [BackgroundProperty](#uid-2bfe021f3d) | No summary available. |
 | [BoundsProperty](../visual.mdx#uid-f22a27348f) | Defines the [Avalonia.Visual.Bounds](xref:Avalonia.Visual.Bounds) property. Inherited from [Visual](../visual.mdx). |
 | [CacheModeProperty](../visual.mdx#uid-5c89b0f2fc) | Defines the [Avalonia.Visual.CacheMode](xref:Avalonia.Visual.CacheMode) property. Inherited from [Visual](../visual.mdx). |
@@ -737,6 +743,7 @@ public Avalonia.StyledProperty<Uri> SourceProperty
 | [PointerTouchPadGestureRotate](../input/inputelement.mdx#uid-d966c43661) | Occurs when the user places two contact points and moves them in a circular motion on a touchpad. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerTouchPadGestureSwipe](../input/inputelement.mdx#uid-9011c6de89) | Occurs when the user performs a rapid dragging motion in a single direction on a touchpad. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PointerWheelChanged](../input/inputelement.mdx#uid-6687ab6f2e) | Occurs when the mouse is scrolled over the control. Inherited from [InputElement](../input/inputelement.mdx). |
+| [ProcessTerminated](#uid-28a3e01d3e) | No summary available. |
 | [PropertyChanged](../avaloniaobject.mdx#uid-d758e26fae) | Raised when a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value changes on this object. Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [PullGesture](../input/inputelement.mdx#uid-d85f52cac5) | Occurs when the user drags from the edge of a control. Inherited from [InputElement](../input/inputelement.mdx). |
 | [PullGestureEnded](../input/inputelement.mdx#uid-a37f51b846) | Occurs when the user releases the pointer after a pull gesture. Inherited from [InputElement](../input/inputelement.mdx). |
@@ -823,6 +830,18 @@ public event EventHandler<Avalonia.Controls.WebViewNavigationStartingEventArgs> 
 
 ```csharp
 public event EventHandler<Avalonia.Controls.WebViewNewWindowRequestedEventArgs> NewWindowRequested
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-28a3e01d3e"></span>
+
+### ProcessTerminated Event
+
+```csharp
+public event EventHandler<Avalonia.Controls.WebViewProcessTerminatedEventArgs> ProcessTerminated
 ```
 
 </section>

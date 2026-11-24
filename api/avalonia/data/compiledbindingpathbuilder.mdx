@@ -81,7 +81,7 @@ public CompiledBindingPathBuilder()
 | [ElementName](#uid-6c1a4a3d18) | No summary available. |
 | [Method (2 overloads)](#uid-47fc2ea1d9) | No summary available. |
 | [Not](#uid-f7d6c7a72c) | No summary available. |
-| [Property (2 overloads)](#uid-76400c934d) | No summary available. |
+| [Property (3 overloads)](#uid-76400c934d) | No summary available. |
 | [Self](#uid-27bd01ca27) | No summary available. |
 | [StreamObservable](#uid-8d5b7b27af) | No summary available. |
 | [StreamTask](#uid-bb37dceed6) | No summary available. |
@@ -334,6 +334,42 @@ public Avalonia.Data.CompiledBindingPathBuilder Property(Avalonia.Data.Core.IPro
 
 
 `acceptsNull` bool
+
+
+##### Returns
+
+[Avalonia.Data.CompiledBindingPathBuilder](xref:Avalonia.Data.CompiledBindingPathBuilder)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-76c888eb4c"></span>
+
+#### Property Method
+
+```csharp
+public Avalonia.Data.CompiledBindingPathBuilder Property<TSource, TResult>(Avalonia.Data.Core.IPropertyInfo<TSource,TValue><TSource, TResult> info, Func<WeakReference<object>, Avalonia.Data.Core.IPropertyInfo, Avalonia.Data.Core.Plugins.IPropertyAccessor> accessorFactory, bool acceptsNull)
+```
+
+##### Parameters
+
+`info` [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo)&lt;TSource,TValue&gt;&lt;TSource, TResult&gt;
+
+
+`accessorFactory` Func&lt;WeakReference&lt;object&gt;, [Avalonia.Data.Core.IPropertyInfo](xref:Avalonia.Data.Core.IPropertyInfo), [Avalonia.Data.Core.Plugins.IPropertyAccessor](xref:Avalonia.Data.Core.Plugins.IPropertyAccessor)&gt;
+
+
+`acceptsNull` bool
+
+
+##### Type Parameters
+
+`TSource`
+
+
+`TResult`
 
 
 ##### Returns

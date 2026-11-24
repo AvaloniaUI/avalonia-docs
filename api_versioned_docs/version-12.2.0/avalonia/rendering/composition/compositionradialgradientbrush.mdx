@@ -1,0 +1,143 @@
+---
+title: 'CompositionRadialGradientBrush'
+hide_title: true
+slug: '/avalonia/rendering/composition/compositionradialgradientbrush'
+uid: 'Avalonia.Rendering.Composition.CompositionRadialGradientBrush'
+commentId: 'T:Avalonia.Rendering.Composition.CompositionRadialGradientBrush'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Rendering.Composition'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">CompositionRadialGradientBrush Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Rendering.Composition</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class CompositionRadialGradientBrush
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionobject">CompositionObject</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositionbrush">CompositionBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> <a href="compositiongradientbrush">CompositionGradientBrush</a> <span className="apiref-page__relation-separator">-&gt;</span> CompositionRadialGradientBrush
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="../../media/ibrush">IBrush</a>, <a href="../../media/igradientbrush">IGradientBrush</a>, <a href="../../media/iradialgradientbrush">IRadialGradientBrush</a>
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [StartAnimation](compositionobject.mdx#uid-4d2f25fec7) | Connects an animation with the specified property of the object and starts the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StartAnimationGroup](compositionobject.mdx#uid-4846f860a0) | Starts an animation group. The StartAnimationGroup method on [CompositionObject](xref:Avalonia.Rendering.Composition.CompositionObject) lets you start [CompositionAnimationGroup](xref:Avalonia.Rendering.Composition.Animations.CompositionAnimationGroup). All the animations in the group will be started at the same time on the object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimation](compositionobject.mdx#uid-01077c2b21) | Disconnects an animation from the specified property and stops the animation. Inherited from [CompositionObject](compositionobject.mdx). |
+| [StopAnimationGroup](compositionobject.mdx#uid-81dbd02845) | Stops an animation group. Inherited from [CompositionObject](compositionobject.mdx). |
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Center](#uid-36b9c55554) | No summary available. |
+| [Compositor](compositionobject.mdx#uid-bd6bbc1391) | The associated Compositor Inherited from [CompositionObject](compositionobject.mdx). |
+| [GradientOrigin](#uid-8c2bf5cf80) | No summary available. |
+| [GradientStops](compositiongradientbrush.mdx#uid-273e8be0b1) | The gradient stops. Mutations of the list itself are not tracked - assign the property to ship in-place edits made after a commit. Stops created via [Avalonia.Rendering.Composition.Compositor.CreateGradientStop(double,Avalonia.Media.Color)](xref:Avalonia.Rendering.Composition.Compositor.CreateGradientStop%28System.Double%2CAvalonia.Media.Color%29) stay live on the server and animate individually; other stops are snapshotted at serialization time. Inherited from [CompositionGradientBrush](compositiongradientbrush.mdx). |
+| [ImplicitAnimations](compositionobject.mdx#uid-3929e9ea34) | The collection of implicit animations attached to this object. Inherited from [CompositionObject](compositionobject.mdx). |
+| [IsDisposed](compositionobject.mdx#uid-e01437c946) | Inherited from [CompositionObject](compositionobject.mdx). |
+| [Opacity](compositionbrush.mdx#uid-2134dd578d) | Inherited from [CompositionBrush](compositionbrush.mdx). |
+| [Radius](#uid-67e91575f0) | No summary available. |
+| [RadiusX](#uid-97dcb15b09) | No summary available. |
+| [RadiusY](#uid-03fe3deaed) | No summary available. |
+| [RelativeTransform](compositionbrush.mdx#uid-2870f50f6d) | Inherited from [CompositionBrush](compositionbrush.mdx). |
+| [SpreadMethod](compositiongradientbrush.mdx#uid-37034da30d) | How the gradient repeats outside the stop range. Inherited from [CompositionGradientBrush](compositiongradientbrush.mdx). |
+| [Transform](compositionbrush.mdx#uid-761fc7df11) | Inherited from [CompositionBrush](compositionbrush.mdx). |
+| [TransformOrigin](compositionbrush.mdx#uid-58c2681674) | Inherited from [CompositionBrush](compositionbrush.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-36b9c55554"></span>
+
+### Center Property
+
+```csharp
+public Avalonia.RelativePoint Center { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8c2bf5cf80"></span>
+
+### GradientOrigin Property
+
+```csharp
+public Avalonia.RelativePoint GradientOrigin { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-67e91575f0"></span>
+
+### Radius Property
+
+```csharp
+public double Radius { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97dcb15b09"></span>
+
+### RadiusX Property
+
+```csharp
+public Avalonia.RelativeScalar RadiusX { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-03fe3deaed"></span>
+
+### RadiusY Property
+
+```csharp
+public Avalonia.RelativeScalar RadiusY { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

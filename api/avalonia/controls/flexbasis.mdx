@@ -1,0 +1,341 @@
+---
+title: 'FlexBasis'
+hide_title: true
+slug: '/avalonia/controls/flexbasis'
+uid: 'Avalonia.Controls.FlexBasis'
+commentId: 'T:Avalonia.Controls.FlexBasis'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Struct'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">FlexBasis Struct</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/FlexPanel/FlexBasis.cs">FlexBasis.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Specifies the initial size of a flex item.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public struct FlexBasis
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> ValueType <span className="apiref-page__relation-separator">-&gt;</span> FlexBasis
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> IEquatable&lt;FlexBasis&gt;
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [FlexBasis (2 overloads)](#uid-6b5e608fa7) | Initializes an instance of [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) and sets the absolute value |
+
+<span id="uid-6b5e608fa7"></span>
+
+### FlexBasis overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2089a39ee7"></span>
+
+#### FlexBasis Constructor
+
+Initializes an instance of [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) and sets the absolute value
+
+```csharp
+public FlexBasis(double value)
+```
+
+##### Parameters
+
+`value` double
+
+The absolute value of the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+##### Exceptions
+
+- [ArgumentException](xref:System.ArgumentException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-16bd4b55cc"></span>
+
+#### FlexBasis Constructor
+
+Initializes an instance of [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) and sets the value and [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind)
+
+```csharp
+public FlexBasis(double value, Avalonia.Controls.FlexBasisKind kind)
+```
+
+##### Parameters
+
+`value` double
+
+The value of the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+`kind` [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind)
+
+The [. This determines how the value affects the size of the flex item](xref:Avalonia.Controls.FlexBasisKind)/&gt;
+
+
+##### Exceptions
+
+- [ArgumentException](xref:System.ArgumentException)
+
+</section>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Equals (2 overloads)](#uid-bb09b7a100) | No summary available. |
+| [GetHashCode](#uid-d77cc692bd) | No summary available. |
+| [Parse](#uid-3a0ebd47bf) | Converts a string flex-basis value to a [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) instance. |
+| [ToString](#uid-01d1816540) | No summary available. |
+
+<span id="uid-bb09b7a100"></span>
+
+### Equals overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2cf16aa08f"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(Avalonia.Controls.FlexBasis other)
+```
+
+##### Parameters
+
+`other` [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2e7e3adf55"></span>
+
+#### Equals Method
+
+```csharp
+public bool Equals(object obj)
+```
+
+##### Parameters
+
+`obj` object
+
+
+##### Returns
+
+bool
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d77cc692bd"></span>
+
+### GetHashCode Method
+
+```csharp
+public int GetHashCode()
+```
+
+#### Returns
+
+int
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-3a0ebd47bf"></span>
+
+### Parse Method
+
+Converts a string flex-basis value to a [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) instance.
+
+```csharp
+public Avalonia.Controls.FlexBasis Parse(string str)
+```
+
+#### Parameters
+
+`str` string
+
+The value to parse.
+
+
+#### Returns
+
+[Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-01d1816540"></span>
+
+### ToString Method
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+string
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Auto](#uid-b9f2ab7b53) | Gets a [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) instance that represents the "auto" value, which means the size of the flex item is determined by its content or other factors. |
+| [IsAbsolute](#uid-0297f0b445) | Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to an absolute value. |
+| [IsAuto](#uid-2ddf1d9509) | Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to "auto". |
+| [IsRelative](#uid-0deada0db8) | Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to a relative value. |
+| [Kind](#uid-461e0890ab) | Gets the [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind). This determines how the value affects the size of the flex item |
+| [Value](#uid-c94c542ec2) | Gets the value of the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis). The meaning of this value depends on the [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind) |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b9f2ab7b53"></span>
+
+### Auto Property
+
+Gets a [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) instance that represents the "auto" value, which means the size of the flex item is determined by its content or other factors.
+
+```csharp
+public Avalonia.Controls.FlexBasis Auto { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0297f0b445"></span>
+
+### IsAbsolute Property
+
+Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to an absolute value.
+
+```csharp
+public bool IsAbsolute { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-2ddf1d9509"></span>
+
+### IsAuto Property
+
+Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to "auto".
+
+```csharp
+public bool IsAuto { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0deada0db8"></span>
+
+### IsRelative Property
+
+Gets a value indicating whether the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis) is set to a relative value.
+
+```csharp
+public bool IsRelative { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-461e0890ab"></span>
+
+### Kind Property
+
+Gets the [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind). This determines how the value affects the size of the flex item
+
+```csharp
+public Avalonia.Controls.FlexBasisKind Kind { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c94c542ec2"></span>
+
+### Value Property
+
+Gets the value of the [Avalonia.Controls.FlexBasis](xref:Avalonia.Controls.FlexBasis). The meaning of this value depends on the [Avalonia.Controls.FlexBasisKind](xref:Avalonia.Controls.FlexBasisKind)
+
+```csharp
+public double Value { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

@@ -58,7 +58,10 @@ public enum WrapPanelItemsAlignment
 | --- | --- |
 | [Center](#uid-1918ae5ba5) | Items are laid out so that each column/row is centred vertically/horizontally within the panel. |
 | [End](#uid-8e847d8bb9) | Items are laid out so the last one in each column/row touches the bottom/right of the panel. |
+| [Justify](#uid-18cc5c6515) | Items are laid out with equal spacing between them within each column/row. |
 | [Start](#uid-128a4aeb0d) | Items are laid out so the first one in each column/row touches the top/left of the panel. |
+| [Stretch](#uid-a5576beace) | Items are stretched evenly to fill the entire height/width of each column/row (last column/row excluded). |
+| [StretchAll](#uid-278dc642bf) | Items are stretched evenly to fill the entire height/width of each column/row. |
 
 <section className="apiref-page__member-entry">
 
@@ -90,6 +93,24 @@ public Avalonia.Controls.WrapPanelItemsAlignment End
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-18cc5c6515"></span>
+
+### Justify Field
+
+Items are laid out with equal spacing between them within each column/row.
+
+```csharp
+public Avalonia.Controls.WrapPanelItemsAlignment Justify
+```
+
+#### Remarks
+
+[Avalonia.Controls.WrapPanel.ItemSpacing](xref:Avalonia.Controls.WrapPanel.ItemSpacing) becomes the minimum spacing between items.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-128a4aeb0d"></span>
 
 ### Start Field
@@ -99,6 +120,42 @@ Items are laid out so the first one in each column/row touches the top/left of t
 ```csharp
 public Avalonia.Controls.WrapPanelItemsAlignment Start
 ```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a5576beace"></span>
+
+### Stretch Field
+
+Items are stretched evenly to fill the entire height/width of each column/row (last column/row excluded).
+
+```csharp
+public Avalonia.Controls.WrapPanelItemsAlignment Stretch
+```
+
+#### Remarks
+
+[Avalonia.Controls.WrapPanel.ItemWidth](xref:Avalonia.Controls.WrapPanel.ItemWidth) or [Avalonia.Controls.WrapPanel.ItemHeight](xref:Avalonia.Controls.WrapPanel.ItemHeight) becomes the minimum size of items.
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-278dc642bf"></span>
+
+### StretchAll Field
+
+Items are stretched evenly to fill the entire height/width of each column/row.
+
+```csharp
+public Avalonia.Controls.WrapPanelItemsAlignment StretchAll
+```
+
+#### Remarks
+
+[Avalonia.Controls.WrapPanel.ItemWidth](xref:Avalonia.Controls.WrapPanel.ItemWidth) or [Avalonia.Controls.WrapPanel.ItemHeight](xref:Avalonia.Controls.WrapPanel.ItemHeight) becomes the minimum size of items.
 
 </section>
 

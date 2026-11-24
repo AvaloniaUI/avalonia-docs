@@ -1,0 +1,121 @@
+---
+title: 'PastingFromClipboardEventArgs'
+hide_title: true
+slug: '/avalonia/controls/pastingfromclipboardeventargs'
+uid: 'Avalonia.Controls.PastingFromClipboardEventArgs'
+commentId: 'T:Avalonia.Controls.PastingFromClipboardEventArgs'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Controls'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PastingFromClipboardEventArgs Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Source:</span> <a href="https://github.com/AvaloniaUI/Avalonia/blob/main/src/Avalonia.Controls/PastingFromClipboardEventArgs.cs">PastingFromClipboardEventArgs.cs</a>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Provides data specific to a [Avalonia.Controls.TextBox.PastingFromClipboard](xref:Avalonia.Controls.TextBox.PastingFromClipboard) event.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PastingFromClipboardEventArgs
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> EventArgs <span className="apiref-page__relation-separator">-&gt;</span> <a href="../interactivity/routedeventargs">RoutedEventArgs</a> <span className="apiref-page__relation-separator">-&gt;</span> PastingFromClipboardEventArgs
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [PastingFromClipboardEventArgs](#uid-6ec27eba91) | Initializes a new instance of the [Avalonia.Controls.PastingFromClipboardEventArgs](xref:Avalonia.Controls.PastingFromClipboardEventArgs) class. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6ec27eba91"></span>
+
+### PastingFromClipboardEventArgs Constructor
+
+Initializes a new instance of the [Avalonia.Controls.PastingFromClipboardEventArgs](xref:Avalonia.Controls.PastingFromClipboardEventArgs) class.
+
+```csharp
+public PastingFromClipboardEventArgs(Avalonia.Interactivity.RoutedEvent routedEvent, Avalonia.Input.Platform.IClipboard clipboard)
+```
+
+#### Parameters
+
+`routedEvent` [Avalonia.Interactivity.RoutedEvent](xref:Avalonia.Interactivity.RoutedEvent)
+
+The routed event associated with these event args.
+
+
+`clipboard` [Avalonia.Input.Platform.IClipboard](xref:Avalonia.Input.Platform.IClipboard)
+
+The clipboard being pasted from.
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Clipboard](#uid-19d67b982a) | Gets the clipboard being pasted from. This is either the system clipboard or, when pasting via middle-click on platforms supporting it, the primary selection ([Avalonia.Input.Platform.ClipboardType.PrimarySelection](xref:Avalonia.Input.Platform.ClipboardType.PrimarySelection)). Null when no clipboard is available; a handler can still handle the event to provide custom paste behavior. |
+| [Handled](../interactivity/routedeventargs.mdx#uid-204d2af354) | Gets or sets a value indicating whether the routed event has already been handled. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Route](../interactivity/routedeventargs.mdx#uid-751be73db9) | Gets or sets the routing strategy (direct, bubbling, or tunneling) of the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [RoutedEvent](../interactivity/routedeventargs.mdx#uid-4e102999d9) | Gets or sets the routed event associated with these event args. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+| [Source](../interactivity/routedeventargs.mdx#uid-4385b523d5) | Gets or sets the source object that raised the routed event. Inherited from [RoutedEventArgs](../interactivity/routedeventargs.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-19d67b982a"></span>
+
+### Clipboard Property
+
+Gets the clipboard being pasted from. This is either the system clipboard or, when pasting
+via middle-click on platforms supporting it, the primary selection
+([Avalonia.Input.Platform.ClipboardType.PrimarySelection](xref:Avalonia.Input.Platform.ClipboardType.PrimarySelection)).
+Null when no clipboard is available; a handler can still handle the event to provide custom
+paste behavior.
+
+```csharp
+public Avalonia.Input.Platform.IClipboard Clipboard { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

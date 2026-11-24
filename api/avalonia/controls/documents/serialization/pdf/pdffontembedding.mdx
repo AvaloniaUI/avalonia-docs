@@ -60,7 +60,7 @@ public enum PdfFontEmbedding
 | --- | --- |
 | [Full](#uid-da9380452d) | Embed the complete font file for every font used by the document. Largest output, maximum fidelity on every viewer. |
 | [None](#uid-a6591e27ca) | Do not embed font programs. Viewers substitute locally available fonts; text metrics are still written so layout is preserved approximately. |
-| [Subset](#uid-b36e0018eb) | Embed a subset containing only the glyphs the document uses. Not implemented yet; currently behaves like [Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full). |
+| [Subset](#uid-b36e0018eb) | Embed only the outlines of the glyphs the document uses. Glyph ids stay as they are and the other glyphs are left empty, so the embedded program compresses to a fraction of the font. A font whose license forbids subsetting is embedded whole. |
 
 <section className="apiref-page__member-entry">
 
@@ -98,8 +98,9 @@ public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding None
 
 ### Subset Field
 
-Embed a subset containing only the glyphs the document uses. Not implemented yet;
-currently behaves like [Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full](xref:Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding.Full).
+Embed only the outlines of the glyphs the document uses. Glyph ids stay as they are and
+the other glyphs are left empty, so the embedded program compresses to a fraction of the
+font. A font whose license forbids subsetting is embedded whole.
 
 ```csharp
 public Avalonia.Controls.Documents.Serialization.Pdf.PdfFontEmbedding Subset

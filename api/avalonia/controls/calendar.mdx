@@ -205,6 +205,9 @@ string
 | --- | --- |
 | [ActualThemeVariant](../styledelement.mdx#uid-776bcbe4bf) | Gets the UI theme that is currently used by the element, which might be different than the RequestedThemeVariantProperty. Inherited from [StyledElement](../styledelement.mdx). |
 | [AllowTapRangeSelection](#uid-3e1c7ceca7) | Gets or sets a value indicating whether tap-to-select range mode is enabled. When enabled, users can tap a start date and then tap an end date to select a range. |
+| [BackdropEffect](../visual.mdx#uid-887ee2655e) | Gets or sets the effect that is applied to what is drawn behind this visual. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectBoundsSource](../visual.mdx#uid-75361af092) | Gets or sets which bounds of this visual the backdrop effect is limited to. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCache](../visual.mdx#uid-503dfd717a) | Gets or sets whether the backdrop effect keeps a snapshot of what is behind this visual, or reads it again on every draw. When null, the compositor chooses. Inherited from [Visual](../visual.mdx). |
 | [Background](primitives/templatedcontrol.mdx#uid-50dbd38ef5) | Gets or sets the brush used to draw the control's background. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BackgroundSizing](primitives/templatedcontrol.mdx#uid-07ef33f604) | Gets or sets how the control's background is drawn relative to the control's border. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BlackoutDates](#uid-e77dc0c11a) | Gets a collection of dates that are marked as not selectable. |
@@ -237,6 +240,7 @@ string
 | [FontSize](primitives/templatedcontrol.mdx#uid-0a8445793b) | Gets or sets the size of the control's text in points. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStretch](primitives/templatedcontrol.mdx#uid-f23e3b5938) | Gets or sets the font stretch used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStyle](primitives/templatedcontrol.mdx#uid-0d0ccbde51) | Gets or sets the font style used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
+| [FontVariations](primitives/templatedcontrol.mdx#uid-11608368de) | Gets or sets the variable-font axis values (e.g. `wght=700`) used to draw the control's text. `null` means the font's design defaults. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontWeight](primitives/templatedcontrol.mdx#uid-967cc71125) | Gets or sets the font weight used to draw the control's text. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [Foreground](primitives/templatedcontrol.mdx#uid-dff6480679) | Gets or sets the brush used to draw the control's text and other foreground elements. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GestureRecognizers](../input/inputelement.mdx#uid-ddee464eee) | Inherited from [InputElement](../input/inputelement.mdx). |
@@ -258,6 +262,7 @@ string
 | [IsTabStop](../input/inputelement.mdx#uid-455d73fca4) | Gets or sets a value that indicates whether the control is included in tab navigation. Inherited from [InputElement](../input/inputelement.mdx). |
 | [IsTodayHighlighted](#uid-9acb33ca77) | Gets or sets a value indicating whether the current date is highlighted. |
 | [IsVisible](../visual.mdx#uid-da2b0ca167) | Gets or sets a value indicating whether this control is visible. Inherited from [Visual](../visual.mdx). |
+| [IsWeekNumberVisible](#uid-eb4c1b9876) | Gets or sets a value indicating whether week numbers are shown in the month view. |
 | [Item](../avaloniaobject.mdx#uid-c1d1f1bc0f) | Inherited from [AvaloniaObject](../avaloniaobject.mdx). |
 | [KeyBindings](../input/inputelement.mdx#uid-827a5420b2) | Inherited from [InputElement](../input/inputelement.mdx). |
 | [LetterSpacing](primitives/templatedcontrol.mdx#uid-2d96a527e6) | Gets or sets the letter spacing for the control's text content. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -287,6 +292,7 @@ string
 | [Transitions](../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../animation/animatable.mdx). |
 | [UseLayoutRounding](../layout/layoutable.mdx#uid-5998a3d47c) | Gets or sets a value that determines whether the element should be snapped to pixel boundaries at layout time. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [VerticalAlignment](../layout/layoutable.mdx#uid-9652a1b295) | Gets or sets the element's preferred vertical alignment in its parent. Inherited from [Layoutable](../layout/layoutable.mdx). |
+| [WeekNumberRule](#uid-7191b76f5c) | Gets or sets the rule used to determine the first week of the year for week number display. The default is taken from the current culture. |
 | [Width](../layout/layoutable.mdx#uid-491c41475f) | Gets or sets the width of the element. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [ZIndex](../visual.mdx#uid-a3275ade9d) | Gets or sets the Z index of the control. Inherited from [Visual](../visual.mdx). |
 
@@ -517,6 +523,20 @@ default is true.
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-eb4c1b9876"></span>
+
+### IsWeekNumberVisible Property
+
+Gets or sets a value indicating whether week numbers are shown in the month view.
+
+```csharp
+public bool IsWeekNumberVisible { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-71109a18cd"></span>
 
 ### SelectedDate Property
@@ -640,11 +660,34 @@ When this property is changed, all selected dates will be cleared.
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-7191b76f5c"></span>
+
+### WeekNumberRule Property
+
+Gets or sets the rule used to determine the first week of the year for week number display.
+The default is taken from the current culture.
+
+```csharp
+public System.Globalization.CalendarWeekRule WeekNumberRule { get; set; }
+```
+
+#### Remarks
+
+Use `WeekNumberRule` = [System.Globalization.CalendarWeekRule.FirstFourDayWeek](xref:System.Globalization.CalendarWeekRule.FirstFourDayWeek) in combination with `FirstDayOfWeek` = [DayOfWeek.Monday](xref:System.DayOfWeek.Monday)
+for ISO 8601 week numbering. (see also: [System.Globalization.ISOWeek](xref:System.Globalization.ISOWeek))
+
+</section>
+
 ## Fields
 
 | Name | Description |
 | --- | --- |
 | [AllowTapRangeSelectionProperty](#uid-5694a9cb28) | No summary available. |
+| [BackdropEffectBoundsSourceProperty](../visual.mdx#uid-fcbf93be1b) | Defines the [Avalonia.Visual.BackdropEffectBoundsSource](xref:Avalonia.Visual.BackdropEffectBoundsSource) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectCacheProperty](../visual.mdx#uid-b4282dcd8b) | Defines the [Avalonia.Visual.BackdropEffectCache](xref:Avalonia.Visual.BackdropEffectCache) property. Inherited from [Visual](../visual.mdx). |
+| [BackdropEffectProperty](../visual.mdx#uid-858aac9ee4) | Defines the [Avalonia.Visual.BackdropEffect](xref:Avalonia.Visual.BackdropEffect) property. Inherited from [Visual](../visual.mdx). |
 | [BackgroundProperty](primitives/templatedcontrol.mdx#uid-dbbd1ffb9b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Background](xref:Avalonia.Controls.Primitives.TemplatedControl.Background) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BackgroundSizingProperty](primitives/templatedcontrol.mdx#uid-316d7708c4) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing](xref:Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizing) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [BorderBrushProperty](primitives/templatedcontrol.mdx#uid-a4e6335f37) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.BorderBrush](xref:Avalonia.Controls.Primitives.TemplatedControl.BorderBrush) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -676,6 +719,7 @@ When this property is changed, all selected dates will be cleared.
 | [FontSizeProperty](primitives/templatedcontrol.mdx#uid-c06c71299f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontSize](xref:Avalonia.Controls.Primitives.TemplatedControl.FontSize) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStretchProperty](primitives/templatedcontrol.mdx#uid-d4a988cc8c) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontStyleProperty](primitives/templatedcontrol.mdx#uid-14162a470d) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontStyle](xref:Avalonia.Controls.Primitives.TemplatedControl.FontStyle) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
+| [FontVariationsProperty](primitives/templatedcontrol.mdx#uid-d8d82208af) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontVariations](xref:Avalonia.Controls.Primitives.TemplatedControl.FontVariations) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [FontWeightProperty](primitives/templatedcontrol.mdx#uid-b911f20b9f) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.FontWeight](xref:Avalonia.Controls.Primitives.TemplatedControl.FontWeight) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [ForegroundProperty](primitives/templatedcontrol.mdx#uid-65cd93050b) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.Foreground](xref:Avalonia.Controls.Primitives.TemplatedControl.Foreground) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [GettingFocusEvent](../input/inputelement.mdx#uid-23a6940484) | Defines the [Avalonia.Input.InputElement.GettingFocus](xref:Avalonia.Input.InputElement.GettingFocus) event. Inherited from [InputElement](../input/inputelement.mdx). |
@@ -697,6 +741,7 @@ When this property is changed, all selected dates will be cleared.
 | [IsTemplateFocusTargetProperty](primitives/templatedcontrol.mdx#uid-e50dcff99d) | Defines the IsTemplateFocusTarget attached property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
 | [IsTodayHighlightedProperty](#uid-801d780280) | No summary available. |
 | [IsVisibleProperty](../visual.mdx#uid-8e0edf21ac) | Defines the [Avalonia.Visual.IsVisible](xref:Avalonia.Visual.IsVisible) property. Inherited from [Visual](../visual.mdx). |
+| [IsWeekNumberVisibleProperty](#uid-cb6d48656f) | Defines the [Avalonia.Controls.Calendar.IsWeekNumberVisible](xref:Avalonia.Controls.Calendar.IsWeekNumberVisible) property. |
 | [KeyDownEvent](../input/inputelement.mdx#uid-71dfb758e3) | Defines the [Avalonia.Input.InputElement.KeyDown](xref:Avalonia.Input.InputElement.KeyDown) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [KeyUpEvent](../input/inputelement.mdx#uid-e694f9abc6) | Defines the [Avalonia.Input.InputElement.KeyUp](xref:Avalonia.Input.InputElement.KeyUp) event. Inherited from [InputElement](../input/inputelement.mdx). |
 | [LetterSpacingProperty](primitives/templatedcontrol.mdx#uid-cd0904df0e) | Defines the [Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing](xref:Avalonia.Controls.Primitives.TemplatedControl.LetterSpacing) property. Inherited from [TemplatedControl](primitives/templatedcontrol.mdx). |
@@ -753,6 +798,7 @@ When this property is changed, all selected dates will be cleared.
 | [UseLayoutRoundingProperty](../layout/layoutable.mdx#uid-e6d86b68b5) | Defines the [Avalonia.Layout.Layoutable.UseLayoutRounding](xref:Avalonia.Layout.Layoutable.UseLayoutRounding) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [VerticalAlignmentProperty](../layout/layoutable.mdx#uid-b50722555e) | Defines the [Avalonia.Layout.Layoutable.VerticalAlignment](xref:Avalonia.Layout.Layoutable.VerticalAlignment) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [VisualParentProperty](../visual.mdx#uid-12214f81b9) | Defines the [Avalonia.Visual.VisualParent](xref:Avalonia.Visual.VisualParent) property. Inherited from [Visual](../visual.mdx). |
+| [WeekNumberRuleProperty](#uid-139af5e79c) | Defines the [Avalonia.Controls.Calendar.WeekNumberRule](xref:Avalonia.Controls.Calendar.WeekNumberRule) property. |
 | [WidthProperty](../layout/layoutable.mdx#uid-6f3212affd) | Defines the [Avalonia.Layout.Layoutable.Width](xref:Avalonia.Layout.Layoutable.Width) property. Inherited from [Layoutable](../layout/layoutable.mdx). |
 | [ZIndexProperty](../visual.mdx#uid-1dc9376c1e) | Defines the [Avalonia.Visual.ZIndex](xref:Avalonia.Visual.ZIndex) property. Inherited from [Visual](../visual.mdx). |
 
@@ -854,6 +900,20 @@ public Avalonia.StyledProperty<bool> IsTodayHighlightedProperty
 
 <section className="apiref-page__member-entry">
 
+<span id="uid-cb6d48656f"></span>
+
+### IsWeekNumberVisibleProperty Field
+
+Defines the [Avalonia.Controls.Calendar.IsWeekNumberVisible](xref:Avalonia.Controls.Calendar.IsWeekNumberVisible) property.
+
+```csharp
+public Avalonia.StyledProperty<bool> IsWeekNumberVisibleProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
 <span id="uid-3a928b978c"></span>
 
 ### SelectedDateProperty Field
@@ -872,6 +932,20 @@ public Avalonia.StyledProperty<Nullable<DateTime>> SelectedDateProperty
 
 ```csharp
 public Avalonia.StyledProperty<Avalonia.Controls.CalendarSelectionMode> SelectionModeProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-139af5e79c"></span>
+
+### WeekNumberRuleProperty Field
+
+Defines the [Avalonia.Controls.Calendar.WeekNumberRule](xref:Avalonia.Controls.Calendar.WeekNumberRule) property.
+
+```csharp
+public Avalonia.StyledProperty<System.Globalization.CalendarWeekRule> WeekNumberRuleProperty
 ```
 
 </section>

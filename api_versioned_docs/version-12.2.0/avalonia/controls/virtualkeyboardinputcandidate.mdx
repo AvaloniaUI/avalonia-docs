@@ -1,0 +1,156 @@
+---
+title: 'VirtualKeyboardInputCandidate'
+hide_title: true
+slug: '/avalonia/controls/virtualkeyboardinputcandidate'
+uid: 'Avalonia.Controls.VirtualKeyboardInputCandidate'
+commentId: 'T:Avalonia.Controls.VirtualKeyboardInputCandidate'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.VirtualKeyboard'
+assembly: 'Avalonia.Controls.VirtualKeyboard'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls'
+tfms:
+  - 'net8.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">VirtualKeyboardInputCandidate Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.VirtualKeyboard</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.VirtualKeyboard</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Represents an input candidate suggestion from an Input Method Editor (IME), typically used for complex text input systems.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class VirtualKeyboardInputCandidate
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> VirtualKeyboardInputCandidate
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> INotifyPropertyChanged
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [VirtualKeyboardInputCandidate](#uid-b1728d7673) | Represents an input candidate suggestion from an Input Method Editor (IME), typically used for complex text input systems. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b1728d7673"></span>
+
+### VirtualKeyboardInputCandidate Constructor
+
+Represents an input candidate suggestion from an Input Method Editor (IME), typically used for complex text input systems.
+
+```csharp
+public VirtualKeyboardInputCandidate(object content)
+```
+
+#### Parameters
+
+`content` object
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [Content](#uid-22a52d6be2) | Gets the content of this input candidate. |
+| [SelectCommand](#uid-97c5150186) | Gets the command that is executed when this candidate is selected. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-22a52d6be2"></span>
+
+### Content Property
+
+Gets the content of this input candidate.
+
+```csharp
+public object Content { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-97c5150186"></span>
+
+### SelectCommand Property
+
+Gets the command that is executed when this candidate is selected.
+
+```csharp
+public System.Windows.Input.ICommand SelectCommand { get; set; }
+```
+
+</section>
+
+## Events
+
+| Name | Description |
+| --- | --- |
+| [PropertyChanged](#uid-dac722348f) | Occurs when a property value changes. |
+| [Selected](#uid-25aacf1026) | Occurs when this candidate is selected by the user. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dac722348f"></span>
+
+### PropertyChanged Event
+
+Occurs when a property value changes.
+
+```csharp
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-25aacf1026"></span>
+
+### Selected Event
+
+Occurs when this candidate is selected by the user.
+
+```csharp
+public event EventHandler Selected
+```
+
+</section>
+
+</ApiRefPage>
+

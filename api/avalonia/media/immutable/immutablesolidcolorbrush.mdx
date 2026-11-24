@@ -65,7 +65,7 @@ public class ImmutableSolidColorBrush
 
 | Name | Description |
 | --- | --- |
-| [ImmutableSolidColorBrush (3 overloads)](#uid-b2964f0ad0) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class. |
+| [ImmutableSolidColorBrush (4 overloads)](#uid-b2964f0ad0) | Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class. |
 
 <span id="uid-b2964f0ad0"></span>
 
@@ -98,6 +98,43 @@ The opacity of the brush.
 `transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
 
 The transform of the brush.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0f4253ced"></span>
+
+#### ImmutableSolidColorBrush Constructor
+
+Initializes a new instance of the [Avalonia.Media.Immutable.ImmutableSolidColorBrush](xref:Avalonia.Media.Immutable.ImmutableSolidColorBrush) class.
+
+```csharp
+public ImmutableSolidColorBrush(Avalonia.Media.Color color, double opacity, Avalonia.Media.Immutable.ImmutableTransform transform, Avalonia.Media.Immutable.ImmutableTransform relativeTransform)
+```
+
+##### Parameters
+
+`color` [Avalonia.Media.Color](xref:Avalonia.Media.Color)
+
+The color to use.
+
+
+`opacity` double
+
+The opacity of the brush.
+
+
+`transform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+The transform of the brush.
+
+
+`relativeTransform` [Avalonia.Media.Immutable.ImmutableTransform](xref:Avalonia.Media.Immutable.ImmutableTransform)
+
+The transform of the brush in the relative coordinate
+space of the area being painted, applied before `transform`.
 
 
 </section>
@@ -244,6 +281,7 @@ A string representation of the brush.
 | --- | --- |
 | [Color](#uid-a4632b94c1) | Gets the color of the brush. |
 | [Opacity](#uid-3ee45f50c4) | Gets the opacity of the brush. |
+| [RelativeTransform](#uid-cee5323b80) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. |
 | [Transform](#uid-7f7b5e1fec) | Gets the transform of the brush. |
 | [TransformOrigin](#uid-a9dec65fbb) | Gets the transform origin of the brush |
 
@@ -271,6 +309,24 @@ Gets the opacity of the brush.
 
 ```csharp
 public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cee5323b80"></span>
+
+### RelativeTransform Property
+
+Gets the transform applied in the relative coordinate space of the area being painted:
+the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside
+that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush
+express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox
+units, for example - without baking any one consumer's bounds into a matrix.
+
+```csharp
+public Avalonia.Media.ITransform RelativeTransform { get; set; }
 ```
 
 </section>

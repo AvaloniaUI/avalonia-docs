@@ -86,6 +86,7 @@ public DrmOutputOptions()
 | [InitialBufferSwappingColor](#uid-8886ce87c2) | Color for [Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping](xref:Avalonia.LinuxFramebuffer.DrmOutputOptions.EnableInitialBufferSwapping) Default: R0 G0 B0 A0 |
 | [Orientation](#uid-ba674e22fa) | The orientation of the screen relative to the frame buffer memory orientation Default: Normal |
 | [Scaling](#uid-bf80f0a4c8) | Scaling factor. Default: 1.0 |
+| [UsePartialPresentation](#uid-dd1782548e) | Enables partial presentation when supported by EGL, including rotated outputs. When `null`, uses the platform default, which is currently disabled. |
 | [VideoMode](#uid-febefd2873) | Specifies the video mode with which the [DrmOutput](xref:Avalonia.LinuxFramebuffer.Output.DrmOutput) should be created, if it is not found it will fallback to the preferred mode. If null, the preferred mode will be used. |
 
 <section className="apiref-page__member-entry">
@@ -174,6 +175,21 @@ Default: 1.0
 
 ```csharp
 public double Scaling { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dd1782548e"></span>
+
+### UsePartialPresentation Property
+
+Enables partial presentation when supported by EGL, including rotated outputs.
+When `null`, uses the platform default, which is currently disabled.
+
+```csharp
+public Nullable<bool> UsePartialPresentation { get; set; }
 ```
 
 </section>

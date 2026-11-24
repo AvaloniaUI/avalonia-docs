@@ -167,6 +167,7 @@ The pointer type.
 | --- | --- |
 | [HoldWaitDuration](#uid-18e487bd24) | Holding duration between pointer press and when event is fired. |
 | [HotkeyConfiguration](#uid-167fcac31c) | Get a configuration for platform-specific hotkeys in an Avalonia application. |
+| [PreferredApplicationLanguage](#uid-d2fbaf1a93) | Gets the preferred application language as specified in the operating system settings. |
 
 <section className="apiref-page__member-entry">
 
@@ -196,11 +197,38 @@ public Avalonia.Input.Platform.PlatformHotkeyConfiguration HotkeyConfiguration {
 
 </section>
 
+<section className="apiref-page__member-entry">
+
+<span id="uid-d2fbaf1a93"></span>
+
+### PreferredApplicationLanguage Property
+
+Gets the preferred application language as specified in the operating system settings.
+
+```csharp
+public string PreferredApplicationLanguage { get; set; }
+```
+
+#### Value
+
+BCP 47 language tag. Examples: `en`, `en-US` or `zh-Hans-CN`.
+Can be empty if the operating system doesn't report a preferred language.
+
+
+#### Remarks
+
+Most platforms read this value from the operating system instead of the .NET runtime,
+so a language tag can be returned even in globalization-invariant mode.
+When that mode is disabled, the tag can be passed to [System.Globalization.CultureInfo](xref:System.Globalization.CultureInfo).
+
+</section>
+
 ## Events
 
 | Name | Description |
 | --- | --- |
 | [ColorValuesChanged](#uid-9a11a40b95) | Raises when current system color values are changed. Including changing of a dark mode and accent colors. |
+| [PreferredApplicationLanguageChanged](#uid-e428bb9069) | Raises when the preferred application language is changed in the operating system settings. |
 
 <section className="apiref-page__member-entry">
 
@@ -212,6 +240,20 @@ Raises when current system color values are changed. Including changing of a dar
 
 ```csharp
 public event EventHandler<Avalonia.Platform.PlatformColorValues> ColorValuesChanged
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e428bb9069"></span>
+
+### PreferredApplicationLanguageChanged Event
+
+Raises when the preferred application language is changed in the operating system settings.
+
+```csharp
+public event EventHandler PreferredApplicationLanguageChanged
 ```
 
 </section>

@@ -56,13 +56,49 @@ public interface ICustomHitTest
 
 | Name | Description |
 | --- | --- |
-| [HitTest](#uid-93cda2039d) | Determines whether a point is within the hit-test area. |
+| [HitTest (2 overloads)](#uid-6651743cb1) | Determines how geometry intersects the hit-test area. |
+
+<span id="uid-6651743cb1"></span>
+
+### HitTest overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4d9fd90acb"></span>
+
+#### HitTest Method
+
+Determines how geometry intersects the hit-test area.
+
+```csharp
+public Avalonia.Media.IntersectionResult HitTest(Avalonia.Media.Geometry geometry)
+```
+
+##### Parameters
+
+`geometry` [Avalonia.Media.Geometry](xref:Avalonia.Media.Geometry)
+
+The geometry to hit test, mapped to local coordinate space.
+
+
+##### Returns
+
+[Avalonia.Media.IntersectionResult](xref:Avalonia.Media.IntersectionResult)
+
+An [Avalonia.Media.IntersectionResult](xref:Avalonia.Media.IntersectionResult) describing how the geometry and the hit-test area intersect.
+
+
+##### Remarks
+
+Does not hit test children. Test manually if you need children to be tested.
+
+</section>
 
 <section className="apiref-page__member-entry">
 
 <span id="uid-93cda2039d"></span>
 
-### HitTest Method
+#### HitTest Method
 
 Determines whether a point is within the hit-test area.
 
@@ -70,7 +106,7 @@ Determines whether a point is within the hit-test area.
 public bool HitTest(Avalonia.Point point)
 ```
 
-#### Parameters
+##### Parameters
 
 `point` [Avalonia.Point](xref:Avalonia.Point)
 
@@ -78,7 +114,7 @@ The point to hit test in local coordinate space, i.e., (0, 0)
 is the top-left corner of the visual element, not the top-left corner of the window.
 
 
-#### Returns
+##### Returns
 
 bool
 

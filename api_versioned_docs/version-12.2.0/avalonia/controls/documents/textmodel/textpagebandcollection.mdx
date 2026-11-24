@@ -1,0 +1,122 @@
+---
+title: 'TextPageBandCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/textmodel/textpagebandcollection'
+uid: 'Avalonia.Controls.Documents.TextModel.TextPageBandCollection'
+commentId: 'T:Avalonia.Controls.Documents.TextModel.TextPageBandCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.TextModel'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextPageBandCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.TextModel</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The bands a text document owns. Adding a band makes the document its owner and
+joins the band's undo to the document's stack; removing it releases both. Ownership
+is exclusive, a band document owns no bands, and the first band with a given role
+and rule is the one the rule places.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextPageBandCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> Collection&lt;TextPageBand&gt; <span className="apiref-page__relation-separator">-&gt;</span> TextPageBandCollection
+</div>
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Find (2 overloads)](#uid-957715c5a6) | The first band with `role` and `rule`: the one the rule places. |
+
+<span id="uid-957715c5a6"></span>
+
+### Find overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-52707bb200"></span>
+
+#### Find Method
+
+The first band with `role` and `rule`: the one the rule places.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPageBand Find(Avalonia.Controls.Documents.PageBandRole role, Avalonia.Controls.Documents.PageBandRule rule)
+```
+
+##### Parameters
+
+`role` [Avalonia.Controls.Documents.PageBandRole](xref:Avalonia.Controls.Documents.PageBandRole)
+
+
+`rule` [Avalonia.Controls.Documents.PageBandRule](xref:Avalonia.Controls.Documents.PageBandRule)
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPageBand](xref:Avalonia.Controls.Documents.TextModel.TextPageBand)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-c0cb22b853"></span>
+
+#### Find Method
+
+The band with `id`, or null: what a section's reference names.
+
+```csharp
+public Avalonia.Controls.Documents.TextModel.TextPageBand Find(Guid id)
+```
+
+##### Parameters
+
+`id` Guid
+
+
+##### Returns
+
+[Avalonia.Controls.Documents.TextModel.TextPageBand](xref:Avalonia.Controls.Documents.TextModel.TextPageBand)
+
+
+</section>
+
+</ApiRefPage>
+

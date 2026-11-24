@@ -1,0 +1,91 @@
+---
+title: 'BlockCollection'
+hide_title: true
+slug: '/avalonia/controls/documents/blockcollection'
+uid: 'Avalonia.Controls.Documents.BlockCollection'
+commentId: 'T:Avalonia.Controls.Documents.BlockCollection'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">BlockCollection Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+The blocks of a document, section, cell or list item. A document's collection is
+its body; the notes live in [Avalonia.Controls.Documents.FlowDocument.Footnotes](xref:Avalonia.Controls.Documents.FlowDocument.Footnotes) and the bands in
+[Avalonia.Controls.Documents.FlowDocument.PageBands](xref:Avalonia.Controls.Documents.FlowDocument.PageBands), nested documents of their own.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class BlockCollection
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> RichTextElementCollection&lt;Block&gt; <span className="apiref-page__relation-separator">-&gt;</span> BlockCollection
+</div>
+</div>
+
+## Constructors
+
+| Name | Description |
+| --- | --- |
+| [BlockCollection](#uid-89458122de) | Initializes a new instance for `owner`. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-89458122de"></span>
+
+### BlockCollection Constructor
+
+Initializes a new instance for `owner`.
+
+```csharp
+public BlockCollection(Avalonia.AvaloniaObject owner)
+```
+
+#### Parameters
+
+`owner` [Avalonia.AvaloniaObject](xref:Avalonia.AvaloniaObject)
+
+
+#### Remarks
+
+Reach the collection through its owner rather than building one: an owner caches
+exactly one instance, and a second over the same owner splits pending content
+between them.
+
+</section>
+
+</ApiRefPage>
+

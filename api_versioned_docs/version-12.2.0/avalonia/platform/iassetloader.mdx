@@ -1,0 +1,299 @@
+---
+title: 'IAssetLoader'
+hide_title: true
+slug: '/avalonia/platform/iassetloader'
+uid: 'Avalonia.Platform.IAssetLoader'
+commentId: 'T:Avalonia.Platform.IAssetLoader'
+docset: 'avalonia-docs'
+packageId: 'Avalonia'
+assembly: 'Avalonia.Base'
+apiKind: 'Interface'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Platform'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">IAssetLoader Interface</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Platform</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Base</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Loads assets compiled into the application binary.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public interface IAssetLoader
+```
+
+</div>
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [Exists](#uid-7b66d5fcd8) | Checks if an asset with the specified URI exists. |
+| [GetAssembly](#uid-a9cbf6df3d) | Extracts assembly information from URI |
+| [GetAssets](#uid-124a555456) | Gets all assets of a folder and subfolders that match specified uri. |
+| [InvalidateAssemblyCache (2 overloads)](#uid-adac6efb6a) | Removes all assemblies from the cache. |
+| [Open](#uid-1f12830fe4) | Opens the asset with the requested URI. |
+| [OpenAndGetAssembly](#uid-1f69abc1fa) | Opens the asset with the requested URI and returns the asset stream and the assembly containing the asset. |
+| [SetDefaultAssembly](#uid-dab91beb44) | We need a way to override the default assembly selected by the host platform because right now it is selecting the wrong one for PCL based Apps. The [AssetLoader](xref:Avalonia.Platform.AssetLoader) needs a refactor cause right now it lives in 3+ platforms which can all be loaded on Windows. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7b66d5fcd8"></span>
+
+### Exists Method
+
+Checks if an asset with the specified URI exists.
+
+```csharp
+public bool Exists(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+bool
+
+True if the asset could be found; otherwise false.
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a9cbf6df3d"></span>
+
+### GetAssembly Method
+
+Extracts assembly information from URI
+
+```csharp
+public System.Reflection.Assembly GetAssembly(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+System.Reflection.Assembly
+
+Assembly associated with the Uri
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-124a555456"></span>
+
+### GetAssets Method
+
+Gets all assets of a folder and subfolders that match specified uri.
+
+```csharp
+public System.Collections.Generic.IEnumerable<Uri> GetAssets(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+The base URI.
+
+
+#### Returns
+
+System.Collections.Generic.IEnumerable&lt;Uri&gt;
+
+All matching assets as a tuple of the absolute path to the asset and the assembly containing the asset
+
+
+</section>
+
+<span id="uid-adac6efb6a"></span>
+
+### InvalidateAssemblyCache overloads
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-e0e7d3abff"></span>
+
+#### InvalidateAssemblyCache Method
+
+Removes all assemblies from the cache.
+
+```csharp
+public void InvalidateAssemblyCache()
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-63bf55b302"></span>
+
+#### InvalidateAssemblyCache Method
+
+Removes the assembly from the cache.
+
+```csharp
+public void InvalidateAssemblyCache(string name)
+```
+
+##### Parameters
+
+`name` string
+
+The Assemblies.First().GetName().Name
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f12830fe4"></span>
+
+### Open Method
+
+Opens the asset with the requested URI.
+
+```csharp
+public System.IO.Stream Open(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+System.IO.Stream
+
+A stream containing the asset contents.
+
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-1f69abc1fa"></span>
+
+### OpenAndGetAssembly Method
+
+Opens the asset with the requested URI and returns the asset stream and the
+assembly containing the asset.
+
+```csharp
+public ValueTuple<System.IO.Stream, System.Reflection.Assembly> OpenAndGetAssembly(Uri uri, Uri baseUri)
+```
+
+#### Parameters
+
+`uri` Uri
+
+The URI.
+
+
+`baseUri` Uri
+
+A base URI to use if `uri` is relative.
+
+
+#### Returns
+
+ValueTuple&lt;System.IO.Stream, System.Reflection.Assembly&gt;
+
+The stream containing the asset contents together with the assembly.
+
+
+#### Exceptions
+
+- [The asset could not be found.](xref:System.IO.FileNotFoundException)
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-dab91beb44"></span>
+
+### SetDefaultAssembly Method
+
+We need a way to override the default assembly selected by the host platform
+because right now it is selecting the wrong one for PCL based Apps. The
+[AssetLoader](xref:Avalonia.Platform.AssetLoader) needs a refactor cause right now it lives in 3+ platforms which
+can all be loaded on Windows.
+
+```csharp
+public void SetDefaultAssembly(System.Reflection.Assembly assembly)
+```
+
+#### Parameters
+
+`assembly` System.Reflection.Assembly
+
+
+</section>
+
+</ApiRefPage>
+

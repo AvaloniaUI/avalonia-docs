@@ -1,0 +1,328 @@
+---
+title: 'PageSizes'
+hide_title: true
+slug: '/avalonia/controls/documents/pagesizes'
+uid: 'Avalonia.Controls.Documents.PageSizes'
+commentId: 'T:Avalonia.Controls.Documents.PageSizes'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">PageSizes Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Well-known paper sizes and page-unit conversions, in device-independent pixels
+(1/96 inch) — the unit every page property in this library speaks. Assign a named
+size to [Avalonia.Controls.FlowDocumentPageViewer.PageSize](xref:Avalonia.Controls.FlowDocumentPageViewer.PageSize) (or the editor's page-layout
+properties), feed its components to [Avalonia.Controls.Documents.FlowDocument.PageWidth](xref:Avalonia.Controls.Documents.FlowDocument.PageWidth) and
+[Avalonia.Controls.Documents.FlowDocument.PageHeight](xref:Avalonia.Controls.Documents.FlowDocument.PageHeight), or use the conversions for margins:
+`PagePadding = new Thickness(PageSizes.Inches(0.75))`.
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class PageSizes
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> PageSizes
+</div>
+</div>
+
+## Remarks
+
+Named sizes are portrait; [Avalonia.Controls.Documents.PageSizes.Landscape(Avalonia.Size)](xref:Avalonia.Controls.Documents.PageSizes.Landscape%28Avalonia.Size%29) turns one on its side. Note the
+unit trap these names exist to avoid: PDF and print software often quote paper in
+points (1/72 inch) — US Letter is 612 × 792 points but 816 × 1056
+device-independent pixels.
+
+## Methods
+
+| Name | Description |
+| --- | --- |
+| [FromInches](#uid-b376d9d974) | A page size given in inches, as device-independent pixels. |
+| [FromMillimeters](#uid-d459d9c44a) | A page size given in millimeters, as device-independent pixels. |
+| [Inches](#uid-bb8aaf0d9f) | Converts a length in inches to device-independent pixels. |
+| [Landscape](#uid-7643b75d82) | The size in landscape orientation: the longer edge becomes the width. A size that is already landscape is returned unchanged. |
+| [Millimeters](#uid-cb730ad354) | Converts a length in millimeters to device-independent pixels. |
+| [Portrait](#uid-6611ef7d4e) | The size in portrait orientation: the longer edge becomes the height. A size that is already portrait is returned unchanged. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-b376d9d974"></span>
+
+### FromInches Method
+
+A page size given in inches, as device-independent pixels.
+
+```csharp
+public Avalonia.Size FromInches(double width, double height)
+```
+
+#### Parameters
+
+`width` double
+
+
+`height` double
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-d459d9c44a"></span>
+
+### FromMillimeters Method
+
+A page size given in millimeters, as device-independent pixels.
+
+```csharp
+public Avalonia.Size FromMillimeters(double width, double height)
+```
+
+#### Parameters
+
+`width` double
+
+
+`height` double
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-bb8aaf0d9f"></span>
+
+### Inches Method
+
+Converts a length in inches to device-independent pixels.
+
+```csharp
+public double Inches(double inches)
+```
+
+#### Parameters
+
+`inches` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7643b75d82"></span>
+
+### Landscape Method
+
+The size in landscape orientation: the longer edge becomes the width. A size
+that is already landscape is returned unchanged.
+
+```csharp
+public Avalonia.Size Landscape(Avalonia.Size size)
+```
+
+#### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-cb730ad354"></span>
+
+### Millimeters Method
+
+Converts a length in millimeters to device-independent pixels.
+
+```csharp
+public double Millimeters(double millimeters)
+```
+
+#### Parameters
+
+`millimeters` double
+
+
+#### Returns
+
+double
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-6611ef7d4e"></span>
+
+### Portrait Method
+
+The size in portrait orientation: the longer edge becomes the height. A size
+that is already portrait is returned unchanged.
+
+```csharp
+public Avalonia.Size Portrait(Avalonia.Size size)
+```
+
+#### Parameters
+
+`size` [Avalonia.Size](xref:Avalonia.Size)
+
+
+#### Returns
+
+[Avalonia.Size](xref:Avalonia.Size)
+
+
+</section>
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [A3](#uid-348b26f34f) | ISO A3: 297 × 420 mm. |
+| [A4](#uid-8adf6ab10c) | ISO A4: 210 × 297 mm. |
+| [A5](#uid-7a43082119) | ISO A5: 148 × 210 mm. |
+| [Legal](#uid-18c97bb560) | US Legal: 8.5 × 14 inches. |
+| [Letter](#uid-0b5c244c5f) | US Letter: 8.5 × 11 inches. |
+| [Tabloid](#uid-284e27e72d) | US Tabloid (Ledger upright): 11 × 17 inches. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-348b26f34f"></span>
+
+### A3 Property
+
+ISO A3: 297 × 420 mm.
+
+```csharp
+public Avalonia.Size A3 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-8adf6ab10c"></span>
+
+### A4 Property
+
+ISO A4: 210 × 297 mm.
+
+```csharp
+public Avalonia.Size A4 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7a43082119"></span>
+
+### A5 Property
+
+ISO A5: 148 × 210 mm.
+
+```csharp
+public Avalonia.Size A5 { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-18c97bb560"></span>
+
+### Legal Property
+
+US Legal: 8.5 × 14 inches.
+
+```csharp
+public Avalonia.Size Legal { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-0b5c244c5f"></span>
+
+### Letter Property
+
+US Letter: 8.5 × 11 inches.
+
+```csharp
+public Avalonia.Size Letter { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-284e27e72d"></span>
+
+### Tabloid Property
+
+US Tabloid (Ledger upright): 11 × 17 inches.
+
+```csharp
+public Avalonia.Size Tabloid { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

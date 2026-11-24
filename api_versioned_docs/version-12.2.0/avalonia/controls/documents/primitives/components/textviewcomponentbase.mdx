@@ -1,0 +1,92 @@
+---
+title: 'TextViewComponentBase'
+hide_title: true
+slug: '/avalonia/controls/documents/primitives/components/textviewcomponentbase'
+uid: 'Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase'
+commentId: 'T:Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase'
+docset: 'avalonia-docs'
+packageId: 'Avalonia.Controls.Documents'
+assembly: 'Avalonia.Controls.Documents'
+apiKind: 'Class'
+generatedBy: 'dotnet-apiref'
+namespace: 'Avalonia.Controls.Documents.Primitives.Components'
+tfms:
+  - 'net10.0'
+---
+
+import ApiRefPage from '@site/src/components/apiref/ApiRefPage';
+
+<ApiRefPage>
+
+<h1 className="apiref-page__title">TextViewComponentBase Class</h1>
+
+## Definition
+
+<div className="apiref-page__definition-meta">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Namespace:</span> <a href="./">Avalonia.Controls.Documents.Primitives.Components</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Assembly:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Package:</span> <code>Avalonia.Controls.Documents</code>
+</div>
+</div>
+
+<div className="apiref-page__lead">
+
+Base class for [Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent](xref:Avalonia.Controls.Documents.Primitives.Components.ITextViewComponent) implementations that are
+not already derived from another type (e.g., [Avalonia.Controls.Control](xref:Avalonia.Controls.Control)).
+
+</div>
+
+<div className="apiref-page__signature">
+
+```csharp
+public class TextViewComponentBase
+```
+
+</div>
+
+<div className="apiref-page__relations">
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Inheritance:</span> object <span className="apiref-page__relation-separator">-&gt;</span> TextViewComponentBase
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Derived types:</span> <a href="texteditorselectionflyout">TextEditorSelectionFlyout</a>, <a href="texteditortyping">TextEditorTyping</a>, <a href="textviewcontextmenu">TextViewContextMenu</a>, <a href="textviewkeyboard">TextViewKeyboard</a>, <a href="textviewmouse">TextViewMouse</a>
+</div>
+<div className="apiref-page__meta-row">
+<span className="apiref-page__meta-label">Implements:</span> <a href="itextviewcomponent">ITextViewComponent</a>
+</div>
+</div>
+
+## Remarks
+
+Provides automatic [Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.Host](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.Host) tracking, [Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.IsAttached](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.IsAttached)
+state, and re-attach safety (detach-before-attach). Subclasses override
+[Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.OnAttached](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.OnAttached) and [Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.OnDetached](xref:Avalonia.Controls.Documents.Primitives.Components.TextViewComponentBase.OnDetached) to subscribe and
+unsubscribe from host events.
+
+## Properties
+
+| Name | Description |
+| --- | --- |
+| [IsAttached](#uid-7df392cfdc) | Gets whether this component is currently attached to a host. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-7df392cfdc"></span>
+
+### IsAttached Property
+
+Gets whether this component is currently attached to a host.
+
+```csharp
+public bool IsAttached { get; set; }
+```
+
+</section>
+
+</ApiRefPage>
+

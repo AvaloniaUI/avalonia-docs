@@ -57,6 +57,7 @@ public interface IBrush
 | Name | Description |
 | --- | --- |
 | [Opacity](#uid-10e35408e9) | Gets the opacity of the brush. |
+| [RelativeTransform](#uid-90c9cde081) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. |
 | [Transform](#uid-c200f52e37) | Gets the transform of the brush. |
 | [TransformOrigin](#uid-8d3aef6f1d) | Gets the origin of the brushes [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) |
 
@@ -70,6 +71,24 @@ Gets the opacity of the brush.
 
 ```csharp
 public double Opacity { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-90c9cde081"></span>
+
+### RelativeTransform Property
+
+Gets the transform applied in the relative coordinate space of the area being painted:
+the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside
+that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush
+express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox
+units, for example - without baking any one consumer's bounds into a matrix.
+
+```csharp
+public Avalonia.Media.ITransform RelativeTransform { get; set; }
 ```
 
 </section>

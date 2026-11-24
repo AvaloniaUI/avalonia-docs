@@ -93,13 +93,65 @@ public WindowDrawnDecorations()
 | [Equals](../../avaloniaobject.mdx#uid-a8a8e94305) | Compares two objects using reference equality. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetBaseValue](../../avaloniaobject.mdx#uid-9c615efbba) | Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [GetHashCode](../../avaloniaobject.mdx#uid-7f7db1e7a2) | Gets the hash code for the object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [GetTitleBarDecorations](#uid-4262bf4df4) | Gets which title bar elements to display. |
 | [GetValue (3 overloads)](../../avaloniaobject.mdx#uid-5142cd4792) | Gets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsAnimating](../../avaloniaobject.mdx#uid-8cbfc7521a) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is animating. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [IsSet](../../avaloniaobject.mdx#uid-f8bf0bbdcc) | Checks whether a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) is set on this object. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [SetCurrentValue (2 overloads)](../../avaloniaobject.mdx#uid-38759fd088) | Sets the value of a dependency property without changing its value source. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+| [SetTitleBarDecorations](#uid-41d1435b52) | Sets which title bar elements to display. |
 | [SetValue (3 overloads)](../../avaloniaobject.mdx#uid-47d14e19d7) | Sets a [Avalonia.AvaloniaProperty](xref:Avalonia.AvaloniaProperty) value. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
 | [TryGetResource](../../styledelement.mdx#uid-2046a6b284) | Inherited from [StyledElement](../../styledelement.mdx). |
 | [VerifyAccess](../../avaloniaobject.mdx#uid-3b9d3c9793) | Checks that the current thread is the UI thread and throws if not. Inherited from [AvaloniaObject](../../avaloniaobject.mdx). |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4262bf4df4"></span>
+
+### GetTitleBarDecorations Method
+
+Gets which title bar elements to display.
+
+```csharp
+public Avalonia.Controls.Chrome.TitleBarDecorations GetTitleBarDecorations(Avalonia.StyledElement element)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+#### Returns
+
+[Avalonia.Controls.Chrome.TitleBarDecorations](xref:Avalonia.Controls.Chrome.TitleBarDecorations)
+
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-41d1435b52"></span>
+
+### SetTitleBarDecorations Method
+
+Sets which title bar elements to display.
+
+```csharp
+public void SetTitleBarDecorations(Avalonia.StyledElement element, Avalonia.Controls.Chrome.TitleBarDecorations value)
+```
+
+#### Parameters
+
+`element` [Avalonia.StyledElement](xref:Avalonia.StyledElement)
+
+
+`value` [Avalonia.Controls.Chrome.TitleBarDecorations](xref:Avalonia.Controls.Chrome.TitleBarDecorations)
+
+
+#### Remarks
+
+Set this property on a [Avalonia.Controls.Window](xref:Avalonia.Controls.Window) to control the elements displayed in its drawn title bar.
+
+</section>
 
 ## Properties
 
@@ -128,7 +180,8 @@ public WindowDrawnDecorations()
 | [Template](#uid-9c89c1746e) | Gets or sets the decorations template. |
 | [TemplatedParent](../../styledelement.mdx#uid-dbf6ddacc3) | Gets the styled element whose lookless template this styled element is part of. Inherited from [StyledElement](../../styledelement.mdx). |
 | [Theme](../../styledelement.mdx#uid-1aebed283d) | Gets or sets the theme to be applied to the element. Inherited from [StyledElement](../../styledelement.mdx). |
-| [Title](#uid-58e998080f) | Gets or sets the window title displayed in the decorations. |
+| [Title](#uid-58e998080f) | Gets or sets the window title displayed in the decorations. Mirrors the value set on the host [Avalonia.Controls.Window](xref:Avalonia.Controls.Window). |
+| [TitleBarDecorations](#uid-4948b580e6) | Gets or sets which title bar elements are requested to be displayed. Mirrors the value set on the host [Avalonia.Controls.Window](xref:Avalonia.Controls.Window). |
 | [TitleBarHeight](#uid-482cbfdfaf) | Gets the effective titlebar height, resolving -1 override to the default. Returns 0 if titlebar part is disabled. |
 | [Transitions](../../animation/animatable.mdx#uid-1b3138f517) | Gets or sets the property transitions for the control. Inherited from [Animatable](../../animation/animatable.mdx). |
 
@@ -283,9 +336,25 @@ public Avalonia.Controls.Chrome.IWindowDrawnDecorationsTemplate Template { get; 
 ### Title Property
 
 Gets or sets the window title displayed in the decorations.
+Mirrors the value set on the host [Avalonia.Controls.Window](xref:Avalonia.Controls.Window).
 
 ```csharp
 public string Title { get; set; }
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-4948b580e6"></span>
+
+### TitleBarDecorations Property
+
+Gets or sets which title bar elements are requested to be displayed.
+Mirrors the value set on the host [Avalonia.Controls.Window](xref:Avalonia.Controls.Window).
+
+```csharp
+public Avalonia.Controls.Chrome.TitleBarDecorations TitleBarDecorations { get; set; }
 ```
 
 </section>
@@ -323,6 +392,7 @@ public double TitleBarHeight { get; set; }
 | [TemplatedParentProperty](../../styledelement.mdx#uid-a2c7149a6b) | Defines the [Avalonia.StyledElement.TemplatedParent](xref:Avalonia.StyledElement.TemplatedParent) property. Inherited from [StyledElement](../../styledelement.mdx). |
 | [TemplateProperty](#uid-984eb5cc00) | Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.Template](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.Template) property. |
 | [ThemeProperty](../../styledelement.mdx#uid-05852d7b9a) | Defines the [Avalonia.StyledElement.Theme](xref:Avalonia.StyledElement.Theme) property. Inherited from [StyledElement](../../styledelement.mdx). |
+| [TitleBarDecorationsProperty](#uid-42f855619c) | Defines the [TitleBarDecorations](xref:Avalonia.Controls.Chrome.TitleBarDecorations) attached property. |
 | [TitleBarHeightProperty](#uid-95eaf2819c) | Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.TitleBarHeight](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.TitleBarHeight) property. |
 | [TitleProperty](#uid-c88eea86db) | Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.Title](xref:Avalonia.Controls.Chrome.WindowDrawnDecorations.Title) property. |
 | [TransitionsProperty](../../animation/animatable.mdx#uid-c79f18fac2) | Defines the [Avalonia.Animation.Animatable.Transitions](xref:Avalonia.Animation.Animatable.Transitions) property. Inherited from [Animatable](../../animation/animatable.mdx). |
@@ -449,6 +519,20 @@ Defines the [Avalonia.Controls.Chrome.WindowDrawnDecorations.Template](xref:Aval
 
 ```csharp
 public Avalonia.StyledProperty<Avalonia.Controls.Chrome.IWindowDrawnDecorationsTemplate> TemplateProperty
+```
+
+</section>
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-42f855619c"></span>
+
+### TitleBarDecorationsProperty Field
+
+Defines the [TitleBarDecorations](xref:Avalonia.Controls.Chrome.TitleBarDecorations) attached property.
+
+```csharp
+public Avalonia.AttachedProperty<Avalonia.Controls.Chrome.TitleBarDecorations> TitleBarDecorationsProperty
 ```
 
 </section>

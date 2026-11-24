@@ -128,6 +128,7 @@ public Avalonia.Media.IImmutableBrush ToImmutable()
 | [Opacity](brush.mdx#uid-56a58be17e) | Gets or sets the opacity of the brush. Inherited from [Brush](brush.mdx). |
 | [RadiusX](#uid-5a10e0dbe4) | Gets or sets the horizontal radius of the outermost circle of the radial gradient. |
 | [RadiusY](#uid-b54007f151) | Gets or sets the vertical radius of the outermost circle of the radial gradient. |
+| [RelativeTransform](brush.mdx#uid-f7096bbee7) | Gets the transform applied in the relative coordinate space of the area being painted: the unit square (0,0)-(1,1) maps onto the painted bounds, this transform applies inside that space, and [Avalonia.Media.IBrush.Transform](xref:Avalonia.Media.IBrush.Transform) follows in target space. It lets a single brush express a bounds-dependent transform - an SVG gradientTransform in objectBoundingBox units, for example - without baking any one consumer's bounds into a matrix. Inherited from [Brush](brush.mdx). |
 | [SpreadMethod](gradientbrush.mdx#uid-e79c8aab1c) | Gets the brush's spread method that defines how to draw a gradient that doesn't fill the bounds of the destination control. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [Transform](brush.mdx#uid-8d25869723) | Gets or sets the transform of the brush. Inherited from [Brush](brush.mdx). |
 | [TransformOrigin](brush.mdx#uid-406d6c9e88) | Gets or sets the origin of the brush [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) Inherited from [Brush](brush.mdx). |
@@ -202,6 +203,7 @@ public Avalonia.RelativeScalar RadiusY { get; set; }
 | [OpacityProperty](brush.mdx#uid-d84302c650) | Defines the [Avalonia.Media.Brush.Opacity](xref:Avalonia.Media.Brush.Opacity) property. Inherited from [Brush](brush.mdx). |
 | [RadiusXProperty](#uid-93f1afe51c) | Defines the [Avalonia.Media.RadialGradientBrush.RadiusX](xref:Avalonia.Media.RadialGradientBrush.RadiusX) property. |
 | [RadiusYProperty](#uid-5ffd645075) | Defines the [Avalonia.Media.RadialGradientBrush.RadiusX](xref:Avalonia.Media.RadialGradientBrush.RadiusX) property. |
+| [RelativeTransformProperty](brush.mdx#uid-e92f247126) | Defines the [Avalonia.Media.Brush.RelativeTransform](xref:Avalonia.Media.Brush.RelativeTransform) property. Inherited from [Brush](brush.mdx). |
 | [SpreadMethodProperty](gradientbrush.mdx#uid-b6bed14182) | Defines the [Avalonia.Media.GradientBrush.SpreadMethod](xref:Avalonia.Media.GradientBrush.SpreadMethod) property. Inherited from [GradientBrush](gradientbrush.mdx). |
 | [TransformOriginProperty](brush.mdx#uid-3a3c0bc732) | Defines the [Avalonia.Media.Brush.TransformOrigin](xref:Avalonia.Media.Brush.TransformOrigin) property Inherited from [Brush](brush.mdx). |
 | [TransformProperty](brush.mdx#uid-933d2c0564) | Defines the [Avalonia.Media.Brush.Transform](xref:Avalonia.Media.Brush.Transform) property. Inherited from [Brush](brush.mdx). |

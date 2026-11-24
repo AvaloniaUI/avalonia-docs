@@ -77,6 +77,7 @@ public EglDisplayOptions()
 
 | Name | Description |
 | --- | --- |
+| [AllowPbufferOnlyConfigs](#uid-a58b91f79b) | Also considers configs that can only be used with PBuffer surfaces. Required for EGL platforms that have no window surface support at all, e.g. EGL_MESA_platform_surfaceless. |
 | [ContextLossIsDisplayLoss](#uid-6fe1cfa33c) | No summary available. |
 | [DeviceLostCheckCallback](#uid-13db2d204a) | No summary available. |
 | [DisposeCallback](#uid-a55513d58d) | No summary available. |
@@ -85,6 +86,21 @@ public EglDisplayOptions()
 | [ProbeConfig](#uid-b508f027d9) | No summary available. |
 | [SupportsContextSharing](#uid-a4e874f31c) | No summary available. |
 | [SupportsMultipleContexts](#uid-33ff37ed98) | No summary available. |
+
+<section className="apiref-page__member-entry">
+
+<span id="uid-a58b91f79b"></span>
+
+### AllowPbufferOnlyConfigs Property
+
+Also considers configs that can only be used with PBuffer surfaces. Required for EGL platforms
+that have no window surface support at all, e.g. EGL_MESA_platform_surfaceless.
+
+```csharp
+public bool AllowPbufferOnlyConfigs { get; set; }
+```
+
+</section>
 
 <section className="apiref-page__member-entry">
 
