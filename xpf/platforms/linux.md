@@ -87,7 +87,7 @@ sudo rm /etc/apt/preferences.d/*dotnet* 2>/dev/null
 ```
 
 :::danger
-A mixed installation (some packages from your distro, some from Microsoft) will cause hard-to-diagnose build failures. If `dotnet --list-sdks` does not show `Microsoft.NET.Sdk.WindowsDesktop`, your installation is incorrect.
+A mixed installation (some packages from your distro, some from Microsoft) will cause hard-to-diagnose build failures. If `dotnet --list-runtimes` does not show `Microsoft.NET.Sdk.WindowsDesktop`, your installation is incorrect.
 :::
 
 ## Other dependencies
